@@ -925,7 +925,7 @@ Georg Cantor's work was revolutionary and had far reaching consequences in every
 While the story of Georg Cantor and his set theory is interesting in its own right, its relevance to Turing computability and to computer science in general may not be readily apparent. For this reason, I would like to discuss the implications of one final topic related to Cantor, his 1891 \textit{constructive} proof of transfinite cardinality known as the \textit{diagonal argument}. The theorem and its short, elegant proof is recreated below.
 
 \begin{center}
-\begin{tcolorbox}[breakable,colback=white,width=12cm,boxrule=0pt,frame hidden]
+\begin{tcolorbox}[breakable,enhanced,colback=white,width=12cm,sharp corners,frame hidden]
 	\textit{Theorem:} Given the set $T$ of all infinite sequences of binary digits, if $s_0,\,s_1,\,s_2,\,\dots,\,s_n,\,\dots$ is any enumeration of elements from $T$, there exists an element $s\in T$ which does not correspond to any $s_n$ in the enumeration. \\
 	
 	\textit{Proof:} We start with an enumeration of elements from $T$: \\
@@ -1020,7 +1020,7 @@ The decision problem can be phrased in the same way, but, in the case of a recur
 Because all recursive languages are recursively enumerable, a Turing machine can recognize a language from either class. $f$ in both cases is known as a \textit{computable function}, a function whose output can be correctly \textit{computed} by an algorithm performed by a Turing machine. This means that a Turing machine can be considered a \textit{formalization} of the countable set of computable functions:
 
 \begin{center}
-	\begin{tcolorbox}[breakable,colback=white,width=12cm,boxrule=0pt,sharp corners]
+	\begin{tcolorbox}[breakable,enhanced,colback=white,width=12cm,sharp corners,frame hidden]
 		A partial function $f:\mathbb{N}^k\nrightarrow\mathbb{N}$ is \textit{computable} if and only if $\exists$ a Turing-recognizable computer program with the following properties: \\
 		\begin{enumerate}
 			\item If $f(\mathbf{x})$ is defined, the program will eventually halt on the input $\mathbf{x}$ with $f(\mathbf{x})$ stored in the tape memory.
