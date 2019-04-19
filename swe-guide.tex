@@ -774,15 +774,17 @@ In computability theory, we are interested in determining whether or not an outp
 
 %----------------------------------------
 
-\subsection{Effective Calculability}
+\subsection{"Effective Calculability"}
 
 Before the study of computer science, mathematicians sometimes informally described functions as \textit{effectively calculable}. This meant that a correct output could be calculated for any input from the domain of the function, using an \textit{effective method}. A method, in general, is just a "procedure" that does "something". A method is \textit{effective} if it consists of a finite number of instructions and solves a particular problem. \\
 
 A particular method can be effective for some problems and ineffective for others. For example, typing is a method. If I want to put characters into a text document, typing is an effective method. If I want to plant a flower, typing is not an effective method. However, if I want to plant a flower, building a flower-planting robot and programming it, via typing, to plant a flower \textit{is} an effective method because it actually accomplishes the objective. An effective method that is used to calculate the values of a function is called an \textit{algorithm}. \\
 
-Much work was done in the 1930s to formalize "effective calculability". The results established \textit{Turing computability} as the correct formalization which led to the most significant definition in computability theory: any function whose outputs can be calculated with an algorithm is a \textit{computable function}. Computable functions are precisely those that can be computed by a Turing machine. We will discuss the formalization of computability and computable functions later in this section. For know, note that the terms \textit{computable} and \textit{solvable} can be used interchangeably to describe both functions and problems. \textit{Decidable} essentially means the same thing, but it is more appropriate for describing decisions and decision problems. \\
+Much work was done in the 1930s to formalize "effective calculability". The results established \textit{Turing computability} as the correct formalization. This model gives the following fundamental definition: any function whose outputs can be calculated by an algorithm is a \textit{computable function}. Computable functions are precisely those functions that can be computed by a Turing machine. In the mathematical sense, they could also be called \textit{solvable}. A computable or solvable \textit{decision} is predictably called \textit{decidable}. If the functions model mathematical proofs, they could also be called \textit{provable}. Despite a few minor differences, all of these terms get at the same idea.
 
-We will now discuss the history preceding and the circumstances of this foundational work in computability theory. Much of this work was done by Alonzo Church and Alan Turing in the 1930s, but their work built heavily on set-theoretical concepts discovered by German mathematician Georg Cantor in the late 19th century. After a crash course in Cantorian set theory, we will formalize the concepts of computability and computable functions before discussing their implications via the Church-Turing thesis. Afterward, we will briefly discuss uncomputable problems before moving into computational complexity theory, which classifies computable problems based on how resource-intensive they are. \\
+We will now discuss the history preceding and the circumstances of this foundational work in formalizing "effective calculability" as computability. Much of this work was done between the 1930s and the 1950s, but it built heavily on set-theoretical concepts discovered by German mathematician Georg Cantor in the late 19th century. After a crash course in Cantorian set theory, we will examine computable functions from a variety of angles. Computability is interdisciplinary. The concept \textit{permeates} our reality, and as such its eventual formalization was made possibly by the collective efforts of mathematicians, logicians, linguists, and computer scientists. Today, research on computability is widespread in the study of anything scientific. \\
+
+After a rigorous study of what is computable, we will conclude this section with a brief exploration of what is not computable. This is a topic that is important to theoretical computer science. By assuming that certain aspects of an abstract machine are \textit{hypercomputational}, we can envision the kind of problems that could be solved if computation were ever to transcend Turing machines. \\
 
 %----------------------------------------
 
@@ -973,7 +975,7 @@ While the story of Georg Cantor and his set theory is interesting in its own rig
 \end{tcolorbox}
 \end{center}
 
-With this information, we can go a step further and say that $T$ is \textit{uncountably infinite}. Note that this result requires that the sequences be countably infinite. This argument has become a common technique in proofs to prove the uncountability of a set whose members are countably infinite. Turing used a diagonal argument to formalize the notion of computability and to prove that the \textit{Entscheidungsproblem}, one of the most important mathematical problems of the 20th century, is unsolvable. Here, we will use the diagonal argument to formalize computable functions. \\
+With this information, we can go a step further and say that $T$ is \textit{uncountably infinite}. Note that this result requires that the sequences be countably infinite. This argument has become a common technique in proofs to prove the uncountability of a set whose members are countably infinite. Turing used a diagonal argument to formalize the notion of computability and to prove that the \textit{Entscheidungsproblem}, one of the most important mathematical problems of the 20th century, is unsolvable. Here, we will use the diagonal argument to formalize the set of computable functions. \\
 
 \subsubsection{Uncountably Many Languages}
 
@@ -983,7 +985,7 @@ Consider the alphabet $\{0,1\}$. With this alphabet, one can construct the set o
 	\item While this example uses a binary alphabet, the set $S$ could be constructed similarly over a ternary alphabet or an $n$-ary alphabet where $n\in \mathbb{N}$. Formally, the set of all words over an alphabet $\Sigma$ is denoted $\Sigma^*$. Likewise, the symbols of $\Sigma$ need not be numbers. An alphabet can contain any symbols, as long as they are distinct and there are a finite number of them. \\
 \end{enumerate}
 
-We can then consider the power set of $S$, $\mathcal{P}(S)=\{\{\varepsilon\},\,\{0\},\,\{1\},\,\{0,\,1\},\,\cdots\}$ to be the set of all \textit{languages} that can be created using these binary words. A language $L$ is simply a subset of the set of all possible words over a finite alphabet. Stated formally, $L\subseteq\Sigma^*$. As previous discussed, languages can conform to a grammar, but for now we will consider them simply as sets of words. Words that belong to a given language are called \textit{well-formed words} and those that do not are called \textit{ill-formed words}, but only in relation to that language. \\
+We can then consider the power set of $S$, $\mathcal{P}(S)=\{\{\varepsilon\},\,\{0\},\,\{1\},\,\{0,\,1\},\,\cdots\}$ to be the set of all \textit{languages} that can be created using these binary words. A language $L$ is simply a subset of the set of all possible words over a finite alphabet. Stated formally, $L\subseteq\Sigma^*$. As we discussed previously in the section on automata, languages can conform to a grammar, but for now we will consider them simply as countable sets of words. Words that belong to a given language are called \textit{well-formed words} and those that do not are called \textit{ill-formed words}, but only in relation to that language. \\
 
 Because $S$ is a countably infinite set and because the power set of a countably infinite set is uncountably infinite (by Cantor's theorem), we know that $\mathcal{P}(S)$ is an uncountably infinite set. Each member of $\mathcal{P}(S)$ is a countable set of words, also known as a language. Thus, there exists an \textit{uncountable number} of languages of binary words (and of languages in general). The diagonal argument supports this. \\
 
@@ -993,7 +995,7 @@ Let each sequence $s_n$ from the above proof represent a language. The "columns 
 
 Now, let's require that the sequences be \textit{finite}. Because a Turing machine has a finite number of states and transitions, it can be represented with a finite binary string. Similarly, every natural number can be represented with a finite binary string. Thus, there is a one-to-one correspondence between the set of all Turing machines and the set of all natural numbers. So while there are uncountably many languages, there are only countably many Turing machines to recognize those languages. \\
 
-We know that Turing machines recognize recursively enumerable languages, so we know there are countably many of these. On the other hand, there are uncountably many \textit{non-recursively enumerable languages} that a Turing machine cannot recognize. In fact, almost all languages cannot be recognized by a Turing machine. \\
+We know that Turing machines recognize exactly the recursively enumerable languages $R$, so we know there are also countably many of these. Taking the complement of $R$ implies that there are uncountably many \textit{non-recursively enumerable languages} that a Turing machine cannot recognize. In fact, \textit{almost all} languages cannot be recognized by a Turing machine. \\
 
 Before we define recursively enumerable languages, we should first define \textit{recursive languages}. A recursive language can be represented by a \textit{recursive set} of natural numbers. A subset $L$ of the natural numbers is called \textit{recursive} if there exists a total function $f$ such that
 \begin{align*}
@@ -1039,9 +1041,39 @@ The set of computable numbers is countably infinite, which means that almost all
 
 %----------------------------------------
 
+\subsection{Hilbert's Program and G\"odel's Incompleteness Theorems}
+
+In 1900, David Hilbert gave an address to the International Congress of Mathematicians in Paris. In his speech, he described twenty-three problems that he felt would be some of the most important of the century. While these problems are diverse in subject matter, they are all \textit{deep}. In each of their answers (or lack of answers) lies some fundamental truth about the structure of mathematics itself. They are known as \textit{Hilbert's problems}, and many of them remained unsolved and of great interest today. \\
+
+This presentation of problems was, in essence, the inception of \textit{Hilbert's program}, a worldwide goal to solve what was known at the time as the \textit{foundational crisis of mathematics}. With the general acceptance of Cantor's set theory came the discovery of many paradoxes and inconsistencies that called into question the \textit{consistency} of mathematics. The creation of ZFC set theory resolved some of these paradoxes, such as Russell's paradox, but not all inconsistencies were resolved. Mathematics was still curiously "broken" in certain ways. \\
+
+As a proponent of the mathematical philosophy of \textit{formalism}, Hilbert believed that mathematics was not a description of some abstract part of reality, but was rather akin to a game where moves can be made according to a set of rules. He believed that the "games" in mathematics were all played according to some set of \textit{a priori} rules called \textit{axioms}. In the early 20th century, he made it his life's goal to construct such a set of axioms, from which all existing and future theories could be derived in a consistent manner. Mathematicians of the time agreed that the search for such an axiomatization was direly needed. By this point, no one had been able to prove the consistency of the standard \textit{Peano arithmetic}, which includes axioms such as $x+y=y+x$ and $x\times0=0$. Proving a consistent set of axioms of arithmetic was the second of Hilbert's famous twenty-three problems, preceded only by the problem of solving Cantor's continuum hypothesis. \\
+
+In order for Hilbert's program to succeed, there would have to exist a formal system with the following properties:
+\begin{itemize}
+	\item Completeness, the ability to prove all true mathematical statements
+	\item Consistency, the absence of contradictions
+	\item Conservation, the ability to prove results involving countable quantities without the use of uncountable ones
+	\item Decidability, the existence of an algorithm that could decide the truth or falsity of any mathematical statement
+\end{itemize}
+
+As a professor at the prestigious University of G\"ottingen, Hilbert gave many lectures on his program, both inside and outside of Germany. At one such lecture given in Bologna in 1928, Kurt G\"odel was in attendance. The concepts of mathematical logic discussed at this lecture would inspire G\"odel throughout his career, but in only three years he would deal a fatal blow to Hilbert's program. \\
+
+In 1929, G\"odel published his \textit{completeness theorem} of mathematical logic as his doctoral thesis. This was a mathematical proof that proved something fundamental about the first-order logic mathematics is based on. The result is ultimately quite simple, and it supports what mathematicians have implicitly understood about abstract, general proofs since about 300 \textsc{BCE}, when Euclid introduced the \textit{axiomatic method}.
+
+% If it's true, it's provable.
+
+% Modern proof theory treats proofs as inductively defined data structures. There is no longer an assumption that axioms are "true" in any sense; this allows for parallel mathematical theories built on alternate sets of axioms
+
+% Verifying a set is recursive by checking that each member can be formed from the axioms (inductively defined)
+
+% Recursion vs counting
+
+%----------------------------------------
+
 \subsection{The Entscheidungsproblem and the Church-Turing Thesis}
 
-In 1900, David Hilbert
+
 
 \subsubsection{The Halting Problem}
 
@@ -1067,6 +1099,10 @@ In 1900, David Hilbert
 % Something is recursively enumerable when its elements can be counted using recursion. Recursion is a more natural counting method than iteration for sets because sets have no order.
 
 % MapReduce is a monoid based alg
+
+%----------------------------------------
+
+\subsection{Computability is Recursion}
 
 %----------------------------------------
 
