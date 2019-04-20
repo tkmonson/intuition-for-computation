@@ -10,22 +10,22 @@
 \contentsline {subsection}{\numberline {1.2}{Classes of Automata and the Languages They Can Understand}}{12}{subsection.1.2}% 
 \contentsline {subsubsection}{\numberline {1.2.1}{Finite-state Machines}}{14}{subsubsection.1.2.1}% 
 \contentsline {subsubsection}{\numberline {1.2.2}{Pushdown Automata}}{16}{subsubsection.1.2.2}% 
-\contentsline {subsubsection}{\numberline {1.2.3}{Linear Bounded Automata}}{16}{subsubsection.1.2.3}% 
+\contentsline {subsubsection}{\numberline {1.2.3}{Linear Bounded Automata}}{17}{subsubsection.1.2.3}% 
 \contentsline {subsubsection}{\numberline {1.2.4}{Turing Machines}}{17}{subsubsection.1.2.4}% 
 \contentsline {subsection}{\numberline {1.3}{The Importance of Turing Machines to Modern Computing}}{20}{subsection.1.3}% 
 \vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {2}{Computability Theory}}{23}{section.2}% 
+\contentsline {section}{\numberline {2}{Computability Theory}}{24}{section.2}% 
 \contentsline {subsection}{\numberline {2.1}{The Scope of Mathematical Problem Solving}}{24}{subsection.2.1}% 
-\contentsline {subsection}{\numberline {2.2}{Decision Problems and Function Problems}}{24}{subsection.2.2}% 
-\contentsline {subsection}{\numberline {2.3}{"Effective Calculability"}}{25}{subsection.2.3}% 
-\contentsline {subsection}{\numberline {2.4}{The Ballad of Georg Cantor}}{26}{subsection.2.4}% 
-\contentsline {subsubsection}{\numberline {2.4.1}{The First Article on Set Theory}}{26}{subsubsection.2.4.1}% 
-\contentsline {subsubsection}{\numberline {2.4.2}{Ordinals and Cardinals}}{28}{subsubsection.2.4.2}% 
+\contentsline {subsection}{\numberline {2.2}{Decision Problems and Function Problems}}{25}{subsection.2.2}% 
+\contentsline {subsection}{\numberline {2.3}{"Effective Calculability"}}{26}{subsection.2.3}% 
+\contentsline {subsection}{\numberline {2.4}{The Ballad of Georg Cantor}}{27}{subsection.2.4}% 
+\contentsline {subsubsection}{\numberline {2.4.1}{The First Article on Set Theory}}{27}{subsubsection.2.4.1}% 
+\contentsline {subsubsection}{\numberline {2.4.2}{Ordinals and Cardinals}}{29}{subsubsection.2.4.2}% 
 \contentsline {subsubsection}{\numberline {2.4.3}{The Continuum Hypothesis}}{29}{subsubsection.2.4.3}% 
-\contentsline {subsubsection}{\numberline {2.4.4}{Cantor's Later Years and Legacy}}{31}{subsubsection.2.4.4}% 
-\contentsline {subsection}{\numberline {2.5}{The Diagonal Argument for Computable Functions}}{32}{subsection.2.5}% 
+\contentsline {subsubsection}{\numberline {2.4.4}{Cantor's Later Years and Legacy}}{32}{subsubsection.2.4.4}% 
+\contentsline {subsection}{\numberline {2.5}{The Diagonal Argument for Computable Functions}}{33}{subsection.2.5}% 
 \contentsline {subsubsection}{\numberline {2.5.1}{Uncountably Many Languages}}{34}{subsubsection.2.5.1}% 
-\contentsline {subsubsection}{\numberline {2.5.2}{Countably Many Turing Machines}}{34}{subsubsection.2.5.2}% 
+\contentsline {subsubsection}{\numberline {2.5.2}{Countably Many Turing Machines}}{35}{subsubsection.2.5.2}% 
 \contentsline {subsubsection}{\numberline {2.5.3}{Computable Functions and Computable Numbers}}{37}{subsubsection.2.5.3}% 
 \contentsline {subsection}{\numberline {2.6}{Hilbert's Program and G\"odel's Incompleteness Theorems}}{38}{subsection.2.6}% 
 \contentsline {subsection}{\numberline {2.7}{The Entscheidungsproblem and the Church-Turing Thesis}}{39}{subsection.2.7}% 
