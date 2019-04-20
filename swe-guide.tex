@@ -660,7 +660,7 @@ Turing machines are the class of automata that can read \textit{recursively enum
 
 This does not imply that TMs can handle infinite lists of instructions. Rather, they can handle \textit{infinite looping} over a finite set of instructions. A Turing machine can "successfully" run a never-ending program. A real machine would use up all of its memory trying to run such a program, eventually crashing due to a \textit{stack overflow} (an attempt to write data outside of the limits of the memory). A TM would never run out of memory and, given infinite time, could run the program forever. \\
 
-As previously stated, the Turing machine models not only computers, but \textit{computation}. It abstracts away the physical limitations of computers such as memory constraints, overheating, or hardware failure and asks what the fundamental limits of computation are. It makes a statement on which mathematical problems are \textit{decidable}. It is an ideal computer, and, as such, it is not only a model of what real-world computers are today, but a model of what they \textit{could be} in the future, given sufficient advances in hardware. \\
+As previously stated, the Turing machine models not only computers, but \textit{computation}. It abstracts away the physical limitations of computers such as memory constraints, overheating, or hardware failure and asks what the fundamental limits of algorithmic computation are. It makes a statement on which mathematical problems are \textit{decidable}. It is an ideal computer, and, as such, it is not only a model of what real-world computers are today, but a model of what they \textit{could be} in the future, given sufficient advances in hardware. \\
 
 %----------------------------------------
 
@@ -720,7 +720,7 @@ It is no coincidence that real-world computers today use array-based memory. Arr
 	
 	\begin{itemize}
 		\item A \textbf{finite} set of states Q. If it were instead infinite, the automaton would have a state for every possible input, and thus would be able to understand any conceivable language. This is far too powerful a machine to build. This would essentially be a universal problem solver.
-		\item A \textbf{finite} alphabet $\Sigma$. If it were instead infinite, the automaton could have a continuous alphabet. What kind of alphabet's symbols exist on a spectrum? Perhaps you could call sound a "language" with a continuous alphabet known as frequency. An automaton with an infinite alphabet would not be digital and would not use bits. It would be an analog computer. Analog computers do exist, and they were popular in the 1950s and 1960s, but nowadays we write software for digital computers. \textit{Fun fact:} analog synthesizers, which are still commonly used in electronic music, are considered a kind of analog computer.
+		\item A \textbf{finite} alphabet $\Sigma$. If it were instead infinite, the automaton could have a continuous alphabet. What kind of alphabet's symbols exist on a spectrum? Perhaps you could call \textit{sound} a "language" with a continuous alphabet known as frequency. An automaton with an infinite alphabet would not be digital and would not use bits. It would be an analog computer. Analog computers do exist, and they were popular in the 1950s and 1960s, but nowadays we write software for digital computers. \textit{Fun fact:} analog synthesizers, which are still commonly used in electronic music, are considered a kind of analog computer.
 		\item A transition \textbf{function} $\delta$. If it were instead a relation (i.e. inputs are mapped to more than one output), the automaton would be nondeterministic. It is suspected that nondeterministic Turing machines would be able to solve NP-complete problems, which is a computational feat that has not yet been accomplished in a tractable way by a deterministic Turing machine.
 	\end{itemize}
 	\vspace{1mm}
@@ -905,11 +905,13 @@ With the work of Kurt G\"odel in 1940 and of Paul Cohen in 1963, it was establis
 
 \subsubsection{Cantor's Later Years and Legacy}
 
-In the early 20th century, mathematicians and philosophers has found a variety of paradoxes within Cantor's set theory. The most famous example was \textit{Russell's paradox}, which was discovered by Bertrand Russell in 1901. It posits that, given a set $S$ that is "the set of all sets that are \textit{not} members of themselves", it is unclear whether $S$ contains itself. If it does, it contains a set that \textit{is} a member of itself. If it does not, it does not contain all sets. An alternative, colloquial form of this is the \textit{barber's paradox}: Given a barber who shaves all those, and only those, who do not shave themselves, does the barber shave himself? There is no answer to this question. It cannot be answered within its own axiomatic system. \\
+In the early 20th century, mathematicians and philosophers had found a variety of paradoxes within Cantor's set theory. The most famous example was \textit{Russell's paradox}, which was discovered by Bertrand Russell in 1901. It posits that, given a set $S$ that is "the set of all sets that are \textit{not} members of themselves", it is unclear whether $S$ contains itself. If it does, it contains a set that \textit{is} a member of itself. If it does not, it does not contain all sets. An alternative, colloquial form of this is the \textit{barber's paradox}: Given a barber who shaves all those, and only those, who do not shave themselves, does the barber shave himself? There is no answer to this question. It cannot be answered within its own axiomatic system. \\
 
 When he was not hospitalized for disease or depression, Cantor lectured on these paradoxes of his set theory until his retirement in 1913. He lived in poverty, suffering from malnourishment during World War I before succumbing to a heart attack in a sanatorium in 1918. \\
 
-Georg Cantor's work was revolutionary and had far reaching consequences in every field that made use of mathematics. It was his investigation into and formalization of the infinite that laid the groundwork for ZFC set theory, the current "common language" of mathematics. More than that, however, he shifted the collective perception of the \textit{purpose} of mathematics. Before this point, mathematics was typically done to understand the natural world. Cantor believed not only that mathematics could describe what he saw around him, but that it could also solve problems that were purely logical, those that existed in the mind. Mathematics was a universe in the abstract, worthy of exploring in the same way that the natural one was. For Cantor, mathematics allowed one to see beyond the limitations of the human senses into worlds of arbitrary dimension, unshackled by physical laws. He stood firm in opposition to the "oppression and authoritarian close-mindedness" he faced from Kronecker et al. and called for objectivity and truth among his peers, bringing humanity, kicking and screaming, into the modern era of mathematical thought. \\
+Georg Cantor's work was revolutionary and had far reaching consequences in every field that made use of mathematics. It drew a line in the sand between \textit{discrete} and \textit{continuous} phenomena. It was Cantor's investigation into and formalization of the infinite that laid the groundwork for ZFC set theory, the current "common language" of mathematics. More than that, however, he shifted the collective perception of the \textit{purpose} of mathematics. \\
+
+Before this point, mathematics was typically done to understand the natural world. Cantor believed not only that mathematics could describe what he saw around him, but that it could also solve problems that were purely logical, those that existed in the mind. Mathematics was a universe in the abstract, worthy of exploring in the same way that the natural one was. For Cantor, mathematics allowed one to see beyond the limitations of the human senses into worlds of arbitrary dimension, unshackled by physical laws. This philosophy has encouraged the continued development of abstract theories, many of which are later found to have concrete implications for the nature of our reality. Cantor stood firm in opposition to the "oppression and authoritarian close-mindedness" he faced from Kronecker et al. and called for objectivity and truth among his peers, bringing humanity, kicking and screaming, into the modern era of mathematical thought. \\
 
 \begin{center}
 	\begin{displayquote}
@@ -924,7 +926,7 @@ Georg Cantor's work was revolutionary and had far reaching consequences in every
 
 \subsection{The Diagonal Argument for Computable Functions}
 
-While the story of Georg Cantor and his set theory is interesting in its own right, its relevance to Turing computability and to computer science in general may not be readily apparent. For this reason, I would like to discuss the implications of one final topic related to Cantor, his 1891 \textit{constructive} proof of transfinite cardinality known as the \textit{diagonal argument}. The theorem and its short, elegant proof is recreated below.
+While the story of Georg Cantor and his set theory is interesting in its own right, its relevance to Turing computability and to computer science in general may not be readily apparent. For this reason, I would like to discuss the implications of one final topic related to Cantor, his 1891 \textit{constructive} proof of transfinite cardinality known as the \textit{diagonal argument}. The theorem and its short, elegant proof are recreated below.
 
 \begin{center}
 \begin{tcolorbox}[breakable,enhanced,colback=white,width=12cm,sharp corners,frame hidden]
@@ -948,7 +950,7 @@ While the story of Georg Cantor and his set theory is interesting in its own rig
 		\vspace{4mm}
 	\end{center}
 		
-	We then construct a sequence of binary digits $s^\star$ by making the $n^\textit{th}$ digit of $s^\star$ equal to the negation of $n^\textit{th}$ digit of the $n^\textit{th}$ sequence given above. Put more simply, we highlight the digits along a diagonal, and flip their values to make $s^\star$:
+	We then construct a sequence of binary digits $s^\star$ by making the $n^\textit{th}$ digit of $s^\star$ equal to the negation of the $n^\textit{th}$ digit of the $n^\textit{th}$ sequence given above. Put more simply, we highlight the digits along a diagonal, and flip their values to make $s^\star$:
 	
 	\begin{align*}
 		s_0=(\hl{1},\, 0,\, 1,\, 1,\, 0,\, 0,\, 1,\, 0,\, 0,\, 0,\, \cdots) \\
@@ -975,19 +977,21 @@ While the story of Georg Cantor and his set theory is interesting in its own rig
 \end{tcolorbox}
 \end{center}
 
-With this information, we can go a step further and say that $T$ is \textit{uncountably infinite}. Note that this result requires that the sequences be countably infinite. This argument has become a common technique in proofs to prove the uncountability of a set whose members are countably infinite. Turing used a diagonal argument to formalize the notion of computability and to prove that the \textit{Entscheidungsproblem}, one of the most important mathematical problems of the 20th century, is unsolvable. Here, we will use the diagonal argument to formalize the set of computable functions. \\
+With this information, we can go a step further and say that $T$ is \textit{uncountably infinite}. Note that this result requires that the sequences be countably infinite. This argument has become a common technique in proofs to prove the uncountability of a set whose members are countably infinite. Turing used a diagonal argument to formalize the notion of computability and to prove that the \textit{Entscheidungsproblem}, one of the most important mathematical problems of the 20th century, is undecidable. Next, we will use the diagonal argument to formalize the set of computable functions. \\
 
 \subsubsection{Uncountably Many Languages}
 
-Consider the alphabet $\{0,1\}$. With this alphabet, one can construct the set of all binary strings $S$ using the regular expression $\{0,1\}^*$ (i.e. $\{\varepsilon,\,0,\,1,\,00,\,01,\,10,\,11,\,000,\,001,\,\cdots\}$). Two things to note:
+Consider the alphabet $\{0,1\}$. With this alphabet, one can construct the set of all binary strings $S$ using the regular expression $\{0,1\}^*$ (i.e. $\{\varepsilon,\,0,\,1,\,00,\,01,\,10,\,11,\,000,\,001,\,\cdots\}$). Strings like these are often called \textit{words} in computability theory, but they could potentially represent very long pieces of text that you might not think of as "words". It may be helpful to think of them instead as syntactically valid building blocks of a particular language. Two other things to note:
 \begin{enumerate}
-	\item These binary strings are finite in length, by definition of the Kleene star $^*$. They are the set of finite \textit{words} that can be constructed using the alphabet $\{0,1\}$.
+	\item These binary strings are finite in length, by definition of the Kleene star $^*$. They are the set of finite words that can be constructed using the alphabet $\{0,1\}$.
 	\item While this example uses a binary alphabet, the set $S$ could be constructed similarly over a ternary alphabet or an $n$-ary alphabet where $n\in \mathbb{N}$. Formally, the set of all words over an alphabet $\Sigma$ is denoted $\Sigma^*$. Likewise, the symbols of $\Sigma$ need not be numbers. An alphabet can contain any symbols, as long as they are distinct and there are a finite number of them. \\
 \end{enumerate}
 
-We can then consider the power set of $S$, $\mathcal{P}(S)=\{\{\varepsilon\},\,\{0\},\,\{1\},\,\{0,\,1\},\,\cdots\}$ to be the set of all \textit{languages} that can be created using these binary words. A language $L$ is simply a subset of the set of all possible words over a finite alphabet. Stated formally, $L\subseteq\Sigma^*$. As we discussed previously in the section on automata, languages can conform to a grammar, but for now we will consider them simply as countable sets of words. Words that belong to a given language are called \textit{well-formed words} and those that do not are called \textit{ill-formed words}, but only in relation to that language. \\
+We can then consider the power set of $S$,
+$$\mathcal{P}(S)=\{\{\varepsilon\},\,\{0\},\,\{1\},\,\{10\},\,\{0,\,1\},\,\{0,\,10\},\,\{1,\,10\},\,\{0,\,1,\,10\},\,\,\cdots\}$$
+to be the set of all \textit{languages} that can be created using these binary words. A language $L$ is simply a subset of the set of all possible words over a finite alphabet. Stated formally, $L\subseteq\Sigma^*$. As we discussed previously in the section on automata, languages can conform to a grammar, but for now we will consider them simply as countable sets of words. Words that belong to a given language are called \textit{well-formed words} and those that do not are called \textit{ill-formed words}, but only in relation to that language. \\
 
-Because $S$ is a countably infinite set and because the power set of a countably infinite set is uncountably infinite (by Cantor's theorem), we know that $\mathcal{P}(S)$ is an uncountably infinite set. Each member of $\mathcal{P}(S)$ is a countable set of words, also known as a language. Thus, there exists an \textit{uncountable number} of languages of binary words (and of languages in general). The diagonal argument supports this. \\
+Because $S$ is a countably infinite set and because the power set of a countably infinite set is uncountably infinite (by \textit{Cantor's theorem}), we know that $\mathcal{P}(S)$ is an uncountably infinite set. Each member of $\mathcal{P}(S)$ is a countable set of words, also known as a language. Thus, there exists an \textit{uncountable number} of languages of binary words (and of languages in general). The diagonal argument supports this. \\
 
 Let each sequence $s_n$ from the above proof represent a language. The "columns of the matrix" each correspond to a binary word from $S$. Thus, the digits in each sequence represent whether or not a particular word is well-formed ($1$) or ill-formed ($0$) with regard to the language the sequence represents. For example, the language $\{0,1,01,10,11\}$ would have a $1$ in its sequence for the columns corresponding to words $0,1,01,10,11$ and a $0$ everywhere else. We can enumerate the languages as in the proof and flip the values along the diagonal of the enumeration to construct a new language. Thus, the set of all languages of binary words is not enumerable. Rather, there are uncountably many languages. \\
 
@@ -995,9 +999,9 @@ Let each sequence $s_n$ from the above proof represent a language. The "columns 
 
 Now, let's require that the sequences be \textit{finite}. Because a Turing machine has a finite number of states and transitions, it can be represented with a finite binary string. Similarly, every natural number can be represented with a finite binary string. Thus, there is a one-to-one correspondence between the set of all Turing machines and the set of all natural numbers. So while there are uncountably many languages, there are only countably many Turing machines to recognize those languages. \\
 
-We know that Turing machines recognize exactly the recursively enumerable languages $R$, so we know there are also countably many of these. Taking the complement of $R$ implies that there are uncountably many \textit{non-recursively enumerable languages} that a Turing machine cannot recognize. In fact, \textit{almost all} languages cannot be recognized by a Turing machine. \\
+We know that Turing machines recognize exactly the recursively enumerable languages $R$, so we know there are also countably many of these. Taking the complement of $R$ implies that there are also uncountably many \textit{non-recursively enumerable languages} that a Turing machine cannot recognize. In fact, \textit{almost all} languages cannot be recognized by a Turing machine. \\
 
-Before we define recursively enumerable languages, we should first define \textit{recursive languages}. A recursive language can be represented by a \textit{recursive set} of natural numbers. A subset $L$ of the natural numbers is called \textit{recursive} if there exists a total function $f$ such that
+Before we define the recursively enumerable languages, we should first define a strict subset of them known as the \textit{recursive languages}. A recursive language can be represented by a \textit{recursive set} of natural numbers. A subset $L$ of the natural numbers is called \textit{recursive} if there exists a total function $f$ such that
 \begin{align*}
 	f(w)=
 	\begin{cases}
@@ -1015,7 +1019,54 @@ f(w)=
 \text{undefined} & \text{otherwise}
 \end{cases}
 \end{align*}
-The decision problem can be phrased in the same way, but, in the case of a recursively enumerable $L$, it is called \textit{partially decidable} or \textit{semidecidable}. If $L$ is non-recursively enumerable, the decision problem is called \textit{undecidable}. Such problems cannot be solved using any conceivable algorithm. Consider the corresponding function problem: "Let $L$ be a \textit{non-recursively enumerable} language represented by a set. Given a word $w$, what is the value of $w$?" If $w\in L$, the TM cannot compute $f(w)$ because it cannot recognize $L$. Otherwise, $f(w)$ is undefined. Thus, $f$ is \textit{uncomputable} for all inputs. \\
+The decision problem can be phrased in the same way, but, in the case of a recursively enumerable $L$, it is called \textit{partially decidable} or \textit{semidecidable}. That is, we can decide a word \textit{is} in the language, but we cannot formally decide that it is \textit{not}. In mathematical terms, statements like this can be \textit{proven}, but not \textit{disproven}. If that sounds incredibly unintuitive, that's because it is. This concept will come up later in a discussion of Kurt G\"odel's contribution to computability. \\\\
+
+\begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
+	\vspace{2mm}
+	\begin{center}
+		\textbf{Decidability and Semidecidability for Humans and Computers}
+	\end{center}
+	\vspace{1mm}
+	Recall that recursive languages are also recursively enumerable. That is, their recursive nature is \textit{countable}. This is because recursive languages can construct only \textit{finite} sentences that have an end. On the other hand, a recursively enumerable language can have sentences that expand forever, always ready to accept another clause before its period. \\
+	
+	The following sentence is recursive (and, thus, also recursively enumerable): 
+	\begin{align*}
+		\textnormal{Alice} 
+		\underbracket{\textnormal{said that Betty}
+		\underbracket{\textnormal{said that Charlie}
+		\underbracket{\textnormal{said that David}
+		\underbracket{\textnormal{got a kitten.}}}}}
+	\end{align*}
+	\vspace{1mm}
+	
+	This sentence is composed of a countable, finite number of building blocks called \textit{clauses} that each contain a \textit{subject} and a \textit{predicate}. In this case, the subjects are the names and their respective predicates are marked by brackets. \\
+	
+	All but one of these clauses are \textit{nested} in the predicate of a previous clause. If a sentence can be defined in terms of smaller sentences, it is said to be defined recursively. This sentence qualifies: it contains a full sentence starting with Betty, which contains a full sentence starting with Charlie, which contains a full sentence starting with David. It can also be called recursively enumerable, because the clauses can be counted. \\
+	
+	This next "sentence", on the other hand, is recursively enumerable, but it is \textit{not} recursive:
+	\begin{align*}
+	\textnormal{Alice} 
+	\underbracket{\textnormal{said that Betty}
+		\underbracket{\textnormal{said that Charlie}
+			\underbracket{\textnormal{said that David}
+				\underbracket{\textnormal{said that}\dots\vphantom{\textnormal{g}}}}}}
+	\end{align*}
+	\vspace{1mm}
+	
+	In this case, you can count the potentially infinite number of recursions that occur. However, this "sentence" cannot be called recursive because, due to the absence of a period, it actually contains no full sentences. \\
+	
+	How can we understand this concept in the context of computation? We can think about sentences as programs. When someone says a sentence to you, you process information as the sentence is being said. When the sentence finally ends, you have all of the information necessary to understand the thought this person is trying to convey to you. As a result, you gain insight from this person. Similarly, when a programmer executes a program, the computer processes information as it moves forward through the instructions. When the program terminates, the computer has all of the information it needs to compute an answer. It is then able to return a value, which is the kind of insight that is produced by an algorithm. \\
+	
+	What if, instead, someone said a sentence to you that never ended? You could listen intently, trying to keep track of everything they've said, but the punchline will never come. You will never understand what they are trying to tell you. Similarly, if a program's instructions never end, a computer will never be able to produce any meaningful answer. This is called an \textit{infinite recursion}, which is a kind of infinite loop. \\
+	
+	This conclusion assumes that the computer we are talking about is a real computer in the real world, where time and space are finite. The reason that a Turing machine is a helpful abstraction is that it has an infinite amount of time and space at its disposal. Theoretically, it could run a program composed of a set of infinitely looping instructions to its "completion". Note the choice of the phrase "a set of infinitely looping instructions" instead of "an infinite set of instructions". The latter is called a \textit{stream}, and it is not Turing-recognizable. $\omega$-automata, however, can recognize it. \\
+	
+	Many well-known functions can be defined recursively, such as the factorial function $f(n)=n!$. What is an example of a function that is recursively enumerable, but not recursive? To answer this, I would like to recommend \hrefcolor[blue]{https://www.youtube.com/watch?v=7Kd3R\_RlXgc}{\underline{this video}}, in which a mechanical calculator is instructed to divide a number by zero. The calculator knows the method for division, but this method is only effective in the cases where the denominator is not zero. In the case where the denominator is zero, it attempts to carry out the calculation, faithfully incrementing its count of how many times the denominator fits into the numerator. Of course, zero fits into any number an infinite amount of times, so the calculator will continue to calculate until, as the video's author suggests, it catches fire. The program will never terminate, and a result will never be returned, so we can say that division over any set including zero is only semidecidable
+	\vspace{1mm}
+\end{tcolorbox}
+\vspace{7mm}
+
+The problems that Turing machines can solve are either decidable or semidecidable. What, then, is \textit{undecidable}? What kinds of problems do non-recursively enumerable languages describe? Consider the same decision problem from before: "Let $L$ be a language represented by a set. Given a word $w$, is $w$ a well-formed word in $L$?" If $L$ is non-recursively enumerable, a Turing machine cannot ever decide this problem because it cannot recognize $L$. Thus, such decision problems are \textit{undecidable} for all inputs, and any related function problems have no answer. \\
 
 \subsubsection{Computable Functions and Computable Numbers}
 
@@ -1059,7 +1110,7 @@ In order for Hilbert's program to succeed, there would have to exist a formal sy
 
 As a professor at the prestigious University of G\"ottingen, Hilbert gave many lectures on his program, both inside and outside of Germany. At one such lecture given in Bologna in 1928, Kurt G\"odel was in attendance. The concepts of mathematical logic discussed at this lecture would inspire G\"odel throughout his career, but in only three years he would deal a fatal blow to Hilbert's program. \\
 
-In 1929, G\"odel published his \textit{completeness theorem} of mathematical logic as his doctoral thesis. This was a mathematical proof that proved something fundamental about the first-order logic mathematics is based on. The result is ultimately quite simple, and it supports what mathematicians have implicitly understood about abstract, general proofs since about 300 \textsc{BCE}, when Euclid introduced the \textit{axiomatic method}.
+In 1929, G\"odel published his \textit{completeness theorem} of mathematical logic as his doctoral thesis. This was a mathematical proof that elucidated something fundamental about the first-order logic mathematics is based on. Although it is a bit difficult to understand at first, the result is ultimately quite simple, and it supports what mathematicians have implicitly understood about abstract, general proofs since about 300 \textsc{BCE}, when Euclid introduced the \textit{axiomatic method}.
 
 % If it's true, it's provable.
 
@@ -1073,11 +1124,9 @@ In 1929, G\"odel published his \textit{completeness theorem} of mathematical log
 
 \subsection{The Entscheidungsproblem and the Church-Turing Thesis}
 
-
+\subsubsection{$\mu$-recursive Functions}
 
 \subsubsection{The Halting Problem}
-
-\subsubsection{$\mu$-recursive Functions}
 
 \subsubsection{The Untyped $\lambda$-calculus}
 
@@ -1219,6 +1268,10 @@ Blah, blah, blah... \\
 %----------------------------------------
 
 \subsection{Libraries}
+
+%----------------------------------------
+
+\subsection{Exceptions}
 
 %--------------------------------------------------------------------------------
 %    SECTION
