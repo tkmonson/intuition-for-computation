@@ -151,9 +151,9 @@ BCOR5mm, % Binding correction
 %    TITLE AND AUTHOR
 %--------------------------------------------------------------------------------
 
-\title{\normalfont\spacedallcaps{SWE Master List}} % The article title
+\title{\normalfont\spacedallcaps{Intuition For Information}} % The article title
 
-\subtitle{A Guide to Preparing for the Software Engineering Interview Process} % The article subtitle
+\subtitle{A Guide for Prospective Software Engineers} % The article subtitle
 
 \author{\spacedlowsmallcaps{Tommy Monson}} % The article author
 
@@ -184,13 +184,13 @@ BCOR5mm, % Binding correction
 \begin{tcolorbox}[enhanced, colback=white, height=\textheight, sharp corners, boxrule=3pt]
 	\begin{center}
 		\vspace{2cm}
-		{\fontsize{32}{40} \spacedallcaps{SWE Master List}} \\[5mm]
-		{\fontsize{11}{40} \textsf{\textbf{A Guide to Preparing for the Software Engineering Interview Process}}}
-		\vspace{1.1cm}
+		{\fontsize{32}{40} \spacedallcaps{Intuition For}} \\[3mm]
+		{\fontsize{32}{40} \spacedallcaps{Information}} \\[5mm]
+		{\fontsize{11}{40} \textsf{\textbf{A Guide for Prospective Software Engineers}}} \\[7mm]
 		\begin{tcolorbox}[enhanced, colback=white, height=16.25cm, width=12cm, sharp corners, frame hidden]
 			\begin{center}
 				\begin{tikzpicture}[
-				space/.style={minimum height=1.5em,matrix of nodes,row sep=7.5mm,column sep=5mm,style={font=\ttfamily}},text depth=0.5ex,text height=2ex,nodes in empty cells]
+				space/.style={minimum height=1.5em,matrix of nodes,row sep=7mm,column sep=5mm,style={font=\ttfamily}},text depth=0.5ex,text height=2ex,nodes in empty cells]
 				\matrix (first) [space, style={font=\ttfamily}]
 				{
 				\odk & \zro & \one & \one & \zro & \zro & \one & \zro & \zro & \zro \\
@@ -216,7 +216,7 @@ BCOR5mm, % Binding correction
 				\end{tikzpicture}
 			\end{center}
 		\end{tcolorbox}
-		\vspace{1.1cm}
+		\vspace{1mm}
 		{\fontsize{18}{20} \adforn{1}\hspace{8mm}\spacedlowsmallcaps{Tommy Monson}\hspace{8mm}\adforn{2}}
 	\end{center}
 \end{tcolorbox}
@@ -247,9 +247,6 @@ BCOR5mm, % Binding correction
 \part*{Preface}
 \addcontentsline{toc}{section}{Preface}
 
-% Why did you write this?
-% Why do you think its worth sharing with others?
-
 \begin{displayquote}
 \textit{I wrote my first novel because I wanted to read it.}
 \begin{flushright}
@@ -258,85 +255,79 @@ BCOR5mm, % Binding correction
 \vspace{4mm}
 \end{displayquote}
 
-Words, words, words...
+% Why did you write this?
+% Why do you think its worth sharing with others?
+% College gave me reasoning and knowledge. Writing this guide gave me intuition.
+% There are a lot of jargon terms in computer science, and a lot of them are very similar. This guide also serves as a personal dictionary of sorts.
+% Wax poetic about computer science.
 
 \newpage
 
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
-%    INTRODUCTION: WHY?
+%    A NOTE ON SOURCING
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
 
-\part*{Introduction: Why?}
-\addcontentsline{toc}{section}{Introduction: Why?}
+\part*{A Note on Sourcing}
+\addcontentsline{toc}{section}{A Note on Sourcing}
 
-Why data structures? Why algorithms? Why computers, in general? This is a guide for learning data structures and algorithms in intense detail. So you should first ask yourself why. Why am I reading this? In one sense, for the purpose of interviewing well at top software engineering companies. Or startups. Or whatever kind of computer-type job you're looking for that involves writing code. But in another sense, why even study all of this stuff? Why do people study data structures? Why do people write algorithms? Why do we use computers? \\
+\begin{displayquote}
+	\textit{The origin of concepts, even for a scholar, is very difficult to trace. For a nonscholar such as me, it is easier. But less accurate.}
+	\begin{flushright}
+		---Peter Freyd
+	\end{flushright}
+	\vspace{4mm}
+\end{displayquote}
 
-Because humans like \underline{fast}. Thousands of years ago, we liked fast access to food, so we developed agriculture. A little over a hundred years ago, we liked fast personal transportation, so we invented automobiles. Nowadays, we like fast consumption of media, so we created a digital infrastructure that allows us to consume whatever we want \textit{on demand}. We like having computers that do cool stuff and enhance our lives. And to make computers do that, we have to tell them to move a bunch of stuff around and to do it \underline{fast}. The "stuff" is a bunch of values and data structures full of values that represent \textit{information}. The "moving around fast" is done by algorithms. The data structures are the nouns and the algorithms are the verbs. Let's learn those nouns and verbs so we can use them to instruct our computer to do cool stuff. But before we do that, let's introduce a few major ideas that will be important throughout the length of this document: data types, space complexity, and time complexity.
-
-%----------------------------------------
-
-\section*{Nouns}
-
-\begin{flushright}
-"What kind of stuff are we talking here? Data? \\
-Numbers? Gold doubloons?"
-\end{flushright}
-
-At the physical level, we're talking about bits. Billions of electrical switches in your computer's memory, each of which can be turned on or off, 1 or 0. However, we can choose to interpret those bits in different ways and depending on how we interpret them, the same sequence of 0s and 1s could represent many different kinds of data. We are able to assign a chunk of bits a \textit{data type}. Having types allows us to simulate all kinds of stuff like numbers or pictures or songs or whatever you can think of. Even \hrefcolor[blue]{https://en.wikipedia.org/wiki/Bitcoin}{\underline{gold doubloons}}.
-
-\begin{flushright}
-How much stuff are we talking here? A handful? \\
-60 boxes worth? 20 kilobytes?"
-\end{flushright}
-
-It depends on how many bits you need to represent what you're interested in. Typically, in real-world programming, we don't use a lot of singular values. Often, we use many values or \textit{elements} contained in a \textit{collection} of some kind, such as a list of integers. These collections typically hold many elements of the same size and type (e.g. 32 bits for a 32-bit integer). We could, then, measure the size of a collection in terms of elements instead of bits. If we have a data structure that needs to keep track of $n$ values, how much space does it take up in terms of elements? \\
-
-The answer seems obvious. If a data structure needs to keep track of $n$ values, it will store $n$ elements that represent those values. We would say then that the data structure has an $O(n)$ \textit{space complexity} or that it has an algorithm which belongs to the order of algorithms known as $\mathcal{O}(n)$, where $n$ is the number of input values. However, there actually are some data structures that require more than $n$ elements to represent $n$ values. This is because they use a space-inefficient algorithm in at least one of their operations. For example, consider a skip list, which is a data structure that is similar to a linked list. It stores elements with duplicate values in order to support a fast searching algorithm. For every $n$ values it needs to keep track of, a skip list actually stores $n\cdot log\;n$ elements. It has a space complexity of $O(n\;log\;n)$.
-
-%----------------------------------------
-
-\section*{Verbs}
-
-\begin{flushright}
-"How fast are we talking here? Immediately? \\
-A box per minute? An hour to finish?"
-\end{flushright}
-
-I'd like to put "fast" into perspective with an example. Imagine that you are a school administrator, and you need to look up student transcripts from time to time. Each transcript is labeled with a student's ID number. You have a collection of student transcripts and you need to find the one you are looking for, given the student's ID number. \\
-
-This is an example of a \textit{search problem}, one of the most commonly encountered problems in computer science. You have a bunch of things and you want a particular one of those things. How do you find it? More importantly, how do you find it quickly? This problem is solved by a particular kind of algorithm known as a \textit{search algorithm}, of which there are many. \\
-
-A search algorithm is a method of finding some value, given some key. For example, find a student's transcript, given their ID. There may be many methods that one could use to eventually find that transcript, but some methods will find it much more quickly. Naturally, the type of collection the transcript resides in is a factor in determining which methods are fast and which ones are slow to find it. This collection type also introduces an upper bound for how fast you could possibly find that transcript. Imagine the student transcripts are in a stack on a desk. You would probably have to just look through them one by one until you find what you are looking for. Imagine instead if each transcript is stored in its own drawer, and each drawer is labeled with the transcript's student ID. You would be able to find your desired transcript on the first try by opening the drawer with the ID on it. Both of these scenarios involve search algorithms, but one algorithm is much faster than the other because it was designed for a collection type that supports faster searching (drawers instead of a stack). This is where the idea of \textit{time complexity} arises. \\
-
-Time complexity, as it pertains to search algorithms, asks the following question: "Given a data structure full of items, what is the fastest reliable way that you could find a particular item in it?". The word \textit{reliable} is important here. Let's say your transcripts are in a stack and your plan is to look through all of them. You could pick up the transcript on the top of the pile and end up finding what you are looking for. However, you cannot reliably do this. Your transcript could just as easily have been in the middle of the pile or even at the bottom, and it would have taken a lot longer to find it in these cases. Thus, it is essential to define the "fastness" of the algorithm in a way that is \textit{state-independent}. That is, the particular order of the elements in the collection should not influence the classification of "how fast" the algorithm is. In practice, the classification is usually made according to the algorithm's \textit{worst-case} time complexity, its efficiency when the order of the elements is the least conducive to finding the target (e.g. when the transcript is at the very bottom of the stack). In this case, we keep the state of the collection constant and discuss the time complexity in terms of a different variable: the number of input values. \\
-
-Obviously, if your stack contained a million transcripts, it would take longer to search it than if it had 20 transcripts. In the worst case, you would have to look through a million transcripts instead of 20. Let's consider an arbitrary number of transcripts, $n$. We would say that your search algorithm, when applied to a stack of $n$ values, has an $O(n)$ time complexity. We would also say that it is a \textit{linear} search algorithm that belongs to the order of algorithms known as $\mathcal{O}(n)$. Other search algorithms have different time complexities and may require certain kinds of data structures or a particular ordering of elements. \\
-
-In general, an algorithm could be designed to accomplish almost any task. Regardless of the nature of the task, the time complexity of an algorithm should always be evaluated in terms of the size of the input.
-
-%----------------------------------------
-
-\section*{Going Forward in this Guide...}
-
-It's time to get specific. This guide will be more succinct and technical than this introduction, but it will remain conversational in tone. Jargon is useful, but it is often used imprecisely or as a cop-out when someone doesn't actually know what he or she is talking about. For that reason, even simple terms are defined before they are used. This review is fairly detailed and attempts to be as precise as possible without succumbing to pedantry or bloat. It is written in such a way that any curious person should be able to understand it with some supplementary Googling of unfamiliar terms. \\
-
-I recommend reading this guide slowly, acknowledging each word and pausing to think about each topic deeply. This is not a bullet-pointed list of properties and brief descriptions to be memorized. The goal of this guide is instead to give you a \textit{holistic} understanding data structures and algorithms. When the time comes to answer a whiteboard question, you will have a much higher chance of solving it if you understand data structures and algorithms \textit{fundamentally}. If you can visualize these abstract objects in your mind, you will be able to see them for what they are: tools in your arsenal. The meat of this guide is in sections 3 and 4, the Data Structures and Algorithms sections. You can skip to them, if you like, but the first two sections are designed to give you this deep understanding that I believe is important. \\
-
-[Section descriptions]
-
-%--------------------------------------------------------------------------------
-%--------------------------------------------------------------------------------
-%    PART 1: THEORY OF COMPUTATION
-%--------------------------------------------------------------------------------
-%--------------------------------------------------------------------------------
+% This guide was not written under the circumstances that a textbook would be. It is not intended to be a textbook.
+% It was not written with sourcing in mind.
+% However, all of the information here is the result of cross-referenced research.
+% Philosophy of 98% accuracy.
 
 \newpage
+
+%--------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------
+%    PART 0: INTRODUCTION
+%--------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------
+
+\part*{Introduction}
+\addcontentsline{toc}{part}{\tocpartglyph Introduction}
+
+This guide is everything you need to know in order to program computers professionally in the modern era.
+
+% Redo this intro.
+% Use short paragraphs. Be concise. Make it conversational.
+% Make it inspiring. Make it motivational. Make sound accessible.
+% Start with a philosophical idea of computation. Talk about how computation and calculation are human nature. Give broad overviews of the parts.
+% Computation is a mechanical behavior. Let's build machines to do it for us.
+% Certainty and objectivity are the pursuit of man. We pursue it via calculation and computation.
+% Discuss the goal of this guide. Discuss why someone might want to read it.
+% Discuss why content was chosen and why it is ordered the way it is.
+% Discuss why certain topics were left out.
+% Give a section by section overview. Raise some of the central questions.
+% Give a warning for the Theory of Computation section lol. Or at least assure readers that things will become more applied as the guide progresses.
+% Note differences in writing styles between the theory chapters (1-4) and the implementation chapters (5-7). The latter are not comprehensive overviews.
+% Discuss the title. Information - data vs abstract concepts.
+
+\newpage
+
+%--------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------
+%    PART I: THEORY OF COMPUTATION
+%--------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------
+
 \part*{Theory of Computation}
 \addcontentsline{toc}{part}{\tocpartglyph Theory of Computation}
 
-The \textit{theory of computation} is a field of study that is related to both mathematics and computer science. It is concerned with the formalization of "models of computation" or "abstract machines", which are theoretical models that describe how the output of a mathematical function is computed given inputs. It is also concerned with the problems that can be solved by these machines and how efficiently they can be solved. The theory of computation gives us the formal definition of a computer and the scope of what a computer can accomplish. \\
+% Rewrite, be poetic about computation. Really describe it. Then discuss how the idea was generalized and formalized and found to have a lot of commonalities with language, logic, math...
+
+The \textit{theory of computation} is a field of study that is related to both mathematics and computer science. It is concerned with a process known as \textit{computation}, which refers to any kind of \textit{calculation} (the transformation of one or more inputs into one or more outputs) that is accomplished by following an \textit{algorithm} (a set of rigorously defined steps). It is also concerned with the formalization of theoretical models of computation known as \textit{abstract machines} or \textit{abstract automata}. Also of interest are the \textit{computational problems} that can be solved by these abstract machines and how efficiently they can be solved. The theory of computation gives us the formal definition of a computer and the scope of what a computer can accomplish. \\
+
+Much of the work in the theory of computation is$\dots$ quite abstract. While calculation and computation have been practiced by humans for thousands of years, the concept was only formalized by mathematicians, logicians, philosophers, linguists, and computer scientists in the past 150 years. This part of the guide will delve into some fairly academic topics with a decent amount of mathematical rigor, but it is written to be accessible and entertaining. \\
 
 The field has three branches: \textit{automata theory}, \textit{computability theory}, and \textit{computational complexity theory}, each of which asks fundamental questions pertaining to how mathematical calculations can be automated, which kinds of problems can be solved by a machine, and how many resources are required to solve a particular problem. We will touch on the major discoveries made in each of these branches and discuss why they are significant to computer science and programming in general. \\
 
@@ -347,9 +338,22 @@ The field has three branches: \textit{automata theory}, \textit{computability th
 \toclineskip
 \section{Automata Theory}
 
-An \textit{automaton} is a self-operating machine designed to follow or respond to a predetermined sequence of operations. Automata include physical devices such as cuckoo clocks or robots or computer processors as well as \textit{abstract machines}. An abstract machine is like a theoretical computer. It is a mathematical description of what a computer is. It models the computation that a real, concrete computer (or automaton) could actually perform. Like their concrete counterparts, abstract machines have a starting \textit{state}. The machine receives an \textit{input} and will \textit{transition} to another state based on the value of that input and its current state. \\
+% Concept of automata
+% Models of computation
+% Computation requires state, transition, and language
 
-Abstract automata can fully model the computation that is performed by today's state-of-the-art computers, and we will spend a lot of time in this guide discussing the structure and behavior of this model as well as its limitations. We will also briefly explore the abstract automata that exist in pure mathematics and model computation that is not physically realizable. \\
+\textit{Automata theory} is the study of \textit{automata} and their behavior. An \textit{automaton} is a self-operating machine designed to follow or respond to a predetermined sequence of operations. Automata include physical devices such as cuckoo clocks, mechanical watches, robots, and computer processors as well as \textit{abstract machines}. An abstract machine is any formal description of \textit{mechanical behavior}. An abstract machine that is used to formally describe computation is called a \textit{model of computation}. This is a mathematical description of what a computer is, and it models the computation that a real, concrete computer could actually perform, if you were to implement that computer according to the model's specifications. Like their concrete counterparts, abstract machines have \textit{state}, a set of information in the \textit{present} that was acquired due to \textit{past} events. All automata begin with a \textit{starting state}, receive some sort of \textit{input}, and \textit{transition} to another state based on the value of that input and the value of its current state. \\
+
+One \textit{abstract automaton} in particular fully models not only the computation that is performed by today's state-of-the-art computers, but also the very process of computation itself. We will spend a lot of time in this guide discussing the structure and behavior of this model as well as what its limitations imply regarding the future of computing, software, mathematics, and the meaning of life. We will also briefly explore the abstract automata that exist in pure mathematics and model computation that is not physically realizable. \\
+
+%----------------------------------------
+
+\subsection{States, Transitions, and Language}
+
+% Creation of language, humanity stuff, natural language
+% Alphabets, words, sentences, grammars
+% Discuss language informally and formally
+% Discuss grammar informally and formally
 
 %----------------------------------------
 
@@ -431,13 +435,27 @@ This is a perfectly reasonable abstract machine, but something isn't right. It d
 \end{center}
 \vspace{5mm}
 
-This model of computation is called a \textit{finite-state machine} (FSM), and we will discuss it in detail later. For now, note that the actual complexity of the concrete cuckoo clock would be a bit more complicated than the FSM above. For example, what does the bird do specifically when it is on? Perhaps it raises and lowers its wings three times, turns its head to the right twice, and repeats. This process can also be modeled by an FSM. Thus, we can have FSMs whose states are themselves FSMs. Stated another way, an FSM can model systems of any arbitrary, but finite, complexity. \\
+% Generalize this diagram to labelled transition system
+% Transition system is a directed graph
+
+% Transition system, semiautomaton, operator monoid
+% F-coalgebra => transition systems are classes (math object)
+% Difference between semiautomata and automata
+
+Note that the actual complexity of the concrete cuckoo clock would be a bit more complicated than the automaton above. For example, what does the bird do specifically when it is on? Perhaps it raises and lowers its wings three times, turns its head to the right twice, and repeats. This process can be modeled by a different automaton. To fully model a concrete automaton, we must reduce it to an abstract machine, a system of states and transitions that account for every intended behavior. Abstract machines are capable of modeling systems of any arbitrary complexity. The automaton above is a model of computation called a \textit{finite-state machine} (FSM), and it will be the first abstract machine that we will discuss.
+\\
+
+% The nodes could themselves be automata => automata are recursive structures
 
 %----------------------------------------
 
 \subsection{Classes of Automata and the Languages They Can Understand}
 
-Automata, in general, are machines that receive, interpret, and follow instructions that are written according to the \textit{grammar} of a \textit{formal language} (a language whose rules can be formally defined). How powerful or expressive a language is determines what you can say using it. If we are using this language to instruct a computer to solve a problem, the \textit{expressiveness} of the language will determine which instructions we are able to give. If we cannot express a given instruction, we will not be able to solve any problems requiring that instruction. \\\\
+Automata, in general, are machines that receive, interpret, and follow instructions that are written according to the \textit{grammar} of a \textit{formal language}. Formal languages are similar to the \textit{natural languages} that humans speak in that they have \textit{words} that conform to a \textit{syntax} that is specified in terms of symbols from an \textit{alphabet}. These words can be arranged according to a \textit{grammar} to form \textit{sentences}, from which \textit{semantic meaning} can be interpreted. However, unlike natural languages, they are defined in precise, unambiguous terms. \\
+
+A formal language $L$ over an \textit{alphabet} $\Sigma$ is a \textit{set of words} that is a subset of $\Sigma^*$, the set of \textit{all} possible words that can be composed using $\Sigma$. Typically, formal languages conform to a \textit{formal grammar}, which is a set of precise grammatical rules. However, not all formal grammars are equal. Grammars determine how words can be arranged into sentences, which determines the kinds of thoughts that can be expressed. Thus, grammar controls how \textit{powerful} or \textit{expressive} a language is. If we intend to use a particular formal language to instruct a computer to solve a problem, the \textit{expressiveness} of the language will determine the kinds of instructions we are able to give. If we cannot express a given instruction, we will not be able to solve any problems requiring that instruction. \\
+
+In this section, we will examine automata with different \textit{mechanical structures}. The \textit{data} that are stored in components of these structures can be interpreted as words, and the structures themselves can be used to represent the rules of a formal grammar. However, some expressive grammars cannot be represented by simpler structures. Thus, the mechanical structure of an automaton acts as an \textit{upper bound} on its \textit{capacity} to understand language, and, by extension, its computational versatility. \\\\
 
 \begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
 	\vspace{2mm}
@@ -487,7 +505,7 @@ Calculators, such as \textit{counting boards} and the \textit{abacus}, have been
 
 The difference between a calculator and a computer is that a computer can be programmed and a calculator cannot. What does it mean to be programmable? That is perhaps the central question of automata theory, and we will discuss in this section several levels of "programmability". However, for now, we can certainly say that a simple, four-function electronic calculator is not a computer. It simply uses combinational circuits like full-adders, full-subtractors, multipliers, and dividers to implement its functions, and there is no potential for modifications or user-defined functions. \\
 
-Surprisingly enough, \textit{special-purpose computers} have also been around for a long time. Early examples include the \textit{Antikythera mechanism} (an Ancient Greek analog computer), Al-Jazari's 1206 water-powered \textit{astronomical clock}, the 1774 \textit{Writer Automaton} (a mechanical doll that could be programmed to write messages), the 1801 \textit{Jacquard loom}, and \textit{slide rules}. Some later mechanical computers were quite powerful, such as \textit{differential analyzers} (special-purpose computers for solving differential equations) and \hrefcolor[blue]{https://www.youtube.com/watch?v=s1i-dnAH9Y4}{\underline{fire control computers}}. Charles Babbage designed the \textit{Analytical Engine}, a general-purpose computer, in 1837, and Ada Lovelace wrote a program for it, but it was never built. General-purpose computing would not reemerge until the 1940s. \\
+Surprisingly enough, \textit{special-purpose computers} have also been around for a long time. Early examples include the \textit{Antikythera mechanism} (an Ancient Greek analog computer), Al-Jazari's 1206 water-powered \textit{astronomical clock}, the 1774 \hrefcolor[blue]{https://www.youtube.com/watch?v=bY\_wfKVjuJM}{\underline{Writer Automaton}} (a mechanical doll that could be programmed to write messages), the 1801 \textit{Jacquard loom}, and \textit{slide rules}. Some later mechanical computers were quite powerful, such as \textit{differential analyzers} (special-purpose computers for solving differential equations) and \hrefcolor[blue]{https://www.youtube.com/watch?v=s1i-dnAH9Y4}{\underline{fire control computers}}. Charles Babbage designed the \textit{Analytical Engine}, a general-purpose computer, in 1837, and Ada Lovelace wrote a program for it, but it was never built. General-purpose computing would not reemerge until the 1940s. \\
 
 The line between calculator and computer began to blur with the introduction of \textit{programmable calculators} in the 1960s. Many modern high-end calculators are programmable in Turing-complete languages such as TI-BASIC or even C or C++, which officially makes them computers. Once we start implementing \textit{sequential logic} with components like SR latches or D flip-flops, we are storing state, and state is a requirement for computing. Circuits that use sequential logic can be considered automata and, given enough complexity, computers. \\
 
@@ -583,7 +601,7 @@ This machine is similar to the idea of a modern computer. The tape represents a 
 
 A context-sensitive language is a language where semantics matter. Using our earlier example, "my dog barks red toys" would not be a valid sentence in a context-sensitive version of English. An LBA then is actually able to differentiate data types and can tell when an operation is defined for one type and undefined for another. LBA and context-sensitive languages are often used in the semantic analysis (type checking) done by a compiler. That is, they give language designers the power to specify whether or not a syntactically correct sentence actually has any real \textit{meaning} in their programming language. \\
 
-Where can we go from here? LBA are suitable models of real-world computers, and they can process semantic language. What more can we do? Let's try making the tape infinitely long... \\
+Where can we go from here? LBA are suitable models of real-world computers, and they can process semantic language. What more can we do? Let's try making the tape infinitely long$\dots$ \\
 
 \subsubsection{Turing Machines}
 
@@ -674,7 +692,7 @@ As previously stated, the Turing machine models not only computers, but \textit{
 
 \subsection{The Importance of Turing Machines to Modern Computing}
 
-The automata we have discussed so far (finite-state machines, pushdown automata, linear bounded automata, and Turing machines) form a sort of hierarchy of machine capability. The formal grammars and languages that these automata can understand also constitute a hierarchy that was first described by Noam Chomsky in 1956. The \textit{Chomsky hierarchy}, a classification of the expressiveness of language according to grammatical rules, is summarized below by a table with columns for grammars, the languages those grammars build, and the class of automaton that can understand those languages.
+The automata we have discussed so far (finite-state machines, pushdown automata, linear bounded automata, and Turing machines) form a sort of hierarchy of machine capability. The formal grammars and languages that these automata can understand likewise constitute a hierarchy that was first described by Noam Chomsky in 1956. The \textit{Chomsky hierarchy}, a classification of the expressiveness of language according to grammatical rules, is summarized below by a table with columns for grammars, the languages those grammars build, and the class of automaton that can understand those languages.
 
 \begin{table}[H]
 	\caption{The Chomsky Hierarchy}
@@ -704,7 +722,9 @@ Let's recap how these four automata handle memory.
 	\item A TM has an \textit{infinite array} of memory. It can read or write this memory in any order it likes, and it can also store as much as it likes.
 \end{itemize}
 
-It is no coincidence that real-world computers today use array-based memory. Arrays are both an intuitive and Turing-complete way to store information. Now, technically, LBA and TMs use "tape" instead of arrays, but the differences are minimal. In tape memory, cells have relative position, but they are not \textit{labeled}. Modern computers are actually modeled by \textit{register machines}. Register machines are equivalent in expressive power to Turing machines, but their memory is composed of an infinite-length array of uniquely addressed \textit{registers}. Like a tape of cells, an array of registers can be freely accessed. A subset of register machines known as \textit{random-access machines} (RAMs) allow for \textsc{jump} instructions (e.g. jump to register \#5623) in addition to standard sequential traversal of memory (e.g. move right, move right, move right, etc). This allows computers to accomplish a task with fewer instructions, but the expressive powers of random-access machines and Turing machines are equivalent because both are capable of \textit{eventually} solving the task. \\\\
+It is no coincidence that real-world computers today use array-based memory. Arrays are both an intuitive and Turing-complete way to store information. Now, technically, LBA and TMs use "tape" instead of arrays, but the differences are minimal. In tape memory, cells have relative position, but they are not \textit{labeled}. Modern computers are actually modeled by \textit{register machines}. Register machines are equivalent in expressive power to Turing machines, but their memory is composed of an infinite-length array of uniquely addressed \textit{registers}. Like a tape of cells, an array of registers can be freely accessed. \\
+
+A subset of register machines known as \textit{random-access machines} allow for \textsc{jump} instructions (e.g. jump to register \#5623) in addition to standard sequential traversal of memory (e.g. move right, move right, move right, etc). This allows computers to accomplish a task with fewer instructions, but the expressive powers of random-access machines and Turing machines are equivalent because both are capable of \textit{eventually} solving the task. Modern computers can be described as random-access machines because they use \textit{random-access memory} (RAM). In RAM, the time to access information is independent of physical location. From a performance perspective, this means that we do not have to consider \textit{where} we store things in memory. It's all uniformly fast. This allows for the construction of \textit{node-based} data structures, which we will discuss in a later section. \\\\
 
 \begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
 	\vspace{2mm}
@@ -748,23 +768,204 @@ Where should one store instructions or code in a stored-program computer? Those 
 \toclineskip
 \section{Computability Theory}
 
-Computation is mathematical in nature. Underneath its shiny UI and immersive applications, a computer is simply a machine that can be programmed to do math (and do it \textit{very} quickly in the case of modern computers). With that said, let me pose the central question of computability theory: could a machine (or computer) theoretically solve any given math problem, if given the correct input (or code)? We will consider this question more formally in this section, but it turns out that the answer is no. There exist problems that a computer will never be able to solve with computation, even given infinite resources. \\
+% Rewrite at the end
+
+Computation is mathematical in nature. Underneath its shiny UI and immersive applications, a computer is simply a machine that can be programmed to calculate numbers (and do it \textit{very} quickly in the case of modern computers). With that said, let me pose the central question of computability theory: could a machine (or computer) theoretically solve any given math problem, if given the correct input (or code)? We will consider this question more formally in this section, but it turns out that the answer is no. There exist problems that a computer will never be able to solve with computation, even given infinite resources. \\
 
 In this section, we will discuss what makes a problem \textit{solvable} and thus within the scope of computational analysis. We will also briefly discuss \textit{unsolvable} problems and how they can be organized into a hierarchy of \textit{unsolvability}. That said, before we discuss either solvable or unsolvable problems, we need to formalize our definition of the term \textit{problem} with regard to the field of computer science. \\
 
 %----------------------------------------
 
-\subsection{The Scope of Mathematical Problem Solving}
+\subsection{The Scope of Problem Solving}
 
-Since computation is mathematical, it follows that the natural use of computers is to solve \textit{mathematical problems}. A mathematical problem is a problem that is amenable to being represented with mathematics. Are there problems that are not mathematical? That is, are there problems that either \textit{cannot} be formalized with mathematics or \textit{should not} be formalized with mathematics because the result would produce no valuable insight? Of course. You might say that certain "human" problems are not mathematical in nature. For example, can an ethical or moral problem be analyzed or solved \textit{mathematically}? Not necessarily. Mathematics is based in \textit{first-order logic}, and the relationship between logic and ethics is tenuous. \\
+% Rewrite -- what are problems, why are they worth solving, what is calculation, what is computation?
 
-First-order logic is a well-defined system of abstract thought. It consists of \textit{logical objects} (e.g. "for all", "there exists", "such that", "and", "or", "is equal to", etc.) and \textit{non-logical objects} (e.g. constants, variables, functions). The axioms of Zermelo-Fraenkel (ZFC) set theory are written in first-order logic, and ZFC set theory is currently the most accepted \textit{foundation of mathematics}. Any formal mathematical solution, then, must be reducible to a series of inferences made using the ZFC axioms. No other "first principles" may be used. \\
+Since computation is mathematical, it follows that the natural use of computers is to solve \textit{mathematical problems}. A mathematical problem is a problem that is amenable to being represented with mathematics. Are there problems that are not mathematical? That is, are there problems that either \textit{cannot} be formalized with mathematics or \textit{should not} be formalized with mathematics because the result would produce no valuable insight? Of course. You might say that certain "human" problems are not mathematical in nature. For example, can an ethical problem be solved \textit{mathematically}? Furthermore, what does it mean for a problem to have a mathematical solution? It turns out that the answer lies in the difference between \textit{reasoning} and \textit{logic}. \\
 
-Consider the trolley problem. Five people are going to be hit by a trolley and killed. If you pull a lever, a single, different person will die instead. Is it ethical to pull the lever? It is fairly intuitive to realize that this problem does not have a mathematical solution. You can make a logical argument one way or the other given some appropriate first principles, but you cannot write a proof for the problem using mathematical axioms. Furthermore, any attempt at quantifying the variables involved in an ethical dilemma will be ill-founded as ethics is outside of the realm of mathematics and first-order logic. \\
+\subsubsection{Reasoning and Informal Logic}
 
-A mathematical problem is a problem that can be fully described using a system of axioms that are expressed in first-order logic. Formally, a mathematical problem is solved by proving whether a statement of first-order logic is true or false. If the \textit{proof} is consistent within its axiomatic system, the statement (or its negation) is considered a \textit{theorem}, a logical consequence of the axioms. This is an important discovery. The return type of a mathematical proof is Boolean. \\
+Reasoning is a cognitive act performed by rational beings. It is the application of \textit{reason}, the capacity for making a conscious effort to understand something using presently available information and the ingenuity of thought. It may or may not involve the application of logic. Reasoning could also be described as the providing of good \textit{reasons} to explain or justify things. However, as you might expect, there is much debate over whether or not any particular reason is "good". Reasoning is broad, and it comes in different flavors, but ultimately it is the pursuit of \textit{truth}. \\
 
-%----------------------------------------
+Humans, while not purely rational beings, are capable of reason when it suits them. People reason in order to \textit{learn}. They acquire \textit{knowledge} through learning, and some of that knowledge can serve to orient a person in the Universe or to aid them in some other way. Thus, human beings are inclined to engage in the mental act of reasoning from time to time. Human beings are also inclined to \textit{communicate} their thoughts, as they are social animals, and this includes the communication of \textit{rational thoughts}, thoughts that employ reasoning. \\
+
+\textit{Information}, in the form of abstract ideas or concrete \textit{data}, is communicated through many different channels and received by a variety of \textit{senses}. This communication is not limited to humans. Animals communicate in a multitude of ways, with varying degrees of expressiveness. However, human beings are considered unique in their ability to communicate abstractly 
+
+Methods of reasoning can be divided into two categories: those that can support an \textit{argument} and those that can't. The former is known as \textit{logical reasoning} and the latter as \textit{intuitive reasoning}. An argument is 
+
+% An argument is a "calculus"
+% Argument - set of statements (premises) and a conclusion in a language
+% Premises can be axioms or theorems
+% Logical consequence
+% Truth-bearer
+% Deductive reasoning is applied to an argument to create a deduction (argument + steps of reasoning)
+% Composing a deduction is a way to prove validity
+% Composing an induction is a way to assess strength
+% Venn diagrams
+% Reasoning is a set of rules of inference
+% Inductive/deductive "steps"
+% Proof - deduction from "known truths" (axioms and proven theorems), proves soundness
+% Data validation proves cogency?
+% Argument vs explanation
+% Validity/soundness
+
+\paragraph{Intuitive Reasoning} \hspace*{1mm} \vspace*{2mm}
+
+\paragraph{Logical Reasoning} \hspace*{1mm} \vspace*{2mm}
+
+Logical reasoning is the \textit{inference} of new information from present information. It involves \textit{rule of inferences} that are used to relate sets of \textit{premises} to \textit{conclusions}. There are three kinds of logical reasoning: \textit{deductive}, \textit{inductive}, and \textit{abductive}. Each is classified according to which piece of information (premises, rule, or conclusion) is missing and must be inferred from the others. \\
+
+% Explanatory vs ampliative
+% Certainty vs uncertainty (probability)
+% Classic distinction is deductive and inductive. They are opposites. Abduction is something totally different.
+% General to specific vs specific to general
+% Logical truths vs facts
+% Abduction = induction + justification
+
+% Describe deductive/inductive with machine learning
+
+\subparagraph{1. Deductive Reasoning} \hspace*{1mm} \vspace*{2mm}
+
+\textit{Deductive reasoning} is the inference of a \textit{conclusion}, given a set of premises and a rule. It is consequential in nature. That is, it cannot say anything more than what its premises imply. For example, given the first premise "When it rains, the grass gets wet" and the second premise "It is raining", we can infer the conclusion "The grass is wet". This conclusion is a \textit{logical consequence} of its premises. \\
+
+The above inference is allowed due to a deductive rule known as \textit{modus ponens} (Latin for "method that affirms"). Given a \textit{conditional statement} of the form $P\rightarrow Q$ (i.e. $P$ \textit{implies} $Q$) and the \textit{antecedent} $P$ as premises, this rule can be used to infer the \textit{consequent} $Q$ as a conclusion. There are other deductive rules of inference as well, such as \textit{modus tollens} (a "method that denies"). Given the same conditional $P\rightarrow Q$ and the \textit{negation of the consequent} $\lnot Q$, this rule infers the antecedent $\lnot P$. \\
+
+Deduction is the primary method of inference that is studied today, and it is the basis of \textit{mathematical logic}. Deductive arguments are evaluated based on their \textit{validity} and \textit{soundness}, both of which are related to but distinct from the concept of \textit{truth}. Truth, in the context of deductive reasoning and logic, is a simple, binary value. A statement can be assigned a value of \textit{true} or \textit{false}. Given this dichotomy, an argument is \textit{valid} if it is impossible for its conclusion to be false, assuming that its premises are true. An argument is \textit{sound}, if it is valid and its premises are actually true. We will discuss what "actually true" means later in this section. \\
+
+\subparagraph{2. Inductive Reasoning} \hspace*{1mm} \vspace*{2mm}
+
+% Analogical reasoning
+
+\textit{Inductive reasoning} is the inference of a \textit{rule} that relates a set of premises to a conclusion. It is observational in nature. For example, we might observe that "It is raining" and "The grass is wet". If these two events happen in tandem multiple times, we might be inclined to infer a rule that states that one of these events implies the other: "When it rains, the grass gets wet". \\
+
+This explanation of events is called a \textit{hypothesis}. While this particular hypothesis is \textit{probable}, it is not necessarily \textit{certain}. For example, while this rule might hold most of the time, it would be invalid if a canopy were placed over the grass one day. In contrast, the deductive argument was given "When it rains, the grass gets wet" as a premise that was assumed to be true for all scenarios involving rain and grass, so no canopy-like loopholes are possible in this case. The conditional does not have the same certainty in the inductive argument. \\
+
+Inductive arguments exist on a spectrum between \textit{weak} and \textit{strong}. Those that are stronger and more persuasive have a higher probability of having a true conclusion. Inductive reasoning is associated with \textit{science} and \textit{critical thinking} because it allows one to make generalizations about complex phenomena given limited evidence. Unlike deductive reasoning, it attempts to find new knowledge that is not simply contained within its premises. \\
+
+Statements made by induction are bolstered with evidence whereas deductive statements are as true as their premises. This leaves inductive reasoning susceptible to \textit{faulty generalizations} and \textit{biased sampling}. Induction must also assume that future events will occur exactly as they have in the past, which is not always the case. For example, a turkey that is fed every morning with the ring of a bell may infer by induction that bell $\rightarrow$ food. However, he will see the error in his reasoning when the farmer rings the bell on Thanksgiving Day and instead slits his throat. \\
+
+\subparagraph{3. Abductive Reasoning} \hspace*{1mm} \vspace*{2mm}
+
+\textit{Abductive reasoning} is the inference of a \textit{premise}, given a conclusion and a rule. It is investigative in nature. For example, given a conclusion "The grass is wet" and a rule "When it rains, the grass gets wet", we might determine that rain is the best explanation for the wetness of the grass. Thus, we abduce that "It might have rained". \\
+
+Like induction, abduction can also produce a hypothesis. However, abduction does not seek a new relationship between two previously unconnected statements. Rather, it uses established relationships to find a reasonable explanation for a statement that is assumed to be true. It is often used by detectives or diagnosticians who need to find a probable cause of an event. It is also used in Bayesian statistics. While multiple premises may be abduced, typically we want to abduce a single, "best" premise. \\
+
+Abductive reasoning allows us to ignore the many causes that are unlikely in favor of those few that may be relevant to the problem at hand. For example, doctors are often taught to heed the following proverb: "When you hear hoofbeats, think of horses, not zebras". That is, when a patient exhibits certain symptoms, a doctor should abduce from them a commonplace disease before considering more exotic possibilities. However, "zebras" do exist. Sometimes the most likely cause is not the actual cause. For this reason, abduction is also considered to be equivalent to a deductive fallacy called \textit{affirming the consequent}, which is like a \textit{modus ponens} performed in reverse. That is, given a conditional $P\rightarrow Q$ and the consequent $Q$, abduction infers $P$ from $Q$ by assuming that the converse $Q\rightarrow P$ of the conditional is also true. This is not a deductively valid inference. Considering our example again, the grass might be wet from rain, but this is not \textit{necessarily} true. It is also possible that the sprinkler system is on. Or perhaps there is a zebra-esque scenario like a flood. \\\\
+
+\begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
+	\vspace{2mm}
+	\begin{center}
+		\textbf{What is Absolute Truth?}
+	\end{center}
+	\vspace{1mm}
+	Truth, in the absolute sense, has been discussed and debated since the dawn of man. It is a concept that seems obvious to us, and yet it always seems to elude our understanding. Philosophers have formulated dozens of theories of truth over the years, with some asserting that truth is an objective property of our universe and others asserting that truth is a useful lie that mankind has invented. And while there is merit in those claims that truth is not real, we still see around us the technology that was born out of our intuitive sense of true and false. Especially in computer science where everything is represented in binary. \\
+	
+	The traditional theories of truth have been termed \textit{substantive}. That is, they assert that truth has some basis in reality and that it is a meaningful thing to discuss. Early theories of truth from Ancient Greece are considered the foundation of \textit{correspondence theory}, the idea that statements are true if their symbols are arranged in such a way that they express an abstract thought that accurately describes reality. This theory defines truth in the context of a relationship between language and objective reality. It is a useful philosophy that allows us to orient ourselves in the world around us. However, many philosophers believe that truth cannot be explained by such a simple rule. In fact, there are many more factors that could play a role in the concept. \\
+	
+	Objections to a strict correspondence theory usually take issue with the treatment of language as something monolithic and easy to classify within a true-false dichotomy. For example, a statement encoded as a sentence in a language is only meaningful to people who can read that language. What does this imply about a particular language's relationship with truth? Is a statement only true for those who understand it? Furthermore, there is no guarantee that readers of the same language will even be able to agree on the meaning expressed by a particular sentence. Languages often encompass multiple dialects that might parse words differently. Words themselves also may not be precise, and some abstract thoughts may not have suitable words in some languages. These are the points raised in \textit{social constructivism}, a theory which avers that human knowledge is historically and culturally specific. Social constructivists also believe that truth is \textit{constructed} and that language cannot faithfully represent any kind of objective reality. \\
+	
+	Other substantive theories find the essence of truth nestled in other abstract concepts. \textit{Consensus theory}, as the name implies, defines truth as something that is agreed upon either by all human beings or by a subset (such as academic groups or standards bodies). This is another anthropocentric definition that is at constant risk of philosophical division on any given topic. \textit{Coherence theory} takes a more objective approach, claiming that a statement can only be true if it fits into a system of statements that support each other's truth. This is similar to the notion of \textit{formal systems}, which we will discuss in depth. However, traditional coherence theories attempt to explain all of reality within a single coherent system of truths, which is incompatible with our modern understanding of formal systems. \\
+	
+	Modern developments in philosophy have resulted in theories that deviate from the long-held, substantive opinions on the nature of truth. These \textit{minimalist} theories assert instead that truth is either not real or not a necessary property of language or logic. They claim that statements are \textit{assertions} and thus are implicitly understood to be true. For example, it is understood that by putting forth the sentence "$2+2=4$", you are endorsing the semantic meaning "$2+2=4$ is true". The clause "is true" is called a \textit{truth predicate}, and minimalist theories of truth often consider its use redundant. \\
+	
+	This idea of a truth predicate is borrowed from Alfred Tarski's \textit{semantic theory of truth}, which is a substantive theory that refines the correspondence concepts espoused by Socrates, Plato, and Aristotle for formal languages. This theory makes a distinction between a statement made in a formal language and a truth predicate, which evaluates the truth of the statement. Tarski made this distinction in order to circumvent the \textit{liar's paradox}, which is often presented with the following example: "This sentence is false". If the predicate "is false" is considered to be an element of "this sentence", the truth of this statement cannot be decided. For this reason, Tarski states that a language cannot contain its own truth predicate. This is enforced by requiring that "this sentence" be written in an \textit{object language} and that "is false" be written in a \textit{metalanguage}. \textit{Convention T}, the general form of this rule, can be expressed as
+	
+	\begin{center}
+		\textit{"$P$" is true if and only if $P$}
+	\end{center}
+
+	where "$P$" is simply the metalanguage sentence $P$ rendered in the object language. That is, the \textit{syntactic representation} is assigned a \textit{truth value} of true if and only if the semantic meaning it represents is considered true (according to whatever theory of truth you employ). By this rule, we say that "$2+2=4$" is true if and only if \textit{the sum of the number $2$ with the number $2$ is equal to the number $4$}. Minimalist redundancy theories modify Tarski's theory by interpreting "$P$" as an implicit assertion of the truth of $P$. The sentence "$P$", which asserts that $P$ is true, is then false if and only if its semantic meaning $P$ is false. \\
+	
+	\parbreak
+	\vspace{4mm}
+	
+	The debate on the nature of truth rages on \textit{in perpetuum}. However, for our purposes, we must be practical. There is truth in logic and mathematics and computer science as well, but, in practice, it has little to do with the debates on \textit{absolute truth} described above. Their truth is \textit{relative}. That is, it relies on the assumption that our premises are true. Cognizant of this, we move forward with our thinking, searching for truths within these arbitrary boundaries. We will discuss \textit{relative truth} in the upcoming section on logic. \\
+	\vspace{1mm}
+\end{tcolorbox}
+\vspace{7mm}
+
+% Discuss the logical reasonings comparatively. 3 paths in life. Certain vs uncertain. Binary vs multi-valued.
+
+% Fallacious reasoning
+% Formal vs informal (indep of interpretation)
+
+\subsubsection{Formal Logic}
+
+% Open/closed world assumption
+% Domain of discourse / universe
+% Deduction is impossible in non-axiomatic systems because we don't know what the axioms of the Universe are.
+
+% What is logic?
+Logic is a long-standing, far-reaching field, and its definition has changed over the ages, but it can be broadly described as the study of \textit{argument}. 
+
+% Logic - a study of i inference, an instrument (organon) that allows us to think more powerfully
+
+% What is early logic?
+The practice and analysis of logic can be done in many different ways. For example, the early study of logic was mostly done in the context of \textit{natural language} arguments made during oration.
+
+% Syllogistic logic (categorical reasoning, motivated by science 13:45)
+% Stoic logic
+
+% Informal logic is not always explicit. It may have implicit elements that must be made explicit by analysis.
+% Formal logic, traditionally symbolic logic, now called mathematical logic
+
+% What is modern logic? ("Arguments and the forms they make take")
+Modern logic, however, is \textit{formal}. That is, it observes the abstract \textit{forms} of arguments instead of the arguments themselves. \\
+
+% Hobbes - thought as computation
+% Boolean logic
+% Frege, logicism
+% Class - Russell's paradox
+
+Formal logic is the study of \textit{inference} with regard to \textit{formul{\ae}}. Formul{\ae}, Latin for "small forms" or "small rules", are finite sequences of symbols from an alphabet. They are purely \textit{syntactic objects}, much like strings of text. Inference is the act of processing a formula $A$ and deducing that a formula $B$ is a \textit{logical consequence} of $A$. This means that, given a set of \textit{rules of inference}, the string $A$ can be transformed into the string $B$ by means of a finite series of applications of said rules. \\
+
+
+% Logical and non-logical symbols
+% Categorematic and syncategorematic terms (individual meaning)
+% Semantic consequence
+% Formal systems
+% Reason vs. logic -> Humans vs. computers
+
+and they are studied in within \textit{formal systems}. These systems of abstract thoughts are used to infer the existence of formul{\ae} by means of logical deduction starting from a given set of axioms. A formal system has:
+
+\begin{enumerate}
+	\item A finite \textit{alphabet} of \textit{symbols}, from which a formula may be constructed
+	\item A formal \textit{grammar}, to which a formula must conform if it is to be considered \textit{well-formed} in the system
+	\item A set of initial formul{\ae}, known as \textit{axioms}, from which inferences can be made
+	\item A set of inference rules, known as a \textit{logical calculus}, which prescribe how inferences are to be made
+\end{enumerate}
+
+%%%
+
+Formul{\ae}, which are finite sequences of symbols from a system's alphabet, are purely \textit{syntactic} objects, but, given an \textit{interpretation}, they can be endowed with \textit{semantic} meaning. For example, an interpretation of first-order logic requires the following assignments of semantic meaning:
+
+\begin{enumerate}
+	\item Variables are assigned \textit{objects} (things that can be modeled) from a \textit{domain of discourse} (a well-defined set of objects)
+	\item Predicates are assigned \textit{properties} of objects
+	\item Formul{\ae}, which contain variables and predicates, are assigned a \textit{truth value} of true or false
+\end{enumerate}
+
+A well-formed formula with such an interpretation is called a \textit{sentence}, and the meaning expressed by a sentence is called a \textit{statement} or \textit{proposition}. A sentence expressing a true statement (according to the axioms and inference rules of the formal system) is called a \textit{theorem}, and a set of theorems is called a \textit{theory}. For example, ZFC set theory is a first-order \textit{theory} of sets. It has a collection of theorems written in first-order logic that form an \textit{axiomatic set}, and these theorems are used to prove other theorems that also belong to the theory using a set of inference rules. \\
+
+\begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
+	\vspace{2mm}
+	\begin{center}
+		\textbf{What is Relative Truth?}
+	\end{center}
+	\vspace{1mm}
+	A logical argument begins from \textit{premises} that are decided true. It then progresses by truth-preserving \textit{rules of inference} to other statements whose truth is ultimately dependent on the individual truths of the premises, concluding with a final statement called a \textit{conclusion}. A \textit{proof} of this conclusion thus depends on both the \textit{truth} of its premises and the \textit{validity} of its argument. \\
+
+	Validity can be determined within a logical system. A logical argument that is valid simply applies rules of inference as they are prescribed. Verifying premises is more complicated. Their truth values are external to logic. An argument that is founded on \textit{false premises} may be logically valid, in which case it will produce a conclusion that is nominally true. Sometimes, however, this conclusion will \textit{feel} wrong or evidence to the contrary will arise, and this assertion of truth will prompt an inquiry into the basis of the argument. \\
+	
+	Occasionally, logical arguments that are accepted for hundreds or thousands of years are refuted on grounds of starting from false premises. Such discoveries are accompanied by foundational changes such as a collective shift in philosophical mindset or the adoption of a new theory. For example, before the 1930s, it was assumed that a formal language could produce a sentence to express any abstract thought and that 
+
+	\vspace{1mm}
+\end{tcolorbox}
+\vspace{7mm}
+
+% First-order logic for math
+% ZFC set theory
+% Ethics and logic
+% Proofs are Boolean
 
 \subsection{Decision Problems and Function Problems}
 
@@ -780,9 +981,7 @@ Here's a more concrete example. Let $x$ be any natural number (including $0$). $
 
 In computability theory, we are interested in determining whether or not an output exists for each of a problem's inputs. If an output exists, we can be sure it has \textit{a} value, but the particular value is inconsequential. While computers do solve function problems, it is enough to consider only the corresponding decision problem when proving whether a function problem is \textit{solvable} or not. \\
 
-%----------------------------------------
-
-\subsection{"Effective Calculability"}
+\subsubsection{"Effective Calculability"}
 
 Before the study of computer science, mathematicians sometimes informally described functions as \textit{effectively calculable}. This meant that a correct output could be calculated for any input from the domain of the function, using an \textit{effective method}. A method, in general, is just a "procedure" that does "something". A method is \textit{effective} if it consists of a finite number of instructions and solves a particular problem. \\
 
@@ -843,13 +1042,13 @@ The truth of this "so-called continuum" of the real numbers would continue to ev
 
 To aid his exploration into the continuous nature of the real numbers, he formulated the \textit{transfinite arithmetic}, the arithmetic of infinite numbers whose size is somewhere between finite and uncountably infinite. He generalized the natural numbers, introducing two countably infinite sets, those of the \textit{ordinal} and \textit{cardinal} numbers. \\
 
-Ordinal numbers describe order in a collection. More specifically, they describe the \textit{ordinality} of a number in an ordered set (e.g. $1^\textit{st}$, $2^\textit{nd}$, $3^\textit{rd}$, ...). They include both finite natural numbers such as $1,\,2,\,3,\,\dots$ and transfinite numbers such as
+Ordinal numbers describe order in a collection. More specifically, they describe the \textit{ordinality} of a number in an ordered set (e.g. $1^\textit{st}$, $2^\textit{nd}$, $3^\textit{rd}$, $\dots$). They include both finite natural numbers such as $1,\,2,\,3,\,\dots$ and transfinite numbers such as
 \begin{align*}
 \omega,\,\omega+1,\,\omega+2,\,\dots,\,2\omega,\,3\omega,\,4\omega,\,\dots,\,\omega^2,\,\omega^3,\,\omega^4,\,\dots,\,\omega^\omega,\,\omega^{\omega^\omega},\,\omega^{\omega^{\omega^\omega}},\,\dots
 \end{align*}
 where $\omega$ is the "first infinite ordinal". Note that this sequence of transfinite quantities never ends. Cantor commented on this property, stating that the set of all ordinals $\Omega$ cannot have a greatest member. Because $\Omega$ is well-ordered, there must exist some number $\delta$ that would be greater than all of the numbers in $\Omega$. But $\delta$ would belong to $\Omega$ because $\Omega$ contains all ordinal numbers. This implies that $\delta>\delta$, which is a contradiction. Cantor, a devout Lutheran, called this illusive $\Omega$ the Absolute Infinite, a number or set that is bigger than any conceivable quantity, finite or transfinite. This kind of thinking later led to the discovery of a number of \textit{mathematical paradoxes} or \textit{contradictions} in set theory, many of which still exist today. \\
 
-Cardinal numbers describe the size or \textit{cardinality} of a set (i.e. a set could contain $1$ element, $2$ elements, $3$ elements, ...). Like the ordinals, the cardinals include both finite natural numbers and transfinite numbers, the smallest of which is $\aleph_0$ (aleph-null). $\aleph_0$ is the cardinality of any countably infinite set, such as the natural numbers. In contrast to this, Cantor describes uncountably infinite sets, such as the real numbers, as having cardinality $\aleph_1$ (aleph-one). There are other greater aleph numbers that are studied for their own sake such as $\aleph_\omega$, the first uncountable cardinal number \textit{not} equal to $\aleph_1$. That said, $\aleph_0$ and $\aleph_1$ are sufficient for our purposes. Like the set of all ordinal numbers, the set of all cardinal numbers cannot be completed in any meaningful way and thus it can be described as a set of Absolute Infinite cardinality. \\
+Cardinal numbers describe the size or \textit{cardinality} of a set (i.e. a set could contain $1$ element, $2$ elements, $3$ elements, $\dots$). Like the ordinals, the cardinals include both finite natural numbers and transfinite numbers, the smallest of which is $\aleph_0$ (aleph-null). $\aleph_0$ is the cardinality of any countably infinite set, such as the natural numbers. In contrast to this, Cantor describes uncountably infinite sets, such as the real numbers, as having cardinality $\aleph_1$ (aleph-one). There are other greater aleph numbers that are studied for their own sake such as $\aleph_\omega$, the first uncountable cardinal number \textit{not} equal to $\aleph_1$. That said, $\aleph_0$ and $\aleph_1$ are sufficient for our purposes. Like the set of all ordinal numbers, the set of all cardinal numbers cannot be completed in any meaningful way and thus it can be described as a set of Absolute Infinite cardinality. \\
 
 \subsubsection{The Continuum Hypothesis}
 
@@ -884,7 +1083,7 @@ With the work of Kurt G\"odel in 1940 and of Paul Cohen in 1963, it was establis
 	
 	In addition to objections from mathematicians, Cantor's set theory received a number of complaints from Christian theologians. Some saw the formalization of an uncountable infinity as a challenge to the uniqueness of the absolute infinity of God. Some associated the transfinite hierarchy with pantheism. Cantor felt strongly that his set theory could exist harmoniously within a Christian framework. Even his notational choices ($\aleph$, $\omega$, and $\Omega$) can be considered an homage to the title of "Alpha and Omega". He associated the Absolute Infinite with God, and felt that transfinite quantities, while infinite, were no challenge to the supremacy of the Lord, averring that
 	\begin{displayquote}
-		\textit{... the transfinite species are just as much at the disposal of the intentions of the Creator and His absolute boundless will as are the finite numbers.}
+		$\dots$\textit{the transfinite species are just as much at the disposal of the intentions of the Creator and His absolute boundless will as are the finite numbers.}
 	\end{displayquote}
 	Furthermore, Cantor wrote to numerous prominent theologians, including the Pope, in an attempt to clear up this confusion between the abstract notion of infinity and the actuality of infinity, as he saw it, in God and in Nature:
 	\begin{displayquote}
@@ -1096,17 +1295,23 @@ Consider a partial function $g:\mathbb{Q}^k\nrightarrow\mathbb{Q}$. Like $\mathb
 
 From here, we can add a countably infinite set of transcendental reals to our set of algebraic reals to form the set of \textit{computable numbers}. These are the real numbers that can be computed with an arbitrary level of precision by a finite, terminating algorithm. This implies that a countable number of transcendental reals can be computed. It may be surprising to hear, for example, that the transcendental constant $\pi$ is computable, but its algorithm is simple. Given a circle, $\pi$ is the ratio of the circle's circumference to its diameter. These quantities can be stored with an arbitrary level of precision in a TM's countably infinite memory, and instructions can be written to divide one by the other. In general, computable transcendentals can be found by enumerating $S:=\mathbb{A}_\mathbb{R}$ and using the diagonal argument to construct a computable real $s\notin S$. Add $s$ to $S$, apply the argument again, and repeat to add a countably infinite number of computable transcendentals to $S$.\\
 
-The set of computable numbers is countably infinite, which means that almost all real numbers are uncomputable. The question naturally arises: Does a number really exist (or have any \textit{worth}) if it is impossible to compute its value? A constructivist would argue that it does not. There are efforts to use the computable numbers instead of the real numbers for all of mathematics, and the resulting theory is called computable analysis. Regardless, one could argue that theoretical computer science is an exploration of the mathematics that can be done within this set.
+The set of computable numbers is countably infinite, which means that almost all real numbers are uncomputable. The question naturally arises: Does a number really exist (or have any \textit{worth}) if it is impossible to compute its value? A constructivist would argue that it does not. There are efforts to use the computable numbers instead of the real numbers for all of mathematics, and the resulting theory is called computable analysis. Regardless, one could argue that theoretical computer science is an exploration of the mathematics that can be done within this set. \\
 
 %----------------------------------------
 
-\subsection{Hilbert's Program and G\"odel's Incompleteness Theorems}
+\subsection{Hilbert's Program and G\"odel's Refutation of It}
 
-In 1900, David Hilbert gave an address to the International Congress of Mathematicians in Paris. In his speech, he described twenty-three problems that he felt would be some of the most important of the century. While these problems are diverse in subject matter, they are all \textit{deep}. In each of their answers (or lack of answers) lies some fundamental truth about the structure of mathematics itself. They are known as \textit{Hilbert's problems}, and many of them remained unsolved and of great interest today. \\
+In 1900, David Hilbert gave an address to the International Congress of Mathematicians in Paris. In his speech, he described twenty-three problems that he felt would be some of the most important of the century. While these problems are diverse in subject matter, they are all \textit{deep} questions. In each of their answers (or lack of answers) lies some fundamental truth about the structure of mathematics itself. They are known as \textit{Hilbert's problems}, and many of them remained unsolved and of great interest today. \\
 
-This presentation of problems was, in essence, the inception of \textit{Hilbert's program}, a worldwide goal to solve what was known at the time as the \textit{foundational crisis of mathematics}. With the general acceptance of Cantor's set theory came the discovery of many paradoxes and inconsistencies that called into question the \textit{consistency} of mathematics. The creation of ZFC set theory resolved some of these paradoxes, such as Russell's paradox, but not all inconsistencies were resolved. Mathematics was still curiously "broken" in certain ways. \\
+This presentation of problems was, in essence, the inception of \textit{Hilbert's program}, a worldwide goal to solve what was known at the time as the \textit{foundational crisis of mathematics}. With the general acceptance of Cantor's set theory came the discovery of many paradoxes and inconsistencies that called into question the \textit{consistency} of mathematics. It had been assumed until this point that mathematics was something that could be trusted, that a statement could be proven true from previous mathematical truths. The creation of Zermelo-Fraenkel set theory in the late 1920s resolved some of these paradoxes, such as Russell's paradox, but not all inconsistencies were resolved. Mathematics was still curiously "broken" in certain ways. \\
 
-As a proponent of the mathematical philosophy of \textit{formalism}, Hilbert believed that mathematics was not a description of some abstract part of reality, but was rather akin to a game where moves can be made according to a set of rules. He believed that the "games" in mathematics were all played according to some set of \textit{a priori} rules called \textit{axioms}. In the early 20th century, he made it his life's goal to construct such a set of axioms, from which all existing and future theories could be derived in a consistent manner. Mathematicians of the time agreed that the search for such an axiomatization was direly needed. By this point, no one had been able to prove the consistency of the standard \textit{Peano arithmetic}, which includes axioms such as $x+y=y+x$ and $x\times0=0$. Proving a consistent set of axioms of arithmetic was the second of Hilbert's famous twenty-three problems, preceded only by the problem of solving Cantor's continuum hypothesis. \\
+% Blue box on philosophy of mathematics and metamathematics
+
+As a proponent of the philosophy of mathematics known as \textit{formalism}, Hilbert believed that mathematics was not a description of some abstract part of reality, but was rather akin to a game where pieces could be moved according to a set of rules. He believed that a mathematical "game" was played with "pieces" from an arbitrary set of \textit{a priori} truths. These pieces are called \textit{axioms}, and they are manipulated according to an arbitrary set of \textit{inference rules} to construct \textit{conclusions}. These conclusions can then be used as \textit{premises} for the inference of further conclusions. Thus, formalism avers that mathematics is purely \textit{syntactic}. It is nothing more than the manipulation of strings of symbols by logical rules, and any sort of \textit{semantic meaning} derived from these strings is merely the product of an \textit{interpretation}. \\
+
+In the early 20th century, Hilbert made it his life's goal to construct a set of axioms, from which all existing and future mathematical theories could be derived in a consistent manner. His peers agreed that the search for such an axiomatization was direly needed. By this point, no one had been able to prove the consistency of the standard \textit{Peano arithmetic}, which includes basic axioms such as $x+y=y+x$ and $x\times0=0$. Proving a consistent set of axioms of arithmetic was the second of Hilbert's famous twenty-three problems, preceded only by the problem of deciding Cantor's continuum hypothesis. \\
+
+Stated more generally, Hilbert intended to construct a \textit{formal system} that was \textit{complete}, \textit{consistent},
 
 In order for Hilbert's program to succeed, there would have to exist a formal system with the following properties:
 \begin{itemize}
@@ -1118,7 +1323,33 @@ In order for Hilbert's program to succeed, there would have to exist a formal sy
 
 As a professor at the prestigious University of G\"ottingen, Hilbert gave many lectures on his program, both inside and outside of Germany. At one such lecture given in Bologna in 1928, Kurt G\"odel was in attendance. The concepts of mathematical logic discussed at this lecture would inspire G\"odel throughout his career, but in only three years he would deal a fatal blow to Hilbert's program. \\
 
+\subsubsection{Mathematical Objects and Model Theory}
+
+Before we discuss G\"odel's landmark theorems in mathematical logic, we must understand a bit about the theory that they describe. G\"odel's theorems on the \textit{completeness}, \textit{soundness}, and \textit{incompleteness} of logical theories are foundational to a discipline in mathematical logic known as \textit{model theory}. \\
+
+% Maybe edit above paragraph as you learn more
+
+Most mathematical disciplines focus on a particular mathematical object or structure. An \textit{object} in mathematics is anything that can be formally defined using logic (typically, first-order logic). Given a set-theoretic foundation for mathematics, every mathematical object can be defined as a \textit{set}. A set is a collection of well-defined, distinct objects, and it is itself also an object. Sets can represent objects such as \textit{numbers}, \textit{matrices}, \textit{functions}, \textit{relations}, \textit{points}, \textit{polygons}
+
+\subsubsection{G\"odel's Completeness Theorem}
+
 In 1929, G\"odel published his \textit{completeness theorem} of mathematical logic as his doctoral thesis. This was a mathematical proof that elucidated something fundamental about the first-order logic mathematics is based on. Although it is a bit difficult to understand at first, the result is ultimately quite simple, and it supports what mathematicians have implicitly understood about abstract, general proofs since about 300 \textsc{BCE}, when Euclid introduced the \textit{axiomatic method}.
+
+%%%
+
+All of G\"odel's theorems that we will discuss in this section are statements about theories, which are represented as mathematical objects so that they can be studied mathematically. A theory is similar to a formal system, but it does not necessarily have inference rules. However, it \textit{is} a set of axioms written in a language, which has an alphabet and a grammar. A theory can be coupled with a set of inference rules and often these rules are understood from context (e.g. by examining the logical structure of the language that the axioms are written in). Mathematical theories, for example, typically employ a first-order logical calculus because first-order logic is the standard formalization of mathematics. However, theories need not be mathematical. Political theories are still theories. They are composed of theorems expressed with the alphabet and grammar of a natural language. They have sets of fundamental beliefs from which other beliefs are derived, and they may be coupled with some form of deductive reasoning, though this reasoning may not necessarily be first-order logical. That said, we will focus on first-order logical theories written in the syntax of mathematics. \\
+
+A theory coupled with a deductive logical calculus is called a \textit{deductive system}. A formula that is found to be true, independent of interpretation, by means of this system (i.e. via a series of inferences that starts at the axioms) is called \textit{logically valid}. The axioms of a theory are assumed to be true, so a logically valid formula deduced within a \textit{truth-preserving} system must also be true, but only within the theory. All truth is relative, and, as such, the truth value of any given formula is necessarily dependent on the choice of axioms and the inference rules that are allowed. There is more than one way to reason about a given theory, and, as such, a theory can be coupled with different logical calculi to form different deductive systems. Examples of first-order logical deductive systems include \textit{natural deduction}, the \textit{Hilbert-Ackermann system}, and \textit{sequent calculus}. \\
+
+A theory is syntactic in nature. It is a set of strings written in a language $\mathcal{L}$, and these strings are called $\mathcal{L}$-formul{\ae}. Any logical calculus that is applied to a theory $\mathcal{T}$ will simply map these strings to other strings according to some set of rules. Theories have no inherent meaning. On the other hand, a \textit{model} is semantic in nature. A model $\mathcal{M}$ is an ordered pair $(\mathcal{T},I)$ where $\mathcal{T}$ is a theory (a set of $\mathcal{L}$-formul{\ae}) and $I$ is an \textit{interpretation function} with domain the set of all \textit{constant}, \textit{function}, and \textit{relation} symbols of $\mathcal{L}$ such that
+
+\begin{enumerate}
+	\item If $c$ is a \textit{constant symbol}, then $I(c)$ is a \textit{constant} (a statement) in $\mathcal{T}$
+	\item If $F$ is a \textit{function symbol}, then $I(F)$ is a \textit{function} on the domain $\mathcal{T}$
+	\item If $R$ is a \textit{relation symbol}, then $I(R)$ is a \textit{relation} on the domain $\mathcal{T}$
+\end{enumerate}
+
+\subsubsection{G\"odel's Incompleteness Theorems}
 
 % If it's true, it's provable.
 
@@ -1192,151 +1423,14 @@ Blah, blah, blah... \\
 
 % Some complexities you will encounter in this guide will have multiple terms (e.g. $O(m+n)$). Note that if $O(m)=O(n)$, $O(m+n)$ could simplify to either $O(m)$ or $O(n)$. However, if $m$ belongs to a higher order of algorithms than $n$, $O(m+n)$ would simplify to $O(m)$ (the higher bound). \\
 
-%--------------------------------------------------------------------------------
-%--------------------------------------------------------------------------------
-%    PART II: PROGRAMMING LANGUAGE THEORY
-%--------------------------------------------------------------------------------
-%--------------------------------------------------------------------------------
-
 \newpage
-\part*{Programming Language Theory}
-\addcontentsline{toc}{part}{\tocpartglyph Programming Language Theory}
-
-% How can we categorize programming languages?
-% Imperative vs. Declarative (Functional and Logic)
-% Procedural vs. Object-Oriented
-% Compiled vs. Interpreted
-% Static vs. dynamic
-% Weakly typed vs. strongly typed
-% Statically typed vs. dynamically typed
-% Syntax (sparse, dense, graphical)
-% Release date
-% Structured vs. Non-structured (Control flow)
-% Popular use cases
-% Cultural perceptions?
-% Company preferences (Microsoft, Apple, general use)
-% General-purpose vs domain-specific (MANY domains)
-% High-level vs. low-level
-% System programming vs. application programming
-% Scripting languages (glue, shell, macro, embedded)
-% Concurent/Parallel/Distributed/Multithreaded
-% Heterogenous programming (OpenCL)
-% Natural languages
-% Memory management vs. garbage collection (C++ scope-based resource management)
-% Performance vs. readability/manageability
-% Expressive power
-% Whitespace-sensitive or not
-% Data languages
-% Query languages
-% Pointers or not
-% Exceptions or not
-% Library size
-
-% Primitives
-% Comments
-% Metaprogramming (how is this done storage wise?)
-% Program execution
-% Virtual machine
-% REPL
-% Entry point
-% Interactive programming
-% Programming in the large and programming in the small
-% Pipeline
-% Transcompilation
-% Command line interpreter
-% Modular programming
-% Template processor
-% Software framework
-% Portability
-
-% Iteration and recursion are about repeating an operation. How they do that differs.
-% Iteration: fast, usually easy to implement
-% Recursion: easy to debug, sometimes more natural, uses stack memory
-% They can be converted into each other
-
-%--------------------------------------------------------------------------------
-%    SECTION
-%--------------------------------------------------------------------------------
-
-\toclineskip
-\section{Elements of Programming Languages}
-
-%----------------------------------------
-
-\subsection{Syntax}
-
-%----------------------------------------
-
-\subsection{Type Systems}
-
-%----------------------------------------
-
-\subsection{Control Structures}
-
-%----------------------------------------
-
-\subsection{Libraries}
-
-%----------------------------------------
-
-\subsection{Exceptions}
-
-%--------------------------------------------------------------------------------
-%    SECTION
-%--------------------------------------------------------------------------------
-
-\toclineskip
-\section{A History of Programming Languages}
-
-% What does a Turing-complete language need? Conditional branching (not just jumping), others?
-
-% Turing is imperative and lambda is functional?
-% What is a paradigm? How does having a strict paradigm affect the experience of coding? More restrictive, more streamlined?
-% More recent is not necessarily better
-% Why are we still using old languages like C?
-% Throw literate programming (Latex) in here
-% Hyperlink to esoteric languages lol
-% Numerical computing? MATLAB?
-% Automated theorem proving
-
-%--------------------------------------------------------------------------------
-%    SECTION
-%--------------------------------------------------------------------------------
-
-\toclineskip
-\section{Programming Paradigms}
-
-% Liskov substitution principle
-
-%----------------------------------------
-
-\subsection{Imperative}
-
-%----------------------------------------
-
-\subsection{Functional}
-
-%--------------------------------------------------------------------------------
-%    SECTION
-%--------------------------------------------------------------------------------
-
-\toclineskip
-\section{Higher-Order Programming}
-% Map, filter, fold, zip
-
-%----------------------------------------
-
-\subsection{Formal Systems of Logic}
-
-% First-order logic, second-order logic, higher-order logic, type theory
 
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
-%    PART III: ABSTRACT DATA TYPES, DATA STRUCTURES, AND ALGORITHMS
+%    PART II: ABSTRACT DATA TYPES AND DATA STRUCTURES
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
 
-\newpage
 \part*{Abstract Data Types and Data Structures}
 \addcontentsline{toc}{part}{\tocpartglyph Abstract Data Types and Data Structures}
 
@@ -1352,58 +1446,7 @@ Blah, blah, blah... \\
 % Curry-Howard Isomorphism
 % Type theory vs set theory
 % Class (set theory object)
-
-We begin with a definition of a very broad term: a \textit{mathematical object} is an abstract object that can be formally defined. Examples include numbers, matrices, functions, points, lines, shapes, groups, rings, fields, categories, etc. Many mathematical objects are reducible to \textit{sets}, which are mathematical objects that are collections of other distinct mathematical objects. \\
-
-A \textit{mathematical structure} is a mathematical object that relates to a set and gives that set additional properties. Consider the differences between a set and a \textit{sequence}. A sequence is a collection of mathematical objects, like a set, but it has additional structures that give it additional meaning. Some significant structures a sequence has that a set does not have are \textit{multiplicity}, \textit{metric}, and \textit{order}.
-
-\begin{table}[H]
-	\caption{Meanings of Multiplicity, Metric, and Order}
-	\label{tab:structures}
-	\begin{tabularx}{\textwidth}{|c|X|X|}
-		\vtabularspace{3}
-		\hline
-		Structure & \multicolumn{1}{c|}{Meaning} & Example using the sequence $(4,3,2,3)$ \\
-		\hline
-		Multiplicity & The mathematical object can have duplicate elements. & The element 3 has a multiplicity of 2. \\
-		Metric & The mathematical object grants some notion of distance between its elements. & 4 is two "steps" away from 2. \\
-		Order & Each element in the mathematical object is, in some sense, "less" than or "more" than each of the other elements in the mathematical object. & The "first" element (4) "comes before" the "third" element (2). \\
-		\hline
-		\vtabularspace{3}
-	\end{tabularx}
-\end{table}
-
-If the elements themselves are subject to some kind of \textit{natural order}, the mathematical object would have an additional structure enforcing this order. For example, in a sequence of integers, every element (integer) must have an inherent value that is less than or greater. Integers have a natural order known as numerical order. Similarly, English letters have a natural order known as alphabetical order. An order is considered natural if it is somehow intuitive or widely established. \\
-
-A mathematical object is also defined by which \textit{operations} can be performed on it and what the result of these operations will be. For example, a sequence $S_1$ can concatenate with a sequence $S_2$, and the result is a concatenation of $S_1$ and $S_2$. The ability to concatenate with other sequences is a defining characteristic of a sequence. We can say then that mathematical objects are defined by their structures (which enforce relationships between their elements), and their operations (which enforce how their elements can be manipulated). This is similar to our Wikipedia definition of data structures. \\
-
-Now we must leave the realm of pure mathematics and enter the field of computer science. However, it is important, as we discuss analogous concepts in computer science, that we make a distinction between theory and application. For example, in mathematics, we can use the name of a mathematical object (e.g. "set") in both the abstract and in the concrete sense. In the abstract sense, we use that word to refer to a mathematical object, which is a defined classification or \textbf{type} that might describe a concrete object (e.g. "a \textit{set} is a collection of distinct elements with these operations..."). In the concrete sense, we can use that word to refer either to a particular \textbf{instance} of that mathematical object or to any instance of that mathematical object that satisfies some additional set of requirements (e.g. "the set $\{1,2,3,4,5\}$" or "a set of five positive integers less than 10"). This difference between type and instance is crucial.
-
-% A class is a collection of objects
-
-In computer science, a \textit{data type} is used to describe binary data and its intended use to the compiler. \textit{Primitive} data types have a specified implementation. For example, an \texttt{int} is often specified by a language to be a piece of data that is 32 bits in size, and these bits are often mapped one-to-one to an integer value via a \textit{two's complement} operation. An \textit{abstract data type}, on the other hand, is a data type without a specified implementation. \\\\
-
-\begin{tcolorbox}[enhanced, colback=textbook-blue, sharp corners]
-	\vspace{2mm}
-	\begin{center}
-		\textbf{Concrete and Abstract Data Types: Why do we need both?}
-	\end{center}
-	\vspace{1mm}
-	It is worth asking why this distinction exists. Why would some data types have a standard implementation while other data types must be implemented by the programmer? \\
-	
-	Primitive data types, which are concrete, are actually implementations of abstract data types, and the language's compiler has specified these implementations for the sake of simplicity and performance. For example, while most programming languages represent integers using two's complement, they could use other representations like signed magnitude or one's complement. However, computers can do math with two's complement integers faster and with fewer operations than with integers represented in other ways. Thus, a language's compiler may enforce two's complement, preventing the programmer from choosing another representation. \\
-	
-	Most programmers agree that this is a good thing. While signed magnitude and one's complement have their advantages, two's complement is far superior for almost all computing tasks. For data types whose choice of representation is not so obvious, it is best to keep things abstract and let the programmer decide which implementation is best for their needs. \\
-\end{tcolorbox}
-\vspace{7mm}
-
-An abstract data type is analogous to a mathematical object, which means it is a logical description of the structure of an object and what its operations do. It explicitly does \textbf{not} keep track of any sort of \textit{state} (i.e. the values of the elements). It only has to define the structure and operations required for a concrete object to be of that type. But here's the punchline: \textit{operations enforce structure}. An abstract data type can actually be fully defined by the intended effects of its operations. It is a list of functions and descriptions of what those functions should do. \\
-
-A \textit{data structure} implements the logic that actually produces the desired effects described by each of the abstract data type's functions. It also defines where and how the elements of a concrete instance of a mathematical object should be stored in computer memory, through the use of \textit{fields}. The values of the elements (the \textit{state}) only exist for \textit{instances} of data structures. While a data structure may define the initial state of an instance via a constructor method, it is still the case that only instances of data structures have state. \\
-
-So we have three terms that span the spectrum of abstract to concrete: abstract data types, data structures, and instances (of data structures). Abstract data types define their structure via a description of intended behavior, data structures define how this intended behavior will be achieved using \textit{algorithms}, and instances exhibit this intended behavior by storing a state that is manipulated by the functions implemented by the data structure. The goal, the plan, and the execution. \\
-
-Java differentiates abstract data types and data structures by giving them their own \textit{reference types}: \texttt{interface} and \texttt{class}. The reference type of an instance is created by the user, and the name of this type will be equivalent to the variable name of the class it instantiates. Many object-oriented programming languages have libraries of data structure implementations that programmers can instantiate and the fine-grain details of how these data structures are implemented can vary from language to language. In the next section, we will discuss the most significant data structures in modern software design, and we will do so in a language-independent way, focusing on object-oriented programming in general rather than on any particular OOP language. \\
+% Not all data structures implement abstract data types.
 
 % Imperative vs functional ADTs
 
@@ -1422,7 +1465,50 @@ Java differentiates abstract data types and data structures by giving them their
 %--------------------------------------------------------------------------------
 
 \toclineskip
+\section{Category Theory}
+
+\subsection{Objects and Morphisms}
+
+\subsection{Functors}
+
+% Signatures
+
+\subsection{Monoids}
+
+\subsection{Groups}
+
+\subsection{Algebras}
+
+%--------------------------------------------------------------------------------
+%    SECTION
+%--------------------------------------------------------------------------------
+
+\toclineskip
+\section{Semiautomata, F-Coalgebras, and Classes}
+
+% Algebraic specification
+
+%--------------------------------------------------------------------------------
+%    SECTION
+%--------------------------------------------------------------------------------
+
+\toclineskip
+\section{Type Theory}
+
+\subsection{Primitive Types}
+
+\subsection{Composite Types}
+
+% Recursive composite type = a dynamic data structure
+
+%--------------------------------------------------------------------------------
+%    SECTION
+%--------------------------------------------------------------------------------
+
+\toclineskip
 \section{Abstract Data Types and the Data Structures that Implement Them}
+
+% You know how someone might try to explain a situation or an object to you with words and you have to try to visualize what they are talking about? That's what this section is.
 
 In this section, we evaluate data structures from a theoretical standpoint, describing their essential properties and why one may be preferable to another for some task. \textit{There is no single, best way of storing data.} The optimal layout varies depending on the nature of the task. The rules and requirements that define these data structures can be implemented in code, and many programming languages have their own implementations of these structures. \\
 
@@ -2114,19 +2200,14 @@ A set can also be implemented using a map. In this case, the keys are the elemen
 
 Blah
 
-%----------------------------------------
-
-\subsection{Monoids}
-
-Blah
-
-%--------------------------------------------------------------------------------
-%--------------------------------------------------------------------------------
-%    PART IV: ALGORITHMS
-%--------------------------------------------------------------------------------
-%--------------------------------------------------------------------------------
-
 \newpage
+
+%--------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------
+%    PART III: ALGORITHMS
+%--------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------
+
 \part*{Algorithms}
 \addcontentsline{toc}{part}{\tocpartglyph Algorithms}
 
@@ -2531,13 +2612,168 @@ Blah
 
 Blah
 
+\newpage
+
+%--------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------
+%    PART IV: PROGRAMMING LANGUAGE THEORY
+%--------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------
+
+\part*{Programming Language Theory}
+\addcontentsline{toc}{part}{\tocpartglyph Programming Language Theory}
+
+% Primitives
+% Virtual machine
+% REPL
+% Entry point
+% Interactive programming
+% Programming in the large and programming in the small
+% Pipeline
+% Transcompilation
+% Command line interpreter
+% Modular programming
+% Template processor
+% Software framework
+% Portability
+
+% Iteration and recursion are about repeating an operation. How they do that differs.
+% Iteration: fast, usually easy to implement
+% Recursion: easy to debug, sometimes more natural, uses stack memory
+% They can be converted into each other
+
+%--------------------------------------------------------------------------------
+%    SECTION
+%--------------------------------------------------------------------------------
+
+\toclineskip
+\section{Elements of Programming Languages}
+
+% What does a Turing-complete language need? Conditional branching (not just jumping), others?
+
+% Statement types: assertion, assignment, goto, return, call
+
+%----------------------------------------
+
+\subsection{Syntax}
+
+%----------------------------------------
+
+\subsection{Type Systems}
+
+%----------------------------------------
+
+\subsection{Control Structures}
+
+%----------------------------------------
+
+\subsection{Libraries}
+
+%----------------------------------------
+
+\subsection{Exceptions}
+
+%----------------------------------------
+
+\subsection{Comments}
+
+%--------------------------------------------------------------------------------
+%    SECTION
+%--------------------------------------------------------------------------------
+
+\toclineskip
+\section{Program Execution}
+
+%--------------------------------------------------------------------------------
+%    SECTION
+%--------------------------------------------------------------------------------
+
+\toclineskip
+\section{A History of Programming Languages}
+
+% Turing is imperative and lambda is declarative?
+% What is a paradigm? How does having a strict paradigm affect the experience of coding? More restrictive, more streamlined?
+% More recent is not necessarily better
+% Why are we still using old languages like C?
+
+%--------------------------------------------------------------------------------
+%    SECTION
+%--------------------------------------------------------------------------------
+
+\toclineskip
+\section{Programming Paradigms}
+
+% How can we categorize programming languages?
+% Imperative vs. Declarative (Functional and Logic)
+% Procedural vs. Object-Oriented
+% Compiled vs. Interpreted
+% Static vs. dynamic
+% Weakly typed vs. strongly typed
+% Statically typed vs. dynamically typed
+% Syntax (sparse, dense, graphical)
+% Release date
+% Structured vs. Non-structured (Control flow)
+% Popular use cases
+% Cultural perceptions?
+% Company preferences (Microsoft, Apple, general use)
+% General-purpose vs domain-specific (MANY domains)
+% High-level vs. low-level
+% System programming vs. application programming
+% Scripting languages (glue, shell, macro, embedded)
+% Concurent/Parallel/Distributed/Multithreaded
+% Heterogenous programming (OpenCL)
+% Natural languages
+% Memory management vs. garbage collection (C++ scope-based resource management)
+% Performance vs. readability/manageability
+% Expressive power
+% Whitespace-sensitive or not
+% Data languages
+% Query languages
+% Pointers or not
+% Exceptions or not
+% Library size
+% Numerical computing (e.g. MATLAB, Maple, Mathematica)
+% Automated theorem proving
+% Hyperlink to esoteric languages lol
+% Literate programming (e.g. TeX)
+
+%----------------------------------------
+
+\subsection{Imperative versus Declarative}
+
+\subsubsection{Functional Programming}
+
+\subsubsection{Logic Programming}
+
+%----------------------------------------
+
+\subsection{Procedural versus Object-Oriented}
+
+%--------------------------------------------------------------------------------
+%    SECTION
+%--------------------------------------------------------------------------------
+
+\toclineskip
+\section{Programming Techniques}
+
+\subsection{Higher-Order Programming}
+% Map, filter, fold, zip
+
+\subsubsection{Lambda Expressions}
+
+\subsection{Currying}
+
+\subsection{Metaprogramming}
+
+\newpage
+
+
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
 %    PART V: IMPLEMENTATION, FEATURING AN EXPLORATION OF JAVA
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
 
-\newpage
 \part*{Implementation, Featuring an Exploration of Java}
 \addcontentsline{toc}{part}{\tocpartglyph Implementation, Featuring an Exploration of Java}
 
@@ -2601,13 +2837,14 @@ Blah \\
 \toclineskip
 \section{Java Frameworks}
 
+\newpage
+
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
 %    PART VI: ADDITIONAL TECHNOLOGIES
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
 
-\newpage
 \part*{Additional Technologies}
 \addcontentsline{toc}{part}{\tocpartglyph Additional Technologies}
 
@@ -2663,6 +2900,9 @@ How do you download stuff from GitHub? There are a few methods that might be ava
 
 GNU Make compiles source files into executables.
 
+% git clone into /var/git (this is my choice of git folder)
+% make; sudo make install
+
 %----------------------------------------
 
 \subsection{Maven}
@@ -2675,6 +2915,8 @@ Blah
 
 \toclineskip
 \section{Unix}
+
+% Superuser vs user
 
 %----------------------------------------
 
@@ -2689,6 +2931,8 @@ Blah
 %----------------------------------------
 
 \subsection{Common Commands and Tasks}
+
+% Store scripts in /usr/local/bin
 
 \begin{itemize}
 	\item chmod +x
@@ -2804,13 +3048,14 @@ Blah
 
 Blah \\
 
+\newpage
+
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
 %    PART VII: SOFTWARE DEVELOPMENT
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
 
-\newpage
 \part*{Software Development}
 \addcontentsline{toc}{part}{\tocpartglyph Software Development}
 
@@ -2845,16 +3090,18 @@ Blah \\
 	\item Abstract Factory
 \end{itemize}
 
+\newpage
+
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
-%    PART A: APPENDICIES
+%    PART VIII: APPENDICIES
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
 
-\newpage
-\appendix
 \part*{Appendices}
 \addcontentsline{toc}{part}{\tocpartglyph Appendices}
+
+\appendix
 
 %--------------------------------------------------------------------------------
 %    APPENDIX A: SYSTEM DESIGN
