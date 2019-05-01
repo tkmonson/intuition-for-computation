@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Title: SWE Master List
-% Description: A Guide to Preparing for the Software Engineering Interview Process
+% Title: Intuition for Computation
+% Description: A Guide for Prospective Software Engineers
 % Author: Tommy Monson
 % Date Created: February 7, 2019
 % Template: Arsclassica Article (http://www.LaTeXTemplates.com)
@@ -91,7 +91,7 @@
 %\textit{QUOTE}
 %\vspace{4mm}
 %\begin{flushright}
-%	- AUTHOR
+%	---AUTHOR
 %\end{flushright}
 %\end{displayquote}
 
@@ -151,7 +151,7 @@ BCOR5mm, % Binding correction
 %    TITLE AND AUTHOR
 %--------------------------------------------------------------------------------
 
-\title{\normalfont\spacedallcaps{Intuition For Information}} % The article title
+\title{\normalfont\spacedallcaps{Intuition For Computation}} % The article title
 
 \subtitle{A Guide for Prospective Software Engineers} % The article subtitle
 
@@ -185,7 +185,7 @@ BCOR5mm, % Binding correction
 	\begin{center}
 		\vspace{2cm}
 		{\fontsize{32}{40} \spacedallcaps{Intuition For}} \\[3mm]
-		{\fontsize{32}{40} \spacedallcaps{Information}} \\[5mm]
+		{\fontsize{32}{40} \spacedallcaps{Computation}} \\[5mm]
 		{\fontsize{11}{40} \textsf{\textbf{A Guide for Prospective Software Engineers}}} \\[7mm]
 		\begin{tcolorbox}[enhanced, colback=white, height=16.25cm, width=12cm, sharp corners, frame hidden]
 			\begin{center}
@@ -244,6 +244,8 @@ BCOR5mm, % Binding correction
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
 
+% Search for section references at the end of the writing process and use latex commands for them.
+
 \part*{Preface}
 \addcontentsline{toc}{section}{Preface}
 
@@ -259,7 +261,10 @@ BCOR5mm, % Binding correction
 % Why do you think its worth sharing with others?
 % College gave me reasoning and knowledge. Writing this guide gave me intuition.
 % There are a lot of jargon terms in computer science, and a lot of them are very similar. This guide also serves as a personal dictionary of sorts.
+% Categorizing things is an age old approach to philosophy and science.
 % Wax poetic about computer science.
+% At times, I struggled writing this book. But I eventually came to a point where I knew what this book was trying to be, and I could envision it. I could see the pieces linking together,  and I wanted it to exist. I wanted to lay out, in simple English, the connections I was making in my mind. I wanted to share these difficult concepts in a way that was accessible.
+% Talk about what it was like to just live in this document for like multiple months.
 
 \newpage
 
@@ -289,6 +294,28 @@ BCOR5mm, % Binding correction
 
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
+%    OPENING QUOTE
+%--------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------
+
+\vspace*{4cm}
+\begin{center}
+\textit{The very word intuition has to be understood. \\[5mm]
+	You know the word tuition—tuition comes from outside, somebody teaches you, the tutor. \\[5mm]
+	Intuition means something that arises within your being; \\[5mm]
+	it is your potential, that’s why it is called intuition. \\[5mm]
+	Wisdom is never borrowed, and that which is borrowed is never wisdom. \\[5mm]
+	Unless you have your own wisdom, your own vision, your own clarity, your own eyes to see, \\[5mm]
+	you will not be able to understand the mystery of existence.}
+\begin{flushright}
+	---Osho
+\end{flushright}
+\end{center}
+
+\newpage
+
+%--------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------
 %    PART 0: INTRODUCTION
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
@@ -296,13 +323,13 @@ BCOR5mm, % Binding correction
 \part*{Introduction}
 \addcontentsline{toc}{part}{\tocpartglyph Introduction}
 
-This guide is everything you need to know in order to program computers professionally in the modern era.
+This guide is everything you need to know in order to program computers professionally in the modern era. Well, the fundamentals at least.
 
 % Redo this intro.
 % Use short paragraphs. Be concise. Make it conversational.
 % Make it inspiring. Make it motivational. Make sound accessible.
-% Start with a philosophical idea of computation. Talk about how computation and calculation are human nature. Give broad overviews of the parts.
-% Computation is a mechanical behavior. Let's build machines to do it for us.
+
+
 % Certainty and objectivity are the pursuit of man. We pursue it via calculation and computation.
 % Discuss the goal of this guide. Discuss why someone might want to read it.
 % Discuss why content was chosen and why it is ordered the way it is.
@@ -310,20 +337,194 @@ This guide is everything you need to know in order to program computers professi
 % Give a section by section overview. Raise some of the central questions.
 % Give a warning for the Theory of Computation section lol. Or at least assure readers that things will become more applied as the guide progresses.
 % Note differences in writing styles between the theory chapters (1-4) and the implementation chapters (5-7). The latter are not comprehensive overviews.
-% Discuss the title. Information - data vs abstract concepts.
+% Discuss the title. Intuition. Definitions in my own words - "if you know something's name, you have power over it". True name, mysticism.
 
 \newpage
 
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
-%    PART I: THEORY OF COMPUTATION
+%    PART I: COMPUTATION
+%--------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------
+
+\part*{Philosophy of Computation}
+\addcontentsline{toc}{part}{\tocpartglyph Philosophy of Computation}
+
+% Rewrite, be poetic about computation. Really describe it. Then discuss how the idea was generalized and formalized and found to have a lot of commonalities with language, logic, math...
+
+% Mathematical modeling of computation (sequential, functional, concurrent)
+% Automata theory covers sequential and concurrent, computability theory covers functional. Together, they cover the prominent models of computations.
+% Computational complexity theory is a categorization of computational tasks.
+
+% Syntactic/semantic computation
+% Is intuition computation?
+
+\textit{Computation} is an essential part of being human. Just as we may perceive the world with our senses or feel the affect of our emotions or explore the inner workings of our imaginations, we may also exercise \textit{reason} in the hope of understanding the things in life that we question, and computation is an \textit{act} of reason. However, the relationship between computation and reasoning is complicated. \\
+
+\textit{Reasoning} is a cognitive act performed by rational beings. It is the application of reason, the capacity for making a conscious effort to understand something using presently available information and the ingenuity of thought. Reasoning could also be described as the providing of good \textit{reasons} to explain or justify things. However, as you might expect, there is much debate over whether or not any particular reason is "good" and whether or not it is a suitable justification for something. Reasoning is broad, and it comes in different flavors, but ultimately it is the pursuit of \textit{truth}. \\
+
+Reasoning may involve the application of \textit{logic}. This \textit{logical reasoning} is the kind of reasoning that can be expressed in the form of an \textit{argument}. However, this argument does not have to be \textit{valid}. In fact, it does not have to be a "good" argument at all. Such reasoning requires only that the steps involved be \textit{explainable} in some way, whether that be through informal speech or in formal writing. \\
+
+% Give the basic framework of an argument
+% FSM graphic
+
+In contrast to this, \textit{intuitive reasoning} has steps that are not understood. To begin our journey of understanding computation in a modern, logical sense, we will first consider it in a mystical, otherworldly sense by briefly touching on the mysterious realm of \textit{intuition}. \\
+
+\toclineskip
+\subsection*{The Oracle, the Seer, and the Monk}
+\addcontentsline{toc}{subsection}{The Oracle, the Seer, and the Monk}
+
+Intuition
+
+% Seers have premises and conclusions, oracles just speak conclusions
+% Does intuition involve unconcious, preconcious, or concious reasoning?
+% Is intuition computation?
+% In some sense, intuition is thought of as the opposite of logic (it has no argument or basis in reality)
+% In another sense, logical truths (axioms) could be considered intuitive, so all of logic could be the product of intuition. Unless you believe that logic is objective.
+% The Oracle and the Seer are unique from the monk because they KNOW their truth is absolute.
+
+\begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
+	\vspace{2mm}
+	\begin{center}
+		\textbf{What is Absolute Truth?}
+	\end{center}
+	\vspace{1mm}
+	Truth, in the absolute sense, has been discussed and debated since the dawn of man. It is a concept that seems obvious to us, and yet it always seems to elude our understanding. Philosophers have formulated dozens of theories of truth over the years, with some asserting that truth is an objective property of our universe and others asserting that truth is a useful lie that mankind has invented. And while there is merit in those claims that truth is not real, we still see around us the technology that was born out of our intuitive sense of true and false. Especially in computer science where everything is represented in binary. \\
+	
+	The traditional theories of truth have been termed \textit{substantive}. That is, they assert that truth has some basis in reality and that it is a meaningful thing to discuss. Early theories of truth from Ancient Greece are considered the foundation of \textit{correspondence theory}, the idea that statements are true if their symbols are arranged in such a way that they express an abstract thought that accurately describes reality. This theory defines truth in the context of a relationship between language and objective reality. It is a useful philosophy that allows us to orient ourselves in the world around us. However, many philosophers believe that truth cannot be explained by such a simple rule. In fact, there are many more factors that could play a role in the concept. \\
+	
+	Objections to a strict correspondence theory usually take issue with the treatment of language as something monolithic and easy to classify within a true-false dichotomy. For example, a statement encoded as a sentence in a language is only meaningful to people who can read that language. What does this imply about a particular language's relationship with truth? Is a statement only true for those who understand it? Furthermore, there is no guarantee that readers of the same language will even be able to agree on the meaning expressed by a particular sentence. Languages often encompass multiple dialects that might parse words differently. Words themselves also may not be precise, and some abstract thoughts may not have suitable words in some languages. These are the points raised in \textit{social constructivism}, a theory which avers that human knowledge is historically and culturally specific. Social constructivists also believe that truth is \textit{constructed} and that language cannot faithfully represent any kind of objective reality. \\
+	
+	Other substantive theories find the essence of truth nestled in other abstract concepts. \textit{Consensus theory}, as the name implies, defines truth as something that is agreed upon either by all human beings or by a subset (such as academic groups or standards bodies). This is another anthropocentric definition that is at constant risk of philosophical division on any given topic. \textit{Coherence theory} takes a more objective approach, claiming that a statement can only be true if it fits into a system of statements that support each other's truth. This is similar to the notion of \textit{formal systems}, which we will discuss in depth. However, traditional coherence theories attempt to explain all of reality within a single coherent system of truths, which is incompatible with our modern understanding of formal systems. \\
+	
+	Modern developments in philosophy have resulted in theories that deviate from the long-held, substantive opinions on the nature of truth. These \textit{minimalist} theories assert instead that truth is either not real or not a necessary property of language or logic. They claim that statements are \textit{assertions} and thus are implicitly understood to be true. For example, it is understood that by putting forth the sentence "$2+2=4$", you are endorsing the semantic meaning "$2+2=4$ is true". The clause "is true" is called a \textit{truth predicate}, and minimalist theories of truth often consider its use redundant. \\
+	
+	This idea of a truth predicate is borrowed from Alfred Tarski's \textit{semantic theory of truth}, which is a substantive theory that refines the correspondence concepts espoused by Socrates, Plato, and Aristotle for formal languages. This theory makes a distinction between a statement made in a formal language and a truth predicate, which evaluates the truth of the statement. Tarski made this distinction in order to circumvent the \textit{liar's paradox}, which is often presented with the following example: "This sentence is false". If the predicate "is false" is considered to be an element of "this sentence", the truth of this statement cannot be decided. For this reason, Tarski states that a language cannot contain its own truth predicate. This is enforced by requiring that "this sentence" be written in an \textit{object language} and that "is false" be written in a \textit{metalanguage}. \textit{Convention T}, the general form of this rule, can be expressed as
+	
+	\begin{center}
+		\textit{"$P$" is true if and only if $P$}
+	\end{center}
+	
+	where "$P$" is simply the metalanguage sentence $P$ rendered in the object language. That is, the \textit{syntactic representation} is assigned a \textit{truth value} of true if and only if the semantic meaning it represents is considered true (according to whatever theory of truth you employ). By this rule, we say that "$2+2=4$" is true if and only if \textit{the sum of the number $2$ with the number $2$ is equal to the number $4$}. Minimalist redundancy theories modify Tarski's theory by interpreting "$P$" as an implicit assertion of the truth of $P$. The sentence "$P$", which asserts that $P$ is true, is then false if and only if its semantic meaning $P$ is false. \\
+	
+	\parbreak
+	\vspace{4mm}
+	
+	The debate on the nature of truth rages on \textit{in perpetuum}. However, for our purposes, we must be practical. There is truth in logic and mathematics and computer science as well, but, in practice, it has little to do with the debates on \textit{absolute truth} described above. Their truth is \textit{relative}. That is, it relies on the assumption that our premises are true. Cognizant of this, we move forward with our thinking, searching for truths within these arbitrary boundaries. We will discuss \textit{relative truth} in the upcoming section on logic. \\
+	\vspace{1mm}
+\end{tcolorbox}
+\vspace{7mm}
+
+\subsection*{The Logician and the Scientist}
+\addcontentsline{toc}{subsection}{The Logician and the Scientist}
+
+% Deductive and Inductive (+ Abductive)
+% Closed and open world assumptions
+% Relative truth
+
+Logical reasoning is the \textit{inference} of new information from present information. It involves \textit{rule of inferences} that are used to relate sets of \textit{premises} to \textit{conclusions}. There are three kinds of logical reasoning: \textit{deductive}, \textit{inductive}, and \textit{abductive}. Each is classified according to which piece of information (premises, rule, or conclusion) is missing and must be inferred from the others. \\
+
+% Explanatory vs ampliative
+% Certainty vs uncertainty (probability)
+% Classic distinction is deductive and inductive. They are opposites. Abduction is something totally different.
+% General to specific vs specific to general
+% Logical truths vs facts
+% Abduction = induction + justification
+
+% Describe deductive/inductive with machine learning (blue box?)
+
+\paragraph{Deductive Reasoning} \hspace*{1mm} \vspace*{2mm}
+
+\textit{Deductive reasoning} is the inference of a \textit{conclusion}, given a set of premises and a rule. It is consequential in nature. That is, it cannot say anything more than what its premises imply. For example, given the first premise "When it rains, the grass gets wet" and the second premise "It is raining", we can infer the conclusion "The grass is wet". This conclusion is a \textit{logical consequence} of its premises. \\
+
+The above inference is allowed due to a deductive rule known as \textit{modus ponens} (Latin for "method that affirms"). Given a \textit{conditional statement} of the form $P\rightarrow Q$ (i.e. $P$ \textit{implies} $Q$) and the \textit{antecedent} $P$ as premises, this rule can be used to infer the \textit{consequent} $Q$ as a conclusion. There are other deductive rules of inference as well, such as \textit{modus tollens} (a "method that denies"). Given the same conditional $P\rightarrow Q$ and the \textit{negation of the consequent} $\lnot Q$, this rule infers the antecedent $\lnot P$. \\
+
+Deduction is the primary method of inference that is studied today, and it is the basis of \textit{mathematical logic}. Deductive arguments are evaluated based on their \textit{validity} and \textit{soundness}, both of which are related to but distinct from the concept of \textit{truth}. Truth, in the context of deductive reasoning and logic, is a simple, binary value. A statement can be assigned a value of \textit{true} or \textit{false}. Given this dichotomy, an argument is \textit{valid} if it is impossible for its conclusion to be false, assuming that its premises are true. An argument is \textit{sound}, if it is valid and its premises are actually true. We will discuss what "actually true" means later in this section. \\
+
+\paragraph{Inductive Reasoning} \hspace*{1mm} \vspace*{2mm}
+
+% Analogical reasoning
+
+\textit{Inductive reasoning} is the inference of a \textit{rule} that relates a set of premises to a conclusion. It is observational in nature. For example, we might observe that "It is raining" and "The grass is wet". If these two events happen in tandem multiple times, we might be inclined to infer a rule that states that one of these events implies the other: "When it rains, the grass gets wet". \\
+
+This explanation of events is called a \textit{hypothesis}. While this particular hypothesis is \textit{probable}, it is not necessarily \textit{certain}. For example, while this rule might hold most of the time, it would be invalid if a canopy were placed over the grass one day. In contrast, the deductive argument was given "When it rains, the grass gets wet" as a premise that was assumed to be true for all scenarios involving rain and grass, so no canopy-like loopholes are possible in this case. The conditional does not have the same certainty in the inductive argument. \\
+
+Inductive arguments exist on a spectrum between \textit{weak} and \textit{strong}. Those that are stronger and more persuasive have a higher probability of having a true conclusion. Inductive reasoning is associated with \textit{science} and \textit{critical thinking} because it allows one to make generalizations about complex phenomena given limited evidence. Unlike deductive reasoning, it attempts to find new knowledge that is not simply contained within its premises. \\
+
+Statements made by induction are bolstered with evidence whereas deductive statements are as true as their premises. This leaves inductive reasoning susceptible to \textit{faulty generalizations} and \textit{biased sampling}. Induction must also assume that future events will occur exactly as they have in the past, which is not always the case. For example, a turkey that is fed every morning with the ring of a bell may infer by induction that bell $\rightarrow$ food. However, he will see the error in his reasoning when the farmer rings the bell on Thanksgiving Day and instead slits his throat. \\
+
+\paragraph{Abductive Reasoning} \hspace*{1mm} \vspace*{2mm}
+
+\textit{Abductive reasoning} is the inference of a \textit{premise}, given a conclusion and a rule. It is investigative in nature. For example, given a conclusion "The grass is wet" and a rule "When it rains, the grass gets wet", we might determine that rain is the best explanation for the wetness of the grass. Thus, we abduce that "It might have rained". \\
+
+Like induction, abduction can also produce a hypothesis. However, abduction does not seek a new relationship between two previously unconnected statements. Rather, it uses established relationships to find a reasonable explanation for a statement that is assumed to be true. It is often used by detectives or diagnosticians who need to find a probable cause of an event. It is also used in Bayesian statistics. While multiple premises may be abduced, typically we want to abduce a single, "best" premise. \\
+
+Abductive reasoning allows us to ignore the many causes that are unlikely in favor of those few that may be relevant to the problem at hand. For example, doctors are often taught to heed the following proverb: "When you hear hoofbeats, think of horses, not zebras". That is, when a patient exhibits certain symptoms, a doctor should abduce from them a commonplace disease before considering more exotic possibilities. However, "zebras" do exist. Sometimes the most likely cause is not the actual cause. For this reason, abduction is also considered to be equivalent to a deductive fallacy called \textit{affirming the consequent}, which is like a \textit{modus ponens} performed in reverse. That is, given a conditional $P\rightarrow Q$ and the consequent $Q$, abduction infers $P$ from $Q$ by assuming that the converse $Q\rightarrow P$ of the conditional is also true. This is not a deductively valid inference. Considering our example again, the grass might be wet from rain, but this is not \textit{necessarily} true. It is also possible that the sprinkler system is on. Or perhaps there is a zebra-esque scenario like a flood. \\\\
+
+\begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
+	\vspace{2mm}
+	\begin{center}
+		\textbf{What is Relative Truth?}
+	\end{center}
+	\vspace{1mm}
+	A logical argument begins from \textit{premises} that are decided true. It then progresses by truth-preserving \textit{rules of inference} to other statements whose truth is ultimately dependent on the individual truths of the premises, concluding with a final statement called a \textit{conclusion}. A \textit{proof} of this conclusion thus depends on both the \textit{truth} of its premises and the \textit{validity} of its argument. \\
+	
+	Validity can be determined within a logical system. A logical argument that is valid simply applies rules of inference as they are prescribed. Verifying premises is more complicated. Their truth values are external to logic. An argument that is founded on \textit{false premises} may be logically valid, in which case it will produce a conclusion that is nominally true. Sometimes, however, this conclusion will \textit{feel} wrong or evidence to the contrary will arise, and this assertion of truth will prompt an inquiry into the basis of the argument. \\
+	
+	Occasionally, logical arguments that are accepted for hundreds or thousands of years are refuted on grounds of starting from false premises. Such discoveries are accompanied by foundational changes such as a collective shift in philosophical mindset or the adoption of a new theory. For example, before the 1930s, it was assumed that a formal language could produce a sentence to express any abstract thought and that 
+	
+	\vspace{1mm}
+\end{tcolorbox}
+\vspace{7mm}
+
+\subsection*{A History of Tools}
+\addcontentsline{toc}{subsection}{A History of Tools}
+
+% Calculation vs computation. Separate histories. Human computers.
+% Is a microwave a computer?
+% Modern cars are full of computers. Embedded systems.
+
+Before we discuss and classify automata in depth, we should first consider what is \textbf{not} an automaton. What is an example of something that might perform some kind of calculation, but is not a computer? What about a microwave? Is a microwave a computer? No, it is not. A computer can be programmed in some meaningful, robust way. A microwave contains a microprocessor, which uses \textit{combinational logic} and basic binary inputs to set timers and operate the oven. It cannot be programmed in any meaningful way. What about a calculator? Is a calculator a computer? If we are being formal, the answer is no, but it depends on what kind of "calculator" we are talking about. \\
+
+Calculators, such as \textit{counting boards} and the \textit{abacus}, have been around since pre-history. Calculators with four-function capabilities have been around since the invention of Wilhelm Schickard's mechanical calculator in 1642. In the late 19th century, the \textit{arithmometer} and comptometers, two kinds of digital, mechanical calculator, were being used in offices. The Dalton Adding Machine introduced buttons to the calculator in 1902, and pocket mechanical calculators became widespread in 1948 with the \textit{Curta}. None of these are computers. \\
+
+The difference between a calculator and a computer is that a computer can be programmed and a calculator cannot. What does it mean to be programmable? That is perhaps the central question of automata theory, and we will discuss in this section several levels of "programmability". However, for now, we can certainly say that a simple, four-function electronic calculator is not a computer. It simply uses combinational circuits like full-adders, full-subtractors, multipliers, and dividers to implement its functions, and there is no potential for modifications or user-defined functions. \\
+
+Surprisingly enough, \textit{special-purpose computers} have also been around for a long time. Early examples include the \textit{Antikythera mechanism} (an Ancient Greek analog computer), Al-Jazari's 1206 water-powered \textit{astronomical clock}, the 1774 \hrefcolor[blue]{https://www.youtube.com/watch?v=bY\_wfKVjuJM}{\underline{Writer Automaton}} (a mechanical doll that could be programmed to write messages), the 1801 \textit{Jacquard loom}, and \textit{slide rules}. Some later mechanical computers were quite powerful, such as \textit{differential analyzers} (special-purpose computers for solving differential equations) and \hrefcolor[blue]{https://www.youtube.com/watch?v=s1i-dnAH9Y4}{\underline{fire control computers}}. Charles Babbage designed the \textit{Analytical Engine}, a general-purpose computer, in 1837, and Ada Lovelace wrote a program for it, but it was never built. General-purpose computing would not reemerge until the 1940s. \\
+
+The line between calculator and computer began to blur with the introduction of \textit{programmable calculators} in the 1960s. Many modern high-end calculators are programmable in Turing-complete languages such as TI-BASIC or even C or C++, which officially makes them computers. Once we start implementing \textit{sequential logic} with components like SR latches or D flip-flops, we are storing state, and state is a requirement for computing. Circuits that use sequential logic can be considered automata and, given enough complexity, computers. \\
+
+% Hey, let's build machines to do this instead.
+% Wait, what exactly are we building? Let's model the problem. We'll cover that in detail in the next part.
+% Computation as a mechanical process vs a function.
+% Abstract away the mechanics, and a function becomes a conversation (input and output).
+
+\subsection*{Talking with Talos}
+\addcontentsline{toc}{subsection}{Talking with Talos}
+
+Humans, while not purely rational beings, are capable of reason when it suits them. People reason in order to \textit{learn}. They acquire \textit{knowledge} through learning, and some of that knowledge can serve to orient a person in the Universe or to aid them in some other way. Thus, human beings are inclined to engage in the mental act of reasoning from time to time. Human beings are also inclined to \textit{communicate} their thoughts, as they are social animals, and this includes the communication of \textit{rational thoughts}, thoughts that employ reasoning. \\
+
+\textit{Information}, in the form of abstract ideas or concrete \textit{data}, is communicated through many different channels and received by a variety of \textit{senses}. This communication is not limited to humans. Animals communicate in a multitude of ways, with varying degrees of expressiveness. However, human beings are considered unique in their ability to communicate abstractly 
+
+% We only need a language now to express ourselves.
+% Creation of language, humanity stuff, natural language (informal)
+% Structure of natural language, types of sentences (declarative/imperative)
+% Formal definition of language, mention grammar informally
+% Syntactic/semantic divide
+
+% So then... what separates Talos from man?
+% Deductive computers, AI, General AI, Artificial Conciousness
+
+\newpage
+
+%--------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------
+%    PART II: THEORY OF COMPUTATION
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
 
 \part*{Theory of Computation}
 \addcontentsline{toc}{part}{\tocpartglyph Theory of Computation}
-
-% Rewrite, be poetic about computation. Really describe it. Then discuss how the idea was generalized and formalized and found to have a lot of commonalities with language, logic, math...
 
 The \textit{theory of computation} is a field of study that is related to both mathematics and computer science. It is concerned with a process known as \textit{computation}, which refers to any kind of \textit{calculation} (the transformation of one or more inputs into one or more outputs) that is accomplished by following an \textit{algorithm} (a set of rigorously defined steps). It is also concerned with the formalization of theoretical models of computation known as \textit{abstract machines} or \textit{abstract automata}. Also of interest are the \textit{computational problems} that can be solved by these abstract machines and how efficiently they can be solved. The theory of computation gives us the formal definition of a computer and the scope of what a computer can accomplish. \\
 
@@ -348,12 +549,49 @@ One \textit{abstract automaton} in particular fully models not only the computat
 
 %----------------------------------------
 
-\subsection{States, Transitions, and Language}
+\subsection{States, Transitions, and Grammar}
 
-% Creation of language, humanity stuff, natural language
-% Alphabets, words, sentences, grammars
-% Discuss language informally and formally
-% Discuss grammar informally and formally
+\begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
+	\vspace{2mm}
+	\begin{center}
+		\textbf{A Brief Introduction to Formal Grammars}
+	\end{center}
+	\vspace{1mm}
+	A formal grammar is a finite set of \textit{production rules} that specifies what a particular language is supposed to look like. It formalizes the structure of "grammatical units" in a language. This is done in order to enforce a specific alphabet, a consistent lexicon, and a predictable sentence structure, all of which contribute to how useful and distinct any given language is. \\
+	
+	A grammar $G$ consists of the following components:
+	\begin{itemize}
+		\item A finite set $N$ of \textit{nonterminal} symbols.
+		\item A finite set $\Sigma$ of \textit{terminal} symbols that is disjoint from $N$.
+		\item A symbol $S\in N$, designated as the \textit{start symbol}.
+		\item A finite set $P$ of \textit{production rules} where each rule is of the form ${(\Sigma\cup N)^*N(\Sigma\cup N)^*\rightarrow(\Sigma\cup N)^*}$.
+	\end{itemize}
+	
+	Put another way, a production rule converts a sequence of symbols to another sequence of symbols. If a rule is of the form \textit{left-hand side $\rightarrow$ right-hand side}, each side can contain terminals and nonterminals, but its left-hand side must contain at least one nonterminal. A nonterminal is a symbol that is replaced by other symbols when an appropriate rule is applied. Unlike a terminal, it does not belong to the alphabet of the language, but rather represents a sequence of symbols that do. Terminals cannot be replaced by other symbols once chosen. \\
+	
+	Let's construct a simple formal grammar. It is typical for the nonterminals to be uppercase and for the terminals to be lowercase. Let $N=$ \{SENTENCE, NOUN, ADJ\}, $\Sigma=$ \{the, dog, building, plays, fluffy, good\}, and $S=$ SENTENCE. The rules of $P$ are given below.
+	
+	\begin{itemize}
+		\item SENTENCE $\rightarrow$ the NOUN plays
+		\item NOUN $\rightarrow$ ADJ NOUN
+		\item NOUN $\rightarrow$ dog
+		\item NOUN $\rightarrow$ building
+		\item ADJ $\rightarrow$ fluffy
+		\item ADJ $\rightarrow$ good
+	\end{itemize}
+	
+	We can now start with SENTENCE and apply these rules to construct a "sentence" that is valid in this language. Example sentences and their derivations are given below.
+	
+	\begin{itemize}
+		\item SENTENCE $\rightarrow$ the NOUN plays $\rightarrow$ the ADJ NOUN plays $\rightarrow$ the good NOUN plays $\rightarrow$ the good dog plays
+		\item SENTENCE $\rightarrow$ the NOUN plays $\rightarrow$ the ADJ NOUN plays $\rightarrow$ the ADJ ADJ NOUN plays $\rightarrow$ the ADJ ADJ ADJ NOUN plays $\rightarrow$ the fluffy ADJ ADJ NOUN plays $\rightarrow$ the fluffy good ADJ NOUN plays $\rightarrow$ the fluffy good fluffy NOUN plays $\rightarrow$ the fluffy good fluffy building plays
+	\end{itemize}
+	
+	Notice that the first example expresses an actual thought whereas the second example, while still syntactically a sentence, is nonsensical. Because it allows meaningless sentences, the grammar described above belongs to the class of \textit{context-free grammars}.
+	
+	\vspace{1mm}
+\end{tcolorbox}
+\vspace{7mm}
 
 %----------------------------------------
 
@@ -456,58 +694,6 @@ Automata, in general, are machines that receive, interpret, and follow instructi
 A formal language $L$ over an \textit{alphabet} $\Sigma$ is a \textit{set of words} that is a subset of $\Sigma^*$, the set of \textit{all} possible words that can be composed using $\Sigma$. Typically, formal languages conform to a \textit{formal grammar}, which is a set of precise grammatical rules. However, not all formal grammars are equal. Grammars determine how words can be arranged into sentences, which determines the kinds of thoughts that can be expressed. Thus, grammar controls how \textit{powerful} or \textit{expressive} a language is. If we intend to use a particular formal language to instruct a computer to solve a problem, the \textit{expressiveness} of the language will determine the kinds of instructions we are able to give. If we cannot express a given instruction, we will not be able to solve any problems requiring that instruction. \\
 
 In this section, we will examine automata with different \textit{mechanical structures}. The \textit{data} that are stored in components of these structures can be interpreted as words, and the structures themselves can be used to represent the rules of a formal grammar. However, some expressive grammars cannot be represented by simpler structures. Thus, the mechanical structure of an automaton acts as an \textit{upper bound} on its \textit{capacity} to understand language, and, by extension, its computational versatility. \\\\
-
-\begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
-	\vspace{2mm}
-	\begin{center}
-		\textbf{A Brief Introduction to Formal Grammars}
-	\end{center}
-	\vspace{1mm}
-	A formal grammar is a finite set of \textit{production rules} that specifies what a particular language is supposed to look like. It formalizes the structure of "grammatical units" in a language. This is done in order to enforce a specific alphabet, a consistent lexicon, and a predictable sentence structure, all of which contribute to how useful and distinct any given language is. \\
-	
-	A grammar $G$ consists of the following components:
-	\begin{itemize}
-		\item A finite set $N$ of \textit{nonterminal} symbols.
-		\item A finite set $\Sigma$ of \textit{terminal} symbols that is disjoint from $N$.
-		\item A symbol $S\in N$, designated as the \textit{start symbol}.
-		\item A finite set $P$ of \textit{production rules} where each rule is of the form ${(\Sigma\cup N)^*N(\Sigma\cup N)^*\rightarrow(\Sigma\cup N)^*}$.
-	\end{itemize}
-
-	Put another way, a production rule converts a sequence of symbols to another sequence of symbols. If a rule is of the form \textit{left-hand side $\rightarrow$ right-hand side}, each side can contain terminals and nonterminals, but its left-hand side must contain at least one nonterminal. A nonterminal is a symbol that is replaced by other symbols when an appropriate rule is applied. Unlike a terminal, it does not belong to the alphabet of the language, but rather represents a sequence of symbols that do. Terminals cannot be replaced by other symbols once chosen. \\
-	
-	Let's construct a simple formal grammar. It is typical for the nonterminals to be uppercase and for the terminals to be lowercase. Let $N=$ \{SENTENCE, NOUN, ADJ\}, $\Sigma=$ \{the, dog, building, plays, fluffy, good\}, and $S=$ SENTENCE. The rules of $P$ are given below.
-	
-	\begin{itemize}
-		\item SENTENCE $\rightarrow$ the NOUN plays
-		\item NOUN $\rightarrow$ ADJ NOUN
-		\item NOUN $\rightarrow$ dog
-		\item NOUN $\rightarrow$ building
-		\item ADJ $\rightarrow$ fluffy
-		\item ADJ $\rightarrow$ good
-	\end{itemize}
-	
-	We can now start with SENTENCE and apply these rules to construct a "sentence" that is valid in this language. Example sentences and their derivations are given below.
-	
-	\begin{itemize}
-		\item SENTENCE $\rightarrow$ the NOUN plays $\rightarrow$ the ADJ NOUN plays $\rightarrow$ the good NOUN plays $\rightarrow$ the good dog plays
-		\item SENTENCE $\rightarrow$ the NOUN plays $\rightarrow$ the ADJ NOUN plays $\rightarrow$ the ADJ ADJ NOUN plays $\rightarrow$ the ADJ ADJ ADJ NOUN plays $\rightarrow$ the fluffy ADJ ADJ NOUN plays $\rightarrow$ the fluffy good ADJ NOUN plays $\rightarrow$ the fluffy good fluffy NOUN plays $\rightarrow$ the fluffy good fluffy building plays
-	\end{itemize}
-
-	Notice that the first example expresses an actual thought whereas the second example, while still syntactically a sentence, is nonsensical. Because it allows meaningless sentences, the grammar described above belongs to the class of \textit{context-free grammars}.
-	
-	\vspace{1mm}
-\end{tcolorbox}
-\vspace{7mm}
-
-Before we discuss and classify automata in depth, we should first consider what is \textbf{not} an automaton. What is an example of something that might perform some kind of calculation, but is not a computer? What about a microwave? Is a microwave a computer? No, it is not. A computer can be programmed in some meaningful, robust way. A microwave contains a microprocessor, which uses \textit{combinational logic} and basic binary inputs to set timers and operate the oven. It cannot be programmed in any meaningful way. What about a calculator? Is a calculator a computer? If we are being formal, the answer is no, but it depends on what kind of "calculator" we are talking about. \\
-
-Calculators, such as \textit{counting boards} and the \textit{abacus}, have been around since pre-history. Calculators with four-function capabilities have been around since the invention of Wilhelm Schickard's mechanical calculator in 1642. In the late 19th century, the \textit{arithmometer} and comptometers, two kinds of digital, mechanical calculator, were being used in offices. The Dalton Adding Machine introduced buttons to the calculator in 1902, and pocket mechanical calculators became widespread in 1948 with the \textit{Curta}. None of these are computers. \\
-
-The difference between a calculator and a computer is that a computer can be programmed and a calculator cannot. What does it mean to be programmable? That is perhaps the central question of automata theory, and we will discuss in this section several levels of "programmability". However, for now, we can certainly say that a simple, four-function electronic calculator is not a computer. It simply uses combinational circuits like full-adders, full-subtractors, multipliers, and dividers to implement its functions, and there is no potential for modifications or user-defined functions. \\
-
-Surprisingly enough, \textit{special-purpose computers} have also been around for a long time. Early examples include the \textit{Antikythera mechanism} (an Ancient Greek analog computer), Al-Jazari's 1206 water-powered \textit{astronomical clock}, the 1774 \hrefcolor[blue]{https://www.youtube.com/watch?v=bY\_wfKVjuJM}{\underline{Writer Automaton}} (a mechanical doll that could be programmed to write messages), the 1801 \textit{Jacquard loom}, and \textit{slide rules}. Some later mechanical computers were quite powerful, such as \textit{differential analyzers} (special-purpose computers for solving differential equations) and \hrefcolor[blue]{https://www.youtube.com/watch?v=s1i-dnAH9Y4}{\underline{fire control computers}}. Charles Babbage designed the \textit{Analytical Engine}, a general-purpose computer, in 1837, and Ada Lovelace wrote a program for it, but it was never built. General-purpose computing would not reemerge until the 1940s. \\
-
-The line between calculator and computer began to blur with the introduction of \textit{programmable calculators} in the 1960s. Many modern high-end calculators are programmable in Turing-complete languages such as TI-BASIC or even C or C++, which officially makes them computers. Once we start implementing \textit{sequential logic} with components like SR latches or D flip-flops, we are storing state, and state is a requirement for computing. Circuits that use sequential logic can be considered automata and, given enough complexity, computers. \\
 
 We will now discuss four classes of automata, in increasing order of complexity. As they become more complex, automata are able to recognize more powerful and expressive languages. They can be told to execute \textit{instructions} in these languages, and they will be able to accomplish more complex tasks if their language is more expressive. When we reach the last of these four automata, we will be talking about the most powerful model of computation that is feasible to build, the automaton that models modern general-purpose computers. Once we explore this particularly important automaton in depth, we will learn how it can be modified to model more exotic forms of computation. \\
 
@@ -780,17 +966,11 @@ In this section, we will discuss what makes a problem \textit{solvable} and thus
 
 % Rewrite -- what are problems, why are they worth solving, what is calculation, what is computation?
 
+% Domains of discourse / universes in classical logic are just types in type theory. Top = true in every universe, Bottom = true in no universes (false)
+
 Since computation is mathematical, it follows that the natural use of computers is to solve \textit{mathematical problems}. A mathematical problem is a problem that is amenable to being represented with mathematics. Are there problems that are not mathematical? That is, are there problems that either \textit{cannot} be formalized with mathematics or \textit{should not} be formalized with mathematics because the result would produce no valuable insight? Of course. You might say that certain "human" problems are not mathematical in nature. For example, can an ethical problem be solved \textit{mathematically}? Furthermore, what does it mean for a problem to have a mathematical solution? It turns out that the answer lies in the difference between \textit{reasoning} and \textit{logic}. \\
 
-\subsubsection{Reasoning and Informal Logic}
-
-Reasoning is a cognitive act performed by rational beings. It is the application of \textit{reason}, the capacity for making a conscious effort to understand something using presently available information and the ingenuity of thought. It may or may not involve the application of logic. Reasoning could also be described as the providing of good \textit{reasons} to explain or justify things. However, as you might expect, there is much debate over whether or not any particular reason is "good". Reasoning is broad, and it comes in different flavors, but ultimately it is the pursuit of \textit{truth}. \\
-
-Humans, while not purely rational beings, are capable of reason when it suits them. People reason in order to \textit{learn}. They acquire \textit{knowledge} through learning, and some of that knowledge can serve to orient a person in the Universe or to aid them in some other way. Thus, human beings are inclined to engage in the mental act of reasoning from time to time. Human beings are also inclined to \textit{communicate} their thoughts, as they are social animals, and this includes the communication of \textit{rational thoughts}, thoughts that employ reasoning. \\
-
-\textit{Information}, in the form of abstract ideas or concrete \textit{data}, is communicated through many different channels and received by a variety of \textit{senses}. This communication is not limited to humans. Animals communicate in a multitude of ways, with varying degrees of expressiveness. However, human beings are considered unique in their ability to communicate abstractly 
-
-Methods of reasoning can be divided into two categories: those that can support an \textit{argument} and those that can't. The former is known as \textit{logical reasoning} and the latter as \textit{intuitive reasoning}. An argument is 
+% Curry-Howard: proofs and programs are the same thing. 
 
 % An argument is a "calculus"
 % Argument - set of statements (premises) and a conclusion in a language
@@ -808,80 +988,7 @@ Methods of reasoning can be divided into two categories: those that can support 
 % Argument vs explanation
 % Validity/soundness
 
-\paragraph{Intuitive Reasoning} \hspace*{1mm} \vspace*{2mm}
-
-\paragraph{Logical Reasoning} \hspace*{1mm} \vspace*{2mm}
-
-Logical reasoning is the \textit{inference} of new information from present information. It involves \textit{rule of inferences} that are used to relate sets of \textit{premises} to \textit{conclusions}. There are three kinds of logical reasoning: \textit{deductive}, \textit{inductive}, and \textit{abductive}. Each is classified according to which piece of information (premises, rule, or conclusion) is missing and must be inferred from the others. \\
-
-% Explanatory vs ampliative
-% Certainty vs uncertainty (probability)
-% Classic distinction is deductive and inductive. They are opposites. Abduction is something totally different.
-% General to specific vs specific to general
-% Logical truths vs facts
-% Abduction = induction + justification
-
-% Describe deductive/inductive with machine learning
-
-\subparagraph{1. Deductive Reasoning} \hspace*{1mm} \vspace*{2mm}
-
-\textit{Deductive reasoning} is the inference of a \textit{conclusion}, given a set of premises and a rule. It is consequential in nature. That is, it cannot say anything more than what its premises imply. For example, given the first premise "When it rains, the grass gets wet" and the second premise "It is raining", we can infer the conclusion "The grass is wet". This conclusion is a \textit{logical consequence} of its premises. \\
-
-The above inference is allowed due to a deductive rule known as \textit{modus ponens} (Latin for "method that affirms"). Given a \textit{conditional statement} of the form $P\rightarrow Q$ (i.e. $P$ \textit{implies} $Q$) and the \textit{antecedent} $P$ as premises, this rule can be used to infer the \textit{consequent} $Q$ as a conclusion. There are other deductive rules of inference as well, such as \textit{modus tollens} (a "method that denies"). Given the same conditional $P\rightarrow Q$ and the \textit{negation of the consequent} $\lnot Q$, this rule infers the antecedent $\lnot P$. \\
-
-Deduction is the primary method of inference that is studied today, and it is the basis of \textit{mathematical logic}. Deductive arguments are evaluated based on their \textit{validity} and \textit{soundness}, both of which are related to but distinct from the concept of \textit{truth}. Truth, in the context of deductive reasoning and logic, is a simple, binary value. A statement can be assigned a value of \textit{true} or \textit{false}. Given this dichotomy, an argument is \textit{valid} if it is impossible for its conclusion to be false, assuming that its premises are true. An argument is \textit{sound}, if it is valid and its premises are actually true. We will discuss what "actually true" means later in this section. \\
-
-\subparagraph{2. Inductive Reasoning} \hspace*{1mm} \vspace*{2mm}
-
-% Analogical reasoning
-
-\textit{Inductive reasoning} is the inference of a \textit{rule} that relates a set of premises to a conclusion. It is observational in nature. For example, we might observe that "It is raining" and "The grass is wet". If these two events happen in tandem multiple times, we might be inclined to infer a rule that states that one of these events implies the other: "When it rains, the grass gets wet". \\
-
-This explanation of events is called a \textit{hypothesis}. While this particular hypothesis is \textit{probable}, it is not necessarily \textit{certain}. For example, while this rule might hold most of the time, it would be invalid if a canopy were placed over the grass one day. In contrast, the deductive argument was given "When it rains, the grass gets wet" as a premise that was assumed to be true for all scenarios involving rain and grass, so no canopy-like loopholes are possible in this case. The conditional does not have the same certainty in the inductive argument. \\
-
-Inductive arguments exist on a spectrum between \textit{weak} and \textit{strong}. Those that are stronger and more persuasive have a higher probability of having a true conclusion. Inductive reasoning is associated with \textit{science} and \textit{critical thinking} because it allows one to make generalizations about complex phenomena given limited evidence. Unlike deductive reasoning, it attempts to find new knowledge that is not simply contained within its premises. \\
-
-Statements made by induction are bolstered with evidence whereas deductive statements are as true as their premises. This leaves inductive reasoning susceptible to \textit{faulty generalizations} and \textit{biased sampling}. Induction must also assume that future events will occur exactly as they have in the past, which is not always the case. For example, a turkey that is fed every morning with the ring of a bell may infer by induction that bell $\rightarrow$ food. However, he will see the error in his reasoning when the farmer rings the bell on Thanksgiving Day and instead slits his throat. \\
-
-\subparagraph{3. Abductive Reasoning} \hspace*{1mm} \vspace*{2mm}
-
-\textit{Abductive reasoning} is the inference of a \textit{premise}, given a conclusion and a rule. It is investigative in nature. For example, given a conclusion "The grass is wet" and a rule "When it rains, the grass gets wet", we might determine that rain is the best explanation for the wetness of the grass. Thus, we abduce that "It might have rained". \\
-
-Like induction, abduction can also produce a hypothesis. However, abduction does not seek a new relationship between two previously unconnected statements. Rather, it uses established relationships to find a reasonable explanation for a statement that is assumed to be true. It is often used by detectives or diagnosticians who need to find a probable cause of an event. It is also used in Bayesian statistics. While multiple premises may be abduced, typically we want to abduce a single, "best" premise. \\
-
-Abductive reasoning allows us to ignore the many causes that are unlikely in favor of those few that may be relevant to the problem at hand. For example, doctors are often taught to heed the following proverb: "When you hear hoofbeats, think of horses, not zebras". That is, when a patient exhibits certain symptoms, a doctor should abduce from them a commonplace disease before considering more exotic possibilities. However, "zebras" do exist. Sometimes the most likely cause is not the actual cause. For this reason, abduction is also considered to be equivalent to a deductive fallacy called \textit{affirming the consequent}, which is like a \textit{modus ponens} performed in reverse. That is, given a conditional $P\rightarrow Q$ and the consequent $Q$, abduction infers $P$ from $Q$ by assuming that the converse $Q\rightarrow P$ of the conditional is also true. This is not a deductively valid inference. Considering our example again, the grass might be wet from rain, but this is not \textit{necessarily} true. It is also possible that the sprinkler system is on. Or perhaps there is a zebra-esque scenario like a flood. \\\\
-
-\begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
-	\vspace{2mm}
-	\begin{center}
-		\textbf{What is Absolute Truth?}
-	\end{center}
-	\vspace{1mm}
-	Truth, in the absolute sense, has been discussed and debated since the dawn of man. It is a concept that seems obvious to us, and yet it always seems to elude our understanding. Philosophers have formulated dozens of theories of truth over the years, with some asserting that truth is an objective property of our universe and others asserting that truth is a useful lie that mankind has invented. And while there is merit in those claims that truth is not real, we still see around us the technology that was born out of our intuitive sense of true and false. Especially in computer science where everything is represented in binary. \\
-	
-	The traditional theories of truth have been termed \textit{substantive}. That is, they assert that truth has some basis in reality and that it is a meaningful thing to discuss. Early theories of truth from Ancient Greece are considered the foundation of \textit{correspondence theory}, the idea that statements are true if their symbols are arranged in such a way that they express an abstract thought that accurately describes reality. This theory defines truth in the context of a relationship between language and objective reality. It is a useful philosophy that allows us to orient ourselves in the world around us. However, many philosophers believe that truth cannot be explained by such a simple rule. In fact, there are many more factors that could play a role in the concept. \\
-	
-	Objections to a strict correspondence theory usually take issue with the treatment of language as something monolithic and easy to classify within a true-false dichotomy. For example, a statement encoded as a sentence in a language is only meaningful to people who can read that language. What does this imply about a particular language's relationship with truth? Is a statement only true for those who understand it? Furthermore, there is no guarantee that readers of the same language will even be able to agree on the meaning expressed by a particular sentence. Languages often encompass multiple dialects that might parse words differently. Words themselves also may not be precise, and some abstract thoughts may not have suitable words in some languages. These are the points raised in \textit{social constructivism}, a theory which avers that human knowledge is historically and culturally specific. Social constructivists also believe that truth is \textit{constructed} and that language cannot faithfully represent any kind of objective reality. \\
-	
-	Other substantive theories find the essence of truth nestled in other abstract concepts. \textit{Consensus theory}, as the name implies, defines truth as something that is agreed upon either by all human beings or by a subset (such as academic groups or standards bodies). This is another anthropocentric definition that is at constant risk of philosophical division on any given topic. \textit{Coherence theory} takes a more objective approach, claiming that a statement can only be true if it fits into a system of statements that support each other's truth. This is similar to the notion of \textit{formal systems}, which we will discuss in depth. However, traditional coherence theories attempt to explain all of reality within a single coherent system of truths, which is incompatible with our modern understanding of formal systems. \\
-	
-	Modern developments in philosophy have resulted in theories that deviate from the long-held, substantive opinions on the nature of truth. These \textit{minimalist} theories assert instead that truth is either not real or not a necessary property of language or logic. They claim that statements are \textit{assertions} and thus are implicitly understood to be true. For example, it is understood that by putting forth the sentence "$2+2=4$", you are endorsing the semantic meaning "$2+2=4$ is true". The clause "is true" is called a \textit{truth predicate}, and minimalist theories of truth often consider its use redundant. \\
-	
-	This idea of a truth predicate is borrowed from Alfred Tarski's \textit{semantic theory of truth}, which is a substantive theory that refines the correspondence concepts espoused by Socrates, Plato, and Aristotle for formal languages. This theory makes a distinction between a statement made in a formal language and a truth predicate, which evaluates the truth of the statement. Tarski made this distinction in order to circumvent the \textit{liar's paradox}, which is often presented with the following example: "This sentence is false". If the predicate "is false" is considered to be an element of "this sentence", the truth of this statement cannot be decided. For this reason, Tarski states that a language cannot contain its own truth predicate. This is enforced by requiring that "this sentence" be written in an \textit{object language} and that "is false" be written in a \textit{metalanguage}. \textit{Convention T}, the general form of this rule, can be expressed as
-	
-	\begin{center}
-		\textit{"$P$" is true if and only if $P$}
-	\end{center}
-
-	where "$P$" is simply the metalanguage sentence $P$ rendered in the object language. That is, the \textit{syntactic representation} is assigned a \textit{truth value} of true if and only if the semantic meaning it represents is considered true (according to whatever theory of truth you employ). By this rule, we say that "$2+2=4$" is true if and only if \textit{the sum of the number $2$ with the number $2$ is equal to the number $4$}. Minimalist redundancy theories modify Tarski's theory by interpreting "$P$" as an implicit assertion of the truth of $P$. The sentence "$P$", which asserts that $P$ is true, is then false if and only if its semantic meaning $P$ is false. \\
-	
-	\parbreak
-	\vspace{4mm}
-	
-	The debate on the nature of truth rages on \textit{in perpetuum}. However, for our purposes, we must be practical. There is truth in logic and mathematics and computer science as well, but, in practice, it has little to do with the debates on \textit{absolute truth} described above. Their truth is \textit{relative}. That is, it relies on the assumption that our premises are true. Cognizant of this, we move forward with our thinking, searching for truths within these arbitrary boundaries. We will discuss \textit{relative truth} in the upcoming section on logic. \\
-	\vspace{1mm}
-\end{tcolorbox}
-\vspace{7mm}
+\subsubsection{Informal Logic}
 
 % Discuss the logical reasonings comparatively. 3 paths in life. Certain vs uncertain. Binary vs multi-valued.
 
@@ -924,6 +1031,7 @@ Formal logic is the study of \textit{inference} with regard to \textit{formul{\a
 % Semantic consequence
 % Formal systems
 % Reason vs. logic -> Humans vs. computers
+% Model theory
 
 and they are studied in within \textit{formal systems}. These systems of abstract thoughts are used to infer the existence of formul{\ae} by means of logical deduction starting from a given set of axioms. A formal system has:
 
@@ -946,28 +1054,12 @@ Formul{\ae}, which are finite sequences of symbols from a system's alphabet, are
 
 A well-formed formula with such an interpretation is called a \textit{sentence}, and the meaning expressed by a sentence is called a \textit{statement} or \textit{proposition}. A sentence expressing a true statement (according to the axioms and inference rules of the formal system) is called a \textit{theorem}, and a set of theorems is called a \textit{theory}. For example, ZFC set theory is a first-order \textit{theory} of sets. It has a collection of theorems written in first-order logic that form an \textit{axiomatic set}, and these theorems are used to prove other theorems that also belong to the theory using a set of inference rules. \\
 
-\begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
-	\vspace{2mm}
-	\begin{center}
-		\textbf{What is Relative Truth?}
-	\end{center}
-	\vspace{1mm}
-	A logical argument begins from \textit{premises} that are decided true. It then progresses by truth-preserving \textit{rules of inference} to other statements whose truth is ultimately dependent on the individual truths of the premises, concluding with a final statement called a \textit{conclusion}. A \textit{proof} of this conclusion thus depends on both the \textit{truth} of its premises and the \textit{validity} of its argument. \\
-
-	Validity can be determined within a logical system. A logical argument that is valid simply applies rules of inference as they are prescribed. Verifying premises is more complicated. Their truth values are external to logic. An argument that is founded on \textit{false premises} may be logically valid, in which case it will produce a conclusion that is nominally true. Sometimes, however, this conclusion will \textit{feel} wrong or evidence to the contrary will arise, and this assertion of truth will prompt an inquiry into the basis of the argument. \\
-	
-	Occasionally, logical arguments that are accepted for hundreds or thousands of years are refuted on grounds of starting from false premises. Such discoveries are accompanied by foundational changes such as a collective shift in philosophical mindset or the adoption of a new theory. For example, before the 1930s, it was assumed that a formal language could produce a sentence to express any abstract thought and that 
-
-	\vspace{1mm}
-\end{tcolorbox}
-\vspace{7mm}
-
 % First-order logic for math
 % ZFC set theory
 % Ethics and logic
 % Proofs are Boolean
 
-\subsection{Decision Problems and Function Problems}
+\subsubsection{Decision Problems and Function Problems}
 
 First-order logic is also called \textit{predicate calculus}. It is a system for calculating \textit{predicates}, which are Boolean-valued functions. In mathematics, a predicate maps \textit{propositions} written in first-order logic to Boolean values (i.e. $P:X\rightarrow \{\textsc{true},\textsc{false}\}$). In linguistics, a proposition can be written in the form of a \textit{yes-no question} without sacrificing any semantic meaning. For example, evaluating the proposition "The sky is blue." as true or false is the same thing as answering the question "Is the sky blue?" with either yes or no. \\
 
@@ -1323,13 +1415,11 @@ In order for Hilbert's program to succeed, there would have to exist a formal sy
 
 As a professor at the prestigious University of G\"ottingen, Hilbert gave many lectures on his program, both inside and outside of Germany. At one such lecture given in Bologna in 1928, Kurt G\"odel was in attendance. The concepts of mathematical logic discussed at this lecture would inspire G\"odel throughout his career, but in only three years he would deal a fatal blow to Hilbert's program. \\
 
-\subsubsection{Mathematical Objects and Model Theory}
-
-Before we discuss G\"odel's landmark theorems in mathematical logic, we must understand a bit about the theory that they describe. G\"odel's theorems on the \textit{completeness}, \textit{soundness}, and \textit{incompleteness} of logical theories are foundational to a discipline in mathematical logic known as \textit{model theory}. \\
+% Before we discuss G\"odel's landmark theorems in mathematical logic, we must understand a bit about the theory that they describe. G\"odel's theorems on the \textit{completeness}, \textit{soundness}, and \textit{incompleteness} of logical theories are foundational to a discipline in mathematical logic known as \textit{model theory}. \\
 
 % Maybe edit above paragraph as you learn more
 
-Most mathematical disciplines focus on a particular mathematical object or structure. An \textit{object} in mathematics is anything that can be formally defined using logic (typically, first-order logic). Given a set-theoretic foundation for mathematics, every mathematical object can be defined as a \textit{set}. A set is a collection of well-defined, distinct objects, and it is itself also an object. Sets can represent objects such as \textit{numbers}, \textit{matrices}, \textit{functions}, \textit{relations}, \textit{points}, \textit{polygons}
+% Most mathematical disciplines focus on a particular mathematical object or structure. An \textit{object} in mathematics is anything that can be formally defined using logic (typically, first-order logic). Given a set-theoretic foundation for mathematics, every mathematical object can be defined as a \textit{set}. A set is a collection of well-defined, distinct objects, and it is itself also an object. Sets can represent objects such as \textit{numbers}, \textit{matrices}, \textit{functions}, \textit{relations}, \textit{points}, \textit{polygons}
 
 \subsubsection{G\"odel's Completeness Theorem}
 
@@ -1365,9 +1455,9 @@ A theory is syntactic in nature. It is a set of strings written in a language $\
 
 \subsubsection{$\mu$-recursive Functions}
 
-\subsubsection{The Halting Problem}
-
 \subsubsection{The Untyped $\lambda$-calculus}
+
+\subsubsection{The Halting Problem}
 
 
 % Peano, ZFC
@@ -1427,19 +1517,12 @@ Blah, blah, blah... \\
 
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
-%    PART II: ABSTRACT DATA TYPES AND DATA STRUCTURES
+%    PART III: TYPES AND OBJECTS
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
 
-\part*{Abstract Data Types and Data Structures}
-\addcontentsline{toc}{part}{\tocpartglyph Abstract Data Types and Data Structures}
-
-%--------------------------------------------------------------------------------
-%    SECTION
-%--------------------------------------------------------------------------------
-
-\toclineskip
-\section{A Motivation for Objects}
+\part*{Types and Objects}
+\addcontentsline{toc}{part}{\tocpartglyph Types and Objects}
 
 % Essence - philosophy
 % An automaton is a mathematical object
@@ -1465,41 +1548,59 @@ Blah, blah, blah... \\
 %--------------------------------------------------------------------------------
 
 \toclineskip
-\section{Category Theory}
+\section{From Formulas to Types}
 
-\subsection{Objects and Morphisms}
+%----------------------------------------
 
-\subsection{Functors}
+\subsection{Type Theory}
+
+\subsubsection{Primitive Types}
+
+\subsubsection{Composite Types}
+
+%----------------------------------------
+
+\subsection{The Curry-Howard Isomorphism}
+
+% Recursive composite type = a dynamic data structure
+
+% Curry-Howard Isomorphism
+
+% Logic programming
+
+%--------------------------------------------------------------------------------
+%    SECTION
+%--------------------------------------------------------------------------------
+
+\toclineskip
+\section{From Types to Objects}
+
+%----------------------------------------
+
+\subsection{Category Theory}
+
+\subsubsection{Objects}
+
+% Monoids, groups, algebras, coalgebras, etc.
+
+\subsubsection{Morphisms}
+
+\subsubsection{Functors}
 
 % Signatures
 
-\subsection{Monoids}
-
-\subsection{Groups}
-
-\subsection{Algebras}
+\subsection{The Curry-Howard-Lambek Isomorphism}
 
 %--------------------------------------------------------------------------------
 %    SECTION
 %--------------------------------------------------------------------------------
 
 \toclineskip
-\section{Semiautomata, F-Coalgebras, and Classes}
+\section{Signatures and Classes}
 
+% F-Coalgebra
+% Semiautomata and transition systems
 % Algebraic specification
-
-%--------------------------------------------------------------------------------
-%    SECTION
-%--------------------------------------------------------------------------------
-
-\toclineskip
-\section{Type Theory}
-
-\subsection{Primitive Types}
-
-\subsection{Composite Types}
-
-% Recursive composite type = a dynamic data structure
 
 %--------------------------------------------------------------------------------
 %    SECTION
@@ -2204,7 +2305,7 @@ Blah
 
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
-%    PART III: ALGORITHMS
+%    PART IV: ALGORITHMS
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
 
@@ -2616,7 +2717,7 @@ Blah
 
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
-%    PART IV: PROGRAMMING LANGUAGE THEORY
+%    PART V: PROGRAMMING LANGUAGE THEORY
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
 
@@ -2770,7 +2871,7 @@ Blah
 
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
-%    PART V: IMPLEMENTATION, FEATURING AN EXPLORATION OF JAVA
+%    PART VI: IMPLEMENTATION, FEATURING AN EXPLORATION OF JAVA
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
 
@@ -2841,7 +2942,7 @@ Blah \\
 
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
-%    PART VI: ADDITIONAL TECHNOLOGIES
+%    PART VII: ADDITIONAL TECHNOLOGIES
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
 
@@ -3052,12 +3153,12 @@ Blah \\
 
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
-%    PART VII: SOFTWARE DEVELOPMENT
+%    PART VIII: SOFTWARE DEVELOPMENT AND PHILOSOPHIES
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
 
-\part*{Software Development}
-\addcontentsline{toc}{part}{\tocpartglyph Software Development}
+\part*{Software Development and Philosophies}
+\addcontentsline{toc}{part}{\tocpartglyph Software Development and Philosophies}
 
 % Compsci vs software engineering
 % Software development vs engineering vs programming
@@ -3094,7 +3195,7 @@ Blah \\
 
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
-%    PART VIII: APPENDICIES
+%    PART IX: APPENDICIES
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
 
@@ -3104,7 +3205,16 @@ Blah \\
 \appendix
 
 %--------------------------------------------------------------------------------
-%    APPENDIX A: SYSTEM DESIGN
+%    APPENDIX A: THE FUTURE OF THIS GUIDE
+%--------------------------------------------------------------------------------
+
+\toclineskip
+\section{The Future of this Guide}
+
+\newpage
+
+%--------------------------------------------------------------------------------
+%    APPENDIX B: SYSTEM DESIGN
 %--------------------------------------------------------------------------------
 
 \toclineskip
