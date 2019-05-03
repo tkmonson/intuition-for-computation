@@ -83,7 +83,8 @@
 
 %--- FINITE-STATE MACHINE ---------------
 
-% FSM drawing code copied from this FSM generator: http://madebyevan.com/fsm/
+% Sometimes the product of this FSM generator: http://madebyevan.com/fsm/
+% Sometimes done manually using tikzpicture
 
 %--- QUOTATION --------------------------
 
@@ -323,6 +324,8 @@ BCOR5mm, % Binding correction
 \part*{Introduction}
 \addcontentsline{toc}{part}{\tocpartglyph Introduction}
 
+% “When I use a word, it means just what I choose it to mean — neither more nor less.” - Alice in Wonderland
+
 This guide is everything you need to know in order to program computers professionally in the modern era. Well, the fundamentals at least.
 
 % Redo this intro.
@@ -338,6 +341,7 @@ This guide is everything you need to know in order to program computers professi
 % Give a warning for the Theory of Computation section lol. Or at least assure readers that things will become more applied as the guide progresses.
 % Note differences in writing styles between the theory chapters (1-4) and the implementation chapters (5-7). The latter are not comprehensive overviews.
 % Discuss the title. Intuition. Definitions in my own words - "if you know something's name, you have power over it". True name, mysticism.
+% Make your own guide!
 
 \newpage
 
@@ -352,41 +356,138 @@ This guide is everything you need to know in order to program computers professi
 
 % Rewrite, be poetic about computation. Really describe it. Then discuss how the idea was generalized and formalized and found to have a lot of commonalities with language, logic, math...
 
-% Mathematical modeling of computation (sequential, functional, concurrent)
-% Automata theory covers sequential and concurrent, computability theory covers functional. Together, they cover the prominent models of computations.
-% Computational complexity theory is a categorization of computational tasks.
-
-% Syntactic/semantic computation
-% Is intuition computation?
-
 \textit{Computation} is an essential part of being human. Just as we may perceive the world with our senses or feel the affect of our emotions or explore the inner workings of our imaginations, we may also exercise \textit{reason} in the hope of understanding the things in life that we question, and computation is an \textit{act} of reason. However, the relationship between computation and reasoning is complicated. \\
 
-\textit{Reasoning} is a cognitive act performed by rational beings. It is the application of reason, the capacity for making a conscious effort to understand something using presently available information and the ingenuity of thought. Reasoning could also be described as the providing of good \textit{reasons} to explain or justify things. However, as you might expect, there is much debate over whether or not any particular reason is "good" and whether or not it is a suitable justification for something. Reasoning is broad, and it comes in different flavors, but ultimately it is the pursuit of \textit{truth}. \\
+\textit{Reasoning} is a cognitive act performed by rational beings. It involves the absorption and synthesis of presently available information for the purpose of elucidating knowledge. It may require the ingenuity of thought, but in some cases the rote application of simple rules is sufficient. Reasoning could also be described as the providing of good \textit{reasons} to explain or justify things. However, as you might expect, there is much debate over whether or not any particular reason is "good" and whether or not it is a suitable justification for something. Reasoning is broad, and it comes in different flavors, but ultimately it is the pursuit of \textit{truth}. \\
 
-Reasoning may involve the application of \textit{logic}. This \textit{logical reasoning} is the kind of reasoning that can be expressed in the form of an \textit{argument}. However, this argument does not have to be \textit{valid}. In fact, it does not have to be a "good" argument at all. Such reasoning requires only that the steps involved be \textit{explainable} in some way, whether that be through informal speech or in formal writing. \\
-
-% Give the basic framework of an argument
-% FSM graphic
-
-In contrast to this, \textit{intuitive reasoning} has steps that are not understood. To begin our journey of understanding computation in a modern, logical sense, we will first consider it in a mystical, otherworldly sense by briefly touching on the mysterious realm of \textit{intuition}. \\
+%----------------------------------------
 
 \toclineskip
-\subsection*{The Oracle, the Seer, and the Monk}
-\addcontentsline{toc}{subsection}{The Oracle, the Seer, and the Monk}
+\subsection*{Argument and Proof}
 
-Intuition
+Reasoning may involve the application of \textit{logic}. This \textit{logical reasoning} is the kind of reasoning that can be expressed in the form of an \textit{argument}. However, this argument need not be \textit{valid}. In fact, it does not have to be a "good" argument at all. Such reasoning requires only that the steps involved be \textit{explainable} in some way, whether that be through informal speech or in formal writing. \\
+
+The basic form of an argument like this has three main pieces: a set of \textit{premises}, a \textit{conclusion}, and a \textit{rule of inference}. A rule of inference can be thought of as a kind of logical function. That is, it takes premises as input and outputs a conclusion. A simple, one-step argument using such a rule might look like this: \\[2mm]
+
+% Modus Ponens diagram
+\begin{center}
+	\begin{tikzpicture}[scale=0.2]
+	\tikzstyle{every node}+=[inner sep=0pt]
+	
+	\draw [black] (0,0) circle (3);
+	\draw (0,0) node {$P$};
+	
+	\draw [black] (15,0) circle (3);
+	\draw (15,0) node {$Q$};
+	
+	\draw [black] (3,0) -- (12,0);
+	\fill [black] (11.2,0.5) -- (11.2,-0.5) -- (12,0);
+	
+	\draw [black] (0,-10) circle (3);
+	\draw (0,-10) node {$P$};
+	
+	\draw [black, thick] (-9,-17) -- (18,-17);
+	
+	\draw [black] (0,-24) circle (3);
+	\draw (0,-24) node {$Q$};
+	
+	\draw (-7,0) node {$1^\textit{st}$};
+	\draw (-7,-10) node {$2^\textit{nd}$};
+	\draw (-7,-24) node {$\textnormal{Con.}$};
+	
+	%----------------------------------------
+	
+	\draw [very thick] (26,3) rectangle (48,-27);
+	\fill [textbook-blue] (26.1,2.9) rectangle (47.9,-26.9);
+	
+	\draw (37,-6.5) node {\fontsize{50}{40} $M$};
+	\draw (37,-18.5) node {\fontsize{50}{40} $P$};
+	
+	%----------------------------------------
+	
+	\draw [black, thick] (22,3.07) -- (22,-13.07);
+	\draw [black, thick] (22,3) -- (21,3);
+	\draw [black, thick] (22,-13) -- (21,-13);
+	\draw [black, thick] (22,-5) -- (26,-5);
+	\fill [black] (25.2,-4.5) -- (25.2,-5.5) -- (26,-5);
+	
+	\draw [black, thick] (22,-20.93) -- (22,-27.07);
+	\draw [black, thick] (22,-21) -- (21,-21);
+	\draw [black, thick] (22,-27) -- (21,-27);
+	\draw [black, thick] (22,-24) -- (26,-24);
+	\fill [black] (22,-24) -- (22.8,-23.5) -- (22.8,-24.5);
+	\end{tikzpicture}
+\end{center}
+\vspace{5mm}
+
+This is the quintessential rule of inference used in logical reasoning, expressed here in symbols. It is known as \textit{modus ponens} (Latin for "a method that affirms"). The first premise $P\rightarrow Q$ is called a \textit{conditional statement} where $\rightarrow$ is the \textit{implies} operator. It states that if the \textit{antecedent} $P$ were true, it would \textit{imply} that the \textit{consequent} $Q$ would also be true. The second premise $P$ simply states that the statement $P$ is indeed true. Thus, by means of \textit{modus ponens}, we can \textit{infer} from the premises $P\rightarrow Q$ and $P$ that the conclusion $Q$ must be true. \\
+
+Inference is also called \textit{entailment}. Though these terms describe the same logical concept, the latter more aptly describes the relationship between statements that are linked. To infer is to come to a conclusion that is not \textit{explicitly} stated in the premises. Rather, the conclusion is \textit{deduced} from the premises. On the other hand, to entail is to require that something follows. If $P$ \textit{entails} $Q$, this suggests that $Q$ is a \textit{logical consequence} of $P$, which we can express using a \textit{turnstile}: $P\vdash Q$. Inference is something that fallible humans do. Entailment is something that logical rules do. \\
+
+When inference matches entailment, you've got yourself a \textit{valid} argument. However, this does not necessarily mean that your argument is \textit{sound}. \textit{Validity} is a property of arguments whose conclusions must be true if their premises are true. An argument is valid as long as its conclusion is \textit{inferred} correctly from its premises (i.e. according to rules of inference that have been agreed upon). However, validity says nothing about whether or not the premises have a meaning that accurately describes reality. \textit{Soundness}, on the other hand, is a property of valid arguments whose premises are known to be true. \\
+
+Validity and soundness complicate entailment. Now, an argument can be evaluated either in terms of \textit{syntax} (the text of the argument, either in symbols like $P$ and $Q$ or in a natural language) or in terms of \textit{semantics} (the actual meaning represented by the text). For example, consider the following valid use of \textit{modus ponens}: \\
+
+\begin{center}
+	\begin{tabular*}{0.55\textwidth}{@{\extracolsep{\fill} } ll}
+		\textnormal{"All mammals are dogs"} & $P\rightarrow Q$ \\
+		\textnormal{"A cat is a mammal"} & $P$ \\
+		\hline
+		\textnormal{"Therefore, a cat is a dog"} & $Q$ \\
+	\end{tabular*}
+\end{center}
+\vspace{4mm}
+
+This conclusion is a \textit{syntactic consequence} of the premises ($P\vdash Q$). That is, assuming that the premises are true, the conclusion is also true. However, a cat is not a dog. The premise that "All mammals are dogs" is, in reality, false. If we change it to something semantically true such as "All mammals are warm-blooded", we can conclude that "A cat is warm-blooded". In this case, the conclusion is a \textit{semantic consequence} of the premises ($P\vDash Q$). This syntactic-semantic difference will come up repeatedly throughout this guide. \\
+
+Of course, arguments typically have more than one step. \\
+
+% Proofs and models
+% String together arguments to make proofs
+% Tree structure of arguments
+% Interlocuters
+
+However, not all forms of reasoning have such strict rules. There are other methods of reasoning that cannot be modeled by an argument. In contrast to logical reasoning, \textit{intuitive reasoning} has steps that are \textit{not} understood. Although the question might seem peculiar, it is worth asking whether or not computation can be intuitive. So, to begin our journey of understanding computation in a modern, logical sense, we will first walk in the other direction, considering it instead in a mystical, otherworldly sense. \\
+
+%----------------------------------------
+
+\subsection*{The Oracle, the Seer, and the Sage}
+\addcontentsline{toc}{subsection}{The Oracle, the Seer, and the Sage}
+
+\textit{Intuition} is the capacity to create conclusions without evidence, proof, or a combination of the two. If any premises are involved, they may appear to an onlooker as if they were plucked out of thin air. If any method is involved, it is esoteric or hidden from sight. Acts of intuition range from the mundane procedures we perform without thinking to great feats of intellectual, artistic, and athletic achievement. And while it is often associated with magic or supernatural ability, intuition is a real, observable phenomenon, and it is a form of reasoning. \\
+
+Like that of reasoning, the definition of intuition is fuzzy. There are a variety of events that one might label as the product of intuition that are actually quite functionally distinct from one another. For this reason, I would like to consider and compare three archetypes that are known for their intuitive skills: the Oracle, the Seer, and the Sage. For the skeptics among you, I ask that you suspend your disbelief for a moment and assume that our characters are acting in good faith. There is no lying here; the conclusions are sincere. \\
+
+\paragraph{The Oracle} \hspace*{1mm} \vspace*{2mm}
+
+An Oracle is a person who predicts the future by acting as a vessel for a god or a set of gods. They are considered by believers to be portals through which the divine speaks directly. They are found in histories all over the world, but most people associate the role with the priestesses of Ancient Greece. Picture a woman with eyes that roll back into her head as she speaks in a possessed, thundering voice. \\
+
+For an Oracle, the conclusions come straight from the source. She may not even do any reasoning herself, save for the \textit{unconscious reasoning} that is performed while she is possessed. However, conscious or not, she provides a great service to mankind. There is no clearer answer than the one given to you directly from the gods themselves, even if it has to be sent through what is essentially the human version of a telephone. \\
+
+For those seeking counsel, the premises of the Oracle's conclusion are unnecessary because they just \textit{know} that the statement must be true. For them, the connection the Oracle has with the gods and with reality is part of life itself. We all have deep beliefs like this. For example, most people do not feel that gravity needs to be proven to them in order for them to accept it as fact. Their perception of gravity in the world around them is proof enough. This is the kind of intuition characterized by \textit{subconscious reasoning}, the reasoning you do without being aware of doing it. \\
+
+\paragraph{The Seer} \hspace*{1mm} \vspace*{2mm}
+
+A Seer is a person who predicts the future by interpreting signs from a god or a set of gods. Unlike an Oracle, a Seer speaks divine truth in his own words, drawing from an innate, sometimes god-given power to see meaning in natural events or occult objects. There are various methods of divination that are used by Seers, such scrying (the gazing into magical things, like crystal balls, for the purpose of seeing visions), auspicy (the interpretation of bird migration), or dowsing (the use of magic to find water, often with the aid of a dowsing rod). The acceptance of any particular method is cultural, but beliefs in divination vary greatly, even within a single society. \\
+
+The Seer has premises for his conclusion, but the rules of inference involved in his reasoning are incomprehensible to others. He 
+
+\paragraph{The Sage} \hspace*{1mm} \vspace*{2mm}
 
 % Seers have premises and conclusions, oracles just speak conclusions
 % Does intuition involve unconcious, preconcious, or concious reasoning?
 % Is intuition computation?
+% This book is as much about intuition as it is about computation.
 % In some sense, intuition is thought of as the opposite of logic (it has no argument or basis in reality)
-% In another sense, logical truths (axioms) could be considered intuitive, so all of logic could be the product of intuition. Unless you believe that logic is objective.
-% The Oracle and the Seer are unique from the monk because they KNOW their truth is absolute.
+% In another sense, logical truths (tautologies) could be considered intuitive, so all of logic could be the product of intuition. Unless you believe that logic is objective.
+% The Oracle and the Seer are unique from the sage because they KNOW their truth is absolute.
+% Computers are honestly closer to oracles or seers than sages.
+% Buddhism - a faculty of the mind of immediate knowledge
 
 \begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
 	\vspace{2mm}
 	\begin{center}
-		\textbf{What is Absolute Truth?}
+		\textbf{What is Truth?}
 	\end{center}
 	\vspace{1mm}
 	Truth, in the absolute sense, has been discussed and debated since the dawn of man. It is a concept that seems obvious to us, and yet it always seems to elude our understanding. Philosophers have formulated dozens of theories of truth over the years, with some asserting that truth is an objective property of our universe and others asserting that truth is a useful lie that mankind has invented. And while there is merit in those claims that truth is not real, we still see around us the technology that was born out of our intuitive sense of true and false. Especially in computer science where everything is represented in binary. \\
@@ -410,17 +511,19 @@ Intuition
 	\parbreak
 	\vspace{4mm}
 	
-	The debate on the nature of truth rages on \textit{in perpetuum}. However, for our purposes, we must be practical. There is truth in logic and mathematics and computer science as well, but, in practice, it has little to do with the debates on \textit{absolute truth} described above. Their truth is \textit{relative}. That is, it relies on the assumption that our premises are true. Cognizant of this, we move forward with our thinking, searching for truths within these arbitrary boundaries. We will discuss \textit{relative truth} in the upcoming section on logic. \\
+	The debate on the nature of truth rages on \textit{in perpetuum}. However, for our purposes, we must be practical. There is truth in logic and mathematics and computer science as well, but, in practice, it has little to do with the debates on \textit{absolute truth} described above. Their truth is \textit{relative}. That is, it relies on the assumption that our premises are true. Cognizant of this, we move forward with our thinking, searching for truths within these arbitrary boundaries. \\
 	\vspace{1mm}
 \end{tcolorbox}
 \vspace{7mm}
 
-\subsection*{The Logician and the Scientist}
+%----------------------------------------
+
+\subsection*{The Mathematician, the Scientist, the Computer}
 \addcontentsline{toc}{subsection}{The Logician and the Scientist}
 
 % Deductive and Inductive (+ Abductive)
-% Closed and open world assumptions
-% Relative truth
+% Mathematician write proofs (deductive), but they also use creativity (inductive)
+% Is creativity inductive?
 
 Logical reasoning is the \textit{inference} of new information from present information. It involves \textit{rule of inferences} that are used to relate sets of \textit{premises} to \textit{conclusions}. There are three kinds of logical reasoning: \textit{deductive}, \textit{inductive}, and \textit{abductive}. Each is classified according to which piece of information (premises, rule, or conclusion) is missing and must be inferred from the others. \\
 
@@ -430,24 +533,10 @@ Logical reasoning is the \textit{inference} of new information from present info
 % General to specific vs specific to general
 % Logical truths vs facts
 % Abduction = induction + justification
+% Closed and open world assumptions
+% Domain of discourse
 
 % Describe deductive/inductive with machine learning (blue box?)
-
-\paragraph{Deductive Reasoning} \hspace*{1mm} \vspace*{2mm}
-
-\textit{Deductive reasoning} is the inference of a \textit{conclusion}, given a set of premises and a rule. It is consequential in nature. That is, it cannot say anything more than what its premises imply. For example, given the first premise "When it rains, the grass gets wet" and the second premise "It is raining", we can infer the conclusion "The grass is wet". This conclusion is a \textit{logical consequence} of its premises. \\
-
-The above inference is allowed due to a deductive rule known as \textit{modus ponens} (Latin for "method that affirms"). Given a \textit{conditional statement} of the form $P\rightarrow Q$ (i.e. $P$ \textit{implies} $Q$) and the \textit{antecedent} $P$ as premises, this rule can be used to infer the \textit{consequent} $Q$ as a conclusion. There are other deductive rules of inference as well, such as \textit{modus tollens} (a "method that denies"). Given the same conditional $P\rightarrow Q$ and the \textit{negation of the consequent} $\lnot Q$, this rule infers the antecedent $\lnot P$. \\
-
-Deduction is the primary method of inference that is studied today, and it is the basis of \textit{mathematical logic}. Deductive arguments are evaluated based on their \textit{validity} and \textit{soundness}, both of which are related to but distinct from the concept of \textit{truth}. Truth, in the context of deductive reasoning and logic, is a simple, binary value. A statement can be assigned a value of \textit{true} or \textit{false}. Given this dichotomy, an argument is \textit{valid} if it is impossible for its conclusion to be false, assuming that its premises are true. An argument is \textit{sound}, if it is valid and its premises are actually true. We will discuss what "actually true" means later in this section. \\
-
-\paragraph{Inductive Reasoning} \hspace*{1mm} \vspace*{2mm}
-
-% Analogical reasoning
-
-\textit{Inductive reasoning} is the inference of a \textit{rule} that relates a set of premises to a conclusion. It is observational in nature. For example, we might observe that "It is raining" and "The grass is wet". If these two events happen in tandem multiple times, we might be inclined to infer a rule that states that one of these events implies the other: "When it rains, the grass gets wet". \\
-
-This explanation of events is called a \textit{hypothesis}. While this particular hypothesis is \textit{probable}, it is not necessarily \textit{certain}. For example, while this rule might hold most of the time, it would be invalid if a canopy were placed over the grass one day. In contrast, the deductive argument was given "When it rains, the grass gets wet" as a premise that was assumed to be true for all scenarios involving rain and grass, so no canopy-like loopholes are possible in this case. The conditional does not have the same certainty in the inductive argument. \\
 
 Inductive arguments exist on a spectrum between \textit{weak} and \textit{strong}. Those that are stronger and more persuasive have a higher probability of having a true conclusion. Inductive reasoning is associated with \textit{science} and \textit{critical thinking} because it allows one to make generalizations about complex phenomena given limited evidence. Unlike deductive reasoning, it attempts to find new knowledge that is not simply contained within its premises. \\
 
@@ -461,26 +550,20 @@ Like induction, abduction can also produce a hypothesis. However, abduction does
 
 Abductive reasoning allows us to ignore the many causes that are unlikely in favor of those few that may be relevant to the problem at hand. For example, doctors are often taught to heed the following proverb: "When you hear hoofbeats, think of horses, not zebras". That is, when a patient exhibits certain symptoms, a doctor should abduce from them a commonplace disease before considering more exotic possibilities. However, "zebras" do exist. Sometimes the most likely cause is not the actual cause. For this reason, abduction is also considered to be equivalent to a deductive fallacy called \textit{affirming the consequent}, which is like a \textit{modus ponens} performed in reverse. That is, given a conditional $P\rightarrow Q$ and the consequent $Q$, abduction infers $P$ from $Q$ by assuming that the converse $Q\rightarrow P$ of the conditional is also true. This is not a deductively valid inference. Considering our example again, the grass might be wet from rain, but this is not \textit{necessarily} true. It is also possible that the sprinkler system is on. Or perhaps there is a zebra-esque scenario like a flood. \\\\
 
-\begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
-	\vspace{2mm}
-	\begin{center}
-		\textbf{What is Relative Truth?}
-	\end{center}
-	\vspace{1mm}
-	A logical argument begins from \textit{premises} that are decided true. It then progresses by truth-preserving \textit{rules of inference} to other statements whose truth is ultimately dependent on the individual truths of the premises, concluding with a final statement called a \textit{conclusion}. A \textit{proof} of this conclusion thus depends on both the \textit{truth} of its premises and the \textit{validity} of its argument. \\
-	
-	Validity can be determined within a logical system. A logical argument that is valid simply applies rules of inference as they are prescribed. Verifying premises is more complicated. Their truth values are external to logic. An argument that is founded on \textit{false premises} may be logically valid, in which case it will produce a conclusion that is nominally true. Sometimes, however, this conclusion will \textit{feel} wrong or evidence to the contrary will arise, and this assertion of truth will prompt an inquiry into the basis of the argument. \\
-	
-	Occasionally, logical arguments that are accepted for hundreds or thousands of years are refuted on grounds of starting from false premises. Such discoveries are accompanied by foundational changes such as a collective shift in philosophical mindset or the adoption of a new theory. For example, before the 1930s, it was assumed that a formal language could produce a sentence to express any abstract thought and that 
-	
-	\vspace{1mm}
-\end{tcolorbox}
-\vspace{7mm}
+%-------
+
+A logical argument begins from \textit{premises} that are decided true. It then progresses by truth-preserving \textit{rules of inference} to other statements whose truth is ultimately dependent on the individual truths of the premises, concluding with a final statement called a \textit{conclusion}. A \textit{proof} of this conclusion thus depends on both the \textit{truth} of its premises and the \textit{validity} of its argument. \\
+
+Validity can be determined within a logical system. A logical argument that is valid simply applies rules of inference as they are prescribed. Verifying premises is more complicated. Their truth values are external to logic. An argument that is founded on \textit{false premises} may be logically valid, in which case it will produce a conclusion that is nominally true. Sometimes, however, this conclusion will \textit{feel} wrong or evidence to the contrary will arise, and this assertion of truth will prompt an inquiry into the basis of the argument. \\
+
+Occasionally, logical arguments that are accepted for hundreds or thousands of years are refuted on grounds of starting from false premises. Such discoveries are accompanied by foundational changes such as a collective shift in philosophical mindset or the adoption of a new theory. For example, before the 1930s, it was assumed that a formal language could produce a sentence to express any abstract thought and that 
+
+%----------------------------------------
 
 \subsection*{A History of Tools}
 \addcontentsline{toc}{subsection}{A History of Tools}
 
-% Calculation vs computation. Separate histories. Human computers.
+% Calculation vs computation. Separate histories.
 % Is a microwave a computer?
 % Modern cars are full of computers. Embedded systems.
 
@@ -499,6 +582,8 @@ The line between calculator and computer began to blur with the introduction of 
 % Computation as a mechanical process vs a function.
 % Abstract away the mechanics, and a function becomes a conversation (input and output).
 
+%----------------------------------------
+
 \subsection*{Talking with Talos}
 \addcontentsline{toc}{subsection}{Talking with Talos}
 
@@ -515,6 +600,11 @@ Humans, while not purely rational beings, are capable of reason when it suits th
 % So then... what separates Talos from man?
 % Deductive computers, AI, General AI, Artificial Conciousness
 
+%----------------------------------------
+
+\subsection*{Computation in Layman's Terms}
+\addcontentsline{toc}{subsection}{Talking with Talos}
+
 \newpage
 
 %--------------------------------------------------------------------------------
@@ -525,6 +615,10 @@ Humans, while not purely rational beings, are capable of reason when it suits th
 
 \part*{Theory of Computation}
 \addcontentsline{toc}{part}{\tocpartglyph Theory of Computation}
+
+% Mathematical modeling of computation (sequential, functional, concurrent)
+% Automata theory covers sequential and concurrent, computability theory covers functional. Together, they cover the prominent models of computations.
+% Computational complexity theory is a categorization of computational tasks.
 
 The \textit{theory of computation} is a field of study that is related to both mathematics and computer science. It is concerned with a process known as \textit{computation}, which refers to any kind of \textit{calculation} (the transformation of one or more inputs into one or more outputs) that is accomplished by following an \textit{algorithm} (a set of rigorously defined steps). It is also concerned with the formalization of theoretical models of computation known as \textit{abstract machines} or \textit{abstract automata}. Also of interest are the \textit{computational problems} that can be solved by these abstract machines and how efficiently they can be solved. The theory of computation gives us the formal definition of a computer and the scope of what a computer can accomplish. \\
 
@@ -968,11 +1062,16 @@ In this section, we will discuss what makes a problem \textit{solvable} and thus
 
 % Domains of discourse / universes in classical logic are just types in type theory. Top = true in every universe, Bottom = true in no universes (false)
 
+% Use sequent notation to explain axioms
+% Formal systems
+% Proof calculi (Hilbert)
+% Automata are formal systems
+
 Since computation is mathematical, it follows that the natural use of computers is to solve \textit{mathematical problems}. A mathematical problem is a problem that is amenable to being represented with mathematics. Are there problems that are not mathematical? That is, are there problems that either \textit{cannot} be formalized with mathematics or \textit{should not} be formalized with mathematics because the result would produce no valuable insight? Of course. You might say that certain "human" problems are not mathematical in nature. For example, can an ethical problem be solved \textit{mathematically}? Furthermore, what does it mean for a problem to have a mathematical solution? It turns out that the answer lies in the difference between \textit{reasoning} and \textit{logic}. \\
 
 % Curry-Howard: proofs and programs are the same thing. 
 
-% An argument is a "calculus"
+% A deductive system is a "calculus"
 % Argument - set of statements (premises) and a conclusion in a language
 % Premises can be axioms or theorems
 % Logical consequence
@@ -997,14 +1096,12 @@ Since computation is mathematical, it follows that the natural use of computers 
 
 \subsubsection{Formal Logic}
 
-% Open/closed world assumption
+% Common logical symbols wiki
 % Domain of discourse / universe
 % Deduction is impossible in non-axiomatic systems because we don't know what the axioms of the Universe are.
 
 % What is logic?
 Logic is a long-standing, far-reaching field, and its definition has changed over the ages, but it can be broadly described as the study of \textit{argument}. 
-
-% Logic - a study of i inference, an instrument (organon) that allows us to think more powerfully
 
 % What is early logic?
 The practice and analysis of logic can be done in many different ways. For example, the early study of logic was mostly done in the context of \textit{natural language} arguments made during oration.
@@ -1162,7 +1259,8 @@ With the work of Kurt G\"odel in 1940 and of Paul Cohen in 1963, it was establis
 	\vspace{1mm}
 	Typically, when a proof is submitted, it is either quickly accepted by the mathematical community or quickly shown to be flawed. In the case of Georg Cantor's set theory, controversy loomed for many decades and objections came from many different angles. Most of the grievances came from the \textit{constructivists}, a group that was partially founded by Cantor's mentor, Leopold Kronecker. \\
 	
-	Constructivism is a \textit{philosophy of mathematics} that asserts that it is necessary to find or \textit{construct} a mathematical object in order to prove that it exists. Unlike \textit{classical mathematics}, \textit{constructive mathematics} does not adhere to the \textit{law of the excluded middle}, which states that a well-formed proposition must be true or false. This implies that a \textit{proof by contradiction} (a proof of an object's existence founded in disproving the object's non-existence) is invalid. Constructivists took issue with the characterization of \textit{actual infinities} (e.g. the uncountably infinite set $\mathbb{R}$) as legitimate mathematical objects worthy of study. Their mathematical philosophy only permitted the existence of \textit{potential infinities} (e.g. the countably infinite set $\mathbb{N}$). Kronecker did not consider Cantor's original 1874 proof of a difference in cardinality between $\mathbb{N}$ and $\mathbb{R}$ as constructive. He remained staunchly opposed to Cantorian set theory and its hierarchy of the infinite, stating that 
+	Constructivism is a \textit{philosophy of mathematics} that asserts that it is necessary to find or \textit{construct} a mathematical object in order to prove that it exists. Unlike \textit{classical mathematics}, \textit{constructive mathematics} does not adhere to the \textit{law of the excluded middle}, which states that a well-formed proposition must be either true or false. According to this philosophy, a \textit{proof by contradiction} (a proof of an object's existence founded in disproving the object's non-existence) is invalid. Constructivists took issue with the characterization of \textit{actual infinities} (e.g. the uncountably infinite set $\mathbb{R}$) as legitimate mathematical objects worthy of study. Their mathematical philosophy only permitted the existence of \textit{potential infinities} (e.g. the countably infinite set $\mathbb{N}$). Kronecker did not consider Cantor's original 1874 proof of a difference in cardinality between $\mathbb{N}$ and $\mathbb{R}$ as constructive. He remained staunchly opposed to Cantorian set theory and its hierarchy of the infinite, stating that \\
+	
 	\begin{center}
 		\begin{displayquote}
 			\centering
@@ -1170,14 +1268,18 @@ With the work of Kurt G\"odel in 1940 and of Paul Cohen in 1963, it was establis
 			\vspace{4mm}
 		\end{displayquote}
 	\end{center}
-	
+
 	There were other mathematical objections to Cantor's findings, such as those directed toward the uncountability of the transcendental numbers. By 1874, only a handful of transcendentals had been discovered. The constant $e$ was proven to be transcendental the year prior, and $\pi$ would not be proven to be transcendental until 1882. In stating that the algebraic reals were countable and the reals were not, Cantor implied that \textit{almost all} real numbers were transcendental. That is, if you remove a countable subset ($\mathbb{A}_\mathbb{R}$) from an uncountable set ($\mathbb{R}$), you are left with an uncountable subset ($\mathbb{A}_\mathbb{R}^c$, the \textit{complement} of the algebraic reals, also known as the transcendental reals). Many could not accept that something previously thought to be incredibly rare had instead an uncountably infinite number of examples. Other mathematicians, including Kronecker, refused even to accept Cantor's work as mathematical in nature, believing it to be, at best, philosophical. \\
 	
-	In addition to objections from mathematicians, Cantor's set theory received a number of complaints from Christian theologians. Some saw the formalization of an uncountable infinity as a challenge to the uniqueness of the absolute infinity of God. Some associated the transfinite hierarchy with pantheism. Cantor felt strongly that his set theory could exist harmoniously within a Christian framework. Even his notational choices ($\aleph$, $\omega$, and $\Omega$) can be considered an homage to the title of "Alpha and Omega". He associated the Absolute Infinite with God, and felt that transfinite quantities, while infinite, were no challenge to the supremacy of the Lord, averring that
+	In addition to objections from mathematicians, Cantor's set theory received a number of complaints from Christian theologians. Some saw the formalization of an uncountable infinity as a challenge to the uniqueness of the absolute infinity of God. Some associated the transfinite hierarchy with pantheism. Cantor felt strongly that his set theory could exist harmoniously within a Christian framework. Even his notational choices ($\aleph$, $\omega$, and $\Omega$) can be considered an homage to the title of "Alpha and Omega". He associated the Absolute Infinite with God, and felt that transfinite quantities, while infinite, were no challenge to the supremacy of the Lord, averring that \\
+	
 	\begin{displayquote}
 		$\dots$\textit{the transfinite species are just as much at the disposal of the intentions of the Creator and His absolute boundless will as are the finite numbers.}
 	\end{displayquote}
-	Furthermore, Cantor wrote to numerous prominent theologians, including the Pope, in an attempt to clear up this confusion between the abstract notion of infinity and the actuality of infinity, as he saw it, in God and in Nature:
+	\vspace{4mm}
+	
+	Furthermore, Cantor wrote to numerous prominent theologians, including the Pope, in an attempt to clear up this confusion between the abstract notion of infinity and the actuality of infinity, as he saw it, in God and in Nature: \\
+	
 	\begin{displayquote}
 		\textit{The actual infinite was distinguished by three relations: first, as it is realized in the supreme perfection, in the completely independent, extraworldly existence, in Deo, where I call it absolute infinite or simply absolute; second to the extent that it is represented in the dependent, creatural world; third as it can be conceived in abstracto in thought as a mathematical magnitude, number or ordertype. In the latter two relations, where it obviously reveals itself as limited and capable for further proliferation and hence familiar to the finite, I call it Transfinitum and strongly contrast it with the absolute.}
 		\vspace{4mm}
@@ -1423,7 +1525,7 @@ As a professor at the prestigious University of G\"ottingen, Hilbert gave many l
 
 \subsubsection{G\"odel's Completeness Theorem}
 
-In 1929, G\"odel published his \textit{completeness theorem} of mathematical logic as his doctoral thesis. This was a mathematical proof that elucidated something fundamental about the first-order logic mathematics is based on. Although it is a bit difficult to understand at first, the result is ultimately quite simple, and it supports what mathematicians have implicitly understood about abstract, general proofs since about 300 \textsc{BCE}, when Euclid introduced the \textit{axiomatic method}.
+In 1929, G\"odel published his \textit{completeness theorem} of mathematical logic as his doctoral thesis. This was a mathematical proof that elucidated something fundamental about the first-order logic mathematics is based on. Although it is a bit difficult to understand at first, the result is ultimately quite simple, and it supports what mathematicians have implicitly understood about abstract, general proofs since about 300 \textsc{BCE}, when Euclid introduced the \textit{axiomatic method}. \\
 
 %%%
 
@@ -1481,6 +1583,12 @@ A theory is syntactic in nature. It is a set of strings written in a language $\
 %----------------------------------------
 
 \subsection{Computability is Recursion}
+
+% A function can be written iteratively and recursively
+% Tail recursion - iterating via recursion
+% Some tasks are suited to iteration, others to recursion. What is the deciding factor?
+% Recursively enumerable / recursive => computable
+% In a well-behaved recursive function, you approach a base case => there is an end in sight for the computation.
 
 %----------------------------------------
 
