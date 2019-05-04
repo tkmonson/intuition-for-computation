@@ -138,6 +138,7 @@ BCOR5mm, % Binding correction
 			{\Large \adforn{21}\quad\adforn{12}\quad\adforn{49}}
 	\end{center}}}
 \usetikzlibrary{matrix}
+\usetikzlibrary{calc}
 
 % Zeros and Ones on cover, light and dark versions
 \newcommand*\zro{\huge \color{light-gray} 0}
@@ -342,6 +343,7 @@ This guide is everything you need to know in order to program computers professi
 % Note differences in writing styles between the theory chapters (1-4) and the implementation chapters (5-7). The latter are not comprehensive overviews.
 % Discuss the title. Intuition. Definitions in my own words - "if you know something's name, you have power over it". True name, mysticism.
 % Make your own guide!
+% Compuer science is not about computers. The concepts are everywhere.
 
 \newpage
 
@@ -358,16 +360,19 @@ This guide is everything you need to know in order to program computers professi
 
 \textit{Computation} is an essential part of being human. Just as we may perceive the world with our senses or feel the affect of our emotions or explore the inner workings of our imaginations, we may also exercise \textit{reason} in the hope of understanding the things in life that we question, and computation is an \textit{act} of reason. However, the relationship between computation and reasoning is complicated. \\
 
-\textit{Reasoning} is a cognitive act performed by rational beings. It involves the absorption and synthesis of presently available information for the purpose of elucidating knowledge. It may require the ingenuity of thought, but in some cases the rote application of simple rules is sufficient. Reasoning could also be described as the providing of good \textit{reasons} to explain or justify things. However, as you might expect, there is much debate over whether or not any particular reason is "good" and whether or not it is a suitable justification for something. Reasoning is broad, and it comes in different flavors, but ultimately it is the pursuit of \textit{truth}. \\
+\textit{Reasoning} is a cognitive act performed by rational beings. It involves the absorption and synthesis of presently available information for the purpose of elucidating knowledge. It may require the ingenuity of thought, but in some cases the rote application of simple rules is sufficient. Reasoning could also be described as the providing of good \textit{reasons} to explain or justify things. However, as you might expect, there is much debate over whether or not any particular reason is "good". Reasoning is broad, and it comes in different flavors, but ultimately it is the pursuit of \textit{truth}. \\
 
 %----------------------------------------
 
 \toclineskip
-\subsection*{Argument and Proof}
+\subsection*{Syntax and Semantics of Arguments}
+\addcontentsline{toc}{subsection}{Syntax and Semantics of Arguments}
 
-Reasoning may involve the application of \textit{logic}. This \textit{logical reasoning} is the kind of reasoning that can be expressed in the form of an \textit{argument}. However, this argument need not be \textit{valid}. In fact, it does not have to be a "good" argument at all. Such reasoning requires only that the steps involved be \textit{explainable} in some way, whether that be through informal speech or in formal writing. \\
+Reasoning may involve the application of \textit{logic}. This \textit{logical reasoning} is the kind of reasoning that can be expressed in the form of an \textit{argument}. However, this argument does not need to be "correct". Such reasoning simply must be explainable in \textit{steps}, whether that be through informal speech or formal writing. \\
 
-The basic form of an argument like this has three main pieces: a set of \textit{premises}, a \textit{conclusion}, and a \textit{rule of inference}. A rule of inference can be thought of as a kind of logical function. That is, it takes premises as input and outputs a conclusion. A simple, one-step argument using such a rule might look like this: \\[2mm]
+In logic, an argument has two parts: a set of two or more \textit{premises} and a \textit{conclusion}. If the conclusion \textit{necessarily} follows from the premises, the argument is called \textit{valid}. To know whether or not an argument is valid, one must produce a step-by-step \textit{deduction} of the conclusion from its premises. \\
+
+A deduction is constructed within a \textit{deductive system}, which also has two parts: a set of two or more \textit{premises} and a set of \textit{rules of inference}. A rule of inference can be thought of as a kind of logical function. It takes statements (such as premises) as input and outputs either an intermediate result or the conclusion. A deduction, then, has \textit{three} parts: a set of two or more \textit{premises}, a \textit{conclusion}, and a set of \textit{intermediates}. A single-step deduction is represented below, along with a suitable rule of inference labeled $MP$. Note that the set of intermediates is empty in the case of deductions with only one step. \\[2mm]
 
 % Modus Ponens diagram
 \begin{center}
@@ -422,30 +427,124 @@ The basic form of an argument like this has three main pieces: a set of \textit{
 
 This is the quintessential rule of inference used in logical reasoning, expressed here in symbols. It is known as \textit{modus ponens} (Latin for "a method that affirms"). The first premise $P\rightarrow Q$ is called a \textit{conditional statement} where $\rightarrow$ is the \textit{implies} operator. It states that if the \textit{antecedent} $P$ were true, it would \textit{imply} that the \textit{consequent} $Q$ would also be true. The second premise $P$ simply states that the statement $P$ is indeed true. Thus, by means of \textit{modus ponens}, we can \textit{infer} from the premises $P\rightarrow Q$ and $P$ that the conclusion $Q$ must be true. \\
 
-Inference is also called \textit{entailment}. Though these terms describe the same logical concept, the latter more aptly describes the relationship between statements that are linked. To infer is to come to a conclusion that is not \textit{explicitly} stated in the premises. Rather, the conclusion is \textit{deduced} from the premises. On the other hand, to entail is to require that something follows. If $P$ \textit{entails} $Q$, this suggests that $Q$ is a \textit{logical consequence} of $P$, which we can express using a \textit{turnstile}: $P\vdash Q$. Inference is something that fallible humans do. Entailment is something that logical rules do. \\
+Inference is also called \textit{entailment}. Though these terms describe the same logical concept, the latter more aptly describes the relationship between statements that are connected in a deduction. To infer is to come to a conclusion that is not \textit{explicitly} stated in the premises. To entail is to require that something follows. If $P$ \textit{entails} $Q$, this suggests that $Q$ is a \textit{logical consequence} of $P$, which we can express using a \textit{turnstile}: $P\vdash Q$. Inference is an action that humans perform. Entailment is a relationship between logical rules. \\
 
-When inference matches entailment, you've got yourself a \textit{valid} argument. However, this does not necessarily mean that your argument is \textit{sound}. \textit{Validity} is a property of arguments whose conclusions must be true if their premises are true. An argument is valid as long as its conclusion is \textit{inferred} correctly from its premises (i.e. according to rules of inference that have been agreed upon). However, validity says nothing about whether or not the premises have a meaning that accurately describes reality. \textit{Soundness}, on the other hand, is a property of valid arguments whose premises are known to be true. \\
+When the inferences made mirror the entailment, you've got yourself a \textit{valid} argument. However, this does not necessarily mean that your argument is \textit{sound}. \textit{Validity} is a property of arguments with a conclusion that can be \textit{deduced} from its premises according to rules of inference. However, validity says nothing about whether or not the premises have a \textit{meaning} that accurately describes reality. \textit{Soundness}, on the other hand, is a property of valid arguments whose premises are \textit{known truths} or \textit{axioms}. The deduction of a sound argument is called a \textit{proof}. \\
 
-Validity and soundness complicate entailment. Now, an argument can be evaluated either in terms of \textit{syntax} (the text of the argument, either in symbols like $P$ and $Q$ or in a natural language) or in terms of \textit{semantics} (the actual meaning represented by the text). For example, consider the following valid use of \textit{modus ponens}: \\
+Validity and soundness complicate entailment. Now, an argument can be evaluated either in terms of its \textit{syntax} or in terms of its \textit{semantics}. Syntax refers to the arrangement of symbolic words (or, more generally, \textit{tokens}) in a body of text. Semantics, on the other hand, refers to the \textit{meaning} that can be \textit{interpreted} from the text. \\
+
+An argument of any kind must be expressed in a \textit{language}. In the case of an informal argument, such as a debate, a \textit{natural language}, such as English, is used. Formal proofs, on the other hand, require a \textit{formal language} for clarity and precision. In practice, formal proofs are rarely written or read by logician or mathematicians. Typically, mathematical proofs are written using a combination of formal and natural language. However, computer programs, written in \textit{programming languages}, are considered formal. \\
+
+A formal language is constructed from an \textit{alphabet} $\Sigma$, which is a set of symbols. The set of all possible finite-length \textit{words} or \textit{formulas} that can be built from this alphabet is denoted $\Sigma^*$. A formal language $L$ over an alphabet $\Sigma$ is then defined as a subset of $\Sigma^*$. Thus, a language is a set of purely syntactic objects. It may conform to a \textit{grammar} that specifies how words can be produced or arranged in a \textit{sentence}, but a language is never inherently meaningful. The semantics of a language is always interpreted separately from the syntax. \\
+
+Consider the following valid deduction: \\
 
 \begin{center}
 	\begin{tabular*}{0.55\textwidth}{@{\extracolsep{\fill} } ll}
-		\textnormal{"All mammals are dogs"} & $P\rightarrow Q$ \\
-		\textnormal{"A cat is a mammal"} & $P$ \\
+		\textnormal{"If it is raining, it is Tuesday."} & $P\rightarrow Q$ \\
+		\textnormal{"It is raining."} & $P$ \\
 		\hline
-		\textnormal{"Therefore, a cat is a dog"} & $Q$ \\
+		\textnormal{"Therefore, it is Tuesday."} & $\therefore Q$ \\
 	\end{tabular*}
 \end{center}
 \vspace{4mm}
 
-This conclusion is a \textit{syntactic consequence} of the premises ($P\vdash Q$). That is, assuming that the premises are true, the conclusion is also true. However, a cat is not a dog. The premise that "All mammals are dogs" is, in reality, false. If we change it to something semantically true such as "All mammals are warm-blooded", we can conclude that "A cat is warm-blooded". In this case, the conclusion is a \textit{semantic consequence} of the premises ($P\vDash Q$). This syntactic-semantic difference will come up repeatedly throughout this guide. \\
+This conclusion is a \textit{syntactic consequence} of the premises ($P\vdash Q$). That is, when the argument is evaluated simply as a collection of symbolic \textit{strings} that are manipulated according to rules, $P$ entails $Q$. \\
 
-Of course, arguments typically have more than one step. \\
+Syntactic consequence is sometimes expressed with the following statement: "If the premises are true, the conclusion must also be true". However, while this statement does hold for all valid arguments, text evaluated syntactically does not have any notion of truth. It is simply a sequence of tokens. Thus, it may be better to think of valid arguments as "games that are played according to the rules". For example, chess has no inherent meaning associated with it, but it still has rules, and valid games of chess are those that comply with those rules. \\
+
+However, semantically, it is \textit{not} required to be Tuesday if it is raining. The first premise given above is, in reality, false. However, if we change it to something that we consider true, we can come to a conclusion that is both valid \textit{and} sound:
+
+\begin{center}
+	\begin{tabular*}{0.55\textwidth}{@{\extracolsep{\fill} } ll}
+		\textnormal{"If it is raining, it is wet outside."} & $P\rightarrow Q$ \\
+		\textnormal{"It is raining."} & $P$ \\
+		\hline
+		\textnormal{"Therefore, it is wet outside."} & $\therefore Q$ \\
+	\end{tabular*}
+\end{center}
+\vspace{4mm}
+
+In this case, the conclusion is a \textit{semantic consequence} of the premises ($P\vDash Q$). In addition to the argument being syntactically logical, it is also semantically true "in all universes". That is, there is no possible scenario where it is raining, and it is not wet outside. This syntactic-semantic difference will come up repeatedly throughout this guide. \\
+
+\subsection*{The Structure of Information}
+\addcontentsline{toc}{subsection}{The Structure of Proof}
+
+Of course, arguments can have more than one step. An argument can involve many inferences, some of which may use \textit{intermediate conclusions} as premises for further conclusions. Multiple threads of reasoning can extend from the premises, weaving through intermediate conclusions and intertwining via inference until they all meet at a \textit{final conclusion}. This is the \textit{tree structure} that is inherent in a \textit{formal proof}. \\
+
+% Tree Structure of Proofs
+\begin{center}
+	\begin{tikzpicture}[scale=0.2]
+	
+	\coordinate (L) at (135:10);
+	\coordinate (R) at (45:10);
+	
+	% Level 0
+	\draw [black] (0:0) -- ++(L);
+	\draw [black] (0:0) -- ++(R);
+	
+	\fill [white] (0:0) circle (3);
+	\draw [black] (0:0) circle (3);
+	\draw (0:0) node {$F$};
+	
+	% Level 1
+	\draw [black] (R) -- ++(L);
+	\draw [black] (R) -- ++(R);
+	
+	\fill [white] (L) circle (3);
+	\draw [black] (L) circle (3);
+	\draw (L) node {$P_1$};
+	
+	\fill [white] (R) circle (3);
+	\draw [black] (R) circle (3);
+	\draw (R) node {$I_2$};
+	
+	% Level 2
+	\draw [black] ($ 2*(R) $) -- ++(L);
+	\draw [black] ($ 2*(R) $) -- ++(R);
+	
+	\fill [white] ($ (R) + (L) $) circle (3);
+	\draw [black] ($ (R) + (L) $) circle (3);
+	\draw ($ (R) + (L) $) node {$P_2$};
+	
+	\fill [white] ($ 2*(R) $) circle (3);
+	\draw [black] ($ 2*(R) $) circle (3);
+	\draw ($ 2*(R) $) node {$I_1$};
+	
+	% Level 3
+	\fill [white] ($ 2*(R) + (L) $) circle (3);
+	\draw [black] ($ 2*(R) + (L) $) circle (3);
+	\draw ($ 2*(R) + (L) $) node {$P_3$};
+	
+	\fill [white] ($ 3*(R) $) circle (3);
+	\draw [black] ($ 3*(R) $) circle (3);
+	\draw ($ 3*(R) $) node {$P_4$};
+	
+	% Arrows	
+	\foreach \i in {0,1,2} {
+		\coordinate (A) at ($ (45:3) + \i*(R) $);
+		\coordinate (B) at ($ (135:3) + \i*(R) $);
+		\fill [black,rotate around={45:(A)}] (A) -- ++(0.8,0.5) -- ++(0,-1);
+		\fill [black,rotate around={45:(B)}] (B) -- ++(-0.5,0.8) -- ++(1,0);
+	}
+	
+	\end{tikzpicture}
+\end{center}
+\vspace{4mm}
+
+In this \textit{tree}, the \textit{first premises} are labeled as $P_n$ where $n\in\{1,2,3,4\}$, the \textit{intermediate conclusions} are labeled as $I_m$ where $m\in\{1,2\}$, and the \textit{final conclusion} is labeled $F$. Though one can make a distinction between first premises and intermediate conclusions, it is important to note that they are all premises with regard to the eventual final conclusion. Thus, there are no restrictions on combining them beyond those dictated by the rules of inference. \\
+
+In modern proof theory, proofs like these are studied not only for their semantic meaning, but also for their mathematical structure. They are treated like \textit{data structures}, which are abstract objects that are used in computer science to model the storage and flow of digital \textit{information}. Similarly, a proof is an abstract text that models the flow of logical information as it is manipulated by rules of inference toward a final conclusion. \\
+
+
 
 % Proofs and models
 % String together arguments to make proofs
 % Tree structure of arguments
-% Interlocuters
+% List structure of arguments
+% Data structures structure data in such a way that it can be interpreted as a model of semantic ideas.
+% Proofs structure text in such a way that...
+% Information is syntactic, data is semantic
 
 However, not all forms of reasoning have such strict rules. There are other methods of reasoning that cannot be modeled by an argument. In contrast to logical reasoning, \textit{intuitive reasoning} has steps that are \textit{not} understood. Although the question might seem peculiar, it is worth asking whether or not computation can be intuitive. So, to begin our journey of understanding computation in a modern, logical sense, we will first walk in the other direction, considering it instead in a mystical, otherworldly sense. \\
 
@@ -482,7 +581,7 @@ The Seer has premises for his conclusion, but the rules of inference involved in
 % In another sense, logical truths (tautologies) could be considered intuitive, so all of logic could be the product of intuition. Unless you believe that logic is objective.
 % The Oracle and the Seer are unique from the sage because they KNOW their truth is absolute.
 % Computers are honestly closer to oracles or seers than sages.
-% Buddhism - a faculty of the mind of immediate knowledge
+% Buddhism - intuition is a faculty of the mind of immediate knowledge
 
 \begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
 	\vspace{2mm}
@@ -496,11 +595,11 @@ The Seer has premises for his conclusion, but the rules of inference involved in
 	
 	Objections to a strict correspondence theory usually take issue with the treatment of language as something monolithic and easy to classify within a true-false dichotomy. For example, a statement encoded as a sentence in a language is only meaningful to people who can read that language. What does this imply about a particular language's relationship with truth? Is a statement only true for those who understand it? Furthermore, there is no guarantee that readers of the same language will even be able to agree on the meaning expressed by a particular sentence. Languages often encompass multiple dialects that might parse words differently. Words themselves also may not be precise, and some abstract thoughts may not have suitable words in some languages. These are the points raised in \textit{social constructivism}, a theory which avers that human knowledge is historically and culturally specific. Social constructivists also believe that truth is \textit{constructed} and that language cannot faithfully represent any kind of objective reality. \\
 	
-	Other substantive theories find the essence of truth nestled in other abstract concepts. \textit{Consensus theory}, as the name implies, defines truth as something that is agreed upon either by all human beings or by a subset (such as academic groups or standards bodies). This is another anthropocentric definition that is at constant risk of philosophical division on any given topic. \textit{Coherence theory} takes a more objective approach, claiming that a statement can only be true if it fits into a system of statements that support each other's truth. This is similar to the notion of \textit{formal systems}, which we will discuss in depth. However, traditional coherence theories attempt to explain all of reality within a single coherent system of truths, which is incompatible with our modern understanding of formal systems. \\
+	Other substantive theories find the essence of truth nestled in other abstract concepts. \textit{Consensus theory}, as the name implies, defines truth as something that is agreed upon either by all human beings or by a subset (such as academic groups or standards bodies). This is another anthropocentric definition that is at constant risk of philosophical division on any given topic. \textit{Coherence theory} takes a more objective approach, claiming that a statement can only be true if it fits into a system of statements that support each other's truth. This is similar to the notion of \textit{formal systems}, which we will discuss in depth later. However, traditional coherence theories attempt to explain all of reality within a single coherent system of truths, which is incompatible with our modern understanding of formal systems. \\
 	
 	Modern developments in philosophy have resulted in theories that deviate from the long-held, substantive opinions on the nature of truth. These \textit{minimalist} theories assert instead that truth is either not real or not a necessary property of language or logic. They claim that statements are \textit{assertions} and thus are implicitly understood to be true. For example, it is understood that by putting forth the sentence "$2+2=4$", you are endorsing the semantic meaning "$2+2=4$ is true". The clause "is true" is called a \textit{truth predicate}, and minimalist theories of truth often consider its use redundant. \\
 	
-	This idea of a truth predicate is borrowed from Alfred Tarski's \textit{semantic theory of truth}, which is a substantive theory that refines the correspondence concepts espoused by Socrates, Plato, and Aristotle for formal languages. This theory makes a distinction between a statement made in a formal language and a truth predicate, which evaluates the truth of the statement. Tarski made this distinction in order to circumvent the \textit{liar's paradox}, which is often presented with the following example: "This sentence is false". If the predicate "is false" is considered to be an element of "this sentence", the truth of this statement cannot be decided. For this reason, Tarski states that a language cannot contain its own truth predicate. This is enforced by requiring that "this sentence" be written in an \textit{object language} and that "is false" be written in a \textit{metalanguage}. \textit{Convention T}, the general form of this rule, can be expressed as
+	This idea of a truth predicate is borrowed from Alfred Tarski's \textit{semantic theory of truth}, which is a substantive theory that refines the correspondence concepts espoused by Socrates, Plato, and Aristotle for formal languages. This theory makes a distinction between a statement made in a formal language and a truth predicate, which evaluates the truth of the statement. Tarski made this distinction in order to circumvent the \textit{liar's paradox}, which is often presented with the following example: "This sentence is false". If the predicate "is false" is considered to be part of "this sentence", the truth of this statement cannot be decided. For this reason, Tarski states that a language cannot contain its own truth predicate. This is enforced by requiring that "this sentence" be written in an \textit{object language} and that "is false" be written in a \textit{metalanguage}. \textit{Convention T}, the general form of this rule, can be expressed as
 	
 	\begin{center}
 		\textit{"$P$" is true if and only if $P$}
@@ -518,25 +617,23 @@ The Seer has premises for his conclusion, but the rules of inference involved in
 
 %----------------------------------------
 
-\subsection*{The Mathematician, the Scientist, the Computer}
-\addcontentsline{toc}{subsection}{The Logician and the Scientist}
+\subsection*{The Mathematician, the Scientist, and the Computer}
+\addcontentsline{toc}{subsection}{The Mathematician, the Scientist, and the Computer}
 
 % Deductive and Inductive (+ Abductive)
 % Mathematician write proofs (deductive), but they also use creativity (inductive)
 % Is creativity inductive?
+% Human computer
 
 Logical reasoning is the \textit{inference} of new information from present information. It involves \textit{rule of inferences} that are used to relate sets of \textit{premises} to \textit{conclusions}. There are three kinds of logical reasoning: \textit{deductive}, \textit{inductive}, and \textit{abductive}. Each is classified according to which piece of information (premises, rule, or conclusion) is missing and must be inferred from the others. \\
 
 % Explanatory vs ampliative
 % Certainty vs uncertainty (probability)
-% Classic distinction is deductive and inductive. They are opposites. Abduction is something totally different.
-% General to specific vs specific to general
-% Logical truths vs facts
+% Top-down vs bottom-up
+% Logical truths (tautologies) vs facts
 % Abduction = induction + justification
 % Closed and open world assumptions
 % Domain of discourse
-
-% Describe deductive/inductive with machine learning (blue box?)
 
 Inductive arguments exist on a spectrum between \textit{weak} and \textit{strong}. Those that are stronger and more persuasive have a higher probability of having a true conclusion. Inductive reasoning is associated with \textit{science} and \textit{critical thinking} because it allows one to make generalizations about complex phenomena given limited evidence. Unlike deductive reasoning, it attempts to find new knowledge that is not simply contained within its premises. \\
 
@@ -552,16 +649,14 @@ Abductive reasoning allows us to ignore the many causes that are unlikely in fav
 
 %-------
 
-A logical argument begins from \textit{premises} that are decided true. It then progresses by truth-preserving \textit{rules of inference} to other statements whose truth is ultimately dependent on the individual truths of the premises, concluding with a final statement called a \textit{conclusion}. A \textit{proof} of this conclusion thus depends on both the \textit{truth} of its premises and the \textit{validity} of its argument. \\
-
-Validity can be determined within a logical system. A logical argument that is valid simply applies rules of inference as they are prescribed. Verifying premises is more complicated. Their truth values are external to logic. An argument that is founded on \textit{false premises} may be logically valid, in which case it will produce a conclusion that is nominally true. Sometimes, however, this conclusion will \textit{feel} wrong or evidence to the contrary will arise, and this assertion of truth will prompt an inquiry into the basis of the argument. \\
-
-Occasionally, logical arguments that are accepted for hundreds or thousands of years are refuted on grounds of starting from false premises. Such discoveries are accompanied by foundational changes such as a collective shift in philosophical mindset or the adoption of a new theory. For example, before the 1930s, it was assumed that a formal language could produce a sentence to express any abstract thought and that 
+% Can computers induce?
+% Describe deductive/inductive with machine learning (blue box?)
+% Deductive computers, AI, General AI, Artificial Conciousness
 
 %----------------------------------------
 
-\subsection*{A History of Tools}
-\addcontentsline{toc}{subsection}{A History of Tools}
+\subsection*{Calculation and Computation}
+\addcontentsline{toc}{subsection}{Calculation and Computation}
 
 % Calculation vs computation. Separate histories.
 % Is a microwave a computer?
@@ -581,29 +676,6 @@ The line between calculator and computer began to blur with the introduction of 
 % Wait, what exactly are we building? Let's model the problem. We'll cover that in detail in the next part.
 % Computation as a mechanical process vs a function.
 % Abstract away the mechanics, and a function becomes a conversation (input and output).
-
-%----------------------------------------
-
-\subsection*{Talking with Talos}
-\addcontentsline{toc}{subsection}{Talking with Talos}
-
-Humans, while not purely rational beings, are capable of reason when it suits them. People reason in order to \textit{learn}. They acquire \textit{knowledge} through learning, and some of that knowledge can serve to orient a person in the Universe or to aid them in some other way. Thus, human beings are inclined to engage in the mental act of reasoning from time to time. Human beings are also inclined to \textit{communicate} their thoughts, as they are social animals, and this includes the communication of \textit{rational thoughts}, thoughts that employ reasoning. \\
-
-\textit{Information}, in the form of abstract ideas or concrete \textit{data}, is communicated through many different channels and received by a variety of \textit{senses}. This communication is not limited to humans. Animals communicate in a multitude of ways, with varying degrees of expressiveness. However, human beings are considered unique in their ability to communicate abstractly 
-
-% We only need a language now to express ourselves.
-% Creation of language, humanity stuff, natural language (informal)
-% Structure of natural language, types of sentences (declarative/imperative)
-% Formal definition of language, mention grammar informally
-% Syntactic/semantic divide
-
-% So then... what separates Talos from man?
-% Deductive computers, AI, General AI, Artificial Conciousness
-
-%----------------------------------------
-
-\subsection*{Computation in Layman's Terms}
-\addcontentsline{toc}{subsection}{Talking with Talos}
 
 \newpage
 
@@ -644,6 +716,8 @@ One \textit{abstract automaton} in particular fully models not only the computat
 %----------------------------------------
 
 \subsection{States, Transitions, and Grammar}
+
+% Structure of language, types of sentences (declarative/imperative)
 
 \begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
 	\vspace{2mm}
@@ -1091,6 +1165,7 @@ Since computation is mathematical, it follows that the natural use of computers 
 
 % Discuss the logical reasonings comparatively. 3 paths in life. Certain vs uncertain. Binary vs multi-valued.
 
+% Interlocuters
 % Fallacious reasoning
 % Formal vs informal (indep of interpretation)
 
@@ -1176,7 +1251,7 @@ Before the study of computer science, mathematicians sometimes informally descri
 
 A particular method can be effective for some problems and ineffective for others. For example, typing is a method. If I want to put characters into a text document, typing is an effective method. If I want to plant a flower, typing is not an effective method. However, if I want to plant a flower, building a flower-planting robot and programming it, via typing, to plant a flower \textit{is} an effective method because it actually accomplishes the objective. An effective method that is used to calculate the values of a function is called an \textit{algorithm}. \\
 
-Much work was done in the 1930s to formalize "effective calculability". The results established \textit{Turing computability} as the correct formalization. This model gives the following fundamental definition: any function whose outputs can be calculated by an algorithm is a \textit{computable function}. Computable functions are precisely those functions that can be computed by a Turing machine. In the mathematical sense, they could also be called \textit{solvable}. A computable or solvable \textit{decision} is predictably called \textit{decidable}. If the functions model mathematical proofs, they could also be called \textit{provable}. Despite a few minor differences, all of these terms get at the same idea.
+Much work was done in the 1930s to formalize "effective calculability". The results established \textit{Turing computability} as the correct formalization. This model gives the following fundamental definition: any function whose outputs can be calculated by an algorithm is a \textit{computable function}. Computable functions are precisely those functions that can be computed by a Turing machine. In the mathematical sense, they could also be called \textit{solvable}. A computable or solvable \textit{decision} is predictably called \textit{decidable}. If the functions model mathematical proofs, they could also be called \textit{provable}. Despite a few minor differences, all of these terms get at the same idea. \\
 
 We will now discuss the history preceding and the circumstances of this foundational work in formalizing "effective calculability" as computability. Much of this work was done between the 1930s and the 1950s, but it built heavily on set-theoretical concepts discovered by German mathematician Georg Cantor in the late 19th century. After a crash course in Cantorian set theory, we will examine computable functions from a variety of angles. Computability is interdisciplinary. The concept \textit{permeates} our reality, and as such its eventual formalization was made possibly by the collective efforts of mathematicians, logicians, linguists, and computer scientists. Today, research on computability is widespread in the study of anything scientific. \\
 
@@ -1219,7 +1294,8 @@ This discovery is almost unbelievable, and it is totally foreign to anything in 
 \end{align*}
 Note that each bracket has a number $n$ associated with it. Starting with $n=1$, the numbers in each bracket begin with $\rfrac{1}{n}$ and the numerator is incremented until you reach $\rfrac{n}{n}$. Then, you continue with $\rfrac{n}{1}$, incrementing the denominator until you reach $\rfrac{n}{n}$ again. Fractions whose values are already in the list are skipped. Negative rational numbers can be added by simply placing a number's complement immediately after itself in the list. Thus, $\mathbb{Q}$ is enumerable and countably infinite. \\
 
-In his second theorem from his 1874 article, Cantor states that, given any sequence of real numbers $x_1,\,x_2,\,x_3,\,\dots$ in a closed interval $[a,b]$, there exists a number in $[a,b]$ that is not contained in the given sequence. Essentially, this means that, unlike the sets we just discussed, the set of real numbers $\mathbb{R}$ is \textit{not} enumerable or countably infinite. It cannot be expressed as a list or sequence because there will always be a real number missing. There exists no proper way to "count" the reals. With these two theorems, Cantor discovered that differences can exist between infinite sets. There are \textit{distinct} infinities. He comments on this in the same article:
+In his second theorem from his 1874 article, Cantor states that, given any sequence of real numbers $x_1,\,x_2,\,x_3,\,\dots$ in a closed interval $[a,b]$, there exists a number in $[a,b]$ that is not contained in the given sequence. Essentially, this means that, unlike the sets we just discussed, the set of real numbers $\mathbb{R}$ is \textit{not} enumerable or countably infinite. It cannot be expressed as a list or sequence because there will always be a real number missing. There exists no proper way to "count" the reals. With these two theorems, Cantor discovered that differences can exist between infinite sets. There are \textit{distinct} infinities. He comments on this in the same article: \\
+
 \begin{displayquote}
 	\textit{I have found the clear difference between a so-called continuum and a collection like the totality of real algebraic numbers.}
 	\vspace{4mm}
@@ -2859,6 +2935,8 @@ Blah
 \section{Elements of Programming Languages}
 
 % What does a Turing-complete language need? Conditional branching (not just jumping), others?
+
+% Structured program theorem - any computable function can be represented using three types of control structures (sequence, selection, repetition)
 
 % Statement types: assertion, assignment, goto, return, call
 
