@@ -301,6 +301,7 @@ BCOR5mm, % Binding correction
 \vspace{4mm}
 \end{displayquote}
 
+% While I was writing this, I found myself using "we" a lot. It just felt natural. We = Me + You, so I guess I should introduce myself to you.
 % Why did you write this?
 % Why do you think its worth sharing with others?
 % College gave me reasoning and knowledge. Writing this guide gave me intuition.
@@ -331,8 +332,11 @@ BCOR5mm, % Binding correction
 
 % This guide was not written under the circumstances that a textbook would be. It is not intended to be a textbook.
 % It was not written with sourcing in mind.
-% However, all of the information here is the result of cross-referenced research.
+% However, all of the information here is the result of my understanding after doing cross-referenced research.
 % Philosophy of 98% accuracy.
+% Thanks to Wikipedia, math.stackexchange, cs.stackexchange, tex.stackexchange, Stack Overflow, Encyclopedia of Mathematics
+% Nothing here is plagiarized.
+% Copyright
 
 \newpage
 
@@ -386,6 +390,9 @@ This guide is everything you need to know in order to program computers professi
 % Discuss the title. Intuition. Definitions in my own words - "if you know something's name, you have power over it". True name, mysticism.
 % Make your own guide!
 % Compuer science is not about computers. The concepts are everywhere.
+% Parts and sections.
+% While jargon is confusing to people who are not 'in the know', it is usually very descriptive. It paints a very precise picture, if you know how to differentiate similar terms. The English words that are used are often quite apt.
+% Interdisciplinary approach.
 
 \newpage
 
@@ -400,15 +407,111 @@ This guide is everything you need to know in order to program computers professi
 
 % Rewrite, be poetic about computation. Really describe it. Then discuss how the idea was generalized and formalized and found to have a lot of commonalities with language, logic, math...
 
-\textit{Computation} is an essential part of being human. Just as we may perceive the world with our senses or feel the affect of our emotions or explore the inner workings of our imaginations, we may also exercise \textit{reason} in the hope of understanding the things in life that we question, and computation is an \textit{act} of reason. However, the relationship between computation and reasoning is complicated. \\
+\textit{Reasoning} is an essential part of being human. Just as we may perceive the world with our senses or feel the affect of our emotions or explore the inner workings of our imaginations, we may also exercise \textit{reason} in the hope of understanding the things in life that we question. Computation is also a particularly human act, as it requires reasoning. However, the relationship between the two is complicated. \\
 
-\textit{Reasoning} is a cognitive act performed by rational beings. It involves the absorption and synthesis of presently available information for the purpose of elucidating knowledge. It may require the ingenuity of thought, but in some cases the rote application of simple rules is sufficient. Reasoning could also be described as the providing of good \textit{reasons} to explain or justify things. However, as you might expect, there is much debate over whether or not any particular reason is "good". Reasoning is broad, and it comes in different flavors, but ultimately it is the pursuit of \textit{truth}. \\
+This part seeks to characterize and differentiate reasoning and computation in order to lay a foundation for a holistic understanding of the latter. There are many ways that one can describe computation, some poetic, other more formal. For now, we will say that computation is a structured manipulation of \textit{data}. \\
 
 %----------------------------------------
 
 \toclineskip
+\subsection*{Data and Information}
+\addcontentsline{toc}{subsection}{Data and Information}
+
+Data are symbolic values that describe something of interest. In the case of quantitative data, these values are numbers that are \textit{encoded} in a numeral system of some \textit{base} or \textit{radix} that specifies how many unique \textit{symbols} or \textit{digits} are used to represent numbers. Data intended to be read by humans are typically encoded in a base-10 system, one of ten digits. \\
+
+This design choice is ancient and natural. It is based on the ten digits of our hands, which have aided us in counting for hundreds of millennia. In fact, fingers are the oldest counting tools used by man, and we still use them today for this purpose. Other anatomically inspired bases have been used in early numeral systems, such as base-20, which counts the fingers and the toes, or base-12, which uses a thumb on one hand to count the bones of the other four fingers . However, today, the base-10 \textit{Hindu-Arabic numeral system} is universal in mathematics. \\
+
+The base-60 system of Babylonian numerals is also notable. Its base is thought to have been chosen for its many factors, which simplify the process of division. Under this interpretation, this system is \textit{constructed} rather than natural. Instead of reflecting something concrete like physical extremities, this system chooses an abstract base in order to make an optimization. The reasoning for the use of base-2 encoding in computing is similar. It sacrifices human familiarity for performance and reliability. \\\\
+
+\begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
+	\vspace{2mm}
+	\begin{center}
+		\textbf{The Logic of Binary Encoding}
+	\end{center}
+	\vspace{1mm}
+	% Implementation details: signals, logic levels, noise, power, reliability
+	% Close relationship with classical, two-valued logic
+	
+	Binary encoding is not a requirement for computation. Rather, it is a concession that is made toward digital electronics. Computers have been designed for other bases, and, in some cases, a non-binary encoding is actually preferable. \\
+	
+	% Binary implies discrete, which is opposite of continuous
+	% Discrete / continuous is independent of the implementation
+	
+	% Mark I Fire control computer
+	
+	% Analog electronic computers
+	
+	% Ternary electronic computers and their issues
+	
+	% Beyond binary - fuzzy logic (briefly, discuss more deeply later)
+	\vspace{1mm}
+\end{tcolorbox}
+\vspace{7mm}
+
+% Encoding doesn't have to use numerals. It can use letters, pictures, whatever. You can encode anything anywhere.
+
+Regardless of which encoding is used, data is data.
+
+% Encoding
+% All information is encoded and decoded (digital and sensory)
+
+\subsection*{Language is Code}
+\addcontentsline{toc}{subsection}{Language is Code}
+
+% Computation requires communication
+% Model of communication
+% All information is encoded and decoded (digital and sensory)
+
+However, the term "universal language" is also often used in other contexts to describe a hypothetical language that all of world speaks and understands. This is an old idea, and it is addressed in a number of myths and religious texts. In Genesis, the myth of the Tower of Babel explains the diversity of language as a result of God thwarting the Babylonians' plan to build a tower that would extend into the heavens. As punishment for their blasphemy, God "confused their tongues" and dispersed them across the world, shattering their once universal language. Similar myths are told by cultures across the world, such as the Native American Tohono O'odham people, who tell tales of Montezuma attempting to do the same, attracting the ire of the Great Spirit. \\
+
+Alas, no such language exists and it is unlikely that one has ever existed. Rather, human language is generally believed to have evolved independently around the world from prelinguistic systems of communication such as gesturing, touching, and vocalization about 100,000 years ago. Similarly, written language evolved from proto-writing, the repeated use of symbols to identify objects or events. \\
+
+Writing is distinct from speaking in that it is a reliable method of storing and transmitting information. Before the invention of written language, important pieces of history and literature were preserved through \textit{oral tradition}, passing from one generation to the next through repetition and memorization. However, oral tradition is prone to data loss and unintended changes. Like messages in a game of telephone spanning centuries, stories were at risk of losing old details and gaining extraneous ones. Additionally, if a society fell apart, their stories could be lost forever. Writing is a tool that mitigates these issues by \textit{encoding} speech into a symbolic code that can be inscribed onto durable media, such as clay tablets or stone, or onto more delicate, portable media such as parchment or paper. \\
+
+Language  \\
+
+% Quipu, number systems
+
+\begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
+	\vspace{2mm}
+	\begin{center}
+		\textbf{Symbology in Natural Languages}
+	\end{center}
+	\vspace{1mm}
+	% Symbol - syntactic, general term
+	% Glyphs - syntactic, a graphical representation
+	% Characters - semantic, associated with meaning (in computing, it refers to an "encoded character" that is represented by a glyph), a unit of information (which is interpreted by means of a type)
+	% Graphemes - the smallest unit in a writing system, a written symbol that represents a sound or phoneme (a logogram, a syllabic character, a letter)
+	% Writing systems - ideographic/pictographic systems (Emoji), logographic system, syllabaries, segmental scripts, alphasyllabaries
+	% Non-linear alphabets, flag semaphore, animal communication
+	% Character encodings
+	% ASCII
+	% Westernism - Scientific Revolution, alphabet, character, terms and jargon in English (covered in greater detail later)
+	% Unicode, code points for abstract characters, UTF-8
+	
+	A \textit{symbol} is a syntactic mark that is understood to represent a semantic idea. For example, the numeral "$2$" is a symbol for the abstract concept of the number known as "two", the quantity of items in a pair. Symbology is universal for mankind, as it is an exercise of our capacity for abstract thought. Humans can leverage the pattern-recognizing power of the brain to associate symbols or sequences of symbols (also known as \textit{strings}) with ideas. Thus, we can proliferate information textually by means of a \textit{writing system}. \\
+	
+	Languages are diverse, and so are their writing systems.
+	\vspace{1mm}
+\end{tcolorbox}
+\vspace{7mm}
+
+% Constructed languages, a subset of which are formal
+% Trade language, lingua franca, Latin
+% Leibniz - Alphabet of human thought, "best of all possible worlds", panglossianism
+
+Formal proofs, on the other hand, require a \textit{formal language} for clarity and precision. In practice, formal proofs are rarely written or read by logicians or mathematicians. Typically, mathematical proofs are written using a combination of formal and natural language. However, computer programs, written in \textit{programming languages}, are considered formal. \\
+
+A formal language is constructed from an \textit{alphabet} $\Sigma$, which is a set of symbols. The set of all possible finite-length \textit{words} or \textit{formulas} that can be built from this alphabet is denoted $\Sigma^*$. A formal language $L$ over an alphabet $\Sigma$ is then defined as a subset of $\Sigma^*$. Thus, a language is a set of purely syntactic objects. It may conform to a \textit{grammar} that specifies how words can be produced or arranged in a \textit{sentence}, but a language is never inherently meaningful. The semantics of a language is always interpreted separately from the syntax. \\
+
+An argument of any kind must be expressed in a \textit{language}. In the case of an informal argument, such as a debate, a \textit{natural language} is typically used (i.e. a language, spoken or written, that evolved \textit{naturally} as an aspect of human culture). This is done in the name of \textit{universality}. For example, a political debate that is held and perhaps broadcast in Poland would likely be conducted in Polish because Polish politics are primarily of interest to Polish people. Many Poles speak English in addition to Polish, but there is no language more widely spoken in Poland than Polish, with a whopping 97\% of the country declaring it as their first language. For media directed toward the population of Poland, there is no language that will better ensure an effective dissemination of ideas. It is a nearly \textit{universal} language in this context, a language understood by all intended recipients. \\
+
+%----------------------------------------
+
 \subsection*{The Syntax and Semantics of Argument}
-\addcontentsline{toc}{subsection}{Syntax and Semantics of Arguments}
+\addcontentsline{toc}{subsection}{The Syntax and Semantics of Argument}
+
+\textit{Reasoning} is a cognitive act performed by rational beings. It involves the absorption and synthesis of presently available information for the purpose of elucidating knowledge. It may require the ingenuity of thought, but in some cases the rote application of simple rules is sufficient. Reasoning could also be described as the providing of good \textit{reasons} to explain or justify things. However, as you might expect, there is much debate over whether or not any particular reason is "good". Reasoning is broad, and it comes in different flavors, but ultimately it is the pursuit of \textit{truth}. \\
 
 Reasoning may involve the application of \textit{logic}. This \textit{logical reasoning} is the kind of reasoning that can be expressed in the form of an \textit{argument}. However, this argument does not need to be "correct". Such reasoning simply must be explainable in \textit{steps}, whether that be through informal speech or formal writing. \\
 
@@ -473,11 +576,7 @@ Inference is also called \textit{entailment}. Though these terms describe the sa
 
 When the inferences made mirror the entailment, you've got yourself a \textit{valid} argument. However, this does not necessarily mean that your argument is \textit{sound}. \textit{Validity} is a property of arguments with a conclusion that can be \textit{deduced} from its premises according to rules of inference. However, validity says nothing about whether or not the premises have a \textit{meaning} that accurately describes reality. \textit{Soundness}, on the other hand, is a property of valid arguments whose premises are \textit{known truths} or \textit{axioms}. The deduction of a sound argument is called a \textit{proof}. \\
 
-Validity and soundness complicate entailment. Now, an argument can be evaluated either in terms of its \textit{syntax} or in terms of its \textit{semantics}. Syntax refers to the arrangement of symbolic words (or, more generally, \textit{tokens}) in a body of text. Semantics, on the other hand, refers to the \textit{meaning} that can be \textit{interpreted} from the text. \\
-
-An argument of any kind must be expressed in a \textit{language}. In the case of an informal argument, such as a debate, a \textit{natural language}, such as English, is used. Formal proofs, on the other hand, require a \textit{formal language} for clarity and precision. In practice, formal proofs are rarely written or read by logician or mathematicians. Typically, mathematical proofs are written using a combination of formal and natural language. However, computer programs, written in \textit{programming languages}, are considered formal. \\
-
-A formal language is constructed from an \textit{alphabet} $\Sigma$, which is a set of symbols. The set of all possible finite-length \textit{words} or \textit{formulas} that can be built from this alphabet is denoted $\Sigma^*$. A formal language $L$ over an alphabet $\Sigma$ is then defined as a subset of $\Sigma^*$. Thus, a language is a set of purely syntactic objects. It may conform to a \textit{grammar} that specifies how words can be produced or arranged in a \textit{sentence}, but a language is never inherently meaningful. The semantics of a language is always interpreted separately from the syntax. \\
+Validity and soundness complicate entailment. Now, an argument can be evaluated either in terms of its \textit{syntax} or in terms of its \textit{semantics}. Syntax refers to the arrangement of symbolic \textit{words} (or, more generally, \textit{tokens}) in a body of text. Semantics, on the other hand, refers to the \textit{meaning} that can be \textit{interpreted} from the text. Both of these concepts are integral to human language and indeed to the communication of information in general. \\
 
 Consider the following valid deduction: \\
 
@@ -491,11 +590,11 @@ Consider the following valid deduction: \\
 \end{center}
 \vspace{4mm}
 
-This conclusion is a \textit{syntactic consequence} of the premises ($P\vdash Q$). That is, when the argument is evaluated simply as a collection of symbolic \textit{strings} that are manipulated according to rules, $P$ entails $Q$. \\
+This conclusion is a \textit{syntactic consequence} of the premises ($P\vdash Q$). That is, when the argument is evaluated simply as a collection of symbolic strings that are manipulated according to rules, $P$ entails $Q$. \\
 
 Syntactic consequence is sometimes expressed with the following statement: "If the premises are true, the conclusion must also be true". However, while this statement does hold for all valid arguments, text evaluated syntactically does not have any notion of truth. It is simply a sequence of tokens. Thus, it may be better to think of valid arguments as "games that are played according to the rules". For example, chess has no inherent meaning associated with it, but it still has rules, and valid games of chess are those that comply with those rules. \\
 
-However, semantically, it is \textit{not} required to be Tuesday if it is raining. The first premise given above is, in reality, false. However, if we change it to something that we consider true, we can come to a conclusion that is both valid \textit{and} sound:
+Now, it might be Tuesday and raining as you are reading this. However, semantically, it is not required to be Tuesday if it is raining. The first premise given above is, in reality, false. However, if we change it to something that we consider true, we can come to a conclusion that is both valid and sound:
 
 \begin{center}
 	\begin{tabular*}{0.55\textwidth}{@{\extracolsep{\fill} } ll}
@@ -509,7 +608,9 @@ However, semantically, it is \textit{not} required to be Tuesday if it is rainin
 
 In this case, the conclusion is a \textit{semantic consequence} of the premises ($P\vDash Q$). In addition to the argument being syntactically logical, it is also semantically true "in all universes". That is, there is no possible scenario where it is raining, and it is not wet outside. This syntactic-semantic difference will come up repeatedly throughout this guide. \\
 
-\subsection*{The Structure of Information}
+%----------------------------------------
+
+\subsection*{The Structure of Proof}
 \addcontentsline{toc}{subsection}{The Structure of Proof}
 
 Of course, arguments can have more than one step. An argument can involve many inferences, some of which may use \textit{intermediate conclusions} as premises for further conclusions. Multiple threads of reasoning can extend from the premises, weaving through intermediate conclusions and intertwining via inference until they all meet at a \textit{final conclusion}. This is the \textit{tree structure} that is inherent in a \textit{formal proof}. \\
@@ -578,7 +679,13 @@ In this \textit{tree}, the \textit{first premises} are labeled as $P_n$ where $n
 
 In modern proof theory, proofs like these are studied not only for their semantic meaning, but also for their mathematical structure. They are treated like \textit{data structures}, which are abstract objects that are used in computer science to model the storage and flow of digital \textit{information}. Similarly, a proof is an abstract text that models the flow of logical information as it is manipulated by rules of inference toward a final conclusion. \\
 
+Information, in the context of computer science and, more generally, \textit{information theory}, refers to a \textit{syntactic} message. Formally, it is an order sequence of symbols \\
 
+% Data
+
+In computer science, the data structures of interest are \textit{recursive}. That is, the structure can be defined "in terms of itself". \textit{Recursion} is a deep topic, and we will spend much of the next part characterizing it, but a practical way to think about a recursive structure is in terms of \textit{type}. \\
+
+Types are a widespread feature in programming languages. As a concept, they are founded in a logical system call a \textit{type theory}. There are multiple type theories, and some of them are used as alternative foundations for mathematics. We will cover all of this in detail later, but, essentially, a type is a label that can be given to 
 
 % Proofs and models
 % String together arguments to make proofs
@@ -691,10 +798,45 @@ Abductive reasoning allows us to ignore the many causes that are unlikely in fav
 
 %-------
 
-% Can computers induce?
-% Describe deductive/inductive with machine learning (blue box?)
-% Deductive computers, AI, General AI, Artificial Conciousness
-% Calculation vs Computation
+\begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
+	\vspace{2mm}
+	\begin{center}
+		\textbf{Induction and Abduction}
+	\end{center}
+	\vspace{1mm}
+	% Can computers induce?
+	% Machine learning simulates induction deductively
+	% Deductive computers, AI, General AI, Artificial Conciousness
+	% Calculation vs Computation
+	
+	% Fuzzy expert systems "abduce"
+	\vspace{1mm}
+\end{tcolorbox}
+\vspace{7mm}
+
+%----------------------------------------
+
+\subsection*{Early Calculators and Computers}
+\addcontentsline{toc}{subsection}{Early Calculators and Computers}
+
+
+\begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
+	\vspace{2mm}
+	\begin{center}
+		\textbf{Modern Computing is American}
+	\end{center}
+	\vspace{1mm}
+	TEXT
+	\vspace{1mm}
+\end{tcolorbox}
+\vspace{7mm}
+
+% Hey, let's build machines to do this instead.
+% Wait, what exactly are we building? Let's model the problem.
+% Computation as a mechanical process vs a function.
+% Abstract away the mechanics, and a function becomes a conversation (input and output).
+% Computing is more than just math, semantically.
+% Structure of language, types of sentences (declarative/imperative)
 
 \newpage
 
@@ -716,6 +858,8 @@ The \textit{theory of computation} is a field of study that is related to both m
 Much of the work in the theory of computation is$\dots$ quite abstract. While calculation and computation have been practiced by humans for thousands of years, the concept was only formalized by mathematicians, logicians, philosophers, linguists, and computer scientists in the past 150 years. This part of the guide will delve into some fairly academic topics with a decent amount of mathematical rigor, but it is written to be accessible and entertaining. \\
 
 The field has three branches: \textit{automata theory}, \textit{computability theory}, and \textit{computational complexity theory}, each of which asks fundamental questions pertaining to how mathematical calculations can be automated, which kinds of problems can be solved by a machine, and how many resources are required to solve a particular problem. We will touch on the major discoveries made in each of these branches and discuss why they are significant to computer science and programming in general. \\
+
+% "Graduate-level mathematics"
 
 %--------------------------------------------------------------------------------
 %    SECTION 1: AUTOMATA THEORY
@@ -752,12 +896,7 @@ The line between calculator and computer began to blur with the introduction of 
 
 \subsubsection{Formalization of an Abstract Machine}
 
-% Hey, let's build machines to do this instead.
-% Wait, what exactly are we building? Let's model the problem. We'll cover that in detail in the next part.
-% Computation as a mechanical process vs a function.
-% Abstract away the mechanics, and a function becomes a conversation (input and output).
 
-% Structure of language, types of sentences (declarative/imperative)
 
 \begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
 	\vspace{2mm}
@@ -1155,6 +1294,15 @@ The selection of Turing machines (or register machines) as the model for real-wo
 
 Where should one store instructions or code in a stored-program computer? Those that have a \textit{Harvard architecture} store their instructions in an \textit{instruction memory} that is separate from the \textit{data memory}. Those that have a \textit{von Neumann architecture} store their instructions and data in the same physical memory, but partition the memory somehow to avoid overwriting the instructions. The von Neumann architecture allows "programs that write programs", such as assemblers, compilers, linkers, and loaders. Modern computers are more von Neumann than they are Harvard because their instructions and data share an address space, but they are not strictly either. We can describe modern computers as \textit{random-access stored-program} (RASP) machines with \textit{split-cache modified Harvard architectures}. \\
 
+%----------------------------------------
+
+\subsection{Modern Hardware Implementation}
+
+% We've discussed "computers" in many different ways (primitive examples, pre-Turing examples, theoretically).
+% The typical modern computer is programmable (in a Turing-complete sense), digital, electronic, stored-program, general-purpose, uses RAM, uses so-and-so architecture
+% Maybe some ubiquituous devices and "optional" components (like hard drives and I/O)
+% Maybe discuss some important non-standard computers (embedded systems, datacenters, supercomputers).
+	
 %--------------------------------------------------------------------------------
 %    SECTION 2: COMPUTABILITY THEORY
 %--------------------------------------------------------------------------------
@@ -1240,10 +1388,11 @@ Formal logic is the study of \textit{inference} with regard to \textit{formul{\a
 
 % Logical and non-logical symbols
 % Categorematic and syncategorematic terms (individual meaning)
-% Semantic consequence
 % Formal systems
 % Reason vs. logic -> Humans vs. computers
 % Model theory
+
+% Set theory is intertwined with two-valued logic via the membership function
 
 and they are studied in within \textit{formal systems}. These systems of abstract thoughts are used to infer the existence of formul{\ae} by means of logical deduction starting from a given set of axioms. A formal system has:
 
@@ -1265,11 +1414,6 @@ Formul{\ae}, which are finite sequences of symbols from a system's alphabet, are
 \end{enumerate}
 
 A well-formed formula with such an interpretation is called a \textit{sentence}, and the meaning expressed by a sentence is called a \textit{statement} or \textit{proposition}. A sentence expressing a true statement (according to the axioms and inference rules of the formal system) is called a \textit{theorem}, and a set of theorems is called a \textit{theory}. For example, ZFC set theory is a first-order \textit{theory} of sets. It has a collection of theorems written in first-order logic that form an \textit{axiomatic set}, and these theorems are used to prove other theorems that also belong to the theory using a set of inference rules. \\
-
-% First-order logic for math
-% ZFC set theory
-% Ethics and logic
-% Proofs are Boolean
 
 \subsubsection{Decision Problems and Function Problems}
 
@@ -3163,6 +3307,8 @@ Blah \\
 %--------------------------------------------------------------------------------
 
 \toclineskip
+\section{Computer Networks, Including \textit{The Internet}}
+
 \section{Unit Testing}
 
 Blah
@@ -3278,16 +3424,7 @@ Blah
 %--------------------------------------------------------------------------------
 
 \toclineskip
-\section{Virtualization}
-
-Blah
-
-%--------------------------------------------------------------------------------
-%    SECTION
-%--------------------------------------------------------------------------------
-
-\toclineskip
-\section{Containerization}
+\section{Virtualization \& Containerization}
 
 Blah
 
@@ -3412,16 +3549,7 @@ Blah \\
 \appendix
 
 %--------------------------------------------------------------------------------
-%    APPENDIX A: THE FUTURE OF THIS GUIDE
-%--------------------------------------------------------------------------------
-
-\toclineskip
-\section{The Future of this Guide}
-
-\newpage
-
-%--------------------------------------------------------------------------------
-%    APPENDIX B: SYSTEM DESIGN
+%    APPENDIX A: SYSTEM DESIGN
 %--------------------------------------------------------------------------------
 
 \toclineskip
@@ -3525,6 +3653,15 @@ Blah \\
 	
 	\item[Content Delivery Network (CDN)] A CDN is a globally distributed network of proxy servers that serves content to users from nearby nodes. A \textit{push CDN} only updates some piece of data when the developer pushes data to it. It's faster, but requires more storage on the CDN. A \textit{pull CDN} get content from the developer's server whenever a client requests it. It's slower, but requires less space on the CDN.
 \end{description}
+
+%--------------------------------------------------------------------------------
+%    APPENDIX B: THE FUTURE OF THIS GUIDE
+%--------------------------------------------------------------------------------
+
+\toclineskip
+\section{The Future of this Guide}
+
+\newpage
 
 %--------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
