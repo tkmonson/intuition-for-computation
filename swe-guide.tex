@@ -107,7 +107,7 @@
 %--------------------------------------------------------------------------------
 
 \documentclass[
-10pt, % Main document font size
+11pt, % Main document font size
 letterpaper, % Paper type
 oneside, % One page layout (no page indentation)
 headinclude,footinclude, % Extra spacing for the header and footer
@@ -115,6 +115,8 @@ BCOR5mm, % Binding correction
 ]{scrartcl}
 
 \input{structure.tex} % Include the structure.tex file which specified the document structure and layout
+
+\usepackage{stix}
 
 \newcommand*\rfrac[2]{{}^{#1}\!/_{#2}} % Slash fractions
 \newcommand*\vtabularspace[1]{\multicolumn{#1}{l}{} \\[-7pt]} % Vertical space in a tabular environment
@@ -353,7 +355,8 @@ BCOR5mm, % Binding correction
 	Intuition means something that arises within your being; \\[5mm]
 	it is your potential, that’s why it is called intuition. \\[5mm]
 	Wisdom is never borrowed, and that which is borrowed is never wisdom. \\[5mm]
-	Unless you have your own wisdom, your own vision, your own clarity, your own eyes to see, \\[5mm]
+	Unless you have your own wisdom, your own vision, \\[5mm]
+	your own clarity, your own eyes to see, \\[5mm]
 	you will not be able to understand the mystery of existence.}
 \begin{flushright}
 	---Osho
@@ -417,31 +420,55 @@ This part seeks to characterize and differentiate reasoning and computation in o
 \subsection*{Data and Information}
 \addcontentsline{toc}{subsection}{Data and Information}
 
-Data are symbolic values that describe something of interest. In the case of quantitative data, these values are numbers that are \textit{encoded} in a numeral system of some \textit{base} or \textit{radix} that specifies how many unique \textit{symbols} or \textit{digits} are used to represent numbers. Data intended to be read by humans are typically encoded in a base-10 system, one of ten digits. \\
+Data are unorganized facts or values that may reveal something of interest. They are measured, collected, organized, and then analyzed in the hope of producing meaningful \textit{information}. If data are quantifiable, they can be expressed with \textit{numbers}, and numbers can be encoded with either a single \textit{symbol} or a sequence of symbols called a \textit{string}. For example, the number eight is typically encoded with the symbol 8, which is a \textit{numeral} or \textit{digit}. The number could just as easily be represented by the symbol $\rtriltri$, but this would be non-standard. Numbers are usually encoded according to an established \textit{numeral system} of some \textit{base} or \textit{radix} that specifies how many unique symbols are used for representation. Numerical data intended to be read by humans are typically encoded in a base-10 system, one of ten digits. \\
 
-This design choice is ancient and natural. It is based on the ten digits of our hands, which have aided us in counting for hundreds of millennia. In fact, fingers are the oldest counting tools used by man, and we still use them today for this purpose. Other anatomically inspired bases have been used in early numeral systems, such as base-20, which counts the fingers and the toes, or base-12, which uses a thumb on one hand to count the bones of the other four fingers . However, today, the base-10 \textit{Hindu-Arabic numeral system} is universal in mathematics. \\
+This design choice is ancient and natural. It is based on the ten digits of our hands, which have aided us in counting for hundreds of millennia. In fact, fingers are the oldest counting tools used by man, and we still use them today for this purpose. Other anatomically inspired bases have been used in early numeral systems, such as base-20, which counts the fingers and the toes, or base-12, which uses a thumb on one hand to count the bones of the other four fingers. However, today, the base-10 \textit{Hindu-Arabic numeral system} is universal in mathematics. \\
 
-The base-60 system of Babylonian numerals is also notable. Its base is thought to have been chosen for its many factors, which simplify the process of division. Under this interpretation, this system is \textit{constructed} rather than natural. Instead of reflecting something concrete like physical extremities, this system chooses an abstract base in order to make an optimization. The reasoning for the use of base-2 encoding in computing is similar. It sacrifices human familiarity for performance and reliability. \\\\
+The base-60 system of Babylonian numerals is also notable. Its base is thought to have been chosen for its many factors, as this simplifies the process of division. Under this interpretation, this system is \textit{constructed} rather than natural. Instead of mirroring something concrete like physical extremities, this system chooses an abstract base in order to make a procedural optimization. The reasoning for base-2 encoding in computing is similar. It sacrifices human familiarity for performance and reliability. \\\\
 
 \begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
 	\vspace{2mm}
 	\begin{center}
-		\textbf{The Logic of Binary Encoding}
+		\textbf{The Rationale for Binary Numbers}
 	\end{center}
 	\vspace{1mm}
 	% Implementation details: signals, logic levels, noise, power, reliability
 	% Close relationship with classical, two-valued logic
 	
-	Binary encoding is not a requirement for computation. Rather, it is a concession that is made toward digital electronics. Computers have been designed for other bases, and, in some cases, a non-binary encoding is actually preferable. \\
+	Binary encoding of data is not a requirement for computation. Rather, it is a concession that is made toward digital electronics. Computers have been designed for other bases, and, in some cases, a non-binary encoding is actually preferable. As long as the data can be encoded with a finite number of symbols, it can be handled by a \textit{digital} computer (i.e. a computer that manipulates digits). A digital computer receives and operates on a \textit{discrete} signal of data, a value or set of values that updates at regular time intervals (e.g. every second, every minute, etc.). \\
 	
-	% Binary implies discrete, which is opposite of continuous
-	% Discrete / continuous is independent of the implementation
+	One could argue that \textit{analog} computers process data that is encoded with an infinite number of symbols. However, this would require a loose definition of "symbol" because analog data cannot be perfectly represented by digits. Rather, analog data is represented in a real, physical medium, like position, pressure, or voltage. An analog computer receives and operates on this \textit{continuous} signal of data that updates instantaneously with real-world time.  \\
 	
-	% Mark I Fire control computer
+	Consider the  \hrefcolor[blue]{https://www.youtube.com/watch?v=s1i-dnAH9Y4}{\underline{Mark 1A Fire Control Computer}}, a device, more appropriately termed a "calculator" by modern definitions, that was installed on United States battleships in World War II. This machine used mechanical parts, such as gears, cams, followers, differentials, and integrators, to perform the arithmetic and calculus necessary to hit an enemy ship with a projectile, even if both ships were moving in different directions. This calculator also used smooth components that gradually translated rotational motion into linear motion along a continuum. \\
 	
-	% Analog electronic computers
+	Despite being labeled with \textit{discrete}, \textit{digital} units, such as decimal (base-10) integers, this tool actually received \textit{continuous}, \textit{analog} quantities, such as physical position, as input. If each of its mechanical positions were considered a different "symbol", this system would theoretically be able to uniquely represent every real number to a infinite degree of precision and, thus, compute continuous functions without error. Such analog computation is performed also in slide rules, as well as in early electronic computers, which used voltage to represent numbers instead of position. \\
+	
+	\begin{center}
+		\begin{tikzpicture}
+			% Ruler
+			\draw [thick] (0,0) rectangle (10,1);
+			\draw (0,0.5) -- ++(7.2741,0);
+			\fill (7.2741,0.5) -- ++(-0.16,0.1) -- ++(0,-0.2);
+			\foreach \i in {0,...,10} {
+				\draw (\i,1.6) node {$\i$};
+			}
+		
+			% Slider
+			\draw [thick] (7.2741,-0.2) rectangle (8.2741,1.2);
+			\draw (7.7741,-0.2) -- (7.7741,1.2);
+			\fill (7.7741,0) -- ++(-0.1,-0.2) -- ++(0.2,0);
+			\fill (7.7741,1) -- ++(-0.1,0.2) -- ++(0.2,0);
+			\draw (7.7741,-0.7) node {$7.7741$};
+		\end{tikzpicture}
+	\end{center}
+	
+	% Analog computers have many problems: noise, reproducability
+	
+	Any digital encoding of numbers is possible in computing, and the choice does not affect what a computer theoretically can or cannot do. Rather, it has practical consequences. Decimal encoding was implemented in a number of early electronic and electro-mechanical computers, such as the Harvard Mark I and the ENIAC. 
 	
 	% Ternary electronic computers and their issues
+	
+	% Binary computers and boolean algebra (logic)
 	
 	% Beyond binary - fuzzy logic (briefly, discuss more deeply later)
 	\vspace{1mm}
@@ -450,13 +477,26 @@ The base-60 system of Babylonian numerals is also notable. Its base is thought t
 
 % Encoding doesn't have to use numerals. It can use letters, pictures, whatever. You can encode anything anywhere.
 
+% Information signals
+
 Regardless of which encoding is used, data is data.
 
-% Encoding
 % All information is encoded and decoded (digital and sensory)
+
+
+
+% Structured manipulation = algorithm
+% The Shannon-Weaver Model (also known as Shannon theory or information theory)
+% Sensory, conversation, and machine examples
+% We need to communicate an algorithm in a language
+% What kind of language?
+% First, let's talk about language in general
 
 \subsection*{Language is Code}
 \addcontentsline{toc}{subsection}{Language is Code}
+
+% Types of sentences - declarative and imperative
+% An algorithm as an argument
 
 % Computation requires communication
 % Model of communication
@@ -500,11 +540,11 @@ Language  \\
 % Trade language, lingua franca, Latin
 % Leibniz - Alphabet of human thought, "best of all possible worlds", panglossianism
 
+An argument of any kind must be expressed in a \textit{language}. In the case of an informal argument, such as a debate, a \textit{natural language} is typically used (i.e. a language, spoken or written, that evolved \textit{naturally} as an aspect of human culture). This is done in the name of \textit{universality}. For example, a political debate that is held and perhaps broadcast in Poland would likely be conducted in Polish because Polish politics are primarily of interest to Polish people. Many Poles speak English in addition to Polish, but there is no language more widely spoken in Poland than Polish, with a whopping 97\% of the country declaring it as their first language. For media directed toward the population of Poland, there is no language that will better ensure an effective dissemination of ideas. It is a nearly \textit{universal} language in this context, a language understood by all intended recipients. \\
+
 Formal proofs, on the other hand, require a \textit{formal language} for clarity and precision. In practice, formal proofs are rarely written or read by logicians or mathematicians. Typically, mathematical proofs are written using a combination of formal and natural language. However, computer programs, written in \textit{programming languages}, are considered formal. \\
 
 A formal language is constructed from an \textit{alphabet} $\Sigma$, which is a set of symbols. The set of all possible finite-length \textit{words} or \textit{formulas} that can be built from this alphabet is denoted $\Sigma^*$. A formal language $L$ over an alphabet $\Sigma$ is then defined as a subset of $\Sigma^*$. Thus, a language is a set of purely syntactic objects. It may conform to a \textit{grammar} that specifies how words can be produced or arranged in a \textit{sentence}, but a language is never inherently meaningful. The semantics of a language is always interpreted separately from the syntax. \\
-
-An argument of any kind must be expressed in a \textit{language}. In the case of an informal argument, such as a debate, a \textit{natural language} is typically used (i.e. a language, spoken or written, that evolved \textit{naturally} as an aspect of human culture). This is done in the name of \textit{universality}. For example, a political debate that is held and perhaps broadcast in Poland would likely be conducted in Polish because Polish politics are primarily of interest to Polish people. Many Poles speak English in addition to Polish, but there is no language more widely spoken in Poland than Polish, with a whopping 97\% of the country declaring it as their first language. For media directed toward the population of Poland, there is no language that will better ensure an effective dissemination of ideas. It is a nearly \textit{universal} language in this context, a language understood by all intended recipients. \\
 
 %----------------------------------------
 
@@ -550,8 +590,8 @@ A deduction is constructed within a \textit{deductive system}, which also has tw
 	\draw [very thick] (26,3) rectangle (48,-27);
 	\fill [textbook-blue] (26.1,2.9) rectangle (47.9,-26.9);
 	
-	\draw (37,-6.5) node {\fontsize{50}{40} $M$};
-	\draw (37,-18.5) node {\fontsize{50}{40} $P$};
+	\draw (37,-6.5) node {\fontsize{50}{40} $\textnormal{M}$};
+	\draw (37,-18.5) node {\fontsize{50}{40} $\textnormal{P}$};
 	
 	%----------------------------------------
 	
@@ -819,6 +859,15 @@ Abductive reasoning allows us to ignore the many causes that are unlikely in fav
 \subsection*{Early Calculators and Computers}
 \addcontentsline{toc}{subsection}{Early Calculators and Computers}
 
+Before we discuss and classify automata in depth, we should first consider what is \textbf{not} an automaton. What is an example of something that might perform some kind of calculation, but is not a computer? What about a microwave? Is a microwave a computer? No, it is not. A computer can be programmed in some meaningful, robust way. A microwave contains a microprocessor, which uses \textit{combinational logic} and basic binary inputs to set timers and operate the oven. It cannot be programmed in any meaningful way. What about a calculator? Is a calculator a computer? If we are being formal, the answer is no, but it depends on what kind of "calculator" we are talking about. \\
+
+Calculators, such as \textit{counting boards} and the \textit{abacus}, have been around since pre-history. Calculators with four-function capabilities have been around since the invention of Wilhelm Schickard's mechanical calculator in 1642. In the late 19th century, the \textit{arithmometer} and comptometers, two kinds of digital, mechanical calculator, were being used in offices. The Dalton Adding Machine introduced buttons to the calculator in 1902, and pocket mechanical calculators became widespread in 1948 with the \textit{Curta}. None of these are computers. \\
+
+The difference between a calculator and a computer is that a computer can be programmed and a calculator cannot. What does it mean to be programmable? That is perhaps the central question of automata theory, and we will discuss in this section several levels of "programmability". However, for now, we can certainly say that a simple, four-function electronic calculator is not a computer. It simply uses combinational circuits like full-adders, full-subtractors, multipliers, and dividers to implement its functions, and there is no potential for modifications or user-defined functions. \\
+
+Surprisingly enough, \textit{special-purpose computers} have also been around for a long time. Early examples include the \textit{Antikythera mechanism} (an Ancient Greek analog computer), Al-Jazari's 1206 water-powered \textit{astronomical clock}, the 1774 \hrefcolor[blue]{https://www.youtube.com/watch?v=bY\_wfKVjuJM}{\underline{Writer Automaton}} (a mechanical doll that could be programmed to write messages), the 1801 \textit{Jacquard loom}, and \textit{slide rules}. Some later mechanical computers were quite powerful, such as \textit{differential analyzers} (special-purpose computers for solving differential equations) and fire control computers. Charles Babbage designed the \textit{Analytical Engine}, a general-purpose computer, in 1837, and Ada Lovelace wrote a program for it, but it was never built. General-purpose computing would not reemerge until the 1940s. \\
+
+The line between calculator and computer began to blur with the introduction of \textit{programmable calculators} in the 1960s. Many modern high-end calculators are programmable in Turing-complete languages such as TI-BASIC or even C or C++, which officially makes them computers. Once we start implementing \textit{sequential logic} with components like SR latches or D flip-flops, we are storing state, and state is a requirement for computing. Circuits that use sequential logic can be considered automata and, given enough complexity, computers. \\
 
 \begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
 	\vspace{2mm}
@@ -876,69 +925,9 @@ The field has three branches: \textit{automata theory}, \textit{computability th
 
 One \textit{abstract automaton} in particular fully models not only the computation that is performed by today's state-of-the-art computers, but also the very process of computation itself. We will spend a lot of time in this guide discussing the structure and behavior of this model as well as what its limitations imply regarding the future of computing, software, mathematics, and the meaning of life. We will also briefly explore the abstract automata that exist in pure mathematics and model computation that is not physically realizable. \\
 
-%----------------------------------------
-
-\subsection{Automata, Calculators, and Computers}
-
 % Calculation vs computation. Separate histories.
 % Is a microwave a computer?
 % Modern cars are full of computers. Embedded systems.
-
-Before we discuss and classify automata in depth, we should first consider what is \textbf{not} an automaton. What is an example of something that might perform some kind of calculation, but is not a computer? What about a microwave? Is a microwave a computer? No, it is not. A computer can be programmed in some meaningful, robust way. A microwave contains a microprocessor, which uses \textit{combinational logic} and basic binary inputs to set timers and operate the oven. It cannot be programmed in any meaningful way. What about a calculator? Is a calculator a computer? If we are being formal, the answer is no, but it depends on what kind of "calculator" we are talking about. \\
-
-Calculators, such as \textit{counting boards} and the \textit{abacus}, have been around since pre-history. Calculators with four-function capabilities have been around since the invention of Wilhelm Schickard's mechanical calculator in 1642. In the late 19th century, the \textit{arithmometer} and comptometers, two kinds of digital, mechanical calculator, were being used in offices. The Dalton Adding Machine introduced buttons to the calculator in 1902, and pocket mechanical calculators became widespread in 1948 with the \textit{Curta}. None of these are computers. \\
-
-The difference between a calculator and a computer is that a computer can be programmed and a calculator cannot. What does it mean to be programmable? That is perhaps the central question of automata theory, and we will discuss in this section several levels of "programmability". However, for now, we can certainly say that a simple, four-function electronic calculator is not a computer. It simply uses combinational circuits like full-adders, full-subtractors, multipliers, and dividers to implement its functions, and there is no potential for modifications or user-defined functions. \\
-
-Surprisingly enough, \textit{special-purpose computers} have also been around for a long time. Early examples include the \textit{Antikythera mechanism} (an Ancient Greek analog computer), Al-Jazari's 1206 water-powered \textit{astronomical clock}, the 1774 \hrefcolor[blue]{https://www.youtube.com/watch?v=bY\_wfKVjuJM}{\underline{Writer Automaton}} (a mechanical doll that could be programmed to write messages), the 1801 \textit{Jacquard loom}, and \textit{slide rules}. Some later mechanical computers were quite powerful, such as \textit{differential analyzers} (special-purpose computers for solving differential equations) and \hrefcolor[blue]{https://www.youtube.com/watch?v=s1i-dnAH9Y4}{\underline{fire control computers}}. Charles Babbage designed the \textit{Analytical Engine}, a general-purpose computer, in 1837, and Ada Lovelace wrote a program for it, but it was never built. General-purpose computing would not reemerge until the 1940s. \\
-
-The line between calculator and computer began to blur with the introduction of \textit{programmable calculators} in the 1960s. Many modern high-end calculators are programmable in Turing-complete languages such as TI-BASIC or even C or C++, which officially makes them computers. Once we start implementing \textit{sequential logic} with components like SR latches or D flip-flops, we are storing state, and state is a requirement for computing. Circuits that use sequential logic can be considered automata and, given enough complexity, computers. \\
-
-\subsubsection{Formalization of an Abstract Machine}
-
-
-
-\begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
-	\vspace{2mm}
-	\begin{center}
-		\textbf{A Brief Introduction to Formal Grammars}
-	\end{center}
-	\vspace{1mm}
-	A formal grammar is a finite set of \textit{production rules} that specifies what a particular language is supposed to look like. It formalizes the structure of "grammatical units" in a language. This is done in order to enforce a specific alphabet, a consistent lexicon, and a predictable sentence structure, all of which contribute to how useful and distinct any given language is. \\
-	
-	A grammar $G$ consists of the following components:
-	\begin{itemize}
-		\item A finite set $N$ of \textit{nonterminal} symbols.
-		\item A finite set $\Sigma$ of \textit{terminal} symbols that is disjoint from $N$.
-		\item A symbol $S\in N$, designated as the \textit{start symbol}.
-		\item A finite set $P$ of \textit{production rules} where each rule is of the form ${(\Sigma\cup N)^*N(\Sigma\cup N)^*\rightarrow(\Sigma\cup N)^*}$.
-	\end{itemize}
-	
-	Put another way, a production rule converts a sequence of symbols to another sequence of symbols. If a rule is of the form \textit{left-hand side $\rightarrow$ right-hand side}, each side can contain terminals and nonterminals, but its left-hand side must contain at least one nonterminal. A nonterminal is a symbol that is replaced by other symbols when an appropriate rule is applied. Unlike a terminal, it does not belong to the alphabet of the language, but rather represents a sequence of symbols that do. Terminals cannot be replaced by other symbols once chosen. \\
-	
-	Let's construct a simple formal grammar. It is typical for the nonterminals to be uppercase and for the terminals to be lowercase. Let $N=$ \{SENTENCE, NOUN, ADJ\}, $\Sigma=$ \{the, dog, building, plays, fluffy, good\}, and $S=$ SENTENCE. The rules of $P$ are given below.
-	
-	\begin{itemize}
-		\item SENTENCE $\rightarrow$ the NOUN plays
-		\item NOUN $\rightarrow$ ADJ NOUN
-		\item NOUN $\rightarrow$ dog
-		\item NOUN $\rightarrow$ building
-		\item ADJ $\rightarrow$ fluffy
-		\item ADJ $\rightarrow$ good
-	\end{itemize}
-	
-	We can now start with SENTENCE and apply these rules to construct a "sentence" that is valid in this language. Example sentences and their derivations are given below.
-	
-	\begin{itemize}
-		\item SENTENCE $\rightarrow$ the NOUN plays $\rightarrow$ the ADJ NOUN plays $\rightarrow$ the good NOUN plays $\rightarrow$ the good dog plays
-		\item SENTENCE $\rightarrow$ the NOUN plays $\rightarrow$ the ADJ NOUN plays $\rightarrow$ the ADJ ADJ NOUN plays $\rightarrow$ the ADJ ADJ ADJ NOUN plays $\rightarrow$ the fluffy ADJ ADJ NOUN plays $\rightarrow$ the fluffy good ADJ NOUN plays $\rightarrow$ the fluffy good fluffy NOUN plays $\rightarrow$ the fluffy good fluffy building plays
-	\end{itemize}
-	
-	Notice that the first example expresses an actual thought whereas the second example, while still syntactically a sentence, is nonsensical. Because it allows meaningless sentences, the grammar described above belongs to the class of \textit{context-free grammars}.
-	
-	\vspace{1mm}
-\end{tcolorbox}
-\vspace{7mm}
 
 %----------------------------------------
 
@@ -1031,6 +1020,52 @@ Note that the actual complexity of the concrete cuckoo clock would be a bit more
 \\
 
 % The nodes could themselves be automata => automata are recursive structures
+
+%----------------------------------------
+
+\subsection{Formalization of an Abstract Machine}
+
+\begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
+	\vspace{2mm}
+	\begin{center}
+		\textbf{A Brief Introduction to Formal Grammars}
+	\end{center}
+	\vspace{1mm}
+	A formal grammar is a finite set of \textit{production rules} that specifies what a particular language is supposed to look like. It formalizes the structure of "grammatical units" in a language. This is done in order to enforce a specific alphabet, a consistent lexicon, and a predictable sentence structure, all of which contribute to how useful and distinct any given language is. \\
+	
+	A grammar $G$ consists of the following components:
+	\begin{itemize}
+		\item A finite set $N$ of \textit{nonterminal} symbols.
+		\item A finite set $\Sigma$ of \textit{terminal} symbols that is disjoint from $N$.
+		\item A symbol $S\in N$, designated as the \textit{start symbol}.
+		\item A finite set $P$ of \textit{production rules} where each rule is of the form ${(\Sigma\cup N)^*N(\Sigma\cup N)^*\rightarrow(\Sigma\cup N)^*}$.
+	\end{itemize}
+	
+	Put another way, a production rule converts a sequence of symbols to another sequence of symbols. If a rule is of the form \textit{left-hand side $\rightarrow$ right-hand side}, each side can contain terminals and nonterminals, but its left-hand side must contain at least one nonterminal. A nonterminal is a symbol that is replaced by other symbols when an appropriate rule is applied. Unlike a terminal, it does not belong to the alphabet of the language, but rather represents a sequence of symbols that do. Terminals cannot be replaced by other symbols once chosen. \\
+	
+	Let's construct a simple formal grammar. It is typical for the nonterminals to be uppercase and for the terminals to be lowercase. Let $N=$ \{SENTENCE, NOUN, ADJ\}, $\Sigma=$ \{the, dog, building, plays, fluffy, good\}, and $S=$ SENTENCE. The rules of $P$ are given below.
+	
+	\begin{itemize}
+		\item SENTENCE $\rightarrow$ the NOUN plays
+		\item NOUN $\rightarrow$ ADJ NOUN
+		\item NOUN $\rightarrow$ dog
+		\item NOUN $\rightarrow$ building
+		\item ADJ $\rightarrow$ fluffy
+		\item ADJ $\rightarrow$ good
+	\end{itemize}
+	
+	We can now start with SENTENCE and apply these rules to construct a "sentence" that is valid in this language. Example sentences and their derivations are given below.
+	
+	\begin{itemize}
+		\item SENTENCE $\rightarrow$ the NOUN plays $\rightarrow$ the ADJ NOUN plays $\rightarrow$ the good NOUN plays $\rightarrow$ the good dog plays
+		\item SENTENCE $\rightarrow$ the NOUN plays $\rightarrow$ the ADJ NOUN plays $\rightarrow$ the ADJ ADJ NOUN plays $\rightarrow$ the ADJ ADJ ADJ NOUN plays $\rightarrow$ the fluffy ADJ ADJ NOUN plays $\rightarrow$ the fluffy good ADJ NOUN plays $\rightarrow$ the fluffy good fluffy NOUN plays $\rightarrow$ the fluffy good fluffy building plays
+	\end{itemize}
+	
+	Notice that the first example expresses an actual thought whereas the second example, while still syntactically a sentence, is nonsensical. Because it allows meaningless sentences, the grammar described above belongs to the class of \textit{context-free grammars}.
+	
+	\vspace{1mm}
+\end{tcolorbox}
+\vspace{7mm}
 
 %----------------------------------------
 
@@ -1302,6 +1337,9 @@ Where should one store instructions or code in a stored-program computer? Those 
 % The typical modern computer is programmable (in a Turing-complete sense), digital, electronic, stored-program, general-purpose, uses RAM, uses so-and-so architecture
 % Maybe some ubiquituous devices and "optional" components (like hard drives and I/O)
 % Maybe discuss some important non-standard computers (embedded systems, datacenters, supercomputers).
+
+% Signals, clock cycles
+% Byte vs word addressing
 	
 %--------------------------------------------------------------------------------
 %    SECTION 2: COMPUTABILITY THEORY
@@ -1394,6 +1432,9 @@ Formal logic is the study of \textit{inference} with regard to \textit{formul{\a
 
 % Set theory is intertwined with two-valued logic via the membership function
 
+% Fuzzy set theory
+% Membership functions between 0 and 1
+
 and they are studied in within \textit{formal systems}. These systems of abstract thoughts are used to infer the existence of formul{\ae} by means of logical deduction starting from a given set of axioms. A formal system has:
 
 \begin{enumerate}
@@ -1425,7 +1466,7 @@ It is natural to expect that computers, which are tools for doing math, should b
 
 One important example of a decision problem is whether or not a given function problem is solvable. Let $F$ be a \textit{function problem}, and let $D$ be the \textit{decision problem} of whether or not $F$ is solvable for each of its inputs. Let $f:X\rightarrow Y$ be a \textit{function} that solves $F$, where $X$ is the set of all problem inputs and $Y$ is the set of all problem outputs. Let $G(f)$ denote the set of all ordered pairs $(x,f(x))$ such that $x\in X$. $G(f)$ is known as the \textit{graph} of the function $f$. Let $d:X\rightarrow \{\textsc{true},\textsc{false}\}$ be a decision that solves $D$. For each $x\in X$, $d(x)$ is $\textsc{true}$ if and only if there exists an ordered pair $(x,f(x))$ in $G(f)$. Otherwise, $d(x)$ is $\textsc{false}$. \\
 
-Here's a more concrete example. Let $x$ be any natural number (including $0$). $F$ asks "What is $\rfrac{2}{x}$ for all $x$?". $D$ asks "Does $\rfrac{2}{x}$ exist for all $x$?". In both cases, $f(x)=\rfrac{2}{x}$, but $F$ is interested in the \textit{value} of each of the outputs while $D$ is interested in the \textit{existence} of each of the outputs. There is one input for which $f$ has no defined output and that is $x=0$. In this case, the answer to $D$ is negative, and $F$ is technically unsolvable. That said, we can just move the goalposts a little bit to make $F$ solvable by allowing $f$ to be a partial function: $f:\mathbb{N}\nrightarrow \mathbb{N}$. Partial functions do not necessarily map every member of their domain to a value. Thus, they can be \textit{undefined} for some input values. As long as "undefined" is considered a valid answer to $F$, $F$ can be considered solvable for its whole domain. \\
+Here's a more concrete example. Let $x$ be any natural number (including 0). $F$ asks "What is $\rfrac{2}{x}$ for all $x$?". $D$ asks "Does $\rfrac{2}{x}$ exist for all $x$?". In both cases, $f(x)=\rfrac{2}{x}$, but $F$ is interested in the \textit{value} of each of the outputs while $D$ is interested in the \textit{existence} of each of the outputs. There is one input for which $f$ has no defined output and that is $x=0$. In this case, the answer to $D$ is negative, and $F$ is technically unsolvable. That said, we can just move the goalposts a little bit to make $F$ solvable by allowing $f$ to be a partial function: $f:\mathbb{N}\nrightarrow \mathbb{N}$. Partial functions do not necessarily map every member of their domain to a value. Thus, they can be \textit{undefined} for some input values. As long as "undefined" is considered a valid answer to $F$, $F$ can be considered solvable for its whole domain. \\
 
 In computability theory, we are interested in determining whether or not an output exists for each of a problem's inputs. If an output exists, we can be sure it has \textit{a} value, but the particular value is inconsequential. While computers do solve function problems, it is enough to consider only the corresponding decision problem when proving whether a function problem is \textit{solvable} or not. \\
 
