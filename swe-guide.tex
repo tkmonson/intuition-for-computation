@@ -116,8 +116,6 @@ BCOR5mm, % Binding correction
 
 \input{structure.tex} % Include the structure.tex file which specified the document structure and layout
 
-\usepackage{stix}
-
 \newcommand*\rfrac[2]{{}^{#1}\!/_{#2}} % Slash fractions
 \newcommand*\vtabularspace[1]{\multicolumn{#1}{l}{} \\[-7pt]} % Vertical space in a tabular environment
 \newcommand{\hrefcolor}[3][blue]{\href{#2}{\color{#1}{#3}}}%
@@ -420,7 +418,61 @@ This part seeks to characterize and differentiate reasoning and computation in o
 \subsection*{Data and Information}
 \addcontentsline{toc}{subsection}{Data and Information}
 
-Data are unorganized facts or values that may reveal something of interest. They are measured, collected, organized, and then analyzed in the hope of producing meaningful \textit{information}. If data are quantifiable, they can be expressed with \textit{numbers}, and numbers can be encoded with either a single \textit{symbol} or a sequence of symbols called a \textit{string}. For example, the number eight is typically encoded with the symbol 8, which is a \textit{numeral} or \textit{digit}. The number could just as easily be represented by the symbol $\rtriltri$, but this would be non-standard. Numbers are usually encoded according to an established \textit{numeral system} of some \textit{base} or \textit{radix} that specifies how many unique symbols are used for representation. Numerical data intended to be read by humans are typically encoded in a base-10 system, one of ten digits. \\
+Data are unorganized facts or statistical values that may reveal something of interest once structured and put into context. They are collected, cleaned, organized, and then analyzed in the hope of producing meaningful \textit{information}. Data can come in various forms, but \textit{quantitative data} are \textit{numbers} that describe \textit{quantity}. These data are collected via \textit{measurement}, a process that assigns a number to a quantifiable property that is being empirically observed. \\
+
+Data are the building blocks of \textit{signals}, which are functions that model physical quantities that change over time. Signals map a set of times $t$ to a set of amplitudes $A$ and are classified according to the properties of these sets. The structure of $t$ determines whether a signal is \textit{continuous} or \textit{discrete}, and the structure of $A$ determines whether a signal is \textit{analog} or \textit{digital}. \\
+
+The continuity of signals is similar to the continuity of mathematical functions, but the definitions differ slightly. Two properties of continuous functions are given below:
+
+\begin{itemize}
+	\item A function is \textit{continuous} over its domain if sufficiently small changes in input result in arbitrarily small changes in output.
+	\item  Continuous functions are a subset of the real functions $f:D\rightarrow\mathbb{R}$ where $D$ is either $\mathbb{R}$ or an interval of it. In other words, a continuous function $f$ maps a \textit{linear continuum} $D$ to the real number line $\mathbb{R}$.
+\end{itemize}
+
+This first property is necessary and sufficient for defining continuous functions, and it implies the second property, which is necessary, but not sufficient. However, confusingly, a signal is considered continuous even if it satisfies the second and not the first. Thus, a signal is continuous if its time $t$ is a linear continuum and its amplitude $A$ is a subset of real numbers. Otherwise, it is \textit{discrete}. \\
+
+Thanks to their real codomain, continuous signals have an infinite amount of possible output values. Any signal with this property is called \textit{analog} because an infinite-valued output can be seen as \textit{analogous} to the seemingly infinite complexity of the physical world. At any instant in its time domain, an analog signal can \textit{exactly} model a time-varying, real-world quantity, such as voltage, pressure, distance, mass, color, or anything else that is quantifiable. All continuous signals are analog, but not all analog signals are continuous. For example, the analog data of a continuous signal can be sampled at a finite rate in order to construct a discrete, analog signal. \\
+
+Consider an arbitrary continuous signal:
+
+\begin{center}
+	\begin{tikzpicture}
+		\begin{axis}[
+			width=\textwidth,
+			height=5cm,
+			tick style={draw=none},
+			axis line style={draw=none},
+			xticklabels={},
+			ytick={0},
+			y label style={rotate=270},
+			ylabel={$A$},
+			domain=-1:13,
+			ymin=-5,
+			ymax=5,
+		]
+		\addplot [mark=none, black] {0};
+		\addplot [mark=none,
+		          samples=100,
+		          textbook-blue-dark,
+		          ultra thick,
+		          restrict x to domain=0:12] {5*sin(deg(x))};
+		\end{axis}
+		\fill (11.15,1.71) -- ++(-0.16,0.1) -- ++(0,-0.2);
+		\draw (11.7,1.71) node {$t$};
+		\draw (-0.22,2.2) -- ++(0,1);
+		\draw (-0.22,1.2) -- ++(0,-1);
+	\end{tikzpicture}
+\end{center}
+
+In general, signals can also be viewed as messages encoded in \textit{data} whose decoded content is \textit{information}. Like traditional written messages, ... Any signal can be expressed as an ordered sequence of data, each of which can be expressed as a tuple $(t,A(t))$. Because there are an infinite number of "instants" in any given interval of continuous time, the continuous signal shown above can be expressed an \textit{infinite}, ordered sequence of analog data. \\
+
+Analog data are special because they exist in continuous space and thus theoretically have an infinite degree of precision. If we assume a classical model of physics in which time flows continuously, we can model physical quantities with real numbers by writing an equation $A=f(t)$ where $t,A\in\mathbb{R}$. In this sense, a complete set of analog data over a given time interval (i.e. an analog signal) can perfectly describe a physical quantity over the same interval. However, handling analog data can be very difficult. \\
+
+Imagine that you throw a ball in the air and somehow exactly measure its height above the ground at every instant before it lands. If you were to organize these height data with respect to time, you would construct an analog signal that perfectly describes the height of the ball at any point during the throw. In practice, however, no measuring instrument has the required speed or precision necessary to do this. Additionally, you would need an infinite amount of memory to store continuous-time data that is collected at every instant. \\
+
+% Need digital data
+
+and these numbers can be \textit{encoded} with either a single \textit{symbol} or a sequence of symbols called a \textit{string}. For example, the number eight is typically encoded with the symbol 8, which is a \textit{numeral} or \textit{digit}. The number could just as easily be represented by the symbol $\rtriltri$, but this would be non-standard. Numbers are usually encoded according to an established \textit{numeral system} of some \textit{base} or \textit{radix} that specifies how many unique symbols are used for representation. Numerical data intended to be read by humans are typically encoded in a base-10 system, one of ten digits. \\
 
 This design choice is ancient and natural. It is based on the ten digits of our hands, which have aided us in counting for hundreds of millennia. In fact, fingers are the oldest counting tools used by man, and we still use them today for this purpose. Other anatomically inspired bases have been used in early numeral systems, such as base-20, which counts the fingers and the toes, or base-12, which uses a thumb on one hand to count the bones of the other four fingers. However, today, the base-10 \textit{Hindu-Arabic numeral system} is universal in mathematics. \\
 
@@ -439,9 +491,9 @@ The base-60 system of Babylonian numerals is also notable. Its base is thought t
 	
 	One could argue that \textit{analog} computers process data that is encoded with an infinite number of symbols. However, this would require a loose definition of "symbol" because analog data cannot be perfectly represented by digits. Rather, analog data is represented in a real, physical medium, like position, pressure, or voltage. An analog computer receives and operates on this \textit{continuous} signal of data that updates instantaneously with real-world time.  \\
 	
-	Consider the  \hrefcolor[blue]{https://www.youtube.com/watch?v=s1i-dnAH9Y4}{\underline{Mark 1A Fire Control Computer}}, a device, more appropriately termed a "calculator" by modern definitions, that was installed on United States battleships in World War II. This machine used mechanical parts, such as gears, cams, followers, differentials, and integrators, to perform the arithmetic and calculus necessary to hit an enemy ship with a projectile, even if both ships were moving in different directions. This calculator also used smooth components that gradually translated rotational motion into linear motion along a continuum. \\
+	Consider the  \hrefcolor[blue]{https://www.youtube.com/watch?v=s1i-dnAH9Y4}{\underline{Mark 1A Fire Control Computer}}, a device, more appropriately termed a "calculator" by modern definitions, that was installed on United States battleships in World War II. This machine used mechanical parts, such as gears, cams, followers, differentials, and integrators, to perform the arithmetic and calculus necessary to hit an enemy ship with a projectile, even if both ships were moving in different directions. It also used smooth components that gradually translated rotational motion into linear motion along a continuum. \\
 	
-	Despite being labeled with \textit{discrete}, \textit{digital} units, such as decimal (base-10) integers, this tool actually received \textit{continuous}, \textit{analog} quantities, such as physical position, as input. If each of its mechanical positions were considered a different "symbol", this system would theoretically be able to uniquely represent every real number to a infinite degree of precision and, thus, compute continuous functions without error. Such analog computation is performed also in slide rules, as well as in early electronic computers, which used voltage to represent numbers instead of position. \\
+	Despite being labeled with decimal (base-10) integers, this tool actually received \textit{continuous}, \textit{analog} quantities, such as physical position, as input. If each of its mechanical positions were considered a different "symbol", this system would theoretically be able to uniquely represent every real number to a infinite degree of precision and, thus, compute continuous functions without error. Such analog computation is performed also in slide rules, as well as in early electronic computers, which used voltage to represent numbers instead of position. \\
 	
 	\begin{center}
 		\begin{tikzpicture}
