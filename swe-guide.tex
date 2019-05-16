@@ -304,12 +304,15 @@ BCOR5mm, % Binding correction
 % While I was writing this, I found myself using "we" a lot. It just felt natural. We = Me + You, so I guess I should introduce myself to you.
 % Why did you write this?
 % Why do you think its worth sharing with others?
+% Why read this over a traditional textbook?
 % College gave me reasoning and knowledge. Writing this guide gave me intuition.
 % There are a lot of jargon terms in computer science, and a lot of them are very similar. This guide also serves as a personal dictionary of sorts.
 % Categorizing things is an age old approach to philosophy and science.
 % Wax poetic about computer science.
 % At times, I struggled writing this book. But I eventually came to a point where I knew what this book was trying to be, and I could envision it. I could see the pieces linking together,  and I wanted it to exist. I wanted to lay out, in simple English, the connections I was making in my mind. I wanted to share these difficult concepts in a way that was accessible.
 % Talk about what it was like to just live in this document for like multiple months.
+% Make a chart with philosophy as a circle (a non-metric space) and mathematics, physics, enigineering, computer science, etc. as bars (metrics spaces whose metric is academic complexity). The bars start at high-school level topics and extend to the bleeding edge of understanding. Draw two versions: what college taught me vs. what I felt like I needed to know. Syntactic understanding vs semantic understanding.
+% The value in spending time just philosophizing about things.
 
 \newpage
 
@@ -331,12 +334,30 @@ BCOR5mm, % Binding correction
 \end{displayquote}
 
 % This guide was not written under the circumstances that a textbook would be. It is not intended to be a textbook.
-% It was not written with sourcing in mind.
+% It was not written with sourcing in mind. I don't consider it to be an "academic work" in the traditional sense of the term.
+% All other excuses aside, I honestly just didn't care to go through the trouble.
 % However, all of the information here is the result of my understanding after doing cross-referenced research.
 % Philosophy of 98% accuracy.
-% Thanks to Wikipedia, math.stackexchange, cs.stackexchange, tex.stackexchange, Stack Overflow, Encyclopedia of Mathematics
+% Thanks to Wikipedia, math.stackexchange, cs.stackexchange, tex.stackexchange, Stack Overflow, Encyclopedia of Mathematics.
 % Nothing here is plagiarized.
-% Copyright
+% Copyright.
+% If it makes you feel better, you can consider this a work of fiction.
+
+\newpage
+
+%--------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------
+%    ACKNOWLEDGEMENTS
+%--------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------
+
+\part*{Acknowledgements}
+\addcontentsline{toc}{section}{Acknowledgements}
+
+% DA teachers
+% Duke teachers
+% Parents
+% Hi-Chews
 
 \newpage
 
@@ -390,10 +411,12 @@ This guide is everything you need to know in order to program computers professi
 % Note differences in writing styles between the theory chapters (1-4) and the implementation chapters (5-7). The latter are not comprehensive overviews.
 % Discuss the title. Intuition. Definitions in my own words - "if you know something's name, you have power over it". True name, mysticism.
 % Make your own guide!
-% Compuer science is not about computers. The concepts are everywhere.
-% Parts and sections.
+% Computer science is not about computers. The concepts are everywhere.
+% Chapters and sections.
 % While jargon is confusing to people who are not 'in the know', it is usually very descriptive. It paints a very precise picture, if you know how to differentiate similar terms. The English words that are used are often quite apt.
-% Interdisciplinary approach.
+% Interdisciplinary, historical approach.
+% There are a lot of quotes. I like quotes. Plus, taking a bunch of quotes out of context (slashthrough) \textit{repurposing} quotes allows me to pretend like a bunch of smart people agree with what I am saying. And they all write a part of my book for free. Ha, suckers!
+% COD4 quotes
 
 \newpage
 
@@ -406,32 +429,80 @@ This guide is everything you need to know in order to program computers professi
 \part*{Philosophy of Computation}
 \addcontentsline{toc}{part}{\tocpartglyph Philosophy of Computation}
 
+\vspace{4mm}
+\begin{displayquote}
+	\textit{We're presently in the midst of a third intellectual revolution. The first came with Newton: the planets obey physical laws. The second came with Darwin: biology obeys genetic laws. In today’s third revolution, we're coming to realize that even minds and societies emerge from interacting laws that can be regarded as computations. \textbf{Everything is a computation.}}
+	\begin{flushright}
+		---Rudy Rucker
+	\end{flushright}
+\end{displayquote}
+\vspace{4mm}
+
 % Rewrite, be poetic about computation. Really describe it. Then discuss how the idea was generalized and formalized and found to have a lot of commonalities with language, logic, math...
 
-\textit{Reasoning} is an essential part of being human. Just as we may perceive the world with our senses or feel the affect of our emotions or explore the inner workings of our imaginations, we may also exercise \textit{reason} in the hope of understanding the things in life that we question. Computation is also a particularly human act, as it requires reasoning. However, the relationship between the two is complicated. \\
+\textit{Computation} is an essential part of being human. Just as we act on our perceptions, feel our emotions, and daydream in our imaginations, we also compute with our \textit{reasoning} in order to find answers to the questions we have about life. \\
 
-This part seeks to characterize and differentiate reasoning and computation in order to lay a foundation for a holistic understanding of the latter. There are many ways that one can describe computation, some poetic, other more formal. For now, we will say that computation is a structured manipulation of \textit{data}. \\
+There are many ways that one can describe or practice computation. Some are \textit{poetic}, others are more \textit{formal}, and many of them we will discuss at length. In doing so, we will generally flow \textit{from} poetry \textit{to} formality, starting with broad statements and colorful examples and progressing toward a formal understanding. For now, we will say that computation is a process that resolves \textit{uncertainty}. \\
 
-%----------------------------------------
+The Ancient Greek conception of Chaos is a fascinating depiction of uncertainty: a vast nothingness that preceded the creation of the Universe. Curiously, the modern definition of the word is nearly inverted. Now, one might say that a situation is \textit{chaotic} if there is \textit{so much} going on that it is hard to make sense of anything. Despite their great conceptual difference, these meanings share a common property. They both evoke \textit{confusion}. \\
+
+This world in which we find ourselves may indeed be post-Chaos, but confusion remains a familiar state for us. In fact, it is our natural state. We come into life confused about everything, crying, open-eyed in reaction to \textit{how much} is going on around us. Slowly, we figure a few things out. Eventually, we consider quite a few things to be \textit{certain}. Much later, the wise ones among us come to realize the depth of their confusion. \\
+
+People are sometimes ridiculed for being confused. People also sometimes fool themselves into believing that things are certain when they are not. One group is lost, and the other is misguided, but both are \textit{ignorant}. They know not. \\
+
+%a structured manipulation of \textit{data}.
+
+%--------------------------------------------------------------------------------
+%    SECTION: DATA, INFORMATION, AND COMMUNICATION
+%--------------------------------------------------------------------------------
 
 \toclineskip
-\subsection*{Data and Information}
-\addcontentsline{toc}{subsection}{Data and Information}
+\section{Data, Information, and Communication}
 
-Data are unorganized facts or statistical values that may reveal something of interest once structured and put into context. They are collected, cleaned, organized, and then analyzed in the hope of producing meaningful \textit{information}. Data can come in various forms, but \textit{quantitative data} are \textit{numbers} that describe \textit{quantity}. These data are collected via \textit{measurement}, a process that assigns a number to a quantifiable property that is being empirically observed. \\
+Data are unorganized facts or statistical values that may reveal something of interest. They are collected by \textit{sampling} phenomena from the observable Universe. Once collected, they can be cleaned, organized, and then analyzed in the hope of gaining a better understanding of reality. When a set of structured data is put into context, it can be interpreted as \textit{information} that explains what has been observed. This information can then be \textit{encoded} as an ordered sequence of data known as a \textit{message}. Messages are \textit{transmitted} and \textit{received} both by Nature and by Man. In the latter case, this process can be viewed as the \textit{communication} of abstract, human thought. \\
 
-Data are the building blocks of \textit{signals}, which are functions that model physical quantities that change over time. Signals map a set of times $t$ to a set of amplitudes $A$ and are classified according to the properties of these sets. The structure of $t$ determines whether a signal is \textit{continuous} or \textit{discrete}, and the structure of $A$ determines whether a signal is \textit{analog} or \textit{digital}. \\
+Data can describe a variety of things, such as quantities, qualities, changes, and relations. In computer science, data are \textit{quantitative}. That is, they describe \textit{quantities}, which are properties that can be modeled with \textit{numbers}. A quantity can be further classified as either a \textit{multitude} or a \textit{magnitude}. The former is a \textit{discrete} quantity that is \textit{counted}. One would ask "how many" elements belong to a multitude. In contrast, a magnitude is a \textit{continuous} quantity that is \textit{measured}. It is the size of something that is modeled as a \textit{continuum} (e.g. by fields such as $\mathbb{R}$ or $\mathbb{C}$), and one would accordingly inquire as to "how much" of it there is. Sets of data that are collected at a finite rate are technically multitudes of samples, even if the quantity being measured is a magnitude. \\
 
-The continuity of signals is similar to the continuity of mathematical functions, but the definitions differ slightly. Two properties of continuous functions are given below:
+Data can be represented by various \textit{media}, both abstract and concrete. In the age of modern computing, data are often assumed to be \textit{digital} in nature, expressed in the symbolic medium of numerical \textit{digits}. This is the case for data processed by modern, electronic computers, which charge capacitors in order to generate voltages that represent \textit{logic levels}. A \textit{transistor} acts as a gate to each capacitor, staying closed to retain \textit{electric charge} during storage and opening to transmit and receive charge on reads and writes. The ratio of a capacitor's charge to its capacitance determines its voltage. This voltage is then mapped to a logic level, which is defined by a range of voltage values. Modern computer memory encodes data in \textit{bits}, each of which represents a binary number (i.e. 0 or 1). In this case, there are two logic levels, \textit{low} and \textit{high}. \\
 
-\begin{itemize}
-	\item A function is \textit{continuous} over its domain if sufficiently small changes in input result in arbitrarily small changes in output.
-	\item  Continuous functions are a subset of the real functions $f:D\rightarrow\mathbb{R}$ where $D$ is either $\mathbb{R}$ or an interval of it. In other words, a continuous function $f$ maps a \textit{linear continuum} $D$ to the real number line $\mathbb{R}$.
-\end{itemize}
+\begin{table}[H]
+	\centering
+	\caption{Voltage Ranges for CMOS Logic Levels (V)}
+	\label{tab:logiclevels}
+	\begin{tabular}{|c|c|c|}
+		\vtabularspace{3}
+		\hline
+		Signals & Low (0) & High (1) \\
+		\hline
+		Input & 0.00--1.50 & 3.50--5.00 \\
+		Output & 0.00--0.05 & 4.95--5.00 \\
+		\hline
+		\vtabularspace{3}
+	\end{tabular}
+\end{table}
 
-This first property is necessary and sufficient for defining continuous functions, and it implies the second property, which is necessary, but not sufficient. However, confusingly, a signal is considered continuous even if it satisfies the second and not the first. Thus, a signal is continuous if its time $t$ is a linear continuum and its amplitude $A$ is a subset of real numbers. Otherwise, it is \textit{discrete}. \\
+However, quantitative data do not necessarily need to be expressed with symbolic digits. A quantity can instead be defined as \textit{analogous} to another quantity. For example, the unit of measurement known as the \textit{millimeter of mercury} (mmHg) defines pressure in terms of the height of a column of mercury in a manometer. It is used to quantify blood pressure, and it does so by measuring height and considering it an \textit{analog} of pressure. Using this method, data of one phenomenon can be encoded as data of a different phenomenon, provided that the quantities involved are somehow related to each other. In this case, a height of 1 mm is related to a pressure of 133.322 Pa above atmospheric pressure. \\\\
 
-Thanks to their real codomain, continuous signals have an infinite amount of possible output values. Any signal with this property is called \textit{analog} because an infinite-valued output can be seen as \textit{analogous} to the seemingly infinite complexity of the physical world. At any instant in its time domain, an analog signal can \textit{exactly} model a time-varying, real-world quantity, such as voltage, pressure, distance, mass, color, or anything else that is quantifiable. All continuous signals are analog, but not all analog signals are continuous. For example, the analog data of a continuous signal can be sampled at a finite rate in order to construct a discrete, analog signal. \\
+\subsection{Signals}
+
+% Sampling, measurement
+% Signals are messages composed of time-amplitude data
+
+Data are the building blocks of \textit{signals}, which are mathematical models of physical quantities that change over time. Signals are carriers of \textit{information} about these quantities. A piece of information, known as a \textit{message}, is \textit{encoded} as data of a certain \textit{medium}, either physical or numerical. Signals are functions $f$ that map a set of times $t$ to a set of amplitudes $A$, and they are classified according to the properties of these sets. \\
+
+% There are three main ways to distinguish signals: by their \textit{sample rate}, by their \textit{resolution}, and by their \textit{encoding}.
+
+% Resolution and encoding
+
+Sample rate is a property that is related to time. \textit{Continuous} signals are functions of continuous time. That is, $t$ is either the real number line $\mathbb{R}$ or an interval of it. In this case, $t$ is also called a \textit{linear continuum}. This definition of continuity is different from those given in real analysis, which describe functions for which sufficiently small changes in input result in arbitrarily small changes in output. For this reason, these signals are also called \textit{continuous-time} in order to avoid any confusion with the continuous functions that are described in mathematics. If a signal is not continuous, it is \textit{discrete} or \textit{discrete-time}. \\
+
+Continuous signals that have an infinite number of possible amplitude values are called \textit{analog} signals. This includes real-valued signals and complex-valued or  because an infinite-valued output can be seen as \textit{analogous} to the seemingly infinite complexity of quantities that exist in the physical world. This includes At any instant in its time domain, an analog signal can \textit{exactly} model a time-varying, real-world quantity, such as voltage, pressure, distance, mass, color, or anything else that is quantifiable. All continuous signals are analog, but not all analog signals are continuous. For example, the analog data of a continuous signal can be sampled at a finite rate in order to construct a discrete, analog signal. \\
+
+% ------
+
+In general, signals can be viewed as messages encoded in \textit{data} whose decoded content is \textit{information}. Like traditional written messages, ... Any signal can be expressed as an ordered sequence of data, each of which can be expressed as a tuple $(t,A(t))$. Because there are an infinite number of "instants" in any given interval of continuous time, the continuous signal shown above can be expressed as an \textit{infinite}, ordered sequence of analog data. \\
+
+% Vibrations, oscillations, music
 
 Consider an arbitrary continuous signal:
 
@@ -455,16 +526,17 @@ Consider an arbitrary continuous signal:
 		          samples=100,
 		          textbook-blue-dark,
 		          ultra thick,
-		          restrict x to domain=0:12] {5*sin(deg(x))};
+		          restrict x to domain=0:12] {2*sin(deg(x))+3*sin(deg(3*x))+2*sin(deg(7*x))};
 		\end{axis}
 		\fill (11.15,1.71) -- ++(-0.16,0.1) -- ++(0,-0.2);
 		\draw (11.7,1.71) node {$t$};
-		\draw (-0.22,2.2) -- ++(0,1);
-		\draw (-0.22,1.2) -- ++(0,-1);
+		
+		\draw (-0.22,2.2) -- ++(0,1.5);
+		\draw (-0.22,1.2) -- ++(0,-1.5);
+		\fill (-0.22,3.7) -- ++(0.1,-0.16) -- ++(-0.2,0);
+		\fill (-0.22,-0.3) -- ++(0.1,0.16) -- ++(-0.2,0);
 	\end{tikzpicture}
 \end{center}
-
-In general, signals can also be viewed as messages encoded in \textit{data} whose decoded content is \textit{information}. Like traditional written messages, ... Any signal can be expressed as an ordered sequence of data, each of which can be expressed as a tuple $(t,A(t))$. Because there are an infinite number of "instants" in any given interval of continuous time, the continuous signal shown above can be expressed an \textit{infinite}, ordered sequence of analog data. \\
 
 Analog data are special because they exist in continuous space and thus theoretically have an infinite degree of precision. If we assume a classical model of physics in which time flows continuously, we can model physical quantities with real numbers by writing an equation $A=f(t)$ where $t,A\in\mathbb{R}$. In this sense, a complete set of analog data over a given time interval (i.e. an analog signal) can perfectly describe a physical quantity over the same interval. However, handling analog data can be very difficult. \\
 
@@ -489,11 +561,11 @@ The base-60 system of Babylonian numerals is also notable. Its base is thought t
 	
 	Binary encoding of data is not a requirement for computation. Rather, it is a concession that is made toward digital electronics. Computers have been designed for other bases, and, in some cases, a non-binary encoding is actually preferable. As long as the data can be encoded with a finite number of symbols, it can be handled by a \textit{digital} computer (i.e. a computer that manipulates digits). A digital computer receives and operates on a \textit{discrete} signal of data, a value or set of values that updates at regular time intervals (e.g. every second, every minute, etc.). \\
 	
-	One could argue that \textit{analog} computers process data that is encoded with an infinite number of symbols. However, this would require a loose definition of "symbol" because analog data cannot be perfectly represented by digits. Rather, analog data is represented in a real, physical medium, like position, pressure, or voltage. An analog computer receives and operates on this \textit{continuous} signal of data that updates instantaneously with real-world time.  \\
+	One could argue that \textit{analog} computers process data that are encoded with an infinite number of symbols. However, this would require a loose definition of "symbol" because analog data cannot be perfectly represented by digits. Rather, analog data is represented in a real, physical medium, like position, pressure, or voltage. An analog computer receives and operates on this \textit{continuous} signal of data that updates instantaneously with real-world time.  \\
 	
 	Consider the  \hrefcolor[blue]{https://www.youtube.com/watch?v=s1i-dnAH9Y4}{\underline{Mark 1A Fire Control Computer}}, a device, more appropriately termed a "calculator" by modern definitions, that was installed on United States battleships in World War II. This machine used mechanical parts, such as gears, cams, followers, differentials, and integrators, to perform the arithmetic and calculus necessary to hit an enemy ship with a projectile, even if both ships were moving in different directions. It also used smooth components that gradually translated rotational motion into linear motion along a continuum. \\
 	
-	Despite being labeled with decimal (base-10) integers, this tool actually received \textit{continuous}, \textit{analog} quantities, such as physical position, as input. If each of its mechanical positions were considered a different "symbol", this system would theoretically be able to uniquely represent every real number to a infinite degree of precision and, thus, compute continuous functions without error. Such analog computation is performed also in slide rules, as well as in early electronic computers, which used voltage to represent numbers instead of position. \\
+	Despite being labeled with decimal (base-10) integers, this tool actually received \textit{continuous}, \textit{analog} quantities, such as physical position, as input. If each of its mechanical positions were considered a different "symbol", this system would theoretically be able to represent uniquely every real number to a infinite degree of precision and, thus, compute continuous functions without error. Such analog computation is performed also in slide rules, as well as in early electronic computers, which used voltage to represent numbers instead of position. \\
 	
 	\begin{center}
 		\begin{tikzpicture}
@@ -535,17 +607,17 @@ Regardless of which encoding is used, data is data.
 
 % All information is encoded and decoded (digital and sensory)
 
-
+% So, we can represent physical things we experience with digital data. If we collect enough data on the properties of these things, we can simulate reality. We can also simulate abstract mathematical phenomena and other abstract things like language and logic. Much of software design is the simulation of mathematical objects.
 
 % Structured manipulation = algorithm
 % The Shannon-Weaver Model (also known as Shannon theory or information theory)
 % Sensory, conversation, and machine examples
+
 % We need to communicate an algorithm in a language
 % What kind of language?
 % First, let's talk about language in general
 
-\subsection*{Language is Code}
-\addcontentsline{toc}{subsection}{Language is Code}
+\subsection{Language is Code}
 
 % Types of sentences - declarative and imperative
 % An algorithm as an argument
@@ -598,10 +670,15 @@ Formal proofs, on the other hand, require a \textit{formal language} for clarity
 
 A formal language is constructed from an \textit{alphabet} $\Sigma$, which is a set of symbols. The set of all possible finite-length \textit{words} or \textit{formulas} that can be built from this alphabet is denoted $\Sigma^*$. A formal language $L$ over an alphabet $\Sigma$ is then defined as a subset of $\Sigma^*$. Thus, a language is a set of purely syntactic objects. It may conform to a \textit{grammar} that specifies how words can be produced or arranged in a \textit{sentence}, but a language is never inherently meaningful. The semantics of a language is always interpreted separately from the syntax. \\
 
+%--------------------------------------------------------------------------------
+%    SECTION: REASONING AND LOGIC
+%--------------------------------------------------------------------------------
+
+\section{Reasoning and Logic}
+
 %----------------------------------------
 
-\subsection*{The Syntax and Semantics of Argument}
-\addcontentsline{toc}{subsection}{The Syntax and Semantics of Argument}
+\subsection{The Syntax and Semantics of Argument}
 
 \textit{Reasoning} is a cognitive act performed by rational beings. It involves the absorption and synthesis of presently available information for the purpose of elucidating knowledge. It may require the ingenuity of thought, but in some cases the rote application of simple rules is sufficient. Reasoning could also be described as the providing of good \textit{reasons} to explain or justify things. However, as you might expect, there is much debate over whether or not any particular reason is "good". Reasoning is broad, and it comes in different flavors, but ultimately it is the pursuit of \textit{truth}. \\
 
@@ -702,8 +779,7 @@ In this case, the conclusion is a \textit{semantic consequence} of the premises 
 
 %----------------------------------------
 
-\subsection*{The Structure of Proof}
-\addcontentsline{toc}{subsection}{The Structure of Proof}
+\subsection{The Structure of Proof}
 
 Of course, arguments can have more than one step. An argument can involve many inferences, some of which may use \textit{intermediate conclusions} as premises for further conclusions. Multiple threads of reasoning can extend from the premises, weaving through intermediate conclusions and intertwining via inference until they all meet at a \textit{final conclusion}. This is the \textit{tree structure} that is inherent in a \textit{formal proof}. \\
 
@@ -791,8 +867,7 @@ However, not all forms of reasoning have such strict rules. There are other meth
 
 %----------------------------------------
 
-\subsection*{The Oracle, the Seer, and the Sage}
-\addcontentsline{toc}{subsection}{The Oracle, the Seer, and the Sage}
+\subsection{The Oracle, the Seer, and the Sage}
 
 \textit{Intuition} is the capacity to create conclusions without evidence, proof, or a combination of the two. If any premises are involved, they may appear to an onlooker as if they were plucked out of thin air. If any method is involved, it is esoteric or hidden from sight. Acts of intuition range from the mundane procedures we perform without thinking to great feats of intellectual, artistic, and athletic achievement. And while it is often associated with magic or supernatural ability, intuition is a real, observable phenomenon, and it is a form of reasoning. \\
 
@@ -858,8 +933,7 @@ The Seer has premises for his conclusion, but the rules of inference involved in
 
 %----------------------------------------
 
-\subsection*{The Mathematician, the Scientist, and the Computer}
-\addcontentsline{toc}{subsection}{The Mathematician, the Scientist, and the Computer}
+\subsection{The Mathematician and the Scientist}
 
 % Deductive and Inductive (+ Abductive)
 % Mathematician write proofs (deductive), but they also use creativity (inductive)
@@ -908,8 +982,10 @@ Abductive reasoning allows us to ignore the many causes that are unlikely in fav
 
 %----------------------------------------
 
-\subsection*{Early Calculators and Computers}
-\addcontentsline{toc}{subsection}{Early Calculators and Computers}
+\subsection{Mechanical Computation}
+
+% Computation done by humans mechanically with tools
+% Computation done entirely by machines
 
 Before we discuss and classify automata in depth, we should first consider what is \textbf{not} an automaton. What is an example of something that might perform some kind of calculation, but is not a computer? What about a microwave? Is a microwave a computer? No, it is not. A computer can be programmed in some meaningful, robust way. A microwave contains a microprocessor, which uses \textit{combinational logic} and basic binary inputs to set timers and operate the oven. It cannot be programmed in any meaningful way. What about a calculator? Is a calculator a computer? If we are being formal, the answer is no, but it depends on what kind of "calculator" we are talking about. \\
 
@@ -950,6 +1026,15 @@ The line between calculator and computer began to blur with the introduction of 
 \part*{Theory of Computation}
 \addcontentsline{toc}{part}{\tocpartglyph Theory of Computation}
 
+\vspace{4mm}
+\begin{displayquote}
+	\textit{Theory is relevant to you because it shows you a new, simpler, and more elegant side of computers, which we normally consider to be complicated machines. The best computer designs and applications are conceived with elegance in mind. A theoretical course can heighten your aesthetic sense and help you build more beautiful systems.}
+	\begin{flushright}
+		---Michael Sipser
+	\end{flushright}
+\end{displayquote}
+\vspace{4mm}
+
 % Mathematical modeling of computation (sequential, functional, concurrent)
 % Automata theory covers sequential and concurrent, computability theory covers functional. Together, they cover the prominent models of computations.
 % Computational complexity theory is a categorization of computational tasks.
@@ -963,7 +1048,7 @@ The field has three branches: \textit{automata theory}, \textit{computability th
 % "Graduate-level mathematics"
 
 %--------------------------------------------------------------------------------
-%    SECTION 1: AUTOMATA THEORY
+%    SECTION: AUTOMATA THEORY
 %--------------------------------------------------------------------------------
 
 \toclineskip
@@ -1394,11 +1479,20 @@ Where should one store instructions or code in a stored-program computer? Those 
 % Byte vs word addressing
 	
 %--------------------------------------------------------------------------------
-%    SECTION 2: COMPUTABILITY THEORY
+%    SECTION: COMPUTABILITY THEORY
 %--------------------------------------------------------------------------------
 
 \toclineskip
 \section{Computability Theory}
+
+\vspace{4mm}
+\begin{displayquote}
+\textit{Thirty years ago, we used to ask: Can a computer simulate all processes of logic? The answer was yes, but the question was surely wrong. We should have asked: Can logic simulate all sequences of cause and effect? And the answer would have been no.}
+\begin{flushright}
+	---Gregory Bateson
+\end{flushright}
+\end{displayquote}
+\vspace{4mm}
 
 % Rewrite at the end
 
@@ -1974,7 +2068,7 @@ A theory is syntactic in nature. It is a set of strings written in a language $\
 % Post problem
 
 %--------------------------------------------------------------------------------
-%    SECTION 3: COMPUTATIONAL COMPLEXITY THEORY
+%    SECTION: COMPUTATIONAL COMPLEXITY THEORY
 %--------------------------------------------------------------------------------
 
 \toclineskip
