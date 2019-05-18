@@ -313,6 +313,7 @@ BCOR5mm, % Binding correction
 % Talk about what it was like to just live in this document for like multiple months.
 % Make a chart with philosophy as a circle (a non-metric space) and mathematics, physics, enigineering, computer science, etc. as bars (metrics spaces whose metric is academic complexity). The bars start at high-school level topics and extend to the bleeding edge of understanding. Draw two versions: what college taught me vs. what I felt like I needed to know. Syntactic understanding vs semantic understanding.
 % The value in spending time just philosophizing about things.
+% Belief that the most significant, cutting-edge, and interesting jobs in many fields require or would benefit greatly from a deep philosophical and mathematical understanding of software.
 
 \newpage
 
@@ -338,7 +339,7 @@ BCOR5mm, % Binding correction
 % All other excuses aside, I honestly just didn't care to go through the trouble.
 % However, all of the information here is the result of my understanding after doing cross-referenced research.
 % Philosophy of 98% accuracy.
-% Thanks to Wikipedia, math.stackexchange, cs.stackexchange, tex.stackexchange, Stack Overflow, Encyclopedia of Mathematics.
+% Thanks to Wikipedia, math.stackexchange, cs.stackexchange, tex.stackexchange, Stack Overflow, Encyclopedia of Mathematics, Stanford Encyclopedia of Philosophy.
 % Nothing here is plagiarized.
 % Copyright.
 % If it makes you feel better, you can consider this a work of fiction.
@@ -402,7 +403,7 @@ This guide is everything you need to know in order to program computers professi
 % Make it inspiring. Make it motivational. Make sound accessible.
 
 
-% Certainty and objectivity are the pursuit of man. We pursue it via calculation and computation.
+% The words on the page will not teach the material to you. They are simply there to guide your thoughts toward understanding. You have to spend time in thought to foster intuition.
 % Discuss the goal of this guide. Discuss why someone might want to read it.
 % Discuss why content was chosen and why it is ordered the way it is.
 % Discuss why certain topics were left out.
@@ -444,13 +445,13 @@ This guide is everything you need to know in order to program computers professi
 
 There are many ways that one can describe or practice computation. Some are \textit{poetic}, others are more \textit{formal}, and many of them we will discuss at length. In doing so, we will generally flow \textit{from} poetry \textit{to} formality, starting with broad statements and colorful examples and progressing toward a formal understanding. For now, we will say that computation is a process that resolves \textit{uncertainty}. \\
 
-The Ancient Greek conception of Chaos is a fascinating depiction of uncertainty: a vast nothingness that preceded the creation of the Universe. Curiously, the modern definition of the word is nearly inverted. Now, one might say that a situation is \textit{chaotic} if there is \textit{so much} going on that it is hard to make sense of anything. Despite their great conceptual difference, these meanings share a common property. They both evoke \textit{confusion}. \\
+The Ancient Greek conception of Chaos is a fascinating depiction of uncertainty: a vast nothingness that preceded the creation of the Universe. Curiously, the modern definition of the word is nearly inverted. Now, one might say that a situation is \textit{chaotic} if there is so much going on that it is hard to make sense of anything. Despite their great conceptual difference, these meanings share a common property. They both evoke \textit{confusion}. \\
 
-This world in which we find ourselves may indeed be post-Chaos, but confusion remains a familiar state for us. In fact, it is our natural state. We come into life confused about everything, crying, open-eyed in reaction to \textit{how much} is going on around us. Slowly, we figure a few things out. Eventually, we consider quite a few things to be \textit{certain}. Much later, the wise ones among us come to realize the depth of their confusion. \\
+This world in which we find ourselves may indeed be post-Chaos, but confusion remains a familiar state for us. In fact, it is our natural state. We come into life confused about everything, crying, open-eyed in reaction to how much is going on around us. Slowly, we figure a few things out. Eventually, we consider quite a few things to be \textit{certain}. Much later, the wise ones among us come to realize the true depth of their confusion. \\
 
-People are sometimes ridiculed for being confused. People also sometimes fool themselves into believing that things are certain when they are not. One group is lost, and the other is misguided, but both are \textit{ignorant}. They know not. \\
+Although we are initially confused, we naturally pursue an understanding of the chaos that surrounds us. We perceive the goings-on of our environment and draw \textit{information} from them, piecing together a \textit{knowledge} that orients us and gives meaning to the disorder of existence. This is the crux of computation. It is the structured manipulation of \textit{data} into \textit{information} for the purpose of acquiring \textit{knowledge}. \\
 
-%a structured manipulation of \textit{data}.
+In this chapter, we will explore what computation is, how it is done, and what it can accomplish. Many physical and mental processes can be viewed through the lens of computation, including the manipulation of numbers, as practiced in mathematics. Other computations may involve the manipulation of time-varying physical phenomena, as practiced in signal processing, the manipulation of truths, as practiced in logic, or the manipulation of words, as practiced in language. We will unify these processes under a general, formal definition before zeroing in on how computation arises in computer science, and, by extension, in software engineering, as the manipulation of \textit{digital state}. \\
 
 %--------------------------------------------------------------------------------
 %    SECTION: DATA, INFORMATION, AND COMMUNICATION
@@ -459,11 +460,13 @@ People are sometimes ridiculed for being confused. People also sometimes fool th
 \toclineskip
 \section{Data, Information, and Communication}
 
-Data are unorganized facts or statistical values that may reveal something of interest. They are collected by \textit{sampling} phenomena from the observable Universe. Once collected, they can be cleaned, organized, and then analyzed in the hope of gaining a better understanding of reality. When a set of structured data is put into context, it can be interpreted as \textit{information} that explains what has been observed. This information can then be \textit{encoded} as an ordered sequence of data known as a \textit{message}. Messages are \textit{transmitted} and \textit{received} both by Nature and by Man. In the latter case, this process can be viewed as the \textit{communication} of abstract, human thought. \\
+Data are unorganized facts or statistical values that may reveal something of interest. They are collected by \textit{sampling} the properties of \textit{phenomena} from the observable Universe. Once collected, they can be cleaned, organized, and then analyzed in the hope of gaining a better understanding of reality. When a set of structured data is put into context, it can be interpreted as \textit{information} that explains what has been observed. This information can then be \textit{encoded} as an ordered sequence of data known as a \textit{message}. Messages are \textit{transmitted} and \textit{received} both by Nature and by Man. In the latter case, this process can be viewed as the \textit{communication} of abstract, human thought. \\
 
-Data can describe a variety of things, such as quantities, qualities, changes, and relations. In computer science, data are \textit{quantitative}. That is, they describe \textit{quantities}, which are properties that can be modeled with \textit{numbers}. A quantity can be further classified as either a \textit{multitude} or a \textit{magnitude}. The former is a \textit{discrete} quantity that is \textit{counted}. One would ask "how many" elements belong to a multitude. In contrast, a magnitude is a \textit{continuous} quantity that is \textit{measured}. It is the size of something that is modeled as a \textit{continuum} (e.g. by fields such as $\mathbb{R}$ or $\mathbb{C}$), and one would accordingly inquire as to "how much" of it there is. Sets of data that are collected at a finite rate are technically multitudes of samples, even if the quantity being measured is a magnitude. \\
+Data can describe a variety of things, such as quantities, qualities, and relations. In computer science, data are \textit{quantitative}. That is, they describe \textit{quantities}, which are properties that can be modeled with \textit{numbers}. A quantity can be further classified as either a \textit{multitude} or a \textit{magnitude}. The former is a \textit{discrete} quantity that is \textit{counted}. One would ask "how many" elements belong to a multitude. In contrast, a magnitude is a \textit{continuous} quantity that is \textit{measured}. It is the size of something that is modeled as a \textit{continuum} (e.g. by fields such as $\mathbb{R}$ or $\mathbb{C}$), and one would accordingly inquire as to "how much" of it there is. \\
 
-Data can be represented by various \textit{media}, both abstract and concrete. In the age of modern computing, data are often assumed to be \textit{digital} in nature, expressed in the symbolic medium of numerical \textit{digits}. This is the case for data processed by modern, electronic computers, which charge capacitors in order to generate voltages that represent \textit{logic levels}. A \textit{transistor} acts as a gate to each capacitor, staying closed to retain \textit{electric charge} during storage and opening to transmit and receive charge on reads and writes. The ratio of a capacitor's charge to its capacitance determines its voltage. This voltage is then mapped to a logic level, which is defined by a range of voltage values. Modern computer memory encodes data in \textit{bits}, each of which represents a binary number (i.e. 0 or 1). In this case, there are two logic levels, \textit{low} and \textit{high}. \\
+Sets of data collected at a finite rate (e.g. by a \textit{measuring instrument}) are technically multitudes of samples, even if the quantity being measured is a magnitude. For example, if a ball were thrown in the air, one could ask "how much" height it has at regular intervals of time. Once the data collection ends, one can also ask "how many" samples were acquired. Furthermore, one can ask "how often" samples were taken. This is an evaluation of the \textit{sampling rate}, and it is really just an alternative way of asking with "how much" speed samples were taken. Rates and ratios are still quantities. The existence of the rational numbers $\mathbb{Q}$ are evidence enough of this. \\
+
+Data can be represented by various \textit{media}, both abstract and concrete. In the age of modern computing, data are often assumed to be \textit{digital} in nature, expressed in the symbolic medium of numerical \textit{digits}. This is the case for data processed by modern, electronic computers, which charge capacitors in order to generate voltages that represent \textit{logic levels}. A \textit{transistor} acts as a gate to each capacitor, staying closed to retain \textit{electric charge} during storage and opening to transmit and receive charge on reads and writes. The ratio of a capacitor's charge to its capacitance determines its voltage. This voltage is then mapped to a logic level, which is specified by a range of voltage values. These logic levels represent digits. In modern computer memory, data are represented as binary digits or \textit{bits} (i.e. the digits 0 and 1), each of which represents a binary number. In this case, there are two logic levels, \textit{low} and \textit{high}. \\
 
 \begin{table}[H]
 	\centering
@@ -481,20 +484,34 @@ Data can be represented by various \textit{media}, both abstract and concrete. I
 	\end{tabular}
 \end{table}
 
-However, quantitative data do not necessarily need to be expressed with symbolic digits. A quantity can instead be defined as \textit{analogous} to another quantity. For example, the unit of measurement known as the \textit{millimeter of mercury} (mmHg) defines pressure in terms of the height of a column of mercury in a manometer. It is used to quantify blood pressure, and it does so by measuring height and considering it an \textit{analog} of pressure. Using this method, data of one phenomenon can be encoded as data of a different phenomenon, provided that the quantities involved are somehow related to each other. In this case, a height of 1 mm is related to a pressure of 133.322 Pa above atmospheric pressure. \\\\
+However, quantitative data do not necessarily need to be expressed with symbolic digits. A quantity can instead be defined as \textit{analogous} to another quantity. For example, the unit of measurement known as the \textit{millimeter of mercury} (mmHg) defines pressure in terms of the height of a column of mercury in a manometer. It is used to quantify blood pressure, and it does so by measuring height and considering it an \textit{analog} or \textit{model} of pressure. Using this method, data about one phenomenon can be encoded as data of a different phenomenon, provided that the quantities involved are somehow related to each other. In this case, a height of 1 mm is related to a pressure of 133.322 Pa above atmospheric pressure. \\
+
+\begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
+	\vspace{2mm}
+	\begin{center}
+		\textbf{Phenomena: Objects and Events, Both, and Neither}
+	\end{center}
+	\vspace{1mm}
+	As stated previously, data are collected by sampling the properties of "phenomena from the observable Universe." It is worth pausing here to consider what this really means. \textit{Phenomena} are omnipresent in reality. They are the things we observe, perceive to exist, or \textit{experience}. There is much philosophical debate about their study, \textit{phenomenology}, to the point that some views differ on a fundamental level. Even basic categorization of the countless phenomena that one can experience in life is difficult because there is no consensus on what exactly experience \textit{is}. \\
+	
+	% Empirical vs. rational
+	% Objects vs. events. Is there a difference? Maybe not, but there at least appears to be one. Humans have traditionally discerned a difference, notably in language. Perhaps the difference is only conceptually convenient. Is an apple distinct from its decaying over time? Is computer state really a meaningful object with clock speeds in the gigahertz? Is a thunderstorm an event, or just a system of many, tiny objects with different properties, all changing with time?
+	% Objects are characterized spatially, events temporally.
+	% Substantial vs. formal phenomena
+	% Mathematical objects and operators
+	
+	They exist in the physical realm as \textit{substances}, which have both \textit{form} and \textit{matter}, that . Form, which defines the \textit{properties} of a substance, can be considered separately from matter in the mental realm by means of \textit{abstraction}. This is the approach of mathematics, which seeks to define  \\
+	\vspace{1mm}
+\end{tcolorbox}
+\vspace{7mm}
 
 \subsection{Signals}
 
-% Sampling, measurement
 % Signals are messages composed of time-amplitude data
 
-Data are the building blocks of \textit{signals}, which are mathematical models of physical quantities that change over time. Signals are carriers of \textit{information} about these quantities. A piece of information, known as a \textit{message}, is \textit{encoded} as data of a certain \textit{medium}, either physical or numerical. Signals are functions $f$ that map a set of times $t$ to a set of amplitudes $A$, and they are classified according to the properties of these sets. \\
+Data are the building blocks of \textit{signals}, which are mathematical models of quantities that change over time. Signals are carriers of \textit{information} about these quantities. A piece of information, known as a \textit{message}, is encoded as data of a certain \textit{medium}, either physical or numerical. In this sense, one can consider information a meaningful pattern that is embedded in a phenomenon. Philosophically, information is the \textit{essence} of a \textit{substance}, a set of properties that defines what a thing is. Mathematically, signals are functions $f$ that map a set of times $t$ to a set of amplitudes $A$, and they are classified according to the properties of these sets. \\
 
-% There are three main ways to distinguish signals: by their \textit{sample rate}, by their \textit{resolution}, and by their \textit{encoding}.
-
-% Resolution and encoding
-
-Sample rate is a property that is related to time. \textit{Continuous} signals are functions of continuous time. That is, $t$ is either the real number line $\mathbb{R}$ or an interval of it. In this case, $t$ is also called a \textit{linear continuum}. This definition of continuity is different from those given in real analysis, which describe functions for which sufficiently small changes in input result in arbitrarily small changes in output. For this reason, these signals are also called \textit{continuous-time} in order to avoid any confusion with the continuous functions that are described in mathematics. If a signal is not continuous, it is \textit{discrete} or \textit{discrete-time}. \\
+Sample rate is a property that is related to time. \textit{Continuous} signals are functions of continuous time. That is, $t$ is either the real number line $\mathbb{R}$ or an interval of it. In this case, $t$ is also called a \textit{linear continuum}. This definition of continuity is different from those given in real analysis, which describe functions for which sufficiently small changes in input result in arbitrarily small changes in output. For this reason, these signals are also called \textit{continuous-time} in order to avoid any confusion with the continuous functions that are described in mathematics. If a signal is not continuous, it is \textit{discrete} or discrete-time. \\
 
 Continuous signals that have an infinite number of possible amplitude values are called \textit{analog} signals. This includes real-valued signals and complex-valued or  because an infinite-valued output can be seen as \textit{analogous} to the seemingly infinite complexity of quantities that exist in the physical world. This includes At any instant in its time domain, an analog signal can \textit{exactly} model a time-varying, real-world quantity, such as voltage, pressure, distance, mass, color, or anything else that is quantifiable. All continuous signals are analog, but not all analog signals are continuous. For example, the analog data of a continuous signal can be sampled at a finite rate in order to construct a discrete, analog signal. \\
 
@@ -544,7 +561,7 @@ Imagine that you throw a ball in the air and somehow exactly measure its height 
 
 % Need digital data
 
-and these numbers can be \textit{encoded} with either a single \textit{symbol} or a sequence of symbols called a \textit{string}. For example, the number eight is typically encoded with the symbol 8, which is a \textit{numeral} or \textit{digit}. The number could just as easily be represented by the symbol $\rtriltri$, but this would be non-standard. Numbers are usually encoded according to an established \textit{numeral system} of some \textit{base} or \textit{radix} that specifies how many unique symbols are used for representation. Numerical data intended to be read by humans are typically encoded in a base-10 system, one of ten digits. \\
+and these numbers can be \textit{encoded} with either a single \textit{symbol} or a sequence of symbols called a \textit{string}. For example, the number eight is typically encoded with the symbol 8, which is a \textit{numeral} or \textit{digit}. The number could just as easily be represented by the symbol \varstigma, but this would be non-standard. Numbers are usually encoded according to an established \textit{numeral system} of some \textit{base} or \textit{radix} that specifies how many unique symbols are used for representation. Numerical data intended to be read by humans are typically encoded in a base-10 system, one of ten digits. \\
 
 This design choice is ancient and natural. It is based on the ten digits of our hands, which have aided us in counting for hundreds of millennia. In fact, fingers are the oldest counting tools used by man, and we still use them today for this purpose. Other anatomically inspired bases have been used in early numeral systems, such as base-20, which counts the fingers and the toes, or base-12, which uses a thumb on one hand to count the bones of the other four fingers. However, today, the base-10 \textit{Hindu-Arabic numeral system} is universal in mathematics. \\
 
