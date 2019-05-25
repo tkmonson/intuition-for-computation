@@ -439,19 +439,23 @@ This guide is everything you need to know in order to program computers professi
 \end{displayquote}
 \vspace{4mm}
 
-% Rewrite, be poetic about computation. Really describe it. Then discuss how the idea was generalized and formalized and found to have a lot of commonalities with language, logic, math...
-
 \textit{Computation} is an essential part of being human. Just as we act on our perceptions, feel our emotions, and daydream in our imaginations, we also compute with our \textit{reasoning} in order to find answers to the questions we have about life. \\
 
-There are many ways that one can describe or practice computation. Some are \textit{poetic}, others are more \textit{formal}, and many of them we will discuss at length. In doing so, we will generally flow \textit{from} poetry \textit{to} formality, starting with broad statements and colorful examples and progressing toward a formal understanding. For now, we will say that computation is a process that resolves \textit{uncertainty}. \\
+There are many ways that one can describe computation. Some are \textit{poetic}, others are more \textit{formal}, and many of them we will discuss at length. In doing so, we will generally flow \textit{from} poetry \textit{to} formality, starting with broad statements and colorful examples and progressing toward a formal understanding. For now, we will say that computation is a process that resolves \textit{uncertainty}. \\
 
 The Ancient Greek conception of Chaos is a fascinating depiction of uncertainty: a vast nothingness that preceded the creation of the Universe. Curiously, the modern definition of the word is nearly inverted. Now, one might say that a situation is \textit{chaotic} if there is so much going on that it is hard to make sense of anything. Despite their great conceptual difference, these meanings share a common property. They both evoke \textit{confusion}. \\
 
 This world in which we find ourselves may indeed be post-Chaos, but confusion remains a familiar state for us. In fact, it is our natural state. We come into life confused about everything, crying, open-eyed in reaction to how much is going on around us. Slowly, we figure a few things out. Eventually, we consider quite a few things to be \textit{certain}. Much later, the wise ones among us come to realize the true depth of their confusion. \\
 
-Although we are initially confused, we naturally pursue an understanding of the chaos that surrounds us. We perceive the goings-on of our environment and draw \textit{information} from them, piecing together a \textit{knowledge} that orients us and gives meaning to the disorder of existence. This is the crux of computation. It is the structured manipulation of \textit{data} into \textit{information} for the purpose of acquiring \textit{knowledge}. \\
+Although we are initially confused, we naturally pursue an understanding of the chaos that surrounds us. We perceive the goings-on of our environment and draw \textit{information} from them, piecing together a \textit{knowledge} that orients us and gives meaning to the disorder of our existence. This is the crux of computation. It is the structured manipulation of \textit{data} into \textit{information} for the purpose of acquiring \textit{knowledge}. \\
 
-In this chapter, we will explore what computation is, how it is done, and what it can accomplish. Many physical and mental processes can be viewed through the lens of computation, including the manipulation of numbers, as practiced in mathematics. Other computations may involve the manipulation of time-varying physical phenomena, as practiced in signal processing, the manipulation of truths, as practiced in logic, or the manipulation of words, as practiced in language. We will unify these processes under a general, formal definition before zeroing in on how computation arises in computer science, and, by extension, in software engineering, as the manipulation of \textit{digital state}. \\
+These terms---data, information, and knowledge---are broad enough to apply to nearly any academic field that strives for objectivity. One can have data on, information about, and knowledge of anything that can be observed. In fact, fields that seem quite different may only differ in the kinds of data that are handled. In electrical physics, data is collected on properties like voltage and amperage to give insight into the behavior of electrons. Meanwhile, in linguistics, data is collected on words and phonetic sounds to give insight into the origin, structure, and meaning of language. Common to both disciplines is the computation of answers. \\
+
+% Data can represent anything. The medium it takes on determines what field you are working in. In math, data are numbers, info is theorems. In physics, data are physical properties, info is laws. In logic, data are statements, info are conclusions. In language, data are words, info is semantic meaning.
+
+% Data is syntax, information is semantics?
+
+In this chapter, we will explore what computation is, how it is done, and what it can accomplish. Many physical and mental processes can be viewed through the lens of computation, including the manipulation of numbers, as practiced in mathematics. Other computations may involve the manipulation of time-varying physical phenomena, as practiced in signal processing, the manipulation of truths, as practiced in logic, or the manipulation of words, as practiced in language. We will unify these processes under a general definition before zeroing in on how computation arises in computer science, and, by extension, in software engineering, as the manipulation of \textit{digital state}. \\
 
 %--------------------------------------------------------------------------------
 %    SECTION: DATA, INFORMATION, AND COMMUNICATION
@@ -464,9 +468,11 @@ Data are unorganized facts or statistical values that may reveal something of in
 
 Data can describe a variety of things, such as quantities, qualities, and relations. In computer science, data are \textit{quantitative}. That is, they describe \textit{quantities}, which are properties that can be modeled with \textit{numbers}. A quantity can be further classified as either a \textit{multitude} or a \textit{magnitude}. The former is a \textit{discrete} quantity that is \textit{counted}. One would ask "how many" elements belong to a multitude. In contrast, a magnitude is a \textit{continuous} quantity that is \textit{measured}. It is the size of something that is modeled as a \textit{continuum} (e.g. by fields such as $\mathbb{R}$ or $\mathbb{C}$), and one would accordingly inquire as to "how much" of it there is. \\
 
-Sets of data collected at a finite rate (e.g. by a \textit{measuring instrument}) are technically multitudes of samples, even if the quantity being measured is a magnitude. For example, if a ball were thrown in the air, one could ask "how much" height it has at regular intervals of time. Once the data collection ends, one can also ask "how many" samples were acquired. Furthermore, one can ask "how often" samples were taken. This is an evaluation of the \textit{sampling rate}, and it is really just an alternative way of asking with "how much" speed samples were taken. Rates and ratios are still quantities. The existence of the rational numbers $\mathbb{Q}$ are evidence enough of this. \\
+A set of data collected at a finite rate (e.g. by a \textit{measuring instrument}) is technically a  multitude of samples, even if the quantity being measured is a magnitude. For example, if a ball were thrown in the air, one could ask "how much" height it has at regular intervals of time. Once the data collection ends, one can also ask "how many" samples were acquired. Furthermore, one can ask "how often" samples were taken. This is an evaluation of the \textit{sampling rate}, and it is really just an alternative way of asking with "how much" speed samples were taken. Rates and ratios are still quantities. The existence of the rational numbers $\mathbb{Q}$ are evidence enough of this. \\
 
-Data can be represented by various \textit{media}, both abstract and concrete. In the age of modern computing, data are often assumed to be \textit{digital} in nature, expressed in the symbolic medium of numerical \textit{digits}. This is the case for data processed by modern, electronic computers, which charge capacitors in order to generate voltages that represent \textit{logic levels}. A \textit{transistor} acts as a gate to each capacitor, staying closed to retain \textit{electric charge} during storage and opening to transmit and receive charge on reads and writes. The ratio of a capacitor's charge to its capacitance determines its voltage. This voltage is then mapped to a logic level, which is specified by a range of voltage values. These logic levels represent digits. In modern computer memory, data are represented as binary digits or \textit{bits} (i.e. the digits 0 and 1), each of which represents a binary number. In this case, there are two logic levels, \textit{low} and \textit{high}. \\
+Data can be represented by various \textit{media}, both symbolic and physical. In the age of modern computing, data are often assumed to be \textit{digital} in nature, expressed in the symbolic medium of numerical \textit{digits}. This is the case for data processed by modern, electronic computers, which charge capacitors in order to generate voltages that represent \textit{logic levels}. A \textit{transistor} acts as a gate to each capacitor, staying closed to retain \textit{electric charge} during storage and opening to measure or modify voltage on reads and writes respectively. \\
+
+The ratio of a capacitor's charge to its capacitance determines its voltage (i.e. $V=\frac{q}{C}$). This voltage is then mapped to a logic level, which corresponds to a range of voltage values. These logic levels represent digits. In modern computer memory, data are represented as binary digits or \textit{bits} (i.e. the digits 0 and 1), each of which represents a binary number. In this case, there are two logic levels, \textit{low} and \textit{high}. \\
 
 \begin{table}[H]
 	\centering
@@ -482,31 +488,116 @@ Data can be represented by various \textit{media}, both abstract and concrete. I
 		\hline
 		\vtabularspace{3}
 	\end{tabular}
-\end{table}
+\end{table} 
 
-However, quantitative data do not necessarily need to be expressed with symbolic digits. A quantity can instead be defined as \textit{analogous} to another quantity. For example, the unit of measurement known as the \textit{millimeter of mercury} (mmHg) defines pressure in terms of the height of a column of mercury in a manometer. It is used to quantify blood pressure, and it does so by measuring height and considering it an \textit{analog} or \textit{model} of pressure. Using this method, data about one phenomenon can be encoded as data of a different phenomenon, provided that the quantities involved are somehow related to each other. In this case, a height of 1 mm is related to a pressure of 133.322 Pa above atmospheric pressure. \\
+However, quantitative data need not be expressed with symbolic digits. They can instead be defined in terms of an \textit{analogous} physical quantity. For example, the unit of measurement known as the \textit{millimeter of mercury} (mmHg) defines pressure in terms of the height of a column of mercury in a manometer. It is used to quantify blood pressure, and it does so by considering height an \textit{analog} or \textit{model} of pressure measuring that instead. Using this method, data about one phenomenon can be encoded as data of a different phenomenon, provided that the quantities involved are somehow related to each other. In this case, a height of 1 mm is related to a pressure of 133.322 Pa above atmospheric pressure. \\
 
-\begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
-	\vspace{2mm}
-	\begin{center}
-		\textbf{Phenomena: Objects and Events, Both, and Neither}
-	\end{center}
-	\vspace{1mm}
-	As stated previously, data are collected by sampling the properties of "phenomena from the observable Universe." It is worth pausing here to consider what this really means. \textit{Phenomena} are omnipresent in reality. They are the things we observe, perceive to exist, or \textit{experience}. There is much philosophical debate about their study, \textit{phenomenology}, to the point that some views differ on a fundamental level. Even basic categorization of the countless phenomena that one can experience in life is difficult because there is no consensus on what exactly experience \textit{is}. \\
+%----------------------------------------
+
+\subsection{Numbers and Numerals}
+
+% Computation with analog data means you are using actual, original, non-replicable quantites. Computation with digital data means you are using simulated quantities that are replicas or model of what you actually care about. We model EVERYTHING with numbers: physics, language, logic, images, video, music. Since we're going to be talking about digital data, we need to talk about numbers first.
+
+% Pros and cons of digital and analog computation
+
+One can think of digital encoding as a special case of analog encoding, in which a quantity is considered analogous to a sequence of digits that represents a \textit{number}. Because numbers are abstract and data must be concrete, numbers must be associated with symbols known as \textit{numerals} if they are to be used in computation. This can be done in a structured way by conforming to representations prescribed by a \textit{numeral system}. If this system is \textit{positional}, numbers can be represented by sequences or \textit{strings} of numerals, where each position in such a string is called a \textit{digit}. Because digital data are related to both numbers and their numerical representations, it is worth touching on these concepts. \\
+
+First, let us consider whether or not numbers even exist. That is, do numbers exist objectively, independent of human perception? As you can imagine, there is no consensus on this matter. Mathematicians and philosophers have long held differing views on this question, and they have formed various schools of thought that address such inquiries into the \textit{philosophy of mathematics}. \\
+
+Early thoughts on the nature of numbers \\
+
+\subsubsection{Euclid's \textit{Elements}, Plato's Forms, and Mathematical Realism}
+
+Although arithmetic has been practiced since prehistory, theoretical mathematics was founded by the Ancient Greeks. The Greeks, in contrast to earlier peoples, applied \textit{deductive reasoning} to the study of mathematics. While sophisticated arithmetic, geometry, and algebra was done before this period by the Babylonians and the Egyptians, this work was all based on \textit{evidence} collected from the physical world. The Greeks were the first to recognize the need for \textit{proof} of mathematical statements using \textit{logic}. \\
+
+% Euclid used axiomatic and constructive methods
+% Axioms come from Aristotle, formal definitions come from Plato
+
+While various proofs were written by Greeks in the centuries before his birth, Euclid of Alexandria is nonetheless credited with formalizing the concept of proof due to his use of the \textit{axiomatic method} in his groundbreaking treatise, \textit{Elements}. This work was the first of its kind, serving as both a comprehensive compilation of Greek mathematical knowledge and as an introductory text suitable for students. Additionally, it was a product of a synthesis of Greek thought, founded on the epistemology and metaphysics of Plato and Aristotle. \\
+
+\textit{Elements} is divided into thirteen books. Books I--IV and VI cover \textit{plane geometry}, the study of shape, size, and position in two-dimensional space. Books V and VII--X cover elementary \textit{number theory} (classically known as \textit{arithmetic}) in a geometric way, expressing numbers as lengths of line segments. Finally, Books XI--XIII cover \textit{solid geometry} by applying principles of plane geometry to three-dimensional space. Each book begins with a list of \textit{definitions} (if necessary) that assign names to abstract mathematical ideas that are expressed in unambiguous terms. These ideas are then used to prove \textit{propositions}, mathematical statements that warrant proof. \\
+
+Euclid's proofs in \textit{Elements} can be described as \textit{axiomatic}. That is, they start from \textit{axioms}, statements that are taken as true without proof. Axioms solve a problem in logical argumentation known as \textit{infinite regress}, which often occurs, for example, when children ask questions. A curious child, seeking knowledge, might ask his parent why something is the way it is. That is, he requests a proof of some proposition $P_0$. The parent would respond with some proposition $P_1$ that supports the truth of $P_0$. The child, unsatisfied, would subsequently ask why $P_1$ is true. The parent would respond with the assertion that $P_2$ is true and implies $P_1$, and the child would similarly question whence $P_2$ arises. This dialogue could continue in this manner forever with the child endlessly searching for an anchor with which he can ground his understanding. However, patience waning, the parent must end this line of questioning by giving an unquestionable answer. Common examples include "Because that's just the way it is" or "Because I said so". \\
+
+Some Greek philosophers considered infinite regress to be a serious epistemological issue. If we assume that all knowledge must be demonstrable by a proof or logical argument, we cannot know anything because our axioms cannot be satisfactorily proven. And yet, there are things that we claim to know. In his \textit{Posterior Analytics}, Aristotle challenges this notion that all knowledge must be provable, averring that \\
+
+\begin{displayquote}
+	\textit{All instruction given or received by way of argument proceeds from pre-existent knowledge.}
+	\vspace{4mm}
+\end{displayquote} 
+
+Aristotle continues his text in support of this statement. He discusses the nature of \textit{premises} in his \textit{syllogistic logic} and how they differ from the \textit{conclusions} that they derive. Namely, he states that the premises of a knowledge-producing deductive argument or \textit{syllogism} must be \textit{true}, to ensure the truth of their conclusion, \textit{indemonstrable}, to ensure that they are independent of proof, and \textit{causal}, to ensure that their conclusion logically follows: \\
+
+\begin{displayquote}
+	\textit{Assuming then that my thesis as to the nature of scientific knowledge is correct, the premises of demonstrated knowledge must be true, primary, immediate, better known than and prior to the conclusion, which is further related to them as effect to cause. Unless these conditions are satisfied, the basic truths will not be 'appropriate' to the conclusion. Syllogism there may indeed be without these conditions, but such syllogism, not being productive of scientific knowledge, will not be demonstration. The premises must be true: for that which is non-existent cannot be known---we cannot know, e.g. that the diagonal of a square is commensurate with its side. The premises must be primary and indemonstrable; otherwise they will require demonstration in order to be known, since to have knowledge, if it be not accidental knowledge, of things which are demonstrable, means precisely to have a demonstration of them. The premises must be causes, since we posess scientific knowledge of a thing only when we know its cause; prior, in order to be causes; antecedently known, this antecedent knowledge being not our mere understanding of the meaning, but knowledge of the fact as well.}
+	\vspace{4mm}
+\end{displayquote}
+
+Thus, Aristotle differentiates "pre-existent knowledge" from "scientific knowledge". Whereas the latter is produced by means of a logical proof, the former is produced by one's \textit{intuition}. He goes on to argue that what we intuitively understand is indeed knowledge, in the same way that what we prove is knowledge. The difference, he argues, is that axioms are \textit{self-evident}. For example, the reflexive property of the natural numbers (i.e. for every natural $x$, $x=x$) is typically considered so obvious that proof is unnecessary. At the same time, the statement is so fundamental that it cannot really be proven. Despite their unprovability, Aristotle argues that axioms such as these constitute knowledge that is simply, unquestionably \textit{known}: \\
+
+\begin{displayquote}
+	\textit{Our own doctrine is that not all knowledge is demonstrative: on the contrary, knowledge of the immediate premises is independent of demonstration. (The necessity of this is obvious; for since we must know the prior premises from which the demonstration is drawn, and since the regress must end in immediate truths, those truths must be indemonstrable.) Such, then, is our doctrine, and in addition we maintain that besides scientific knowledge there is its originative source which enables us to recognize the definitions.}
+	\vspace{4mm}
+\end{displayquote}
+
+Euclid apparently agreed with this epistemology because Book I of \textit{Elements}, in addition to its definitions and propositions, contains a number of axioms, which are labelled either as \textit{postulates} or \textit{common notions}. In antiquity, a postulate denoted an axiom of a particular science, whereas a common notion denoted an axiom common to all sciences. Today, we do not think of axioms in this way. Rather, we simply consider them starting points for proofs. Euclid's axioms are given below: \\
+
+\begin{center}
+	\textbf{Postulates}
+	\begin{enumerate}
+		\item Hi
+	\end{enumerate}
+	\textbf{Common Notions}
+	\begin{enumerate}
+		\item Hi
+	\end{enumerate}
 	
-	% Empirical vs. rational
-	% Objects vs. events. Is there a difference? Maybe not, but there at least appears to be one. Humans have traditionally discerned a difference, notably in language. Perhaps the difference is only conceptually convenient. Is an apple distinct from its decaying over time? Is computer state really a meaningful object with clock speeds in the gigahertz? Is a thunderstorm an event, or just a system of many, tiny objects with different properties, all changing with time?
-	% Objects are characterized spatially, events temporally.
-	% Substantial vs. formal phenomena
-	% Mathematical objects and operators
+\end{center}
+
+Euclid's proofs can also be described as \textit{constructive}. \\
+
+% Plato's doctrines were imprecise. Thus, Plato's theory of Forms is a reconstruction made by later scholars.
+% Universals (Forms) vs material particulars
+% Particulars "partake" of forms
+% Being and Partaking: Forms are perfect, particulars approximate
+% Each form is of one essence, and each essence is the essence of one form
+% The only property of a Form is itself: Beauty is beautiful and nothing else.
+% The physical world is full of copies of Forms
+% Forms are immaterial, non-spatial, and atemporal. They do not change.
+
+% The Greeks used geometry to get around the precision errors of irrational numbers. That's why they used line segments to teach arithmetic.
+
+% Elements is great and super important, but in some ways it held mathematics back. It was taught for over 2000 years, and many people assumed it could not be wrong. In fact, it is not considered formal by modern standards, and it is not a general theory of geometry. Critique of the 5th postulate. Non-Euclidean geometry, postulates of special relativity, Galois theory, modern mathematics does not treat axioms as "self-evident" but rather as starting points. Elements assumed many things to be generally true, which are not: numbers are one-dimensional, mathematical objects must be constructed, mathematics must describe the world as we observe it (2d/3d space, concrete objects), mathematics requires straightedge and compass construction, there is only one way to describe geometry. None of these are true, and modern mathematics began when people started questioning Elements.
+
+\subsubsection{Mathematical Anti-realism}
+
+\subsubsection{Number Sets and Fields}
+
+\subsubsection{Numeral Systems}
+
+and these numbers can be \textit{encoded} with either a single \textit{symbol} or a sequence of symbols called a \textit{string}. For example, the number eight is typically encoded with the symbol 8, which is a \textit{numeral} or \textit{digit}. The number could just as easily be represented by the symbol \varstigma, but this would be non-standard. Numbers are usually encoded according to an established \textit{numeral system} of some \textit{base} or \textit{radix} that specifies how many unique symbols are used for representation. Numerical data intended to be read by humans are typically encoded in a base-10 system, one of ten digits. \\
+
+This design choice is ancient and natural. It is based on the ten digits of our hands, which have aided us in counting for hundreds of millennia. In fact, fingers are the oldest counting tools used by man, and we still use them today for this purpose. Other anatomically inspired bases have been used in early numeral systems, such as base-20, which counts the fingers and the toes, or base-12, which uses a thumb on one hand to count the bones of the other four fingers. However, today, the base-10 \textit{Hindu-Arabic numeral system} is universal in mathematics. \\
+
+The base-60 system of Babylonian numerals is also notable. Its base is thought to have been chosen for its many factors, as this simplifies the process of division. Under this interpretation, this system is \textit{constructed} rather than natural. Instead of mirroring something concrete like physical extremities, this system chooses an abstract base in order to make a procedural optimization. The reasoning for base-2 encoding in computing is similar. It sacrifices human familiarity for performance and reliability. \\
+
+%----------------------------------------
+
+\subsection{Phenomena}
+
+As stated previously, data are collected by sampling the properties of "phenomena from the observable Universe." It is worth pausing here to consider what this really means. \textit{Phenomena} are omnipresent in reality. They are the things we observe, perceive to exist, or \textit{experience}. There is much philosophical debate about their study, \textit{phenomenology}, to the point that some views differ on a fundamental level. Even basic categorization of the countless phenomena that one can experience in life is difficult because there is no consensus on what exactly experience \textit{is}. \\
+
+% Empirical vs. rational
+% Objects vs. events. Is there a difference? Maybe not, but there at least appears to be one. Humans have traditionally discerned a difference, notably in language. Perhaps the difference is only conceptually convenient. Is an apple distinct from its decaying over time? Is computer state really a meaningful object with clock speeds in the gigahertz? Is a thunderstorm an event, or just a system of many, tiny objects with different properties, all changing with time?
+% Objects are characterized spatially, events temporally.
+% Substantial vs. formal phenomena
+% Mathematical objects and operators
 	
-	They exist in the physical realm as \textit{substances}, which have both \textit{form} and \textit{matter}, that . Form, which defines the \textit{properties} of a substance, can be considered separately from matter in the mental realm by means of \textit{abstraction}. This is the approach of mathematics, which seeks to define  \\
-	\vspace{1mm}
-\end{tcolorbox}
-\vspace{7mm}
+They exist in the physical realm as \textit{substances}, which have both \textit{form} and \textit{matter}, that . Form, which defines the \textit{properties} of a substance, can be considered separately from matter in the mental realm by means of \textit{abstraction}. This is the approach of mathematics, which seeks to define  \\
+
+%----------------------------------------
 
 \subsection{Signals}
-
 % Signals are messages composed of time-amplitude data
 
 Data are the building blocks of \textit{signals}, which are mathematical models of quantities that change over time. Signals are carriers of \textit{information} about these quantities. A piece of information, known as a \textit{message}, is encoded as data of a certain \textit{medium}, either physical or numerical. In this sense, one can consider information a meaningful pattern that is embedded in a phenomenon. Philosophically, information is the \textit{essence} of a \textit{substance}, a set of properties that defines what a thing is. Mathematically, signals are functions $f$ that map a set of times $t$ to a set of amplitudes $A$, and they are classified according to the properties of these sets. \\
@@ -560,12 +651,6 @@ Analog data are special because they exist in continuous space and thus theoreti
 Imagine that you throw a ball in the air and somehow exactly measure its height above the ground at every instant before it lands. If you were to organize these height data with respect to time, you would construct an analog signal that perfectly describes the height of the ball at any point during the throw. In practice, however, no measuring instrument has the required speed or precision necessary to do this. Additionally, you would need an infinite amount of memory to store continuous-time data that is collected at every instant. \\
 
 % Need digital data
-
-and these numbers can be \textit{encoded} with either a single \textit{symbol} or a sequence of symbols called a \textit{string}. For example, the number eight is typically encoded with the symbol 8, which is a \textit{numeral} or \textit{digit}. The number could just as easily be represented by the symbol \varstigma, but this would be non-standard. Numbers are usually encoded according to an established \textit{numeral system} of some \textit{base} or \textit{radix} that specifies how many unique symbols are used for representation. Numerical data intended to be read by humans are typically encoded in a base-10 system, one of ten digits. \\
-
-This design choice is ancient and natural. It is based on the ten digits of our hands, which have aided us in counting for hundreds of millennia. In fact, fingers are the oldest counting tools used by man, and we still use them today for this purpose. Other anatomically inspired bases have been used in early numeral systems, such as base-20, which counts the fingers and the toes, or base-12, which uses a thumb on one hand to count the bones of the other four fingers. However, today, the base-10 \textit{Hindu-Arabic numeral system} is universal in mathematics. \\
-
-The base-60 system of Babylonian numerals is also notable. Its base is thought to have been chosen for its many factors, as this simplifies the process of division. Under this interpretation, this system is \textit{constructed} rather than natural. Instead of mirroring something concrete like physical extremities, this system chooses an abstract base in order to make a procedural optimization. The reasoning for base-2 encoding in computing is similar. It sacrifices human familiarity for performance and reliability. \\\\
 
 \begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
 	\vspace{2mm}
@@ -633,6 +718,8 @@ Regardless of which encoding is used, data is data.
 % We need to communicate an algorithm in a language
 % What kind of language?
 % First, let's talk about language in general
+
+%----------------------------------------
 
 \subsection{Language is Code}
 
@@ -780,7 +867,7 @@ This conclusion is a \textit{syntactic consequence} of the premises ($P\vdash Q$
 
 Syntactic consequence is sometimes expressed with the following statement: "If the premises are true, the conclusion must also be true". However, while this statement does hold for all valid arguments, text evaluated syntactically does not have any notion of truth. It is simply a sequence of tokens. Thus, it may be better to think of valid arguments as "games that are played according to the rules". For example, chess has no inherent meaning associated with it, but it still has rules, and valid games of chess are those that comply with those rules. \\
 
-Now, it might be Tuesday and raining as you are reading this. However, semantically, it is not required to be Tuesday if it is raining. The first premise given above is, in reality, false. However, if we change it to something that we consider true, we can come to a conclusion that is both valid and sound:
+Now, it might be Tuesday and raining as you are reading this. However, semantically, it is not required to be Tuesday if it is raining. The first premise given above is, in reality, false. However, if we change it to something that we consider true, we can come to a conclusion that is both valid and sound: \\
 
 \begin{center}
 	\begin{tabular*}{0.55\textwidth}{@{\extracolsep{\fill} } ll}
