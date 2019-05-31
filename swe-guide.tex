@@ -316,6 +316,7 @@ BCOR5mm, % Binding correction
 % Make a chart with philosophy as a circle (a non-metric space) and mathematics, physics, engineering, computer science, etc. as bars (metrics spaces whose metric is academic complexity). The bars start at high-school level topics and extend to the bleeding edge of understanding. Draw two versions: what college taught me vs. what I felt like I needed to know. Syntactic understanding vs semantic understanding.
 % The value in spending time just philosophizing about things.
 % Belief that the most significant, cutting-edge, and interesting jobs in many fields require or would benefit greatly from a deep philosophical and mathematical understanding of software.
+% In the end, I was tired of being confused.
 
 \newpage
 
@@ -374,8 +375,12 @@ BCOR5mm, % Binding correction
 % https://www.standoutbooks.com/nail-non-fiction-introduction/
 
 % The hook starts here. Why should the reader care?
-% There might be many reasons, depending on who you are. <List reasons here?> However, there is a more general reason. We are all...
+% There might be many reasons, depending on who you are. <List reasons here?> However, there is a more general reason...
+
 % "Living in the Information Age"
+% The computer is the most important invention since the printing press. It is a game changer for mankind. The amount of science being done now is enormous compared to what was being done in, for example, Newton's time. Back then, there were very few scientists, and they used simple tools. The body of human knowledge started kicking into gear at the turn of the 20th century, and it took off like a rocket with the conceptualization and implementation of general-purpose computers. Before we did a few calculations a minute on a slide rule. Now, CPUs can do billions of calculations per second. Life has been immensely altered by this.
+% Computers are everywhere today. They are essential to modern life, and they will only become more essential. Thus, they are worth understanding.
+% As technology gets more complicated, it gets harder to fully understand. If you see yourself utilizing computers frequently for the remainder of your life, the time to learn about them is now.
 
 This guide is everything you need to know in order to program computers professionally in the modern era. Well, the fundamentals at least.
 
@@ -394,7 +399,7 @@ This guide is everything you need to know in order to program computers professi
 % Discuss the title. Intuition. Definitions in my own words - "if you know something's name, you have power over it". True name, mysticism.
 % Make your own guide!
 % Computer science is not about computers, it is about computation. Computation is much broader than the study of computers. The concepts are everywhere.
-% Comment on these CS etymology alternatives: turingineer, turologist, datalogy, flow-charts-man (hilarious), applied metamathematician, applied epistemologist. hypologist (study of what is under? as in under systems?), computics (like 'physics', the science of computational phenomena, great name), computing science (equivalent to computics, but not Greek and not as cool) automatic information (pertaining to automata), infomatics ("what can be conceived", pretty badass, similar to mathematics ("what can be learned"), unfortunately taken).
+% Comment on these CS etymology alternatives: turingineer, turologist, datalogy, flow-charts-man (hilarious), applied metamathematician, applied epistemologist. hypologist (study of what is under? as in under systems?), computics (like 'physics', the science of computational phenomena, great name), computing science (equivalent to computics, but not Greek and not as cool) automatic information (pertaining to automata), infomatics ("what can be conceived," pretty badass, similar to mathematics ("what can be learned"), unfortunately taken).
 % Not CS: information science (more associated with effective storage and dissemination of information, not computation), information technology (a business-oriented discipline focused on choosing and maintaining hardware and software for a company), software engineering (the effective implementation of theoretical CS concepts for the purpose of building software)
 % "I will rate these names based on accuracy, but I won't deny my bias toward the coolest sounding names"
 % Chapters and sections.
@@ -402,9 +407,10 @@ This guide is everything you need to know in order to program computers professi
 % Interdisciplinary, historical approach.
 % There are a lot of quotes. I like quotes. Plus, taking a bunch of quotes out of context (slashthrough) \textit{repurposing} quotes allows me to pretend like a bunch of smart people agree with what I am saying. And they all write a part of my book for free. Ha, suckers!
 % COD4 quotes
-% This material is "advanced", but it is not inherently hard. If you perceive any material as hard, here or elsewhere, that either means that you are unfamiliar with it and you need to muse on it for a while (perhaps by covering more elementary topics first) or that it is being taught poorly.
+% This material is "advanced," but it is not inherently hard. If you perceive any material as hard, here or elsewhere, that either means that you are unfamiliar with it and you need to muse on it for a while (perhaps by covering more elementary topics first) or that it is being taught poorly.
 % I'm not a PhD. Most people who write textbooks are. This is still a textbook.
 % This book champions a semantic approach to the content covered. I personally cannot be satisfied with only equations and hand-waving explanations for what they represent. This does not mean that it focuses on applied math rather than pure math. On the contrary, there is a fair amount of pure math here. However, good teachers tend to plot pure mathematical structures and explain them with metaphors to make them familiar. The philosophy here is that in order to learn something new, you must be able to compare it to something you already understand. If a non-trivial topic is 100% foreign to you, you can't learn it, no matter how hard you try.
+% People should catalog their knowledge in a professional format. We spend so much time and effort learning, and then we just accept that we will forget the vast majority of it. I remember cramming for my linear algebra final (a class I had no business taking in my first semester of college). A few hours before the test, I drawing some matrices on a whiteboard and I thought that that point in time would likely be the best that I would ever understand linear algebra. Beyond that point, my understanding would slow die. And I thought that was very sad. I also read that many software engineers forget most of what they learned about CS. That's also sad.
 
 \newpage
 
@@ -428,21 +434,19 @@ This guide is everything you need to know in order to program computers professi
 
 \textit{Computation} is an essential part of being human. Just as we act on our perceptions, feel our emotions, and daydream in our imaginations, we also compute with our \textit{reasoning} in order to find answers to the questions we have about life. \\
 
-There are many ways that one can describe computation. Some are \textit{poetic}, others are more \textit{formal}, and many of them we will discuss at length. In doing so, we will generally flow \textit{from} poetry \textit{to} formality, starting with broad statements and colorful examples and progressing toward a formal understanding. For now, we will say that computation is a process that resolves \textit{uncertainty}. \\
+One can describe computation in a variety of ways. Some are poetic, others are more formal, and many we will discuss at length. In doing so, we will generally flow from poetry to formality, starting with broad statements and colorful examples and progressing toward a formal understanding. For now, we will say that computation is a process that resolves \textit{uncertainty}. \\
 
-The Ancient Greek conception of Chaos is a fascinating depiction of uncertainty: a vast nothingness that preceded the creation of the Universe. Curiously, the modern definition of the word is nearly inverted. Now, one might say that a situation is \textit{chaotic} if there is so much going on that it is hard to make sense of anything. Despite their great conceptual difference, these meanings share a common property. They both evoke \textit{confusion}. \\
+The Ancient Greek conception of Chaos is a fascinating depiction of uncertainty: a vast nothingness that preceded the creation of the Universe. Curiously, the modern definition of the word is nearly inverted. Now, one might say that a situation is \textit{chaotic} if there is so much going on that it is hard to make sense of anything. Despite their great conceptual difference, these meanings share a common property: they both evoke \textit{confusion}. \\
 
-This world in which we find ourselves may indeed be post-Chaos, but confusion remains a familiar state for us. In fact, it is our natural state. We come into life confused about everything, crying, open-eyed in reaction to how much is going on around us. Slowly, we figure a few things out. After a few years, we consider quite a few things to be \textit{certain}. Much later, the wise ones among us come to realize the true depth of their confusion. \\
+This place in which we find ourselves may indeed be post-Chaos, but confusion remains a familiar state for us. In fact, it is our natural state. We come into life confused about everything, crying, open-eyed in reaction to how much is going on around us. Slowly, we figure a few things out. Later, we consider many things \textit{certain}. As time ticks on and we carve our separate paths in the world, the wise ones among us come to realize the true depth of their confusion. \\
 
-Although we are initially confused, we naturally pursue an understanding of the chaos that surrounds us. We perceive the goings-on of our environment and draw \textit{information} from them, piecing together a \textit{knowledge} that orients us and gives meaning to the disorder of our existence. This is the crux of computation. It is the structured manipulation of \textit{data} into \textit{information} for the purpose of acquiring \textit{knowledge}. It shines a light into darkness we call home. \\
+Although we are initially confused, we naturally pursue an understanding of the chaos that surrounds us. We perceive the goings-on of our environment and draw \textit{information} from them, piecing together a \textit{knowledge} that orients us and gives meaning to the disorder of our existence. This is the crux of computation. It is the structured manipulation of \textit{data} into \textit{information} for the purpose of acquiring \textit{knowledge}. It shines a light into the darkness we call home. \\
 
-These terms---data, information, and knowledge---are broad enough to apply to a variety of systems. In fact, these terms appear in nearly every academic field and certainly within those that strive for objectivity. One can have data on, information about, and knowledge of anything that can be observed or experienced. As such, it is difficult to confine these terms to short and tidy definitions that are free of controversy. We will have to settle then for long, workable definitions. \\
+These terms---data, information, and knowledge---are broad enough to apply to a variety of systems. In fact, they appear in nearly every academic field and certainly within those that strive for objectivity. One can have data on, information about, and knowledge of anything that can be observed or experienced. As such, it is difficult to confine these terms to short and tidy definitions that are free of controversy. We will have to settle then for long, pragmatic definitions. \\
 
-In this chapter, we will explore what computation is and why it matters. To do this, we will discuss the \textit{things that are computed} and the \textit{laws that computation necessarily follows}. Section 1, \textit{Information and Communication}, \dots. Section 2, \textit{Reasoning and Logic}, \dots. \\
+In this chapter, we will explore what computation is and why it matters. In some sense, computation is a kind of game in which \textit{pieces} are moved and transformed within a \textit{game space} according to a predetermined set of \textit{rules}. However, unlike most games, computation has no set goal. Nature shuffles its hazy pieces about, following arbitrary rules for reasons we cannot ascertain. Man, on the other hand, explicitly defines its pieces and rules, modeling them after Nature's strange mechanics. We invent \textit{win conditions} and play toward them, hoping that our computations will result in general solutions that will elucidate the knowledge we seek. \\
 
-In some sense, computation is a kind of game, where \textit{pieces} are moved and transformed according to a predetermined set of \textit{rules}. Here, we learn how to play. In the next chapter, we learn the limits of what is possible. From , we learn how to be an excellent player.
-
-%Many physical and mental processes can be viewed through the lens of computation, including the manipulation of numbers, as practiced in mathematics. Other computations may involve the manipulation of time-varying physical phenomena, as practiced in signal processing, the manipulation of truths, as practiced in logic, or the manipulation of words, as practiced in language. We will unify these processes under a general definition before zeroing in on how computation arises in computer science, and, by extension, in software engineering, as the manipulation of \textit{digital state}. \\
+Here, we learn how this game is played and how it is woven into the fabric of our reality. Section 1, \textit{Information and Communication}, covers the pieces \dots. Section 2, \textit{Reasoning and Logic}, covers the rules \dots. In the chapter following this one, we model the game of computation mathematically and find the theoretical limits of what it can tell us. Beyond that, we learn how to be an excellent player, covering \textit{techniques} for efficient problem solving and \textit{tools} for designing beautiful, maintainable systems. \\
 
 %--------------------------------------------------------------------------------
 %    SECTION: INFORMATION AND COMMUNICATION
@@ -467,9 +471,14 @@ In some sense, computation is a kind of game, where \textit{pieces} are moved an
 % Mathematics is the study of formal phenomena
 % Phenomena can include non-physical things, but let's focus on things that are physical (or pure mathematical)
 
-To clear the Chaos, we have to ask what there is. What is there to observe? Objects and events? Waves and particles? Signals? 
+In order to clear the chaos, we must first ask what there is. What can we say about the things that exist? Can we fundamentally distinguish some from others, or is it all just a big, soupy mess? Furthermore, if we indeed say that some things are $A$ and the rest are $B$, can we also claim that such a distinction is \textit{actually} present in reality or are things $A$ and $B$ only because that is how our minds perceive them? These are the basic questions of \textit{metaphysics}. \\
 
-% Empirical vs. rational
+A common approach to this challenge is to create a system of \textit{categories} that partition reality at the highest level. For example, one could suggest that there is a fundamental difference between a \textit{quantity} and a \textit{quality}. If these are considered distinct categories, we can classify \textit{measurable} or \textit{countable} stuff like "length," "mass," "a dozen," and "a crowd" as quantitative and \textit{experiential} stuff like "softness," "roundness," "cherry-flavor," and "beauty" as qualitative. \\
+
+The quantity-quality distinction is a generally accepted one. However, the dichotomy is not so absolute. For example, softness is listed above as a quality. We might expect, then, that hardness is a quality. For example, rocks are hard and puppy ears are soft. But hardness is also a quantitative measurement of resistance to plastic deformation. Thus, the word "hardness" can refer to both quantitative and qualitative phenomena. The categorical difference between these hardnesses, which exists independent of language, is identified through the context in which the word "hardness" is used. A hardness can be measured with numbers, but it can also simply be \textit{experienced} via touch. \\
+
+This curiosity aside, we could also design our category system such that quantities and qualities are considered \textit{properties} of \textit{objects}. 
+
 % Objects vs. events. Is there a difference? Maybe not, but there at least appears to be one. Humans have traditionally discerned a difference, notably in language. Perhaps the difference is only conceptually convenient. Is an apple distinct from its decaying over time? Is computer state really a meaningful object with clock speeds in the gigahertz? Is a thunderstorm an event, or just a system of many, tiny objects with different properties, all changing with time?
 % Objects are characterized spatially, events temporally.
 % Substantial vs. formal phenomena
@@ -486,24 +495,53 @@ To clear the Chaos, we have to ask what there is. What is there to observe? Obje
 % Models do not *exist*. They are mathematical abstractions that describe reality. Some phenomenon might be "well-described" by a theoretical model, but that does not make it a signal, field, etc.
 % Models can be categorized: linear/non, static/dynamic, explicit/implicit, discrete/continuous, deterministic/probabilistic, deductive/inductive/floating
 % Theories are abstract models, models whose components are symbolic.
+% Let's discuss how humanity has modeled physics over the years.
 
 %----------------------------------------
 
 \subsection{Modeling Physical Reality}
 
+\subsubsection{Point Particles and Forces}
+
+% Descartes founds the mechanistic philosophy that early models adhere to.
+% Basic assumptions based on observation: continuity, determinism, casuality, forces result from collision, absolute space and time
 % Mechanics - study of the behavior of point/body/bodies subjected to forces
 	% Statics - the net force is 0, the net work is 0, the body does not accelerate (at rest or constant velocity)
 	% Dynamics - nonzero net force, nonzero work, the body accelerates
 		% Kinematics - study of motion of a body without considering cause of motion (no masses, no forces, just motion)
 		% Kinetics - take cause into account
-% Traditionally, physics has been described in terms of particles (classical mechanics, atomic theory). Later, some things were described with waves (aether, classical field theory). Classical mechanics + special relativity = relativistic mechanics. Macroscopic physics is now modeled with relativistic mechanics. It is usually described with Lagrangian/Hamiltonian mechanics/field theories. Modern physics (macro and micro) is described with the Standard Model (quantum mechanics + QFT). This model is imperfect.
+% In Newton's era, physics was described in terms of bodies, things with mass (atoms, particles, objects). Scientists followed a mechanistic philosophy (physical reality is simply the motion and collision of matter, the universe is deterministic). Newton was a mechanist as well, but made an exception for gravity, which exhibited "action at a distance". He did not attempt to explain gravity, but simply argued that it matched the data.
+% Newton discovered that objects would continue their motion if absent of friction, which is a pretty unintuitive idea, considering that there is always friction on Earth.
+% Optics - Descartes says light is emitted by sources, Huygens develops a longitudinal wave theory of light transmitted though aether, but people don't believe it because it did not explain birefringence, Newton develops corpuscular theory of light and people accept that.
+
+\subsubsection{Waves and Fields}
+
+% In early 1800s, people realize Newton's theory does not explain diffraction, interference, and polarization (physical optics). Young and Fresnel develop a transverse wave theory of light. This is still a mechanistic theory, and, thus, it required an aether (as discussed by Aristotle). People tried to understand how an aether could exist if the Earth moves freely through it. Aether drag and wind theories emerge.
+% Similar theories involving mysterious substances ("imponderable fluids") were formed to explain heat and electricity. Faraday proposes that reality is made up of "lines of force". Maxwell agrees and develops an electromagnetic field theory, but he assumes an aether is required.
+% Michelson-Morley experiment discredits the aether. Lorentz and Poincare forms a theory with a motionless aether that does not interact with matter. In this case, the aether was more of a reference frame. Length contraction and "local time".
+% Einstein introduces special relativity, which does not require the concept of aether. Time dilation instead of local time. This theory could be explained in terms of an aether though. The vaccuum of space is more like an aether than a true vaccuum.
+
+% Poincare LET quotes
+
+% Macroscopic physics is now modeled with relativistic mechanics. It is usually described with Lagrangian/Hamiltonian mechanics/field theories.
+
+\subsubsection{Quantum States and Operators}
+
+% Modern physics (macro and micro) is described with the Standard Model (quantum mechanics + QFT). This model is imperfect.
 % Relativistic, quantum, and quantum field models are applied in different situations depending on the scale of space and time involved. Relativistic mechanics encompasses classical mechanics. It's just more complicated, so classical is still used by humans in situations where relativistic effects are negligible. Scientific computing has no reason to use classical though.
+% Energy is transfered due to colliding particles or radiation. The former is modeled by particle theories, the latter by field theories.
+% Mass-energy equivalence. Stationary objects have energy because mass is a manifestation of energy. Particles are not necessarily pieces of mass. They are more generally pieces of energy (quanta).
+% "The principle of the conservation of mass [...] proved inadequate in the face of the special theory of relativity. It was therefore merged with the energy conservation principle—just as, about 60 years before, the principle of the conservation of mechanical energy had been combined with the principle of the conservation of heat [thermal energy]. We might say that the principle of the conservation of energy, having previously swallowed up that of the conservation of heat, now proceeded to swallow that of the conservation of mass—and holds the field alone. - Einstein
 % Time dilation, causality
 % Mass and energy (momentum) describe the same thing in different ways. Physics was originally skewed toward the mass view because it is more intuitive and concrete for humans.
-% In general, outdated models tend to be anthropocentric in scale for space, time, and semantic meaning (theology). However, less general theories are not "broken". They are still useful in certain scenarios.
+% In general, outdated models tend to be anthropocentric in scale for space, time, and semantic meaning (theology). However, less general theories are not "broken". They are still useful in certain scenarios (domains of applicability).
 % At small scales, things are unpredictable. They don't really follow laws. Things happen with certain probability. Classical laws are just averages of tons these probabilities from the same distribution, and thus, at human scale, objects behave basically the same way every time. The probability average is extremely close for each test.
 % "You can't step into the same river twice." Likewise, classical physics does not behave in exactly the same way twice. We do our best to show general trends, but the Universe is not certain.
-% Quantum mechanics supports object/event metaphysics. Fermions and bosons. Quantum fields of mass and force. Spacetime. Mass-energy.
+% In some sense, quantum mechanics supports object/event metaphysics. Fermions and bosons. Quantum fields of mass and force. Spacetime. Mass-energy. Identical particles.
+% QM introduces a conflict over scientific realism. Should scientific theories strive to literally describe reality?
+% Because QM is probabilistic, this implies that physics is nondeterministic. According to QM, we will never know the true nature of reality with certainty. We cannot know everything about every elementary particle.
+% Problems with quantum entanglement. With the Copenhagen interpretation, we maintain that models are NOT reality. Just because the math asserts that some real physical quantity has some value, this is not certain without actually performing a measurement. Theories cannot predict values with absolute certainty.
+% Copenhagen interpretation claims that QM is a way of acquiring knowledge, but it does not attempt to describe objects in the way that classical mechanics does. It asserts that founding a model on entities or distinctions (such as particles, waves, and bodies) that are intuitive but ultimately unknowable, leads to incorrect predictions somewhere. Instead, it tries to make claims only about things that can be empirically observed.
 % Conjugate variables (mass and momentum, uncertainty principle). Derivatives of action. Fundamental interactions. 
 % Beyond the standard model: supersymmetry, integrating gravity: string theory, gravitons, 
 
@@ -512,6 +550,9 @@ To clear the Chaos, we have to ask what there is. What is there to observe? Obje
 \subsection{Physics in Terms of Information}
 
 % If physical phenomena are interpreted as information, this gives formal meaning to the philosophical idea that "we know very little". Much more physical information goes unnoticed than noticed.
+
+% Information is similar to energy transfer. It was compared to theories of heat transfer done during the industrial revolution. When you do work, you give some of your energy to something else. The energy may also be interpreted as changing type (kinetic, chemical, etc.). However, this is also just an abstraction. Energy is energy. There are no types really.
+% For example, when you throw a baseball, you transfer chemical energy in your body to kinetic energy in your arm and then you transfer that kinectic energy to the ball. During energy transfer, some of the energy becomes heat. But really, it's all the same energy. You transfer energy to the ball, and most of the energy manifests in motion, but some of it manifests in heat. Efficiency, then, is the ratio of how much of the energy involved is doing what you want it to.
 
 % Entropy - transformational content of energy
 % Boltzmann entropy, thermodynamic entropy, von Neumann entropy
@@ -588,7 +629,7 @@ Imagine that you throw a ball in the air and somehow exactly measure its height 
 	
 	Consider the  \hrefcolor[blue]{https://www.youtube.com/watch?v=s1i-dnAH9Y4}{\underline{Mark 1A Fire Control Computer}}, a device, more appropriately termed a "calculator" by modern definitions, that was installed on United States battleships in World War II. This machine used mechanical parts, such as gears, cams, followers, differentials, and integrators, to perform the arithmetic and calculus necessary to hit an enemy ship with a projectile, even if both ships were moving in different directions. It also used smooth components that gradually translated rotational motion into linear motion along a continuum. \\
 	
-	Despite being labeled with decimal (base-10) integers, this tool actually received \textit{continuous}, \textit{analog} quantities, such as physical position, as input. If each of its mechanical positions were considered a different "symbol", this system would theoretically be able to represent uniquely every real number to a infinite degree of precision and, thus, compute continuous functions without error. Such analog computation is performed also in slide rules, as well as in early electronic computers, which used voltage to represent numbers instead of position. \\
+	Despite being labeled with decimal (base-10) integers, this tool actually received \textit{continuous}, \textit{analog} quantities, such as physical position, as input. If each of its mechanical positions were considered a different "symbol," this system would theoretically be able to represent uniquely every real number to a infinite degree of precision and, thus, compute continuous functions without error. Such analog computation is performed also in slide rules, as well as in early electronic computers, which used voltage to represent numbers instead of position. \\
 	
 	\begin{center}
 		\begin{tikzpicture}
@@ -719,7 +760,7 @@ Thus, Aristotle differentiates "pre-existent knowledge" from "scientific knowled
 	\vspace{4mm}
 \end{displayquote}
 
-Euclid apparently agreed with this epistemology because Book I of \textit{Elements}, in addition to its definitions and propositions, contains a number of axioms, which are labelled either as \textit{postulates} or \textit{common notions}. In antiquity, a postulate denoted an axiom of a particular science, whereas a common notion denoted an axiom common to all sciences. Today, we do not think of axioms in this way. Rather, we simply consider them starting points for proofs. Euclid's axioms are given below: \\
+Euclid apparently agreed with this epistemology because Book I of \textit{Elements}, in addition to its definitions and propositions, contains a number of axioms, which are labeled either as \textit{postulates} or \textit{common notions}. In antiquity, a postulate denoted an axiom of a particular science, whereas a common notion denoted an axiom common to all sciences. Today, we do not think of axioms in this way. Rather, we simply consider them starting points for proofs. Euclid's axioms are given below: \\
 
 \begin{center}
 	\textbf{Postulates}
@@ -802,7 +843,7 @@ Language  \\
 	% Westernism - Scientific Revolution, alphabet, character, terms and jargon in English (covered in greater detail later)
 	% Unicode, code points for abstract characters, UTF-8
 	
-	A \textit{symbol} is a syntactic mark that is understood to represent a semantic idea. For example, the numeral "$2$" is a symbol for the abstract concept of the number known as "two", the quantity of items in a pair. Symbology is universal for mankind, as it is an exercise of our capacity for abstract thought. Humans can leverage the pattern-recognizing power of the brain to associate symbols or sequences of symbols (also known as \textit{strings}) with ideas. Thus, we can proliferate information textually by means of a \textit{writing system}. \\
+	A \textit{symbol} is a syntactic mark that is understood to represent a semantic idea. For example, the numeral "$2$" is a symbol for the abstract concept of the number known as "two," the quantity of items in a pair. Symbology is universal for mankind, as it is an exercise of our capacity for abstract thought. Humans can leverage the pattern-recognizing power of the brain to associate symbols or sequences of symbols (also known as \textit{strings}) with ideas. Thus, we can proliferate information textually by means of a \textit{writing system}. \\
 	
 	Languages are diverse, and so are their writing systems.
 	\vspace{1mm}
@@ -811,7 +852,7 @@ Language  \\
 
 % Constructed languages, a subset of which are formal
 % Trade language, lingua franca, Latin
-% Leibniz - Alphabet of human thought, "best of all possible worlds", panglossianism
+% Leibniz - Alphabet of human thought, "best of all possible worlds," panglossianism
 
 An argument of any kind must be expressed in a \textit{language}. In the case of an informal argument, such as a debate, a \textit{natural language} is typically used (i.e. a language, spoken or written, that evolved \textit{naturally} as an aspect of human culture). This is done in the name of \textit{universality}. For example, a political debate that is held and perhaps broadcast in Poland would likely be conducted in Polish because Polish politics are primarily of interest to Polish people. Many Poles speak English in addition to Polish, but there is no language more widely spoken in Poland than Polish, with a whopping 97\% of the country declaring it as their first language. For media directed toward the population of Poland, there is no language that will better ensure an effective dissemination of ideas. It is a nearly \textit{universal} language in this context, a language understood by all intended recipients. \\
 
@@ -1065,15 +1106,15 @@ The Seer has premises for his conclusion, but the rules of inference involved in
 	
 	Other substantive theories find the essence of truth nestled in other abstract concepts. \textit{Consensus theory}, as the name implies, defines truth as something that is agreed upon either by all human beings or by a subset (such as academic groups or standards bodies). This is another anthropocentric definition that is at constant risk of philosophical division on any given topic. \textit{Coherence theory} takes a more objective approach, claiming that a statement can only be true if it fits into a system of statements that support each other's truth. This is similar to the notion of \textit{formal systems}, which we will discuss in depth later. However, traditional coherence theories attempt to explain all of reality within a single coherent system of truths, which is incompatible with our modern understanding of formal systems. \\
 	
-	Modern developments in philosophy have resulted in theories that deviate from the long-held, substantive opinions on the nature of truth. These \textit{minimalist} theories assert instead that truth is either not real or not a necessary property of language or logic. They claim that statements are \textit{assertions} and thus are implicitly understood to be true. For example, it is understood that by putting forth the sentence "$2+2=4$", you are endorsing the semantic meaning "$2+2=4$ is true". The clause "is true" is called a \textit{truth predicate}, and minimalist theories of truth often consider its use redundant. \\
+	Modern developments in philosophy have resulted in theories that deviate from the long-held, substantive opinions on the nature of truth. These \textit{minimalist} theories assert instead that truth is either not real or not a necessary property of language or logic. They claim that statements are \textit{assertions} and thus are implicitly understood to be true. For example, it is understood that by putting forth the sentence "$2+2=4$," you are endorsing the semantic meaning "$2+2=4$ is true". The clause "is true" is called a \textit{truth predicate}, and minimalist theories of truth often consider its use redundant. \\
 	
-	This idea of a truth predicate is borrowed from Alfred Tarski's \textit{semantic theory of truth}, which is a substantive theory that refines the correspondence concepts espoused by Socrates, Plato, and Aristotle for formal languages. This theory makes a distinction between a statement made in a formal language and a truth predicate, which evaluates the truth of the statement. Tarski made this distinction in order to circumvent the \textit{liar's paradox}, which is often presented with the following example: "This sentence is false". If the predicate "is false" is considered to be part of "this sentence", the truth of this statement cannot be decided. For this reason, Tarski states that a language cannot contain its own truth predicate. This is enforced by requiring that "this sentence" be written in an \textit{object language} and that "is false" be written in a \textit{metalanguage}. \textit{Convention T}, the general form of this rule, can be expressed as
+	This idea of a truth predicate is borrowed from Alfred Tarski's \textit{semantic theory of truth}, which is a substantive theory that refines the correspondence concepts espoused by Socrates, Plato, and Aristotle for formal languages. This theory makes a distinction between a statement made in a formal language and a truth predicate, which evaluates the truth of the statement. Tarski made this distinction in order to circumvent the \textit{liar's paradox}, which is often presented with the following example: "This sentence is false". If the predicate "is false" is considered to be part of "this sentence," the truth of this statement cannot be decided. For this reason, Tarski states that a language cannot contain its own truth predicate. This is enforced by requiring that "this sentence" be written in an \textit{object language} and that "is false" be written in a \textit{metalanguage}. \textit{Convention T}, the general form of this rule, can be expressed as
 	
 	\begin{center}
 		\textit{"$P$" is true if and only if $P$}
 	\end{center}
 	
-	where "$P$" is simply the metalanguage sentence $P$ rendered in the object language. That is, the \textit{syntactic representation} is assigned a \textit{truth value} of true if and only if the semantic meaning it represents is considered true (according to whatever theory of truth you employ). By this rule, we say that "$2+2=4$" is true if and only if \textit{the sum of the number $2$ with the number $2$ is equal to the number $4$}. Minimalist redundancy theories modify Tarski's theory by interpreting "$P$" as an implicit assertion of the truth of $P$. The sentence "$P$", which asserts that $P$ is true, is then false if and only if its semantic meaning $P$ is false. \\
+	where "$P$" is simply the metalanguage sentence $P$ rendered in the object language. That is, the \textit{syntactic representation} is assigned a \textit{truth value} of true if and only if the semantic meaning it represents is considered true (according to whatever theory of truth you employ). By this rule, we say that "$2+2=4$" is true if and only if \textit{the sum of the number $2$ with the number $2$ is equal to the number $4$}. Minimalist redundancy theories modify Tarski's theory by interpreting "$P$" as an implicit assertion of the truth of $P$. The sentence "$P$," which asserts that $P$ is true, is then false if and only if its semantic meaning $P$ is false. \\
 	
 	\parbreak
 	\vspace{4mm}
@@ -1108,7 +1149,7 @@ Statements made by induction are bolstered with evidence whereas deductive state
 
 \paragraph{Abductive Reasoning} \hspace*{1mm} \vspace*{2mm}
 
-\textit{Abductive reasoning} is the inference of a \textit{premise}, given a conclusion and a rule. It is investigative in nature. For example, given a conclusion "The grass is wet" and a rule "When it rains, the grass gets wet", we might determine that rain is the best explanation for the wetness of the grass. Thus, we abduce that "It might have rained". \\
+\textit{Abductive reasoning} is the inference of a \textit{premise}, given a conclusion and a rule. It is investigative in nature. For example, given a conclusion "The grass is wet" and a rule "When it rains, the grass gets wet," we might determine that rain is the best explanation for the wetness of the grass. Thus, we abduce that "It might have rained". \\
 
 Like induction, abduction can also produce a hypothesis. However, abduction does not seek a new relationship between two previously unconnected statements. Rather, it uses established relationships to find a reasonable explanation for a statement that is assumed to be true. It is often used by detectives or diagnosticians who need to find a probable cause of an event. It is also used in Bayesian statistics. While multiple premises may be abduced, typically we want to abduce a single, "best" premise. \\
 
@@ -1476,7 +1517,7 @@ A \textit{Turing machine} (TM) not only models real-world computers, but \textit
 	\end{enumerate}
 \end{itemize}
 
-A machine like this need not be a real-world computer. In fact, in his original proof, \textit{On Computable Numbers, with an Application to the Entscheidungsproblem}, Turing refers to a person, whom he calls the "computer", as an example of a Turing machine. If we break down these components into the resources they represent, it becomes clear that many systems could be considered Turing machines.
+A machine like this need not be a real-world computer. In fact, in his original proof, \textit{On Computable Numbers, with an Application to the Entscheidungsproblem}, Turing refers to a person, whom he calls the "computer," as an example of a Turing machine. If we break down these components into the resources they represent, it becomes clear that many systems could be considered Turing machines.
 
 \begin{itemize}
 	\item The infinitely long tape represents \textit{infinite space for computation} or \textit{infinite memory}.
@@ -1595,7 +1636,7 @@ A subset of register machines known as \textit{random-access machines} allow for
 	
 	Other tweaks can be made to the properties of a Turing machine to create new, interesting automata. For example, \textit{$\omega$-automata} (or \textit{stream automata}) are Turing machines that expect an \textit{infinite} sequence of instructions. \textit{$\omega$-automata} never stop running because an infinite sequence of instructions requires an infinite sequence of instruction executions. Because they never terminate, they never move into acceptance (final) states. Rather than a set of final states $F$, they have a set of \textit{acceptance conditions} $Acc$. \\
 	
-	For ordinary automata, every \textit{run} $\rho$ (i.e. a sequence of $n$ states) ends with a state $r_n$, and the input is only accepted if this state is final (i.e. $r_n\in F$). For $\omega$-automata, runs are infinite sequences, so they do not end with a state $r_n$ at all. How do we tell if a run $\rho$ should be accepted as a valid set of instructions? We require that $\rho\in Acc$. That is, if the run is a member of the "set of acceptable runs", it should be accepted. What is the "set of acceptable runs"? That depends on which variant of $\omega$-automaton you are talking about. \\
+	For ordinary automata, every \textit{run} $\rho$ (i.e. a sequence of $n$ states) ends with a state $r_n$, and the input is only accepted if this state is final (i.e. $r_n\in F$). For $\omega$-automata, runs are infinite sequences, so they do not end with a state $r_n$ at all. How do we tell if a run $\rho$ should be accepted as a valid set of instructions? We require that $\rho\in Acc$. That is, if the run is a member of the "set of acceptable runs," it should be accepted. What is the "set of acceptable runs"? That depends on which variant of $\omega$-automaton you are talking about. \\
 	
 	The class of $\omega$-automata contains multiple automata with different definitions of $Acc$. For example, for some subset $F$ (final states) of $Q$ (all states), the \textit{B\"{u}chi automaton} accepts those runs $\rho$, for which there exists a final state that occurs "infinitely often" in $\rho$. What is a state that is visited "infinitely often"? Given an infinite amount of runtime, some states in $Q$ will be visited an infinite amount of times, and others will not. For example, what if you can transition away from your starting state $q_0$, but you are not allowed to transition into it. Even given infinite time, $q_0$ would not be visited infinitely often, and if it were the only state in $F$, you would never be able to construct a run that would be considered valid by a B\"{u}chi automaton. Nondeterministic B\"{u}chi automata have applications in "always-on" or "always listening" software, such as those used in highly-autonomous robots or smart speakers like the Amazon Echo, both of which receive instructions based on a never-ending, real-time stream of sensory data. \\
 	
@@ -1616,7 +1657,7 @@ While more exotic memory structures are theoretically possible, real-world compu
 
 The selection of Turing machines (or register machines) as the model for real-world computers has also influenced decisions in computer architecture. In early computers, the instructions were not integrated into the machine. Code was written on punch cards, which were fed into computers. Eventually, code was stored digitally in programs that were uploaded to the computer's memory. This type of machine is known as a \textit{stored-program computer}. \\
 
-Where should one store instructions or code in a stored-program computer? Those that have a \textit{Harvard architecture} store their instructions in an \textit{instruction memory} that is separate from the \textit{data memory}. Those that have a \textit{von Neumann architecture} store their instructions and data in the same physical memory, but partition the memory somehow to avoid overwriting the instructions. The von Neumann architecture allows "programs that write programs", such as assemblers, compilers, linkers, and loaders. Modern computers are more von Neumann than they are Harvard because their instructions and data share an address space, but they are not strictly either. We can describe modern computers as \textit{random-access stored-program} (RASP) machines with \textit{split-cache modified Harvard architectures}. \\
+Where should one store instructions or code in a stored-program computer? Those that have a \textit{Harvard architecture} store their instructions in an \textit{instruction memory} that is separate from the \textit{data memory}. Those that have a \textit{von Neumann architecture} store their instructions and data in the same physical memory, but partition the memory somehow to avoid overwriting the instructions. The von Neumann architecture allows "programs that write programs," such as assemblers, compilers, linkers, and loaders. Modern computers are more von Neumann than they are Harvard because their instructions and data share an address space, but they are not strictly either. We can describe modern computers as \textit{random-access stored-program} (RASP) machines with \textit{split-cache modified Harvard architectures}. \\
 
 %----------------------------------------
 
@@ -1719,7 +1760,7 @@ Modern logic, however, is \textit{formal}. That is, it observes the abstract \te
 % Frege, logicism
 % Class - Russell's paradox
 
-Formal logic is the study of \textit{inference} with regard to \textit{formul{\ae}}. Formul{\ae}, Latin for "small forms" or "small rules", are finite sequences of symbols from an alphabet. They are purely \textit{syntactic objects}, much like strings of text. Inference is the act of processing a formula $A$ and deducing that a formula $B$ is a \textit{logical consequence} of $A$. This means that, given a set of \textit{rules of inference}, the string $A$ can be transformed into the string $B$ by means of a finite series of applications of said rules. \\
+Formal logic is the study of \textit{inference} with regard to \textit{formul{\ae}}. Formul{\ae}, Latin for "small forms" or "small rules," are finite sequences of symbols from an alphabet. They are purely \textit{syntactic objects}, much like strings of text. Inference is the act of processing a formula $A$ and deducing that a formula $B$ is a \textit{logical consequence} of $A$. This means that, given a set of \textit{rules of inference}, the string $A$ can be transformed into the string $B$ by means of a finite series of applications of said rules. \\
 
 
 % Logical and non-logical symbols
@@ -1799,7 +1840,7 @@ B_n&=\frac{1}{\pi}\int_{0}^{2\pi}f(x)\sin nx\,dx,
 \end{align*}
 where $f$ is an integrable function. That said, Cantor's work concerned the general definition of a trigonometric series. He proved that any countable, closed set of natural numbers could encode a trigonometric series that uniquely represents a function. The qualifiers \textit{countable} and \textit{closed} are significant. A countable set is a set whose elements can be counted or enumerated. A closed set is a set that contains its limit points. For a trigonometric series, this means the set of all $n$ must contain a countable number of elements, two of which must be $1$ and $\infty$. $1$ is no problem, but what does it mean for a set to contain $\infty$? And, for example, how can the natural numbers between and including $1$ and $\infty$ be "countable"? \\
 
-The concept of infinity had been around for a long time by the 1870s, but it had, until this point, been considered a philosophical topic. Aristotle identified a dichotomy between the "potential infinite" and the "actual infinite" in which the former can always have elements added to it while the latter is instead considered "complete". This mindset persisted for around two-thousand years with the majority of scholars believing that "actual infinity" was outside of the purview of mathematics. It was used in mathematical practice, but only in a non-rigorous, conceptual way, as seen in the characterization of limits "tending toward infinity". Actual infinity was considered an "ideal entity", not something that could be studied like finite numbers. \\
+The concept of infinity had been around for a long time by the 1870s, but it had, until this point, been considered a philosophical topic. Aristotle identified a dichotomy between the "potential infinite" and the "actual infinite" in which the former can always have elements added to it while the latter is instead considered "complete". This mindset persisted for around two-thousand years with the majority of scholars believing that "actual infinity" was outside of the purview of mathematics. It was used in mathematical practice, but only in a non-rigorous, conceptual way, as seen in the characterization of limits "tending toward infinity". Actual infinity was considered an "ideal entity," not something that could be studied like finite numbers. \\
 
 Here, however, Cantor had found a rigorous mathematical object containing infinity as an actual numerical quantity. If a set could represent a countable number of terms in a trigonometric series and was closed on $[1,\infty]$, it could look like $\{1,2,3,\dots,\infty\}$. It was this discovery that caused Cantor to think about the differences between a set like this, and a set like the real numbers, which, in addition to these values, could contain many more. He published his first article on set theory in 1874, stating two theorems that ushered in a new epoch of mathematical thought. \\
 
@@ -1905,7 +1946,7 @@ With the work of Kurt G\"odel in 1940 and of Paul Cohen in 1963, it was establis
 
 \subsubsection{Cantor's Later Years and Legacy}
 
-In the early 20th century, mathematicians and philosophers had found a variety of paradoxes within Cantor's set theory. The most famous example was \textit{Russell's paradox}, which was discovered by Bertrand Russell in 1901. It posits that, given a set $S$ that is "the set of all sets that are \textit{not} members of themselves", it is unclear whether $S$ contains itself. If it does, it contains a set that \textit{is} a member of itself. If it does not, it does not contain all sets. An alternative, colloquial form of this is the \textit{barber's paradox}: Given a barber who shaves all those, and only those, who do not shave themselves, does the barber shave himself? There is no answer to this question. It cannot be answered within its own axiomatic system. \\
+In the early 20th century, mathematicians and philosophers had found a variety of paradoxes within Cantor's set theory. The most famous example was \textit{Russell's paradox}, which was discovered by Bertrand Russell in 1901. It posits that, given a set $S$ that is "the set of all sets that are \textit{not} members of themselves," it is unclear whether $S$ contains itself. If it does, it contains a set that \textit{is} a member of itself. If it does not, it does not contain all sets. An alternative, colloquial form of this is the \textit{barber's paradox}: Given a barber who shaves all those, and only those, who do not shave themselves, does the barber shave himself? There is no answer to this question. It cannot be answered within its own axiomatic system. \\
 
 When he was not hospitalized for disease or depression, Cantor lectured on these paradoxes of his set theory until his retirement in 1913. He lived in poverty, suffering from malnourishment during World War I before succumbing to a heart attack in a sanatorium in 1918. \\
 
@@ -2043,7 +2084,7 @@ The decision problem can be phrased in the same way, but, in the case of a recur
 	
 	All but one of these clauses are \textit{nested} in the predicate of a previous clause. If a sentence can be defined in terms of smaller sentences, it is said to be defined recursively. This sentence qualifies: it contains a full sentence starting with Betty, which contains a full sentence starting with Charlie, which contains a full sentence starting with David. It can also be called recursively enumerable, because the clauses can be counted. \\
 	
-	This next "sentence", on the other hand, is recursively enumerable, but it is \textit{not} recursive:
+	This next "sentence," on the other hand, is recursively enumerable, but it is \textit{not} recursive:
 	\begin{align*}
 	\textnormal{Alice} 
 	\underbracket{\textnormal{said that Betty}
@@ -3892,6 +3933,18 @@ Summarize the appendices below...
 \appendix
 
 %--------------------------------------------------------------------------------
+%    APPENDIX: MATHEMATICAL FUNDAMENTALS
+%--------------------------------------------------------------------------------
+
+\toclineskip
+\section{Mathematical Fundamentals}
+
+% Fundamentals, not foundations. These are foundations in that more advanced content is built on top of them, but that's not why they are included here. If you have *never* taken courses in things like elementary geometry, elementary algebra, and trigonometry, you will probably have trouble grasping the content of this book in first place. This section is not here to teach you these concepts for the first time. It is meant to be a refresher of fundamental concepts, deep ideas that are essential to and ubiquitous in the study of mathematics. This section also serves as a sort of "higher-thought warmup" for those who haven't thought about math since high school. Similar to this book as a whole, this appendix often approaches its material in a philosophical manner, explaining in a straightforward way how to understand concepts that are very abstract.
+% Stuff like numbers, quantity, space, functions, relations, number sets, fields, algebraic operations, matrices etc.
+
+\newpage
+
+%--------------------------------------------------------------------------------
 %    APPENDIX: SYSTEM DESIGN
 %--------------------------------------------------------------------------------
 
@@ -4011,6 +4064,7 @@ Summarize the appendices below...
 % In what order did you write this book? Somewhat linearly, but honestly way more spatially scattered than I expected.
 % A rock-solid understanding of mathematics will allow you to excel in any field you want. Technical fields, languages, making really good art. Math is about patterns and ideas, and everything humans care about are patterns and ideas.
 % There is much more freedom and uncertainty in the world than I previously thought. Very little is set in stone.
+% Categorization is a useful tool for orienting yourself, but it is possible to go too far down the rabbit hole. You cannot seperate reality into neat little piles. I can show you green, and I can show you blue, but there is an infinite number of colors in between.
 
 \newpage
 

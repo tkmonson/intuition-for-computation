@@ -5,25 +5,28 @@
 \contentsline {part}{{\relax \fontsize {14.4}{18}\selectfont {\fontfamily {OrnementsADF}\fontencoding {U}\fontseries {m}\fontshape {n}\selectfont \char 14}\hspace {1.5mm}}Philosophy of Computation}{11}{part*.8}% 
 \vspace {\normalbaselineskip }
 \contentsline {section}{\numberline {1}{Information and Communication}}{12}{section.1}% 
-\contentsline {subsection}{\numberline {1.1}{Theories and Models}}{12}{subsection.1.1}% 
-\contentsline {subsection}{\numberline {1.2}{Modeling Physical Reality}}{12}{subsection.1.2}% 
-\contentsline {subsection}{\numberline {1.3}{Physics in Terms of Information}}{12}{subsection.1.3}% 
-\contentsline {subsection}{\numberline {1.4}{Signals}}{12}{subsection.1.4}% 
-\contentsline {subsection}{\numberline {1.5}{Numbers and Numerals}}{16}{subsection.1.5}% 
-\contentsline {subsubsection}{\numberline {1.5.1}{Euclid's \textit {Elements}, Plato's Forms, and Mathematical Realism}}{16}{subsubsection.1.5.1}% 
+\contentsline {subsection}{\numberline {1.1}{Theories and Models}}{13}{subsection.1.1}% 
+\contentsline {subsection}{\numberline {1.2}{Modeling Physical Reality}}{13}{subsection.1.2}% 
+\contentsline {subsubsection}{\numberline {1.2.1}{Point Particles and Forces}}{13}{subsubsection.1.2.1}% 
+\contentsline {subsubsection}{\numberline {1.2.2}{Waves and Fields}}{13}{subsubsection.1.2.2}% 
+\contentsline {subsubsection}{\numberline {1.2.3}{Quantum States and Operators}}{13}{subsubsection.1.2.3}% 
+\contentsline {subsection}{\numberline {1.3}{Physics in Terms of Information}}{13}{subsection.1.3}% 
+\contentsline {subsection}{\numberline {1.4}{Signals}}{13}{subsection.1.4}% 
+\contentsline {subsection}{\numberline {1.5}{Numbers and Numerals}}{17}{subsection.1.5}% 
+\contentsline {subsubsection}{\numberline {1.5.1}{Euclid's \textit {Elements}, Plato's Forms, and Mathematical Realism}}{17}{subsubsection.1.5.1}% 
 \contentsline {subsubsection}{\numberline {1.5.2}{Mathematical Anti-realism}}{19}{subsubsection.1.5.2}% 
 \contentsline {subsubsection}{\numberline {1.5.3}{Number Sets and Fields}}{19}{subsubsection.1.5.3}% 
 \contentsline {subsubsection}{\numberline {1.5.4}{Numeral Systems}}{19}{subsubsection.1.5.4}% 
-\contentsline {subsection}{\numberline {1.6}{Semiotics, Language, and Code}}{19}{subsection.1.6}% 
+\contentsline {subsection}{\numberline {1.6}{Semiotics, Language, and Code}}{20}{subsection.1.6}% 
 \contentsline {section}{\numberline {2}{Reasoning and Logic}}{21}{section.2}% 
 \contentsline {subsection}{\numberline {2.1}{The Syntax and Semantics of Argument}}{21}{subsection.2.1}% 
-\contentsline {subsection}{\numberline {2.2}{The Structure of Proof}}{23}{subsection.2.2}% 
+\contentsline {subsection}{\numberline {2.2}{The Structure of Proof}}{24}{subsection.2.2}% 
 \contentsline {subsection}{\numberline {2.3}{The Oracle, the Seer, and the Sage}}{25}{subsection.2.3}% 
 \contentsline {paragraph}{{The Oracle}}{25}{paragraph*.10}% 
-\contentsline {paragraph}{{The Seer}}{25}{paragraph*.11}% 
+\contentsline {paragraph}{{The Seer}}{26}{paragraph*.11}% 
 \contentsline {paragraph}{{The Sage}}{26}{paragraph*.12}% 
 \contentsline {subsection}{\numberline {2.4}{The Mathematician and the Scientist}}{28}{subsection.2.4}% 
-\contentsline {paragraph}{{Abductive Reasoning}}{28}{paragraph*.13}% 
+\contentsline {paragraph}{{Abductive Reasoning}}{29}{paragraph*.13}% 
 \contentsline {subsection}{\numberline {2.5}{Mechanical Computation}}{29}{subsection.2.5}% 
 \contentsline {part}{{\relax \fontsize {14.4}{18}\selectfont {\fontfamily {OrnementsADF}\fontencoding {U}\fontseries {m}\fontshape {n}\selectfont \char 14}\hspace {1.5mm}}Theory of Computation}{31}{part*.15}% 
 \vspace {\normalbaselineskip }
@@ -201,14 +204,16 @@
 \contentsline {section}{\numberline {30}{Design Patterns}}{103}{section.30}% 
 \contentsline {part}{{\relax \fontsize {14.4}{18}\selectfont {\fontfamily {OrnementsADF}\fontencoding {U}\fontseries {m}\fontshape {n}\selectfont \char 14}\hspace {1.5mm}}Appendices}{104}{part*.57}% 
 \vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {A}{System Design}}{104}{appendix.A}% 
-\contentsline {subsection}{\numberline {A.1}{Server Technologies}}{104}{subsection.A.1}% 
-\contentsline {subsection}{\numberline {A.2}{Persistent Storage Technologies}}{105}{subsection.A.2}% 
-\contentsline {subsection}{\numberline {A.3}{Network Techniques}}{107}{subsection.A.3}% 
+\contentsline {section}{\numberline {A}{Mathematical Fundamentals}}{104}{appendix.A}% 
 \vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {B}{Lessons Learned}}{109}{appendix.B}% 
+\contentsline {section}{\numberline {B}{System Design}}{105}{appendix.B}% 
+\contentsline {subsection}{\numberline {B.1}{Server Technologies}}{105}{subsection.B.1}% 
+\contentsline {subsection}{\numberline {B.2}{Persistent Storage Technologies}}{105}{subsection.B.2}% 
+\contentsline {subsection}{\numberline {B.3}{Network Techniques}}{108}{subsection.B.3}% 
 \vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {C}{Thoughts on Education}}{110}{appendix.C}% 
+\contentsline {section}{\numberline {C}{Lessons Learned}}{109}{appendix.C}% 
 \vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {D}{The Future of this Guide}}{111}{appendix.D}% 
-\contentsline {section}{\numberline {E}{Sources, Not Citations}}{112}{appendix.E}% 
+\contentsline {section}{\numberline {D}{Thoughts on Education}}{110}{appendix.D}% 
+\vspace {\normalbaselineskip }
+\contentsline {section}{\numberline {E}{The Future of this Guide}}{111}{appendix.E}% 
+\contentsline {section}{\numberline {F}{Sources, Not Citations}}{112}{appendix.F}% 
