@@ -153,13 +153,11 @@ BCOR5mm, % Binding correction
 %    TITLE AND AUTHOR
 %--------------------------------------------------------------------------------
 
-\title{\normalfont\spacedallcaps{Intuition For Computation}} % The article title
+\title{\normalfont\spacedallcaps{Intuition For Computation}}
 
-\subtitle{A Guide for Prospective Software Engineers} % The article subtitle
+\subtitle{A Guide for Programmers and Curious Minds}
 
-\author{\spacedlowsmallcaps{Tommy Monson}} % The article author
-
-\date{} % No date
+\author{\spacedlowsmallcaps{Tommy Monson}}
 
 %--------------------------------------------------------------------------------
 %    HEADERS
@@ -188,7 +186,7 @@ BCOR5mm, % Binding correction
 		\vspace{1.8cm}
 		{\fontsize{32}{40} \spacedallcaps{Intuition For}} \\[3mm]
 		{\fontsize{32}{40} \spacedallcaps{Computation}} \\[5mm]
-		{\fontsize{11}{40} \textsf{\textbf{A Guide for Prospective Software Engineers}}} \\[7mm]
+		{\fontsize{11}{40} \textsf{\textbf{A Guide for Programmers and Curious Minds}}} \\[7mm]
 		\begin{tcolorbox}[enhanced, colback=white, height=16.25cm, width=12cm, sharp corners, frame hidden]
 			\begin{center}
 				\begin{tikzpicture}[
@@ -381,7 +379,9 @@ In December of 2018, I graduated from Duke University, feeling like I knew simul
 \vspace{4mm}
 \end{displayquote}
 
-I find it difficult to describe what this book is. Yet, I find it easy to express why I think it is worth your time and contemplation.
+I find it difficult to describe what this book is. And yet, I find it easy to express why I think it is worth your time and contemplation.
+
+% It's a book about programming, and a guide for software engineering interviews, but it's more than that. I think it will be interesting and useful for anyone who wants to create and analyze things effectively.
 
 % https://www.standoutbooks.com/nail-non-fiction-introduction/
 
@@ -457,7 +457,7 @@ I find it difficult to describe what this book is. Yet, I find it easy to expres
 
 One can describe computation in a variety of ways. Some are poetic, others are more formal, and many we will discuss at length. In doing so, we will generally flow from poetry to formality, starting with broad statements and colorful examples and progressing toward a formal understanding. For now, we will say that computation is a process that resolves \textit{uncertainty}. \\
 
-The Ancient Greek poet Hesiod (fl. 750 BCE) depicts a fascinating, primordial uncertainty in his conception of Chaos: a vast nothingness that preceded the creation of the Universe. From this void emerged Gaia, Tartarus and Eros, personifying the Earth, the abyss beneath it, and love, respectively. Curiously, the modern definition of chaos is nearly inverted. Now, one might say that a situation is \textit{chaotic} if there is so much going on that it is hard to make sense of anything. Despite their great conceptual difference, these meanings share a common property: they both evoke \textit{confusion}. \\
+In his \textit{Theogony}, the Ancient Greek poet Hesiod (fl. 750 BCE) depicts a fascinating uncertainty known as Chaos: a vast nothingness that preceded the creation of the Universe. From this void emerged the primordial deities, personifications of nature who gave birth to the Titans. Curiously, the modern definition of \textit{chaos} has nearly inverted. Now, one might say that a situation is \textit{chaotic} if there is so much going on that it is hard to make sense of anything. Despite their great conceptual difference, these meanings share a common property: they both evoke \textit{confusion}. \\
 
 This place in which we find ourselves may indeed be post-Chaos, but confusion remains a familiar state for us. In fact, it is our natural state. We come into life confused about everything, crying, open-eyed in reaction to how much is going on around us. Slowly, we figure a few things out. Later, we consider many things \textit{certain}. As time ticks on and we carve our separate paths in the world, the wise ones among us come to realize the true depth of their confusion. \\
 
@@ -485,44 +485,75 @@ Here, we learn how this game is played and how it is woven into the fabric of ou
 \end{displayquote}
 \vspace{4mm}
 
-In order to clear the chaos, we must first ask what there is. What can we say about the things that exist? Can we fundamentally distinguish some from others, or is it all just a big, soupy mess? Furthermore, if we indeed say that some things are $A$ and the rest are $B$, can we also claim that such a distinction is \textit{actually} present in reality or are things $A$ and $B$ only because that is how our minds perceive them? These are the basic questions of \textit{metaphysics}, the study of what is. \\
+Blah
 
-A common approach to this challenge is to create a system of \textit{categories} that partition reality at the highest level. For example, one could suggest that there is a fundamental difference between a \textit{quantity} and a \textit{quality}. If these are considered distinct categories, we can classify \textit{measurable} or \textit{countable} stuff like \textit{length}, \textit{mass}, a \textit{dozen}, and a \textit{crowd} as quantitative and \textit{experiential} stuff like \textit{softness}, \textit{roundness}, \textit{cherry-flavor}, and \textit{beauty} as qualitative. \\
-
-The quantity-quality distinction is a generally accepted one. However, the dichotomy is not so absolute. For example, softness is listed above as a quality. We might expect, then, that hardness is a quality. For example, rocks are hard and puppy ears are soft. But hardness is also a quantitative measurement of resistance to plastic deformation. Thus, the word \textit{hardness} can refer to both quantitative and qualitative phenomena. The categorical difference between these hardnesses, which exists independent of language, is identified through the context in which the word is used. A hardness can be measured with numbers, but it can also simply be \textit{experienced} via touch. \\
-
-This curiosity aside, we could also design our category system such that quantities and qualities are considered \textit{properties} of some very general sort of thing. Philosophers have long considered the idea of a highest-level category and have ascribed a variety of names to its members: \textit{entity}, \textit{being}, \textit{thing}, \textit{term}, \textit{individual}, etc. Each carries its own subtle connotations. We will use the name \textit{object} because it is the default choice in current philosophical practice and because it has bled into the technical language of computer science with its meaning largely unchanged. \\
-
-How general is this category of objects? Namely, are properties objects? If they are, then our system collapses to a single category, which really means that no distinctions about reality can be made at all. The category of objects thus becomes the soupy mess we are trying to escape. For this reason, let us assume that properties are \textit{not} objects. Instead, they are something else, and they \textit{relate} to objects in some way, giving them their characteristics. From this relationship, the diversity of existence unfolds. \\
+% Properly introduce the chapter. Explain why you're going to talk about all of this non-computer science stuff.
+% What does information mean to you, the reader? Keep that in mind as we discuss all this seemingly irrelevent stuff.
+% Computer science is a unifier of academic fields. It is hard to fully grasp because it is so general. We need to pull from many disciplines to characterize it effectively.
 
 %----------------------------------------
 
-\subsection{Platonic and Aristotelian Metaphysics}
+\subsection{Metaphysics of Classical Antiquity}
 
-Plato (c. 428/427 -- c. 348/347 BCE) was the first to expound a metaphysics of objects with his \textit{theory of Forms}, which proposed a solution to the \textit{problem of universals}. This problem is subtle, but important: how can a single general property emerge in many particular objects? For example, when we say that a floor and a wall are \textit{smooth}, are we referring to some singular paradigm of \textit{smoothness} that is independent of each? For Plato, \textit{universals} or \textit{properties}, such as smoothness, are indeed separate from the \textit{particulars} or \textit{objects} that partake of them. He posits that the \textit{essence} of an object, its \textit{sine qua non}, is the product of its partaking of Forms. \\
+% One could argue that philosophy has been done ever since we could think. But philosophy in Ancient Greece was different. Why?
+% Motivation for metaphysics. The One. Henosis. Geography. Democracy.
+% Thales. Explaining things without the supernatural. From many things to one substance (water).
+% Rebooting Hesiod's Theogony. Instead of gods emerging from the Chaos, let's try to categorize everything naturalistically.
 
-Forms, as conceptualized by Plato, are abstract entities that exist in the \textit{hyperouranos}, the realm beyond the heavens. In the times of Homer and Hesiod, the Ancient Greek understanding of the cosmos closely mirrored the depiction given in the Hebrew Bible. The Earth was envisioned as a flat disc surrounded by endless ocean and the sky was a metal dome with gem-like stars embedded in it, much as it all appears from a naive perspective on the ground. Plato, however, was influenced by the philosophy of Pythagoras (c. 570 -- c. 495 BCE), who championed a spherical Earth for aesthetic reasons. Thus, he instead modeled the Earth as a "round body in the center of the heavens," and he imagined the Forms as part of a different, eternal world that transcends physical space and time. Whereas physical reality is the domain of opinion and raw sensation, the realm of the Forms is, as he paints it in \textit{Phaedrus}, the domain of \textit{reason}: \\
+%----------------------------------------
+
+In order to clear the chaos, we must first ask what there is. What can we say about the things that exist? Can we fundamentally distinguish some from others, or is it all just a big, soupy mess? Furthermore, if we indeed say that some things are $A$ and the rest are $B$, can we also claim that such a distinction is \textit{actually} present in reality or are things $A$ and $B$ only because that is how our minds perceive them? These are some of the oldest questions in \textit{metaphysics}, the study of what is. \\
+
+A common approach to this challenge is creating a system of \textit{categories} that partition reality at the highest level. For example, one could suggest that there is a fundamental difference between a \textit{quantity} and a \textit{quality}. If these are considered distinct categories, we can classify \textit{measurable} or \textit{countable} stuff like \textit{length}, \textit{mass}, \textit{number}, and \textit{monetary value} as quantitative and \textit{experiential} stuff like \textit{softness}, \textit{roundness}, \textit{flavor}, and \textit{beauty} as qualitative. \\
+
+The quantity-quality distinction is a generally accepted one. However, the dichotomy is not so absolute. For example, softness is listed above as a quality. We might expect, then, that hardness is a quality. For example, rocks are hard and puppy ears are soft. But hardness is also a quantitative measurement of resistance to plastic deformation. Thus, the word \textit{hardness} can refer to both quantitative and qualitative phenomena. The categorical difference between these hardnesses, which exists independent of language, is identified through the context in which the word is used. A hardness can be measured with numbers, but it can also simply be \textit{experienced} via touch. \\
+
+This curiosity aside, we could also design our category system such that quantities and qualities are both considered \textit{properties} of some very general sort of thing. Philosophers have long considered the idea of a highest-level category and have ascribed a variety of names to its members: \textit{entity}, \textit{being}, \textit{thing}, \textit{term}, \textit{individual}, etc. Each carries its own subtle connotations. We will use the name \textit{object} because it is the default choice in current philosophical practice and because it has bled into the technical language of computer science with its meaning largely unchanged. \\
+
+How general is this category of objects? Namely, are properties objects? If they are, then our system collapses to a single category, which really means that no distinctions about reality can be made at all. The category of objects thus becomes the soupy mess we are trying to escape. For now, let us assume that properties are \textit{not} objects. Instead, they are something else, and they \textit{relate} to objects in some way, giving them their characteristics. From this relationship, the diversity of existence unfolds. \\
+
+\subsubsection{Democritus' Atomism}
+
+% Time is an instance of the Form of eternity. The Greeks did not think about time like us.
+% Plato is rationalist, Democritus is mechanist and materialist (they agree on epistemology though)
+% Plato is unconcerned with matter. Though he did believe in the classical elements.
+% However, Plato does not define substance (data). It abstracts it away. To understand information, we must consider a different metaphysical theory.
+
+\subsubsection{Plato's Theory of Forms}
+
+Plato (c. 428/427 -- c. 348/347 BCE) was the first to expound a metaphysics of objects with his \textit{theory of Forms}, which proposed a solution to the \textit{problem of universals}. This problem is subtle, but important: how can a single general property appear in many individual objects? For example, when we say that a floor and a bowl are \textit{smooth}, are we referring to some singular paradigm of \textit{smoothness} that is independent of each? For Plato, \textit{universals} or \textit{Forms}, such as smoothness, are indeed distinct from the \textit{particulars} that \textit{partake} of them, such as floors and bowls and other smooth objects. He posits that the \textit{essence} of an object, its \textit{sine qua non}, is the result of its partaking of these Forms. \\
+
+\textit{Forms}, as conceptualized by Plato, are ideal, abstract entities that exist in the \textit{hyperouranos}, the realm beyond the \textit{heavens}. In the times of Homer and Hesiod, the Ancient Greeks understood a cosmology that closely mirrored that of the Hebrew Bible. They envisioned the Earth as a flat disc surrounded by endless ocean and the sky as a solid dome with gem-like stars embedded in it, much as it all appears from a naive perspective on the ground. Under the Earth was the \textit{underworld}, where the dead live, and beyond the dome were the \textit{heavens}, where the divine live. \\
+
+Plato, however, was influenced by the philosophy of Pythagoras (c. 570 -- c. 495 BCE), who championed a spherical Earth for aesthetic reasons. Thus, he instead modeled the Earth as a "round body in the center of the heavens," and he imagined the Forms as part of a different, eternal world that transcends physical space and time. Whereas physical reality is the domain of perception and opinion, the realm of the Forms is, as he paints it in \textit{Phaedrus}, the domain of \textit{reason}: \\
 
 \begin{displayquote}
 	\textit{Of that place beyond the heavens none of our earthly poets has yet sung, and none shall sing worthily. But this is the manner of it, for assuredly we must be bold to speak what is true, above all when our discourse is upon truth. It is there that true Being dwells, without colour or shape, that cannot be touched; reason alone, the soul's pilot, can behold it, and all true knowledge is knowledge thereof. Now even as the mind of a god is nourished by reason and knowledge, so also is it with every soul that has a care to receive her proper food; wherefore when at last she has beheld Being she is well content, and contemplating truth she is nourished and prospers, until the heaven's revolution brings her back full circle. And while she is borne round she discerns justice, its very self, and likewise temperance, and knowledge, not the knowledge that is neighbor to Becoming and varies with the various objects to which we commonly ascribe being, but the veritable knowledge of Being that veritably is. And when she has contemplated likewise and feasted upon all else that has true being, she descends again within the heavens and comes back home. And having so come, her charioteer sets his steeds at their manger, and puts ambrosia before them and draught of nectar to drink withal.}
 	\vspace{4mm}
 \end{displayquote}
 
-% The changing world can only be understood by the unchanging world. The multiple of the One.
+Plato makes a revolutionary statement here about the nature of scientific knowledge. He declares that one cannot know the physical world directly because it is, in fact, \textit{less real} than the \textit{hyperouranos}. As he puts it in \textit{Timaeus}, a Form is "what always is and never becomes," and a particular is "what becomes and never is." Further, physical reality is merely the "receptacle of all Becoming," a three-dimensional \textit{space} that affords spatial \textit{extension} and \textit{location} to all particulars. Unlike Forms, particulars are subject to \textit{change}, and thus cannot be sources of absolute knowledge. They are slippery, metaphysically undefinable, and explainable only in terms of the unchanging Forms of which they partake. \\
 
-% A demiurge or artisan instantiates the forms as particulars (Plato's attempt to reconcile his metaphysics with Hesiod's Theogony)
-% The human soul becomes familiar with Form in heaven before being born into a body in the material plane
-% You can only know Forms, not particulars (anti-realism?)
-% Forms are "more real" than particulars
-% Being, partaking, instantiation
-% Lines blur between objects and properties. Forms represent properties, but they are also abstract objects. Particulars are objects, but their essense is a set of properties.
+The above passage can be interpreted as an early argument for basing human knowledge in abstract mathematics rather than in subjective evaluations of concrete observations. For example, to \textit{know} what a triangle is, one cannot simply point to a triangular rock or even to a very carefully drawn diagram of a triangle. One must instead use \textit{abstract reasoning} to express the Form of a triangle by means of a \textit{formal definition}: a three-sided shape in a two-dimensional plane. This is the \textit{essence} of a triangle. In contrast, the triangular rock and diagram each partake of multiple Forms, and neither are perfectly triangular. We may still \textit{call} them triangles, but only those who know the Form of a triangle will understand what we mean when we do so. Therefore, it is knowledge of the unambiguous Form that gives insight into the complex and ever-changing particular, not the other way around. \\
 
+Here, our object-property distinction blurs. Because while Forms may define universal properties, are they not also objects in an abstract sense? And while concrete particulars may be objects, are they not also fully characterized by a set of properties? In Plato's metaphysics, the categories of interest are really the \textit{concrete} and the \textit{abstract}, that which we \textit{perceive} and that which we \textit{conceive}. Plato further claims that humans come from the abstract realm, where they familiarize themselves with the Forms, and they are born into the concrete realm, where particulars are abundant and Forms are only latent memories. It is through philosophy then, the exploration of the rational mind, that we unearth our innate understanding. \\
+
+To explain the link between the realms, Plato also postulates a \textit{demiurge}, a transcendent artisan who shapes an initially chaotic space into an ordered, material reality, using the Forms as models. This entity is benevolent and wishes to craft a world like the ideal one he sees, but the objects that he \textit{instantiates} are always imperfect copies. Like that of a master portraitist, his work is beautiful, but it is, in the end, a mere \textit{image} of his subject. \\
+
+So it is for programmers. Before us lies the space of computer memory, uniform and featureless, a receptacle of Becoming. Our Forms are \textit{types}, our particulars are \textit{values}, and the behavior in the space is dictated by the \textit{code} that we execute. In \textit{object-oriented programming} (OOP), values can be of an \textit{object type} that is formally defined by a \textit{class}. For example, my cat Mystic belongs to the class of entities known as Cat, the set of all possible cats. She is an \textit{object} known as a cat, and her catness is defined by the class Cat. In Plato's terms, she is a \textit{particular}, partaking of the Form \textit{Cat}. Just as the demiurge instantiates particulars from Forms, so the programmer instantiates objects from classes. Both bridge the gap between what is possible and what is. \\
+
+That said, while Plato's metaphysics gives good insight into OOP and other abstract (or \textit{high-level}) programming concepts, it cannot explain concrete (or \textit{low-level}) ideas like \textit{data} that is represented with \textit{bits}. This is because Plato was not overly concerned with the \textit{substance} of objects, the stuff that makes them \textit{physical}. Thus, in our pursuit of a holistic understanding of \textit{information}, we must also consider \textit{substance theories}, philosophies that give metaphysical weight to \textit{matter}. \\
+
+\subsubsection{Aristotle's Hylomorphism}
+
+% Rejects atomism, says reality is continuous (corpuscles)
+% Physis
+% Bundle, bare particular
 % Aristotle's actuality and potentiality
-% Universal, particular, abstract, concrete
 % Objects vs. events. Is there a difference? Maybe not, but there at least appears to be one. Humans have traditionally discerned a difference, notably in language. Perhaps the difference is only conceptually convenient. Is an apple distinct from its decaying over time? Is computer state really a meaningful object with clock speeds in the gigahertz? Is a thunderstorm an event, or just a system of many, tiny objects with different properties, all changing with time?
 % Objects are characterized spatially, events temporally.
-% Substantial vs. formal phenomena
 % Mathematical objects and operators
+% Plato is rationalist, Aristotle is empiricist
 
 % Aristotle's ten categories
 % Moving away from Aristotelian realism, Kant supposes that categories say something about how we conceptualize reality, not about reality itself.
@@ -530,6 +561,8 @@ Forms, as conceptualized by Plato, are abstract entities that exist in the \text
 %----------------------------------------
 
 \subsection{Theories and Models}
+
+% Patterns
 
 % Theory - a way of looking at something
 % Model - a way to represent something
@@ -543,6 +576,7 @@ Forms, as conceptualized by Plato, are abstract entities that exist in the \text
 % Axioms vs postulates. Essentially synonymous, but the former is more common in math and the latter is more common in science. Mathematicians do not consider axioms verifiable. In science, postulates are about the physical world, and physics is verifiable, so postulates are verifiable. Postulates can be broken if contrary evidence is found.
 % Models do not *exist*. They are mathematical abstractions that describe reality. Some phenomenon might be "well-described" by a theoretical model, but that does not make it a signal, field, etc.
 % Models can be categorized: linear/non, static/dynamic, explicit/implicit, discrete/continuous, deterministic/probabilistic, deductive/inductive/floating
+% Models may die out if they have major flaws. However, crude models are still sometimes useful due to their simplicity (classical mechanics).
 % Theories are abstract models, models whose components are symbolic.
 % A model represents a system, a simulation represents its operation over time.
 % A computer program can be interpreted as a simulation of some aspect of the Universe and, at the time, as a little Universe in and of itself. The difference between this universe and \textit{the} Universe is that we theoretically have access to all of the information in the former. Whereas we are babies stumbling around in the dark of physical reality, we are gods of the universes we architect in digital memory.
@@ -555,14 +589,20 @@ Forms, as conceptualized by Plato, are abstract entities that exist in the \text
 \subsection{Modeling Physical Reality}
 
 % Religion, mythology, cosmogomy
-% We're not going to discuss religion or any theory that says more about the supernatural than the natural. However, we will briefly touch on some ancient models of physical reality that are intertwined with spirituality.
+% We're not going to deeply discuss religion or any theory that says more about the supernatural than the natural. However, we will briefly touch on some ancient models of physical reality that are intertwined with spirituality.
+% Touch on religion up front, so we don't have to talk about it after this.
+% Models are constructed within the "religion" of a society. This is not religion in the customary sense, but a spiritual, cultural bias, a set of guiding ideals. Heisenburg calls it the "spiritual pattern of a community." Religion in this sense does not have to be theistic.
+% "Two kinds of truth"
+% Religion helps us make sense of the chaos. A common theme is a belief in The One, an interconnection of seemingly disparate things.
+% The progress of science was held back by war, disease, and also religion. But religion is not inherently destructive. Science and religion discuss two entirely separate things. The mistake was in trying to fit science into a religious model. Too many scientists spent time looking for rigid patterns in the Universe that meshed with their religion, and they just were not there. The Universe is not a divine puzzle that holds the meaning of the divine.
+% In the same way that there are scientific things that religion has no bearing on, there are religious things that science has no bearing on (ethics). Science will not make religion obsolete. Humans need meaning, community, fulfillment, guidance, etc. Technology does not solve these things. Religion does (however, again, it doesn't require God).
+% We see a trend from anthrocentric to not. We are biased toward our species, our intelligence, our planet, our culture, our language.
 
-\subsubsection{Metaphysical Naturalism}
+\subsubsection{Pre-scientific Thought}
 
 % Atomic theory of Hindu philosophy
 % Tao, Yin and Yang
 % Indra's net
-% Physis
 % Monad, Pythagoreanism
 % Classical elements, aether
 % Kosmos and Nous, Plotinus
@@ -619,9 +659,11 @@ Forms, as conceptualized by Plato, are abstract entities that exist in the \text
 % QM introduces a conflict over scientific realism. Should scientific theories strive to literally describe reality?
 % Because QM is probabilistic, this implies that physics is nondeterministic. According to QM, we will never know the true nature of reality with certainty. We cannot know everything about every elementary particle.
 % Problems with quantum entanglement. With the Copenhagen interpretation, we maintain that models are NOT reality. Just because the math asserts that some real physical quantity has some value, this is not certain without actually performing a measurement. Theories cannot predict values with absolute certainty.
+% EPR paradox. Bell's theorem. QM seems to say things that are impossible. Throwback to Galileo: "And yet it works."
 % Copenhagen interpretation claims that QM is a way of acquiring knowledge, but it does not attempt to describe objects in the way that classical mechanics does. It asserts that founding a model on entities or distinctions (such as particles, waves, and bodies) that are intuitive but ultimately unknowable, leads to incorrect predictions somewhere. Instead, it tries to make claims only about things that can be empirically observed.
 % Conjugate variables (mass and momentum, uncertainty principle). Derivatives of action. Fundamental interactions. 
 % Beyond the standard model: supersymmetry, integrating gravity: string theory, gravitons
+
 % But there is an alternative way of looking at physics that is quite different from the models presented so far...
 
 %----------------------------------------
@@ -2420,7 +2462,9 @@ Blah, blah, blah... \\
 \toclineskip
 \section{Abstract Data Types and the Data Structures that Implement Them}
 
-% You know how someone might try to explain a situation or an object to you with words and you have to try to visualize what they are talking about? That's what this section is.
+% These are just patterns that appear in life. Trees tend to be more common in nature, lists are how humans tend to organize things.
+% Do "plain old data structures" first: arrays, structs, records, unions, objects
+% Data type + data structure wiki
 
 In this section, we evaluate data structures from a theoretical standpoint, describing their essential properties and why one may be preferable to another for some task. \textit{There is no single, best way of storing data.} The optimal layout varies depending on the nature of the task. The rules and requirements that define these data structures can be implemented in code, and many programming languages have their own implementations of these structures. \\
 
@@ -4135,6 +4179,41 @@ Summarize the appendices below...
 \newpage
 
 %--------------------------------------------------------------------------------
+%    APPENDIX: SOURCES, NOT CITATIONS
+%--------------------------------------------------------------------------------
+
+\toclineskip
+\section{Sources, Not Citations}
+
+\begin{displayquote}
+	\textit{The origin of concepts, even for a scholar, is very difficult to trace. For a nonscholar such as me, it is easier. But less accurate.}
+	\begin{flushright}
+		---Peter Freyd
+	\end{flushright}
+	\vspace{4mm}
+\end{displayquote}
+
+% This guide was not written under the circumstances that a textbook would be. It was not originally intended to be a textbook. However, it is sort of a "narrative textbook" now. I still don't think a bibliography is necessary.
+% It was not written with sourcing in mind. I don't consider it to be an "academic work" in the traditional sense of the term. That said, I do consider it a serious work and, as such, the content is rigorously sourced. 
+% All other excuses aside, I honestly just didn't care to go through the trouble. And I honestly don't think that most readers would be interested in perusing a dutifully collected bibliography or works cited page that conforms to a style manual even if there was one.
+% However, all of the information here is the result of my understanding after doing cross-referenced research.
+% Philosophy of 98% accuracy.
+
+% Thanks to Wikipedia, math.stackexchange, cs.stackexchange, philosophy.stackexchange, tex.stackexchange, Stack Overflow, Encyclopedia of Mathematics, Stanford Encyclopedia of Philosophy. I'm not going to reference every single page I used from these places. I used quite literally thousands of different web pages from these sites.
+
+% Outside of these encyclopedic sources, here are some notable papers that I referenced while writing this:
+
+% Timaeus
+% Phaedrus
+% Werner Heisenberg's "Physics and Philosophy"
+
+% Nothing here is plagiarized.
+% Copyright.
+% If it makes you feel better, you can consider this a work of fiction.
+
+\newpage
+
+%--------------------------------------------------------------------------------
 %    APPENDIX: LESSONS LEARNED
 %--------------------------------------------------------------------------------
 
@@ -4143,6 +4222,7 @@ Summarize the appendices below...
 
 % Sometimes, what you want is already created and available. Other times, you have to create it yourself. Sometimes, prescribed methods of learning are effective. Other times, you have to learn in your own way to get the knowledge you are after.
 % Most authority figures know little more than you do. Place your trust in outside ideas carefully. Get multiple opinions and come to your own conclusion. Otherwise, you'll be as clueless as they are.
+% It's easy to use a word that is close but ultimately incorrect.
 % Technical language is awesome. Much of it is incredibly precise. It makes me want to study linguistics.
 % Doing a passion project of this scale changes you.
 % In what order did you write this book? Somewhat linearly, but honestly way more spatially scattered than I expected.
@@ -4160,6 +4240,16 @@ Summarize the appendices below...
 \toclineskip
 \section{Thoughts on Education}
 
+% None of this is to say that my choices played no role in my education. They certainly did. I could have done things differently. But I put a great deal of effort into learning and felt that I made responsible choices (i.e. choices that would help me excel). Still, I always felt like my knowledge was fragile and skin-deep. I put my faith in the system, and it is only now, after spending some time educating myself outside of the system, that I see clearly the flaws in the pedagogy of my youth.
+
+% Teaching syntax over semantics. Anecdote of the dot product. Feeling like things are there for no reason. Math ideas are not invented out of thin air, and they shouldn't be taught that way.
+% Universities, for the most part, want to teach theoretical material, not applied. They don't want to be trade schools. That's fine. The problem, as I see it, is that they struggle to teach either. There isn't enough philosophical thought to effectively teach theory and there isn't enough curriculum-wide integration of tools to teach application (programming language libraries, frameworks, CAD software).
+% There needs to be more of a focus on history. The best way to understand a concept is to understand the problem that the inventors faced. History also prepares you for the future because it gives you case studies of academic thought (thinking outside of the box, new models).
+% Culture's influence on education: clubs, Greek life, things that are basically second jobs. Being stressed out makes it hard to learn, being depressed makes you stupid and uninterested. Having to choose between studying the amount that you need and letting "the team" down or studying minimally so you can do all of your homework and meet club responsibilities. A culture that promotes always being productive to the point of rigidly organizing recreation is not a culture that effectively fosters learning.
+% Homework and tests, the obsession with grades, the dismissal of grades as "not enough" to get the job you want, the 50 and 60 percent test averages, people literally having mental breaks (feeling fractured for over a year after the 350 processor)
+% Why is everyone feverishly taking notes? Taking notes in lecture is *pointless*. The professor should be handing out fully documented notes that cover *all* of the material that is in-scope. You cannot listen to or process what the professor is saying if you are taking notes. Anecdote of machine learning.
+% In order to learn, we need time to do nothing.
+
 \newpage
 
 %--------------------------------------------------------------------------------
@@ -4170,31 +4260,6 @@ Summarize the appendices below...
 \section{The Future of this Guide}
 
 \newpage
-
-%--------------------------------------------------------------------------------
-%    APPENDIX: SOURCES, NOT CITATIONS
-%--------------------------------------------------------------------------------
-
-\section{Sources, Not Citations}
-
-\begin{displayquote}
-	\textit{The origin of concepts, even for a scholar, is very difficult to trace. For a nonscholar such as me, it is easier. But less accurate.}
-	\begin{flushright}
-		---Peter Freyd
-	\end{flushright}
-	\vspace{4mm}
-\end{displayquote}
-
-% This guide was not written under the circumstances that a textbook would be. It was not originally intended to be a textbook. However, it is sort of a "narrative textbook" now. I still don't think a bibliography is necessary.
-% It was not written with sourcing in mind. I don't consider it to be an "academic work" in the traditional sense of the term. That said, I do consider it a serious work and, as such, the content is rigorously sourced. 
-% All other excuses aside, I honestly just didn't care to go through the trouble. And I honestly don't think that most readers would be interested in perusing a dutifully collected bibliography or works cited page that conforms to a style manual even if there was one.
-% However, all of the information here is the result of my understanding after doing cross-referenced research.
-% Philosophy of 98% accuracy.
-% Thanks to Wikipedia, math.stackexchange, cs.stackexchange, philosophy.stackexchange, tex.stackexchange, Stack Overflow, Encyclopedia of Mathematics, Stanford Encyclopedia of Philosophy. I'm not going to reference every single page I used from these places. I used quite literally thousands of different web pages from these sites.
-% Outside of these encyclopedic sources, here are some notable papers that I referenced while writing this.
-% Nothing here is plagiarized.
-% Copyright.
-% If it makes you feel better, you can consider this a work of fiction.
 
 %--------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
