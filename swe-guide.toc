@@ -8,29 +8,25 @@
 \contentsline {subsection}{\numberline {1.1}{Metaphysics of Classical Antiquity}}{12}{subsection.1.1}% 
 \contentsline {subsubsection}{\numberline {1.1.1}{Democritus' Atomism}}{13}{subsubsection.1.1.1}% 
 \contentsline {subsubsection}{\numberline {1.1.2}{Plato's Theory of Forms}}{13}{subsubsection.1.1.2}% 
-\contentsline {subsubsection}{\numberline {1.1.3}{Aristotle's Hylomorphism}}{16}{subsubsection.1.1.3}% 
-\contentsline {subsection}{\numberline {1.2}{Theories and Models}}{16}{subsection.1.2}% 
-\contentsline {subsection}{\numberline {1.3}{Modeling Physical Reality}}{16}{subsection.1.3}% 
-\contentsline {subsubsection}{\numberline {1.3.1}{Pre-scientific Thought}}{16}{subsubsection.1.3.1}% 
-\contentsline {subsubsection}{\numberline {1.3.2}{Point Particles and Forces}}{16}{subsubsection.1.3.2}% 
-\contentsline {subsubsection}{\numberline {1.3.3}{Waves and Fields}}{16}{subsubsection.1.3.3}% 
-\contentsline {subsubsection}{\numberline {1.3.4}{Quantum States and Operators}}{16}{subsubsection.1.3.4}% 
-\contentsline {subsection}{\numberline {1.4}{Physics in Terms of Information}}{16}{subsection.1.4}% 
-\contentsline {subsection}{\numberline {1.5}{Signals}}{16}{subsection.1.5}% 
-\contentsline {subsection}{\numberline {1.6}{Numbers and Numerals}}{19}{subsection.1.6}% 
-\contentsline {subsubsection}{\numberline {1.6.1}{Euclid's \textit {Elements} and Mathematical Realism}}{20}{subsubsection.1.6.1}% 
-\contentsline {subsubsection}{\numberline {1.6.2}{Mathematical Anti-realism}}{22}{subsubsection.1.6.2}% 
-\contentsline {subsubsection}{\numberline {1.6.3}{Number Sets and Fields}}{22}{subsubsection.1.6.3}% 
-\contentsline {subsubsection}{\numberline {1.6.4}{Numeral Systems}}{22}{subsubsection.1.6.4}% 
-\contentsline {subsection}{\numberline {1.7}{Semiotics, Language, and Code}}{23}{subsection.1.7}% 
+\contentsline {subsubsection}{\numberline {1.1.3}{Aristotle's Hylomorphism}}{15}{subsubsection.1.1.3}% 
+\contentsline {subsection}{\numberline {1.2}{Theories and Models}}{18}{subsection.1.2}% 
+\contentsline {subsection}{\numberline {1.3}{Modeling Physical Reality}}{18}{subsection.1.3}% 
+\contentsline {subsubsection}{\numberline {1.3.1}{Pre-scientific Thought}}{18}{subsubsection.1.3.1}% 
+\contentsline {subsubsection}{\numberline {1.3.2}{Point Particles and Forces}}{18}{subsubsection.1.3.2}% 
+\contentsline {subsubsection}{\numberline {1.3.3}{Waves and Fields}}{18}{subsubsection.1.3.3}% 
+\contentsline {subsubsection}{\numberline {1.3.4}{Quantum States and Operators}}{18}{subsubsection.1.3.4}% 
+\contentsline {subsection}{\numberline {1.4}{Information Theory}}{18}{subsection.1.4}% 
+\contentsline {subsection}{\numberline {1.5}{Signals and Systems}}{18}{subsection.1.5}% 
+\contentsline {subsection}{\numberline {1.6}{Semiotics, Language, and Code}}{22}{subsection.1.6}% 
+\vspace {\normalbaselineskip }
 \contentsline {section}{\numberline {2}{Reasoning and Logic}}{24}{section.2}% 
 \contentsline {subsection}{\numberline {2.1}{The Syntax and Semantics of Argument}}{24}{subsection.2.1}% 
-\contentsline {subsection}{\numberline {2.2}{The Structure of Proof}}{27}{subsection.2.2}% 
-\contentsline {subsection}{\numberline {2.3}{The Oracle, the Seer, and the Sage}}{28}{subsection.2.3}% 
-\contentsline {paragraph}{{The Oracle}}{28}{paragraph*.10}% 
-\contentsline {paragraph}{{The Seer}}{29}{paragraph*.11}% 
-\contentsline {paragraph}{{The Sage}}{29}{paragraph*.12}% 
-\contentsline {subsection}{\numberline {2.4}{The Mathematician and the Scientist}}{31}{subsection.2.4}% 
+\contentsline {subsection}{\numberline {2.2}{The Structure of Proof}}{26}{subsection.2.2}% 
+\contentsline {subsection}{\numberline {2.3}{The Oracle, the Seer, and the Sage}}{27}{subsection.2.3}% 
+\contentsline {paragraph}{{The Oracle}}{27}{paragraph*.10}% 
+\contentsline {paragraph}{{The Seer}}{28}{paragraph*.11}% 
+\contentsline {paragraph}{{The Sage}}{28}{paragraph*.12}% 
+\contentsline {subsection}{\numberline {2.4}{The Mathematician and the Scientist}}{30}{subsection.2.4}% 
 \contentsline {paragraph}{{Abductive Reasoning}}{31}{paragraph*.13}% 
 \contentsline {subsection}{\numberline {2.5}{Mechanical Computation}}{32}{subsection.2.5}% 
 \contentsline {part}{{\relax \fontsize {14.4}{18}\selectfont {\fontfamily {OrnementsADF}\fontencoding {U}\fontseries {m}\fontshape {n}\selectfont \char 14}\hspace {1.5mm}}Theory of Computation}{34}{part*.15}% 
