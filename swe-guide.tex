@@ -149,6 +149,9 @@ BCOR5mm, % Binding correction
 % Math highlight
 \newcommand{\hl}[1]{\colorbox{textbook-blue-dark}{$\displaystyle#1$}}
 
+% Custom ellipsis spacing
+\newcommand\mydots{\makebox[4em][c]{$\cdot$\hfil$\cdot$\hfil$\cdot$}}
+
 %--------------------------------------------------------------------------------
 %    TITLE AND AUTHOR
 %--------------------------------------------------------------------------------
@@ -335,6 +338,7 @@ In December of 2018, I graduated from Duke University, feeling like I knew simul
 % DA teachers
 % Duke teachers
 % Parents
+% TeX, TeXStudio, Donald Knuth
 % Hi-Chews
 
 \newpage
@@ -381,12 +385,14 @@ In December of 2018, I graduated from Duke University, feeling like I knew simul
 
 I find it difficult to describe what this book is. And yet, I find it easy to express why I think it is worth your time and contemplation.
 
+% What is this thing? A book? A textbook? A work of non-fiction? A list? A guide? A handbook? I think it is all of those things.
+
 % It's a book about programming, and a guide for software engineering interviews, but it's more than that. I think it will be interesting and useful for anyone who wants to create and analyze things effectively.
 
 % https://www.standoutbooks.com/nail-non-fiction-introduction/
 
 % The hook starts here. Why should the reader care?
-% Five reasons to read this book: 1. It is a work of passion, born out of a consuming and frenetic obsession 2. It is painstakingly crafted, every sentence carefully constructed, every word meticulously chosen, 3. It is a distillation of some very difficult and important ideas that you have encountered and will undoubtedly encounter again, ...
+% Five reasons to read this book: 1. It is a work of passion, born out of a consuming and frenetic obsession 2. It is painstakingly crafted, every sentence carefully constructed, every word meticulously chosen, 3. It is a work born from a deep depression that serves as a guide to those who may experience the same feelings of self-doubt, 4. It is a distillation of some very difficult and important ideas that you have encountered and will undoubtedly encounter again, ...
 % However, there is a reason that is bigger than all of these...
 
 % "Living in the Information Age"
@@ -402,7 +408,7 @@ I find it difficult to describe what this book is. And yet, I find it easy to ex
 % Make it inspiring. Make it motivational. Make it sound accessible.
 % A subsection called administrivia for book-structure information.
 
-% I begin writing this so that understand it. Then, it got big enough that I thought it could be of use to others, so I started to write it in such a way that someone with less formal education than me could understand it. Then, I realized that in order to really get it, I had to write about these complex topics in such a way that someone outside of CS could feasibly understand it, given enough time and drive. I wanted to explain the insights one can glean from higher mathematics and theoretical computer science, and I wanted to do it in such a way that my grandmother, who does not use computers, would be able to understand it. This is intuitive understanding.
+% I begin writing this so that understand it. Then, it got big enough that I thought it could be of use to others, so I started to write it in such a way that someone with less formal education than me could understand it. Then, I realized that in order to really get it, I had to write about these complex topics in such a way that someone outside of CS could feasibly understand it, given enough time and drive. I wanted to explain the insights one can glean from higher mathematics and theoretical computer science, and I wanted to do it in such a way that it was really easy to understand. This is intuitive understanding.
 % The words on the page will not teach the material to you. They are simply there to guide your thoughts toward understanding. You have to spend time in thought to foster intuition.
 % Discuss the goal of this guide. Discuss why someone might want to read it.
 % Discuss why content was chosen and why it is ordered the way it is.
@@ -414,7 +420,7 @@ I find it difficult to describe what this book is. And yet, I find it easy to ex
 % Make a chart with philosophy as a circle (a non-metric space) and mathematics, physics, engineering, computer science, etc. as bars (metrics spaces whose metric is academic complexity). The bars start at high-school level topics and extend to the bleeding edge of understanding. Draw two versions: what college taught me vs. what I felt like I needed to know. Syntactic understanding vs semantic understanding.
 % College dug deep, raw tunnels into hard earth. <Drawing of vertical lines>. Writing this book connected them all horizontally, leaving lanterns at the intersections so that one could see all the way from one end to the other. <Drawing of criss-crossing lines and nodes>. Now, picture these tunnels instead as interlocking length of fishing line. With my net woven, I can catch fish instead of floundering in the water with loose strings.
 % Computer science is not about computers, it is about computation. Computation is much broader than the study of computers. The concepts are everywhere.
-% Comment on these CS etymology alternatives: turingineer, turologist, datalogy, flow-charts-man (hilarious), applied metamathematician, applied epistemologist. hypologist (study of what is under? as in under systems?), computics (like 'physics', the science of computational phenomena, great name), computing science (equivalent to computics, but not Greek and not as cool) automatic information (pertaining to automata), infomatics ("what can be conceived," pretty badass, similar to mathematics ("what can be learned"), unfortunately taken).
+% Comment on these CS etymology alternatives: turingineer, turologist, datalogy, flow-charts-man (hilarious), applied metamathematician, applied epistemologist, hypologist (study of what is under? as in under systems?), computics (like 'physics', the science of computational phenomena, great name), computing science (equivalent to computics, but not Greek and not as cool) automatic information (pertaining to automata), infomatics ("what can be conceived," pretty badass, similar to mathematics ("what can be learned"), unfortunately taken).
 % Not CS: information science (more associated with effective storage and dissemination of information, not computation), information technology (a business-oriented discipline focused on choosing and maintaining hardware and software for a company), software engineering (the effective implementation of theoretical CS concepts for the purpose of building software)
 % "I will rate these names based on accuracy, but I won't deny my bias toward the coolest sounding names"
 % Chapters and sections.
@@ -432,6 +438,8 @@ I find it difficult to describe what this book is. And yet, I find it easy to ex
 % Italics are used to mark emphasis, but the kind of emphasis marked depends on context. Sometimes, an italicized word is a \textit{keyword}, which means that it is a technical term and that I want you pause for a half-second to absorb its meaning. Other times, the italics merely denote a \textit{vocal} cue.
 % Content is presented in a culturally neutral way and does not assume a great deal of prior knowledge.
 % The book tries to get the point across that there is more than one way to think about things and that knowledge is built on assumptions, including the body of knowledge called computer science. While we must work within a box, we should strive to remind ourselves periodically that we are, indeed, in a box and that there exist methods of thinking outside of it. The theories and models we use today may simply be the predecessors of theories and models to come. The topics of discussion, however, are eternal.
+% The book is slanted toward imperative programming, specifically toward OOP. This is because most software engineering is done in OOP languages. OOP is also less abstract and thus more beginner-friendly. Declarative programming and functional languages are discussed with a decent level of detail, but OOP is the default here. For example, the implementation chapter explores Java.
+% Traditional education is bottom-up (notice how objects on Earth fall when dropped => that's because F_g=ma_g). This book uses a top-down approach (what is mass, what is acceleration, what is force, what are objects, what is motion => that's what we mean when we write F_g=ma_g). The traditional approach is syntactic, this book's approach is semantic.
 
 \newpage
 
@@ -457,7 +465,7 @@ I find it difficult to describe what this book is. And yet, I find it easy to ex
 
 One can describe computation in a variety of ways. Some are poetic, others are more formal, and many we will discuss at length. In doing so, we will generally flow from poetry to formality, starting with broad statements and colorful examples and progressing toward a formal understanding. For now, we will say that computation is a process that resolves \textit{uncertainty}. \\
 
-In his \textit{Theogony}, the Ancient Greek poet Hesiod (fl. 750 BCE) depicts a fascinating uncertainty known as Chaos: a vast nothingness that preceded the creation of the Universe. From this void emerged the primordial deities, personifications of nature who gave life to the Titans and, by extension, to the Hellenic. Curiously, the modern definition of \textit{chaos} has nearly inverted. Now, one might say that a situation is \textit{chaotic} if there is so much going on that it is hard to make sense of anything. Despite their great conceptual difference, these meanings share a common property: they both evoke \textit{confusion}. \\
+In his \textit{Theogony}, the Ancient Greek poet Hesiod (fl. 750 BCE) depicts a fascinating uncertainty known as Chaos: a vast nothingness that preceded the creation of the Universe. From this void emerged the primordial deities, personifications of nature who gave life to the Titans and, by extension, to the Olympian gods. Curiously, the modern definition of \textit{chaos} has nearly inverted. Now, one might say that a situation is \textit{chaotic} if there is so much going on that it is hard to make sense of anything. Despite their great conceptual difference, these meanings share a common property: they both evoke \textit{confusion}. \\
 
 This place in which we find ourselves may indeed be post-Chaos, but confusion remains a familiar state for us. In fact, it is our natural state. We come into life confused about everything, crying, open-eyed in reaction to how much is going on around us. Slowly, we figure a few things out. Later, we consider many things \textit{certain}. As time ticks on and we carve our separate paths in the world, the wise ones among us come to realize the true depth of their confusion. \\
 
@@ -485,25 +493,58 @@ Here, we learn how this game is played and how it is woven into the fabric of ou
 \end{displayquote}
 \vspace{4mm}
 
-Blah
+Say you want to \textit{communicate} an idea $X$ to someone. That is, you would like to convey some \textit{information} to them so that you might together establish a shared body of \textit{knowledge}. $X$ is on the tip of your tongue, but you cannot quite put it into words. Accordingly, you express a related idea $Y$, hoping that you might be able to suss out your target $X$ with the help of your fellow interlocutor. Your proxy idea $Y$ is either too specific or too general, a \textit{subclass} or \textit{superclass} of the \textit{class} $X$, and you must replace it with another idea, preferably $X$ or at least something closer to it. The conversation could go as follows: \\\\
+
+\begin{addmargin}[8em]{2em}
+\begin{flushright}
+"Dude, what's that thing with the moving parts that beeps sometimes? It, like, gets hot if it moves too fast? \\[2mm]
+
+\mydots \\[2mm]
+
+It's like a \textit{machine} of some sort, but more \textit{specific}." \\[2\baselineskip]
+\end{flushright}
+\end{addmargin}
+
+\begin{addmargin}[2em]{8em}
+"Oh, yeah, those things with the engine in the front and the four doors? And it has two rows of seats, right? That's a \textit{sedan}." \\[2mm]
+\end{addmargin}
+
+\begin{addmargin}[8em]{2em}
+	\begin{flushright}
+		"No, not a sedan. It's more general than that." \\[2\baselineskip]
+	\end{flushright}
+\end{addmargin}
+
+In this case, blah blah is a subclass of blah. \\
+
+% Is type/category really necessary? Category probably should not be used this way. Maybe do types and classes.
+
+A class is essentially a collection of \textit{things}, and any particular one of those things is called an \textit{instance} of that class. A subclass $Y$ defines a \textit{type} of $X$, and instances of $Y$ are said to be \textit{of} type $Y$ (e.g. \textit{Sedan} specifies a type of \textit{Car}, and \textit{sedans} are of type \textit{Sedan}). Similarly, a superclass $Y$ defines a \textit{category} that $X$ is a part of, and instances of $Y$ \textit{belong to} that category (e.g. \textit{Vehicle} is a category that \textit{Car} is a part of, and \textit{vehicles} belong to the category of \textit{Vehicle}). \\
+
+Note, however, that the words \textit{type} and \textit{category} describe the same concept: a \textit{class}, a collection of things. The distinction between the two is \textit{relational} in nature. For example, while a \textit{Sedan} is a type of \textit{Car}, it may also be a category that subclasses like \textit{Toyota Camry} and \textit{Honda Civic} belong to. Likewise, \textit{Vehicle} is a category that \textit{Car} belongs to, but it may also be a type of \textit{Machine} or \textit{Consumer Good}. Types are \textit{generalized} and categories are \textit{specified} toward the target class $X$. \\
+
+% FSM here
+
+The process of \textit{generalization} is a boon to experts and a bane to amateurs. It is the unification of multiple types into a single category, a one from many, \textit{e pluribus unum}. The opposite concept, the partition of a single category into multiple types, many from one, \textit{ex uno plura}, is the process of \textit{specification}, which tends to be the easier of the two to understand. On the other hand, generalization tends to produce a richer and more detailed understanding. \\
+
+Generalization and specification are also called bottom-up and top-down strategies respectively in the field of \textit{information processing}. A question naturally arises: what do we mean by \textit{top} and \textit{bottom}? \\
+
+% Top type is to universe/DoD as bottom type is to empty class.
+
+% Taxonomies proceed from a root concept and form a tree (category system)
+% Ontologies have non-parent/child relations
+% Natural and constructed systems. Open-world, closed-world assumption.
+% Domain of discourse
 
 % Properly introduce the chapter. Explain why you're going to talk about all of this non-computer science stuff.
 % What does information mean to you, the reader? Keep that in mind as we discuss all this seemingly irrelevent stuff.
-% Computer science is a unifier of academic fields. It is hard to fully grasp because it is so general. We need to pull from many disciplines to characterize it effectively.
+% Computer science is a unifier of academic fields. It is hard to fully grasp because it is so general. We need to pull from many disciplines to characterize it effectively (language, logic, philosophy, math, physics, engineering).
+% The theory of computer science was built many to one. Practical programming is one (information, bits) to many (types, software). Thus, we will discuss many different fields and will unify them under a theory whose arche is information (logical values).
+% We must consider open-worlds before we discuss closed-worlds.
 
 %----------------------------------------
 
-\subsection{Metaphysics of Classical Antiquity}
-
-% One could argue that philosophy has been done ever since we could think. But philosophy in Ancient Greece was different. Why? Geography. Democracy.
-% Motivation for metaphysics. The One. Henosis (unity). Arche (first principle).
-% Physis (nature, growth) vs. nomos (human convention). The distinction was made maybe because the Greeks had contact with many different cultures interpreting the world in different ways.
-% Thales. Explaining things without the supernatural. From many things to one substance (the arche is water). Cultural reasons for choosing water. A distinction between appearance and reality. You can live life according to appearances, but you can also learn for the sake of learning. And it turns out learning can be useful, too (olive story).
-% Heraclitus. The arche is fire because it symbolizes change. Flow of time.
-% Empedocles invents the classical elements.
-% Rebooting Hesiod's Theogony. Instead of gods emerging from the Chaos, let's try to categorize everything naturalistically.
-
-%----------------------------------------
+\subsection{Categories of Being}
 
 In order to clear the chaos, we must first ask what there is. What can we say about the things that exist? Can we fundamentally distinguish some from others, or is it all just a big, soupy mess? Furthermore, if we indeed say that some things are $A$ and the rest are $B$, can we also claim that such a distinction is \textit{actually} present in reality or are things $A$ and $B$ only because that is how our minds perceive them? These are some of the oldest questions in \textit{metaphysics}, the study of what is. \\
 
@@ -514,6 +555,21 @@ The quantity-quality distinction is a generally accepted one. However, the dicho
 This curiosity aside, we could also design our category system such that quantities and qualities are both considered \textit{properties} of some very general sort of thing. Philosophers have long considered the idea of a highest-level category and have ascribed a variety of names to its members: \textit{entity}, \textit{being}, \textit{thing}, \textit{term}, \textit{individual}, etc. Each carries its own subtle connotations. We will use the name \textit{object} because it is the default choice in current philosophical practice and because it has bled into the technical language of computer science with its meaning largely unchanged. \\
 
 How general is this category of objects? Namely, are properties objects? If they are, then our system collapses to a single category, which really means that no distinctions about reality can be made at all. The category of objects thus becomes the soupy mess we are trying to escape. For now, let us assume that properties are \textit{not} objects. Instead, they are something else, and they \textit{relate} to objects in some way, giving them their characteristics. From this relationship, the diversity of existence unfolds. \\
+
+%----------------------------------------
+
+\subsection{Classical Metaphysics}
+
+% One could argue that philosophy has been done ever since we could think. But philosophy in Ancient Greece was different. Why? Geography. Democracy.
+
+\subsubsection{\textit{Henosis} and \textit{Arche}}
+
+% Motivation for metaphysics. The One. Henosis (unity). Arche (first principle).
+% Physis (nature, growth) vs. nomos (human convention). The distinction was made maybe because the Greeks had contact with many different cultures interpreting the world in different ways.
+% Thales. Explaining things without the supernatural. From many things to one substance (the arche is water). Cultural reasons for choosing water. A distinction between appearance and reality. You can live life according to appearances, but you can also learn for the sake of learning. And it turns out learning can be useful, too (olive story).
+% Heraclitus. The arche is fire because it symbolizes change. Flow of time.
+% Empedocles invents the classical elements.
+% Rebooting Hesiod's Theogony. Instead of gods emerging from the Chaos, let's try to categorize everything naturalistically.
 
 \subsubsection{Democritus' Atomism}
 
@@ -2425,6 +2481,13 @@ Blah, blah, blah... \\
 \part*{Types and Objects}
 \addcontentsline{toc}{part}{\tocpartglyph Types and Objects}
 
+% A mathematical object in something that exists in a mathematical universe.
+% Intentionality and extensionality - types are intensional, classes can be either (wiki - Class (philosophy))
+% In this case, class is equivalent to the idea of a set in mathematics. Sets can also be defined extensionally and intensionally.
+% In mathematics, the word class has different definitions based on which foundation of mathematics you are working in. Informally, in mathematics, a class is a collection of mathematical objects. In Zermelo-Fraenkel set theory, a class is informally a collection of sets (which are formally defined, axiomatized). In Von Neumann-Bernays-Godel set theory, the word class refers to the abstract idea of a proper class, which is formally defined. In ZFC, sets are elements of other sets, but classes are not elements of any other class (e.g. the class of ordinal numbers is not a set). In ZFC, sets are objects in your universe, classes are not. Sets are semantic objects, classes are syntactic objects.
+% Before the foundational crisis of mathematics, the word set was used as an informal term for a collection of things. Set theory formalizes the definition of a set. Cantor's and Russell's paradox revealed that not all collections are sets. A class is any object that can be described in the langauge of set theory. Not all classes are sets. The axioms of set theory apply only to the sets.
+% A category in category theory is a pair of classes (basically). In this case, the word class means either set or proper class. If both of its classes are actually just sets, the category is \textit{small}. Otherwise, it is \textit{large}.
+
 % Essence - philosophy
 % An automaton is a mathematical object
 % Curry-Howard Isomorphism
@@ -2476,6 +2539,11 @@ Blah, blah, blah... \\
 % These are just patterns that appear in life. Trees tend to be more common in nature, lists are how humans tend to organize things.
 % Do "plain old data structures" first: arrays, structs, records, unions, objects
 % Data type + data structure wiki
+
+% The subsections should be ADTs. The subsubsections should be data structures. If you really want to discuss a specialized implementation, you can make it paragraph or a blue box. But you should seriously consider pushing the implementations into an appendix for better thematic cohesion.
+
+% What do I mean when I say... type (or data type), structure (or data structure), object, instance, class (of objects), implementation
+% If an element has type $X$, it belongs to a class $X$. We typically speak in terms of types in theoretical computer science (harkening back to Alonzo Church) and in terms of classes in object-oriented programming (harkening back to the programming language Simula, whose designers Ole-Johan Dahl and Kristen Nygaard were harkening back to the idea of a class in philosophy and mathematics).
 
 In this section, we evaluate data structures from a theoretical standpoint, describing their essential properties and why one may be preferable to another for some task. \textit{There is no single, best way of storing data.} The optimal layout varies depending on the nature of the task. The rules and requirements that define these data structures can be implemented in code, and many programming languages have their own implementations of these structures. \\
 
@@ -2585,6 +2653,8 @@ Arrays can be \textit{static} or \textit{dynamic}. A static array takes up a fix
 A static array has the same search properties, but it cannot insert or delete items, because those operations involve changing the size of the array.
 
 \subsubsection{Linked Lists}
+
+% An interesting example - The Undo & Redo text editing process is a linked list.
 
 A \textit{linked list} is a collection of \textit{nodes} that are not stored contiguously in memory. A node contains some data and a pointer to the next node in the sequence. To \textit{point} a node A to another node B means to assign A's pointer the value of B's location in memory. The first node is called the \textit{head} of the linked list and the last node is called the \textit{tail}. The tail has no next node, so its pointer points to null.\\
 
@@ -4210,13 +4280,14 @@ Summarize the appendices below...
 % However, all of the information here is the result of my understanding after doing cross-referenced research.
 % Philosophy of 98% accuracy.
 
-% Thanks to Wikipedia, math.stackexchange, cs.stackexchange, philosophy.stackexchange, tex.stackexchange, Stack Overflow, Encyclopedia of Mathematics, Stanford Encyclopedia of Philosophy. I'm not going to reference every single page I used from these places. I used quite literally thousands of different web pages from these sites.
+% Thanks to Wikipedia, math.stackexchange, cs.stackexchange, philosophy.stackexchange, tex.stackexchange, english.stackexchange, Stack Overflow, Encyclopedia of Mathematics, Stanford Encyclopedia of Philosophy. I'm not going to reference every single page I used from these places. I used quite literally thousands of different web pages from these sites.
 
 % Outside of these encyclopedic sources, here are some notable papers that I referenced while writing this:
 
 % Timaeus
 % Phaedrus
 % Werner Heisenberg's "Physics and Philosophy"
+% Robert C. Martin's "Clean Code"
 
 % Nothing here is plagiarized.
 % Copyright.
@@ -4261,6 +4332,27 @@ Summarize the appendices below...
 % Why is everyone feverishly taking notes? Taking notes in lecture is *pointless*. The professor should be handing out fully documented notes that cover *all* of the material that is in-scope. You cannot listen to or process what the professor is saying if you are taking notes. Anecdote of machine learning.
 % In order to learn, we need time to do nothing.
 
+% What if we applied this kind of intuitive learning approach to language acquisition? One-to-one word translations are an artificial construct. Really, words in a foreign language are descriptors of abstract concepts and one-to-one semantic relationships are rare. A more effective approach might be to provide many translations for a single word in order to convey to the learner the abstract concept that is intuitive for native speakers.
+
+\newpage
+
+%--------------------------------------------------------------------------------
+%    APPENDIX: PASSION
+%--------------------------------------------------------------------------------
+
+\toclineskip
+\section{Passion}
+
+% Why do people read Finnegan's Wake? It requires a huge amount of dedication and specialized experience to even read a single line of what might ultimately be gibberish. But people respect James Joyce, and he worked on it for 17 years. And many come away from it feeling like they have gleaned something unique and hilarious from this work, a masterpiece crafted in nearly impenatrable language. That's passion. It is the curiousity to understand a complex system of interest.
+
+% B. Ifor Evans writes: "The easiest way to deal with the book would be [...] to write off Mr. Joyce's latest volume as the work of a charlatan. But the author of Dubliners, A Portrait of the Artist and Ulysses is not a charlatan, but an artist of very considerable proportions. I prefer to suspend judgement..."
+
+% So they spend a huge amount of effort to understand it because they think that there is a pot of gold at the end of the rainbow.
+
+% I've read Infinite Jest, which is not nearly as hard, but the experience is likely similar. I earnestly read it because I really enjoyed David Foster Wallace's shorter, more pedestrian works. I certainly didn't catch every detail in the novel, but that its style and presentation and content, some aspects of which are purposefully detrimental to its enjoyability, made me think about life in a different way.
+
+% The structure under the high-level systems we engage with. The desire to understand some of them in-depth. That's passion.
+
 \newpage
 
 %--------------------------------------------------------------------------------
@@ -4269,6 +4361,9 @@ Summarize the appendices below...
 
 \toclineskip
 \section{The Future of this Guide}
+
+% This guide is currently slanted toward computer science. It ventures briefly into the territory of software engineering, but does not go far. This is because I lack the required experience to write effectively about software development. I would like to expand this guide to include a more in-depth analysis of practical programming, but I need to spend some time working as a software engineer first.
+% I also intend to continue my studies independently. I'm interested in delving deeper into machine learning, artificial intelligence, abstract algebra, modern logic, control systems, and automata theory. I may end up writing new auxiliary parts on those topics.
 
 \newpage
 
