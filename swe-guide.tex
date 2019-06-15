@@ -303,7 +303,8 @@ BCOR5mm, % Binding correction
 \end{displayquote}
 
 % "I just wondered how things were put together." - Claude Shannon
-% 2019 has been a strange year.
+
+% 2019 has been a strange year for me.
 
 In December of 2018, I graduated from Duke University, feeling like I knew simultaneously very much and nothing at all.
 
@@ -335,11 +336,16 @@ In December of 2018, I graduated from Duke University, feeling like I knew simul
 \part*{Acknowledgements}
 \addcontentsline{toc}{section}{Acknowledgements}
 
+% The process of note taking while writing this book. Deciding whether to put my thoughts into note-form, and, thus, potentially into published-form. The notes were the barrier between "that's stupid/irrelevant/misinformed/way too \textit{out there}" and "Perhaps---that might be a good idea\dots"
+% But I also adhered to the principle of "If it's really that good of an idea, you'll remember it."
+% This is the only section I didn't write notes for. I had my ideas, but I knew that, in the end, I would remember those who I truly wanted to thank and why I wanted to do so. Some things are better thought through with the heart than with the brain.
+
 % DA teachers
 % Duke teachers
+% My good friends, those few people with whom it's never been anything less than \textit{real}, honest and earnest to infinity and beyond.
 % Parents
 % TeX, TeXStudio, Donald Knuth
-% Hi-Chews
+% Hi-Chews, Seinfeld (Theory of Comedy, comedy systems, categories of comedic timing)
 
 \newpage
 
@@ -392,7 +398,7 @@ I find it difficult to describe what this book is. And yet, I find it easy to ex
 % https://www.standoutbooks.com/nail-non-fiction-introduction/
 
 % The hook starts here. Why should the reader care?
-% Five reasons to read this book: 1. It is a work of passion, born out of a consuming and frenetic obsession 2. It is painstakingly crafted, every sentence carefully constructed, every word meticulously chosen, 3. It is a work born from a deep depression that serves as a guide to those who may experience the same feelings of self-doubt, 4. It is a distillation of some very difficult and important ideas that you have encountered and will undoubtedly encounter again, ...
+% Five reasons to read this book: 1. It is a work of passion, born out of a consuming and frenetic obsession 2. It is painstakingly crafted, like a sculpture hewn from granite, every sentence carefully constructed, every word meticulously chosen, 3. It is a work born from a deep depression, and it serves as a guide to those who may experience the same feelings of self-doubt, 4. It is a distillation of some very difficult and important ideas that you have encountered and will undoubtedly encounter again, ...
 % However, there is a reason that is bigger than all of these...
 
 % "Living in the Information Age"
@@ -475,7 +481,12 @@ These terms---data, information, and knowledge---are broad enough to apply to a 
 
 In this chapter, we will explore what computation is and why it matters. In some sense, computation is a kind of game in which \textit{pieces} are moved and transformed within a \textit{game space} according to a predetermined set of \textit{rules}. However, unlike most games, computation has no set goal. Nature shuffles its hazy pieces about, following arbitrary rules for reasons we cannot ascertain. Man, on the other hand, explicitly defines its pieces and rules, modeling them after Nature's strange mechanics. We invent \textit{win conditions} and play toward them, hoping that our computations will result in general solutions that will elucidate the knowledge we seek. \\
 
-Here, we learn how this game is played and how it is woven into the fabric of our reality. Section 1, \textit{Information and Communication}, covers the pieces \dots. Section 2, \textit{Reasoning and Logic}, covers the rules \dots. In the chapter following this one, we model the game of computation mathematically and find the theoretical limits of what it can tell us. Beyond that, we learn how to be an excellent player, covering \textit{techniques} for efficient problem solving and \textit{tools} for designing beautiful, maintainable systems. \\
+\begin{description}
+	\item[Section 1:] \textit{Information and Communication}, covers the pieces \dots
+	\item[Section 2:] \textit{Reasoning and Logic}, covers the rules \dots \\
+\end{description}
+
+Here, we learn how this game is played and how it is woven into the fabric of our reality. In the chapter following this one, we model the game of computation mathematically and find the theoretical limits of what it can tell us. Beyond that, we learn how to be an excellent player, covering \textit{techniques} for efficient problem solving and \textit{tools} for designing beautiful, maintainable systems. \\
 
 %--------------------------------------------------------------------------------
 %    SECTION: INFORMATION AND COMMUNICATION
@@ -493,68 +504,128 @@ Here, we learn how this game is played and how it is woven into the fabric of ou
 \end{displayquote}
 \vspace{4mm}
 
-Say you want to \textit{communicate} an idea $X$ to someone. That is, you would like to convey some \textit{information} to them so that you might together establish a shared body of \textit{knowledge}. $X$ is on the tip of your tongue, but you cannot quite put it into words. Accordingly, you express a related idea $Y$, hoping that you might be able to suss out your target $X$ with the help of your fellow interlocutor. Your proxy idea $Y$ is either too specific or too general, a \textit{subclass} or \textit{superclass} of the \textit{class} $X$, and you must replace it with another idea, preferably $X$ or at least something closer to it. The conversation could go as follows: \\\\
+Say you want to \textit{communicate} an idea $X$ to someone. That is, you would like to convey some \textit{information} to them so that you might together establish a shared body of \textit{knowledge}. $X$ is on the tip of your tongue, but you cannot quite put it into words. Accordingly, you express a related idea $Y_0$, hoping that you might be able to suss out your target $X$ with the help of your fellow interlocutor. This proxy idea is either too specific or too general, a \textit{subclass} or \textit{superclass} of the \textit{class} $X$, and you must replace it with another idea, preferably $X$ or at least some $Y_1$ that is closer to $X$ than $Y_0$. And so on and so forth, ideas are proposed until some candidate $Y_n=X$ is found. The conversation could go as follows: \\\\
 
 \begin{addmargin}[8em]{2em}
 \begin{flushright}
-"Dude, what's that thing with the moving parts that beeps sometimes? It, like, gets hot if it moves too fast? \\[2mm]
+"Dude, what's that thing with the moving parts that beeps sometimes? And it, like, gets hot if it moves too fast? \\[2mm]
 
 \mydots \\[2mm]
 
-It's like a \textit{machine} of some sort, but more \textit{specific}." \\[2\baselineskip]
+It's like a \textit{Machine} of some sort, but more \textit{specific}." \\[2\baselineskip]
 \end{flushright}
 \end{addmargin}
 
 \begin{addmargin}[2em]{8em}
-"Oh, yeah, those things with the engine in the front and the four doors? And it has two rows of seats, right? That's a \textit{sedan}." \\[2mm]
+"Oh yeah, those things with the engine in the front and the four doors? And it has two rows of seats, right? That's a \textit{Sedan}." \\[\baselineskip]
 \end{addmargin}
 
 \begin{addmargin}[8em]{2em}
 	\begin{flushright}
-		"No, not a sedan. It's more general than that." \\[2\baselineskip]
+		"No, not a sedan. It's more \textit{general} than that. But it does transport people and objects. It's definitely a type of \textit{Vehicle}." \\[2\baselineskip]
 	\end{flushright}
 \end{addmargin}
 
-In this case, blah blah is a subclass of blah. \\
+\begin{addmargin}[2em]{8em}
+	"A \textit{Car}?" \\[\baselineskip]
+\end{addmargin}
 
-% Is type/category really necessary? Category probably should not be used this way. Maybe do types and classes.
+\begin{addmargin}[8em]{2em}
+	\begin{flushright}
+		"Oh, that's right, I'm thinking of a \textit{Car}. Ok, now that we're on the same page, remember how you lent me \textit{your car}? \\
+		My bad, man, I crashed it." \\[2\baselineskip]
+	\end{flushright}
+\end{addmargin}
 
-A class is essentially a collection of \textit{things}, and any particular one of those things is called an \textit{instance} of that class. A subclass $Y$ defines a \textit{type} of $X$, and instances of $Y$ are said to be \textit{of} type $Y$ (e.g. \textit{Sedan} specifies a type of \textit{Car}, and \textit{sedans} are of type \textit{Sedan}). Similarly, a superclass $Y$ defines a \textit{category} that $X$ is a part of, and instances of $Y$ \textit{belong to} that category (e.g. \textit{Vehicle} is a category that \textit{Car} is a part of, and \textit{vehicles} belong to the category of \textit{Vehicle}). \\
+% A class is essentially a collection of \textit{things}, and any particular one of those things is called an \textit{instance} of that class.
+% Here Interlocuter 1 presents Y_1... Specify, generalize, specify
 
-Note, however, that the words \textit{type} and \textit{category} describe the same concept: a \textit{class}, a collection of things. The distinction between the two is \textit{relational} in nature. For example, while a \textit{Sedan} is a type of \textit{Car}, it may also be a category that subclasses like \textit{Toyota Camry} and \textit{Honda Civic} belong to. Likewise, \textit{Vehicle} is a category that \textit{Car} belongs to, but it may also be a type of \textit{Machine} or \textit{Consumer Good}. Types are \textit{generalized} and categories are \textit{specified} toward the target class $X$. \\
+In this scenario, Interlocutor $\mathcal{A}$ introduces the problem: there is \textit{information} to \textit{communicate}, and it defines a class $X$. And a \textit{class}, we understand, is a collection of individual \textit{objects} and is itself an object \textit{in abstracto}, an idea in our mind's eye of such a collection. $\mathcal{A}$ grasps for $X$, throwing out descriptions to lure it closer, but it evades. $\mathcal{A}$ then takes the class $Y_0$, \textit{Machine}, as a starting point and states that it is a \textit{superclass} of $X$. \\
 
-% FSM here
+Interlocutor $\mathcal{B}$ responds with \textit{specification}, adding assumed details to the definition of $Y_0$. Thus, $Y_1$ is proposed: the class \textit{Sedan}. Luckily, the assumptions are not totally off-base; $Y_1$ turns out to be a \textit{subclass} of $X$. $\mathcal{A}$ confirms this and so returns with a \textit{generalization} that conjures $Y_2$, the class \textit{Vehicle}. $\mathcal{B}$ specifies again, offering up as $Y_3$ a subclass of \textit{Vehicle} called \textit{Car}. Finally, $\mathcal{A}$ accepts this class as the target $X$ and ends the search. And with this mutual knowledge of \textit{Car} established, $\mathcal{A}$ then goes on to specify an \textit{instance} of \textit{Car}, a particular \textit{car} that belongs to $\mathcal{B}$. And with both interlocutors now cognizant of exactly what is being discussed, $\mathcal{A}$ swiftly informs $\mathcal{B}$ that his ride is totaled. \\
 
-The process of \textit{generalization} is a boon to experts and a bane to amateurs. It is the unification of multiple types into a single category, a one from many, \textit{e pluribus unum}. The opposite concept, the partition of a single category into multiple types, many from one, \textit{ex uno plura}, is the process of \textit{specification}, which tends to be the easier of the two to understand. On the other hand, generalization tends to produce a richer and more detailed understanding. \\
+% FSM here?
+
+% A and B generalize and specify their way to an answer.
+The process of \textit{generalization} is a boon to experts and a bane to amateurs. It is the unification of multiple types into a single category, a one from many, \textit{e pluribus unum}. The opposite concept, partitioning a single category into multiple types, many from one, \textit{ex uno plura}, is the process of \textit{specification}, which tends to be the easier of the two to understand. On the other hand, generalization tends to produce a richer and more detailed understanding. \\
+
+% Generalization is powerful because it allows you to know things about systems you haven't seen before. It gives intuitive understanding.
+% Generalization increases the size of the domain of discourse and decreases the amount of available information.
+
+% Dualism: information is very fundamental, but it's also really general.
+% We gotta form a theory of information bottom-up by observing some natural systems (category systems, physical systems). Then, we discuss how systems and models are classified. Finally, we can apply the theory top-down in order to model the many systems involved in computation (language systems, logical/formal systems, algebraic systems, automatic systems, hardware systems, software systems, operating systems). All of these can be modeled in terms of information.
 
 Generalization and specification are also called bottom-up and top-down strategies respectively in the field of \textit{information processing}. A question naturally arises: what do we mean by \textit{top} and \textit{bottom}? \\
-
-% Top type is to universe/DoD as bottom type is to empty class.
+% Top type is to universe/domain of discourse as bottom type is to empty class.
+% Bottom-up is like starting from an arche, top-down is like starting from henosis
 
 % Taxonomies proceed from a root concept and form a tree (category system)
 % Ontologies have non-parent/child relations
 % Natural and constructed systems. Open-world, closed-world assumption.
-% Domain of discourse
 
 % Properly introduce the chapter. Explain why you're going to talk about all of this non-computer science stuff.
-% What does information mean to you, the reader? Keep that in mind as we discuss all this seemingly irrelevent stuff.
 % Computer science is a unifier of academic fields. It is hard to fully grasp because it is so general. We need to pull from many disciplines to characterize it effectively (language, logic, philosophy, math, physics, engineering).
 % The theory of computer science was built many to one. Practical programming is one (information, bits) to many (types, software). Thus, we will discuss many different fields and will unify them under a theory whose arche is information (logical values).
 % We must consider open-worlds before we discuss closed-worlds.
+
+% OBJECTIVE of section
+% SUMMARY of subsections
+
+% What does information mean to you, the reader? Your intuition is correct.
+% There exists an elegant path that weaves its way through philosophy and physics, arrives at a very general definition of information, and then is only a few steps from a very general definition of communication. From there, we can specify the many means by which information is communicated. It may seem like this stuff is unrelated to computation, but try to keep an open mind.
+
+% So we start with chaos, confusion.
 
 %----------------------------------------
 
 \subsection{Categories of Being}
 
+% Read all of Categorization
+% Read all of Ontology (information science)
+
 In order to clear the chaos, we must first ask what there is. What can we say about the things that exist? Can we fundamentally distinguish some from others, or is it all just a big, soupy mess? Furthermore, if we indeed say that some things are $A$ and the rest are $B$, can we also claim that such a distinction is \textit{actually} present in reality or are things $A$ and $B$ only because that is how our minds perceive them? These are some of the oldest questions in \textit{metaphysics}, the study of what is. \\
+
+% Sorting something alphabetically vs. categorizing semantically
+
+% Does category in philosophy mesh with category in math?
+% In category theory, a category is a class of objects and a class of relations (morphisms). Individuals and classes have attributes, but individuals are not usually considered in category theory (considering that categories have classes which are *collections*).
+% So a category in math is a collection of objects + their properties + their relations?
+
+\subsubsection{Properties}
+
+% We would like to define object first, but we need to define it in terms of properties.
+% Bundle theory, bare particularism.
 
 A common approach to this challenge is creating a system of \textit{categories} that partition reality at the highest level. For example, one could suggest that there is a fundamental difference between a \textit{quantity} and a \textit{quality}. If these are considered distinct categories, we can classify \textit{measurable} or \textit{countable} stuff like \textit{length}, \textit{mass}, \textit{number}, and \textit{monetary value} as quantitative and \textit{experiential} stuff like \textit{softness}, \textit{roundness}, \textit{flavor}, and \textit{beauty} as qualitative. \\
 
 The quantity-quality distinction is a generally accepted one. However, the dichotomy is not so absolute. For example, softness is listed above as a quality. We might expect, then, that hardness is a quality. For example, rocks are hard and puppy ears are soft. But hardness is also a quantitative measurement of resistance to plastic deformation. Thus, the word \textit{hardness} can refer to both quantitative and qualitative phenomena. The categorical difference between these hardnesses, which exists independent of language, is identified through the context in which the word is used. A hardness can be measured with numbers, but it can also simply be \textit{experienced} via touch. \\
 
+% All quantities are also qualities. It would be hard to argue that all qualities are also quantities in any meaningful way. For example, using millihelens as a quantitative unit of beauty. It doesn't really work.
+
+\subsubsection{Classes}
+
+\begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
+	\vspace{2mm}
+	\begin{center}
+		\textbf{The Universal and Particular Notions of Chess}
+	\end{center}
+	\vspace{1mm}
+	% Chess example, physical boards and pieces, game states, the abstract idea of chess. "When was chess invented?". An instance of a chess game vs. all actual chess games vs. all possible chess games vs. the class of chess.
+	
+	As an illustrative example, consider all of the games of chess that are being played right now, currently progressing or left half-finished and awaiting the next move. Consider also all of the \textit{historical} games of chess that have been played to completion or total abandonment since the invention of chess. \\
+	\vspace{1mm}
+\end{tcolorbox}
+\vspace{7mm}
+
+\subsubsection{Objects}
+
+% Objects vs. events. Is there a difference? Maybe not, but there at least appears to be one. Humans have traditionally discerned a difference, notably in language. Perhaps the difference is only conceptually convenient. Is an apple distinct from its decaying over time? Is computer state really a meaningful object with clock speeds in the gigahertz? Is a thunderstorm an event, or just a system of many, tiny objects with different properties, all changing with time?
+
 This curiosity aside, we could also design our category system such that quantities and qualities are both considered \textit{properties} of some very general sort of thing. Philosophers have long considered the idea of a highest-level category and have ascribed a variety of names to its members: \textit{entity}, \textit{being}, \textit{thing}, \textit{term}, \textit{individual}, etc. Each carries its own subtle connotations. We will use the name \textit{object} because it is the default choice in current philosophical practice and because it has bled into the technical language of computer science with its meaning largely unchanged. \\
 
-How general is this category of objects? Namely, are properties objects? If they are, then our system collapses to a single category, which really means that no distinctions about reality can be made at all. The category of objects thus becomes the soupy mess we are trying to escape. For now, let us assume that properties are \textit{not} objects. Instead, they are something else, and they \textit{relate} to objects in some way, giving them their characteristics. From this relationship, the diversity of existence unfolds. \\
+How general is this category of objects? Namely, are properties objects? If they are, then our system collapses to a single category, which really means that no distinctions about reality can be made at all. The category of objects thus becomes the soupy mess we are trying to escape. For now, let us assume that properties are \textit{not} objects. Instead, they are something else, and they \textit{relate} to objects in some way, giving them their characteristics. From these relations, the diversity of existence unfolds. \\
+
+\subsubsection{Relations}
 
 %----------------------------------------
 
@@ -582,7 +653,7 @@ How general is this category of objects? Namely, are properties objects? If they
 % Plato hates Democritus. Wants to burn all of his books. Plato's philosophy is an objection to atomism. Believes that there must be something divine about nature due to its beauty.
 % Plato is rationalist, Democritus is mechanist and materialist (they agree on epistemology though)
 
-Plato (c. 428/427 -- c. 348/347 BCE) was the first to expound a metaphysics of objects with his \textit{theory of Forms}, which proposed a solution to the \textit{problem of universals}. This problem is subtle, but important: how can a single general property appear in many individual objects? For example, when we say that a floor and a bowl are \textit{smooth}, are we referring to some singular paradigm of \textit{smoothness} that is independent of each? For Plato, \textit{universals} or \textit{Forms}, such as smoothness, are indeed distinct from the \textit{particulars} that \textit{partake} of them, such as floors and bowls and other smooth objects. He posits that the \textit{essence} of an object, its \textit{sine qua non}, is the result of its partaking of these Forms. \\
+Plato (c. 428/427 -- c. 348/347 BCE) was the first to expound a metaphysics of objects with his \textit{theory of Forms}, which proposed a solution to the \textit{problem of universals}. This problem is subtle, but important: how can one general property appear in many individual objects? For example, when we say that a floor and a bowl are \textit{smooth}, are we referring to some singular paradigm of \textit{smoothness} that is independent of each? For Plato, \textit{universals} or \textit{Forms}, such as smoothness, are indeed distinct from the \textit{particulars} that \textit{partake} of them, such as floors and bowls and other smooth objects. He posits that the \textit{essence} of an object, its \textit{sine qua non}, is the result of its partaking of these Forms. \\
 
 \textit{Forms}, as conceptualized by Plato, are ideal, abstract entities that exist in the \textit{hyperouranos}, the realm beyond the \textit{heavens}. In the times of Homer and Hesiod, the Ancient Greeks understood a cosmology that closely mirrored that of the Hebrew Bible. They envisioned the Earth as a flat disc surrounded by endless ocean and the sky as a solid dome with gem-like stars embedded in it, much as it all appears from a naive perspective on the ground. Under the Earth was the \textit{underworld}, where the dead live, and beyond the dome were the \textit{heavens}, where the divine live. \\
 
@@ -624,8 +695,6 @@ Blah \\\\
 % Rejects an immaterial fundamental unit, believes substance is real
 % Four formal causes
 % Actuality and potentiality
-% Bundle, bare particular
-% Objects vs. events. Is there a difference? Maybe not, but there at least appears to be one. Humans have traditionally discerned a difference, notably in language. Perhaps the difference is only conceptually convenient. Is an apple distinct from its decaying over time? Is computer state really a meaningful object with clock speeds in the gigahertz? Is a thunderstorm an event, or just a system of many, tiny objects with different properties, all changing with time?
 % Objects are characterized spatially, events temporally.
 % Mathematical objects and operators
 % Plato is rationalist, Aristotle is empiricist
@@ -661,7 +730,7 @@ Blah \\\\
 		\vspace{4mm}
 	\end{displayquote}
 	
-	Thus, Aristotle differentiates "pre-existent knowledge" from "scientific knowledge." Whereas the latter is produced by means of a logical proof, the former is produced by one's \textit{intuition}. He goes on to argue that what we intuitively understand is indeed knowledge, in the same way that what we prove is knowledge. The difference, he argues, is that axioms are \textit{self-evident}. For example, the reflexive property of the natural numbers (i.e. for every natural $x$, $x=x$) is typically considered so obvious that proof is unnecessary. At the same time, the statement is so fundamental that it cannot really be proven. Despite their unprovability, Aristotle argues that axioms such as these constitute knowledge that is simply, unquestionably \textit{known}: \\
+	Thus, Aristotle differentiates \textit{pre-existent knowledge} from \textit{scientific knowledge}. Whereas the latter is produced by means of a logical proof, the former is produced by one's \textit{intuition}. He goes on to argue that what we intuitively understand is indeed knowledge, in the same way that what we prove is knowledge. The difference, he argues, is that axioms are \textit{self-evident}. For example, the reflexive property of the natural numbers (i.e. for every natural $x$, $x=x$) is typically considered so obvious that proof is unnecessary. At the same time, the statement is so fundamental that it cannot really be proven. Despite their unprovability, Aristotle argues that axioms such as these constitute knowledge that is simply, unquestionably \textit{known}: \\
 	
 	\begin{displayquote}
 		\textit{Our own doctrine is that not all knowledge is demonstrative: on the contrary, knowledge of the immediate premises is independent of demonstration. (The necessity of this is obvious; for since we must know the prior premises from which the demonstration is drawn, and since the regress must end in immediate truths, those truths must be indemonstrable.) Such, then, is our doctrine, and in addition we maintain that besides scientific knowledge there is its originative source which enables us to recognize the definitions.}
@@ -974,23 +1043,11 @@ The ratio of a capacitor's charge to its capacitance determines its voltage (i.e
 
 However, quantitative data need not be expressed with symbolic digits. They can instead be defined in terms of an \textit{analogous} physical quantity. For example, the unit of measurement known as the \textit{millimeter of mercury} (mmHg) defines pressure in terms of the height of a column of mercury in a manometer. It is used to quantify blood pressure, and it does so by considering height an \textit{analog} or \textit{model} of pressure measuring that instead. Using this method, data about one phenomenon can be encoded as data of a different phenomenon, provided that the quantities involved are somehow related to each other. In this case, a height of 1 mm is related to a pressure of 133.322 Pa above atmospheric pressure. \\
 
-% ~~~ Numbers and Numerals ~~~
-
-% Computation with analog data means you are using actual, original, non-replicable quantites. Computation with digital data means you are using simulated quantities that are replicas or model of what you actually care about. We model EVERYTHING with numbers: physics, language, logic, images, video, music. Since we're going to be talking about digital data, we need to talk about numbers first.
+% Computation with analog data means you are using actual, original, non-replicable quantites. Computation with digital data means you are using simulated quantities that are replicas or model of what you actually care about. We model EVERYTHING with numbers: physics, language, logic, images, video, music.
 
 % Pros and cons of digital and analog computation
 
-% One can think of digital encoding as a special case of analog encoding, in which a quantity is considered analogous to a sequence of digits that represents a \textit{number}. Because numbers are abstract and data must be concrete, numbers must be associated with symbols known as \textit{numerals} if they are to be used in computation. This can be done in a structured way by conforming to representations prescribed by a \textit{numeral system}. If this system is \textit{positional}, numbers can be represented by sequences or \textit{strings} of numerals, where each position in such a string is called a \textit{digit}. Because digital data are related to both numbers and their numerical representations, it is worth touching on these concepts. \\
-
-% First, let us consider whether or not numbers even exist. That is, do numbers exist objectively, independent of human perception? As you can imagine, there is no consensus on this matter. Mathematicians and philosophers have long held differing views on this question, and they have formed various schools of thought that address such inquiries into the \textit{philosophy of mathematics}. \\
-
-% ~~~ Numeral Systems ~~~
-
-% and these numbers can be \textit{encoded} with either a single \textit{symbol} or a sequence of symbols called a \textit{string}. For example, the number eight is typically encoded with the symbol 8, which is a \textit{numeral} or \textit{digit}. The number could just as easily be represented by the symbol \varstigma, but this would be non-standard. Numbers are usually encoded according to an established \textit{numeral system} of some \textit{base} or \textit{radix} that specifies how many unique symbols are used for representation. Numerical data intended to be read by humans are typically encoded in a base-10 system, one of ten digits. \\
-
-% This design choice is ancient and natural. It is based on the ten digits of our hands, which have aided us in counting for hundreds of millennia. In fact, fingers are the oldest counting tools used by man, and we still use them today for this purpose. Other anatomically inspired bases have been used in early numeral systems, such as base-20, which counts the fingers and the toes, or base-12, which uses a thumb on one hand to count the bones of the other four fingers. However, today, the base-10 \textit{Hindu-Arabic numeral system} is universal in mathematics. \\
-
-% The base-60 system of Babylonian numerals is also notable. Its base is thought to have been chosen for its many factors, as this simplifies the process of division. Under this interpretation, this system is \textit{constructed} rather than natural. Instead of mirroring something concrete like physical extremities, this system chooses an abstract base in order to make a procedural optimization. The reasoning for base-2 encoding in computing is similar. It sacrifices human familiarity for performance and reliability. \\
+% One can think of digital encoding as a special case of analog encoding, in which a quantity is considered analogous to a sequence of digits that represents a \textit{number}. Because numbers are abstract and data must be concrete, numbers must be associated with symbols known as \textit{numerals} if they are to be used in computation.
 
 %----------------------------------------
 
@@ -1008,8 +1065,6 @@ However, the term "universal language" is also often used in other contexts to d
 Alas, no such language exists and it is unlikely that one has ever existed. Rather, human language is generally believed to have evolved independently around the world from prelinguistic systems of communication such as gesturing, touching, and vocalization about 100,000 years ago. Similarly, written language evolved from proto-writing, the repeated use of symbols to identify objects or events. \\
 
 Writing is distinct from speaking in that it is a reliable method of storing and transmitting information. Before the invention of written language, important pieces of history and literature were preserved through \textit{oral tradition}, passing from one generation to the next through repetition and memorization. However, oral tradition is prone to data loss and unintended changes. Like messages in a game of telephone spanning centuries, stories were at risk of losing old details and gaining extraneous ones. Additionally, if a society fell apart, their stories could be lost forever. Writing is a tool that mitigates these issues by \textit{encoding} speech into a symbolic code that can be inscribed onto durable media, such as clay tablets or stone, or onto more delicate, portable media such as parchment or paper. \\
-
-Language  \\
 
 % Quipu, number systems
 
@@ -1046,6 +1101,14 @@ An argument of any kind must be expressed in a \textit{language}. In the case of
 Formal proofs, on the other hand, require a \textit{formal language} for clarity and precision. In practice, formal proofs are rarely written or read by logicians or mathematicians. Typically, mathematical proofs are written using a combination of formal and natural language. However, computer programs, written in \textit{programming languages}, are considered formal. \\
 
 A formal language is constructed from an \textit{alphabet} $\Sigma$, which is a set of symbols. The set of all possible finite-length \textit{words} or \textit{formulas} that can be built from this alphabet is denoted $\Sigma^*$. A formal language $L$ over an alphabet $\Sigma$ is then defined as a subset of $\Sigma^*$. Thus, a language is a set of purely syntactic objects. It may conform to a \textit{grammar} that specifies how words can be produced or arranged in a \textit{sentence}, but a language is never inherently meaningful. The semantics of a language is always interpreted separately from the syntax. \\
+
+% ~~~ Numeral Systems ~~~
+
+% and these numbers can be \textit{encoded} with either a single \textit{symbol} or a sequence of symbols called a \textit{string}. For example, the number eight is typically encoded with the symbol 8, which is a \textit{numeral} or \textit{digit}. The number could just as easily be represented by the symbol \varstigma, but this would be non-standard. Numbers are usually encoded according to an established \textit{numeral system} of some \textit{base} or \textit{radix} that specifies how many unique symbols are used for representation. Numerical data intended to be read by humans are typically encoded in a base-10 system, one of ten digits. \\
+
+% This design choice is ancient and natural. It is based on the ten digits of our hands, which have aided us in counting for hundreds of millennia. In fact, fingers are the oldest counting tools used by man, and we still use them today for this purpose. Other anatomically inspired bases have been used in early numeral systems, such as base-20, which counts the fingers and the toes, or base-12, which uses a thumb on one hand to count the bones of the other four fingers. However, today, the base-10 \textit{Hindu-Arabic numeral system} is universal in mathematics. \\
+
+% The base-60 system of Babylonian numerals is also notable. Its base is thought to have been chosen for its many factors, as this simplifies the process of division. Under this interpretation, this system is \textit{constructed} rather than natural. Instead of mirroring something concrete like physical extremities, this system chooses an abstract base in order to make a procedural optimization. The reasoning for base-2 encoding in computing is similar. It sacrifices human familiarity for performance and reliability. \\
 
 %--------------------------------------------------------------------------------
 %    SECTION: REASONING AND LOGIC
@@ -2016,6 +2079,10 @@ After a rigorous study of what is computable, we will conclude this section with
 
 Georg Cantor (1845-1918) was a German mathematician whose work established \textit{set theory}, a fundamental theory in mathematics. Much of his work was built on generalizations of the set of natural numbers, namely the \textit{ordinal numbers} and the \textit{cardinal numbers}. These sets include both finite and \textit{infinite} quantities, a concept that was considered very controversial in the late 19th century. Despite an extreme amount of backlash, Cantor stood by his set theory and formalized what has been called "the first truly original idea in mathematics since those of the Greeks." \\
 
+% Introduce the problem of the "size" of infinity.
+% Example of the unit circle. The unit circle has a circumference of $2\pi$. It has circumference values of $[0,2\pi]\in\mathbb{R}$. Another way of saying this is that it has \textit{central angle} values of $[0,2\pi]\in\mathbb{R}$. The difference between that and, say, $a_n=\frac{1}{4}*n, n=[0,7]\in\mathbb{Z}$ is that all real intervals have an infinite number of possible values. But what happens when you go past 2\pi, \textit{beyond infinity}. You expand the infinite interval\dots to a another infinite interval. You'd be hard-pressed to find someone who argues that the interval $[0,4\pi]$ is \textit{not} bigger than $[0,2\pi]$. And yet, the intervals have the same "density" (they both have an infinite number of values). So the space doubled, and the density remained the same. This is not familiar to us. "Size" (number of elements) is not a useful measure of infinite sets. We need to generalize to cardinality.
+% Are there infinite sets of different cardinalities? What if you doubled your interval an infinite amount of times?
+
 \subsubsection{The First Article on Set Theory}
 
 Cantor began his work in number theory, until his mentor, Leopold Kronecker, suggested that he answer an open question in real analysis: "If a given function can be represented by a trigonometric series, is that representation unique?." A trigonometric series is a series of the form
@@ -2330,7 +2397,10 @@ In 1900, David Hilbert gave an address to the International Congress of Mathemat
 
 This presentation of problems was, in essence, the inception of \textit{Hilbert's program}, a worldwide goal to solve what was known at the time as the \textit{foundational crisis of mathematics}. With the general acceptance of Cantor's set theory came the discovery of many paradoxes and inconsistencies that called into question the \textit{consistency} of mathematics. It had been assumed until this point that mathematics was something that could be trusted, that a statement could be proven true from previous mathematical truths. The creation of Zermelo-Fraenkel set theory in the late 1920s resolved some of these paradoxes, such as Russell's paradox, but not all inconsistencies were resolved. Mathematics was still curiously "broken" in certain ways. \\
 
-% Blue box on philosophy of mathematics and metamathematics
+% Two blue boxes: philosophy of mathematics and Hilbert creating the field of metamathematics with his 1900 speech
+% Influence of Plato and Euclid on philosophy of mathematics
+% Mathematical realism, mathematical Platonism
+% The Big 3 during the crisis: logicism, intuitionism/constructivism, formalism
 
 \begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
 	\vspace{2mm}
@@ -2474,14 +2544,30 @@ Blah, blah, blah... \\
 
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
-%    PART III: TYPES AND OBJECTS
+%    PART III: TYPES AND STRUCTURES
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
 
-\part*{Types and Objects}
-\addcontentsline{toc}{part}{\tocpartglyph Types and Objects}
+\part*{Types and Structures}
+\addcontentsline{toc}{part}{\tocpartglyph Types and Structures}
 
-% A mathematical object in something that exists in a mathematical universe.
+% “My math background made me realize that each object could have several algebras associated with it, and there could be families of these, and that these would be very very useful.” - Alan Kay
+
+% Structures, not objects. For example, we are directly interested in list structure and only indirectly interested in objects *with* list structure. We focus on Forms, not on complex particulars.
+
+% Why leave set theory? We want to explore proper classes, so we generalize set theory to category theory. Sets become objects and functions become morphisms.
+% Type theory is a formal syntactic language of calculus for category theory. Category theory provides semantics for type theory.
+% A mathematical object in something that exists in a mathematical universe. They can have many different kinds of structure. We are interested specifically in the \textit{algebraic structure} of objects.
+% An automaton is a mathematical object
+% Are objects and relations fundamentally different?
+
+%--------------------------------------------------------------------------------
+%    SECTION
+%--------------------------------------------------------------------------------
+
+\toclineskip
+\section{Type Theory and Category Theory}
+
 % Intentionality and extensionality - types are intensional, classes can be either (wiki - Class (philosophy))
 % In this case, class is equivalent to the idea of a set in mathematics. Sets can also be defined extensionally and intensionally.
 % In mathematics, the word class has different definitions based on which foundation of mathematics you are working in. Informally, in mathematics, a class is a collection of mathematical objects. In Zermelo-Fraenkel set theory, a class is informally a collection of sets (which are formally defined, axiomatized). In Von Neumann-Bernays-Godel set theory, the word class refers to the abstract idea of a proper class, which is formally defined. In ZFC, sets are elements of other sets, but classes are not elements of any other class (e.g. the class of ordinal numbers is not a set). In ZFC, sets are objects in your universe, classes are not. Sets are semantic objects, classes are syntactic objects.
@@ -2489,10 +2575,7 @@ Blah, blah, blah... \\
 % A category in category theory is a pair of classes (basically). In this case, the word class means either set or proper class. If both of its classes are actually just sets, the category is \textit{small}. Otherwise, it is \textit{large}.
 
 % Essence - philosophy
-% An automaton is a mathematical object
 % Curry-Howard Isomorphism
-% Type theory vs set theory
-% Class (set theory object)
 % Not all data structures implement abstract data types.
 
 % Imperative vs functional ADTs
@@ -2507,14 +2590,9 @@ Blah, blah, blah... \\
 % Address lack of pictures. Add pictures for ADTs?
 % Delete operation should acutally be remove. Discuss the distinction.
 
-% “My math background made me realize that each object could have several algebras associated with it, and there could be families of these, and that these would be very very useful.” - Alan Kay
+%----------------------------------------
 
-%--------------------------------------------------------------------------------
-%    SECTION
-%--------------------------------------------------------------------------------
-
-\toclineskip
-\section{The Curry-Howard-Lambek Isomorphism}
+\subsection{The Curry-Howard-Lambek Isomorphism}
 
 % Recursive composite type = a dynamic data structure
 
@@ -4106,6 +4184,8 @@ Blah \\
 \section{Software Engineering Processes and Principles}
 % Program life cycle
 
+% Blue box on categories of software engineering questions: pure DS&A problems (anything that sounds mathy), word problems (anything that sounds techy), tool familiarity (knowledge of software principles), tool proficiency (trivia, basically)
+
 \begin{itemize}
 	\item Agile
 	\item Test Driven Development
@@ -4147,6 +4227,8 @@ Summarize the appendices below...
 
 \toclineskip
 \section{Mathematical Fundamentals}
+
+% Perhaps this could just be a short list of important mathematics terms. There can be different categories like properties, objects, morphisms, 
 
 % Fundamentals, not foundations. These are foundations in that more advanced content is built on top of them, but that's not why they are included here. If you have *never* taken courses in things like elementary geometry, elementary algebra, and trigonometry, you will probably have trouble grasping the content of this book in first place. This section is not here to teach you these concepts for the first time. It is meant to be a refresher of fundamental concepts, deep ideas that are essential to and ubiquitous in the study of mathematics. This section also serves as a sort of "higher-thought warmup" for those who haven't thought about math since high school. Similar to this book as a whole, this appendix often approaches its material in a philosophical manner, explaining in a straightforward way how to understand concepts that are very abstract.
 % Stuff like numbers, quantity, space, functions, relations, number sets, fields, algebraic operations, matrices etc.
@@ -4303,8 +4385,9 @@ Summarize the appendices below...
 \section{Lessons Learned}
 
 % Sometimes, what you want is already created and available. Other times, you have to create it yourself. Sometimes, prescribed methods of learning are effective. Other times, you have to learn in your own way to get the knowledge you are after.
-% Most authority figures know little more than you do. Place your trust in outside ideas carefully. Get multiple opinions and come to your own conclusion. Otherwise, you'll be as clueless as they are.
-% It's easy to use a word that is close but ultimately incorrect.
+% Most authority figures know little more than you do. Most of the advice and opinion you hear is not greatly informed. Place your trust in outside ideas carefully. Get multiple opinions and come to your own conclusion. Otherwise, you'll be as clueless as the majority.
+% In particular, be wary of strong opinions that are unsubstantiated, fallacious, or very biased. Being steadfast instead of open to change makes your conclusion stale, not strong.
+% It's all too easy to use a word that is close but ultimately incorrect.
 % Technical language is awesome. Much of it is incredibly precise. It makes me want to study linguistics.
 % Doing a passion project of this scale changes you.
 % In what order did you write this book? Somewhat linearly, but honestly way more spatially scattered than I expected.
@@ -4323,6 +4406,8 @@ Summarize the appendices below...
 \section{Thoughts on Education}
 
 % None of this is to say that my choices played no role in my education. They certainly did. I could have done things differently. But I put a great deal of effort into learning and felt that I made responsible choices (i.e. choices that would help me excel). Still, I always felt like my knowledge was fragile and skin-deep. I put my faith in the system, and it is only now, after spending some time educating myself outside of the system, that I see clearly the flaws in the pedagogy of my youth.
+
+% I don't really have a solution for all of this. I'm not even sure how one would go about implementing these changes within an educational structure. These are just observations.
 
 % Teaching syntax over semantics. Anecdote of the dot product. Feeling like things are there for no reason. Math ideas are not invented out of thin air, and they shouldn't be taught that way.
 % Universities, for the most part, want to teach theoretical material, not applied. They don't want to be trade schools. That's fine. The problem, as I see it, is that they struggle to teach either. There isn't enough philosophical thought to effectively teach theory and there isn't enough curriculum-wide integration of tools to teach application (programming language libraries, frameworks, CAD software).
@@ -4363,7 +4448,7 @@ Summarize the appendices below...
 \section{The Future of this Guide}
 
 % This guide is currently slanted toward computer science. It ventures briefly into the territory of software engineering, but does not go far. This is because I lack the required experience to write effectively about software development. I would like to expand this guide to include a more in-depth analysis of practical programming, but I need to spend some time working as a software engineer first.
-% I also intend to continue my studies independently. I'm interested in delving deeper into machine learning, artificial intelligence, abstract algebra, modern logic, control systems, and automata theory. I may end up writing new auxiliary parts on those topics.
+% I also intend to continue my studies independently. I'm interested in delving deeper into machine learning, artificial intelligence, abstract algebra, modern logic, control systems, automata theory, and music theory. I may end up writing new auxiliary parts on those topics.
 
 \newpage
 
