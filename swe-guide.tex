@@ -1,9 +1,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Title: Intuition for Computation
-% Description: A Guide for Prospective Software Engineers
+% Description: A Guide for Programmers and Curious Minds
 % Author: Tommy Monson
-% Date Created: February 7, 2019
-% Template: Arsclassica Article (http://www.LaTeXTemplates.com)
+% Date Started: February 7, 2019
+% Date of First Publishing: TBD
+% Document Template: Arsclassica Article from http://www.LaTeXTemplates.com (but heavily modified)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %--------------------------------------------------------------------------------
@@ -12,7 +13,98 @@
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
 
-%--- STANDARD 3-COLUMN TABLE ------------
+% Below are standardized templates for some of the programming objects that are used in the typesetting of this document. There are two sections, Comment Templates and Content Templates. The former standardizes the style of this .tex document, and the latter standardizes the typesetting style of the .pdf document.
+
+%--------------------------------------------------------------------------------
+%    COMMENT TEMPLATES
+%--------------------------------------------------------------------------------
+
+% Note: these are templates for comments, which do not affect the final visual presentation of the .pdf document. They are standardized here in order to make the .tex document as orderly and readable as possible.
+
+%--- PART HEADER ------------------------
+
+% Below is the standard part header, written before a \part command (which generates what is known as a "part" in LaTeX and which is considered a "chapter" in the context of the book's content):
+
+%--------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------
+%    PART
+%--------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------
+
+% Each "line" consists of a % symbol followed by 80 - symbols (and, of course, a newline character, referred to hence as \n).
+% The format is:
+    % 2 lines;
+    % a % symbol, 4 spaces, and a LABEL in all caps (plus a \n);
+    % 2 lines.
+
+%--- SECTION HEADER ---------------------
+
+% Below is the standard section header, written before a \section command:
+
+%--------------------------------------------------------------------------------
+%    SECTION
+%--------------------------------------------------------------------------------
+
+% Each "line" consists of a % symbol followed by 80 - symbols (plus a \n).
+% The format is:
+    % 1 line;
+    % a % symbol, 4 spaces, and a LABEL in all caps (plus a \n);
+    % 1 line.
+
+%--- SUBSECTION HEADER ------------------
+
+% Below is the standard subsection header, written before a \subsection command:
+
+%----------------------------------------
+
+% It is a single "half-line", consisting of a % symbol followed by 40 - symbols (plus a \n).
+
+% This header is meant to be used without a LABEL when separating a subsection from what comes before it. However, it can be used as a general separator of text as well. In this use case, if a LABEL would really benefit readability (as it would in, say, the categorizing of notes), then one can be included like so:
+
+%--- LABEL ------------------------------
+
+% The format is (in a single line):
+    % a % symbol,
+    % 3 - symbols,
+    % a space,
+    % a LABEL in all caps (whose length is x characters),
+    % a space,
+    % (40 - 3 - 1 - x - 1) - symbols (i.e. (35 - x) dash symbols),
+    % a \n character.
+
+% "How am I supposed to remember this gosh durn algebra?" You don't have to. To write a subsection header with a label...
+
+% Step 1: Copy-paste two standard subsection headers, one below the other.
+
+%----------------------------------------
+%----------------------------------------
+
+% Step 2: Give one of them a label, starting after the first 3 dashes and remembering to bookend it with spaces.
+
+%--- COOLEST LABEL EVER -------------------------------------
+%----------------------------------------
+
+% Step 3: Trim the newly labeled header to match the length of the unlabeled, standard header.
+
+%--- COOLEST LABEL EVER -----------------
+%----------------------------------------
+
+% Step 4: Delete the extraneous subsection header.
+
+%--- COOLEST LABEL EVER -----------------
+
+% With this method, no matter the length of the LABEL, the header will still be as long as the standard subsection header, and the LABEL will be horizontally aligned with the labels in the section and part headers.
+% Do not write a label that is greater than 34 characters in length because you need at least one - symbol in order to properly conclude the header. Also, if you are using labels that long, you are labeling poorly anyway.
+
+% Note: there are no comment headers for subsubsections, nor for paragraphs, nor for subparagraphs.
+
+%--------------------------------------------------------------------------------
+%    CONTENT TEMPLATES
+%--------------------------------------------------------------------------------
+
+% TODO: Standardize vertical spacing.
+
+%--- 3-COLUMN TABLE ---------------------
 
 %\begin{table}[H]
 %	\caption{TITLE}
@@ -77,15 +169,6 @@
 %\end{tcolorbox}
 %\vspace{7mm}
 
-%--- ALGORITHM --------------------------
-
-% To be standardized...
-
-%--- FINITE-STATE MACHINE ---------------
-
-% Sometimes the product of this FSM generator: http://madebyevan.com/fsm/
-% Sometimes done manually using tikzpicture
-
 %--- QUOTATION --------------------------
 
 %\begin{displayquote}
@@ -96,6 +179,15 @@
 %\end{flushright}
 %\end{displayquote}
 
+%--- ALGORITHM --------------------------
+
+% To be standardized...
+
+%--- DIAGRAMS AND FSMS ------------------
+
+% Made using the tikzpicture environment
+% Here is a nice in-browser FSM generator that produces tikzpicture code: http://madebyevan.com/fsm/
+
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
 %    DOCUMENT CONFIG
@@ -103,7 +195,7 @@
 %--------------------------------------------------------------------------------
 
 %--------------------------------------------------------------------------------
-%    PACKAGES AND COMMANDS
+%    PACKAGES, LIBRARIES, AND COMMANDS
 %--------------------------------------------------------------------------------
 
 \documentclass[
@@ -114,31 +206,38 @@ headinclude,footinclude, % Extra spacing for the header and footer
 BCOR5mm, % Binding correction
 ]{scrartcl}
 
+%--- PACKAGES ---------------------------
+
 \input{structure.tex} % Include the structure.tex file which specified the document structure and layout
 
-\newcommand*\rfrac[2]{{}^{#1}\!/_{#2}} % Slash fractions
-\newcommand*\vtabularspace[1]{\multicolumn{#1}{l}{} \\[-7pt]} % Vertical space in a tabular environment
-\newcommand{\hrefcolor}[3][blue]{\href{#2}{\color{#1}{#3}}}%
-\newcommand{\toclineskip}{\addtocontents{toc}{\vspace{\normalbaselineskip}}} % Skip a line in the table of contents
-\newcolumntype{Y}{>{\centering\arraybackslash}X} % Centered tabularx X column
-\renewcommand{\arraystretch}{1.5} % Row spacing in tables
-\renewenvironment{description}[1][0pt] % Indent descriptions
-{\list{}{\labelwidth=0pt \leftmargin=#1\let\makelabel\descriptionlabel}}
-{\endlist}
-\definecolor{light-gray}{gray}{0.8} % For cover
-\definecolor{dark-gray}{gray}{0.4} % For cover
-\definecolor{textbook-blue}{HTML}{F0F8FF} % For boxed text
-\definecolor{textbook-blue-dark}{HTML}{D7ECFF} % Supplements textbook-blue
-\hyphenation{} % Custom hyphenation
-\tcbuselibrary{skins} % Load tcolorbox libraries
-\RestyleAlgo{boxruled} % Boxes around algorithms
-\newcommand*\tocpartglyph{{\Large\adforn{14}\hspace{1.5mm}}}
-\newcommand*\parbreak{
-	{\begin{center}
-			{\Large \adforn{21}\quad\adforn{12}\quad\adforn{49}}
-	\end{center}}}
-\usetikzlibrary{matrix}
+%--- LIBRARIES --------------------------
+
+\usetikzlibrary{arrows.meta}
 \usetikzlibrary{calc}
+\usetikzlibrary{matrix}
+\tcbuselibrary{skins} % Load tcolorbox libraries
+
+%--- COLOR COMMANDS ---------------------
+
+% For cover -- non-diagonal bits
+\definecolor{light-gray}{gray}{0.8}
+
+% For cover -- diagonal bits
+\definecolor{dark-gray}{gray}{0.4}
+
+% The standard "textbook blue" color
+\definecolor{textbook-blue}{HTML}{F0F8FF}
+
+% A slightly darker blue, used when textbook-blue just isn't popping enough
+\definecolor{textbook-blue-dark}{HTML}{D7ECFF}
+
+% The hyperlink color (will be removed eventually in favor of a clickable, in-line hyperlink button)
+\newcommand{\hrefcolor}[3][blue]{\href{#2}{\color{#1}{#3}}}
+
+% Highlight math in textbook-blue-dark
+\newcommand{\hl}[1]{\colorbox{textbook-blue-dark}{$\displaystyle#1$}}
+
+%--- SYMBOL COMMANDS --------------------
 
 % Zeros and Ones on cover, light and dark versions
 \newcommand*\zro{\huge \color{light-gray} 0}
@@ -146,11 +245,44 @@ BCOR5mm, % Binding correction
 \newcommand*\zdk{\huge \color{dark-gray} 0}
 \newcommand*\odk{\huge \color{dark-gray} 1}
 
-% Math highlight
-\newcommand{\hl}[1]{\colorbox{textbook-blue-dark}{$\displaystyle#1$}}
+% Glyphs preceding chapters in table of contents
+\newcommand*\tocpartglyph{{\Large\adforn{14}\hspace{1.5mm}}}
 
-% Custom ellipsis spacing
-\newcommand\mydots{\makebox[4em][c]{$\cdot$\hfil$\cdot$\hfil$\cdot$}}
+% Stylistic paragraph break, to prompt the reader to take a reflective pause
+\newcommand*\parbreak{
+	{\begin{center}
+			{\Large \adforn{21}\quad\adforn{12}\quad\adforn{49}}
+	\end{center}}
+}
+
+% In-line fractions, formatted with a forward slash
+\newcommand*\rfrac[2]{{}^{#1}\!/_{#2}}
+
+% An ellipsis with large spaces between the dots for very long pauses
+\newcommand\mydots{\makebox[4em][c]{\large $\cdot$\hfil$\cdot$\hfil$\cdot$}}
+
+%--- SPACING COMMANDS -------------------
+
+% Line skip in the table of contents
+\newcommand{\toclineskip}{\addtocontents{toc}{\vspace{\normalbaselineskip}}}
+
+% Vertical space in a tabular environment
+\newcommand*\vtabularspace[1]{\multicolumn{#1}{l}{} \\[-7pt]}
+
+% Nesting in the description environment
+\renewenvironment{description}[1][0pt]
+{\list{}{\labelwidth=0pt \leftmargin=#1\let\makelabel\descriptionlabel}}
+{\endlist}
+
+% A centered tabularx X column
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+% Row spacing in tables
+\renewcommand{\arraystretch}{1.5}
+
+%--- OTHER COMMANDS ---------------------
+
+\RestyleAlgo{boxruled} % Boxes around algorithms
 
 %--------------------------------------------------------------------------------
 %    TITLE AND AUTHOR
@@ -166,11 +298,14 @@ BCOR5mm, % Binding correction
 %    HEADERS
 %--------------------------------------------------------------------------------
 
-\renewcommand{\sectionmark}[1]{\markright{\spacedlowsmallcaps{#1}}} % The header for all pages
+% The header for all pages
+\renewcommand{\sectionmark}[1]{\markright{\spacedlowsmallcaps{#1}}}
 
-\lehead{\mbox{\llap{\small\thepage\kern1em\color{halfgray} \vline}\color{halfgray}\hspace{0.5em}\rightmark\hfil}} % The header style
+% The header style
+\lehead{\mbox{\llap{\small\thepage\kern1em\color{halfgray} \vline}\color{halfgray}\hspace{0.5em}\rightmark\hfil}}
 
-\pagestyle{scrheadings} % Enable the headers specified in this block
+% Enable the headers specified in this block
+\pagestyle{scrheadings}
 
 \begin{document}
 	
@@ -338,14 +473,30 @@ In December of 2018, I graduated from Duke University, feeling like I knew simul
 
 % The process of note taking while writing this book. Deciding whether to put my thoughts into note-form, and, thus, potentially into published-form. The notes were the barrier between "that's stupid/irrelevant/misinformed/way too \textit{out there}" and "Perhaps---that might be a good idea\dots"
 % But I also adhered to the principle of "If it's really that good of an idea, you'll remember it."
-% This is the only section I didn't write notes for. I had my ideas, but I knew that, in the end, I would remember those who I truly wanted to thank and why I wanted to do so. Some things are better thought through with the heart than with the brain.
+% I didn't write notes about the people in my personal life who deserve and have my utmost gratitude. I had my ideas, but I knew that, in the end, I would remember those who I truly want to thank, and I would remember exactly why. Some things are better thought through with the heart than with the brain.
+
+%--- PERSONAL ---------------------------
 
 % DA teachers
 % Duke teachers
-% My good friends, those few people with whom it's never been anything less than \textit{real}, honest and earnest to infinity and beyond.
+% My good friends, those few people with whom it's never been anything less than \textit{real}, honest and earnest to infinity and beyond. Interacting with you all is what makes my world go 'round.
 % Parents
+
+% In addition, I also have a number of professional and academic people (and works) to acknowledge.
+
+%--- PROFESSIONAL AND ACADEMIC ----------
+
+% Dan McPherson, his analytical mind and precision
 % TeX, TeXStudio, Donald Knuth
-% Hi-Chews, Seinfeld (Theory of Comedy, comedy systems, categories of comedic timing)
+% Robert C. Martin and his book \textit{Clean Code}, which I referenced occassionally for the purpose of book design. Like the book you are reading now, Clean Code presents material that is typically considered rather dry and \textit{compels} you to care about it. It accomplishes this largely due to its writing style and short sections. It isn't afraid to be whimsical after a dense section, and it has many section headers (sometimes more than one per page), which act as \textit{mini-checkpoints} for the reader. I studied the narrative structure of Clean Code and applied many of its stylistic and typographical principles to the typesetting of this book.
+
+%--- ECCENTRIC --------------------------
+
+% And, last but not least, I have a number of somewhat eccentric thank-yous to give. Despite how unconventional some of these shoutouts are, they are nevertheless sincere.
+
+% Seinfeld (Theory of Comedy, comedy systems, categories of comedic timing)
+% DGR
+% Morinaga & Company, Ltd., the producers of Hi-Chews
 
 \newpage
 
@@ -398,7 +549,7 @@ I find it difficult to describe what this book is. And yet, I find it easy to ex
 % https://www.standoutbooks.com/nail-non-fiction-introduction/
 
 % The hook starts here. Why should the reader care?
-% Five reasons to read this book: 1. It is a work of passion, born out of a consuming and frenetic obsession 2. It is painstakingly crafted, like a sculpture hewn from granite, every sentence carefully constructed, every word meticulously chosen, 3. It is a work born from a deep depression, and it serves as a guide to those who may experience the same feelings of self-doubt, 4. It is a distillation of some very difficult and important ideas that you have encountered and will undoubtedly encounter again, ...
+% Five reasons to read this book: 1. It is a work of passion, born out of a consuming and frenetic obsession 2. It is painstakingly crafted, like a sculpture hewn from granite, every sentence carefully constructed, every word meticulously chosen, 3. It is a work born from a deep depression, and it serves as a guide to those who may experience the same feelings of self-doubt, 4. It is a distillation of some very difficult and important ideas that you have encountered and will undoubtedly encounter again, 5. It's short and tries not to waste your time...
 % However, there is a reason that is bigger than all of these...
 
 % "Living in the Information Age"
@@ -446,6 +597,8 @@ I find it difficult to describe what this book is. And yet, I find it easy to ex
 % The book tries to get the point across that there is more than one way to think about things and that knowledge is built on assumptions, including the body of knowledge called computer science. While we must work within a box, we should strive to remind ourselves periodically that we are, indeed, in a box and that there exist methods of thinking outside of it. The theories and models we use today may simply be the predecessors of theories and models to come. The topics of discussion, however, are eternal.
 % The book is slanted toward imperative programming, specifically toward OOP. This is because most software engineering is done in OOP languages. OOP is also less abstract and thus more beginner-friendly. Declarative programming and functional languages are discussed with a decent level of detail, but OOP is the default here. For example, the implementation chapter explores Java.
 % Traditional education is bottom-up (notice how objects on Earth fall when dropped => that's because F_g=ma_g). This book uses a top-down approach (what is mass, what is acceleration, what is force, what are objects, what is motion => that's what we mean when we write F_g=ma_g). The traditional approach is syntactic, this book's approach is semantic.
+% The abbreviations i.e. and e.g. are used frequently in this book. What do those mean?
+% If there's a word you don't know, just look up the definition and keep going. That's basically how I wrote this book.
 
 \newpage
 
@@ -473,7 +626,7 @@ One can describe computation in a variety of ways. Some are poetic, others are m
 
 In his \textit{Theogony}, the Ancient Greek poet Hesiod (fl. 750 BCE) depicts a fascinating uncertainty known as Chaos: a vast nothingness that preceded the creation of the Universe. From this void emerged the primordial deities, personifications of nature who gave life to the Titans and, by extension, to the Olympian gods. Curiously, the modern definition of \textit{chaos} has nearly inverted. Now, one might say that a situation is \textit{chaotic} if there is so much going on that it is hard to make sense of anything. Despite their great conceptual difference, these meanings share a common property: they both evoke \textit{confusion}. \\
 
-This place in which we find ourselves may indeed be post-Chaos, but confusion remains a familiar state for us. In fact, it is our natural state. We come into life confused about everything, crying, open-eyed in reaction to how much is going on around us. Slowly, we figure a few things out. Later, we consider many things \textit{certain}. As time ticks on and we carve our separate paths in the world, the wise ones among us come to realize the true depth of their confusion. \\
+This place in which we find ourselves may indeed be post-Chaos, but confusion remains a familiar state for us. In fact, it is our natural state. We come into life confused about everything---crying, open-eyed in reaction to how much is going on around us. Slowly, we figure a few things out. Later, we consider many things \textit{certain}. As time ticks on and we carve our separate paths in the world, the wise ones among us come to realize the true depth of their confusion. \\
 
 Although we are initially confused, we naturally pursue an understanding of the chaos that surrounds us. We perceive the goings-on of our environment and draw \textit{information} from them, piecing together a \textit{knowledge} that orients us and gives meaning to the disorder of our existence. This is the crux of computation. It is the structured manipulation of \textit{data} into \textit{information} for the purpose of acquiring \textit{knowledge}. It shines a light into the darkness we call home. \\
 
@@ -504,50 +657,157 @@ Here, we learn how this game is played and how it is woven into the fabric of ou
 \end{displayquote}
 \vspace{4mm}
 
-Say you want to \textit{communicate} an idea $X$ to someone. That is, you would like to convey some \textit{information} to them so that you might together establish a shared body of \textit{knowledge}. $X$ is on the tip of your tongue, but you cannot quite put it into words. Accordingly, you express a related idea $Y_0$, hoping that you might be able to suss out your target $X$ with the help of your fellow interlocutor. This proxy idea is either too specific or too general, a \textit{subclass} or \textit{superclass} of the \textit{class} $X$, and you must replace it with another idea, preferably $X$ or at least some $Y_1$ that is closer to $X$ than $Y_0$. And so on and so forth, ideas are proposed until some candidate $Y_n=X$ is found. The conversation could go as follows: \\\\
+Say you want to \textit{communicate} an idea $X$ to someone. That is, you would like to convey some \textit{information} to them so that you might together establish a shared body of \textit{knowledge}. $X$ is on the tip of your tongue, but you cannot quite put it into words. Accordingly, you express a related idea $Y_0$, hoping that you might be able to suss out your target $X$ with the help of your fellow interlocutor. This proxy idea is either too specific or too general, a \textit{subclass} or \textit{superclass} of the \textit{class} $X$, and you must replace it with another idea, preferably $X$ or at least some $Y_1$ that is closer to $X$ than $Y_0$. And so on and so forth, ideas are proposed until some candidate $Y_n=X$ is found. The conversation could go as follows: \\
 
 \begin{addmargin}[8em]{2em}
 \begin{flushright}
-"Dude, what's that thing with the moving parts that beeps sometimes? And it, like, gets hot if it moves too fast? \\[2mm]
+"Dude, what's that thing with the moving parts that beeps sometimes? And it, like, gets hot if it moves too fast? \\[1.5mm]
 
-\mydots \\[2mm]
+\mydots \\[1.5mm]
 
-It's like a \textit{Machine} of some sort, but more \textit{specific}." \\[2\baselineskip]
+It's like a \textit{Machine} of some sort, but more \textit{specific}." \\[\baselineskip]
 \end{flushright}
 \end{addmargin}
 
 \begin{addmargin}[2em]{8em}
-"Oh yeah, those things with the engine in the front and the four doors? And it has two rows of seats, right? That's a \textit{Sedan}." \\[\baselineskip]
+"Oh yeah, those expensive things with the metal chassis and the fancy interface? With the two rows of seats... \\
+Sounds like a good ol' fashioned \textit{Sedan}, my dude." \\
 \end{addmargin}
 
 \begin{addmargin}[8em]{2em}
 	\begin{flushright}
-		"No, not a sedan. It's more \textit{general} than that. But it does transport people and objects. It's definitely a type of \textit{Vehicle}." \\[2\baselineskip]
+		"Nah, it's not a sedan. It's close, but I'm thinking of something more \textit{general} than that. It's definitely a type of \textit{Vehicle} though." \\[\baselineskip]
 	\end{flushright}
 \end{addmargin}
 
 \begin{addmargin}[2em]{8em}
-	"A \textit{Car}?" \\[\baselineskip]
+	"Well, there are a lot of \textit{Vehicles} out there, but I'm going to guess this has something to do with a certain \textit{Car}..." \\
 \end{addmargin}
 
 \begin{addmargin}[8em]{2em}
 	\begin{flushright}
-		"Oh, that's right, I'm thinking of a \textit{Car}. Ok, now that we're on the same page, remember how you lent me \textit{your car}? \\
-		My bad, man, I crashed it." \\[2\baselineskip]
+		"Of course! I was thinking of a \textit{Car}. \\
+		Ok, now that we're on the same page, about \textit{your car}... \\
+		My bad, man, I crashed it into the lake last night." \\[\baselineskip]
 	\end{flushright}
 \end{addmargin}
 
-% A class is essentially a collection of \textit{things}, and any particular one of those things is called an \textit{instance} of that class.
-% Here Interlocuter 1 presents Y_1... Specify, generalize, specify
-
 In this scenario, Interlocutor $\mathcal{A}$ introduces the problem: there is \textit{information} to \textit{communicate}, and it defines a class $X$. And a \textit{class}, we understand, is a collection of individual \textit{objects} and is itself an object \textit{in abstracto}, an idea in our mind's eye of such a collection. $\mathcal{A}$ grasps for $X$, throwing out descriptions to lure it closer, but it evades. $\mathcal{A}$ then takes the class $Y_0$, \textit{Machine}, as a starting point and states that it is a \textit{superclass} of $X$. \\
 
-Interlocutor $\mathcal{B}$ responds with \textit{specification}, adding assumed details to the definition of $Y_0$. Thus, $Y_1$ is proposed: the class \textit{Sedan}. Luckily, the assumptions are not totally off-base; $Y_1$ turns out to be a \textit{subclass} of $X$. $\mathcal{A}$ confirms this and so returns with a \textit{generalization} that conjures $Y_2$, the class \textit{Vehicle}. $\mathcal{B}$ specifies again, offering up as $Y_3$ a subclass of \textit{Vehicle} called \textit{Car}. Finally, $\mathcal{A}$ accepts this class as the target $X$ and ends the search. And with this mutual knowledge of \textit{Car} established, $\mathcal{A}$ then goes on to specify an \textit{instance} of \textit{Car}, a particular \textit{car} that belongs to $\mathcal{B}$. And with both interlocutors now cognizant of exactly what is being discussed, $\mathcal{A}$ swiftly informs $\mathcal{B}$ that his ride is totaled. \\
+Interlocutor $\mathcal{B}$ responds with \textit{specification}, adding assumed details to the definition of $Y_0$. Thus, $Y_1$ is proposed: the class \textit{Sedan}. Luckily, the assumptions are not totally off-base; $Y_1$ turns out to be a \textit{subclass} of $X$. $\mathcal{A}$ confirms this and so returns with a \textit{generalization} that conjures $Y_2$, the class \textit{Vehicle}. $\mathcal{B}$ specifies again, offering up as $Y_3$ a subclass of \textit{Vehicle} called \textit{Car}. Finally, $\mathcal{A}$ accepts this class as the target $X$ and ends the search. And with this mutual knowledge of \textit{Car} established, $\mathcal{A}$ then goes on to specify an \textit{instance} of \textit{Car}, a particular car $b$ that belongs to $\mathcal{B}$. And with both interlocutors now cognizant of exactly what is being discussed, $\mathcal{A}$ swiftly informs $\mathcal{B}$ that his ride is totaled. \\
 
-% FSM here?
+% Taxonomy diagram
+\begin{center}
+\begin{tikzpicture}[scale=0.19]
 
+	%--- GRAY TREES -------------------------
+
+    \foreach \x in {0,...,3}
+        \foreach \y in {1,...,5}{
+            
+            % Big dashed lines
+            \draw [gray,dashed,thick] (\x*17,0) -- ++(90+\y*15:8);
+            \draw [gray,dashed,thick] (\x*17,0) -- ++(180+\y*15:8);
+            
+            % Small dashed lines
+            \draw [gray,dashed,thick] (\x*17,0) ++(90+\y*15:8) -- ++(90+\y*15-15:3);
+            \draw [gray,dashed,thick] (\x*17,0) ++(90+\y*15:8) -- ++(90+\y*15+15:3);
+            \draw [gray,dashed,thick] (\x*17,0) ++(180+\y*15:8) -- ++(180+\y*15-15:3);
+            \draw [gray,dashed,thick] (\x*17,0) ++(180+\y*15:8) -- ++(180+\y*15+15:3);
+            
+            % Small circles
+            \draw [gray,thick,fill=white] (\x*17,0) ++(90+\y*15:8) circle (0.55);
+            \draw [gray,thick,fill=white] (\x*17,0) ++(180+\y*15:8) circle (0.55);
+	    }
+    
+    % Extra gray tree for Y_1 at 180 degrees
+    \draw [gray,dashed,thick] (0,0) -- ++(180:8);
+    \draw [gray,dashed,thick] (0,0) ++(180:8) -- ++(180-15:3);
+    \draw [gray,dashed,thick] (0,0) ++(180:8) -- ++(180+15:3);
+    \draw [gray,thick,fill=white] (0,0) ++(180:8) circle (0.55);
+    
+    %--- CURVES AND BIG ARROWS --------------
+    
+    % Curve coordinates
+    
+    % Red
+    \coordinate (R1) at ($(17,0)+(-65:4)$);
+    \coordinate (R2) at (24,-12);
+    \coordinate (R3) at (20,-22);
+    
+    % Blue
+    \coordinate (M1) at (8,-18);
+    \coordinate (M2) at (-4,-14);
+    \coordinate (M3) at (5,-1);
+    
+    % Green
+    \coordinate (L1) at (6,-8);
+    \coordinate (L2) at (7,-15);
+    \coordinate (L3) at (-5.5,-22);
+    \coordinate (END) at ($(-12,-10)+(-80:2)$);
+    
+    
+    % MIDDLE curve
+    \draw [thick] plot [smooth]
+    (M1) .. controls (M2) and (M3) .. (L1);
+    
+    % Big arrows
+    \draw [thick, rounded corners, fill=white] (-6.5,13) -- ++(0,4) -- ++(46,0) -- ++(0,2) -- ++(9,-4) -- ++(-9,-4) -- ++(0,2) -- cycle;
+    \node at (10.5,15) {\Large \textsc{Generalization}};
+    
+    \draw [thick, rounded corners, fill=white] (50.5,-13) -- ++(0,-4) -- ++(-46,0) -- ++(0,-2) -- ++(-9,4) -- ++(9,4) -- ++(0,-2) -- cycle;
+    \node at (33.5,-15) {\Large \textsc{Specification}};
+    
+    % RIGHT curve
+    \draw [thick] plot [smooth]
+    (R1) .. controls (R2) and (R3) .. (M1);
+    
+    % LEFT curve
+    \draw [-{Latex[length=5mm,width=2mm,angle=60:6pt]},thick] plot [smooth]
+    (L1) .. controls (L2) and (L3) .. (END);
+    
+    %--- NODES AND SMALL ARROWS -------------
+    
+    % Arrows
+    \foreach \x in {1,2,3}{
+    	\draw [-{Latex[length=5mm,width=2mm,angle=60:6pt]},thick] (17*\x,0) -- +(-13,0);
+    }
+    
+    % Labels and colors for Y nodes
+    \draw [thick,fill=white] (0,0) circle (4) node {\Large $Y_1$};
+    \draw [thick,fill=textbook-blue] (17,0) circle (4) node {\Large $Y_3$};
+    \draw [thick,fill=white] (2*17,0) circle (4) node {\Large $Y_2$};
+    \draw [thick,fill=white] (3*17,0) circle (4) node {\Large $Y_0$};
+    
+    % b node
+    \draw [thick,fill=textbook-blue] (-12,-10) circle (2);
+    \node at (-12,-10) {\Large $b$};
+    
+    % Bezier curve assistant (used for sculpting curves)
+    % \draw [thick,red] (R1) -- (R2) -- (R3) -- (M1);
+    % \draw [thick,blue] (M1) -- (M2) -- (M3) -- (L1);
+    % \draw [thick,green] (L1) -- (L2) -- (L3) -- (END);
+    
+\end{tikzpicture} \\~\\
+\end{center}
+
+% Diagram -> Generalization/Specification -> Top and Bottom/Type Theory -> Generalization is theory building, specification is theory using -> information is both fundamental and very general -> because it is so general, we need to pull from a lot of fields to properly characterize it.
+
+In the above diagram, we see the classes $Y$ and their relations to each other. The arrows between them are \textit{is-a} relations. They point from a \textit{parent} class $P$ to a \textit{child} class $C$, and we say that the child is a subclass of the parent. $P$ \textit{subsumes} $C$. In set theory notation, $P\subset C$. Thus every $c\in C$ is considered a \textit{subtype} of the more general class $P$. Every $c$ \textbf{is a} $P$ of some \textit{type}. \\
+
+Of course, any given $P$ can have many subtypes, and those subtypes can have their own subtypes, and additional information can be added to the specifications of those subtypes, and further subtyping can occur by making classifications based on this additional information, and eventually these subtypes may become very unlike each other and may not share much in common other than a distant relation to $P$. The branching structure of this phenomenon is depicted above in gray. \\
+
+In the discourse between our two dialectical dudes, we witnessed the creation of a \textit{taxonomy}, a hierarchical system of classification. \\
+
+% Blue box for the term node. Node is a joint or a communication hub in an information system. It is connected to other nodes by communication channels. Node is Latin for knot. So node/connection in information science, vertex/edge in graph theory.
+% The difference between a taxonomy and an ontology is that the former has child nodes.
+% This forms a taxonomy. They have tree structure because of the nature of an is-a relation.
+% The b is also important in the diagram. Things can have multiple types and sometimes it is important to reference a particular label that an object has.
+
+% The diagram also has big arrows that say Generalization and Specification...
 % A and B generalize and specify their way to an answer.
-The process of \textit{generalization} is a boon to experts and a bane to amateurs. It is the unification of multiple types into a single category, a one from many, \textit{e pluribus unum}. The opposite concept, partitioning a single category into multiple types, many from one, \textit{ex uno plura}, is the process of \textit{specification}, which tends to be the easier of the two to understand. On the other hand, generalization tends to produce a richer and more detailed understanding. \\
+% When given a new system to analyze or play with, curious minds are compelled to think about extreme cases. How far can we generalize or specify? To the top and bottom.
+\textit{Generalization} is a boon to experts and a bane to amateurs. It is the unification of many into one, \textit{e pluribus unum}. \textit{Specification} is the opposite concept, and it tends to be easier to understand. It is the partitioning of one into many, \textit{ex uno plura}. \\
 
 % Generalization is powerful because it allows you to know things about systems you haven't seen before. It gives intuitive understanding.
 % Generalization increases the size of the domain of discourse and decreases the amount of available information.
@@ -567,9 +827,6 @@ Generalization and specification are also called bottom-up and top-down strategi
 % Computer science is a unifier of academic fields. It is hard to fully grasp because it is so general. We need to pull from many disciplines to characterize it effectively (language, logic, philosophy, math, physics, engineering).
 % The theory of computer science was built many to one. Practical programming is one (information, bits) to many (types, software). Thus, we will discuss many different fields and will unify them under a theory whose arche is information (logical values).
 % We must consider open-worlds before we discuss closed-worlds.
-
-% OBJECTIVE of section
-% SUMMARY of subsections
 
 % What does information mean to you, the reader? Your intuition is correct.
 % There exists an elegant path that weaves its way through philosophy and physics, arrives at a very general definition of information, and then is only a few steps from a very general definition of communication. From there, we can specify the many means by which information is communicated. It may seem like this stuff is unrelated to computation, but try to keep an open mind.
@@ -632,6 +889,7 @@ How general is this category of objects? Namely, are properties objects? If they
 \subsection{Classical Metaphysics}
 
 % One could argue that philosophy has been done ever since we could think. But philosophy in Ancient Greece was different. Why? Geography. Democracy.
+% Yes, other cultures had "philosophies" at this time, but the word in this case is referring to a \textit{worldview}. We are discussing philosophy in the sense of \textit{analysis}.
 
 \subsubsection{\textit{Henosis} and \textit{Arche}}
 
@@ -1328,7 +1586,7 @@ For those seeking counsel, the premises of the Oracle's conclusion are unnecessa
 
 \paragraph{The Seer} \hspace*{1mm} \vspace*{2mm}
 
-A Seer is a person who predicts the future by interpreting signs from a god or a set of gods. Unlike an Oracle, a Seer speaks divine truth in his own words, drawing from an innate, sometimes god-given power to see meaning in natural events or occult objects. There are various methods of divination that are used by Seers, such scrying (the gazing into magical things, like crystal balls, for the purpose of seeing visions), auspicy (the interpretation of bird migration), or dowsing (the use of magic to find water, often with the aid of a dowsing rod). The acceptance of any particular method is cultural, but beliefs in divination vary greatly, even within a single society. \\
+A Seer is a person who predicts the future by interpreting signs from a god or a set of gods. Unlike an Oracle, a Seer speaks divine truth in his own words, drawing from an innate, sometimes god-given power to see meaning in natural events or occult objects. There are various methods of divination that are used by Seers, such as scrying (the gazing into magical things, like crystal balls, for the purpose of seeing visions), auspicy (the interpretation of bird migration), or dowsing (the use of magic to find water, often with the aid of a dowsing rod). The acceptance of any particular method is cultural, but beliefs in divination vary greatly, even within a single society. \\
 
 The Seer has premises for his conclusion, but the rules of inference involved in his reasoning are incomprehensible to others. He 
 
@@ -3976,8 +4234,6 @@ Blah \\
 %--------------------------------------------------------------------------------
 
 \toclineskip
-\section{Computer Networks, Including \textit{The Internet}}
-
 \section{Unit Testing}
 
 Blah
@@ -4408,6 +4664,8 @@ Summarize the appendices below...
 % None of this is to say that my choices played no role in my education. They certainly did. I could have done things differently. But I put a great deal of effort into learning and felt that I made responsible choices (i.e. choices that would help me excel). Still, I always felt like my knowledge was fragile and skin-deep. I put my faith in the system, and it is only now, after spending some time educating myself outside of the system, that I see clearly the flaws in the pedagogy of my youth.
 
 % I don't really have a solution for all of this. I'm not even sure how one would go about implementing these changes within an educational structure. These are just observations.
+
+% It's always been about the semantics, not the syntax. Experts care about meaning and often solve problems without even putting pencil to paper. The knowledge is ingrained in them, and it is not the symbols that are etched in their brains: it is the ideas. Why do we teach STEM material the way that we do?
 
 % Teaching syntax over semantics. Anecdote of the dot product. Feeling like things are there for no reason. Math ideas are not invented out of thin air, and they shouldn't be taught that way.
 % Universities, for the most part, want to teach theoretical material, not applied. They don't want to be trade schools. That's fine. The problem, as I see it, is that they struggle to teach either. There isn't enough philosophical thought to effectively teach theory and there isn't enough curriculum-wide integration of tools to teach application (programming language libraries, frameworks, CAD software).
