@@ -15,215 +15,212 @@
 \contentsline {subsubsection}{\numberline {1.2.2}{Democritus' Atomism}}{15}{subsubsection.1.2.2}% 
 \contentsline {subsubsection}{\numberline {1.2.3}{Plato's Theory of Forms}}{15}{subsubsection.1.2.3}% 
 \contentsline {subsubsection}{\numberline {1.2.4}{Aristotle's Hylomorphism}}{18}{subsubsection.1.2.4}% 
-\contentsline {subsection}{\numberline {1.3}{Theories and Models}}{21}{subsection.1.3}% 
-\contentsline {subsection}{\numberline {1.4}{Modeling Physical Reality}}{21}{subsection.1.4}% 
-\contentsline {subsubsection}{\numberline {1.4.1}{Pre-scientific Thought}}{21}{subsubsection.1.4.1}% 
-\contentsline {subsubsection}{\numberline {1.4.2}{Point Particles and Forces}}{21}{subsubsection.1.4.2}% 
-\contentsline {subsubsection}{\numberline {1.4.3}{Waves and Fields}}{21}{subsubsection.1.4.3}% 
-\contentsline {subsubsection}{\numberline {1.4.4}{Quantum States and Operators}}{21}{subsubsection.1.4.4}% 
-\contentsline {subsection}{\numberline {1.5}{Information Theory}}{21}{subsection.1.5}% 
-\contentsline {subsection}{\numberline {1.6}{Signals and Systems}}{21}{subsection.1.6}% 
+\contentsline {subsection}{\numberline {1.3}{Theories and Models}}{20}{subsection.1.3}% 
+\contentsline {subsection}{\numberline {1.4}{Modeling Physical Reality}}{20}{subsection.1.4}% 
+\contentsline {subsubsection}{\numberline {1.4.1}{Pre-scientific Thought}}{20}{subsubsection.1.4.1}% 
+\contentsline {subsubsection}{\numberline {1.4.2}{Point Particles and Forces}}{20}{subsubsection.1.4.2}% 
+\contentsline {subsubsection}{\numberline {1.4.3}{Waves and Fields}}{20}{subsubsection.1.4.3}% 
+\contentsline {subsubsection}{\numberline {1.4.4}{Quantum States and Operators}}{20}{subsubsection.1.4.4}% 
+\contentsline {subsection}{\numberline {1.5}{Information Theory}}{20}{subsection.1.5}% 
+\contentsline {subsection}{\numberline {1.6}{Signals and Systems}}{20}{subsection.1.6}% 
 \contentsline {subsection}{\numberline {1.7}{Semiotics, Language, and Code}}{24}{subsection.1.7}% 
 \vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {2}{Reasoning and Logic}}{26}{section.2}% 
-\contentsline {subsection}{\numberline {2.1}{The Syntax and Semantics of Argument}}{26}{subsection.2.1}% 
+\contentsline {section}{\numberline {2}{Reasoning and Logic}}{25}{section.2}% 
+\contentsline {subsection}{\numberline {2.1}{The Syntax and Semantics of Argument}}{25}{subsection.2.1}% 
 \contentsline {subsection}{\numberline {2.2}{The Structure of Proof}}{28}{subsection.2.2}% 
-\contentsline {subsection}{\numberline {2.3}{The Oracle, the Seer, and the Sage}}{30}{subsection.2.3}% 
-\contentsline {paragraph}{{The Oracle}}{30}{paragraph*.10}% 
+\contentsline {subsection}{\numberline {2.3}{The Oracle, the Seer, and the Sage}}{29}{subsection.2.3}% 
+\contentsline {paragraph}{{The Oracle}}{29}{paragraph*.10}% 
 \contentsline {paragraph}{{The Seer}}{30}{paragraph*.11}% 
-\contentsline {paragraph}{{The Sage}}{31}{paragraph*.12}% 
-\contentsline {subsection}{\numberline {2.4}{The Mathematician and the Scientist}}{33}{subsection.2.4}% 
-\contentsline {paragraph}{{Abductive Reasoning}}{33}{paragraph*.13}% 
-\contentsline {subsection}{\numberline {2.5}{Mechanical Computation}}{34}{subsection.2.5}% 
-\contentsline {part}{{\relax \fontsize {14.4}{18}\selectfont {\fontfamily {OrnementsADF}\fontencoding {U}\fontseries {m}\fontshape {n}\selectfont \char 14}\hspace {1.5mm}}Theory of Computation}{36}{part*.15}% 
+\contentsline {paragraph}{{The Sage}}{30}{paragraph*.12}% 
+\contentsline {subsection}{\numberline {2.4}{The Mathematician and the Scientist}}{32}{subsection.2.4}% 
+\contentsline {paragraph}{{Abductive Reasoning}}{32}{paragraph*.13}% 
+\contentsline {subsection}{\numberline {2.5}{Mechanical Computation}}{33}{subsection.2.5}% 
+\contentsline {part}{{\relax \fontsize {14.4}{18}\selectfont {\fontfamily {OrnementsADF}\fontencoding {U}\fontseries {m}\fontshape {n}\selectfont \char 14}\hspace {1.5mm}}Theory of Computation}{35}{part*.15}% 
 \vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {3}{Automata Theory}}{36}{section.3}% 
-\contentsline {subsection}{\numberline {3.1}{Exploring the Link Between Concrete and Abstract Machines}}{37}{subsection.3.1}% 
-\contentsline {paragraph}{{(0,0,0) -> (1,0,0)}}{37}{paragraph*.16}% 
-\contentsline {paragraph}{{(1,0,0) -> (1,1,1)}}{37}{paragraph*.17}% 
-\contentsline {paragraph}{{(1,1,1) -> (0,0,0)}}{38}{paragraph*.18}% 
-\contentsline {subsection}{\numberline {3.2}{Formalization of an Abstract Machine}}{39}{subsection.3.2}% 
-\contentsline {subsection}{\numberline {3.3}{Classes of Automata and the Languages They Can Understand}}{40}{subsection.3.3}% 
-\contentsline {subsubsection}{\numberline {3.3.1}{Finite-state Machines}}{41}{subsubsection.3.3.1}% 
-\contentsline {subsubsection}{\numberline {3.3.2}{Pushdown Automata}}{43}{subsubsection.3.3.2}% 
-\contentsline {subsubsection}{\numberline {3.3.3}{Linear Bounded Automata}}{44}{subsubsection.3.3.3}% 
-\contentsline {subsubsection}{\numberline {3.3.4}{Turing Machines}}{44}{subsubsection.3.3.4}% 
-\contentsline {subsection}{\numberline {3.4}{The Importance of Turing Machines to Modern Computing}}{48}{subsection.3.4}% 
-\contentsline {subsection}{\numberline {3.5}{Modern Hardware Implementation}}{52}{subsection.3.5}% 
+\contentsline {section}{\numberline {3}{Automata Theory}}{35}{section.3}% 
+\contentsline {subsection}{\numberline {3.1}{Exploring the Link Between Concrete and Abstract Machines}}{36}{subsection.3.1}% 
+\contentsline {paragraph}{{(0,0,0) -> (1,0,0)}}{36}{paragraph*.16}% 
+\contentsline {paragraph}{{(1,0,0) -> (1,1,1)}}{36}{paragraph*.17}% 
+\contentsline {paragraph}{{(1,1,1) -> (0,0,0)}}{36}{paragraph*.18}% 
+\contentsline {subsection}{\numberline {3.2}{Formalization of an Abstract Machine}}{38}{subsection.3.2}% 
+\contentsline {subsection}{\numberline {3.3}{Classes of Automata and the Languages They Can Understand}}{39}{subsection.3.3}% 
+\contentsline {subsubsection}{\numberline {3.3.1}{Finite-state Machines}}{40}{subsubsection.3.3.1}% 
+\contentsline {subsubsection}{\numberline {3.3.2}{Pushdown Automata}}{41}{subsubsection.3.3.2}% 
+\contentsline {subsubsection}{\numberline {3.3.3}{Linear Bounded Automata}}{42}{subsubsection.3.3.3}% 
+\contentsline {subsubsection}{\numberline {3.3.4}{Turing Machines}}{43}{subsubsection.3.3.4}% 
+\contentsline {subsection}{\numberline {3.4}{The Importance of Turing Machines to Modern Computing}}{46}{subsection.3.4}% 
+\contentsline {subsection}{\numberline {3.5}{Modern Hardware Implementation}}{50}{subsection.3.5}% 
 \vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {4}{Computability Theory}}{52}{section.4}% 
-\contentsline {subsection}{\numberline {4.1}{The Scope of Problem Solving}}{53}{subsection.4.1}% 
-\contentsline {subsubsection}{\numberline {4.1.1}{Informal Logic}}{53}{subsubsection.4.1.1}% 
-\contentsline {subsubsection}{\numberline {4.1.2}{Formal Logic}}{53}{subsubsection.4.1.2}% 
-\contentsline {subsubsection}{\numberline {4.1.3}{Decision Problems and Function Problems}}{54}{subsubsection.4.1.3}% 
-\contentsline {subsubsection}{\numberline {4.1.4}{"Effective Calculability"}}{55}{subsubsection.4.1.4}% 
-\contentsline {subsection}{\numberline {4.2}{The Ballad of Georg Cantor}}{56}{subsection.4.2}% 
-\contentsline {subsubsection}{\numberline {4.2.1}{The First Article on Set Theory}}{56}{subsubsection.4.2.1}% 
-\contentsline {subsubsection}{\numberline {4.2.2}{Ordinals and Cardinals}}{58}{subsubsection.4.2.2}% 
-\contentsline {subsubsection}{\numberline {4.2.3}{The Continuum Hypothesis}}{59}{subsubsection.4.2.3}% 
-\contentsline {subsubsection}{\numberline {4.2.4}{Cantor's Later Years and Legacy}}{62}{subsubsection.4.2.4}% 
-\contentsline {subsection}{\numberline {4.3}{The Diagonal Argument for Computable Functions}}{63}{subsection.4.3}% 
-\contentsline {subsubsection}{\numberline {4.3.1}{Uncountably Many Languages}}{64}{subsubsection.4.3.1}% 
-\contentsline {subsubsection}{\numberline {4.3.2}{Countably Many Turing Machines}}{65}{subsubsection.4.3.2}% 
-\contentsline {subsubsection}{\numberline {4.3.3}{Computable Functions and Computable Numbers}}{68}{subsubsection.4.3.3}% 
-\contentsline {subsection}{\numberline {4.4}{Hilbert's Program and G\"odel's Refutation of It}}{69}{subsection.4.4}% 
-\contentsline {subsubsection}{\numberline {4.4.1}{Hilbert's Second Problem}}{69}{subsubsection.4.4.1}% 
-\contentsline {subsubsection}{\numberline {4.4.2}{G\"odel's Completeness Theorem}}{70}{subsubsection.4.4.2}% 
-\contentsline {subsubsection}{\numberline {4.4.3}{G\"odel's Incompleteness Theorems}}{72}{subsubsection.4.4.3}% 
-\contentsline {subsection}{\numberline {4.5}{The Entscheidungsproblem and the Church-Turing Thesis}}{72}{subsection.4.5}% 
-\contentsline {subsubsection}{\numberline {4.5.1}{$\mu $-recursive Functions}}{72}{subsubsection.4.5.1}% 
-\contentsline {subsubsection}{\numberline {4.5.2}{The Untyped $\lambda $-calculus}}{72}{subsubsection.4.5.2}% 
-\contentsline {subsubsection}{\numberline {4.5.3}{The Halting Problem}}{72}{subsubsection.4.5.3}% 
-\contentsline {subsection}{\numberline {4.6}{Turing Degrees}}{72}{subsection.4.6}% 
+\contentsline {section}{\numberline {4}{Computability Theory}}{50}{section.4}% 
+\contentsline {subsection}{\numberline {4.1}{The Scope of Problem Solving}}{50}{subsection.4.1}% 
+\contentsline {subsubsection}{\numberline {4.1.1}{Informal Logic}}{51}{subsubsection.4.1.1}% 
+\contentsline {subsubsection}{\numberline {4.1.2}{Formal Logic}}{51}{subsubsection.4.1.2}% 
+\contentsline {subsubsection}{\numberline {4.1.3}{Decision Problems and Function Problems}}{52}{subsubsection.4.1.3}% 
+\contentsline {subsubsection}{\numberline {4.1.4}{"Effective Calculability"}}{53}{subsubsection.4.1.4}% 
+\contentsline {subsection}{\numberline {4.2}{The Ballad of Georg Cantor}}{54}{subsection.4.2}% 
+\contentsline {subsubsection}{\numberline {4.2.1}{The First Article on Set Theory}}{54}{subsubsection.4.2.1}% 
+\contentsline {subsubsection}{\numberline {4.2.2}{Ordinals and Cardinals}}{56}{subsubsection.4.2.2}% 
+\contentsline {subsubsection}{\numberline {4.2.3}{The Continuum Hypothesis}}{57}{subsubsection.4.2.3}% 
+\contentsline {subsubsection}{\numberline {4.2.4}{Cantor's Later Years and Legacy}}{59}{subsubsection.4.2.4}% 
+\contentsline {subsection}{\numberline {4.3}{The Diagonal Argument for Computable Functions}}{60}{subsection.4.3}% 
+\contentsline {subsubsection}{\numberline {4.3.1}{Uncountably Many Languages}}{62}{subsubsection.4.3.1}% 
+\contentsline {subsubsection}{\numberline {4.3.2}{Countably Many Turing Machines}}{63}{subsubsection.4.3.2}% 
+\contentsline {subsubsection}{\numberline {4.3.3}{Computable Functions and Computable Numbers}}{65}{subsubsection.4.3.3}% 
+\contentsline {subsection}{\numberline {4.4}{Hilbert's Program and G\"odel's Refutation of It}}{66}{subsection.4.4}% 
+\contentsline {subsubsection}{\numberline {4.4.1}{Hilbert's Second Problem}}{66}{subsubsection.4.4.1}% 
+\contentsline {subsubsection}{\numberline {4.4.2}{G\"odel's Completeness Theorem}}{67}{subsubsection.4.4.2}% 
+\contentsline {subsubsection}{\numberline {4.4.3}{G\"odel's Incompleteness Theorems}}{69}{subsubsection.4.4.3}% 
+\contentsline {subsection}{\numberline {4.5}{The Entscheidungsproblem and the Church-Turing Thesis}}{69}{subsection.4.5}% 
+\contentsline {subsubsection}{\numberline {4.5.1}{$\mu $-recursive Functions}}{69}{subsubsection.4.5.1}% 
+\contentsline {subsubsection}{\numberline {4.5.2}{The Untyped $\lambda $-calculus}}{69}{subsubsection.4.5.2}% 
+\contentsline {subsubsection}{\numberline {4.5.3}{The Halting Problem}}{69}{subsubsection.4.5.3}% 
+\contentsline {subsection}{\numberline {4.6}{Turing Degrees}}{69}{subsection.4.6}% 
 \vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {5}{Computational Complexity Theory}}{72}{section.5}% 
-\contentsline {subsection}{\numberline {5.1}{Big O Notation}}{72}{subsection.5.1}% 
-\contentsline {subsection}{\numberline {5.2}{Complexity Classes}}{72}{subsection.5.2}% 
-\contentsline {part}{{\relax \fontsize {14.4}{18}\selectfont {\fontfamily {OrnementsADF}\fontencoding {U}\fontseries {m}\fontshape {n}\selectfont \char 14}\hspace {1.5mm}}Types and Structures}{73}{part*.21}% 
+\contentsline {section}{\numberline {5}{Computational Complexity Theory}}{69}{section.5}% 
+\contentsline {subsection}{\numberline {5.1}{Big O Notation}}{69}{subsection.5.1}% 
+\contentsline {subsection}{\numberline {5.2}{Complexity Classes}}{69}{subsection.5.2}% 
+\contentsline {part}{{\relax \fontsize {14.4}{18}\selectfont {\fontfamily {OrnementsADF}\fontencoding {U}\fontseries {m}\fontshape {n}\selectfont \char 14}\hspace {1.5mm}}Types and Structures}{70}{part*.21}% 
 \vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {6}{Type Theory and Category Theory}}{73}{section.6}% 
-\contentsline {subsection}{\numberline {6.1}{The Curry-Howard-Lambek Isomorphism}}{73}{subsection.6.1}% 
+\contentsline {section}{\numberline {6}{Type Theory and Category Theory}}{70}{section.6}% 
+\contentsline {subsection}{\numberline {6.1}{The Curry-Howard-Lambek Isomorphism}}{70}{subsection.6.1}% 
 \vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {7}{Abstract Data Types and the Data Structures that Implement Them}}{73}{section.7}% 
-\contentsline {subsection}{\numberline {7.1}{Lists}}{75}{subsection.7.1}% 
-\contentsline {subsubsection}{\numberline {7.1.1}{Arrays}}{75}{subsubsection.7.1.1}% 
-\contentsline {subsubsection}{\numberline {7.1.2}{Linked Lists}}{76}{subsubsection.7.1.2}% 
-\contentsline {subsubsection}{\numberline {7.1.3}{Skip Lists}}{78}{subsubsection.7.1.3}% 
-\contentsline {subsection}{\numberline {7.2}{Stacks}}{78}{subsection.7.2}% 
-\contentsline {subsection}{\numberline {7.3}{Queues}}{79}{subsection.7.3}% 
-\contentsline {subsection}{\numberline {7.4}{Deques}}{80}{subsection.7.4}% 
-\contentsline {subsection}{\numberline {7.5}{Priority Queues}}{80}{subsection.7.5}% 
-\contentsline {subsection}{\numberline {7.6}{Graphs}}{80}{subsection.7.6}% 
-\contentsline {subsection}{\numberline {7.7}{Trees}}{81}{subsection.7.7}% 
-\contentsline {subsubsection}{\numberline {7.7.1}{Binary Search Trees}}{82}{subsubsection.7.7.1}% 
-\contentsline {paragraph}{{AVL Trees}}{82}{paragraph*.32}% 
-\contentsline {paragraph}{{Red-Black Trees}}{83}{paragraph*.33}% 
-\contentsline {subparagraph}{{Red-Black Insertion}}{84}{subparagraph*.34}% 
-\contentsline {subsubsection}{\numberline {7.7.2}{Binary Heaps}}{88}{subsubsection.7.7.2}% 
-\contentsline {subsubsection}{\numberline {7.7.3}{Tries}}{88}{subsubsection.7.7.3}% 
-\contentsline {subsection}{\numberline {7.8}{Maps}}{89}{subsection.7.8}% 
-\contentsline {subsubsection}{\numberline {7.8.1}{Hash Maps}}{89}{subsubsection.7.8.1}% 
-\contentsline {paragraph}{{Separate Chaining}}{89}{paragraph*.38}% 
-\contentsline {paragraph}{{Open Addressing}}{89}{paragraph*.39}% 
-\contentsline {paragraph}{{Dynamic Resizing}}{90}{paragraph*.40}% 
-\contentsline {subsubsection}{\numberline {7.8.2}{Tree Maps}}{90}{subsubsection.7.8.2}% 
-\contentsline {subsection}{\numberline {7.9}{Sets}}{91}{subsection.7.9}% 
-\contentsline {subsection}{\numberline {7.10}{Multisets (or Bags)}}{91}{subsection.7.10}% 
-\contentsline {part}{{\relax \fontsize {14.4}{18}\selectfont {\fontfamily {OrnementsADF}\fontencoding {U}\fontseries {m}\fontshape {n}\selectfont \char 14}\hspace {1.5mm}}Algorithms}{92}{part*.45}% 
+\contentsline {section}{\numberline {7}{Abstract Data Types and the Data Structures that Implement Them}}{70}{section.7}% 
+\contentsline {subsection}{\numberline {7.1}{Lists}}{71}{subsection.7.1}% 
+\contentsline {subsubsection}{\numberline {7.1.1}{Arrays}}{72}{subsubsection.7.1.1}% 
+\contentsline {subsubsection}{\numberline {7.1.2}{Linked Lists}}{73}{subsubsection.7.1.2}% 
+\contentsline {subsubsection}{\numberline {7.1.3}{Skip Lists}}{74}{subsubsection.7.1.3}% 
+\contentsline {subsection}{\numberline {7.2}{Stacks}}{74}{subsection.7.2}% 
+\contentsline {subsection}{\numberline {7.3}{Queues}}{75}{subsection.7.3}% 
+\contentsline {subsection}{\numberline {7.4}{Deques}}{76}{subsection.7.4}% 
+\contentsline {subsection}{\numberline {7.5}{Priority Queues}}{76}{subsection.7.5}% 
+\contentsline {subsection}{\numberline {7.6}{Graphs}}{76}{subsection.7.6}% 
+\contentsline {subsection}{\numberline {7.7}{Trees}}{78}{subsection.7.7}% 
+\contentsline {subsubsection}{\numberline {7.7.1}{Binary Search Trees}}{78}{subsubsection.7.7.1}% 
+\contentsline {paragraph}{{AVL Trees}}{79}{paragraph*.32}% 
+\contentsline {paragraph}{{Red-Black Trees}}{80}{paragraph*.33}% 
+\contentsline {subparagraph}{{Red-Black Insertion}}{81}{subparagraph*.34}% 
+\contentsline {subsubsection}{\numberline {7.7.2}{Binary Heaps}}{84}{subsubsection.7.7.2}% 
+\contentsline {subsubsection}{\numberline {7.7.3}{Tries}}{84}{subsubsection.7.7.3}% 
+\contentsline {subsection}{\numberline {7.8}{Maps}}{85}{subsection.7.8}% 
+\contentsline {subsubsection}{\numberline {7.8.1}{Hash Maps}}{85}{subsubsection.7.8.1}% 
+\contentsline {paragraph}{{Separate Chaining}}{85}{paragraph*.38}% 
+\contentsline {paragraph}{{Open Addressing}}{85}{paragraph*.39}% 
+\contentsline {paragraph}{{Dynamic Resizing}}{86}{paragraph*.40}% 
+\contentsline {subsubsection}{\numberline {7.8.2}{Tree Maps}}{86}{subsubsection.7.8.2}% 
+\contentsline {subsection}{\numberline {7.9}{Sets}}{87}{subsection.7.9}% 
+\contentsline {subsection}{\numberline {7.10}{Multisets (or Bags)}}{87}{subsection.7.10}% 
+\contentsline {part}{{\relax \fontsize {14.4}{18}\selectfont {\fontfamily {OrnementsADF}\fontencoding {U}\fontseries {m}\fontshape {n}\selectfont \char 14}\hspace {1.5mm}}Algorithms}{88}{part*.45}% 
 \vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {8}{Searching}}{92}{section.8}% 
-\contentsline {subsection}{\numberline {8.1}{Depth-First Search}}{92}{subsection.8.1}% 
-\contentsline {subsection}{\numberline {8.2}{Breadth-First Search}}{95}{subsection.8.2}% 
-\contentsline {subsection}{\numberline {8.3}{Bidirectional Search}}{98}{subsection.8.3}% 
-\contentsline {subsection}{\numberline {8.4}{Dijkstra's Algorithm}}{99}{subsection.8.4}% 
-\contentsline {subsection}{\numberline {8.5}{Binary Search}}{100}{subsection.8.5}% 
-\contentsline {subsection}{\numberline {8.6}{Rabin-Karp Algorithm}}{100}{subsection.8.6}% 
+\contentsline {section}{\numberline {8}{Searching}}{88}{section.8}% 
+\contentsline {subsection}{\numberline {8.1}{Depth-First Search}}{88}{subsection.8.1}% 
+\contentsline {subsection}{\numberline {8.2}{Breadth-First Search}}{91}{subsection.8.2}% 
+\contentsline {subsection}{\numberline {8.3}{Bidirectional Search}}{93}{subsection.8.3}% 
+\contentsline {subsection}{\numberline {8.4}{Dijkstra's Algorithm}}{94}{subsection.8.4}% 
+\contentsline {subsection}{\numberline {8.5}{Binary Search}}{95}{subsection.8.5}% 
+\contentsline {subsection}{\numberline {8.6}{Rabin-Karp Algorithm}}{95}{subsection.8.6}% 
 \vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {9}{Sorting}}{100}{section.9}% 
-\contentsline {subsection}{\numberline {9.1}{Selection Sort}}{100}{subsection.9.1}% 
-\contentsline {subsection}{\numberline {9.2}{Insertion Sort}}{100}{subsection.9.2}% 
-\contentsline {subsection}{\numberline {9.3}{Merge Sort}}{100}{subsection.9.3}% 
-\contentsline {subsection}{\numberline {9.4}{Quick Sort}}{100}{subsection.9.4}% 
-\contentsline {subsection}{\numberline {9.5}{Radix Sort}}{100}{subsection.9.5}% 
-\contentsline {subsection}{\numberline {9.6}{Topological Sort}}{100}{subsection.9.6}% 
+\contentsline {section}{\numberline {9}{Sorting}}{95}{section.9}% 
+\contentsline {subsection}{\numberline {9.1}{Selection Sort}}{95}{subsection.9.1}% 
+\contentsline {subsection}{\numberline {9.2}{Insertion Sort}}{95}{subsection.9.2}% 
+\contentsline {subsection}{\numberline {9.3}{Merge Sort}}{95}{subsection.9.3}% 
+\contentsline {subsection}{\numberline {9.4}{Quick Sort}}{95}{subsection.9.4}% 
+\contentsline {subsection}{\numberline {9.5}{Radix Sort}}{95}{subsection.9.5}% 
+\contentsline {subsection}{\numberline {9.6}{Topological Sort}}{95}{subsection.9.6}% 
 \vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {10}{Miscellaneous}}{100}{section.10}% 
-\contentsline {subsection}{\numberline {10.1}{Cache Replacement Algorithms}}{101}{subsection.10.1}% 
-\contentsline {subsection}{\numberline {10.2}{Permutations}}{101}{subsection.10.2}% 
-\contentsline {subsection}{\numberline {10.3}{Combinations}}{101}{subsection.10.3}% 
-\contentsline {subsection}{\numberline {10.4}{Bitwise Algorithms}}{101}{subsection.10.4}% 
-\contentsline {part}{{\relax \fontsize {14.4}{18}\selectfont {\fontfamily {OrnementsADF}\fontencoding {U}\fontseries {m}\fontshape {n}\selectfont \char 14}\hspace {1.5mm}}Programming Language Theory}{102}{part*.49}% 
+\contentsline {section}{\numberline {10}{Miscellaneous}}{95}{section.10}% 
+\contentsline {subsection}{\numberline {10.1}{Cache Replacement Algorithms}}{95}{subsection.10.1}% 
+\contentsline {subsection}{\numberline {10.2}{Permutations}}{96}{subsection.10.2}% 
+\contentsline {subsection}{\numberline {10.3}{Combinations}}{96}{subsection.10.3}% 
+\contentsline {subsection}{\numberline {10.4}{Bitwise Algorithms}}{96}{subsection.10.4}% 
+\contentsline {part}{{\relax \fontsize {14.4}{18}\selectfont {\fontfamily {OrnementsADF}\fontencoding {U}\fontseries {m}\fontshape {n}\selectfont \char 14}\hspace {1.5mm}}Programming Language Theory}{97}{part*.49}% 
 \vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {11}{Elements of Programming Languages}}{102}{section.11}% 
-\contentsline {subsection}{\numberline {11.1}{Syntax}}{102}{subsection.11.1}% 
-\contentsline {subsection}{\numberline {11.2}{Type Systems}}{102}{subsection.11.2}% 
-\contentsline {subsection}{\numberline {11.3}{Control Structures}}{102}{subsection.11.3}% 
-\contentsline {subsection}{\numberline {11.4}{Libraries}}{102}{subsection.11.4}% 
-\contentsline {subsection}{\numberline {11.5}{Exceptions}}{102}{subsection.11.5}% 
-\contentsline {subsection}{\numberline {11.6}{Comments}}{102}{subsection.11.6}% 
+\contentsline {section}{\numberline {11}{Elements of Programming Languages}}{97}{section.11}% 
+\contentsline {subsection}{\numberline {11.1}{Syntax}}{97}{subsection.11.1}% 
+\contentsline {subsection}{\numberline {11.2}{Type Systems}}{97}{subsection.11.2}% 
+\contentsline {subsection}{\numberline {11.3}{Control Structures}}{97}{subsection.11.3}% 
+\contentsline {subsection}{\numberline {11.4}{Libraries}}{97}{subsection.11.4}% 
+\contentsline {subsection}{\numberline {11.5}{Exceptions}}{97}{subsection.11.5}% 
+\contentsline {subsection}{\numberline {11.6}{Comments}}{97}{subsection.11.6}% 
 \vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {12}{Program Execution}}{102}{section.12}% 
+\contentsline {section}{\numberline {12}{Program Execution}}{97}{section.12}% 
 \vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {13}{A History of Programming Languages}}{102}{section.13}% 
+\contentsline {section}{\numberline {13}{A History of Programming Languages}}{97}{section.13}% 
 \vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {14}{Programming Paradigms}}{102}{section.14}% 
-\contentsline {subsection}{\numberline {14.1}{Imperative versus Declarative}}{102}{subsection.14.1}% 
-\contentsline {subsubsection}{\numberline {14.1.1}{Functional Programming}}{102}{subsubsection.14.1.1}% 
-\contentsline {subsubsection}{\numberline {14.1.2}{Logic Programming}}{102}{subsubsection.14.1.2}% 
-\contentsline {subsection}{\numberline {14.2}{Procedural versus Object-Oriented}}{102}{subsection.14.2}% 
+\contentsline {section}{\numberline {14}{Programming Paradigms}}{97}{section.14}% 
+\contentsline {subsection}{\numberline {14.1}{Imperative versus Declarative}}{97}{subsection.14.1}% 
+\contentsline {subsubsection}{\numberline {14.1.1}{Functional Programming}}{97}{subsubsection.14.1.1}% 
+\contentsline {subsubsection}{\numberline {14.1.2}{Logic Programming}}{97}{subsubsection.14.1.2}% 
+\contentsline {subsection}{\numberline {14.2}{Procedural versus Object-Oriented}}{97}{subsection.14.2}% 
 \vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {15}{Programming Techniques}}{102}{section.15}% 
-\contentsline {subsection}{\numberline {15.1}{Higher-Order Programming}}{102}{subsection.15.1}% 
-\contentsline {subsubsection}{\numberline {15.1.1}{Lambda Expressions}}{102}{subsubsection.15.1.1}% 
-\contentsline {subsection}{\numberline {15.2}{Currying}}{102}{subsection.15.2}% 
-\contentsline {subsection}{\numberline {15.3}{Metaprogramming}}{102}{subsection.15.3}% 
-\contentsline {part}{{\relax \fontsize {14.4}{18}\selectfont {\fontfamily {OrnementsADF}\fontencoding {U}\fontseries {m}\fontshape {n}\selectfont \char 14}\hspace {1.5mm}}Implementation, Featuring an Exploration of Java}{103}{part*.51}% 
+\contentsline {section}{\numberline {15}{Programming Techniques}}{97}{section.15}% 
+\contentsline {subsection}{\numberline {15.1}{Higher-Order Programming}}{97}{subsection.15.1}% 
+\contentsline {subsubsection}{\numberline {15.1.1}{Lambda Expressions}}{97}{subsubsection.15.1.1}% 
+\contentsline {subsection}{\numberline {15.2}{Currying}}{97}{subsection.15.2}% 
+\contentsline {subsection}{\numberline {15.3}{Metaprogramming}}{97}{subsection.15.3}% 
+\contentsline {part}{{\relax \fontsize {14.4}{18}\selectfont {\fontfamily {OrnementsADF}\fontencoding {U}\fontseries {m}\fontshape {n}\selectfont \char 14}\hspace {1.5mm}}Implementation, Featuring an Exploration of Java}{98}{part*.51}% 
 \vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {16}{How does Java work?}}{103}{section.16}% 
+\contentsline {section}{\numberline {16}{The Java Programming Language}}{98}{section.16}% 
+\contentsline {subsection}{\numberline {16.1}{Java Standard Library}}{98}{subsection.16.1}% 
+\contentsline {subsubsection}{\numberline {16.1.1}{java.lang}}{98}{subsubsection.16.1.1}% 
+\contentsline {subsubsection}{\numberline {16.1.2}{java.util}}{98}{subsubsection.16.1.2}% 
+\contentsline {subsubsection}{\numberline {16.1.3}{java.io}}{98}{subsubsection.16.1.3}% 
+\contentsline {subsubsection}{\numberline {16.1.4}{java.net}}{98}{subsubsection.16.1.4}% 
+\contentsline {subsection}{\numberline {16.2}{Java Techniques}}{98}{subsection.16.2}% 
+\contentsline {subsubsection}{\numberline {16.2.1}{Static Initialization Blocks}}{98}{subsubsection.16.2.1}% 
+\contentsline {subsubsection}{\numberline {16.2.2}{Lambda Expressions}}{98}{subsubsection.16.2.2}% 
 \vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {17}{Java Standard Library}}{103}{section.17}% 
-\contentsline {subsection}{\numberline {17.1}{java.lang}}{103}{subsection.17.1}% 
-\contentsline {subsection}{\numberline {17.2}{java.util}}{103}{subsection.17.2}% 
-\contentsline {subsection}{\numberline {17.3}{java.io}}{103}{subsection.17.3}% 
-\contentsline {subsection}{\numberline {17.4}{java.net}}{103}{subsection.17.4}% 
+\contentsline {section}{\numberline {17}{Frameworks}}{98}{section.17}% 
+\contentsline {part}{{\relax \fontsize {14.4}{18}\selectfont {\fontfamily {OrnementsADF}\fontencoding {U}\fontseries {m}\fontshape {n}\selectfont \char 14}\hspace {1.5mm}}Tools and Technologies}{99}{part*.53}% 
 \vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {18}{Java Techniques}}{103}{section.18}% 
-\contentsline {subsection}{\numberline {18.1}{Static Initialization Blocks}}{103}{subsection.18.1}% 
-\contentsline {subsection}{\numberline {18.2}{Lambda Expressions}}{103}{subsection.18.2}% 
+\contentsline {section}{\numberline {18}{Everyday Tools}}{99}{section.18}% 
+\contentsline {subsection}{\numberline {18.1}{Essential Programs}}{99}{subsection.18.1}% 
+\contentsline {subsection}{\numberline {18.2}{Operating Systems}}{99}{subsection.18.2}% 
+\contentsline {subsubsection}{\numberline {18.2.1}{History of Unix and GNU/Linux}}{99}{subsubsection.18.2.1}% 
+\contentsline {subsubsection}{\numberline {18.2.2}{A Tour of the Unix File System}}{99}{subsubsection.18.2.2}% 
+\contentsline {subsubsection}{\numberline {18.2.3}{Common Commands and Tasks}}{99}{subsubsection.18.2.3}% 
+\contentsline {subsubsection}{\numberline {18.2.4}{Making a Personalized Linux Installation}}{99}{subsubsection.18.2.4}% 
+\contentsline {subsection}{\numberline {18.3}{Version Control}}{100}{subsection.18.3}% 
+\contentsline {subsubsection}{\numberline {18.3.1}{Git}}{100}{subsubsection.18.3.1}% 
+\contentsline {subsection}{\numberline {18.4}{Unit Testing}}{100}{subsection.18.4}% 
+\contentsline {subsubsection}{\numberline {18.4.1}{JUnit}}{100}{subsubsection.18.4.1}% 
+\contentsline {subsection}{\numberline {18.5}{Build Automation}}{100}{subsection.18.5}% 
+\contentsline {subsubsection}{\numberline {18.5.1}{Make}}{100}{subsubsection.18.5.1}% 
+\contentsline {subsubsection}{\numberline {18.5.2}{Maven}}{100}{subsubsection.18.5.2}% 
+\contentsline {subsection}{\numberline {18.6}{Virtualization and Containerization}}{100}{subsection.18.6}% 
+\contentsline {subsubsection}{\numberline {18.6.1}{Docker}}{101}{subsubsection.18.6.1}% 
 \vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {19}{Java Frameworks}}{103}{section.19}% 
-\contentsline {part}{{\relax \fontsize {14.4}{18}\selectfont {\fontfamily {OrnementsADF}\fontencoding {U}\fontseries {m}\fontshape {n}\selectfont \char 14}\hspace {1.5mm}}Additional Technologies}{104}{part*.53}% 
+\contentsline {section}{\numberline {19}{Languages and Language-Likes}}{101}{section.19}% 
+\contentsline {subsection}{\numberline {19.1}{Markup and Style}}{101}{subsection.19.1}% 
+\contentsline {subsubsection}{\numberline {19.1.1}{TeX}}{101}{subsubsection.19.1.1}% 
+\contentsline {subsubsection}{\numberline {19.1.2}{HMTL}}{101}{subsubsection.19.1.2}% 
+\contentsline {subsubsection}{\numberline {19.1.3}{CSS}}{101}{subsubsection.19.1.3}% 
+\contentsline {subsection}{\numberline {19.2}{Data Formats}}{101}{subsection.19.2}% 
+\contentsline {subsubsection}{\numberline {19.2.1}{XML}}{101}{subsubsection.19.2.1}% 
+\contentsline {subsubsection}{\numberline {19.2.2}{JSON}}{101}{subsubsection.19.2.2}% 
+\contentsline {subsection}{\numberline {19.3}{Data Query and Manipulation}}{101}{subsection.19.3}% 
+\contentsline {subsubsection}{\numberline {19.3.1}{SQL}}{101}{subsubsection.19.3.1}% 
+\contentsline {part}{{\relax \fontsize {14.4}{18}\selectfont {\fontfamily {OrnementsADF}\fontencoding {U}\fontseries {m}\fontshape {n}\selectfont \char 14}\hspace {1.5mm}}Software Development and Philosophies}{102}{part*.55}% 
 \vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {20}{Unit Testing}}{104}{section.20}% 
-\contentsline {subsection}{\numberline {20.1}{JUnit}}{104}{subsection.20.1}% 
+\contentsline {section}{\numberline {20}{Software Engineering Processes and Principles}}{102}{section.20}% 
 \vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {21}{Version Control}}{104}{section.21}% 
-\contentsline {subsection}{\numberline {21.1}{Git}}{104}{subsection.21.1}% 
+\contentsline {section}{\numberline {21}{Design Patterns}}{102}{section.21}% 
+\contentsline {part}{{\relax \fontsize {14.4}{18}\selectfont {\fontfamily {OrnementsADF}\fontencoding {U}\fontseries {m}\fontshape {n}\selectfont \char 14}\hspace {1.5mm}}Appendices}{103}{part*.57}% 
 \vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {22}{Build Automation}}{104}{section.22}% 
-\contentsline {subsection}{\numberline {22.1}{Make}}{104}{subsection.22.1}% 
-\contentsline {subsection}{\numberline {22.2}{Maven}}{104}{subsection.22.2}% 
+\contentsline {section}{\numberline {A}{Mathematical Fundamentals}}{103}{appendix.A}% 
 \vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {23}{Unix}}{105}{section.23}% 
-\contentsline {subsection}{\numberline {23.1}{History of Unix and GNU/Linux}}{105}{subsection.23.1}% 
-\contentsline {subsection}{\numberline {23.2}{A Tour of the Unix File System}}{105}{subsection.23.2}% 
-\contentsline {subsection}{\numberline {23.3}{Common Commands and Tasks}}{105}{subsection.23.3}% 
-\contentsline {subsection}{\numberline {23.4}{Making a Personalized Linux Installation}}{105}{subsection.23.4}% 
+\contentsline {section}{\numberline {B}{System Design}}{104}{appendix.B}% 
+\contentsline {subsection}{\numberline {B.1}{Server Technologies}}{104}{subsection.B.1}% 
+\contentsline {subsection}{\numberline {B.2}{Persistent Storage Technologies}}{104}{subsection.B.2}% 
+\contentsline {subsection}{\numberline {B.3}{Network Techniques}}{106}{subsection.B.3}% 
 \vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {24}{Virtualization \& Containerization}}{106}{section.24}% 
-\contentsline {subsection}{\numberline {24.1}{Docker}}{106}{subsection.24.1}% 
+\contentsline {section}{\numberline {C}{Sources, Not Citations}}{108}{appendix.C}% 
 \vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {25}{Markup and Style Languages}}{106}{section.25}% 
-\contentsline {subsection}{\numberline {25.1}{TeX}}{106}{subsection.25.1}% 
-\contentsline {subsection}{\numberline {25.2}{HMTL}}{106}{subsection.25.2}% 
-\contentsline {subsection}{\numberline {25.3}{CSS}}{106}{subsection.25.3}% 
+\contentsline {section}{\numberline {D}{Lessons Learned}}{109}{appendix.D}% 
 \vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {26}{Data Formats}}{106}{section.26}% 
-\contentsline {subsection}{\numberline {26.1}{XML}}{106}{subsection.26.1}% 
-\contentsline {subsection}{\numberline {26.2}{JSON}}{106}{subsection.26.2}% 
+\contentsline {section}{\numberline {E}{How \textit {The Internet} Changed Humanity}}{110}{appendix.E}% 
 \vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {27}{Query Languages}}{107}{section.27}% 
-\contentsline {subsection}{\numberline {27.1}{SQL}}{107}{subsection.27.1}% 
-\contentsline {part}{{\relax \fontsize {14.4}{18}\selectfont {\fontfamily {OrnementsADF}\fontencoding {U}\fontseries {m}\fontshape {n}\selectfont \char 14}\hspace {1.5mm}}Software Development and Philosophies}{108}{part*.55}% 
+\contentsline {section}{\numberline {F}{Thoughts on Education}}{111}{appendix.F}% 
 \vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {28}{Software Engineering Processes and Principles}}{108}{section.28}% 
+\contentsline {section}{\numberline {G}{Passion}}{112}{appendix.G}% 
 \vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {29}{Design Patterns}}{108}{section.29}% 
-\contentsline {part}{{\relax \fontsize {14.4}{18}\selectfont {\fontfamily {OrnementsADF}\fontencoding {U}\fontseries {m}\fontshape {n}\selectfont \char 14}\hspace {1.5mm}}Appendices}{109}{part*.57}% 
-\vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {A}{Mathematical Fundamentals}}{109}{appendix.A}% 
-\vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {B}{System Design}}{110}{appendix.B}% 
-\contentsline {subsection}{\numberline {B.1}{Server Technologies}}{110}{subsection.B.1}% 
-\contentsline {subsection}{\numberline {B.2}{Persistent Storage Technologies}}{110}{subsection.B.2}% 
-\contentsline {subsection}{\numberline {B.3}{Network Techniques}}{113}{subsection.B.3}% 
-\vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {C}{Sources, Not Citations}}{114}{appendix.C}% 
-\vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {D}{Lessons Learned}}{115}{appendix.D}% 
-\vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {E}{Thoughts on Education}}{116}{appendix.E}% 
-\vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {F}{Passion}}{117}{appendix.F}% 
-\vspace {\normalbaselineskip }
-\contentsline {section}{\numberline {G}{The Future of this Guide}}{118}{appendix.G}% 
+\contentsline {section}{\numberline {H}{The Future of this Guide}}{113}{appendix.H}% 

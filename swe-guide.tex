@@ -4,7 +4,6 @@
 % Author: Tommy Monson
 % Date Started: February 7, 2019
 % Date of First Publishing: TBD
-% Document Template: Arsclassica Article from http://www.LaTeXTemplates.com (but heavily modified)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %--------------------------------------------------------------------------------
@@ -200,10 +199,8 @@
 
 \documentclass[
 11pt, % Main document font size
-letterpaper, % Paper type
+a4paper, % Paper type
 oneside, % One page layout (no page indentation)
-headinclude,footinclude, % Extra spacing for the header and footer
-BCOR5mm, % Binding correction
 ]{scrartcl}
 
 %--- PACKAGES ---------------------------
@@ -259,7 +256,7 @@ BCOR5mm, % Binding correction
 \newcommand*\rfrac[2]{{}^{#1}\!/_{#2}}
 
 % An ellipsis with large spaces between the dots for very long pauses
-\newcommand\mydots{\makebox[4em][c]{\large $\cdot$\hfil$\cdot$\hfil$\cdot$}}
+\newcommand\mydots{\makebox[4em][c]{\Large $\cdot$\hfil$\cdot$\hfil$\cdot$}}
 
 %--- SPACING COMMANDS -------------------
 
@@ -315,91 +312,108 @@ BCOR5mm, % Binding correction
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
 
-\newgeometry{top=1.5cm,bottom=1.5cm,outer=3cm,inner=3cm}
+% A4 paper is 210mm × 297mm
+\newgeometry{top=2cm,bottom=2cm,left=3cm,right=3cm}
 
+% Uses 2:3 proportions everywhere for A E S T H E T I C S .
 \begin{titlepage}
-\centering
-\begin{tcolorbox}[enhanced, colback=white, height=\textheight, sharp corners, boxrule=3pt]
+\begin{center}
+\begin{tcolorbox}[enhanced, colback=white, width=150mm, height=257mm, sharp corners, boxrule=3pt]
 	\begin{center}
-		\vspace{1.8cm}
+		\vspace*{2cm}
+		
+		% Title and Subtitle
 		{\fontsize{32}{40} \spacedallcaps{Intuition For}} \\[3mm]
-		{\fontsize{32}{40} \spacedallcaps{Computation}} \\[5mm]
-		{\fontsize{11}{40} \textsf{\textbf{A Guide for Programmers and Curious Minds}}} \\[7mm]
-		\begin{tcolorbox}[enhanced, colback=white, height=16.25cm, width=12cm, sharp corners, frame hidden]
-			\begin{center}
-				\begin{tikzpicture}[
-				space/.style={minimum height=1.5em,matrix of nodes,row sep=7mm,column sep=5mm,style={font=\ttfamily}},text depth=0.5ex,text height=2ex,nodes in empty cells]
-				\matrix (first) [space, style={font=\ttfamily}](m)
-				{
-				\odk & \zro & \one & \one & \zro & \zro & \one & \zro & \zro & \zro \\
-				\one & \odk & \zro & \one & \one & \zro & \one & \zro & \one & \one \\
-				\zro & \zro & \zdk & \one & \zro & \zro & \zro & \one & \one & \one \\
-				\one & \one & \zro & \odk & \zro & \one & \one & \zro & \one & \zro \\
-				\one & \zro & \one & \one & \odk & \zro & \one & \zro & \zro & \one \\
-				\zro & \zro & \zro & \one & \zro & \zdk & \one & \one & \zro & \zro \\
-				\zro & \zro & \one & \zro & \zro & \zro & \odk & \zro & \zro & \zro \\
-				\zro & \one & \zro & \zro & \zro & \one & \one & \zdk & \one & \one \\
-				\one & \one & \one & \one & \one & \zro & \one & \zro & \zdk & \one \\
-				\one & \zro & \zro & \zro & \zro & \one & \zro & \zro & \zro & \odk \\
-				};
-				\begin{scope}[scale=0.2]
+		{\fontsize{32}{40} \spacedallcaps{Computation}} \\[4.5mm]
+		{\fontsize{11}{40} \textsf{\textbf{A Guide for Programmers and Curious Minds}}} \\[10.125mm]
+		
+		% Binary + Pyramids
+		\begin{tikzpicture}
+		[
+		space/.style={minimum height=1.5em,matrix of nodes,row sep=6.75mm,column sep=4.5mm,style={font=\ttfamily}},
+		nodes in empty cells]
 				
-					% Pyramid
-					\coordinate (A) at ($(m-6-4.center) + (0,0.5)$);
-					\coordinate (B) at ($(m-8-2.center) + (0,0.5)$);
-					\coordinate (C) at ($(m-9-6.center) + (0,0.5)$);
-					\coordinate (D) at ($(m-8-4.center) + (0,0.5)$);
-					
-					\draw [ultra thick] (D) -- (A);
-					\draw [ultra thick] (D) -- (B);
-					\draw [ultra thick] (D) -- (C);
-					
-					\draw [ultra thick,fill=textbook-blue] (D) circle (2);
-					
-					\draw [ultra thick, fill=light-gray, fill opacity=0.6]
-					(A) -- (B) -- (C) -- cycle;
-					
-					\draw [ultra thick,fill=textbook-blue] (A) circle (2.5);
-					\draw [ultra thick,fill=textbook-blue] (B) circle (2.5);
-					\draw [ultra thick,fill=textbook-blue] (C) circle (2.5);
-					
-					%----------------------------------------
-					
-					\coordinate (A) at ($(m-5-7.center) + (0,0.5)$);
-					\coordinate (B) at ($(m-3-9.center) + (0,0.5)$);
-					\coordinate (C) at ($(m-2-5.center) + (0,0.5)$);
-					\coordinate (D) at ($(m-3-7.center) + (0,0.5)$);
-					
-					\draw [ultra thick, fill=light-gray, fill opacity=0.6]
-					(A) -- (B) -- (C) -- cycle;
-					
-					\draw [ultra thick] (D) -- (A);
-					\draw [ultra thick] (D) -- (B);
-					\draw [ultra thick] (D) -- (C);
-					
-					\draw [ultra thick,fill=textbook-blue] (D) circle (2.5);
-					
-					\draw [ultra thick,fill=textbook-blue] (A) circle (2);
-					\draw [ultra thick,fill=textbook-blue] (B) circle (2);
-					\draw [ultra thick,fill=textbook-blue] (C) circle (2);
-					
-				\end{scope}
-				\end{tikzpicture}
-				{\color{dark-gray} \noindent\rule{10.25cm}{2pt}}
-				\begin{tikzpicture}[
-				space/.style={minimum height=1.5em,matrix of nodes,row sep=0.1mm,column sep=5mm,style={font=\ttfamily}},text depth=0.5ex,text height=2ex,nodes in empty cells]
-				\matrix (first) [space, style={font=\ttfamily}]
-				{
-					&&&&&&&&& \\
-					\zdk & \zdk & \odk & \zdk & \zdk & \odk & \zdk & \odk & \odk & \zdk \\
-				};
-				\end{tikzpicture}
-			\end{center}
-		\end{tcolorbox}
-		\vspace{5mm}
-		{\fontsize{18}{20} \adforn{1}\hspace{8mm}\spacedlowsmallcaps{Tommy Monson}\hspace{8mm}\adforn{2}}
+		% Binary Matrix
+		\matrix (m) [space, style={font=\ttfamily}]
+		{
+		\odk & \zro & \one & \one & \zro & \zro & \one & \zro & \zro & \zro \\
+		\one & \odk & \zro & \one & \one & \zro & \one & \zro & \one & \one \\
+		\zro & \zro & \zdk & \one & \zro & \zro & \zro & \one & \one & \one \\
+		\one & \one & \zro & \odk & \zro & \one & \one & \zro & \one & \zro \\
+		\one & \zro & \one & \one & \odk & \zro & \one & \zro & \zro & \one \\
+		\zro & \zro & \zro & \one & \zro & \zdk & \one & \one & \zro & \zro \\
+		\zro & \zro & \one & \zro & \zro & \zro & \odk & \zro & \zro & \zro \\
+		\zro & \one & \zro & \zro & \zro & \one & \one & \zdk & \one & \one \\
+		\one & \one & \one & \one & \one & \zro & \one & \zro & \zdk & \one \\
+		\one & \zro & \zro & \zro & \zro & \one & \zro & \zro & \zro & \odk \\
+		};
+	
+		\matrix (d) at (0,-8.1cm) [space, style={font=\ttfamily}]
+		{
+		\zdk & \zdk & \odk & \zdk & \zdk & \odk & \zdk & \odk & \odk & \zdk \\
+		};
+	
+		\begin{scope}[scale=0.2]
+		
+			% Pyramids
+			\coordinate (A) at ($(m-6-4.center)$);
+			\coordinate (B) at ($(m-8-2.center)$);
+			\coordinate (C) at ($(m-9-6.center)$);
+			\coordinate (D) at ($(m-8-4.center)$);
+			
+			\draw [ultra thick] (D) -- (A);
+			\draw [ultra thick] (D) -- (B);
+			\draw [ultra thick] (D) -- (C);
+			
+			\draw [ultra thick,fill=textbook-blue] (D) circle (2);
+			
+			\draw [ultra thick, fill=light-gray, fill opacity=0.6]
+			(A) -- (B) -- (C) -- cycle;
+			
+			\draw [ultra thick,fill=textbook-blue] (A) circle (2.5);
+			\draw [ultra thick,fill=textbook-blue] (B) circle (2.5);
+			\draw [ultra thick,fill=textbook-blue] (C) circle (2.5);
+			
+			%----------------------------------------
+			
+			\coordinate (A) at ($(m-5-7.center)$);
+			\coordinate (B) at ($(m-3-9.center)$);
+			\coordinate (C) at ($(m-2-5.center)$);
+			\coordinate (D) at ($(m-3-7.center)$);
+			
+			\draw [ultra thick, fill=light-gray, fill opacity=0.6]
+			(A) -- (B) -- (C) -- cycle;
+			
+			\draw [ultra thick] (D) -- (A);
+			\draw [ultra thick] (D) -- (B);
+			\draw [ultra thick] (D) -- (C);
+			
+			\draw [ultra thick,fill=textbook-blue] (D) circle (2.5);
+			
+			\draw [ultra thick,fill=textbook-blue] (A) circle (2);
+			\draw [ultra thick,fill=textbook-blue] (B) circle (2);
+			\draw [ultra thick,fill=textbook-blue] (C) circle (2);
+			
+			%----------------------------------------
+			
+			% Dividing Line
+			\coordinate (L) at ($(m-10-1.center) + (0,-4.5cm)$);
+			\coordinate (R) at ($(m-10-10.center) + (0,-4.5cm)$);
+			
+			\draw [ultra thick,dark-gray] (L) -- (R);
+			
+			% Author
+			\node [rotate=30] (A) at (-8.5cm,-53cm) {\fontsize{26}{26} \adforn{60}};
+			\node (B) at (-2.15cm,-52.65cm) {\fontsize{20}{20} \spacedallcaps{T}};
+			\node (C) at (3.5cm,-53.165cm) {\fontsize{12}{12} \spacedallcaps{\bfseries ommy}};
+			\node (D) at (10.5cm,-52.65cm) {\fontsize{20}{20} \spacedallcaps{M}};
+			\node (E) at (17.5cm,-53.165cm) {\fontsize{12}{12} \spacedallcaps{\bfseries onson}};
+		\end{scope}
+		
+		\end{tikzpicture}
 	\end{center}
 \end{tcolorbox}
+\end{center}
 \end{titlepage}
 
 \newpage
@@ -410,7 +424,11 @@ BCOR5mm, % Binding correction
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
 
-\newgeometry{top=1.5cm,bottom=2.5cm,outer=4cm,inner=4cm}
+% Text length of lowercase alphabet
+\newlength{\alphabet}
+\settowidth{\alphabet}{\normalfont \fontsize{11pt}{11pt} abcdefghijklmnopqrstuvwxyz}
+
+\newgeometry{top=2cm, bottom=2.5cm, textwidth=2.9\alphabet}
 
 \setcounter{tocdepth}{3} % Set the depth of the table of contents to show sections, subsections, and subsubsections
 
@@ -436,6 +454,8 @@ BCOR5mm, % Binding correction
 \end{flushright}
 \vspace{4mm}
 \end{displayquote}
+
+% I just read it. It's good. And coming from someone who is so self-critical, that's high praise.
 
 % "I just wondered how things were put together." - Claude Shannon
 
@@ -509,7 +529,7 @@ In December of 2018, I graduated from Duke University, feeling like I knew simul
 \vspace*{4cm}
 \begin{center}
 \textit{The very word intuition has to be understood. \\[5mm]
-	You know the word tuition—tuition comes from outside, somebody teaches you, the tutor. \\[5mm]
+	You know the word tuition---tuition comes from outside, somebody teaches you, the tutor. \\[5mm]
 	Intuition means something that arises within your being; \\[5mm]
 	it is your potential, that’s why it is called intuition. \\[5mm]
 	Wisdom is never borrowed, and that which is borrowed is never wisdom. \\[5mm]
@@ -528,6 +548,8 @@ In December of 2018, I graduated from Duke University, feeling like I knew simul
 %    PART 0: INTRODUCTION
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
+
+% Simple art above each chapter title? Like 10mm tall and \textwidth across?
 
 \part*{Introduction}
 \addcontentsline{toc}{part}{\tocpartglyph Introduction}
@@ -549,7 +571,7 @@ I find it difficult to describe what this book is. And yet, I find it easy to ex
 % https://www.standoutbooks.com/nail-non-fiction-introduction/
 
 % The hook starts here. Why should the reader care?
-% Five reasons to read this book: 1. It is a work of passion, born out of a consuming and frenetic obsession 2. It is painstakingly crafted, like a sculpture hewn from granite, every sentence carefully constructed, every word meticulously chosen, 3. It is a work born from a deep depression, and it serves as a guide to those who may experience the same feelings of self-doubt, 4. It is a distillation of some very difficult and important ideas that you have encountered and will undoubtedly encounter again, 5. It's short and tries not to waste your time...
+% Five reasons to read this book: 1. It is a work of passion, born out of a consuming and frenetic obsession 2. It is painstakingly crafted, like a sculpture hewn from granite, every sentence carefully constructed, every word meticulously chosen, 3. It is a work written in the midst of a deep depression, and it serves as a guide to those who may experience the same feelings of self-doubt, 4. It is a distillation of some very difficult and important ideas that you have encountered and will undoubtedly encounter again, 5. It's short and tries not to waste your time...
 % However, there is a reason that is bigger than all of these...
 
 % "Living in the Information Age"
@@ -599,6 +621,8 @@ I find it difficult to describe what this book is. And yet, I find it easy to ex
 % Traditional education is bottom-up (notice how objects on Earth fall when dropped => that's because F_g=ma_g). This book uses a top-down approach (what is mass, what is acceleration, what is force, what are objects, what is motion => that's what we mean when we write F_g=ma_g). The traditional approach is syntactic, this book's approach is semantic.
 % The abbreviations i.e. and e.g. are used frequently in this book. What do those mean?
 % If there's a word you don't know, just look up the definition and keep going. That's basically how I wrote this book.
+% There are times when I speak very precisely and times where I am more casual. I believe it will be easy to tell which mode I am in from context. If you see a lot of italicized keywords and dense sentences, that probably means I am speaking precisely. If you see poetic language, absolute statements, or contractions, that probably means I am speaking casually.
+% This document uses A4 paper size. Print it out and put some staples in it if you would like a hard copy.
 
 \newpage
 
@@ -639,7 +663,7 @@ In this chapter, we will explore what computation is and why it matters. In some
 	\item[Section 2:] \textit{Reasoning and Logic}, covers the rules \dots \\
 \end{description}
 
-Here, we learn how this game is played and how it is woven into the fabric of our reality. In the chapter following this one, we model the game of computation mathematically and find the theoretical limits of what it can tell us. Beyond that, we learn how to be an excellent player, covering \textit{techniques} for efficient problem solving and \textit{tools} for designing beautiful, maintainable systems. \\
+Here, we learn how this game is played and how it is woven into the fabric of our reality. In the chapter following this one, we model the game of computation mathematically and find the theoretical limits of what it can tell us. Beyond that, we learn how to be an excellent player, covering \textit{techniques} for efficient problem solving and \textit{tools} for designing beautiful, maintainable systems.
 
 %--------------------------------------------------------------------------------
 %    SECTION: INFORMATION AND COMMUNICATION
@@ -661,134 +685,146 @@ Say you want to \textit{communicate} an idea $X$ to someone. That is, you would 
 
 \begin{addmargin}[8em]{2em}
 \begin{flushright}
-"Dude, what's that thing with the moving parts that beeps sometimes? And it, like, gets hot if it moves too fast? \\[1.5mm]
+"Dude, what's that thing with the moving parts that beeps sometimes? And it, like, gets hot if it moves too fast? \\[1mm]
 
-\mydots \\[1.5mm]
+\mydots \\[1mm]
 
 It's like a \textit{Machine} of some sort, but more \textit{specific}." \\[\baselineskip]
 \end{flushright}
 \end{addmargin}
 
 \begin{addmargin}[2em]{8em}
-"Oh yeah, those expensive things with the metal chassis and the fancy interface? With the two rows of seats... \\
+"Oh yeah, those expensive things with the metal chassis and all the buttons? And, good lord, with the two rows of seats\dots \\[2.25mm]
 Sounds like a good ol' fashioned \textit{Sedan}, my dude." \\
 \end{addmargin}
 
 \begin{addmargin}[8em]{2em}
 	\begin{flushright}
-		"Nah, it's not a sedan. It's close, but I'm thinking of something more \textit{general} than that. It's definitely a type of \textit{Vehicle} though." \\[\baselineskip]
+		"Nah, it's not a sedan. That's close, but I'm thinking of something more \textit{general} than that. It's definitely a type of \textit{Vehicle} though." \\[\baselineskip]
 	\end{flushright}
 \end{addmargin}
 
 \begin{addmargin}[2em]{8em}
-	"Well, there are a lot of \textit{Vehicles} out there, but I'm going to guess this has something to do with a certain \textit{Car}..." \\
+	"Well, there are a lot of \textit{Vehicles} out there, but I'm going to guess this has something to do with a certain \textit{Car}\dots" \\
 \end{addmargin}
 
 \begin{addmargin}[8em]{2em}
 	\begin{flushright}
-		"Of course! I was thinking of a \textit{Car}. \\
-		Ok, now that we're on the same page, about \textit{your car}... \\
-		My bad, man, I crashed it into the lake last night." \\[\baselineskip]
+		"Of course! I was thinking of a \textit{Car}. \\[2mm]
+		Ok, now that we're on the same page, about \textit{your car}\dots \\
+		My bad, man. I crashed it into the lake last night." \\[\baselineskip]
+	\end{flushright}
+\end{addmargin}
+
+\begin{addmargin}[2em]{8em}
+	\mydots \\
+\end{addmargin}
+
+\begin{addmargin}[8em]{2em}
+	\begin{flushright}
+		"Hey, if it makes you feel better, Joey dared me to do it, so there wasn't really an alternative." \\[\baselineskip]
 	\end{flushright}
 \end{addmargin}
 
 In this scenario, Interlocutor $\mathcal{A}$ introduces the problem: there is \textit{information} to \textit{communicate}, and it defines a class $X$. And a \textit{class}, we understand, is a collection of individual \textit{objects} and is itself an object \textit{in abstracto}, an idea in our mind's eye of such a collection. $\mathcal{A}$ grasps for $X$, throwing out descriptions to lure it closer, but it evades. $\mathcal{A}$ then takes the class $Y_0$, \textit{Machine}, as a starting point and states that it is a \textit{superclass} of $X$. \\
 
-Interlocutor $\mathcal{B}$ responds with \textit{specification}, adding assumed details to the definition of $Y_0$. Thus, $Y_1$ is proposed: the class \textit{Sedan}. Luckily, the assumptions are not totally off-base; $Y_1$ turns out to be a \textit{subclass} of $X$. $\mathcal{A}$ confirms this and so returns with a \textit{generalization} that conjures $Y_2$, the class \textit{Vehicle}. $\mathcal{B}$ specifies again, offering up as $Y_3$ a subclass of \textit{Vehicle} called \textit{Car}. Finally, $\mathcal{A}$ accepts this class as the target $X$ and ends the search. And with this mutual knowledge of \textit{Car} established, $\mathcal{A}$ then goes on to specify an \textit{instance} of \textit{Car}, a particular car $b$ that belongs to $\mathcal{B}$. And with both interlocutors now cognizant of exactly what is being discussed, $\mathcal{A}$ swiftly informs $\mathcal{B}$ that his ride is totaled. \\
+Interlocutor $\mathcal{B}$ responds with \textit{specification}, adding assumed details to the definition of $Y_0$. Thus, $Y_1$ is proposed: the class \textit{Sedan}. Luckily, the assumptions are not totally off-base; $Y_1$ turns out to be a \textit{subclass} of $X$. $\mathcal{A}$ confirms this and so returns with a \textit{generalization} that conjures $Y_2$, the class \textit{Vehicle}. $\mathcal{B}$ specifies again, offering up as $Y_3$ a subclass of \textit{Vehicle} called \textit{Car}. Finally, $\mathcal{A}$ accepts this class as the target $X$ and ends the search. And with this mutual knowledge of \textit{Car} established, $\mathcal{A}$ then goes on to specify an \textit{instance} of \textit{Car}, a particular car $b$ that belongs to $\mathcal{B}$. And with both interlocutors now cognizant of exactly what is being discussed, $\mathcal{A}$ swiftly informs $\mathcal{B}$ that his ride is totaled.
 
 % Taxonomy diagram
 \begin{center}
-\begin{tikzpicture}[scale=0.19]
-
-	%--- GRAY TREES -------------------------
-
-    \foreach \x in {0,...,3}
-        \foreach \y in {1,...,5}{
-            
-            % Big dashed lines
-            \draw [gray,dashed,thick] (\x*17,0) -- ++(90+\y*15:8);
-            \draw [gray,dashed,thick] (\x*17,0) -- ++(180+\y*15:8);
-            
-            % Small dashed lines
-            \draw [gray,dashed,thick] (\x*17,0) ++(90+\y*15:8) -- ++(90+\y*15-15:3);
-            \draw [gray,dashed,thick] (\x*17,0) ++(90+\y*15:8) -- ++(90+\y*15+15:3);
-            \draw [gray,dashed,thick] (\x*17,0) ++(180+\y*15:8) -- ++(180+\y*15-15:3);
-            \draw [gray,dashed,thick] (\x*17,0) ++(180+\y*15:8) -- ++(180+\y*15+15:3);
-            
-            % Small circles
-            \draw [gray,thick,fill=white] (\x*17,0) ++(90+\y*15:8) circle (0.55);
-            \draw [gray,thick,fill=white] (\x*17,0) ++(180+\y*15:8) circle (0.55);
-	    }
-    
-    % Extra gray tree for Y_1 at 180 degrees
-    \draw [gray,dashed,thick] (0,0) -- ++(180:8);
-    \draw [gray,dashed,thick] (0,0) ++(180:8) -- ++(180-15:3);
-    \draw [gray,dashed,thick] (0,0) ++(180:8) -- ++(180+15:3);
-    \draw [gray,thick,fill=white] (0,0) ++(180:8) circle (0.55);
-    
-    %--- CURVES AND BIG ARROWS --------------
-    
-    % Curve coordinates
-    
-    % Red
-    \coordinate (R1) at ($(17,0)+(-65:4)$);
-    \coordinate (R2) at (24,-12);
-    \coordinate (R3) at (20,-22);
-    
-    % Blue
-    \coordinate (M1) at (8,-18);
-    \coordinate (M2) at (-4,-14);
-    \coordinate (M3) at (5,-1);
-    
-    % Green
-    \coordinate (L1) at (6,-8);
-    \coordinate (L2) at (7,-15);
-    \coordinate (L3) at (-5.5,-22);
-    \coordinate (END) at ($(-12,-10)+(-80:2)$);
-    
-    
-    % MIDDLE curve
-    \draw [thick] plot [smooth]
-    (M1) .. controls (M2) and (M3) .. (L1);
-    
-    % Big arrows
-    \draw [thick, rounded corners, fill=white] (-6.5,13) -- ++(0,4) -- ++(46,0) -- ++(0,2) -- ++(9,-4) -- ++(-9,-4) -- ++(0,2) -- cycle;
-    \node at (10.5,15) {\Large \textsc{Generalization}};
-    
-    \draw [thick, rounded corners, fill=white] (50.5,-13) -- ++(0,-4) -- ++(-46,0) -- ++(0,-2) -- ++(-9,4) -- ++(9,4) -- ++(0,-2) -- cycle;
-    \node at (33.5,-15) {\Large \textsc{Specification}};
-    
-    % RIGHT curve
-    \draw [thick] plot [smooth]
-    (R1) .. controls (R2) and (R3) .. (M1);
-    
-    % LEFT curve
-    \draw [-{Latex[length=5mm,width=2mm,angle=60:6pt]},thick] plot [smooth]
-    (L1) .. controls (L2) and (L3) .. (END);
-    
-    %--- NODES AND SMALL ARROWS -------------
-    
-    % Arrows
-    \foreach \x in {1,2,3}{
-    	\draw [-{Latex[length=5mm,width=2mm,angle=60:6pt]},thick] (17*\x,0) -- +(-13,0);
-    }
-    
-    % Labels and colors for Y nodes
-    \draw [thick,fill=white] (0,0) circle (4) node {\Large $Y_1$};
-    \draw [thick,fill=textbook-blue] (17,0) circle (4) node {\Large $Y_3$};
-    \draw [thick,fill=white] (2*17,0) circle (4) node {\Large $Y_2$};
-    \draw [thick,fill=white] (3*17,0) circle (4) node {\Large $Y_0$};
-    
-    % b node
-    \draw [thick,fill=textbook-blue] (-12,-10) circle (2);
-    \node at (-12,-10) {\Large $b$};
-    
-    % Bezier curve assistant (used for sculpting curves)
-    % \draw [thick,red] (R1) -- (R2) -- (R3) -- (M1);
-    % \draw [thick,blue] (M1) -- (M2) -- (M3) -- (L1);
-    % \draw [thick,green] (L1) -- (L2) -- (L3) -- (END);
-    
-\end{tikzpicture} \\~\\
+	\resizebox{\textwidth}{!}{%
+		\begin{tikzpicture}[scale=0.2]
+		
+			%--- GRAY TREES -------------------------
+		
+		    \foreach \x in {0,...,3}
+		        \foreach \y in {1,...,5}{
+		            
+		            % Big dashed lines
+		            \draw [gray,dashed,thick] (\x*17,0) -- ++(90+\y*15:8);
+		            \draw [gray,dashed,thick] (\x*17,0) -- ++(180+\y*15:8);
+		            
+		            % Small dashed lines
+		            \draw [gray,dashed,thick] (\x*17,0) ++(90+\y*15:8) -- ++(90+\y*15-15:3);
+		            \draw [gray,dashed,thick] (\x*17,0) ++(90+\y*15:8) -- ++(90+\y*15+15:3);
+		            \draw [gray,dashed,thick] (\x*17,0) ++(180+\y*15:8) -- ++(180+\y*15-15:3);
+		            \draw [gray,dashed,thick] (\x*17,0) ++(180+\y*15:8) -- ++(180+\y*15+15:3);
+		            
+		            % Small circles
+		            \draw [gray,thick,fill=white] (\x*17,0) ++(90+\y*15:8) circle (0.55);
+		            \draw [gray,thick,fill=white] (\x*17,0) ++(180+\y*15:8) circle (0.55);
+			    }
+		    
+		    % Extra gray tree for Y_1 at 180 degrees
+		    \draw [gray,dashed,thick] (0,0) -- ++(180:8);
+		    \draw [gray,dashed,thick] (0,0) ++(180:8) -- ++(180-15:3);
+		    \draw [gray,dashed,thick] (0,0) ++(180:8) -- ++(180+15:3);
+		    \draw [gray,thick,fill=white] (0,0) ++(180:8) circle (0.55);
+		    
+		    %--- CURVES AND BIG ARROWS --------------
+		    
+		    % Curve coordinates
+		    
+		    % Red
+		    \coordinate (R1) at ($(17,0)+(-65:4)$);
+		    \coordinate (R2) at (24,-12);
+		    \coordinate (R3) at (20,-22);
+		    
+		    % Blue
+		    \coordinate (M1) at (8,-18);
+		    \coordinate (M2) at (-4,-14);
+		    \coordinate (M3) at (5,-1);
+		    
+		    % Green
+		    \coordinate (L1) at (6,-8);
+		    \coordinate (L2) at (7,-15);
+		    \coordinate (L3) at (-5.5,-22);
+		    \coordinate (END) at ($(-12,-10)+(-80:2)$);
+		    
+		    
+		    % MIDDLE curve
+		    \draw [thick] plot [smooth]
+		    (M1) .. controls (M2) and (M3) .. (L1);
+		    
+		    % Big arrows
+		    \draw [thick, rounded corners, fill=white] (-6.5,13) -- ++(0,4) -- ++(46,0) -- ++(0,2) -- ++(9,-4) -- ++(-9,-4) -- ++(0,2) -- cycle;
+		    \node at (10.5,15) {\Large \textsc{Generalization}};
+		    
+		    \draw [thick, rounded corners, fill=white] (50.5,-13) -- ++(0,-4) -- ++(-46,0) -- ++(0,-2) -- ++(-9,4) -- ++(9,4) -- ++(0,-2) -- cycle;
+		    \node at (33.5,-15) {\Large \textsc{Specification}};
+		    
+		    % RIGHT curve
+		    \draw [thick] plot [smooth]
+		    (R1) .. controls (R2) and (R3) .. (M1);
+		    
+		    % LEFT curve
+		    \draw [-{Latex[length=5mm,width=2mm,angle=60:6pt]},thick] plot [smooth]
+		    (L1) .. controls (L2) and (L3) .. (END);
+		    
+		    %--- NODES AND SMALL ARROWS -------------
+		    
+		    % Arrows
+		    \foreach \x in {1,2,3}{
+		    	\draw [-{Latex[length=5mm,width=2mm,angle=60:6pt]},thick] (17*\x,0) -- +(-13,0);
+		    }
+		    
+		    % Labels and colors for Y nodes
+		    \draw [thick,fill=white] (0,0) circle (4) node {\Large $Y_1$};
+		    \draw [thick,fill=textbook-blue] (17,0) circle (4) node {\Large $Y_3$};
+		    \draw [thick,fill=white] (2*17,0) circle (4) node {\Large $Y_2$};
+		    \draw [thick,fill=white] (3*17,0) circle (4) node {\Large $Y_0$};
+		    
+		    % b node
+		    \draw [thick,fill=textbook-blue] (-12,-10) circle (2);
+		    \node at (-12,-10) {\Large $b$};
+		    
+		    % Bezier curve assistant (used for sculpting curves)
+		    % \draw [thick,red] (R1) -- (R2) -- (R3) -- (M1);
+		    % \draw [thick,blue] (M1) -- (M2) -- (M3) -- (L1);
+		    % \draw [thick,green] (L1) -- (L2) -- (L3) -- (END);
+		    
+		\end{tikzpicture}
+	}
 \end{center}
 
 % Diagram -> Generalization/Specification -> Top and Bottom/Type Theory -> Generalization is theory building, specification is theory using -> information is both fundamental and very general -> because it is so general, we need to pull from a lot of fields to properly characterize it.
@@ -842,6 +878,8 @@ Generalization and specification are also called bottom-up and top-down strategi
 
 In order to clear the chaos, we must first ask what there is. What can we say about the things that exist? Can we fundamentally distinguish some from others, or is it all just a big, soupy mess? Furthermore, if we indeed say that some things are $A$ and the rest are $B$, can we also claim that such a distinction is \textit{actually} present in reality or are things $A$ and $B$ only because that is how our minds perceive them? These are some of the oldest questions in \textit{metaphysics}, the study of what is. \\
 
+% What is a metaphysical object? It's like a trope. It's a pattern that is recognizable, and it comes up frequently enough that there is a name for it. It's a description of some thing that often appears in reality. It is a \textit{type} of thing. We will discuss many of these metaphysical objects in the chapter Types and Structures.
+
 % Sorting something alphabetically vs. categorizing semantically
 
 % Does category in philosophy mesh with category in math?
@@ -884,14 +922,20 @@ How general is this category of objects? Namely, are properties objects? If they
 
 \subsubsection{Relations}
 
+Blah
+
 %----------------------------------------
 
 \subsection{Classical Metaphysics}
+
+Blah
 
 % One could argue that philosophy has been done ever since we could think. But philosophy in Ancient Greece was different. Why? Geography. Democracy.
 % Yes, other cultures had "philosophies" at this time, but the word in this case is referring to a \textit{worldview}. We are discussing philosophy in the sense of \textit{analysis}.
 
 \subsubsection{\textit{Henosis} and \textit{Arche}}
+
+Blah
 
 % Motivation for metaphysics. The One. Henosis (unity). Arche (first principle).
 % Physis (nature, growth) vs. nomos (human convention). The distinction was made maybe because the Greeks had contact with many different cultures interpreting the world in different ways.
@@ -901,6 +945,8 @@ How general is this category of objects? Namely, are properties objects? If they
 % Rebooting Hesiod's Theogony. Instead of gods emerging from the Chaos, let's try to categorize everything naturalistically.
 
 \subsubsection{Democritus' Atomism}
+
+Blah
 
 % Time is an instance of the Form of eternity. The Greeks did not think about time like us.
 % Atoms come in different shapes that give different properties. The shapes also influence sensory perception (bitter/salty taste comes from sharp atoms).
@@ -934,7 +980,9 @@ Here, our object-property distinction blurs. Because while Forms may define univ
 
 To explain the link between the realms, Plato also postulates a \textit{demiurge}, a transcendent artisan who shapes an initially chaotic space into an ordered, material reality, using the Forms as models. This entity is benevolent and wishes to craft a world like the ideal one he sees, but the objects that he \textit{instantiates} are always imperfect copies. Like that of a master portraitist, his work is beautiful, but it is, in the end, a mere \textit{image} of his subject. \\
 
-So it is for programmers. Before us lies the space of computer memory, uniform and featureless, a receptacle of Becoming. Our Forms are \textit{types}, our particulars are \textit{values}, and the behavior in the space is dictated by the \textit{code} that we execute. In \textit{object-oriented programming} (OOP), values can be of an \textit{object type} that is formally defined by a \textit{class}. For example, my cat Mystic belongs to the class of entities known as Cat, the set of all possible cats. She is an \textit{object} known as a cat, and her catness is defined by the class Cat. In Plato's terms, she is a \textit{particular}, partaking of the Form \textit{Cat}. Just as the demiurge instantiates particulars from Forms, so the programmer instantiates objects from classes. Both bridge the gap between what is possible and what is. \\
+So it is for programmers. Before us lies the space of computer memory, uniform and featureless, a receptacle of Becoming. Our Forms are \textit{types}, our particulars are \textit{values}, and the behavior in the space is dictated by the \textit{code} that we execute. In \textit{object-oriented programming} (OOP), values can be of an \textit{object type} that is formally defined by a \textit{class}. \\
+
+For example, my cat Mystic belongs to the class of entities known as Cat, the set of all possible cats. She is an \textit{object} known as a cat, and her catness is defined by the class Cat. In Plato's terms, she is a \textit{particular}, partaking of the Form \textit{Cat}. Just as the demiurge instantiates particulars from Forms, so the programmer instantiates objects from classes. Both bridge the gap between what is possible and what is. \\
 
 That said, while Plato's metaphysics gives good insight into OOP and other abstract (or \textit{high-level}) programming concepts, it cannot explain concrete (or \textit{low-level}) ideas like \textit{data} that is represented with \textit{bits}. This is because Plato was not overly concerned with the \textit{substance} of objects, the stuff that makes them \textit{physical}. Thus, in our pursuit of a holistic understanding of \textit{information}, we must also consider \textit{substance theories}, philosophies that give metaphysical weight to \textit{matter}. \\
 
@@ -1165,7 +1213,10 @@ In general, signals can be viewed as messages encoded in \textit{data} whose dec
 
 Consider an arbitrary continuous signal:
 
+% Make the signal weave on either side of the axis? Could be cool, but maybe distracting.
+
 \begin{center}
+	%\resizebox{\textwidth}{!}{%
 	\begin{tikzpicture}
 	\begin{axis}[
 	width=\textwidth,
@@ -1187,6 +1238,8 @@ Consider an arbitrary continuous signal:
 	ultra thick,
 	restrict x to domain=0:12] {2*sin(deg(x))+3*sin(deg(3*x))+2*sin(deg(7*x))};
 	\end{axis}
+	
+	% Update the arrowheads, pls
 	\fill (11.15,1.71) -- ++(-0.16,0.1) -- ++(0,-0.2);
 	\draw (11.7,1.71) node {$t$};
 	
@@ -1195,11 +1248,12 @@ Consider an arbitrary continuous signal:
 	\fill (-0.22,3.7) -- ++(0.1,-0.16) -- ++(-0.2,0);
 	\fill (-0.22,-0.3) -- ++(0.1,0.16) -- ++(-0.2,0);
 	\end{tikzpicture}
+	%}
 \end{center}
 
 Analog data are special because they exist in continuous space and thus theoretically have an infinite degree of precision. If we assume a classical model of physics in which time flows continuously, we can model physical quantities with real numbers by writing an equation $A=f(t)$ where $t,A\in\mathbb{R}$. In this sense, a complete set of analog data over a given time interval (i.e. an analog signal) can perfectly describe a physical quantity over the same interval. However, handling analog data can be very difficult. \\
 
-Imagine that you throw a ball in the air and somehow exactly measure its height above the ground at every instant before it lands. If you were to organize these height data with respect to time, you would construct an analog signal that perfectly describes the height of the ball at any point during the throw. In practice, however, no measuring instrument has the required speed or precision necessary to do this. Additionally, you would need an infinite amount of memory to store continuous-time data that is collected at every instant. \\
+Imagine that you throw a ball in the air and somehow exactly measure its height above the ground at every instant before it lands. If you were to organize these height data with respect to time, you would construct an analog signal that perfectly describes the height of the ball at any point during the throw. In practice, however, no measuring instrument has the required speed or precision necessary to do this. Additionally, you would need an infinite amount of memory to store continuous-time data that is collected at every instant. \\\\
 
 % Need digital data
 
@@ -1358,7 +1412,7 @@ An argument of any kind must be expressed in a \textit{language}. In the case of
 
 Formal proofs, on the other hand, require a \textit{formal language} for clarity and precision. In practice, formal proofs are rarely written or read by logicians or mathematicians. Typically, mathematical proofs are written using a combination of formal and natural language. However, computer programs, written in \textit{programming languages}, are considered formal. \\
 
-A formal language is constructed from an \textit{alphabet} $\Sigma$, which is a set of symbols. The set of all possible finite-length \textit{words} or \textit{formulas} that can be built from this alphabet is denoted $\Sigma^*$. A formal language $L$ over an alphabet $\Sigma$ is then defined as a subset of $\Sigma^*$. Thus, a language is a set of purely syntactic objects. It may conform to a \textit{grammar} that specifies how words can be produced or arranged in a \textit{sentence}, but a language is never inherently meaningful. The semantics of a language is always interpreted separately from the syntax. \\
+A formal language is constructed from an \textit{alphabet} $\Sigma$, which is a set of symbols. The set of all possible finite-length \textit{words} or \textit{formulas} that can be built from this alphabet is denoted $\Sigma^*$. A formal language $L$ over an alphabet $\Sigma$ is then defined as a subset of $\Sigma^*$. Thus, a language is a set of purely syntactic objects. It may conform to a \textit{grammar} that specifies how words can be produced or arranged in a \textit{sentence}, but a language is never inherently meaningful. The semantics of a language is always interpreted separately from the syntax.
 
 % ~~~ Numeral Systems ~~~
 
@@ -1746,7 +1800,7 @@ The \textit{theory of computation} is a field of study that is related to both m
 
 Much of the work in the theory of computation is$\dots$ quite abstract. While calculation and computation have been practiced by humans for thousands of years, the concept was only formalized by mathematicians, logicians, philosophers, linguists, and computer scientists in the past 150 years. This part of the guide will delve into some fairly academic topics with a decent amount of mathematical rigor, but it is written to be accessible and entertaining. \\
 
-The field has three branches: \textit{automata theory}, \textit{computability theory}, and \textit{computational complexity theory}, each of which asks fundamental questions pertaining to how mathematical calculations can be automated, which kinds of problems can be solved by a machine, and how many resources are required to solve a particular problem. We will touch on the major discoveries made in each of these branches and discuss why they are significant to computer science and programming in general. \\
+The field has three branches: \textit{automata theory}, \textit{computability theory}, and \textit{computational complexity theory}, each of which asks fundamental questions pertaining to how mathematical calculations can be automated, which kinds of problems can be solved by a machine, and how many resources are required to solve a particular problem. We will touch on the major discoveries made in each of these branches and discuss why they are significant to computer science and programming in general.
 
 % "Graduate-level mathematics"
 
@@ -2811,6 +2865,8 @@ Blah, blah, blah... \\
 
 % “My math background made me realize that each object could have several algebras associated with it, and there could be families of these, and that these would be very very useful.” - Alan Kay
 
+% HUGE POINT: An object consists of a type and a structure. A type is what the object is semantically. What does the object mean? A structure is what the object is syntactically. What is the object
+
 % Structures, not objects. For example, we are directly interested in list structure and only indirectly interested in objects *with* list structure. We focus on Forms, not on complex particulars.
 
 % Why leave set theory? We want to explore proper classes, so we generalize set theory to category theory. Sets become objects and functions become morphisms.
@@ -2871,6 +2927,8 @@ Blah, blah, blah... \\
 
 \toclineskip
 \section{Abstract Data Types and the Data Structures that Implement Them}
+
+% ADTs are "types" of metaphysical objects. They are 
 
 % These are just patterns that appear in life. Trees tend to be more common in nature, lists are how humans tend to organize things.
 % Do "plain old data structures" first: arrays, structs, records, unions, objects
@@ -4070,6 +4128,7 @@ Blah
 \toclineskip
 \section{A History of Programming Languages}
 
+% What does it mean to print? It means to render a piece of information content in some physical medium. Printers print information into books. Back in the day, when computers didn't have fancy graphical displays, the print command converted digital content (information stored in bits) into a print file or device file, a file that an external device (like a printer) can read and operate on. The operating system of the computer would then output the file to the device, which would render the information content in physical form. Nowadays, the print command converts digital content into various standard file formats and those files output graphically by means of a monitor (and technically, light is physical). Printing hasn't fundamentally changed.
 % Turing is imperative and lambda is declarative?
 % What is a paradigm? How does having a strict paradigm affect the experience of coding? More restrictive, more streamlined?
 % More recent is not necessarily better
@@ -4156,56 +4215,7 @@ Blah
 \part*{Implementation, Featuring an Exploration of Java}
 \addcontentsline{toc}{part}{\tocpartglyph Implementation, Featuring an Exploration of Java}
 
-Blah \\
-
-%--------------------------------------------------------------------------------
-%    SECTION
-%--------------------------------------------------------------------------------
-
-\toclineskip
-\section{How does Java work?}
-
-%--------------------------------------------------------------------------------
-%    SECTION
-%--------------------------------------------------------------------------------
-
-\toclineskip
-\section{Java Standard Library}
-
-%----------------------------------------
-
-\subsection{java.lang}
-
-%----------------------------------------
-
-\subsection{java.util}
-
-%----------------------------------------
-
-\subsection{java.io}
-
-%----------------------------------------
-
-\subsection{java.net}
-
-%--------------------------------------------------------------------------------
-%    SECTION
-%--------------------------------------------------------------------------------
-
-\toclineskip
-\section{Java Techniques}
-
-Blah
-
-%----------------------------------------
-
-\subsection{Static Initialization Blocks}
-
-Blah
-
-%----------------------------------------
-
-\subsection{Lambda Expressions}
+% Language vs implementation vs platform
 
 Blah \\
 
@@ -4214,18 +4224,53 @@ Blah \\
 %--------------------------------------------------------------------------------
 
 \toclineskip
-\section{Java Frameworks}
+\section{The Java Programming Language}
+
+%----------------------------------------
+
+\subsection{Java Standard Library}
+
+\subsubsection{java.lang}
+
+\subsubsection{java.util}
+
+\subsubsection{java.io}
+
+\subsubsection{java.net}
+
+%----------------------------------------
+
+\subsection{Java Techniques}
+
+Blah
+
+\subsubsection{Static Initialization Blocks}
+
+Blah
+
+\subsubsection{Lambda Expressions}
+
+% Maybe throw some Haskell in here and then show the Java equivalent.
+
+Blah \\
+
+%--------------------------------------------------------------------------------
+%    SECTION
+%--------------------------------------------------------------------------------
+
+\toclineskip
+\section{Frameworks}
 
 \newpage
 
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
-%    PART VII: ADDITIONAL TECHNOLOGIES
+%    PART VII: TOOLS AND TECHNOLOGIES
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
 
-\part*{Additional Technologies}
-\addcontentsline{toc}{part}{\tocpartglyph Additional Technologies}
+\part*{Tools and Technologies}
+\addcontentsline{toc}{part}{\tocpartglyph Tools and Technologies}
 
 "Stupid Computer Shit"
 
@@ -4234,82 +4279,33 @@ Blah \\
 %--------------------------------------------------------------------------------
 
 \toclineskip
-\section{Unit Testing}
-
-Blah
+\section{Everyday Tools}
 
 %----------------------------------------
 
-\subsection{JUnit}
+\subsection{Essential Programs}
 
-Blah
-
-%--------------------------------------------------------------------------------
-%    SECTION
-%--------------------------------------------------------------------------------
-
-\toclineskip
-\section{Version Control}
-
-Blah
+% Text editors, IDEs, window managers etc.
 
 %----------------------------------------
 
-\subsection{Git}
+\subsection{Operating Systems}
 
-How do you download stuff from GitHub? There are a few methods that might be available, depending on the software.
-\begin{itemize}
-	\item git clone the directory
-	\item wget raw files
-	\item Grab it from a package repo with something like pacman
-	\item Get it from the AUR with something like yay or yaourt
-	\item Download a tarball, unzip it, extract it, and build the source files into an executable
-\end{itemize}
-
-%--------------------------------------------------------------------------------
-%    SECTION
-%--------------------------------------------------------------------------------
-
-\toclineskip
-\section{Build Automation}
-
-%----------------------------------------
-
-\subsection{Make}
-
-GNU Make compiles source files into executables.
-
-% git clone into /var/git (this is my choice of git folder)
-% make; sudo make install
-
-%----------------------------------------
-
-\subsection{Maven}
-
-Blah
-
-%--------------------------------------------------------------------------------
-%    SECTION
-%--------------------------------------------------------------------------------
-
-\toclineskip
-\section{Unix}
+% What's more "everyday" than an operating system? Here is what an operating system is. Here is the distribution of modern operating systems. These operating systems are called Unix-like because they are built on top of or heavily influenced by the operating system Unix. Variants of Unix include: Linux, BSD, macOS, maybe others. Non Unix-likes include: Microsoft Windows (which is a family of OSs)
 
 % Superuser vs user
 
-%----------------------------------------
-
-\subsection{History of Unix and GNU/Linux}
+\subsubsection{History of Unix and GNU/Linux}
 
 %----------------------------------------
 
-\subsection{A Tour of the Unix File System}
+\subsubsection{A Tour of the Unix File System}
 
 % Run tree / -L 1 and run through that list alphabetically, explaining symlinks
 
 %----------------------------------------
 
-\subsection{Common Commands and Tasks}
+\subsubsection{Common Commands and Tasks}
 
 % Store scripts in /usr/local/bin
 
@@ -4326,7 +4322,7 @@ Blah
 	\item File Descriptors
 \end{itemize}
 
-\subsection{Making a Personalized Linux Installation}
+\subsubsection{Making a Personalized Linux Installation}
 
 \begin{itemize}
 	\item Install Arch
@@ -4344,64 +4340,55 @@ Blah
 	\item Change desktop environment on startup by adding exec \textit{ds\_name} to the bottom of \textasciitilde/.xinitrc
 \end{itemize}
 
-%--------------------------------------------------------------------------------
-%    SECTION
-%--------------------------------------------------------------------------------
+%----------------------------------------
 
-\toclineskip
-\section{Virtualization \& Containerization}
+\subsection{Version Control}
+
+Blah
+
+\subsubsection{Git}
+
+How do you download stuff from GitHub? There are a few methods that might be available, depending on the software.
+\begin{itemize}
+	\item git clone the directory
+	\item wget raw files
+	\item Grab it from a package repo with something like pacman
+	\item Get it from the AUR with something like yay or yaourt
+	\item Download a tarball, unzip it, extract it, and build the source files into an executable
+\end{itemize}
+
+%----------------------------------------
+
+\subsection{Unit Testing}
+
+Blah
+
+\subsubsection{JUnit}
+
+Blah
+
+\subsection{Build Automation}
+
+\subsubsection{Make}
+
+GNU Make compiles source files into executables.
+
+% git clone into /var/git (this is my choice of git folder)
+% make; sudo make install
+
+%----------------------------------------
+
+\subsubsection{Maven}
 
 Blah
 
 %----------------------------------------
 
-\subsection{Docker}
+\subsection{Virtualization and Containerization}
 
 Blah
 
-%--------------------------------------------------------------------------------
-%    SECTION
-%--------------------------------------------------------------------------------
-
-\toclineskip
-\section{Markup and Style Languages}
-
-%----------------------------------------
-
-\subsection{TeX}
-
-Blah
-
-%----------------------------------------
-
-\subsection{HMTL}
-
-Blah
-
-%----------------------------------------
-
-\subsection{CSS}
-
-Blah
-
-%--------------------------------------------------------------------------------
-%    SECTION
-%--------------------------------------------------------------------------------
-
-\toclineskip
-\section{Data Formats}
-
-Blah
-
-%----------------------------------------
-
-\subsection{XML}
-
-Blah
-
-%----------------------------------------
-
-\subsection{JSON}
+\subsubsection{Docker}
 
 Blah
 
@@ -4410,11 +4397,43 @@ Blah
 %--------------------------------------------------------------------------------
 
 \toclineskip
-\section{Query Languages}
+\section{Languages and Language-Likes}
 
 %----------------------------------------
 
-\subsection{SQL}
+\subsection{Markup and Style}
+
+\subsubsection{TeX}
+
+Blah
+
+\subsubsection{HMTL}
+
+Blah
+
+\subsubsection{CSS}
+
+Blah
+
+%----------------------------------------
+
+\subsection{Data Formats}
+
+Blah
+
+\subsubsection{XML}
+
+Blah
+
+\subsubsection{JSON}
+
+Blah
+
+%----------------------------------------
+
+\subsection{Data Query and Manipulation}
+
+\subsubsection{SQL}
 
 Blah \\
 
@@ -4431,6 +4450,7 @@ Blah \\
 
 % Compsci vs software engineering
 % Software development vs engineering vs programming
+% What is frontend, backend, and full stack?
 
 %--------------------------------------------------------------------------------
 %    SECTION
@@ -4650,7 +4670,21 @@ Summarize the appendices below...
 % A rock-solid understanding of mathematics will allow you to excel in any field you want. Technical fields, languages, making really good art. Math is about patterns and ideas, and everything humans care about are patterns and ideas.
 % There is much more freedom and uncertainty in the world than I previously thought. Very little is set in stone.
 % Categorization is a useful tool for orienting yourself, but it is possible to go too far down the endless rabbit hole. You cannot seperate reality into neat little piles. I can show you green, and I can show you blue, but there are infinitely many shades in between. You can measure wavelengths of light all you want, but that's not what color is.
-% There are so many distractions today. It is easy to fall into the trap of spending non-negligible amounts of time on mediocre things. We have so little time here before the ride slows to a stop and we must exit to our left. Spend your time on things that are worth a damn.
+% There are so many distractions today. It is easy to fall into the trap of spending non-negligible amounts of time on mediocre things. We have so little time here before the ride slows to a stop and we must exit to our left. Spend your time on things that are worth a damn. In my case... music, academics, physical fitness, fashion and visual art, writing and language, philosophy. And \textit{good} video games (I explictly qualify video games with \textit{good} because 95% of the games I see are time-wasters).
+% Serious artisans use math. Math takes the guesswork out of things and tells you exactly what you are doing.
+
+\newpage
+
+%--------------------------------------------------------------------------------
+%    APPENDIX: HOW THE INTERNET CHANGED HUMANITY
+%--------------------------------------------------------------------------------
+
+\toclineskip
+\section{How \textit{The Internet} Changed Humanity}
+
+% Mass communication becomes commonplace and pedestrian
+% Advertisement become omnipresent
+% Privacy dwindles to nothing. Seriously. Unless you have been taking precautionary privacy measures since you started using internet-capable electronics, they already know all of your details. The best you can do is stop putting more information out there. It's like throwing coins into a well. You can't get your coins back, but you can stop throwing coins in.
 
 \newpage
 
@@ -4665,15 +4699,16 @@ Summarize the appendices below...
 
 % I don't really have a solution for all of this. I'm not even sure how one would go about implementing these changes within an educational structure. These are just observations.
 
-% It's always been about the semantics, not the syntax. Experts care about meaning and often solve problems without even putting pencil to paper. The knowledge is ingrained in them, and it is not the symbols that are etched in their brains: it is the ideas. Why do we teach STEM material the way that we do?
+% It's always been about the semantics, not the syntax. Experts care about meaning and often solve problems without even putting pencil to paper. The knowledge is ingrained in them, and it is not the symbols that are etched in their brains: it is the abstract objects and relation between them. Why do we teach STEM material the way that we do?
 
-% Teaching syntax over semantics. Anecdote of the dot product. Feeling like things are there for no reason. Math ideas are not invented out of thin air, and they shouldn't be taught that way.
+% Teaching syntax over semantics. Anecdote of the dot product. Feeling like things are there for no reason. Math ideas are not invented out of thin air, and they shouldn't be taught that way. They are invented for a convenient purpose, and we should be teaching the history of their original purpose before generalizing it for use in other applications. This also allows us to understand the original assumptions that were made while constructing the model and thus whether or not our scenario can be properly modeled by it.
 % Universities, for the most part, want to teach theoretical material, not applied. They don't want to be trade schools. That's fine. The problem, as I see it, is that they struggle to teach either. There isn't enough philosophical thought to effectively teach theory and there isn't enough curriculum-wide integration of tools to teach application (programming language libraries, frameworks, CAD software).
 % There needs to be more of a focus on history. The best way to understand a concept is to understand the problem that the inventors faced. History also prepares you for the future because it gives you case studies of academic thought (thinking outside of the box, new models).
 % Culture's influence on education: clubs, Greek life, things that are basically second jobs. Being stressed out makes it hard to learn, being depressed makes you stupid and uninterested. Having to choose between studying the amount that you need and letting "the team" down or studying minimally so you can do all of your homework and meet club responsibilities. A culture that promotes always being productive to the point of rigidly organizing recreation is not a culture that effectively fosters learning.
 % Homework and tests, the obsession with grades, the dismissal of grades as "not enough" to get the job you want, the 50 and 60 percent test averages, people literally having mental breaks (feeling fractured for over a year after the 350 processor)
 % Why is everyone feverishly taking notes? Taking notes in lecture is *pointless*. The professor should be handing out fully documented notes that cover *all* of the material that is in-scope. You cannot listen to or process what the professor is saying if you are taking notes. Anecdote of machine learning.
 % In order to learn, we need time to do nothing.
+% Why do people dog on art majors? Art is actually a perfectly reasonable thing to study in college. But there is a difference between studying art and providing goods or services. Math is also an art. It just happens to have more useful applications. And that's not "more useful" applications, it's more "useful applications." Successful artists and mathematicians both make useful things that people care about. But learning and applying are different things, and modern college curriculums do not straddle the gap properly.
 
 % What if we applied this kind of intuitive learning approach to language acquisition? One-to-one word translations are an artificial construct. Really, words in a foreign language are descriptors of abstract concepts and one-to-one semantic relationships are rare. A more effective approach might be to provide many translations for a single word in order to convey to the learner the abstract concept that is intuitive for native speakers.
 
