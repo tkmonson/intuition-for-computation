@@ -158,15 +158,14 @@
 %--- TEXT BOX ---------------------------
 
 %\begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
-%	\vspace{2mm}
+%	\vspace{3mm}
 %	\begin{center}
 %		\textbf{TITLE}
 %	\end{center}
-%	\vspace{1mm}
 %	TEXT
-%	\vspace{1mm}
+%	\vspace{3mm}
 %\end{tcolorbox}
-%\vspace{7mm}
+%\vspace{2\baselineskip}
 
 %--- QUOTATION --------------------------
 
@@ -515,7 +514,7 @@ In December of 2018, I graduated from Duke University, feeling like I knew simul
 % And, last but not least, I have a number of somewhat eccentric thank-yous to give. Despite how unconventional some of these shoutouts are, they are nevertheless sincere.
 
 % Seinfeld (Theory of Comedy, comedy systems, categories of comedic timing)
-% DGR
+% DGR, Fantano
 % Morinaga & Company, Ltd., the producers of Hi-Chews
 
 \newpage
@@ -618,11 +617,14 @@ I find it difficult to describe what this book is. And yet, I find it easy to ex
 % Content is presented in a culturally neutral way and does not assume a great deal of prior knowledge.
 % The book tries to get the point across that there is more than one way to think about things and that knowledge is built on assumptions, including the body of knowledge called computer science. While we must work within a box, we should strive to remind ourselves periodically that we are, indeed, in a box and that there exist methods of thinking outside of it. The theories and models we use today may simply be the predecessors of theories and models to come. The topics of discussion, however, are eternal.
 % The book is slanted toward imperative programming, specifically toward OOP. This is because most software engineering is done in OOP languages. OOP is also less abstract and thus more beginner-friendly. Declarative programming and functional languages are discussed with a decent level of detail, but OOP is the default here. For example, the implementation chapter explores Java.
-% Traditional education is bottom-up (notice how objects on Earth fall when dropped => that's because F_g=ma_g). This book uses a top-down approach (what is mass, what is acceleration, what is force, what are objects, what is motion => that's what we mean when we write F_g=ma_g). The traditional approach is syntactic, this book's approach is semantic.
+% Traditional education is bottom-up (notice how stuff on Earth falls when it's dropped => that's because this law F_g=ma_g exists). This book uses a top-down approach (in the abstract sense, what is mass, acceleration, force, objects, motion, distance, space => given all of those ideas, we observe that F_g=ma_g happens in this Universe). The traditional approach is syntactic, this book's approach is semantic. The "top" in this case is philosophical and mathematical theory: large-scale ideas, objects, and relations. We spend a substantial amount of time talking about these huge, fundamental concepts and how they appear in philosophy, logic, mathematics, physics, linguistics, etc. Once this information theory is built, we use our newfound mathematical insight to model computation and computational phenomena (automata, DS&A, programs). In doing so, we develop a theory of computer science. We then use this theory to understand principles of software engineering.
 % The abbreviations i.e. and e.g. are used frequently in this book. What do those mean?
 % If there's a word you don't know, just look up the definition and keep going. That's basically how I wrote this book.
 % There are times when I speak very precisely and times where I am more casual. I believe it will be easy to tell which mode I am in from context. If you see a lot of italicized keywords and dense sentences, that probably means I am speaking precisely. If you see poetic language, absolute statements, or contractions, that probably means I am speaking casually.
 % This document uses A4 paper size. Print it out and put some staples in it if you would like a hard copy.
+% What makes this book different from most textboooks is that it starts from first principles.
+
+% Looking at a bird he says, 'Do you know what that bird is? It's a brown throated thrush, but in Portuguese, it's a... in Italian, a...' he says "in Chinese, it's a... in Japanese, a...,' et cetera. 'Now,' he says, 'you'll know absolutely nothing whatsoever about the bird. You only know about humans in different places and what they call the bird. Now,' he says, 'let's look at the bird." - Richard Feynman (recalling his father, The Pleasure of Finding Things Out)
 
 \newpage
 
@@ -732,7 +734,7 @@ Interlocutor $\mathcal{B}$ responds with \textit{specification}, adding assumed 
 
 % Taxonomy diagram
 \begin{center}
-	\resizebox{\textwidth}{!}{%
+	\resizebox{\textwidth}{!}{
 		\begin{tikzpicture}[scale=0.2]
 		
 			%--- GRAY TREES -------------------------
@@ -787,11 +789,11 @@ Interlocutor $\mathcal{B}$ responds with \textit{specification}, adding assumed 
 		    (M1) .. controls (M2) and (M3) .. (L1);
 		    
 		    % Big arrows
-		    \draw [thick, rounded corners, fill=white] (-6.5,13) -- ++(0,4) -- ++(46,0) -- ++(0,2) -- ++(9,-4) -- ++(-9,-4) -- ++(0,2) -- cycle;
+		    \draw [thick, rounded corners, fill=white] (-6.5,13) -- ++(0,4) -- ++(50,0) -- ++(0,2) -- ++(9,-4) -- ++(-9,-4) -- ++(0,2) -- cycle;
 		    \node at (10.5,15) {\Large \textsc{Generalization}};
 		    
-		    \draw [thick, rounded corners, fill=white] (50.5,-13) -- ++(0,-4) -- ++(-46,0) -- ++(0,-2) -- ++(-9,4) -- ++(9,4) -- ++(0,-2) -- cycle;
-		    \node at (33.5,-15) {\Large \textsc{Specification}};
+		    \draw [thick, rounded corners, fill=white] (54.5,-13) -- ++(0,-4) -- ++(-50,0) -- ++(0,-2) -- ++(-9,4) -- ++(9,4) -- ++(0,-2) -- cycle;
+		    \node at (37.5,-15) {\Large \textsc{Specification}};
 		    
 		    % RIGHT curve
 		    \draw [thick] plot [smooth]
@@ -807,8 +809,9 @@ Interlocutor $\mathcal{B}$ responds with \textit{specification}, adding assumed 
 		    \foreach \x in {1,2,3}{
 		    	\draw [-{Latex[length=5mm,width=2mm,angle=60:6pt]},thick] (17*\x,0) -- +(-13,0);
 		    }
+	    	\draw [-{Latex[length=5mm,width=2mm,angle=60:6pt]},thick,dashed] (17*3+8,0) -- +(-4,0);
 		    
-		    % Labels and colors for Y nodes
+		    % Y nodes
 		    \draw [thick,fill=white] (0,0) circle (4) node {\Large $Y_1$};
 		    \draw [thick,fill=textbook-blue] (17,0) circle (4) node {\Large $Y_3$};
 		    \draw [thick,fill=white] (2*17,0) circle (4) node {\Large $Y_2$};
@@ -829,15 +832,69 @@ Interlocutor $\mathcal{B}$ responds with \textit{specification}, adding assumed 
 
 % Diagram -> Generalization/Specification -> Top and Bottom/Type Theory -> Generalization is theory building, specification is theory using -> information is both fundamental and very general -> because it is so general, we need to pull from a lot of fields to properly characterize it.
 
-In the above diagram, we see the classes $Y$ and their relations to each other. The arrows between them are \textit{is-a} relations. They point from a \textit{parent} class $P$ to a \textit{child} class $C$, and we say that the child is a subclass of the parent. $P$ \textit{subsumes} $C$. In set theory notation, $P\subset C$. Thus every $c\in C$ is considered a \textit{subtype} of the more general class $P$. Every $c$ \textbf{is a} $P$ of some \textit{type}. \\
+In the above diagram, we see the $Y$ classes and their relations to each other. The arrows between them are \textit{is-a} relations. They point from a \textit{parent} class $P$ to a \textit{child} class $C$, and we say that the child is a subclass of the parent. $P$ \textit{subsumes} $C$. In set theory notation, $P\subset C$. Thus every $c\in C$ is considered a \textit{subtype} of the more general class $P$. Every $c$ \textbf{is a} $P$ of some \textit{type}. \\
 
 Of course, any given $P$ can have many subtypes, and those subtypes can have their own subtypes, and additional information can be added to the specifications of those subtypes, and further subtyping can occur by making classifications based on this additional information, and eventually these subtypes may become very unlike each other and may not share much in common other than a distant relation to $P$. The branching structure of this phenomenon is depicted above in gray. \\
 
-In the discourse between our two dialectical dudes, we witnessed the creation of a \textit{taxonomy}, a hierarchical system of classification. \\
+In the discourse between our two dialectical dudes, we witnessed the creation of a \textit{taxonomy}, a hierarchical system of classification. Taxonomies describe how certain classes of objects are related to each other. Taxonomies have what is known as \textit{tree structure}. Like an old oak tree whose branches shoot off from its rooted trunk and fork into smaller branches until they reach the leaves, a taxonomy spreads \textit{recursively}. \\
 
-% Blue box for the term node. Node is a joint or a communication hub in an information system. It is connected to other nodes by communication channels. Node is Latin for knot. So node/connection in information science, vertex/edge in graph theory.
-% The difference between a taxonomy and an ontology is that the former has child nodes.
-% This forms a taxonomy. They have tree structure because of the nature of an is-a relation.
+Take any $Y$ \textit{node} above: each can be thought of as the \textit{root node} of its own \textit{subtree}. From each root, links extend toward other nodes, which themselves can be considered roots of further subtrees. And so the tree expands in a potentially infinite number of directions and to a potentially infinite \textit{depth}. Taxonomies have tree structure because of the nature of the \textit{is-a} relation. The phrase "every car \textbf{is a} vehicle, but \textbf{not} every vehicle \textbf{is a} car" sums it up well. The arrows are one-way, and they point in the direction of \textit{specification}. \\\\
+
+\begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
+	\vspace{3mm}
+	\begin{center}
+		\textbf{Nodes, Knots, Vertices}
+	\end{center}
+	It is worth pausing here to think about what the word \textit{node} really means. It comes from the Latin word \textit{nodus}, which means \textit{knot}. A node is like a knot in a string, a distinguishable lump at a certain position. And between any two adjacent knots in a string, there is a \textit{link} \dots\ of string. Similarly, between any two adjacent links, there is a knot. \\
+	
+	The knots and the links cannot exist independent of each other. Without knots, there are no links of string---just one, continuous string. Without links, knots are totally unanchored and have no sense of position. Now, one could argue that a single knot is sufficient for the existence of links in a string, but such a view is naive and presumes a familiar, everyday sort of string. \\
+	
+	For example, yes, you can tie a single knot in a shoelace, and you might then call the floppy bits on either side of it "links." But when you call something like this a link, what you are really pointing out is the \textit{finite length} of the entity. That is, the "string link" \textit{starts} at the knot and \textit{ends} at the tip of the aglet. But length is a peripheral detail for links---the essence of a \textit{link} is its \textit{connecting} of things. Thus, it is better to envision a taut string that stretches to infinity in both directions and to think of a link as a \textit{connector of a knot pair} whose length may or may not be important. With this model, there must be at least two knots in the string if we are to think of them as \textit{nodes}. \\
+	
+	\begin{center}
+	\begin{tikzpicture}[scale=0.2]
+		\foreach \x in {0,1,2} {
+			\begin{knot}[
+			consider self intersections,
+			flip crossing=2
+			clip width=5,
+			xshift=\x*250,
+			]
+				\strand[ultra thick]
+				(90:1.25) to[out=180,in=-120,looseness=2]
+				(-30:1.25) to[out=60,in=120,looseness=2]
+				(210:1.25) to[out=-60,in=0,looseness=2] (90:1.25);
+			\end{knot}
+			
+			\begin{knot}[
+			consider self intersections,
+			flip crossing=2
+			clip width=5,
+			xshift=\x*-250,
+			]
+			\strand[ultra thick]
+			(90:1.25) to[out=180,in=-120,looseness=2]
+			(-30:1.25) to[out=60,in=120,looseness=2]
+			(210:1.25) to[out=-60,in=0,looseness=2] (90:1.25);
+			\end{knot}
+			
+			\draw [ultra thick] (-1.2+\x*-8.75,0) -- ++(-6.45,0);
+			\draw [ultra thick] (1.2+\x*8.75,0) -- ++(6.45,0);
+		}
+		\draw [ultra thick] (-18.75,0) -- ++(-9,0);
+		\draw [ultra thick] (18.75,0) -- ++(9,0);
+	\end{tikzpicture}
+	\end{center}
+	
+	% Clarify the differences in knot theory. Move on to graph theory.
+	% Blue box for the term node. Node is a joint or a communication hub in an information system. It is connected to other nodes by links or communication channels. Node is Latin for knot. So node/connection in information science, vertex/edge in graph theory.
+	% The difference between a taxonomy and an ontology is that the former has child nodes. It covers more than just is-a relations.
+	\vspace{3mm}
+\end{tcolorbox}
+\vspace{2\baselineskip}
+
+% Introduce abstract-concrete duality (different than fundamental/derived duality).
+% Instance-of is different than is-a. Is-a is a relation that is abstract->abstract. Instance-of is concrete->abstract (instantiation is abstract->concrete).
 % The b is also important in the diagram. Things can have multiple types and sometimes it is important to reference a particular label that an object has.
 
 % The diagram also has big arrows that say Generalization and Specification...
@@ -855,11 +912,8 @@ Generalization and specification are also called bottom-up and top-down strategi
 % Top type is to universe/domain of discourse as bottom type is to empty class.
 % Bottom-up is like starting from an arche, top-down is like starting from henosis
 
-% Taxonomies proceed from a root concept and form a tree (category system)
-% Ontologies have non-parent/child relations
 % Natural and constructed systems. Open-world, closed-world assumption.
 
-% Properly introduce the chapter. Explain why you're going to talk about all of this non-computer science stuff.
 % Computer science is a unifier of academic fields. It is hard to fully grasp because it is so general. We need to pull from many disciplines to characterize it effectively (language, logic, philosophy, math, physics, engineering).
 % The theory of computer science was built many to one. Practical programming is one (information, bits) to many (types, software). Thus, we will discuss many different fields and will unify them under a theory whose arche is information (logical values).
 % We must consider open-worlds before we discuss closed-worlds.
@@ -876,9 +930,13 @@ Generalization and specification are also called bottom-up and top-down strategi
 % Read all of Categorization
 % Read all of Ontology (information science)
 
+% Chaos is phenomena. Just pure sensory experience, no analysis.
+
 In order to clear the chaos, we must first ask what there is. What can we say about the things that exist? Can we fundamentally distinguish some from others, or is it all just a big, soupy mess? Furthermore, if we indeed say that some things are $A$ and the rest are $B$, can we also claim that such a distinction is \textit{actually} present in reality or are things $A$ and $B$ only because that is how our minds perceive them? These are some of the oldest questions in \textit{metaphysics}, the study of what is. \\
 
 % What is a metaphysical object? It's like a trope. It's a pattern that is recognizable, and it comes up frequently enough that there is a name for it. It's a description of some thing that often appears in reality. It is a \textit{type} of thing. We will discuss many of these metaphysical objects in the chapter Types and Structures.
+
+% has-a relation
 
 % Sorting something alphabetically vs. categorizing semantically
 
@@ -900,17 +958,16 @@ The quantity-quality distinction is a generally accepted one. However, the dicho
 \subsubsection{Classes}
 
 \begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
-	\vspace{2mm}
+	\vspace{3mm}
 	\begin{center}
 		\textbf{The Universal and Particular Notions of Chess}
 	\end{center}
-	\vspace{1mm}
 	% Chess example, physical boards and pieces, game states, the abstract idea of chess. "When was chess invented?". An instance of a chess game vs. all actual chess games vs. all possible chess games vs. the class of chess.
 	
 	As an illustrative example, consider all of the games of chess that are being played right now, currently progressing or left half-finished and awaiting the next move. Consider also all of the \textit{historical} games of chess that have been played to completion or total abandonment since the invention of chess. \\
-	\vspace{1mm}
+	\vspace{3mm}
 \end{tcolorbox}
-\vspace{7mm}
+\vspace{2\baselineskip}
 
 \subsubsection{Objects}
 
@@ -1006,11 +1063,10 @@ Blah \\\\
 % Plato is rationalist, Aristotle is empiricist
 
 \begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
-	\vspace{2mm}
+	\vspace{3mm}
 	\begin{center}
 		\textbf{Euclid's \textit{Elements}}
 	\end{center}
-	\vspace{1mm}
 	Although arithmetic has been practiced since prehistory, theoretical mathematics was founded by the Ancient Greeks. The Greeks, in contrast to earlier peoples, applied \textit{deductive reasoning} to the study of mathematics. While sophisticated arithmetic, geometry, and algebra was done before this period by the Babylonians and the Egyptians, this work was all based on \textit{evidence} collected from the physical world. The Greeks were the first to recognize the need for \textit{proof} of mathematical statements using \textit{logic}. \\
 	
 	% Euclid used axiomatic and constructive methods
@@ -1064,9 +1120,9 @@ Blah \\\\
 	% The Greeks used geometry to get around the precision errors of irrational numbers. That's why they used line segments to teach arithmetic.
 	
 	% Elements is great and super important, but in some ways it held mathematics back. It was taught for over 2000 years, and many people assumed it could not be wrong. In fact, it is not considered formal by modern standards, and it is not a general theory of geometry. Critique of the 5th postulate. Non-Euclidean geometry, postulates of special relativity, Galois theory, modern mathematics does not treat axioms as "self-evident" but rather as starting points. Elements assumed many things to be generally true, which are not: numbers are one-dimensional, mathematical objects must be constructed, mathematics must describe the world as we observe it (2d/3d space, concrete objects), mathematics requires straightedge and compass construction, there is only one way to describe geometry. None of these are true, and modern mathematics began when people started questioning Elements.
-	\vspace{1mm}
+	\vspace{3mm}
 \end{tcolorbox}
-\vspace{7mm}
+\vspace{2\baselineskip}
 
 % Aristotle's metaphysics influences science for 2000 years.
 
@@ -1137,6 +1193,7 @@ Blah \\\\
 
 \subsubsection{Point Particles and Forces}
 
+% Descartes publishes the idea of a "frame of reference" in 1637 (Fermat also discovers it).
 % Descartes founds the rationalist, mechanistic philosophy that early models adhere to (1644). Newton publishes the Principia in 1687.
 % Basic assumptions based on observation: continuity, determinism, casuality, forces result from collision, absolute space and time
 % Mechanics - study of the behavior of point/body/bodies subjected to forces
@@ -1258,11 +1315,10 @@ Imagine that you throw a ball in the air and somehow exactly measure its height 
 % Need digital data
 
 \begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
-	\vspace{2mm}
+	\vspace{3mm}
 	\begin{center}
 		\textbf{The Rationale for Binary Numbers}
 	\end{center}
-	\vspace{1mm}
 	% Implementation details: signals, logic levels, noise, power, reliability
 	% Close relationship with classical, two-valued logic
 	
@@ -1302,9 +1358,9 @@ Imagine that you throw a ball in the air and somehow exactly measure its height 
 	% Binary computers and boolean algebra (logic)
 	
 	% Beyond binary - fuzzy logic (briefly, discuss more deeply later)
-	\vspace{1mm}
+	\vspace{3mm}
 \end{tcolorbox}
-\vspace{7mm}
+\vspace{2\baselineskip}
 
 % Encoding doesn't have to use numerals. It can use letters, pictures, whatever. You can encode anything anywhere.
 
@@ -1381,11 +1437,10 @@ Writing is distinct from speaking in that it is a reliable method of storing and
 % Quipu, number systems
 
 \begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
-	\vspace{2mm}
+	\vspace{3mm}
 	\begin{center}
 		\textbf{Symbology in Natural Languages}
 	\end{center}
-	\vspace{1mm}
 	% Symbol - syntactic, general term
 	% Glyphs - syntactic, a graphical representation
 	% Characters - semantic, associated with meaning (in computing, it refers to an "encoded character" that is represented by a glyph), a unit of information (which is interpreted by means of a type)
@@ -1400,9 +1455,9 @@ Writing is distinct from speaking in that it is a reliable method of storing and
 	A \textit{symbol} is a syntactic mark that is understood to represent a semantic idea. For example, the numeral "$2$" is a symbol for the abstract concept of the number known as "two," the quantity of items in a pair. Symbology is universal for mankind, as it is an exercise of our capacity for abstract thought. Humans can leverage the pattern-recognizing power of the brain to associate symbols or sequences of symbols (also known as \textit{strings}) with ideas. Thus, we can proliferate information textually by means of a \textit{writing system}. \\
 	
 	Languages are diverse, and so are their writing systems.
-	\vspace{1mm}
+	\vspace{3mm}
 \end{tcolorbox}
-\vspace{7mm}
+\vspace{2\baselineskip}
 
 % Constructed languages, a subset of which are formal
 % Trade language, lingua franca, Latin
@@ -1657,11 +1712,10 @@ The Seer has premises for his conclusion, but the rules of inference involved in
 % Buddhism - intuition is a faculty of the mind of immediate knowledge
 
 \begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
-	\vspace{2mm}
+	\vspace{3mm}
 	\begin{center}
 		\textbf{What is Truth?}
 	\end{center}
-	\vspace{1mm}
 	Truth, in the absolute sense, has been discussed and debated since the dawn of man. It is a concept that seems obvious to us, and yet it always seems to elude our understanding. Philosophers have formulated dozens of theories of truth over the years, with some asserting that truth is an objective property of our universe and others asserting that truth is a useful lie that mankind has invented. And while there is merit in those claims that truth is not real, we still see around us the technology that was born out of our intuitive sense of true and false. Especially in computer science where everything is represented in binary. \\
 	
 	The traditional theories of truth have been termed \textit{substantive}. That is, they assert that truth has some basis in reality and that it is a meaningful thing to discuss. Early theories of truth from Ancient Greece are considered the foundation of \textit{correspondence theory}, the idea that statements are true if their symbols are arranged in such a way that they express an abstract thought that accurately describes reality. This theory defines truth in the context of a relationship between language and objective reality. It is a useful philosophy that allows us to orient ourselves in the world around us. However, many philosophers believe that truth cannot be explained by such a simple rule. In fact, there are many more factors that could play a role in the concept. \\
@@ -1681,12 +1735,12 @@ The Seer has premises for his conclusion, but the rules of inference involved in
 	where "$P$" is simply the metalanguage sentence $P$ rendered in the object language. That is, the \textit{syntactic representation} is assigned a \textit{truth value} of true if and only if the semantic meaning it represents is considered true (according to whatever theory of truth you employ). By this rule, we say that "$2+2=4$" is true if and only if \textit{the sum of the number $2$ with the number $2$ is equal to the number $4$}. Minimalist redundancy theories modify Tarski's theory by interpreting "$P$" as an implicit assertion of the truth of $P$. The sentence "$P$," which asserts that $P$ is true, is then false if and only if its semantic meaning $P$ is false. \\
 	
 	\parbreak
-	\vspace{4mm}
+	\vspace{\baselineskip}
 	
 	The debate on the nature of truth rages on \textit{in perpetuum}. However, for our purposes, we must be practical. There is truth in logic and mathematics and computer science as well, but, in practice, it has little to do with the debates on \textit{absolute truth} described above. Their truth is \textit{relative}. That is, it relies on the assumption that our premises are true. Cognizant of this, we move forward with our thinking, searching for truths within these arbitrary boundaries. \\
-	\vspace{1mm}
+	\vspace{3mm}
 \end{tcolorbox}
-\vspace{7mm}
+\vspace{2\baselineskip}
 
 %----------------------------------------
 
@@ -1722,20 +1776,20 @@ Abductive reasoning allows us to ignore the many causes that are unlikely in fav
 %-------
 
 \begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
-	\vspace{2mm}
+	\vspace{3mm}
 	\begin{center}
 		\textbf{Induction and Abduction}
 	\end{center}
-	\vspace{1mm}
 	% Can computers induce?
 	% Machine learning simulates induction deductively
 	% Deductive computers, AI, General AI, Artificial Conciousness
 	% Calculation vs Computation
 	
 	% Fuzzy expert systems "abduce"
-	\vspace{1mm}
+	TEXT
+	\vspace{3mm}
 \end{tcolorbox}
-\vspace{7mm}
+\vspace{2\baselineskip}
 
 %----------------------------------------
 
@@ -1755,15 +1809,14 @@ Surprisingly enough, \textit{special-purpose computers} have also been around fo
 The line between calculator and computer began to blur with the introduction of \textit{programmable calculators} in the 1960s. Many modern high-end calculators are programmable in Turing-complete languages such as TI-BASIC or even C or C++, which officially makes them computers. Once we start implementing \textit{sequential logic} with components like SR latches or D flip-flops, we are storing state, and state is a requirement for computing. Circuits that use sequential logic can be considered automata and, given enough complexity, computers. \\
 
 \begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
-	\vspace{2mm}
+	\vspace{3mm}
 	\begin{center}
 		\textbf{Modern Computing is American}
 	\end{center}
-	\vspace{1mm}
 	TEXT
-	\vspace{1mm}
+	\vspace{3mm}
 \end{tcolorbox}
-\vspace{7mm}
+\vspace{2\baselineskip}
 
 % Hey, let's build machines to do this instead.
 % Wait, what exactly are we building? Let's model the problem.
@@ -1783,7 +1836,7 @@ The line between calculator and computer began to blur with the introduction of 
 \part*{Theory of Computation}
 \addcontentsline{toc}{part}{\tocpartglyph Theory of Computation}
 
-\vspace{4mm}
+\vspace{\baselineskip}
 \begin{displayquote}
 	\textit{Theory is relevant to you because it shows you a new, simpler, and more elegant side of computers, which we normally consider to be complicated machines. The best computer designs and applications are conceived with elegance in mind. A theoretical course can heighten your aesthetic sense and help you build more beautiful systems.}
 	\begin{flushright}
@@ -1920,11 +1973,10 @@ Note that the actual complexity of the concrete cuckoo clock would be a bit more
 \subsection{Formalization of an Abstract Machine}
 
 \begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
-	\vspace{2mm}
+	\vspace{3mm}
 	\begin{center}
 		\textbf{A Brief Introduction to Formal Grammars}
 	\end{center}
-	\vspace{1mm}
 	A formal grammar is a finite set of \textit{production rules} that specifies what a particular language is supposed to look like. It formalizes the structure of "grammatical units" in a language. This is done in order to enforce a specific alphabet, a consistent lexicon, and a predictable sentence structure, all of which contribute to how useful and distinct any given language is. \\
 	
 	A grammar $G$ consists of the following components:
@@ -1957,9 +2009,9 @@ Note that the actual complexity of the concrete cuckoo clock would be a bit more
 	
 	Notice that the first example expresses an actual thought whereas the second example, while still syntactically a sentence, is nonsensical. Because it allows meaningless sentences, the grammar described above belongs to the class of \textit{context-free grammars}.
 	
-	\vspace{1mm}
+	\vspace{3mm}
 \end{tcolorbox}
-\vspace{7mm}
+\vspace{2\baselineskip}
 
 %----------------------------------------
 
@@ -1980,11 +2032,10 @@ A finite-state machine is a model of computation that can be in exactly one \tex
 FSMs can read and understand \textit{regular languages}, which are languages that can be expressed using a \textit{regular expression} or \textit{regex}. A regex consists of constants (which denote sets of strings) and operators (which denote operations on those sets). If an FSM receives an input (such as a regex) at a given state, and its state-transition function maps that state and input to another state, we say that the FSM \textit{matches} that input. That is, it considers that input valid and will perform an action accordingly. \\\\
 
 \begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
-	\vspace{2mm}
+	\vspace{3mm}
 	\begin{center}
 		\textbf{A Quick Summary of Regular Expressions}
 	\end{center}
-	\vspace{1mm}
 
 	Given a finite, non-empty input alphabet $\Sigma$, there are three constants defined as regexes:
 	
@@ -2013,9 +2064,9 @@ FSMs can read and understand \textit{regular languages}, which are languages tha
 		\item $-$, which, when placed between two regexes in brackets, denotes a range of characters.
 		\item $[\;\hat{}\quad]$, which matches a single character which is not in the brackets.
 	\end{itemize}
-	\vspace{1mm}
+	\vspace{3mm}
 \end{tcolorbox}
-\vspace{7mm}
+\vspace{2\baselineskip}
 
 Not only is it correct to say that a finite-state machine can understand any regular expression, but also it is true that FSMs and regexes are equivalent. That is, a regex can be written in the form of an FSM and vice versa. Indeed, a regular language "program" can be expressed as a regex, a DFA, or an NFA. For example, the regex [A-Z][a-z]$^*$[0-9] describes any string that starts with a single uppercase letter, is followed by zero or more lowercase letters, and ends with a single digit. This expression can also be represented by the following DFA. Note that state $3$ is circled twice to indicate that it is a final state. The automaton will continue to run until it receives a sequence of input that allows it to transition to its final state.\\
 
@@ -2098,11 +2149,10 @@ A machine like this need not be a real-world computer. In fact, in his original 
 As long as you have unlimited space to work in, the freedom to read and write symbols anywhere in that space, a list of instructions to follow exactly, and the knowledge of what to do next, you have a Turing machine. We can now visualize the person Turing referred to as a "computer." It is a man with an infinitely large piece of paper, a pen that he writes symbols with, a list of instructions that tells him which symbols to write, where on the paper to move his pen tip, which instruction to perform next, and a knowledge of which instruction he is currently performing. Many systems of logic, such as programming languages, are Turing-complete. Many things not traditionally thought of as "systems of logic" are \hrefcolor[blue]{https://www.toothycat.net/~hologram/Turing/index.html}{\underline{also Turing-complete}}. \\\\
 
 \begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
-	\vspace{2mm}
+	\vspace{3mm}
 	\begin{center}
 		\textbf{Turing Machines and Consciousness}
 	\end{center}
-	\vspace{1mm}
 	In 1950, Turing developed the \textit{Turing test}, a test of a machine's ability to exhibit behavior indistinguishable from that of a human. It involves an interrogator who is tasked with having two separate text conversations and determining which of the two participants is actually a machine. If the interrogator cannot distinguish a difference, the machine has passed the test. Despite its importance to the philosophy of computer science, the test is not a good indicator of whether or not a computer can think. The test says more about how gullible the interrogator is than how conscious the computer is. At the end of the day, the computer is still following its programming. \\
 	
 	What about this man whom Turing calls a "computer"? Would he pass the test, given the right programming? Perhaps he would. But that would not make him a \textit{person}. What kind of person is this man if he follows whatever instructions he is given? He is a slave, a person who always obeys. Could we say then that machines are also, in a certain sense of the word, slaves? Perhaps this is where the term \textit{master-slave technology} came from. Regardless, it is important to make a philosophical distinction here about what separates humans from machines or, more precisely, what distinguishes \textit{thought} from \textit{computation}. \\
@@ -2124,9 +2174,9 @@ As long as you have unlimited space to work in, the freedom to read and write sy
 			in response to a theological objection to artificial consciousness.
 		\end{flushright}
 	\end{displayquote}
-	\vspace{1mm}
+	\vspace{3mm}
 \end{tcolorbox}
-\vspace{7mm}
+\vspace{2\baselineskip}
 
 A single-tape Turing machine is formally defined as a septuple $(Q,\Gamma,b,\Sigma,\delta,q_0,F)$, where
 
@@ -2189,11 +2239,13 @@ It is no coincidence that real-world computers today use array-based memory. Arr
 A subset of register machines known as \textit{random-access machines} allow for \textsc{jump} instructions (e.g. jump to register \#5623) in addition to standard sequential traversal of memory (e.g. move right, move right, move right, etc). This allows computers to accomplish a task with fewer instructions, but the expressive powers of random-access machines and Turing machines are equivalent because both are capable of \textit{eventually} solving the task. Modern computers can be described as random-access machines because they use \textit{random-access memory} (RAM). In RAM, the time to access information is independent of physical location. From a performance perspective, this means that we do not have to consider \textit{where} we store things in memory. It's all uniformly fast. This allows for the construction of \textit{node-based} data structures, which we will discuss in a later section. \\\\
 
 \begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
-	\vspace{2mm}
+	
+	\vspace{3mm}
+	
 	\begin{center}
 		\textbf{Exploring Exotic Automata}
 	\end{center}
-	\vspace{1mm}
+
 	It is worth thinking about automata whose memory is modeled by non-list data structures. For example, a pushdown automaton uses a stack to model its memory and because of this, it is not Turing-complete. What if it used a queue instead? In this case, it would be Turing-complete because it could dequeue items to traverse the memory and then enqueue them to avoid data loss. One could envision this as a Turing machine whose infinite tape ends are glued together to form an infinite loop. The machine can only move in one direction, but it can still access every cell because its tape is circular. \\
 	
 	The memory can also be modeled by non-sequential data structures to create some bizarre models of computation. What if the memory of a computer was laid out not as an array, but as an undirected tree? What if it was organized according to an algebraic structure like a monoid or a ring? I'm not even going to pretend that I understand what kind of behavior this would result in. But it is an \hrefcolor[blue]{https://kluedo.ub.uni-kl.de/frontdoor/index/index/docId/4400}{\underline{area of active research}}. \\
@@ -2213,9 +2265,11 @@ A subset of register machines known as \textit{random-access machines} allow for
 		\item A \textbf{finite} alphabet $\Sigma$. If it were instead infinite, the automaton could have a continuous alphabet. What kind of alphabet's symbols exist on a spectrum? Perhaps you could call \textit{sound} a "language" with a continuous alphabet known as frequency. An automaton with an infinite alphabet would not be digital and would not use bits. It would be an analog computer. Analog computers do exist, and they were popular in the 1950s and 1960s, but nowadays we write software for digital computers. \textit{Fun fact:} analog synthesizers, which are still commonly used in electronic music, are considered a kind of analog computer.
 		\item A transition \textbf{function} $\delta$. If it were instead a relation (i.e. inputs are mapped to more than one output), the automaton would be nondeterministic. It is suspected that nondeterministic Turing machines would be able to solve NP-complete problems, which is a computational feat that has not yet been accomplished in a tractable way by a deterministic Turing machine.
 	\end{itemize}
-	\vspace{1mm}
+
+	\vspace{3mm}
+	
 \end{tcolorbox}
-\vspace{7mm}
+\vspace{2\baselineskip}
 
 While more exotic memory structures are theoretically possible, real-world computers use \textit{arrays} of memory. Since Turing machines can solve any computable problem and data structures are used by computers to solve problems, it follows that data structures can be simulated by Turing machines. Because register machines use array-based memory and are Turing-equivalent, it also follows that \textbf{all data structures can be implemented using arrays}. This is a very useful insight, and it will be discussed further in Section 3. \\
 
@@ -2460,11 +2514,10 @@ Notice that $S$ has cardinality $3$ and that $\mathcal{P}(S)$ has cardinality $2
 With the work of Kurt G\"odel in 1940 and of Paul Cohen in 1963, it was established that the continuum hypothesis cannot be proven or disproven. It is \textit{independent} of the axioms of Cantor's set theory. It is also independent of the axioms of the current foundation of mathematics, the \textit{Zermelo-Fraenkel set theory with the axiom of choice} (ZFC set theory). That said, since set theory works regardless of whether or not the continuum hypothesis is true, most mathematicians operate assuming that it \textit{is} true because the set of real numbers does appear to exhibit the behavior we would expect from a "continuum." Thus, independent of any particular set theory, we may assume that, for any transfinite cardinal $\lambda$, there is no cardinal $\kappa$ such that $\lambda<\kappa<2^\lambda$. \\\\
 
 \begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
-	\vspace{2mm}
+	\vspace{3mm}
 	\begin{center}
 		\textbf{Backlash Against Cantor's Set Theory}
 	\end{center}
-	\vspace{1mm}
 	Typically, when a proof is submitted, it is either quickly accepted by the mathematical community or quickly shown to be flawed. In the case of Georg Cantor's set theory, controversy loomed for many decades and objections came from many different angles. Most of the grievances came from the \textit{constructivists}, a group that was partially founded by Cantor's mentor, Leopold Kronecker. \\
 	
 	Constructivism is a \textit{philosophy of mathematics} that asserts that it is necessary to find or \textit{construct} a mathematical object in order to prove that it exists. Unlike \textit{classical mathematics}, \textit{constructive mathematics} does not adhere to the \textit{law of the excluded middle}, which states that a well-formed proposition must be either true or false. According to this philosophy, a \textit{proof by contradiction} (a proof of an object's existence founded in disproving the object's non-existence) is invalid. Constructivists took issue with the characterization of \textit{actual infinities} (e.g. the uncountably infinite set $\mathbb{R}$) as legitimate mathematical objects worthy of study. Their mathematical philosophy only permitted the existence of \textit{potential infinities} (e.g. the countably infinite set $\mathbb{N}$). Kronecker did not consider Cantor's original 1874 proof of a difference in cardinality between $\mathbb{N}$ and $\mathbb{R}$ as constructive. He remained staunchly opposed to Cantorian set theory and its hierarchy of the infinite, stating that \\
@@ -2509,8 +2562,9 @@ With the work of Kurt G\"odel in 1940 and of Paul Cohen in 1963, it was establis
 		\end{flushright}
 	\end{displayquote}
 	\vspace{1mm}
+	
 \end{tcolorbox}
-\vspace{7mm}
+\vspace{2\baselineskip}
 
 \subsubsection{Cantor's Later Years and Legacy}
 
@@ -2631,11 +2685,12 @@ f(w)=
 The decision problem can be phrased in the same way, but, in the case of a recursively enumerable $L$, it is called \textit{partially decidable} or \textit{semidecidable}. That is, we can decide a word \textit{is} in the language, but we cannot formally decide that it is \textit{not}. In mathematical terms, statements like this can be \textit{proven}, but not \textit{disproven}. If that sounds incredibly unintuitive, that's because it is. This concept will come up later in a discussion of Kurt G\"odel's contribution to computability. \\\\
 
 \begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
-	\vspace{2mm}
+	\vspace{3mm}
+	
 	\begin{center}
 		\textbf{Decidability and Semidecidability for Humans and Computers}
 	\end{center}
-	\vspace{1mm}
+
 	Recall that recursive languages are also recursively enumerable. That is, their recursive nature is \textit{countable}. This is because recursive languages can construct only \textit{finite} sentences that have an end. On the other hand, a recursively enumerable language can have sentences that expand forever, always ready to accept another clause before its period. \\
 	
 	The following sentence is recursive (and, thus, also recursively enumerable): 
@@ -2671,9 +2726,9 @@ The decision problem can be phrased in the same way, but, in the case of a recur
 	This conclusion assumes that the computer we are talking about is a real computer in the real world, where time and space are finite. The reason that a Turing machine is a helpful abstraction is that it has an infinite amount of time and space at its disposal. Theoretically, it could run a program composed of a set of infinitely looping instructions to its "completion." Note the choice of the phrase "a set of infinitely looping instructions" instead of "an infinite set of instructions." The latter is called a \textit{stream}, and it is not Turing-recognizable. $\omega$-automata, however, can recognize it. \\
 	
 	Many well-known functions can be defined recursively, such as the factorial function $f(n)=n!$. What is an example of a function that is recursively enumerable, but not recursive? To answer this, I would like to recommend \hrefcolor[blue]{https://www.youtube.com/watch?v=7Kd3R\_RlXgc}{\underline{this video}}, in which a mechanical calculator is instructed to divide a number by zero. The calculator knows the method for division, but this method is only effective in the cases where the denominator is not zero. In the case where the denominator is zero, it attempts to carry out the calculation, faithfully incrementing its count of how many times the denominator fits into the numerator. Of course, zero fits into any number an infinite amount of times, so the calculator will continue to calculate until, as the videographer suggests, it potentially catches fire. The program will never terminate, and a result will never be returned, so we can say that division over any set including zero is only semidecidable.
-	\vspace{1mm}
+	\vspace{3mm}
 \end{tcolorbox}
-\vspace{7mm}
+\vspace{2\baselineskip}
 
 The problems that Turing machines can solve are either decidable or semidecidable. What, then, is \textit{undecidable}? What kinds of problems do non-recursively enumerable languages describe? Consider the same decision problem from before: "Let $L$ be a language represented by a set. Given a word $w$, is $w$ a well-formed word in $L$?" If $L$ is non-recursively enumerable, a Turing machine cannot ever decide this problem because it cannot recognize $L$. Thus, such decision problems are \textit{undecidable} for all inputs, and any related function problems have no answer. \\
 
@@ -2715,15 +2770,17 @@ This presentation of problems was, in essence, the inception of \textit{Hilbert'
 % The Big 3 during the crisis: logicism, intuitionism/constructivism, formalism
 
 \begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
-	\vspace{2mm}
+	\vspace{3mm}
+	
 	\begin{center}
 		\textbf{Metamathematics}
 	\end{center}
-	\vspace{1mm}
+
 	TEXT
-	\vspace{1mm}
+	
+	\vspace{3mm}
 \end{tcolorbox}
-\vspace{7mm}
+\vspace{2\baselineskip}
 
 As a proponent of the philosophy of mathematics known as \textit{formalism}, Hilbert believed that mathematics was not a description of some abstract part of reality, but was rather akin to a game where pieces could be moved according to a set of rules. He believed that a mathematical "game" was played with "pieces" from an arbitrary set of \textit{a priori} truths. These pieces are called \textit{axioms}, and they are manipulated according to an arbitrary set of \textit{inference rules} to construct \textit{conclusions}. These conclusions can then be used as \textit{premises} for the inference of further conclusions. Thus, formalism avers that mathematics is purely \textit{syntactic}. It is nothing more than the manipulation of strings of symbols by logical rules, and any sort of \textit{semantic meaning} derived from these strings is merely the product of an \textit{interpretation}. \\
 
@@ -2805,11 +2862,11 @@ A theory is syntactic in nature. It is a set of strings written in a language $\
 % MapReduce is a monoid based alg
 
 \begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
-	\vspace{2mm}
+	\vspace{3mm}
+	
 	\begin{center}
 		\textbf{Computability is Recursion}
 	\end{center}
-	\vspace{1mm}
 	TEXT
 	
 	% A function can be written iteratively and recursively
@@ -2817,9 +2874,9 @@ A theory is syntactic in nature. It is a set of strings written in a language $\
 	% Some tasks are suited to iteration, others to recursion. What is the deciding factor?
 	% Recursively enumerable / recursive => computable
 	% In a well-behaved recursive function, you approach a base case => there is an end in sight for the computation.
-	\vspace{1mm}
+	\vspace{3mm}
 \end{tcolorbox}
-\vspace{7mm}
+\vspace{2\baselineskip}
 
 %----------------------------------------
 
@@ -4672,6 +4729,8 @@ Summarize the appendices below...
 % Categorization is a useful tool for orienting yourself, but it is possible to go too far down the endless rabbit hole. You cannot seperate reality into neat little piles. I can show you green, and I can show you blue, but there are infinitely many shades in between. You can measure wavelengths of light all you want, but that's not what color is.
 % There are so many distractions today. It is easy to fall into the trap of spending non-negligible amounts of time on mediocre things. We have so little time here before the ride slows to a stop and we must exit to our left. Spend your time on things that are worth a damn. In my case... music, academics, physical fitness, fashion and visual art, writing and language, philosophy. And \textit{good} video games (I explictly qualify video games with \textit{good} because 95% of the games I see are time-wasters).
 % Serious artisans use math. Math takes the guesswork out of things and tells you exactly what you are doing.
+% What does it mean for something to be real?
+% Teaching yourself gives you something that is harder to discover when you are taught by teachers. When a teacher tells you something, you are inclined to just accept it as true and on the next test instead of questioning it. Before writing about any topic or even any technical word, I read about it from many different sources until I had understood the semantic idea and made my own conclusion about it. Often times, there would be slight inconsistencies between sources, and I would have to read a lot of opinions and comments and articles and etymolgies and histories until I decided that one source was correct and the other was mistaken. Self-teaching permits and encourages you to be skeptical and an \textit{independent thinker} in the most literal sense of the phrase: a person whose thought is their own.
 
 \newpage
 
@@ -4682,9 +4741,21 @@ Summarize the appendices below...
 \toclineskip
 \section{How \textit{The Internet} Changed Humanity}
 
+% Maybe do this chronologically from when the first networks were made.
+% Maybe do the whole thing in short, punchy sentences written in present tense.
+% Maybe throw a timeline on the side (but only after the words are final).
+
 % Mass communication becomes commonplace and pedestrian
 % Advertisement become omnipresent
-% Privacy dwindles to nothing. Seriously. Unless you have been taking precautionary privacy measures since you started using internet-capable electronics, they already know all of your details. The best you can do is stop putting more information out there. It's like throwing coins into a well. You can't get your coins back, but you can stop throwing coins in.
+% Privacy dwindles to nothing. Seriously. Unless you have been taking precautionary privacy measures since you started using internet-capable electronics, \textit{they} already know all of your details. The best you can do is stop putting more information out there. It's like throwing coins into a well. You can't get your coins back, but you can stop throwing coins in.
+% Illogical ideas spread like wildfire, absurd beliefs find safe havens, headstrong lunatics spawn communities when there normally would not be enough like-minded people in one geographical area for such groups.
+% Money-making algorithms stoke the fire of confirmation bias, sending people to sites that further and further solidify people's beliefs. Radicalism booms.
+% Social media - a lot to talk about here, the impact on human psychology
+
+% The potential for self-education skyrockets. The Internet becomes the greatest library Man has ever built.
+% People under censorship-ridden, authoritarian regimes gain a link to the outside world.
+% The world has a chatroom. We can talk to people we will never meet and see perspectives we would never would have seen otherwise.
+% Physical location becomes less important. Jobs can now be "remote," socializing no longer depends so heavily on distance.
 
 \newpage
 
@@ -4694,6 +4765,10 @@ Summarize the appendices below...
 
 \toclineskip
 \section{Thoughts on Education}
+
+% http://groupoids.org.uk/context.html (Mathematics in Context)
+
+% "That is, the training of mathematicians has its emphasis on rigour, technique and achievement, and has little emphasis on problem formulation, or concept formulation. By contrast, a study of the history of Mathematics shows that in the applications of Mathematics it is the concepts and language which are often more important than the particular theorems."
 
 % None of this is to say that my choices played no role in my education. They certainly did. I could have done things differently. But I put a great deal of effort into learning and felt that I made responsible choices (i.e. choices that would help me excel). Still, I always felt like my knowledge was fragile and skin-deep. I put my faith in the system, and it is only now, after spending some time educating myself outside of the system, that I see clearly the flaws in the pedagogy of my youth.
 
@@ -4709,6 +4784,8 @@ Summarize the appendices below...
 % Why is everyone feverishly taking notes? Taking notes in lecture is *pointless*. The professor should be handing out fully documented notes that cover *all* of the material that is in-scope. You cannot listen to or process what the professor is saying if you are taking notes. Anecdote of machine learning.
 % In order to learn, we need time to do nothing.
 % Why do people dog on art majors? Art is actually a perfectly reasonable thing to study in college. But there is a difference between studying art and providing goods or services. Math is also an art. It just happens to have more useful applications. And that's not "more useful" applications, it's more "useful applications." Successful artists and mathematicians both make useful things that people care about. But learning and applying are different things, and modern college curriculums do not straddle the gap properly.
+% Why was the machine learning course so good? 1. Very precise and extensive notes written by the professor were publicly available, 2. homework was not problem sets with 20 problems, they were 2 or 3 problems that were long but very elucidating, 3. many real-world examples were given.
+% Why do insights have to be acquired through rote practice? Why can't they just be taught?
 
 % What if we applied this kind of intuitive learning approach to language acquisition? One-to-one word translations are an artificial construct. Really, words in a foreign language are descriptors of abstract concepts and one-to-one semantic relationships are rare. A more effective approach might be to provide many translations for a single word in order to convey to the learner the abstract concept that is intuitive for native speakers.
 
