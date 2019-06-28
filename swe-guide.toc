@@ -5,18 +5,18 @@
 \contentsline {part}{{\relax \fontsize {14.4}{18}\selectfont {\fontfamily {OrnementsADF}\fontencoding {U}\fontseries {m}\fontshape {n}\selectfont \char 14}\hspace {1.5mm}}Philosophy of Computation}{11}{part*.8}% 
 \vspace {\normalbaselineskip }
 \contentsline {section}{\numberline {1}{Information and Communication}}{12}{section.1}% 
-\contentsline {subsection}{\numberline {1.1}{Categories of Being}}{13}{subsection.1.1}% 
-\contentsline {subsubsection}{\numberline {1.1.1}{Properties}}{13}{subsubsection.1.1.1}% 
-\contentsline {subsubsection}{\numberline {1.1.2}{Classes}}{13}{subsubsection.1.1.2}% 
-\contentsline {subsubsection}{\numberline {1.1.3}{Objects}}{14}{subsubsection.1.1.3}% 
-\contentsline {subsubsection}{\numberline {1.1.4}{Relations}}{14}{subsubsection.1.1.4}% 
-\contentsline {subsubsection}{\numberline {1.1.5}{Taxonomies and Ontologies}}{14}{subsubsection.1.1.5}% 
-\contentsline {subsection}{\numberline {1.2}{Classical Metaphysics}}{17}{subsection.1.2}% 
-\contentsline {subsubsection}{\numberline {1.2.1}{\textit {Henosis} and \textit {Arche}}}{17}{subsubsection.1.2.1}% 
-\contentsline {subsubsection}{\numberline {1.2.2}{Democritus' Atomism}}{17}{subsubsection.1.2.2}% 
-\contentsline {subsubsection}{\numberline {1.2.3}{Plato's Theory of Forms}}{17}{subsubsection.1.2.3}% 
-\contentsline {subsubsection}{\numberline {1.2.4}{Aristotle's Hylomorphism}}{19}{subsubsection.1.2.4}% 
-\contentsline {subsection}{\numberline {1.3}{Theories and Models}}{22}{subsection.1.3}% 
+\contentsline {subsection}{\numberline {1.1}{Categories of Being}}{14}{subsection.1.1}% 
+\contentsline {subsubsection}{\numberline {1.1.1}{Properties}}{14}{subsubsection.1.1.1}% 
+\contentsline {subsubsection}{\numberline {1.1.2}{Objects}}{14}{subsubsection.1.1.2}% 
+\contentsline {subsubsection}{\numberline {1.1.3}{Classes}}{15}{subsubsection.1.1.3}% 
+\contentsline {subsubsection}{\numberline {1.1.4}{Relations}}{15}{subsubsection.1.1.4}% 
+\contentsline {subsection}{\numberline {1.2}{Classical Metaphysics}}{18}{subsection.1.2}% 
+\contentsline {subsubsection}{\numberline {1.2.1}{\textit {Henosis} and \textit {Arche}}}{18}{subsubsection.1.2.1}% 
+\contentsline {subsubsection}{\numberline {1.2.2}{Democritus' Atomism}}{18}{subsubsection.1.2.2}% 
+\contentsline {subsubsection}{\numberline {1.2.3}{Plato's Theory of Forms}}{18}{subsubsection.1.2.3}% 
+\contentsline {subsubsection}{\numberline {1.2.4}{Aristotle's Hylomorphism}}{20}{subsubsection.1.2.4}% 
+\contentsline {subsection}{\numberline {1.3}{Theories and Models}}{20}{subsection.1.3}% 
+\contentsline {subsubsection}{\numberline {1.3.1}{Euclid's \textit {Elements}}}{20}{subsubsection.1.3.1}% 
 \contentsline {subsection}{\numberline {1.4}{Modeling Physical Reality}}{22}{subsection.1.4}% 
 \contentsline {subsubsection}{\numberline {1.4.1}{Pre-scientific Thought}}{22}{subsubsection.1.4.1}% 
 \contentsline {subsubsection}{\numberline {1.4.2}{Point Particles and Forces}}{22}{subsubsection.1.4.2}% 
@@ -24,12 +24,12 @@
 \contentsline {subsubsection}{\numberline {1.4.4}{Quantum States and Operators}}{22}{subsubsection.1.4.4}% 
 \contentsline {subsection}{\numberline {1.5}{Information Theory}}{22}{subsection.1.5}% 
 \contentsline {subsection}{\numberline {1.6}{Signals and Systems}}{22}{subsection.1.6}% 
-\contentsline {subsection}{\numberline {1.7}{Semiotics, Language, and Code}}{25}{subsection.1.7}% 
+\contentsline {subsection}{\numberline {1.7}{Semiotics, Language, and Code}}{26}{subsection.1.7}% 
 \vspace {\normalbaselineskip }
 \contentsline {section}{\numberline {2}{Reasoning and Logic}}{27}{section.2}% 
 \contentsline {subsection}{\numberline {2.1}{The Syntax and Semantics of Argument}}{27}{subsection.2.1}% 
 \contentsline {subsection}{\numberline {2.2}{The Structure of Proof}}{29}{subsection.2.2}% 
-\contentsline {subsection}{\numberline {2.3}{The Oracle, the Seer, and the Sage}}{30}{subsection.2.3}% 
+\contentsline {subsection}{\numberline {2.3}{The Oracle, the Seer, and the Sage}}{31}{subsection.2.3}% 
 \contentsline {paragraph}{{The Oracle}}{31}{paragraph*.10}% 
 \contentsline {paragraph}{{The Seer}}{31}{paragraph*.11}% 
 \contentsline {paragraph}{{The Sage}}{32}{paragraph*.12}% 

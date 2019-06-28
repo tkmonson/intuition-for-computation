@@ -435,6 +435,12 @@ oneside, % One page layout (no page indentation)
 
 \newpage
 
+%--- FINAL CHECKS -----------------------
+
+% Standard spacing before and after special content
+% Adverbs. Don't use them unless they work really well.
+% Header check
+
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
 %    PREFACE
@@ -589,6 +595,8 @@ I find it difficult to describe what this book is. And yet, I find it easy to ex
 
 % I begin writing this so that understand it. Then, it got big enough that I thought it could be of use to others, so I started to write it in such a way that someone with less formal education than me could understand it. Then, I realized that in order to really get it, I had to write about these complex topics in such a way that someone outside of CS could feasibly understand it, given enough time and drive. I wanted to explain the insights one can glean from higher mathematics and theoretical computer science, and I wanted to do it in such a way that it was really easy to understand. This is intuitive understanding.
 % The words on the page will not teach the material to you. They are simply there to guide your thoughts toward understanding. You have to spend time in thought to foster intuition.
+% This guide began as a study list for software interviews. What does it mean to study for a software interview? Is it just doing a bunch of sample problems? How prepared should you be? Is the goal simply to receive an offer or to be a truly excellent candidate? I would argue that it is better to pursue the latter, if possible, because it means you are building yourself, not just building a temporary performance that will be showcased at interviews. You make yourself an asset. Also, as long as you have only a surface-level understanding, you will always feel like a fraud who knowledge is fragile and constantly waning.
+% The question should not be "How do I get a competitive software engineering job?" It should instead be "What makes a truly excellent software engineer?"
 % Discuss the goal of this guide. Discuss why someone might want to read it.
 % Discuss why content was chosen and why it is ordered the way it is.
 % Discuss why certain topics were left out.
@@ -600,6 +608,7 @@ I find it difficult to describe what this book is. And yet, I find it easy to ex
 % College dug deep, raw tunnels into hard earth. <Drawing of vertical lines>. Writing this book connected them all horizontally, leaving lanterns at the intersections so that one could see all the way from one end to the other. <Drawing of criss-crossing lines and nodes>. Now, picture these tunnels instead as interlocking length of fishing line. With my net woven, I can catch fish instead of floundering in the water with loose strings.
 % Computer science is not about computers, it is about computation. Computation is much broader than the study of computers. The concepts are everywhere.
 % Comment on these CS etymology alternatives: turingineer, turologist, datalogy, flow-charts-man (hilarious), applied metamathematician, applied epistemologist, hypologist (study of what is under? as in under systems?), computics (like 'physics', the science of computational phenomena, great name), computing science (equivalent to computics, but not Greek and not as cool) automatic information (pertaining to automata), infomatics ("what can be conceived," pretty badass, similar to mathematics ("what can be learned"), unfortunately taken).
+% What about the phrase "theoretical computer science"? The better term is computational science.
 % Not CS: information science (more associated with effective storage and dissemination of information, not computation), information technology (a business-oriented discipline focused on choosing and maintaining hardware and software for a company), software engineering (the effective implementation of theoretical CS concepts for the purpose of building software)
 % "I will rate these names based on accuracy, but I won't deny my bias toward the coolest sounding names"
 % Chapters and sections.
@@ -657,7 +666,7 @@ This place in which we find ourselves may indeed be post-Chaos, but confusion re
 
 Although we are initially confused, we naturally pursue an understanding of the chaos that surrounds us. We perceive the goings-on of our environment and draw \textit{information} from them, piecing together a \textit{knowledge} that orients us and gives meaning to the disorder of our existence. This is the crux of computation. It is the structured manipulation of \textit{data} into \textit{information} for the purpose of acquiring \textit{knowledge}. It shines a light into the darkness we call home. \\
 
-These terms---data, information, and knowledge---are broad enough to apply to a variety of systems. In fact, they appear in nearly every academic field and certainly within those that strive for objectivity. One can have data on, information about, and knowledge of anything that can be observed or experienced. As such, it is difficult to confine these terms to short and tidy definitions that are free of controversy. We will have to settle then for long, pragmatic definitions. \\
+These terms---data, information, and knowledge---are broad enough to apply to a variety of systems. In fact, they appear in nearly every academic field and certainly within those that strive for objectivity. One can have data on, information about, and knowledge of anything that can be observed or experienced. As such, it is difficult to confine these terms to short and tidy definitions that are both rigorous and free of controversy. We will have to settle then for long, pragmatic definitions. \\
 
 In this chapter, we will explore what computation is and why it matters. In some sense, computation is a kind of game in which \textit{pieces} are moved and transformed within a \textit{game space} according to a predetermined set of \textit{rules}. However, unlike most games, computation has no set goal. Nature shuffles its hazy pieces about, following arbitrary rules for reasons we cannot ascertain. Man, on the other hand, explicitly defines its pieces and rules, modeling them after Nature's strange mechanics. We invent \textit{win conditions} and play toward them, hoping that our computations will result in general solutions that will elucidate the knowledge we seek. \\
 
@@ -684,44 +693,83 @@ Here, we learn how this game is played and how it is woven into the fabric of ou
 \end{displayquote}
 \vspace{4mm}
 
-% What does information mean to you, the reader? Your intuition is correct.
-% There exists an elegant path that weaves its way through philosophy and physics, arrives at a very general definition of information, and then is only a few steps from a very general definition of communication. From there, we can specify the many means by which information is communicated. It may seem like this stuff is unrelated to computation, but try to keep an open mind.
-
-% So we start with chaos, confusion.
-
 The most general concepts are among the hardest to grasp, and \textit{information} is about as general as you can get. Potentially \textit{everything} can be described in terms of information---the physical world, all of literature and written language, and perhaps even our conscious experience. Thus, our path to a proper understanding of information and how it relates to reality will be an arduous one, requiring an open mind and an ample store of time set aside for contemplation. But it will also be an elegant one, weaving its way through philosophy and physics and arriving at an \textit{information theory} that we can use to explain the behavior of engineered systems, human language, and the intersection of the two: mechanical computation. \\
 
-You already have an idea of what information is, and it is likely that your intuition is broadly correct: information is something factual that tells you something. As we dive into more and more abstract topics, do not hesitate to fall back on your existing vocabulary for support. A word used technically is more formal and precise than the same word used casually, but the gist of it all is often the same. \\
+You already have an idea of what information is, and it is likely that your intuition is broadly correct: information is something factual that tells you something. As we dive into more and more abstract topics, do not hesitate to, in this way, fall back on your existing vocabulary for support. A word used technically is more formal and precise than the same word used casually, but the gist of it all is often the same. \\
 
-Recall the usual context in which technical language is born. A phenomenon is observed by a community, and it becomes the subject of casual discourse. It may even be a widespread concept that is discussed by society at large, in some way or another. The phenomenon is accordingly given an \textit{informal definition} and a name (or, perhaps, many names). Interested theoreticians then study the structure of the phenomenon and \textit{formalize} it. They give the phenomenon a \textit{formal definition} and bestow it a more permanent name, either one used previously or something new that is, in the namers' opinion, more apt. \\
+Recall the usual context in which technical language is born. A phenomenon is observed by a community, and it becomes the subject of casual discourse. It may even be a widespread concept that is discussed by society at large, in some way or another. The phenomenon is accordingly given an \textit{informal definition} and a name (or, perhaps, many names). Interested theoreticians then study the structure of the phenomenon and \textit{formalize} it. They give it a \textit{formal definition} and bestow it a more permanent name, either one used previously or something new that is, in the namers' opinion, more apt. In the latter case, the new term is disseminated throughout the community and perhaps to the wider public, where it may either replace or coexist with previous informal terms. \\
 
-Regardless, the namers must reach outside of the formalisms they have constructed and find a word from an informal language that captures the essence of their abstract thought. This is the beauty of good naming: such a word will, to an amateur, shed a shallow but wide light on this mysterious essence. And to an expert, it will illuminate the whole shebang, evoking in its concise informality all that they have previously learned. So... \\
+Regardless, the namers must reach outside of the formalisms they have constructed and find a word from an informal language that captures the essence of their abstract thought. This is the beauty of good technical jargon: such a word will, to an amateur, shed a shallow but wide light into the vast space of an idea, but it will also illuminate the whole shebang in the eyes of an expert, evoking in its concise informality all that he or she has previously learned on the subject. \\
 
-In the spirit of this principle, four words are given below, defined softly, that will act now as beacons in the dark of our ignorance and later as summaries of our hard-earned understanding:
+In the spirit of this principle, four words are given below, defined softly, that will act now as beacons in the dark of our ignorance and later as summaries of our hard-earned understanding: \\
 
-\begin{center}
-	\textit{\textbf{Data} is super fun and stuff}
-\end{center}
+\begin{displayquote}
+	\textit{
+		\textbf{Data} are pieces of information that are meaningless when considered separately. They are observable lacks of uniformity in reality, each of which may be represented by a symbol that conveys its particular difference from the norm. \\~\\
+		\textbf{Information} is an ordered arrangement of data that has meaning. The data are arranged such that the information as a whole complies with the grammar of a language that can, in theory, be understood. \\~\\
+		\textbf{Knowledge} is the meaning interpreted from information by an interpreter. It is usually associated with Truth and may be considered a body of true beliefs. \\~\\
+		\textbf{Wisdom} is the capacity to think and act in a way that is right. It involves the use of knowledge, a prudent choice of means and ends, and a healthy doubt of one's own understanding. It is born of an acknowledgment of how little one truly knows and how little control one truly has. \\
+	}
+\end{displayquote}
 
-% The four words. Trust your gut.
-% Knowledge is "true beliefs"
+In addition to these four fundamental terms, there are a few ideas that are worth bringing up here due to just how pervasive they are in all of the content beyond this point. Each one refers to a \textit{metaphysical distinction}, a categorizing of what we observe. These themes are deserving of regular reflection as they will come up often in our discussion of computation: \\
 
-% Symbols represent objects, but they are not the objects. Map-territory relation.
-% Exoteric and esoteric.
+\begin{enumerate}
+	\item The \textbf{abstract-concrete dichotomy} is a division that classifies things as being either \textit{abstract} or \textit{concrete}. Despite the fact that most people recognize a difference between an abstract and a concrete thing, this dichotomy does not have a universally accepted definition. That said, being abstract is often defined as being both \textit{non-spatiotemporal} and \textit{causally inefficacious}. That is, something is abstract if and only if it does not exist in space and time (or in spacetime) and does not \textit{cause} any \textit{effect}. \\
+	
+	However, one might argue that nothing is causally inefficacious. \\
+	
+	\item The \textbf{map-territory relation} \\
+	
+	\item Languages can be described in terms of their \textbf{syntax, semantics, and pragmatics}. \\
+	
+	\item The \textbf{type-token distinction} \\
+	
+	\item \textbf{Mind-body dualism} \\
+\end{enumerate}
+
+% Abstract-concrete. Are there abstract things at all (nominalism)? Is chess an abstract object? Is a novel an abstract object?
+	% Causality.
+	% Universal vs. particular.
+	% Individuals (urelements) and sets (individuals are deemed redundant in modern set theory). Pure and impure sets.
+	% Is a set of books abstract or concrete?
+
+% Map-territory relation.
+	% Symbols represent objects, but they are not the objects.
+	% Models represent reality, but they are not reality.
+	% Exoteric and esoteric.
+
+% Syntax-semantics-pragmatics.
+	% Syntax includes grammar, phonology, and orthagraphy.
+	% Extension-intension.
+	% Truth-falsity.
+
+% Type-token.
+	% A natural kind is a collection of tokens that have something in common.
+	% Extensional and intentional definitions.
+
+% Mind-body dualism.
+	% Materialist, Idealist, Dualist.
+	% Material vs. immaterial.
+	% Subject vs object.
+	% Perception vs. reality. Phenomena and noumena.
+
+% Domain of discourse. Open and closed world. System.
 
 % The chaos is unorganized data. Neural processing structures data into information. A semantic interpretation turns info into knowledge. An interpretation is strong if it is agreed upon. A category system is an interpretation of reality, a firm partitioning of some phenomena from others.
 
-% General ideas are hard to grasp. Information is very general. We are going to approach it in a multi-disciplinary way.
-
 \subsection{Categories of Being}
 
-% Describe chaos, pure perception with no thought, no categories, just raw reality. Quality. Qualia. Experience. Truth.
+% Describe chaos, pure perception with no thought, no categories, just raw reality. Quality. Qualia (what is it like to...). Experience. Truth.
 % First thoughts
 % "I know nothing of baby psychology."
-% Get a definition of system in here somewhere?
+
+% What is categorization? A mental process?
 % What is a category? Philosophy and math.
+% What is a category of being? An ontological category, a category for things that exist.
+
 % Important: is there a most general category?
-% If so, thing is the most general category (provides no information). And an object is any thing that is suitable for thought ("thing presented to the mind"). Are all things objects? Who the fuck knows. Let's assume yes.
+% If so, thing\entity\individual is the most general category (provides no information). And an object is any thing that is suitable for thought ("thing presented to the mind"). Are all things objects? Who the fuck knows. Let's assume yes.
 
 % Categorizing in other fields: history periods, biology taxa, 
 
@@ -753,6 +801,16 @@ The quantity-quality distinction is a generally accepted one. However, the dicho
 
 % All quantities are also qualities. It would be hard to argue that all qualities are also quantities in any meaningful way. For example, using millihelens as a quantitative unit of beauty. It doesn't really work.
 
+\subsubsection{Objects}
+
+% Sorites paradox, Theseus paradox
+
+% Objects vs. events. Is there a difference? Maybe not, but there at least appears to be one. Humans have traditionally discerned a difference, notably in language. Perhaps the difference is only conceptually convenient. Is an apple distinct from its decaying over time? Is computer state really a meaningful object with clock speeds in the gigahertz? Is a thunderstorm an event, or just a system of many, tiny objects with different properties, all changing with time?
+
+This curiosity aside, we could also design our category system such that quantities and qualities are both considered \textit{properties} of some very general sort of thing. Philosophers have long considered the idea of a highest-level category and have ascribed a variety of names to its members: \textit{entity}, \textit{being}, \textit{thing}, \textit{term}, \textit{individual}, etc. Each carries its own subtle connotations. We will use the name \textit{object} because it is the default choice in current philosophical practice and because it has bled into the technical language of computer science with its meaning largely unchanged. \\
+
+How general is this category of objects? Namely, are properties objects? If they are, then our system collapses to a single category, which really means that no distinctions about reality can be made at all. The category of objects thus becomes the soupy mess we are trying to escape. For now, let us assume that properties are \textit{not} objects. Instead, they are something else, and they \textit{relate} to objects in some way, giving them their characteristics. From these relations, the diversity of existence unfolds. \\
+
 \subsubsection{Classes}
 
 \begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
@@ -767,19 +825,12 @@ The quantity-quality distinction is a generally accepted one. However, the dicho
 \end{tcolorbox}
 \vspace{2\baselineskip}
 
-\subsubsection{Objects}
-
-% Objects vs. events. Is there a difference? Maybe not, but there at least appears to be one. Humans have traditionally discerned a difference, notably in language. Perhaps the difference is only conceptually convenient. Is an apple distinct from its decaying over time? Is computer state really a meaningful object with clock speeds in the gigahertz? Is a thunderstorm an event, or just a system of many, tiny objects with different properties, all changing with time?
-
-This curiosity aside, we could also design our category system such that quantities and qualities are both considered \textit{properties} of some very general sort of thing. Philosophers have long considered the idea of a highest-level category and have ascribed a variety of names to its members: \textit{entity}, \textit{being}, \textit{thing}, \textit{term}, \textit{individual}, etc. Each carries its own subtle connotations. We will use the name \textit{object} because it is the default choice in current philosophical practice and because it has bled into the technical language of computer science with its meaning largely unchanged. \\
-
-How general is this category of objects? Namely, are properties objects? If they are, then our system collapses to a single category, which really means that no distinctions about reality can be made at all. The category of objects thus becomes the soupy mess we are trying to escape. For now, let us assume that properties are \textit{not} objects. Instead, they are something else, and they \textit{relate} to objects in some way, giving them their characteristics. From these relations, the diversity of existence unfolds. \\
-
 \subsubsection{Relations}
 
-Blah
-
-\subsubsection{Taxonomies and Ontologies}
+% Subsumation - taxonomies
+% Instantiation
+% Aggregation, composition, containment
+% Type system, ontology
 
 Say you want to \textit{communicate} an idea $X$ to someone. That is, you would like to convey some \textit{information} to them so that you might together establish a shared body of \textit{knowledge}. $X$ is on the tip of your tongue, but you cannot quite put it into words. Accordingly, you express a related idea $Y_0$, hoping that you might be able to suss out your target $X$ with the help of your fellow interlocutor. This proxy idea is either too specific or too general, a \textit{subclass} or \textit{superclass} of the \textit{class} $X$, and you must replace it with another idea, preferably $X$ or at least some $Y_1$ that is closer to $X$ than $Y_0$. And so on and so forth, ideas are proposed until some candidate $Y_n=X$ is found. The conversation could go as follows: \\
 
@@ -936,7 +987,7 @@ Of course, any given type $T$ can have many \textit{subtypes}, and those subtype
 
 Like branches that shoot off from an old oak tree and fork into smaller branches toward the leaves, types spread in a \textit{recursive} manner, each one potentially a parent of arbitrarily many children and an ancestor of arbitrarily long lineages. As a \textit{type system} like this grows deeper and denser, more information is required to represent it. Similarly, any class in the system \textit{gains information} as it is specialized and \textit{loses information} as it is generalized. Thus, a class of type $T$ is \textit{also} of any supertype of $T$ because each possible supertype represents a subset of $T$'s information. For example, the class \textit{Car} is of type \textit{Car}, but it is also of the more general types \textit{Vehicle} and \textit{Machine}. \\
 
-Naturally, one wonders about what might happen at the extremes of generalization and specialization. Three relevant question-answer pairs are given below:
+Naturally, one wonders about what might happen at the extremes of generalization and specialization. Three relevant question-answer pairs are given below: \\
 
 \begin{itemize}
 	\item \textit{Is there a type so general that it describes everything?} \\\\	
@@ -947,9 +998,6 @@ Naturally, one wonders about what might happen at the extremes of generalization
 	Technically, no. Specialization is a class-to-class process: a class is specialized to a subclass. \textit{Instantiation}, the construction of a concrete \textit{instance} from an abstract description, is instead a class-to-object process. For example, in the above diagram, the class $Y_3$ is \textit{instantiated} in order to produce the object $b$ (or, by reversing the direction of the arrow, we may say that $b$ is an \textbf{instance of} $Y_3$). \\\\
 	Because a type describes a class, it is also incorrect to say that $b$ defines its own subtype of \textit{Car}. Rather, $b$ is a \textit{token} of type \textit{Car}, a physical object that \textit{realizes} one of the many possible designs that fall under the class \textit{Car}. However, $Y_3$ could be specialized such that $b$ is the sole element of the resultant class ${b}$. A class with one member is called a \textit{singleton class}, and it has a \textit{unit type}, a type with one valid value. The type of ${b}$ would be a subtype of \textit{Car} that describes only $b$, but neither ${b}$ nor its type are the same thing as the \textit{instance} $b$. \\
 \end{itemize}
-
-\parbreak
-\vspace{1mm}
 
 % The difference between a taxonomy and an ontology is that the former has child nodes. Ontologies covers more than just is-a relations.
 
@@ -970,6 +1018,8 @@ Naturally, one wonders about what might happen at the extremes of generalization
 %----------------------------------------
 
 \subsection{Classical Metaphysics}
+
+% What is metaphysics? What is ontology? What is an ontology?
 
 Blah
 
@@ -1034,7 +1084,7 @@ That said, while Plato's metaphysics gives good insight into OOP and other abstr
 
 \subsubsection{Aristotle's Hylomorphism}
 
-Blah \\\\
+Blah \\
 
 % Aristotle is sort of a mixture of Democritus and Plato. Not entirely materialist, but not fully abstract. It's scientific, but also teleological. Democritus embraces physis, Plato rejects it, and Aristotle redefines it. Physis is defined by the four causes. Nature and art are both part of physis, but the latter requires an external force/motion. Thus, the natural world has a "soul."
 % Aristotle did not have a singular arche. But he wrote about minima naturalia, the most fundamental of which were the matter + form combos of the classical elements. He did not believe in a void, reality was continuous (big effect on physics and mathematics).
@@ -1048,78 +1098,13 @@ Blah \\\\
 % Mathematical objects and operators
 % Plato is rationalist, Aristotle is empiricist
 
-\begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
-	\vspace{3mm}
-	\begin{center}
-		\textbf{Euclid's \textit{Elements}}
-	\end{center}
-	Although arithmetic has been practiced since prehistory, theoretical mathematics was founded by the Ancient Greeks. The Greeks, in contrast to earlier peoples, applied \textit{deductive reasoning} to the study of mathematics. While sophisticated arithmetic, geometry, and algebra was done before this period by the Babylonians and the Egyptians, this work was all based on \textit{evidence} collected from the physical world. The Greeks were the first to recognize the need for \textit{proof} of mathematical statements using \textit{logic}. \\
-	
-	% Euclid used axiomatic and constructive methods
-	% Axioms come from Aristotle, formal definitions come from Plato
-	
-	While various proofs were written by Greeks in the centuries before his birth, Euclid of Alexandria is nonetheless credited with formalizing the concept of proof due to his use of the \textit{axiomatic method} in his groundbreaking treatise, \textit{Elements}. This work was the first of its kind, serving as both a comprehensive compilation of Greek mathematical knowledge and as an introductory text suitable for students. Additionally, it was a product of a synthesis of Greek thought, founded on the epistemology and metaphysics of Plato and Aristotle. \\
-	
-	\textit{Elements} is divided into thirteen books. Books I--IV and VI cover \textit{plane geometry}, the study of shape, size, and position in two-dimensional space. Books V and VII--X cover elementary \textit{number theory} (classically known as \textit{arithmetic}) in a geometric way, expressing numbers as lengths of line segments. Finally, Books XI--XIII cover \textit{solid geometry} by applying principles of plane geometry to three-dimensional space. Each book begins with a list of \textit{definitions} (if necessary) that assign names to abstract mathematical ideas that are expressed in unambiguous terms. These ideas are then used to prove \textit{propositions}, mathematical statements that warrant proof. \\
-	
-	Euclid's proofs in \textit{Elements} can be described as \textit{axiomatic}. That is, they start from \textit{axioms}, statements that are taken as true without proof. Axioms solve a problem in logical argumentation known as \textit{infinite regress}, which often occurs, for example, when children ask questions. A curious child, seeking knowledge, might ask his parent why something is the way it is. That is, he requests a proof of some proposition $P_0$. The parent would respond with some proposition $P_1$ that supports the truth of $P_0$. The child, unsatisfied, would subsequently ask why $P_1$ is true. The parent would respond with the assertion that $P_2$ is true and implies $P_1$, and the child would similarly question whence $P_2$ arises. This dialogue could continue in this manner forever with the child endlessly searching for an anchor with which he can ground his understanding. However, patience waning, the parent must end this line of questioning by giving an unquestionable answer. Common examples include "Because that's just the way it is" or "Because I said so." \\
-	
-	Some Greek philosophers considered infinite regress to be a serious epistemological issue. If we assume that all knowledge must be demonstrable by a proof or logical argument, we cannot know anything because our axioms cannot be satisfactorily proven. And yet, there are things that we claim to know. In his \textit{Posterior Analytics}, Aristotle challenges this notion that all knowledge must be provable, averring that \\
-	
-	\begin{displayquote}
-		\textit{All instruction given or received by way of argument proceeds from pre-existent knowledge.}
-		\vspace{4mm}
-	\end{displayquote} 
-	
-	Aristotle continues his text in support of this statement. He discusses the nature of \textit{premises} in his \textit{syllogistic logic} and how they differ from the \textit{conclusions} that they derive. Namely, he states that the premises of a knowledge-producing deductive argument or \textit{syllogism} must be \textit{true}, to ensure the truth of their conclusion, \textit{indemonstrable}, to ensure that they are independent of proof, and \textit{causal}, to ensure that their conclusion logically follows: \\
-	
-	\begin{displayquote}
-		\textit{Assuming then that my thesis as to the nature of scientific knowledge is correct, the premises of demonstrated knowledge must be true, primary, immediate, better known than and prior to the conclusion, which is further related to them as effect to cause. Unless these conditions are satisfied, the basic truths will not be 'appropriate' to the conclusion. Syllogism there may indeed be without these conditions, but such syllogism, not being productive of scientific knowledge, will not be demonstration. The premises must be true: for that which is non-existent cannot be known---we cannot know, e.g. that the diagonal of a square is commensurate with its side. The premises must be primary and indemonstrable; otherwise they will require demonstration in order to be known, since to have knowledge, if it be not accidental knowledge, of things which are demonstrable, means precisely to have a demonstration of them. The premises must be causes, since we posess scientific knowledge of a thing only when we know its cause; prior, in order to be causes; antecedently known, this antecedent knowledge being not our mere understanding of the meaning, but knowledge of the fact as well.}
-		\vspace{4mm}
-	\end{displayquote}
-	
-	Thus, Aristotle differentiates \textit{pre-existent knowledge} from \textit{scientific knowledge}. Whereas the latter is produced by means of a logical proof, the former is produced by one's \textit{intuition}. He goes on to argue that what we intuitively understand is indeed knowledge, in the same way that what we prove is knowledge. The difference, he argues, is that axioms are \textit{self-evident}. For example, the reflexive property of the natural numbers (i.e. for every natural $x$, $x=x$) is typically considered so obvious that proof is unnecessary. At the same time, the statement is so fundamental that it cannot really be proven. Despite their unprovability, Aristotle argues that axioms such as these constitute knowledge that is simply, unquestionably \textit{known}: \\
-	
-	\begin{displayquote}
-		\textit{Our own doctrine is that not all knowledge is demonstrative: on the contrary, knowledge of the immediate premises is independent of demonstration. (The necessity of this is obvious; for since we must know the prior premises from which the demonstration is drawn, and since the regress must end in immediate truths, those truths must be indemonstrable.) Such, then, is our doctrine, and in addition we maintain that besides scientific knowledge there is its originative source which enables us to recognize the definitions.}
-		\vspace{4mm}
-	\end{displayquote}
-	
-	Euclid apparently agreed with this epistemology because Book I of \textit{Elements}, in addition to its definitions and propositions, contains a number of axioms, which are labeled either as \textit{postulates} or \textit{common notions}. In antiquity, a postulate denoted an axiom of a particular science, whereas a common notion denoted an axiom common to all sciences. Today, we do not think of axioms in this way. Rather, we simply consider them starting points for proofs. Euclid's axioms are given below: \\
-	
-	\begin{center}
-		\textbf{Postulates}
-		\begin{enumerate}
-			\item Hi
-		\end{enumerate}
-		\textbf{Common Notions}
-		\begin{enumerate}
-			\item Hi
-		\end{enumerate}
-		
-	\end{center}
-	
-	Euclid's proofs can also be described as \textit{constructive}. \\
-	
-	% Aristotle's logic was two-valued. However, he did not fully accept the law of excluded middle.
-	
-	% The Greeks used geometry to get around the precision errors of irrational numbers. That's why they used line segments to teach arithmetic.
-	
-	% Elements is great and super important, but in some ways it held mathematics back. It was taught for over 2000 years, and many people assumed it could not be wrong. In fact, it is not considered formal by modern standards, and it is not a general theory of geometry. Critique of the 5th postulate. Non-Euclidean geometry, postulates of special relativity, Galois theory, modern mathematics does not treat axioms as "self-evident" but rather as starting points. Elements assumed many things to be generally true, which are not: numbers are one-dimensional, mathematical objects must be constructed, mathematics must describe the world as we observe it (2d/3d space, concrete objects), mathematics requires straightedge and compass construction, there is only one way to describe geometry. None of these are true, and modern mathematics began when people started questioning Elements.
-	\vspace{3mm}
-\end{tcolorbox}
-\vspace{2\baselineskip}
-
-% Aristotle's metaphysics influences science for 2000 years.
-
-% Aristotle's ten categories
-% Moving away from Aristotelian realism, Kant supposes that categories say something about how we conceptualize reality, not about reality itself.
-
 %----------------------------------------
 
 \subsection{Theories and Models}
 
 % Patterns
+
+% Axiomatic system -> theory -> model -> simulation
 
 % Theory - a way of looking at something
 % Model - a way to represent something
@@ -1140,6 +1125,69 @@ Blah \\\\
 % Universe and Domain of Discourse
 % Open and closed world assumptions
 % Let's discuss how humanity has modeled physics over the years.
+
+Blah
+
+\subsubsection{Euclid's \textit{Elements}}
+
+Although arithmetic has been practiced since prehistory, theoretical mathematics was founded by the Ancient Greeks. The Greeks, in contrast to earlier peoples, applied \textit{deductive reasoning} to the study of mathematics. While sophisticated arithmetic, geometry, and algebra was done before this period by the Babylonians and the Egyptians, this work was all based on \textit{evidence} collected from the physical world. The Greeks were the first to recognize the need for \textit{proof} of mathematical statements using \textit{logic}. \\
+
+% Euclid used axiomatic and constructive methods
+% Axioms come from Aristotle, formal definitions come from Plato
+
+While various proofs were written by Greeks in the centuries before his birth, Euclid of Alexandria is nonetheless credited with formalizing the concept of proof due to his use of the \textit{axiomatic method} in his groundbreaking treatise, \textit{Elements}. This work was the first of its kind, serving as both a comprehensive compilation of Greek mathematical knowledge and as an introductory text suitable for students. Additionally, it was a product of a synthesis of Greek thought, founded on the epistemology and metaphysics of Plato and Aristotle. \\
+
+\textit{Elements} is divided into thirteen books. Books I--IV and VI cover \textit{plane geometry}, the study of shape, size, and position in two-dimensional space. Books V and VII--X cover elementary \textit{number theory} (classically known as \textit{arithmetic}) in a geometric way, expressing numbers as lengths of line segments. Finally, Books XI--XIII cover \textit{solid geometry} by applying principles of plane geometry to three-dimensional space. Each book begins with a list of \textit{definitions} (if necessary) that assign names to abstract mathematical ideas that are expressed in unambiguous terms. These ideas are then used to prove \textit{propositions}, mathematical statements that warrant proof. \\
+
+Euclid's proofs in \textit{Elements} can be described as \textit{axiomatic}. That is, they start from \textit{axioms}, statements that are taken as true without proof. Axioms solve a problem in logical argumentation known as \textit{infinite regress}, which often occurs, for example, when children ask questions. A curious child, seeking knowledge, might ask his parent why something is the way it is. That is, he requests a proof of some proposition $P_0$. The parent would respond with some proposition $P_1$ that supports the truth of $P_0$. The child, unsatisfied, would subsequently ask why $P_1$ is true. The parent would respond with the assertion that $P_2$ is true and implies $P_1$, and the child would similarly question whence $P_2$ arises. This dialogue could continue in this manner forever with the child endlessly searching for an anchor with which he can ground his understanding. However, patience waning, the parent must end this line of questioning by giving an unquestionable answer. Common examples include "Because that's just the way it is" or "Because I said so." \\
+
+Some Greek philosophers considered infinite regress to be a serious epistemological issue. If we assume that all knowledge must be demonstrable by a proof or logical argument, we cannot know anything because our axioms cannot be satisfactorily proven. And yet, there are things that we claim to know. In his \textit{Posterior Analytics}, Aristotle challenges this notion that all knowledge must be provable, averring that \\
+
+\begin{displayquote}
+	\textit{All instruction given or received by way of argument proceeds from pre-existent knowledge.}
+	\vspace{4mm}
+\end{displayquote} 
+
+Aristotle continues his text in support of this statement. He discusses the nature of \textit{premises} in his \textit{syllogistic logic} and how they differ from the \textit{conclusions} that they derive. Namely, he states that the premises of a knowledge-producing deductive argument or \textit{syllogism} must be \textit{true}, to ensure the truth of their conclusion, \textit{indemonstrable}, to ensure that they are independent of proof, and \textit{causal}, to ensure that their conclusion logically follows: \\
+
+\begin{displayquote}
+	\textit{Assuming then that my thesis as to the nature of scientific knowledge is correct, the premises of demonstrated knowledge must be true, primary, immediate, better known than and prior to the conclusion, which is further related to them as effect to cause. Unless these conditions are satisfied, the basic truths will not be 'appropriate' to the conclusion. Syllogism there may indeed be without these conditions, but such syllogism, not being productive of scientific knowledge, will not be demonstration. The premises must be true: for that which is non-existent cannot be known---we cannot know, e.g. that the diagonal of a square is commensurate with its side. The premises must be primary and indemonstrable; otherwise they will require demonstration in order to be known, since to have knowledge, if it be not accidental knowledge, of things which are demonstrable, means precisely to have a demonstration of them. The premises must be causes, since we posess scientific knowledge of a thing only when we know its cause; prior, in order to be causes; antecedently known, this antecedent knowledge being not our mere understanding of the meaning, but knowledge of the fact as well.}
+	\vspace{4mm}
+\end{displayquote}
+
+Thus, Aristotle differentiates \textit{pre-existent knowledge} from \textit{scientific knowledge}. Whereas the latter is produced by means of a logical proof, the former is produced by one's \textit{intuition}. He goes on to argue that what we intuitively understand is indeed knowledge, in the same way that what we prove is knowledge. The difference, he argues, is that axioms are \textit{self-evident}. For example, the reflexive property of the natural numbers (i.e. for every natural $x$, $x=x$) is typically considered so obvious that proof is unnecessary. At the same time, the statement is so fundamental that it cannot really be proven. Despite their unprovability, Aristotle argues that axioms such as these constitute knowledge that is simply, unquestionably \textit{known}: \\
+
+\begin{displayquote}
+	\textit{Our own doctrine is that not all knowledge is demonstrative: on the contrary, knowledge of the immediate premises is independent of demonstration. (The necessity of this is obvious; for since we must know the prior premises from which the demonstration is drawn, and since the regress must end in immediate truths, those truths must be indemonstrable.) Such, then, is our doctrine, and in addition we maintain that besides scientific knowledge there is its originative source which enables us to recognize the definitions.}
+	\vspace{4mm}
+\end{displayquote}
+
+Euclid apparently agreed with this epistemology because Book I of \textit{Elements}, in addition to its definitions and propositions, contains a number of axioms, which are labeled either as \textit{postulates} or \textit{common notions}. In antiquity, a postulate denoted an axiom of a particular science, whereas a common notion denoted an axiom common to all sciences. Today, we do not think of axioms in this way. Rather, we simply consider them starting points for proofs. Euclid's axioms are given below: \\
+
+\begin{center}
+	\textbf{Postulates}
+	\begin{enumerate}
+		\item Hi
+	\end{enumerate}
+	\textbf{Common Notions}
+	\begin{enumerate}
+		\item Hi
+	\end{enumerate}
+	
+\end{center}
+
+Euclid's proofs can also be described as \textit{constructive}. \\
+
+% Aristotle's logic was two-valued. However, he did not fully accept the law of excluded middle.
+
+% The Greeks used geometry to get around the precision errors of irrational numbers. That's why they used line segments to teach arithmetic.
+
+% Elements is great and super important, but in some ways it held mathematics back. It was taught for over 2000 years, and many people assumed it could not be wrong. In fact, it is not considered formal by modern standards, and it is not a general theory of geometry. Critique of the 5th postulate. Non-Euclidean geometry, postulates of special relativity, Galois theory, modern mathematics does not treat axioms as "self-evident" but rather as starting points. Elements assumed many things to be generally true, which are not: numbers are one-dimensional, mathematical objects must be constructed, mathematics must describe the world as we observe it (2d/3d space, concrete objects), mathematics requires straightedge and compass construction, there is only one way to describe geometry. None of these are true, and modern mathematics began when people started questioning Elements.
+
+% Aristotle's metaphysics influences science for 2000 years.
+
+% Aristotle's ten categories
+% Moving away from Aristotelian realism, Kant supposes that categories say something about how we conceptualize reality, not about reality itself.
 
 %----------------------------------------
 
@@ -1176,11 +1224,13 @@ Blah \\\\
 % A major religious schism occurs in Western Christianity (Protestant Reformation), prompting rebellion in science as well
 % Copernicus publishes De Revolutionibus in 1543 on his deathbed
 % Galileo champions heliocentric theory and is persecuted by the Church for it. "And yet it moves."
+% The Scientific Method (Bacon, Decartes, Galileo, Newton) (wiki history of sm)
 
 \subsubsection{Point Particles and Forces}
 
 % Descartes publishes the idea of a "frame of reference" in 1637 (Fermat also discovers it).
 % Descartes founds the rationalist, mechanistic philosophy that early models adhere to (1644). Newton publishes the Principia in 1687.
+% Descartes develops the idea of a system.
 % Basic assumptions based on observation: continuity, determinism, casuality, forces result from collision, absolute space and time
 % Mechanics - study of the behavior of point/body/bodies subjected to forces
 	% Statics - the net force is 0, the net work is 0, the body does not accelerate (at rest or constant velocity)
@@ -4917,6 +4967,8 @@ Summarize the appendices below...
 % I've read Infinite Jest, which is not nearly as hard, but the experience is likely similar. I earnestly read it because I really enjoyed David Foster Wallace's shorter, more pedestrian works. I certainly didn't catch every detail in the novel, but that its style and presentation and content, some aspects of which are purposefully detrimental to its enjoyability, made me think about life in a different way.
 
 % The structure under the high-level systems we engage with. The desire to understand some of them in-depth. That's passion.
+
+% I personally need to feel like my work is fulfilling. I cannot just live for the weekends. If I am to give that much time to something, I need to like it. Otherwise, it will be agonizing to me.
 
 \newpage
 
