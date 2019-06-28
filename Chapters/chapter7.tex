@@ -1,0 +1,173 @@
+%--------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------
+%    CHAPTER VII: TOOLS AND TECHNOLOGIES
+%--------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------
+
+\part*{Tools and Technologies}
+\addcontentsline{toc}{part}{\tocpartglyph Tools and Technologies}
+
+"Stupid Computer Shit"
+
+%--------------------------------------------------------------------------------
+%    SECTION
+%--------------------------------------------------------------------------------
+
+\toclineskip
+\section{Everyday Tools}
+
+%----------------------------------------
+
+\subsection{Essential Programs}
+
+% Text editors, IDEs, window managers etc.
+
+%----------------------------------------
+
+\subsection{Operating Systems}
+
+% What's more "everyday" than an operating system? Here is what an operating system is. Here is the distribution of modern operating systems. These operating systems are called Unix-like because they are built on top of or heavily influenced by the operating system Unix. Variants of Unix include: Linux, BSD, macOS, maybe others. Non Unix-likes include: Microsoft Windows (which is a family of OSs)
+
+% Superuser vs user
+
+\subsubsection{History of Unix and GNU/Linux}
+
+%----------------------------------------
+
+\subsubsection{A Tour of the Unix File System}
+
+% Run tree / -L 1 and run through that list alphabetically, explaining symlinks
+
+%----------------------------------------
+
+\subsubsection{Common Commands and Tasks}
+
+% Store scripts in /usr/local/bin
+
+\begin{itemize}
+	\item chmod +x
+	\item .bash\_profile is executed at login for the current user
+	\item .bashrc is executed every time a shell is opened for the current user
+	\item INI files
+	\item Run command (rc) files.
+	\item Shell scripts. Shebangs.
+	\item Config files (plain text)
+	\item Handling swap files in Vim. You accidentally deleted a terminal where you were editing a file, and now you have a file with a previous save and the autosaved file. Which one do you want to look at? You probably want to recover (R) the swap file, save its changes to the main file (:w), reload the file content (:e), and when prompted about the existence of a swap file, delete the swap file (D). If the delete option is not available, that means that the file is being edited elsewhere. Go close those windows.
+	\item Daemon - background process
+	\item File Descriptors
+\end{itemize}
+
+\subsubsection{Making a Personalized Linux Installation}
+
+\begin{itemize}
+	\item Install Arch
+	\item Download Desktop Environment
+	\item Download Window Manager
+	\item Download Login Manager (or use startx)
+	\item Learn pacman
+	\item Download from the AUR
+	\item urxvt terminal has its perl extensions and configuration in \textasciitilde/.Xresources (run xrdb \textasciitilde/.Xresources to have the window system grab the changes without a reboot)
+	\item urxvt needs monospaced font and fonts that support Unicode
+	\item feh
+	\item compton
+	\item polybar
+	\item vim
+	\item Change desktop environment on startup by adding exec \textit{ds\_name} to the bottom of \textasciitilde/.xinitrc
+\end{itemize}
+
+%----------------------------------------
+
+\subsection{Version Control}
+
+Blah
+
+\subsubsection{Git}
+
+How do you download stuff from GitHub? There are a few methods that might be available, depending on the software.
+\begin{itemize}
+	\item git clone the directory
+	\item wget raw files
+	\item Grab it from a package repo with something like pacman
+	\item Get it from the AUR with something like yay or yaourt
+	\item Download a tarball, unzip it, extract it, and build the source files into an executable
+\end{itemize}
+
+%----------------------------------------
+
+\subsection{Unit Testing}
+
+Blah
+
+\subsubsection{JUnit}
+
+Blah
+
+\subsection{Build Automation}
+
+\subsubsection{Make}
+
+GNU Make compiles source files into executables.
+
+% git clone into /var/git (this is my choice of git folder)
+% make; sudo make install
+
+%----------------------------------------
+
+\subsubsection{Maven}
+
+Blah
+
+%----------------------------------------
+
+\subsection{Virtualization and Containerization}
+
+Blah
+
+\subsubsection{Docker}
+
+Blah
+
+%--------------------------------------------------------------------------------
+%    SECTION
+%--------------------------------------------------------------------------------
+
+\toclineskip
+\section{Languages and Language-Likes}
+
+%----------------------------------------
+
+\subsection{Markup and Style}
+
+\subsubsection{TeX}
+
+Blah
+
+\subsubsection{HMTL}
+
+Blah
+
+\subsubsection{CSS}
+
+Blah
+
+%----------------------------------------
+
+\subsection{Data Formats}
+
+Blah
+
+\subsubsection{XML}
+
+Blah
+
+\subsubsection{JSON}
+
+Blah
+
+%----------------------------------------
+
+\subsection{Data Query and Manipulation}
+
+\subsubsection{SQL}
+
+Blah \\
