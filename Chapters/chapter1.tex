@@ -20,7 +20,7 @@
 
 One can describe computation in a variety of ways. Some are poetic, others are more formal, and many we will discuss at length. In doing so, we will generally flow from poetry to formality, starting with broad statements and colorful examples and progressing toward a formal understanding. For now, we will say that computation is a process that resolves \textit{uncertainty}. \\
 
-In his \textit{Theogony}, the Ancient Greek poet Hesiod (fl. 750 BCE) depicts a fascinating uncertainty known as Chaos: a vast nothingness that preceded the creation of the Universe. From this void emerged the primordial deities, personifications of nature who gave life to the Titans and, by extension, to the Olympian gods. Curiously, the modern definition of \textit{chaos} has nearly inverted. Now, one might say that a situation is \textit{chaotic} if there is so much going on that it is hard to make sense of anything. Despite their great conceptual difference, these meanings share a common property: they both evoke \textit{confusion}. \\
+In his \textit{Theogony}, the Ancient Greek poet Hesiod (fl. 750 BCE) depicts a fascinating uncertainty known as Chaos: a vast nothingness that preceded the creation of the Universe. From this void emerged the primordial deities, personifications of nature who gave life to the Titans and, by extension, to the Olympian gods. Curiously, the modern definition of \textit{chaos} has nearly inverted. Now, one might say that a situation is \textit{chaotic} if there is \textit{too much} going on. Despite their great conceptual difference, these meanings share a common property: they both evoke \textit{confusion}. \\
 
 This place in which we find ourselves may indeed be post-Chaos, but confusion remains a familiar state for us. In fact, it is our natural state. We come into life confused about everything---crying, open-eyed in reaction to how much is going on around us. Slowly, we figure a few things out. Later, we consider many things \textit{certain}. As time ticks on and we carve our separate paths in the world, the wise ones among us come to realize the true depth of their confusion. \\
 
@@ -59,7 +59,7 @@ You already have an idea of what information is, and it is likely that your intu
 
 Recall the usual context in which technical language is born. A phenomenon is observed by a community, and it becomes the subject of casual discourse. It may even be a widespread concept that is discussed by society at large, in some way or another. The phenomenon is accordingly given an \textit{informal definition} and a name (or, perhaps, many names). Interested theoreticians then study the structure of the phenomenon and \textit{formalize} it. They give it a \textit{formal definition} and bestow it a more permanent name, either one used previously or something new that is, in the namers' opinion, more apt. In the latter case, the new term is disseminated throughout the community and perhaps to the wider public, where it may either replace or coexist with previous informal terms. \\
 
-Regardless, the namers must reach outside of the formalisms they have constructed and find a word from an informal language that captures the essence of their abstract thought. This is the beauty of good technical jargon: such a word will, to an amateur, shed a shallow but wide light into the vast space of an idea, but it will also illuminate the whole shebang in the eyes of an expert, evoking in its concise informality all that he or she has previously learned on the subject. \\
+Regardless, the namers must reach outside of the formalisms they have constructed and find a word from an informal language that captures the essence of their abstract thought. This is the beauty of good jargon: such a word will, to an amateur, shed a shallow but wide light into the vast space of an idea, but it will also illuminate the whole shebang in the eyes of an expert, evoking in its concise informality all that he or she has previously learned on the subject. \\
 
 In the spirit of this principle, four words are given below, defined softly, that will act now as beacons in the dark of our ignorance and later as summaries of our hard-earned understanding: \\
 
@@ -72,32 +72,77 @@ In the spirit of this principle, four words are given below, defined softly, tha
 	}
 \end{displayquote}
 
-In addition to these four fundamental terms, there are a few ideas that are worth bringing up here due to just how pervasive they are in all of the content beyond this point. Each one refers to a \textit{metaphysical distinction}, a categorizing of what we observe. These themes are deserving of regular reflection as they will come up often in our discussion of computation: \\
+In addition to these four fundamental terms, there are a few ideas that are worth bringing up here due to just how pervasive they are in all of the content beyond this point. Each one refers to metaphysical distinction or relation, an assertion about the underlying . These themes are deserving of regular reflection as they will come up often in our discussion of computation: \\
 
 \begin{enumerate}
-	\item The \textbf{abstract-concrete dichotomy} is a division that classifies \textit{things} as being either \textit{abstract} or \textit{concrete}. Despite the fact that most people recognize a difference between an abstract and a concrete thing, this dichotomy does not have a universally accepted definition. That said, being abstract is often defined as being both \textit{non-spatiotemporal} and \textit{causally inefficacious}. That is, something is abstract if and only if 
+	\item \textbf{Space and time} are two features of reality. As they appear to us, the former is an expanse in three dimensions, and the latter can be thought of as an arrow that extends steadily in one dimension, from past to future. They are inextricably woven into the fabric of our experience, and yet their true nature eludes us. \\
+	
+	Consider an infinite space that contains many particles of a material substance, all of which move about constantly as time goes on. Suppose that, one by one and randomly, these particles blink out of existence forever. When only one particle remains, is that which is \textit{not} the particle still considered space? Further, can we still say that this particle moves? It remains surrounded by an infinite void, interacting and relating with nothing at all, participating in no distinguishable events. And if indeed nothing changes, does time still tick? If so, will space and time \textit{mean} anything after that last, lonely bit of matter disappears and everything becomes a uniform non-existence? \\
+	
+	These are the questions that pertain to whether space and time are \textit{absolute} or \textit{relative}. If space is absolute, like a fixed three-dimensional grid that pervades the material realm, we might ask where the origin $(0,0,0)$ is. If such a location were to exist, every object and particle in the Universe would have an absolute position in three coordinates. In other words, position would be a distinguishing feature of each and every object, and it would not be defined in relation to other objects. Instead, it would relate to this primordial \textit{center of the Universe}. \\
+	
+	% Why is time directed?
+	% Time in computer science is often based on the changing of state.
+	
+	% Time relativity
+	% Is void possible? Do parts of the Universe not exist?
+	% Reality vs imagination
+	% Kant thinks S+T are just human projections. Synthetic a priori. They require no observation and are projected onto surroundings.
+	% Kant: nothing about the object's location describes the object. 
+	% Our minds evolved to invent space (because it is a useful abstraction).
+	% S+T in life, math, and compsci
+	
+	\item \textbf{Identity} seems to be a mandatory quirk of being. It is difficult to imagine an existence in which things are not themselves. And yet, it is also difficult to define, in any meaningful way, this supposedly crucial concept. \\
+	
+	% Identity is tricky in philosophy but easy in math.
+	
+	\item The \textbf{abstract-concrete dichotomy} classifies \textit{things} as being either \textit{abstract} or \textit{concrete}. Despite the fact that most people recognize a difference between an abstract and a concrete thing, this dichotomy does not have a universally accepted definition. That said, being abstract is often defined as being both \textit{non-spatiotemporal} and \textit{causally inefficacious}. That is, something is abstract if and only if 
 	
 	\begin{enumerate}
-		\item it does not exist in space and time (or, alternatively, spacetime), and
-		\item it cannot \textit{cause} any \textit{effect}. \\
+		\item it does not exist in \textit{space} or in \textit{time} (or, alternatively, in \textit{spacetime}), and
+		\item it cannot be the \textit{cause} of any \textit{effect}. \\
 	\end{enumerate}
 	
-	However, one might argue that nothing is truly causally inefficacious. \\
+	However, one might argue that nothing is truly causally inefficacious. Indeed, if something was truly unable to cause \textit{anything}, it would not be able to affect the \textit{thoughts} of any philosopher, mathematician, or scientist for whom such an abstract thing would be of interest. And yet \textit{mathematical objects} (e.g. a number, a line, a cube, the sine function, etc.) are often considered abstract, despite the fact that they affect the thoughts of mathematicians daily, thoughts which in turn prompt concrete behavior, such as drawing diagrams. Perhaps, causal inefficacy is too strict a requirement. \\
+	
+	Let us consider why one might want to refer to something that is abstract. An abstract object references \textit{properties} that many concrete, causally efficacious objects have. For example, a sphere does not exist in space or time; it is \textit{nowhere} and \textit{never}. It also does not seem capable of causing an effect in the way that, say, a ping-pong ball can. And while the abstract sphere may not have the same sort of causal efficacy as concrete spherical objects, it does have a \textit{relation} to those objects. That is, the concept of sphericality is \textit{related} to the \textit{class} of concrete objects that may be reasonably modeled as spheres. Thus, an abstract object is, at least, convenient because it can identify a class of concrete objects that is of interest by specifying relevant properties. \\
+	
+	In light of recent advancements in fields like neuroscience and artificial intelligence, many believe that the human mind is nothing more than a physical system, albeit a particularly complicated one, that can be modeled mathematically like any other. So it may be that abstract objects are just interpretations of concrete electrochemical signals in our brains. Regardless,  \\
+	
+	\item \textbf{Mind-body dualism} \\
 	
 	\item The \textbf{map-territory relation} \\
 	
-	\item Languages can be described in terms of their \textbf{syntax, semantics, and pragmatics}. \\
+	\item The \textbf{syntax, semantics, and pragmatics} of a language... \\
 	
 	\item The \textbf{type-token distinction} \\
 	
-	\item \textbf{Mind-body dualism} \\
+	\item The \textbf{domain of discourse} \\
 \end{enumerate}
+
+% "Abstraction takes us further from reality but casts a wider light on it."
+% Abstraction allows you to handle large quantities of information as single units. This allows you to manipulate information more efficiently (say more, do more).
+
+% Space and time
+	% Substance and void
+	
+% Identity and change
+	% Sorites paradox, Theseus paradox
 
 % Abstract-concrete. Are there abstract things at all (nominalism)? Is chess an abstract object? Is a novel an abstract object?
 	% Causality.
+	% Concrete objects have substance. An object of spacetime is an event.
+	% Is a set of books abstract or concrete?
 	% Universal vs. particular.
 	% Individuals (urelements) and sets (individuals are deemed redundant in modern set theory). Pure and impure sets.
-	% Is a set of books abstract or concrete?
+
+% Mind-body dualism.
+	% Mind vs matter.
+	% Materialist, Idealist, Dualist.
+	% Material vs. immaterial.
+	% Subject vs object.
+	% Perception vs. reality. Phenomena and noumena.
+	% Artificial consciousness
 
 % Map-territory relation.
 	% Symbols represent objects, but they are not the objects.
@@ -108,16 +153,12 @@ In addition to these four fundamental terms, there are a few ideas that are wort
 	% Syntax includes grammar, phonology, and orthagraphy.
 	% Extension-intension.
 	% Truth-falsity.
+	% Programming is the conversion of natural language semantics to formal semantics written in formal syntax.
+	% A high-level language just has a formal syntax that is closer to natural syntax.
 
 % Type-token.
 	% A natural kind is a collection of tokens that have something in common.
 	% Extensional and intentional definitions.
-
-% Mind-body dualism.
-	% Materialist, Idealist, Dualist.
-	% Material vs. immaterial.
-	% Subject vs object.
-	% Perception vs. reality. Phenomena and noumena.
 
 % Domain of discourse. Open and closed world. System.
 
@@ -130,7 +171,7 @@ In addition to these four fundamental terms, there are a few ideas that are wort
 % "I know nothing of baby psychology."
 
 % What is categorization? A mental process?
-% What is a category? Philosophy and math.
+% What is a category? Philosophy version. Give the math version at the end of the metaphysics section? Because category theory is about studying things relationally and classical metaphysics was more object-oriented.
 % What is a category of being? An ontological category, a category for things that exist.
 
 % Important: is there a most general category?
@@ -168,8 +209,6 @@ The quantity-quality distinction is a generally accepted one. However, the dicho
 
 \subsubsection{Objects}
 
-% Sorites paradox, Theseus paradox
-
 % Objects vs. events. Is there a difference? Maybe not, but there at least appears to be one. Humans have traditionally discerned a difference, notably in language. Perhaps the difference is only conceptually convenient. Is an apple distinct from its decaying over time? Is computer state really a meaningful object with clock speeds in the gigahertz? Is a thunderstorm an event, or just a system of many, tiny objects with different properties, all changing with time?
 
 This curiosity aside, we could also design our category system such that quantities and qualities are both considered \textit{properties} of some very general sort of thing. Philosophers have long considered the idea of a highest-level category and have ascribed a variety of names to its members: \textit{entity}, \textit{being}, \textit{thing}, \textit{term}, \textit{individual}, etc. Each carries its own subtle connotations. We will use the name \textit{object} because it is the default choice in current philosophical practice and because it has bled into the technical language of computer science with its meaning largely unchanged. \\
@@ -185,12 +224,19 @@ How general is this category of objects? Namely, are properties objects? If they
 	\end{center}
 	% Chess example, physical boards and pieces, game states, the abstract idea of chess. "When was chess invented?". An instance of a chess game vs. all actual chess games vs. all possible chess games vs. the class of chess.
 	
+	% Has the abstract idea of chess existed for eternity? Or was it invented? If there is no sentient life, are there spheres?
+	% Are mathematical objects mind-dependent? Could a different kind of sentient mind recieve the same sensory data and interpret it with an alien sort of ontology?
+	
 	As an illustrative example, consider all of the games of chess that are being played right now, currently progressing or left half-finished and awaiting the next move. Consider also all of the \textit{historical} games of chess that have been played to completion or total abandonment since the invention of chess.
 	\vspace{3mm}
 \end{tcolorbox}
 \vspace{2\baselineskip}
 
 \subsubsection{Relations}
+
+Blah
+
+\subsubsection{Taxonomies}
 
 % Subsumation - taxonomies
 % Instantiation
@@ -350,7 +396,7 @@ In the above diagram, we see the $Y$ classes and their relations to each other. 
 
 Of course, any given type $T$ can have many \textit{subtypes}, and those subtypes can have their own subtypes. A subtype of $T$ builds on the information that defines $T$, adding new information that specializes the underlying parent class. And with enough specialization, these subtypes may become quite unlike each other at a glance, sharing little else than a distant relation to $T$. This branching nature of subsumption is depicted above in gray. \\
 
-Like branches that shoot off from an old oak tree and fork into smaller branches toward the leaves, types spread in a \textit{recursive} manner, each one potentially a parent of arbitrarily many children and an ancestor of arbitrarily long lineages. As a \textit{type system} like this grows deeper and denser, more information is required to represent it. Similarly, any class in the system \textit{gains information} as it is specialized and \textit{loses information} as it is generalized. Thus, a class of type $T$ is \textit{also} of any supertype of $T$ because each possible supertype represents a subset of $T$'s information. For example, the class \textit{Car} is of type \textit{Car}, but it is also of the more general types \textit{Vehicle} and \textit{Machine}. \\
+Like branches that furcate from an old oak tree and fork into smaller branches toward the leaves, types spread in a \textit{recursive} manner, each one potentially a parent of arbitrarily many children and an ancestor of arbitrarily long lineages. As a \textit{type system} like this grows deeper and denser, more information is required to represent it. Similarly, any class in the system \textit{gains information} as it is specialized and \textit{loses information} as it is generalized. Thus, a class of type $T$ is \textit{also} of any supertype of $T$ because each possible supertype represents a subset of $T$'s information. For example, the class \textit{Car} is of type \textit{Car}, but it is also of the more general types \textit{Vehicle} and \textit{Machine}. \\
 
 Naturally, one wonders about what might happen at the extremes of generalization and specialization. Three relevant question-answer pairs are given below: \\
 
@@ -363,6 +409,8 @@ Naturally, one wonders about what might happen at the extremes of generalization
 	Technically, no. Specialization is a class-to-class process: a class is specialized to a subclass. \textit{Instantiation}, the construction of a concrete \textit{instance} from an abstract description, is instead a class-to-object process. For example, in the above diagram, the class $Y_3$ is \textit{instantiated} in order to produce the object $b$ (or, by reversing the direction of the arrow, we may say that $b$ is an \textbf{instance of} $Y_3$). \\\\
 	Because a type describes a class, it is also incorrect to say that $b$ defines its own subtype of \textit{Car}. Rather, $b$ is a \textit{token} of type \textit{Car}, a physical object that \textit{realizes} one of the many possible designs that fall under the class \textit{Car}. However, $Y_3$ could be specialized such that $b$ is the sole element of the resultant class ${b}$. A class with one member is called a \textit{singleton class}, and it has a \textit{unit type}, a type with one valid value. The type of ${b}$ would be a subtype of \textit{Car} that describes only $b$, but neither ${b}$ nor its type are the same thing as the \textit{instance} $b$. \\
 \end{itemize}
+
+\subsubsection{Ontologies}
 
 % The difference between a taxonomy and an ontology is that the former has child nodes. Ontologies covers more than just is-a relations.
 
@@ -380,11 +428,14 @@ Naturally, one wonders about what might happen at the extremes of generalization
 % The theory of computer science was built many to one. Practical programming is one (information, bits) to many (types, software). Thus, we will discuss many different fields and will unify them under a theory whose arche is information (logical values).
 % We must consider open-worlds before we discuss closed-worlds.
 
+% We will discuss upper ontologies next. This will inform later discussions on domain ontologies for physics and computer science.
+
 %----------------------------------------
 
 \subsection{Classical Metaphysics}
 
 % What is metaphysics? What is ontology? What is an ontology?
+% What does metaphysics and ontology have to do with OOP?
 
 Blah
 
@@ -414,6 +465,7 @@ Blah
 
 % Plato hates Democritus. Wants to burn all of his books. Plato's philosophy is an objection to atomism. Believes that there must be something divine about nature due to its beauty.
 % Plato is rationalist, Democritus is mechanist and materialist (they agree on epistemology though)
+% Essence precedes existence. There is inherent meaning in reality.
 
 Plato (c. 428/427 -- c. 348/347 BCE) was the first to expound a metaphysics of objects with his \textit{theory of Forms}, which proposed a solution to the \textit{problem of universals}. This problem is subtle, but important: how can one general property appear in many individual objects? For example, when we say that a floor and a bowl are \textit{smooth}, are we referring to some singular paradigm of \textit{smoothness} that is independent of each? For Plato, \textit{universals} or \textit{Forms}, such as smoothness, are indeed distinct from the \textit{particulars} that \textit{partake} of them, such as floors and bowls and other smooth objects. He posits that the \textit{essence} of an object, its \textit{sine qua non}, is the result of its partaking of these Forms. \\
 
@@ -463,16 +515,25 @@ Blah \\
 % Mathematical objects and operators
 % Plato is rationalist, Aristotle is empiricist
 
+% "We (collectively, as humans) bestow globality on first principles inductively, promoting the said principles to the status of universal, often missing meaningful alternatives in the process." -- Alon Amit
+% Put this after Euclid's section?
+
 %----------------------------------------
 
 \subsection{Theories and Models}
 
 % Patterns
 
+% Can we say anything objectively about the structure of the Universe? For example, can we say for certain that the Universe is continuous or discrete? Probably not. But we can build some very sophisticated theories and models that describe the Universe very well.
+
+% Wiki - analogical models
+
 % Axiomatic system -> theory -> model -> simulation
 
-% Theory - a way of looking at something
-% Model - a way to represent something
+% System - a bunch of interrelated parts
+% Theory - a way of looking at a system (syntactic, system-independent, but perhaps designed with the system in mind)
+% Model - a way to represent a system (or the application of a theory to a system)
+
 % Theoria vs. praxis (considering things outside of our control vs. considering things we can change)
 % Pythagoras considered theories a way of contemplating math
 
@@ -485,8 +546,11 @@ Blah \\
 % Table for model classifications: linear/non, static/dynamic, explicit/implicit, discrete/continuous, deterministic/probabilistic, deductive/inductive/floating
 % Models may die out if they have major flaws. However, crude models are still sometimes useful due to their simplicity (classical mechanics).
 % Theories are abstract models, models whose components are symbolic.
+
 % A model represents a system, a simulation represents its operation over time.
 % A computer program can be interpreted as a simulation of some aspect of the Universe and, at the time, as a little Universe in and of itself. The difference between this universe and \textit{the} Universe is that we theoretically have access to all of the information in the former. Whereas we are babies stumbling around in the dark of physical reality, we are gods of the universes we architect in digital memory.
+% Mindset (blue box?). You can think of programming as just sitting at a desk and typing a bunch of obscure mumbo jumbo. Or you can think of it as the means to simulate anything that you want.
+
 % Universe and Domain of Discourse
 % Open and closed world assumptions
 % Let's discuss how humanity has modeled physics over the years.
@@ -606,11 +670,20 @@ Euclid's proofs can also be described as \textit{constructive}. \\
 % Newton discovered that objects would continue their motion if absent of friction, which is a pretty unintuitive idea, considering that there is always friction on Earth.
 % Optics - Descartes says light is emitted by sources, Huygens develops a longitudinal wave theory of light transmitted though aether, but people don't believe it because it did not explain birefringence, Newton develops corpuscular theory of light and people accept that.
 
+% Blue box for Hume's Problem of Induction and Kant's Trancendental Aesthetics.
+% Hume states that induction is not infallable and thus is unjustified. Kant argues that while it is not infallable, it is still necessary and rational. Kant backs up the scientific method but argues that it does not constitute an objective truth. Science is not certain, but that's okay.
+% Critique of Pure Reason - there are other ways of being rational besides deduction
+% We can only have knowledge of what appears to us, not of things in themselves.
+% Synthetic a priori knowledge (the knowledge of metaphysics) is what allows us to compute mathematics in our heads. Math is necessary and universal, and math can connect a concept to a new concept other than itself (ampliative).
+% Religious implications of transcendental idealism
+
 \subsubsection{Waves and Fields}
 
 % In early 1800s, people realize Newton's theory does not explain diffraction, interference, and polarization (physical optics). Young and Fresnel develop a transverse wave theory of light. This is still a mechanistic theory, and, thus, it required an aether (as discussed by Aristotle). People tried to understand how an aether could exist if the Earth moves freely through it. Aether drag and wind theories emerge.
 % Similar theories involving mysterious substances ("imponderable fluids") were formed to explain heat and electricity. Faraday proposes that reality is made up of "lines of force." Maxwell agrees and develops an electromagnetic field theory, but he assumes an aether is required.
 % Michelson-Morley experiment discredits the aether. Lorentz and Poincare forms a theory with a motionless aether that does not interact with matter. In this case, the aether was more of a reference frame. Length contraction and "local time."
+
+% "Old quantum theory"
 % Einstein introduces special relativity, which does not require the concept of aether. Time dilation instead of local time. This theory could be explained in terms of an aether though. The vaccuum of space is more like an aether than a true vaccuum.
 
 % Poincare LET quotes
@@ -644,6 +717,12 @@ Euclid's proofs can also be described as \textit{constructive}. \\
 
 \subsection{Information Theory}
 
+% A pattern as defined in terms of information (Alon Amit). We study patterns in math and use them to model what we observe in physics. All patterns in the physical world can be described by information.
+
+% Bits and bytes and other units of information.
+% The base-2 metric system (kibi,mibi,gibi,...)
+% The scale of objects - an essay, a book, an encyclopedia, a 1080p photo, a 4K photo, a 1 minute 1080p video, a 1 minute 4K video, a 1080p movie, a 4K movie, an operating system (Linux vs Windows size), programs (little clients to massive environments like modeling softwares), etc.
+
 % If physical phenomena are interpreted as information, this gives formal meaning to the philosophical idea that "we know very little." Much more physical information goes unnoticed than noticed.
 
 % Information is similar to energy transfer. It was compared to theories of heat transfer done during the industrial revolution. When you do work, you give some of your energy to something else. The energy may also be interpreted as changing type (kinetic, chemical, etc.). However, this is also just an abstraction. Energy is energy. There are no types really.
@@ -651,6 +730,9 @@ Euclid's proofs can also be described as \textit{constructive}. \\
 
 % Entropy - transformational content of energy
 % Boltzmann entropy, thermodynamic entropy, von Neumann entropy
+
+% Mathematical theory of communication, Shannon-Weaver model
+% What does it mean to be a good communicator?
 
 %----------------------------------------
 
@@ -885,6 +967,9 @@ A formal language is constructed from an \textit{alphabet} $\Sigma$, which is a 
 \toclineskip
 \section{Reasoning and Logic}
 
+% "Of course, the objects of a deductive system are normally thought of as formulas, the arrows are thought of as proofs or deductions, and operations on arrows are thought of as rules of inference."
+
+% Laws of thought
 % Three reliable ways of acquiring knowledge: deduction, induction, and communication.
 % Hume's problem of induction
 % Deductive: truisms via consequence, Inductive: facts via evidence
