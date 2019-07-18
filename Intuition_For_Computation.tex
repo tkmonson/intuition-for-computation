@@ -169,13 +169,14 @@
 
 %--- QUOTATION --------------------------
 
+%\vspace{4mm}
 %\begin{displayquote}
 %\textit{QUOTE}
-%\vspace{4mm}
 %\begin{flushright}
 %	---AUTHOR
 %\end{flushright}
 %\end{displayquote}
+%\vspace{4mm}
 
 %--- ALGORITHM --------------------------
 
@@ -199,7 +200,7 @@
 \documentclass[
 11pt, % Main document font size
 a4paper, % Paper type
-oneside, % One page layout (no page indentation)
+oneside, % One page layout (no alternating page indentation for physical binding)
 ]{scrartcl}
 
 %--- PACKAGES ---------------------------
@@ -304,7 +305,7 @@ oneside, % One page layout (no page indentation)
 \pagestyle{scrheadings}
 
 % Only compile these chapters (for fast compilation during the writing process)
-% \includeonly{Chapters/chapter1}
+\includeonly{Chapters/chapter1}
 
 \begin{document}
 	
@@ -443,6 +444,7 @@ oneside, % One page layout (no page indentation)
 % Standard spacing before and after special content
 % Adverbs. Don't use them unless they work really well.
 % Header check
+% Use of the word "book"
 
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
@@ -455,6 +457,9 @@ oneside, % One page layout (no page indentation)
 \part*{Preface}
 \addcontentsline{toc}{section}{Preface}
 
+% Use a typewriter font for the whole preface?
+
+\vspace{4mm}
 \begin{displayquote}
 \textit{I wrote my first novel because I wanted to read it.}
 \begin{flushright}
@@ -463,7 +468,7 @@ oneside, % One page layout (no page indentation)
 \vspace{4mm}
 \end{displayquote}
 
-% I just read it. It's good. And coming from someone who is so self-critical, that's high praise.
+% I just read it. It's good. And coming from someone who is so critical of himself, that's high praise.
 
 % "I just wondered how things were put together." - Claude Shannon
 
@@ -489,6 +494,7 @@ In December of 2018, I graduated from Duke University, feeling like I knew simul
 % The physical and mental toll of writing this book.
 % Was it worth it all the time and effort and isolation? I feel I have given myself a great gift. And now I would like to offer this gift to you.
 % "Quasi-graduating"
+% In investigating the content below, I feel that I have discovered a beautiful new way of thinking about the world, and it makes me, an on-again-off-again crippling depressive and abandonless self-defamer, confident that I will do great things in life.
 
 % Sign just with initials T.M.?
 
@@ -524,7 +530,7 @@ In December of 2018, I graduated from Duke University, feeling like I knew simul
 
 %--- ECCENTRIC --------------------------
 
-% And, last but not least, I have a number of somewhat eccentric thank-yous to give. Despite how unconventional some of these shoutouts are, they are nevertheless sincere.
+% And last but not least, I have a number of somewhat eccentric thank-yous to give. Despite how unconventional some of these shoutouts are, they are nevertheless sincere.
 
 % Mystic and Skitty
 % Seinfeld (Theory of Comedy, comedy systems, categories of comedic timing)
@@ -533,25 +539,44 @@ In December of 2018, I graduated from Duke University, feeling like I knew simul
 
 \newpage
 
+
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
-%    OPENING QUOTE
+%    INNER TITLE
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
 
-\vspace*{4cm}
+\thispagestyle{empty}
+
 \begin{center}
-\textit{The very word intuition has to be understood. \\[5mm]
-	You know the word tuition---tuition comes from outside, somebody teaches you, the tutor. \\[5mm]
-	Intuition means something that arises within your being; \\[5mm]
-	it is your potential, that’s why it is called intuition. \\[5mm]
-	Wisdom is never borrowed, and that which is borrowed is never wisdom. \\[5mm]
-	Unless you have your own wisdom, your own vision, \\[5mm]
-	your own clarity, your own eyes to see, \\[5mm]
-	you will not be able to understand the mystery of existence.}
-\begin{flushright}
-	---Osho
-\end{flushright}
+	\vspace*{8cm}
+	{\fontsize{32}{40} \spacedallcaps{Intuition For}} \\[3mm]
+	{\fontsize{32}{40} \spacedallcaps{Computation}} \\[4.5mm]
+\end{center}
+
+\newpage
+
+%--------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------
+%    EPIGRAPH
+%--------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------
+
+\thispagestyle{empty}
+
+\begin{center}
+	\vspace*{5cm}
+	\textit{The very word intuition has to be understood. \\[5mm]
+		You know the word tuition---tuition comes from outside, somebody teaches you, the tutor. \\[5mm]
+		Intuition means something that arises within your being; \\[5mm]
+		it is your potential, that’s why it is called intuition. \\[5mm]
+		Wisdom is never borrowed, and that which is borrowed is never wisdom. \\[5mm]
+		Unless you have your own wisdom, your own vision, \\[5mm]
+		your own clarity, your own eyes to see, \\[5mm]
+		you will not be able to understand the mystery of existence.}
+	\begin{flushright}
+		---Osho
+	\end{flushright}
 \end{center}
 
 \newpage
