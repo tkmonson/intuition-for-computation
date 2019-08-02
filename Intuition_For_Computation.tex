@@ -305,7 +305,7 @@ oneside, % One page layout (no alternating page indentation for physical binding
 \pagestyle{scrheadings}
 
 % Only compile these chapters (for fast compilation during the writing process)
-% \includeonly{Chapters/chapter1}
+\includeonly{Chapters/chapter1}
 
 \begin{document}
 	
@@ -445,6 +445,7 @@ oneside, % One page layout (no alternating page indentation for physical binding
 % Adverbs. Don't use them unless they work really well.
 % Header check
 % Use of the word "book"
+% Section, subsection, subsubsection, etc. font size and style
 
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
@@ -472,19 +473,24 @@ oneside, % One page layout (no alternating page indentation for physical binding
 
 % "I just wondered how things were put together." - Claude Shannon
 
-% 2019 has been a strange year for me.
+% My life has been very strange for the past several months.
 
 In December of 2018, I graduated from Duke University, feeling like I knew simultaneously very much and nothing at all.
+
+% "Quasi-graduating"
 
 % Why did you write this?
 % Why do you think its worth sharing with others?
 % Why read this over a traditional textbook?
+
 % College gave me reasoning and knowledge. Writing this guide gave me intuition.
 % When you get to the end of any extended course of study, you tend to gain *insights*. I don't understand why these insights need to be so hard-earned. Why can't there just be a textbook full of the insights?
+
 % Categorizing things is an age old approach to philosophy and science.
 % Wax poetic about computer science.
 % At times, I struggled writing this book. But I eventually came to a point where I knew what this book was trying to be, and I could envision it. I could see the pieces linking together,  and I wanted it to exist. I wanted to lay out, in simple English, the connections I was making in my mind. I wanted to share these difficult concepts in a way that was accessible.
-% Talk about what it was like to just live in this document for like multiple months.
+% This project went from a means to an end to an end in itself.
+% Talk about what it was like to just live in this document for like multiple months. What is it like to live primarily virtually?
 % The value in spending time just philosophizing about things.
 % Belief that the most significant, cutting-edge, and interesting jobs in many fields require or would benefit greatly from a deep philosophical and mathematical understanding of software.
 % In the end, I was tired of being confused.
@@ -493,8 +499,20 @@ In December of 2018, I graduated from Duke University, feeling like I knew simul
 % Sometimes writing this was a Herculean effort. Sometimes it wrote itself, and I just sat there and watched it happen.
 % The physical and mental toll of writing this book.
 % Was it worth it all the time and effort and isolation? I feel I have given myself a great gift. And now I would like to offer this gift to you.
-% "Quasi-graduating"
 % In investigating the content below, I feel that I have discovered a beautiful new way of thinking about the world, and it makes me, an on-again-off-again crippling depressive and abandonless self-defamer, confident that I will do great things in life.
+
+% When I started this document, it had sections for job interview related things in addition to the first section which was called something like "Theoretical Knowledge." I quickly realized that that section would be much larger than the rest, so I decided to keep my list theoretical.
+% My guiding principle from the start was a deep feeling that data structures were mathematical objects. I thought that there was a direct link between the two, and that it could be easily understood if it were explained well.
+% I went into the project with a lot of prior beliefs, and at first I was content with giving only general notions of concepts that I thought were especially abstract.
+% Because of this lax attitude, I often found myself running into contradictions or becoming paralyzed, unable to write anything with confidence.
+% Eventually, I realized that I was fooling myself into thinking that I understood what I was talking about. I began to do more serious research, even on topics that I thought I understood.
+
+% Introduce the book as a path or journey?
+
+% I seem to have a long-standing affinity for metaphors about longing for something just outside of your grasp.
+% Quote the ending lyrics from Soria Moria. "I'm an arrow now. Mid air."
+% Seeing somewhere that you want to be, but it is really far away.
+% Other similar examples: green light from "The Great Gatsby," the paper boat quote from "Dear Esther," Haken's "The Mountain," a lot of my favorite albums, the scene from "The Things They Carried" at the US-Canadian border.
 
 % Sign just with initials T.M.?
 
@@ -527,6 +545,12 @@ In December of 2018, I graduated from Duke University, feeling like I knew simul
 % Dan McPherson, his analytical mind and precision
 % TeX, TeXStudio, Donald Knuth
 % Robert C. Martin and his book \textit{Clean Code}, which I referenced occassionally for the purpose of book design. Like the book you are reading now, Clean Code presents material that is typically considered rather dry and \textit{compels} you to care about it. It accomplishes this largely due to its writing style and short sections. It isn't afraid to be whimsical after a dense section, and it has many section headers (sometimes more than one per page), which act as \textit{mini-checkpoints} for the reader. I studied the narrative structure of Clean Code and applied many of its stylistic and typographical principles to the typesetting of this book.
+% Aldous Huxley
+% Bertrand Russell
+% Richard Feynman
+% Henry Rollins
+% Marcus Aurelius
+% David Foster Wallace
 
 %--- ECCENTRIC --------------------------
 
@@ -534,7 +558,8 @@ In December of 2018, I graduated from Duke University, feeling like I knew simul
 
 % Mystic and Skitty
 % Seinfeld (Theory of Comedy, comedy systems, categories of comedic timing)
-% DGR, Fantano
+% DGR (It's amazing, what's going on with Mario Maker 2 right now. A cultural milestone in gaming, in my opinion. I may have to get back into video games for the first time since Witcher 3 (and before that, Black Ops 1).).
+% Fantano
 % Morinaga & Company, Ltd., the producers of Hi-Chews
 
 \newpage
@@ -565,7 +590,7 @@ In December of 2018, I graduated from Duke University, feeling like I knew simul
 \thispagestyle{empty}
 
 \begin{center}
-	\vspace*{5cm}
+	\vspace*{6cm}
 	\textit{The very word intuition has to be understood. \\[5mm]
 		You know the word tuition---tuition comes from outside, somebody teaches you, the tutor. \\[5mm]
 		Intuition means something that arises within your being; \\[5mm]

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.7.9)  18 JUL 2019 11:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.7.9)  1 AUG 2019 04:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2459,18 +2459,8 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 
 [6]
 LaTeX Font Info:    Font shape `T1/iwona/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/iwona/b/n' tried instead on input line 457.
+(Font)              Font shape `T1/iwona/b/n' tried instead on input line 458.
  [7] [8] [9] [10]
-\openout2 = `Chapters/chapter0.aux'.
-
- (./Chapters/chapter0.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\char' on input line 10.
-
-) [11
-
-]
 \openout2 = `Chapters/chapter1.aux'.
 
  (./Chapters/chapter1.tex
@@ -2555,27 +2545,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 64--65
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--73
+Underfull \hbox (badness 10000) in paragraph at lines 67--71
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--73
+Underfull \hbox (badness 10000) in paragraph at lines 67--71
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--73
+Underfull \hbox (badness 10000) in paragraph at lines 67--71
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--73
+Underfull \hbox (badness 10000) in paragraph at lines 67--71
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--76
+Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
  []
 
@@ -2583,55 +2573,77 @@ Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/iwona/b/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
 
+Underfull \hbox (badness 10000) in paragraph at lines 77--78
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 79--80
 
  []
 
-
+[14]
 Underfull \hbox (badness 10000) in paragraph at lines 81--82
 
  []
 
-[14]
+
 Underfull \hbox (badness 10000) in paragraph at lines 83--84
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--89
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
 
  []
 
 LaTeX Font Info:    Font shape `T1/iwona/bx/it' in size <10.95> not available
-(Font)              Font shape `T1/iwona/b/it' tried instead on input line 93.
+(Font)              Font shape `T1/iwona/b/it' tried instead on input line 91.
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
+
+ []
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 95--96
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--98
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 97--98
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
 
  []
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 104--105
+Underfull \hbox (badness 1168) in paragraph at lines 102--103
+\T1/stix/m/n/10.95 in Paris, Descartes came to sug-gest the ex-traor-di-nary: t
+hat animals---their
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--108
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--109
+
+ []
+
+
+Underfull \hbox (badness 2111) in paragraph at lines 110--111
+[]\T1/stix/m/n/10.95 Thus, Descartes cham-pi-oned \T1/stix/m/it/10.95 sub-stanc
+e du-al-ism \T1/stix/m/n/10.95 (known also as \T1/stix/m/it/10.95 Carte-sian
  []
 
 
@@ -2640,7 +2652,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--111
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--113
+Underfull \hbox (badness 10000) in paragraph at lines 113--114
 
  []
 
@@ -2650,7 +2662,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 115--116
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--118
+Underfull \hbox (badness 10000) in paragraph at lines 118--119
 
  []
 
@@ -2660,27 +2672,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 120--121
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 122--123
+Underfull \hbox (badness 10000) in paragraph at lines 123--124
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--126
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 128--129
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--136
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
 
  []
 
 [16] [17]
-Underfull \hbox (badness 10000) in paragraph at lines 166--167
+Underfull \hbox (badness 10000) in paragraph at lines 186--187
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--211
+
+ []
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 212--213
 
  []
 
@@ -2694,763 +2716,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 216--217
 
  []
 
-[18]
-Underfull \hbox (badness 10000) in paragraph at lines 224--225
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--219
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--228
+Underfull \hbox (badness 10000) in paragraph at lines 220--221
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 229--230
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 231--232
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 248--249
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 250--251
+Underfull \hbox (badness 10000) in paragraph at lines 222--223
 
  []
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 256--257
+Underfull \hbox (badness 10000) in paragraph at lines 267--268
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 258--259
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 260--261
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 262--263
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 264--265
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 266--267
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 268--269
-
- []
-
-[20]
-Underfull \hbox (badness 10000) in paragraph at lines 279--280
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 281--282
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 283--284
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 285--286
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 287--288
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 289--290
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 293--294
-
- []
-
-[21]
-Underfull \hbox (badness 10000) in paragraph at lines 317--318
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 324--325
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 347--348
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 347--348
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 360--362
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 371--372
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 383--384
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 392--393
-
- []
-
-[22]
-Underfull \hbox (badness 10000) in paragraph at lines 496--497
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 498--499
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 500--501
-
- []
-
-[23]
-Underfull \hbox (badness 10000) in paragraph at lines 502--503
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 505--507
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 507--509
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 509--512
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 509--512
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 509--512
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 577--578
-
- []
-
-[24]
-Underfull \hbox (badness 10000) in paragraph at lines 579--580
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 583--584
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 590--591
-
- []
-
-[25]
-Underfull \hbox (badness 10000) in paragraph at lines 594--595
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 596--597
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 598--599
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 600--601
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 602--603
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 604--605
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 613--614
-
- []
-
-[26]
-Underfull \hbox (badness 10000) in paragraph at lines 676--677
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 681--682
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 683--684
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 685--686
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 687--688
-
- []
-
-[27]
-Underfull \hbox (badness 10000) in paragraph at lines 694--695
-
- []
-
-
-Overfull \hbox (5.93597pt too wide) in paragraph at lines 701--702
-[]\T1/stix/m/n/10.95 Thus, Aris-to-tle dif-fer-en-ti-ates \T1/stix/m/it/10.95 p
-re-existent knowl-edge \T1/stix/m/n/10.95 from \T1/stix/m/it/10.95 sci-en-tific
- knowl-edge\T1/stix/m/n/10.95 . Whereas
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 701--702
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 708--709
-
- []
-
-[28]
-Underfull \hbox (badness 10000) in paragraph at lines 722--723
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 879--880
-
- []
-
-LaTeX Font Info:    Try loading font information for U+fplmbb on input line 881
-.
-(/usr/share/texmf-dist/tex/latex/psnfss/ufplmbb.fd
-File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
-)
-Underfull \hbox (badness 10000) in paragraph at lines 881--882
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 883--884
-
- []
-
-[29]
-Underfull \hbox (badness 10000) in paragraph at lines 887--888
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 931--932
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 933--934
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 933--934
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 945--946
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 947--948
-
- []
-
-
-Underfull \hbox (badness 1769) in paragraph at lines 949--950
-[]\T1/stix/m/n/10.95 Consider the [][][]$[]$[][][], a de-vice, more ap-pro-pri-
-ately
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 949--950
-
- []
-
-
-Underfull \hbox (badness 1436) in paragraph at lines 951--952
-\T1/stix/m/n/10.95 its me-chan-i-cal po-si-tions were con-sid-ered a dif-fer-en
-t "sym-bol," this sys-tem
- []
-
-
-Underfull \hbox (badness 1215) in paragraph at lines 951--952
-\T1/stix/m/n/10.95 de-gree of pre-ci-sion and, thus, com-pute con-tin-u-ous fun
-c-tions with-out er-ror.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 951--952
-
- []
-
-[30]
-Underfull \hbox (badness 10000) in paragraph at lines 1006--1007
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1008--1009
-
- []
-
-[31]
-Underfull \hbox (badness 10000) in paragraph at lines 1010--1011
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1012--1013
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1014--1015
-
- []
-
-LaTeX Font Info:    Font shape `T1/iwona/bx/n' in size <10> not available
-(Font)              Font shape `T1/iwona/b/n' tried instead on input line 1018.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1032--1033
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1051--1052
-
- []
-
-[32]
-Underfull \hbox (badness 10000) in paragraph at lines 1053--1054
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1055--1056
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1075--1076
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1086--1087
-
- []
-
-[33]
-Underfull \hbox (badness 10000) in paragraph at lines 1088--1089
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1118--1119
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1120--1121
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1122--1123
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1124--1125
-
- []
-
-LaTeX Font Info:    Calculating math sizes for size <50> on input line 1157.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 52.10037pt on input line 1157.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 39.596pt on input line 1157.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 31.26053pt on input line 1157.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 52.10037pt on input line 1157.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 39.596pt on input line 1157.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 31.26053pt on input line 1157.
-[34]
-Underfull \hbox (badness 10000) in paragraph at lines 1177--1178
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1179--1180
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1181--1182
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1183--1184
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1186
-
- []
-
-[35]
-Underfull \hbox (badness 10000) in paragraph at lines 1197--1198
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1199--1200
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1201--1202
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1213--1214
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1219--1220
-
- []
-
-[36]
-Underfull \hbox (badness 10000) in paragraph at lines 1281--1282
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1283--1284
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1285--1286
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1289--1290
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1301--1302
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1307--1308
-
- []
-
-[37]
-Underfull \hbox (badness 10000) in paragraph at lines 1309--1310
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1313--1314
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1315--1316
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1317--1318
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1321--1322
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1342--1343
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1344--1345
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1346--1347
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1348--1349
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1350--1351
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1358--1359
-
- []
-
-[38] [39]
-Underfull \hbox (badness 10000) in paragraph at lines 1377--1378
-
- []
-
-[40]
-Underfull \hbox (badness 10000) in paragraph at lines 1387--1388
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1389--1390
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1393--1394
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1395--1396
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1397--1398
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1397--1398
-
- []
-
-[41]
-Underfull \hbox (badness 10000) in paragraph at lines 1424--1425
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1426--1427
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1428--1429
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1430--1431
-
- []
-
-
-Overfull \hbox (5.75433pt too wide) in paragraph at lines 1432--1433
-\T1/stix/m/it/10.95 grammable cal-cu-la-tors \T1/stix/m/n/10.95 in the 1960s. M
-any mod-ern high-end cal-cu-la-tors are pro-grammable
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1432--1433
-
- []
-
-[42]) [43]
-\openout2 = `Chapters/chapter2.aux'.
-
- (./Chapters/chapter2.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\char' on input line 8.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--24
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 42--43
-
- []
-
-[44
-
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 44--45
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 54--55
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 76--77
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 102--103
-
- []
-
-
-Overfull \hbox (10.95392pt too wide) in paragraph at lines 104--143
-[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 104--143
-
- []
-
-[45]
-Underfull \hbox (badness 10000) in paragraph at lines 146--147
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 162--163
-
- []
-
-[46]
-Underfull \hbox (badness 10000) in paragraph at lines 245--247
-
- []
-
-[47]
-Underfull \hbox (badness 10000) in paragraph at lines 259--260
-
- []
-
-
-Underfull \hbox (badness 1845) in paragraph at lines 266--267
-[]\T1/stix/m/n/10.95 A fi-nite set $\LS1/stix/m/it/10.95 P$ \T1/stix/m/n/10.95 
-of \T1/stix/m/it/10.95 pro-duc-tion rules \T1/stix/m/n/10.95 where each rule is
- of the form
  []
 
 
@@ -3458,198 +2741,108 @@ Underfull \hbox (badness 10000) in paragraph at lines 269--270
 
  []
 
-[48]
-Underfull \hbox (badness 10000) in paragraph at lines 299--300
+
+Underfull \hbox (badness 10000) in paragraph at lines 277--278
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 301--302
+Underfull \hbox (badness 10000) in paragraph at lines 280--281
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 303--304
+Underfull \hbox (badness 10000) in paragraph at lines 282--283
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 305--306
+Underfull \hbox (badness 10000) in paragraph at lines 284--285
 
  []
 
-[49]
-Underfull \hbox (badness 10000) in paragraph at lines 309--310
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 311--312
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 300--301
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 311--312
+Underfull \hbox (badness 10000) in paragraph at lines 302--303
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 335--336
+Underfull \hbox (badness 10000) in paragraph at lines 312--313
 
  []
 
-[50]
+
+Underfull \hbox (badness 10000) in paragraph at lines 314--315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 316--317
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 318--319
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 320--321
+
+ []
+
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 322--323
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 326--327
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 350--351
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 376--377
+Underfull \hbox (badness 10000) in paragraph at lines 359--360
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 380--381
-
- []
-
-[51]
-Underfull \hbox (badness 10000) in paragraph at lines 382--383
+Underfull \hbox (badness 10000) in paragraph at lines 389--390
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 384--385
+Underfull \hbox (badness 10000) in paragraph at lines 389--390
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 386--387
+Underfull \hbox (badness 10000) in paragraph at lines 402--404
+
+ []
+
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 413--414
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 390--391
+Underfull \hbox (badness 10000) in paragraph at lines 425--426
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 392--393
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 394--395
-
- []
-
-[52]
-Underfull \hbox (badness 10000) in paragraph at lines 396--397
-
- []
-
-[53]
-Underfull \hbox (badness 10000) in paragraph at lines 428--429
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 428--429
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 435--436
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 437--438
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 439--440
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 441--442
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 443--444
-
- []
-
-[54]
-Underfull \hbox (badness 10000) in paragraph at lines 472--473
-
- []
-
-[55]
-Underfull \hbox (badness 10000) in paragraph at lines 474--475
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 476--477
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 478--479
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 480--481
-
- []
-
-[56]
-Underfull \hbox (badness 10000) in paragraph at lines 505--506
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 516--517
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 518--519
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 518--519
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 528--529
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 530--531
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 532--533
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 534--535
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 536--537
+Underfull \hbox (badness 10000) in paragraph at lines 434--435
 
  []
 
@@ -3658,716 +2851,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 538--539
 
  []
 
-[57] [58]
-Underfull \hbox (badness 10000) in paragraph at lines 553--554
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 555--556
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 557--558
-
- []
-
-[59]
-Underfull \hbox (badness 10000) in paragraph at lines 589--590
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 591--592
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 606--607
-
- []
-
-[60]
-Underfull \hbox (badness 10000) in paragraph at lines 653--654
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 660--661
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 693--694
-
- []
-
-[61]
-Underfull \hbox (badness 10000) in paragraph at lines 697--698
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 699--700
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 701--702
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 703--704
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 705--706
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 707--708
-
- []
-
-[62]
-Underfull \hbox (badness 10000) in paragraph at lines 711--712
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 713--714
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 715--716
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 717--718
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 719--720
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 725--726
-
- []
-
-[63]
-Underfull \hbox (badness 10000) in paragraph at lines 743--745
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 746--747
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 748--749
-
- []
-
-[64]
-Underfull \hbox (badness 10000) in paragraph at lines 753--755
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 756--757
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 761--763
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 764--765
-
- []
-
-[65]
-Underfull \hbox (badness 10000) in paragraph at lines 771--772
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 775--776
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 780--782
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 783--784
-
- []
-
-[66]
-Underfull \hbox (badness 10000) in paragraph at lines 787--788
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 792--794
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 795--796
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 795--796
-
- []
-
-
-Underfull \hbox (badness 1281) in paragraph at lines 802--803
-\T1/stix/m/n/10.95 Typically, when a proof is sub-mit-ted, it is ei-ther quickl
-y ac-cepted by the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 802--803
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 804--805
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 814--815
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 816--817
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 823--824
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 830--831
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 832--833
-
- []
-
-[67] [68]
-Underfull \hbox (badness 10000) in paragraph at lines 852--853
-
- []
-
-[69]
-Underfull \hbox (badness 10000) in paragraph at lines 854--855
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 856--857
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 858--859
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 877--878
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 879--880
-
- []
-
-[70]
-Underfull \hbox (badness 10000) in paragraph at lines 924--925
-
- []
-
-[71]
-Overfull \hbox (5.50641pt too wide) in paragraph at lines 928--930
-\T1/stix/m/n/10.95 strings $\LS1/stix/m/it/10.95 S$ \T1/stix/m/n/10.95 us-ing t
-he reg-u-lar ex-pres-sion $\LS1/stix/m/n/10.95 ^0\LS1/stix/m/it/10.95 ; \LS1/st
-ix/m/n/10.95 1`[]$ \T1/stix/m/n/10.95 (i.e. $\LS1/stix/m/n/10.95 ^\LS1/stix/m/i
-t/10.95 ";  \LS1/stix/m/n/10.95 0\LS1/stix/m/it/10.95 ;  \LS1/stix/m/n/10.95 1\
-LS1/stix/m/it/10.95 ;  \LS1/stix/m/n/10.95 00\LS1/stix/m/it/10.95 ;  \LS1/stix/
-m/n/10.95 01\LS1/stix/m/it/10.95 ;  \LS1/stix/m/n/10.95 10\LS1/stix/m/it/10.95 
-;  \LS1/stix/m/n/10.95 11\LS1/stix/m/it/10.95 ;  \LS1/stix/m/n/10.95 000\LS1/st
-ix/m/it/10.95 ;  \LS1/stix/m/n/10.95 001\LS1/stix/m/it/10.95 ;  \LS1/stixscr/m/
-n/10.95 5\LS1/stix/m/n/10.95 `$\T1/stix/m/n/10.95 ).
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 931--932
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 935--937
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 938--939
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 940--941
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 944--945
-
- []
-
-[72]
-Underfull \hbox (badness 10000) in paragraph at lines 946--947
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 955--957
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 965--967
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 965--967
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 975--976
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 987--988
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 989--990
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1001--1002
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1003--1004
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1005--1006
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1007--1008
-
- []
-
-[73] [74]
-Underfull \hbox (badness 10000) in paragraph at lines 1014--1015
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1022--1024
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1030--1031
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1032--1033
-
- []
-
-[75]
-Underfull \hbox (badness 10000) in paragraph at lines 1034--1035
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1036--1037
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1044--1045
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1048--1049
-
- []
-
-[76]
-Underfull \hbox (badness 10000) in paragraph at lines 1068--1069
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1070--1071
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1082--1083
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1092--1093
-
- []
-
-[77]
-Underfull \hbox (badness 10000) in paragraph at lines 1096--1097
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1098--1099
-
- []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1122.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mu' on input line 1122.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1122.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1124.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\lambda' on input line 1124.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1124.
-
-[78]
-Underfull \hbox (badness 10000) in paragraph at lines 1185--1186
-
- []
-
-) [79]
-\openout2 = `Chapters/chapter3.aux'.
-
- (./Chapters/chapter3.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\char' on input line 10.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 90--91
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
-
- []
-
-[80
-
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 140--141
-
- []
-
-[81]
-Underfull \hbox (badness 10000) in paragraph at lines 154--155
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 156--157
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 158--159
-
- []
-
-[82]
-Underfull \hbox (badness 10000) in paragraph at lines 201--202
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 203--204
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 205--206
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 207--208
-
- []
-
-
-Underfull \hbox (badness 1997) in paragraph at lines 232--232
-\T1/stix/m/n/10.95 but you can it-er-ate through a cer-tain
- []
-
-
-Underfull \hbox (badness 7486) in paragraph at lines 232--232
-\T1/stix/m/n/10.95 and dou-ble links,
- []
-
-[83]
-Underfull \hbox (badness 10000) in paragraph at lines 254--255
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 260--261
-
- []
-
-[84]
-Underfull \hbox (badness 10000) in paragraph at lines 262--263
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 262--263
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 270--271
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 272--273
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 300--301
-
- []
-
-[85]
-Underfull \hbox (badness 10000) in paragraph at lines 342--343
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 344--345
-
- []
-
-
-Overfull \hbox (0.38083pt too wide) in paragraph at lines 346--347
-[]\T1/stix/m/n/10.95 With an ad-ja-cency ma-trix, the rows would rep-re-sent th
-e source ver-tices and the columns
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 346--347
-
- []
-
-[86]
-Underfull \hbox (badness 10000) in paragraph at lines 393--394
-
- []
-
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 425.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 425.
-[87]
-Underfull \hbox (badness 10000) in paragraph at lines 435--436
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 437--438
-
- []
-
-[88]
-Underfull \hbox (badness 10000) in paragraph at lines 455--456
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 457--458
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 459--460
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 461--462
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 463--464
-
- []
-
-[89]
-Underfull \hbox (badness 10000) in paragraph at lines 489--490
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 491--492
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 493--494
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 505--506
-
- []
-
-[90]
-Underfull \hbox (badness 10000) in paragraph at lines 509--511
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 513--514
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 515--516
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 517--518
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 519--520
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 521--522
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 523--524
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 525--526
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 527--528
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 530--531
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 532--533
-
- []
-
-[91]
-Underfull \hbox (badness 10000) in paragraph at lines 534--535
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 536--537
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 538--539
-
- []
-
-
+[23]
 Underfull \hbox (badness 10000) in paragraph at lines 540--541
 
  []
@@ -4383,328 +2867,1042 @@ Underfull \hbox (badness 10000) in paragraph at lines 544--545
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 548--549
+Underfull \hbox (badness 10000) in paragraph at lines 547--549
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 548--549
-
- []
-
-[92]
-Underfull \hbox (badness 10000) in paragraph at lines 643--644
-
- []
-
-[93]
-Underfull \hbox (badness 10000) in paragraph at lines 683--684
+Underfull \hbox (badness 10000) in paragraph at lines 549--551
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 685--686
-
- []
-
-[94] [95]
-Underfull \hbox (badness 10000) in paragraph at lines 719--721
+Underfull \hbox (badness 10000) in paragraph at lines 551--554
 
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 551--554
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 551--554
+
+ []
+
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 626--627
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 628--629
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 632--633
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 635--636
+
+ []
+
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 638--639
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 642--643
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 644--645
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 646--647
+
+ []
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 648--649
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 650--651
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 652--653
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 677--678
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 740--741
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 745--746
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 747--748
+
+ []
+
+[27]
 Underfull \hbox (badness 10000) in paragraph at lines 749--750
 
  []
 
-[96]
-Overfull \hbox (0.12506pt too wide) in paragraph at lines 774--775
-\T1/stix/m/n/10.95 lar way to a map. A hash ta-ble is used for un-sorted sets t
-o achieve $\LS1/stix/m/it/10.95 O\LS1/stix/m/n/10.95 .1/$ \T1/stix/m/n/10.95 se
-arch/insert/delete.
- []
 
-
-Overfull \hbox (24.25519pt too wide) in paragraph at lines 774--775
-\T1/stix/m/n/10.95 A self-balancing bi-nary search tree is used for sorted sets
- to achieve $\LS1/stix/m/it/10.95 O\LS1/stix/m/n/10.95 .\LS1/stix/m/it/10.95 lo
-gn\LS1/stix/m/n/10.95 /$ \T1/stix/m/n/10.95 search/insert/delete
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 774--775
+Underfull \hbox (badness 10000) in paragraph at lines 751--752
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 776--777
-
- []
-
-) [97]
-\openout2 = `Chapters/chapter4.aux'.
-
- (./Chapters/chapter4.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\char' on input line 8.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
+Underfull \hbox (badness 10000) in paragraph at lines 754--755
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--37
+Underfull \hbox (badness 10000) in paragraph at lines 757--758
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--39
+Underfull \hbox (badness 10000) in paragraph at lines 760--761
+
+ []
+
+[28]
+Overfull \hbox (5.93597pt too wide) in paragraph at lines 763--764
+[]\T1/stix/m/n/10.95 Thus, Aris-to-tle dif-fer-en-ti-ates \T1/stix/m/it/10.95 p
+re-existent knowl-edge \T1/stix/m/n/10.95 from \T1/stix/m/it/10.95 sci-en-tific
+ knowl-edge\T1/stix/m/n/10.95 . Whereas
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 763--764
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--39
-
- []
-
-[98
-
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 104--105
-
- []
-
-[99]
-Underfull \hbox (badness 10000) in paragraph at lines 106--107
-
- []
-
-[100]
-Underfull \hbox (badness 10000) in paragraph at lines 170--171
+Underfull \hbox (badness 10000) in paragraph at lines 766--767
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--173
+Underfull \hbox (badness 10000) in paragraph at lines 769--770
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 197--198
+Underfull \hbox (badness 10000) in paragraph at lines 783--784
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--200
+Underfull \hbox (badness 10000) in paragraph at lines 946--947
 
  []
 
-[101]
-Underfull \hbox (badness 10000) in paragraph at lines 232--233
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 255--256
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 257--258
+[29]
+LaTeX Font Info:    Try loading font information for U+fplmbb on input line 948
+.
+ (/usr/share/texmf-dist/tex/latex/psnfss/ufplmbb.fd
+File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 948--949
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 259--260
+Underfull \hbox (badness 10000) in paragraph at lines 950--951
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 261--262
+Underfull \hbox (badness 10000) in paragraph at lines 954--955
 
  []
 
-[102]
-Underfull \hbox (badness 10000) in paragraph at lines 269--270
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 271--272
-
- []
-
-[103]
-LaTeX Font Info:    Font shape `T1/fvm/m/it' in size <10.95> not available
-(Font)              Font shape `T1/fvm/m/sl' tried instead on input line 311.
-LaTeX Font Info:    Font shape `T1/fvm/m/sl' will be
-(Font)              scaled to size 9.30756pt on input line 311.
- [104]
-Underfull \hbox (badness 10000) in paragraph at lines 335--336
+[30]
+Underfull \hbox (badness 10000) in paragraph at lines 998--999
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 380--381
-
- []
-
-[105]) [106]
-\openout2 = `Chapters/chapter5.aux'.
-
- (./Chapters/chapter5.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\char' on input line 8.
-
-) [107
-
-
-]
-\openout2 = `Chapters/chapter6.aux'.
-
- (./Chapters/chapter6.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\char' on input line 8.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--13
+Underfull \hbox (badness 10000) in paragraph at lines 1000--1001
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--48
+Underfull \hbox (badness 10000) in paragraph at lines 1000--1001
 
  []
 
-) [108
 
-
-]
-\openout2 = `Chapters/chapter7.aux'.
-
- (./Chapters/chapter7.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\char' on input line 8.
-
-[109
-
-
-] [110])
-Underfull \hbox (badness 10000) in paragraph at lines 184--597
+Underfull \hbox (badness 10000) in paragraph at lines 1012--1013
 
  []
 
-[111]
-\openout2 = `Chapters/chapter8.aux'.
 
- (./Chapters/chapter8.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1014--1015
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\char' on input line 10.
-
-
-Overfull \hbox (3.02135pt too wide) in paragraph at lines 21--21
-|[]\T1/iwona/m/sc/14.4/80ls software en-gi-neer-ing pro-cesses and prin-ci-ples
-|  
- []
-
-) [112
-
-
-]
-\openout2 = `Chapters/chapter9.aux'.
-
- (./Chapters/chapter9.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\char' on input line 8.
-
-[113
-
-
-]
-Overfull \hbox (3.5195pt too wide) in paragraph at lines 48--49
-[]\T1/stix/m/n/10.95 Canonical. Points a name to an-other name (google.com to w
-ww.google.com)
- []
-
-[114]
-Overfull \hbox (0.60965pt too wide) in paragraph at lines 83--84
-[]\T1/stix/m/n/10.95 A \T1/stix/m/it/10.95 re-la-tional database \T1/stix/m/n/1
-0.95 is
- []
-
-[115]
-Overfull \hbox (1.16757pt too wide) in paragraph at lines 89--90
-[]\T1/stix/m/n/10.95 If a mas-ter dies be-fore it can repli-cate a write,
  []
 
 
-Overfull \hbox (0.64685pt too wide) in paragraph at lines 91--92
-[]\T1/stix/m/n/10.95 Splits up databases by func-tion in-stead of us-ing a mono
--lithic database.
+Underfull \hbox (badness 1769) in paragraph at lines 1016--1017
+[]\T1/stix/m/n/10.95 Consider the [][][]$[]$[][][], a de-vice, more ap-pro-pri-
+ately
  []
 
 
-Overfull \hbox (11.16571pt too wide) in paragraph at lines 102--103
-[]\T1/stix/m/n/10.95 The ba-sic unit of data is a \T1/stix/m/it/10.95 col-umn \
-T1/stix/m/n/10.95 (name/value pair). Columns
+Underfull \hbox (badness 10000) in paragraph at lines 1016--1017
+
  []
 
-[116] [117] [118] [119] [120] [121] [122]) [123]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 613.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 613.
 
-(./Intuition_For_Computation.aux (./Chapters/chapter0.aux)
+Underfull \hbox (badness 1436) in paragraph at lines 1018--1019
+\T1/stix/m/n/10.95 its me-chan-i-cal po-si-tions were con-sid-ered a dif-fer-en
+t "sym-bol," this sys-tem
+ []
+
+
+Underfull \hbox (badness 1215) in paragraph at lines 1018--1019
+\T1/stix/m/n/10.95 de-gree of pre-ci-sion and, thus, com-pute con-tin-u-ous fun
+c-tions with-out er-ror.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1018--1019
+
+ []
+
+[31]
+Underfull \hbox (badness 10000) in paragraph at lines 1073--1074
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1075--1076
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1077--1078
+
+ []
+
+[32]
+Underfull \hbox (badness 10000) in paragraph at lines 1079--1080
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1081--1082
+
+ []
+
+LaTeX Font Info:    Font shape `T1/iwona/bx/n' in size <10> not available
+(Font)              Font shape `T1/iwona/b/n' tried instead on input line 1085.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1099--1100
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1118--1119
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1120--1121
+
+ []
+
+[33]
+Underfull \hbox (badness 10000) in paragraph at lines 1122--1123
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1142--1143
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1153--1154
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1155--1156
+
+ []
+
+[34]
+Underfull \hbox (badness 10000) in paragraph at lines 1177--1177
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1195--1196
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1197--1198
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1199--1200
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1201--1202
+
+ []
+
+[35]
+LaTeX Font Info:    Calculating math sizes for size <50> on input line 1234.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 52.10037pt on input line 1234.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 39.596pt on input line 1234.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 31.26053pt on input line 1234.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 52.10037pt on input line 1234.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 39.596pt on input line 1234.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 31.26053pt on input line 1234.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1254--1255
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1256--1257
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1258--1259
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1260--1261
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1262--1263
+
+ []
+
+[36]
+Underfull \hbox (badness 10000) in paragraph at lines 1274--1275
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1276--1277
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1278--1279
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1290--1291
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1296--1297
+
+ []
+
+[37]
+Underfull \hbox (badness 10000) in paragraph at lines 1358--1359
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1360--1361
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1362--1363
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1366--1367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1378--1379
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1384--1385
+
+ []
+
+[38]
+Underfull \hbox (badness 10000) in paragraph at lines 1386--1387
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1390--1391
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1392--1393
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1394--1395
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1398--1399
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1419--1420
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1421--1422
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1423--1424
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1425--1426
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1427--1428
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1435--1436
+
+ []
+
+[39] [40]
+Underfull \hbox (badness 10000) in paragraph at lines 1454--1455
+
+ []
+
+[41]
+Underfull \hbox (badness 10000) in paragraph at lines 1464--1465
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1466--1467
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1470--1471
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1472--1473
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1474--1475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1474--1475
+
+ []
+
+[42]
+Underfull \hbox (badness 10000) in paragraph at lines 1501--1502
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1503--1504
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1505--1506
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1507--1508
+
+ []
+
+
+Overfull \hbox (5.75433pt too wide) in paragraph at lines 1509--1510
+\T1/stix/m/it/10.95 grammable cal-cu-la-tors \T1/stix/m/n/10.95 in the 1960s. M
+any mod-ern high-end cal-cu-la-tors are pro-grammable
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1509--1510
+
+ []
+
+[43]) [44]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 638.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 638.
+ (./Intuition_For_Computation.aux (./Chapters/chapter0.aux)
 (./Chapters/chapter1.aux) (./Chapters/chapter2.aux) (./Chapters/chapter3.aux)
 (./Chapters/chapter4.aux) (./Chapters/chapter5.aux) (./Chapters/chapter6.aux)
 (./Chapters/chapter7.aux) (./Chapters/chapter8.aux) (./Chapters/chapter9.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 613.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 613.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 638.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 638.
 Package rerunfilecheck Info: File `Intuition_For_Computation.out' has not chang
 ed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 613.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 638.
  ) 
 Here is how much of TeX's memory you used:
- 58916 strings out of 492623
- 1293266 string characters out of 6135670
- 1732242 words of memory out of 5000000
- 61496 multiletter control sequences out of 15000+600000
- 806452 words of font info for 332 fonts, out of 8000000 for 9000
+ 58164 strings out of 492623
+ 1281971 string characters out of 6135670
+ 1732928 words of memory out of 5000000
+ 60935 multiletter control sequences out of 15000+600000
+ 775058 words of font info for 301 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 81i,43n,388p,9104b,1976s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/iwona/ec-iwona.enc}{/usr/share/texmf-d
-ist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf-dist/fonts/enc/dvips/stix/sti
-x-t1.enc}{/usr/share/texmf-dist/fonts/enc/dvips/iwona/ec-iwona-sc.enc}{/usr/sha
-re/texmf-dist/fonts/enc/dvips/adforn/OrnementsADF.enc}</usr/share/texmf-dist/fo
-nts/type1/arkandis/adforn/OrnementsADF.pfb></usr/share/texmf-dist/fonts/type1/p
-ublic/stix/STIXGeneral-Bold.pfb></usr/share/texmf-dist/fonts/type1/public/stix/
-STIXGeneral-BoldItalic.pfb></usr/share/texmf-dist/fonts/type1/public/stix/STIXG
-eneral-Italic.pfb></usr/share/texmf-dist/fonts/type1/public/stix/STIXGeneral-Re
-gular.pfb></usr/share/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/s
-hare/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb></usr/share/texmf-dist/fonts
-/type1/public/bera/fvmro8a.pfb></usr/share/texmf-dist/fonts/type1/nowacki/iwona
-/iwonab.pfb></usr/share/texmf-dist/fonts/type1/nowacki/iwona/iwonabi.pfb></usr/
-share/texmf-dist/fonts/type1/nowacki/iwona/iwonar.pfb></usr/share/texmf-dist/fo
-nts/type1/nowacki/iwona/iwonari.pfb></usr/share/texmf-dist/fonts/type1/public/s
-tix/stix-mathcal.pfb></usr/share/texmf-dist/fonts/type1/public/stix/stix-mathex
-.pfb></usr/share/texmf-dist/fonts/type1/public/stix/stix-mathfrak.pfb></usr/sha
-re/texmf-dist/fonts/type1/public/stix/stix-mathit.pfb></usr/share/texmf-dist/fo
-nts/type1/public/stix/stix-mathrm-bold.pfb></usr/share/texmf-dist/fonts/type1/p
-ublic/stix/stix-mathrm.pfb></usr/share/texmf-dist/fonts/type1/public/stix/stix-
-mathscr.pfb></usr/share/texmf-dist/fonts/type1/public/stix/stix-mathsf.pfb></us
-r/share/texmf-dist/fonts/type1/public/stix/stix-mathtt.pfb>
-Output written on Intuition_For_Computation.pdf (123 pages, 718956 bytes).
+ 81i,24n,136p,9104b,1976s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{appendix.H} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{appendix.G} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{appendix.F} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{appendix.E} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{appendix.D} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{appendix.C} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.B.3} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.B.2} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.B.1} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{appendix.B} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{appendix.A} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{part*.57} has been referenced but does not exist, r
+eplaced by a fixed one
+
+pdfTeX warning (dest): name{section.21} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{section.20} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{part*.55} has been referenced but does not exist, r
+eplaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.19.3.1} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.19.3} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.19.2.2} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.19.2.1} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.19.2} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.19.1.3} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.19.1.2} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.19.1.1} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.19.1} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.19} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.18.6.1} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.18.6} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.18.5.2} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.18.5.1} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.18.5} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.18.4.1} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.18.4} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.18.3.1} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.18.3} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.18.2.4} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.18.2.3} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.18.2.2} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.18.2.1} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.18.2} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.18.1} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.18} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{part*.53} has been referenced but does not exist, r
+eplaced by a fixed one
+
+pdfTeX warning (dest): name{section.17} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.16.2.2} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.16.2.1} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.16.2} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.16.1.4} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.16.1.3} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.16.1.2} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.16.1.1} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.16.1} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.16} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{part*.51} has been referenced but does not exist, r
+eplaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.15.3} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.15.2} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.15.1.1} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.15.1} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.15} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.14.2} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.14.1.2} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.14.1.1} has been referenced but does 
+not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.14.1} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.14} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{section.13} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{section.12} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.11.6} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.11.5} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.11.4} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.11.3} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.11.2} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.11.1} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.11} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{part*.49} has been referenced but does not exist, r
+eplaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.10.4} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.10.3} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.10.2} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.10.1} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.10} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.9.6} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.9.5} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.9.4} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.9.3} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.9.2} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.9.1} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.9} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.8.6} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.8.5} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.8.4} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.8.3} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.8.2} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.8.1} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.8} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{part*.45} has been referenced but does not exist, r
+eplaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.7.10} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.7.9} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.7.8.2} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.7.8.1} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.7.8} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.7.7.3} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.7.7.2} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.7.7.1} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.7.7} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.7.6} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.7.5} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.7.4} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.7.3} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.7.2} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.7.1.3} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.7.1.2} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.7.1.1} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.7.1} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.7} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.6.1} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.6} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{part*.21} has been referenced but does not exist, r
+eplaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.2} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.1} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.5} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.4.6} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.4.5.3} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.4.5.2} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.4.5.1} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.4.5} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.4.4.3} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.4.4.2} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.4.4.1} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.4.4} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.4.3.3} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.4.3.2} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.4.3.1} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.4.3} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.4.2.4} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.4.2.3} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.4.2.2} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.4.2.1} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.4.2} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.4.1.4} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.4.1.3} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.4.1.2} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.4.1.1} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.4.1} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.4} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.6} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.5} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.3.4.4} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.3.4.3} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.3.4.2} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.3.4.1} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.4} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.3} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.2} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.1} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.3} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{part*.15} has been referenced but does not exist, r
+eplaced by a fixed one
+
+{/usr/share/texmf-dist/fonts/enc/dvips/iwona/ec-iwona.enc}{/usr/share/texmf-dis
+t/fonts/enc/dvips/stix/stix-t1.enc}{/usr/share/texmf-dist/fonts/enc/dvips/iwona
+/ec-iwona-sc.enc}{/usr/share/texmf-dist/fonts/enc/dvips/adforn/OrnementsADF.enc
+}{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/font
+s/type1/arkandis/adforn/OrnementsADF.pfb></usr/share/texmf-dist/fonts/type1/pub
+lic/stix/STIXGeneral-Bold.pfb></usr/share/texmf-dist/fonts/type1/public/stix/ST
+IXGeneral-BoldItalic.pfb></usr/share/texmf-dist/fonts/type1/public/stix/STIXGen
+eral-Italic.pfb></usr/share/texmf-dist/fonts/type1/public/stix/STIXGeneral-Regu
+lar.pfb></usr/share/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/sha
+re/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb></usr/share/texmf-dist/fonts/t
+ype1/nowacki/iwona/iwonab.pfb></usr/share/texmf-dist/fonts/type1/nowacki/iwona/
+iwonabi.pfb></usr/share/texmf-dist/fonts/type1/nowacki/iwona/iwonar.pfb></usr/s
+hare/texmf-dist/fonts/type1/public/stix/stix-mathcal.pfb></usr/share/texmf-dist
+/fonts/type1/public/stix/stix-mathit.pfb></usr/share/texmf-dist/fonts/type1/pub
+lic/stix/stix-mathrm.pfb></usr/share/texmf-dist/fonts/type1/public/stix/stix-ma
+thscr.pfb></usr/share/texmf-dist/fonts/type1/public/stix/stix-mathsf.pfb>
+Output written on Intuition_For_Computation.pdf (43 pages, 421839 bytes).
 PDF statistics:
- 1761 PDF objects out of 2073 (max. 8388607)
- 1599 compressed objects within 16 object streams
- 409 named destinations out of 1000 (max. 500000)
- 36837 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 804 PDF objects out of 1000 (max. 8388607)
+ 736 compressed objects within 8 object streams
+ 242 named destinations out of 1000 (max. 500000)
+ 30477 words of extra memory for PDF output out of 35830 (max. 10000000)
 
