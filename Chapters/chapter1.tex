@@ -31,18 +31,19 @@ These terms---data, information, and knowledge---are broad enough to apply to a 
 In this chapter, we will explore what computation is and why it matters. In some sense, computation is a kind of game in which \textit{pieces} are moved and transformed within a \textit{game space} according to a predetermined set of \textit{rules}. However, unlike most games, computation has no set goal. Nature shuffles its hazy pieces about, following arbitrary rules for reasons we cannot ascertain. Man, on the other hand, explicitly defines its pieces and rules, modeling them after Nature's strange mechanics. We invent \textit{win conditions} and play toward them, hoping that our computations will result in general solutions that will elucidate the knowledge we seek. \\
 
 \begin{description}
-	\item[Section 1:] \textit{Information and Communication}, covers the pieces \dots
-	\item[Section 2:] \textit{Reasoning and Logic}, covers the rules \dots \\
+	\item[Section 1:] \textit{Information}
+	\item[Section 2:] \textit{Communication}
+	\item[Section 3:] \textit{Logic} \\
 \end{description}
 
 Here, we learn how this game is played and how it is woven into the fabric of our reality. In the chapter following this one, we model the game of computation mathematically and find the theoretical limits of what it can tell us. Beyond that, we learn how to be an excellent player, covering \textit{techniques} for efficient problem solving and \textit{tools} for designing beautiful, maintainable systems.
 
 %--------------------------------------------------------------------------------
-%    SECTION: INFORMATION AND COMMUNICATION
+%    SECTION: INFORMATION
 %--------------------------------------------------------------------------------
 
 \toclineskip
-\section{Information and Communication}
+\section{Information}
 
 \vspace{4mm}
 \begin{displayquote}
@@ -64,7 +65,7 @@ Regardless, the namers must reach outside of the formalisms they have constructe
 In the spirit of this principle, four words are given below, defined softly, that will act now as beacons in the dark of our ignorance and later as summaries of our hard-earned understanding: \\
 
 \begin{displayquote}
-		\textbf{Data} are pieces of information that are meaningless when considered separately. They are observable lacks of uniformity in reality, each of which may be represented by a symbol that conveys its particular difference from the norm. \\~\\
+		\textbf{Data} (sing. \textbf{datum}) are pieces of information that are meaningless when considered separately. They are observable lacks of uniformity in reality, each of which may be represented by a symbol that conveys its particular difference from the norm. \\~\\
 		\textbf{Information} is an ordered arrangement of data that is considered meaningful. The data are arranged such that the information as a whole complies with the grammar of a language that can, in theory, be understood. \\~\\
 		\textbf{Knowledge} is an understanding of information that emerges given proper interpretation and sufficient thought. It is usually associated with Truth and may be considered a body of true beliefs. \\~\\
 		\textbf{Wisdom} is the capacity to think and act in a way that is right. It involves the use of knowledge, a prudent choice of means and ends, and a healthy doubt of one's own understanding. It is born of an acknowledgment of how little one truly knows and how little control one truly has. \\
@@ -72,11 +73,11 @@ In the spirit of this principle, four words are given below, defined softly, tha
 
 With these fundamental terms in mind, let us take a page from Hesiod and begin our tale with an uncertain chaos. Let us regard reality as a baby might: confusing but ultimately intelligible through \textit{categorization}. \\
 
-\subsection{Cognitive Development and Categorical Thought}
+\subsection{Cognition}
 
 Dark turns into light. A boundless zephyr of blurs. You see. You hear. You \textit{feel}. The knife-edge of experience materializes, and you step out onto it. It cuts you, and there is no thought---only sensation. Air kissing skin and turbulent color. Sonic frenzy and the feeling of self-weight. Reality emerges raw, and nothing is gleaned---you are lost in it all. A sailboat in a storm, a satellite adrift in space, all of it. Indifferent, the phantasmagoria rages on. \\
 
-This is roughly the experience of a newborn infant. For children of only a month or so, life is a sensory mayhem of little sense. They are not conscious, at least not in the way that we typically think of consciousness. They are, however, aware of their surroundings and sensitive to \textit{phenomena} (i.e. \textit{appearances} in reality, \textit{observable} stuff). To newborns, the world is not a system of distinct parts but an all-encompassing soup of stimuli. Their sensory organs input data that they do not understand, and they then output \textit{reflexes} that have been programmed into their biological firmware. \\
+This is roughly the experience of a newborn infant. For children of only a month or so, life is a sensory mayhem of little sense. They are not conscious, at least not in the way that we typically think of consciousness. They are, however, aware of their surroundings and sensitive to \textit{phenomena} (i.e. \textit{appearances} in reality, \textit{observables}). To newborns, the world is not a system of distinct parts but an all-encompassing soup of stimuli. Their sensory organs input data that they do not understand, and they then output \textit{reflexes} that have been embedded in their biological firmware due to millions of years of natural selection. \\
 
 This is not to say that babies are mindless. Rather, their minds are just unlike those of typical adults, which both \textit{filter} and \textit{store} information. For example, while babies and adults have similar hearing ability, babies nevertheless hear things that adults do not. This is because adults subconsciously ignore certain sounds; they may \textit{sense} the auditory data, but they do not \textit{perceive} them. This filtering process is called \textit{sensory gating}, and it inhibits any stimulus that is deemed irrelevant. Any information that is not filtered is then eligible for storage in \textit{memory}. \\
 
@@ -88,7 +89,7 @@ Thus, if the adult mind is like the conical beam of a flashlight, seeing far but
 
 So it is through a great deal of concurrent filtering and learning that we come to build a cavern around ourselves. But we do not muffle our perception pointlessly---we trade it for genuine \textit{thought}. \\
 
-\subsubsection{The Origin of Concepts}
+\subsubsection{Percepts and Concepts}
 
 There is a distinction that is sometimes made in cognitive science between a \textit{(phenomenal) P-consciousness} and an \textit{(access) A-consciousness}, the former being the sole consciousness of the baby mind, concerned only with bits of immediate, subjective experience known as \textit{qualia} (e.g. what it is like to \textit{feel} a delicate raspberry as it touches your tongue, what it is like to \textit{taste} it as you mash it between your molars, the rush of brief and unique \textit{delight} found in enjoying that \textit{particular} berry, etc.) and the latter being the dominant consciousness of the adult mind, concerned with \textit{cognitive information} (e.g. thoughts about sensory data, abstract ideas, memories of the past, plans for the future, and all things involved in \textit{mental computation}). \\
 
@@ -99,7 +100,7 @@ Of course, adults still have a P-consciousness---we can lose ourselves in the mo
 	\begin{center}
 		\textbf{The Hard Problem of Consciousness}
 	\end{center}
-	What is it about phenomenal consciousness that is so intangible? It has been a question of interest to humanity for thousands of years and an object of formal study since Ren\'e Descartes (1596-1650 BCE) first posited the duality of \textit{mind} and \textit{body}. Inspired by the proliferation of \textit{automata} (i.e. self-operating machines) in Paris, Descartes came to suggest the extraordinary: that animals---their limbs, organs, and mannerisms---could be replicated with sufficiently complex machinery. Further, he professed that animals \textit{themselves} were machines, with bone and flesh standing in for wood and metal: \\
+	What is it about phenomenal consciousness that is so intangible? It has been a question of interest to humanity for thousands of years and an object of formal study since Ren\'e Descartes (1596-1650) first posited the duality of \textit{mind} and \textit{body}. Inspired by the proliferation of \textit{automata} (i.e. self-operating machines) in Paris, Descartes came to suggest the extraordinary: that animals---their limbs, organs, and mannerisms---could be replicated with sufficiently complex machinery. Further, he professed that animals \textit{themselves} were machines, with bone and flesh standing in for wood and metal: \\
 	
 	\begin{displayquote}
 		It seems reasonable since art copies nature, and men can make various automata which move without thought, that nature should produce its own automata much more splendid than the artificial ones. These natural automata are the animals. \\
@@ -107,7 +108,7 @@ Of course, adults still have a P-consciousness---we can lose ourselves in the mo
 	
 	Note that Descartes implies here that animals are "without thought." He also claimed that thoughts required a language in which rational ideas could be expressed. (Thoughts encoded in a language, however, need not be expressed outwardly; babies, for example, mentally represent ideas before learning how to render them in speech.) He also reasoned on this basis that an automaton would never be able to think because it would never be able to speak in the way that humans do---by organically producing an appropriate response to any given prompt. (Whether or not he was correct remains to be seen, though the possibility of an \textit{artificial general intelligence} does not seem quite as absurd now as it must have seemed back then.) In Descartes' view, humans are special and cannot be reduced to machinery because, unlike animals, they possess rational minds enriched with a free will that no algorithm can replicate. \\
 	
-	Thus, Descartes championed \textit{substance dualism} (known also as \textit{Cartesian dualism}), in which all things were either fundamentally of \textit{matter (res extensa)} or of immaterial \textit{mind (res cogitans)}. He saw the human being as a union of the two disparate substances but struggled to reconcile his strict dualist views with the decidedly hybrid and experiential character of his own bodily sensations and emotions. In the sixth and final meditation of his \textit{Meditations on First Philosophy}, Descartes states that in being skeptical of his fallible senses, he understands himself to be essentially a mind, a purely thinking thing of no physical extent that is intuitively indivisible. And yet, he nevertheless \textit{feels} the qualia of his body and thus must straddle his own \textit{mind-body duality}, being, in a phrase, both flesh and not: \\
+	Thus, Descartes championed \textit{substance dualism} (also known as \textit{Cartesian dualism}), in which all things were either fundamentally of \textit{matter (res extensa)} or of immaterial \textit{mind (res cogitans)}. He saw the human being as a union of the two disparate substances but struggled to reconcile his strict dualist views with the decidedly hybrid and experiential character of his own bodily sensations and emotions. In the sixth and final meditation of his \textit{Meditations on First Philosophy}, Descartes states that in being skeptical of his fallible senses, he understands himself to be essentially a mind, a purely thinking thing of no physical extent that is intuitively indivisible. And yet, he nevertheless \textit{feels} the qualia of his body and thus must straddle his own \textit{mind-body duality}, being, in a phrase, both flesh and not: \\
 	
 	\begin{displayquote}
 		There is nothing which this nature teaches me more expressly [nor more sensibly] than that I have a body which is adversely affected when I feel pain, which has need of food or drink when I experience the feelings of hunger and thirst, and so on; nor can I doubt there being some truth in all this. \\
@@ -115,9 +116,9 @@ Of course, adults still have a P-consciousness---we can lose ourselves in the mo
 		Nature also teaches me by these sensations of pain, hunger, thirst, etc., that I am not only lodged in my body as a pilot in a vessel, but that I am very closely united to it, and so to speak so intermingled with it that I seem to compose with it one whole. For if that were not the case, when my body is hurt, I, who am merely a thinking thing, should not feel pain, for I should perceive this wound by the understanding only, just as the sailor perceives by sight when something is damaged in his vessel; and when my body has need of drink or food, I should clearly understand the fact without being warned of it by confused feelings of hunger and thirst. For all these sensations of hunger, thirst, pain, etc. are in truth none other than certain confused modes of thought which are produced by the union and apparent intermingling of mind and body. \\
 	\end{displayquote}
 	
-	Fast-forward to the turn of the $20^\textit{th}$ century and general confidence in the scientific method had annealed Descartes' mechanistic philosophy into full-blown metaphysical naturalism. The Modernist movement was in full swing, quantum mechanics was being formulated, mathematics was being axiomatized, and about thirty years later the greatest minds of the era would contribute to a general theory of computation. And in the 1950s, the \textit{cognitive revolution} began, and people started to think of the mind as a complex system that could be explained in terms of information and computation. It seemed like the next logical step in human progress: like matter had been reduced to elementary particles, like water had been reduced to H$_2$O, like genes had been reduced to DNA, so too would the mind be reduced to its constituent parts. \\
+	Fast-forward to the turn of the $20^\textit{th}$ century and general confidence in the scientific method had annealed Descartes' mechanistic philosophy into full-blown metaphysical naturalism. The Modernist movement was in full swing, quantum mechanics was being formulated, mathematics was being axiomatized, and about thirty years later the greatest minds of the era would contribute to a general theory of computation. And in the 1950s, the \textit{cognitive revolution} began, and people started to think of the mind as a complex system that could be explained in terms of information and computation. It seemed like the next logical step in human progress. Like matter had been reduced to elementary particles, like water had been reduced to H$_2$O, like genes had been reduced to DNA, so too would the mind be reduced to its constituent parts. \\
 	
-	And yet, there is also that deep feeling in us that the mind is something else. We are inclined to believe that there is something about consciousness that is incomparable to, say, a Rube Goldberg machine or a computer running a program, no matter how complex either may be. Namely, we feel that there is \textit{something that it is like to experience being}. In 1974, philosopher Thomas Nagel brought this idea to the attention of the burgeoning field of \textit{cognitive science} with his paper \textit{What Is It Like to Be a Bat?}, in which he states that no physicalist theory will capture the essence of the mind until we come to understand its subjective aspects: \\
+	And yet, there is also that deep feeling in us that the mind is something else. We are inclined to believe that there is something about consciousness that is incomparable to, say, a Rube Goldberg machine or a computer running a program, no matter how complex either may be. Namely, we feel that there is \textit{something that it is like to experience being}. In 1974, philosopher of mind Thomas Nagel (\textit{b.} 1937) brought this idea to the attention of the burgeoning field of \textit{cognitive science} with his paper \textit{What Is It Like to Be a Bat?}, in which he states that no physicalist theory will capture the essence of the mind until we come to understand its subjective aspects: \\
 	
 	\begin{displayquote}
 		The fact that an organism has conscious experience at all means, basically, that there is something it is like to be that organism. There may be further implications about the form of the experience; there may even (though I doubt it) be implications about the behavior of the organism. But fundamentally an organism has conscious mental states if and only if there is something that it is like to \textit{be} that organism---something it is like \textit{for} the organism. We may call this the subjective character of experience. \\
@@ -133,14 +134,28 @@ Of course, adults still have a P-consciousness---we can lose ourselves in the mo
 		If the subjective character of experience is fully comprehensible only from one point of view, then any shift to greater objectivity---that is, less attachment to a specific viewpoint---does not take us nearer to the real nature of the phenomenon: it takes us farther away from it. \\
 	\end{displayquote}
 	
-	For Nagel, this is not necessarily a death knell for any formal, physical understanding of consciousness, but it \textit{is} a declaration of doubt in the capacity of science \textit{as we currently know it} to shed light on such matters. His qualms lie not with physicalism itself---that is, not with the assertion that mental states are fundamentally physical---but with an overconfidence that tends to come with the territory of such a mindset. It is reasonable to believe that one's mind is the result of solely the mechanisms of one's body. At the same time, it is \textit{unreasonable} to claim that we can capture the mind in an objective, physical description when we do not know whether or not qualia have any objective content. \\
+	For Nagel, this is not necessarily a death knell for any formal understanding of consciousness, but it \textit{is} a declaration of doubt in the capacity of science \textit{as we currently know it} to shed light on such matters. His qualms lie not with physicalism itself---that is, not with the assertion that mental states are fundamentally physical---but with an overconfidence that tends to come with the territory of such a mindset. His goal is to elucidate a problem: that, while it is reasonable to believe that one's mind is the result of solely the neurobiological mechanisms in one's body, it is nevertheless \textit{unreasonable}, if we accept that qualia exist and are essential to our experience, to claim that science is presently capable of capturing the subjective character of the conscious mind within its objective bounds. \\
 	
-	% Objective phenomenology, agnostic about the nature of qualia
+	In light of this issue, Nagel concludes with a call for the formulation of an "objective phenomenology," a framework in which qualia could be described independently of their experiencer's point of view. Only then could our subjective character of experience, which is so central to our conception of being human, be expressed "in a form comprehensible to beings incapable of having those experiences." As it stands, we cannot describe our seeing of red without analogy to previous experiences of seeing red, and in such terms we can only convey our meaning to those with eyes and brains like our own. And if bats could talk, they would be similarly unable to communicate their echolocational qualia to our sonar-ignorant minds. Thus, \textit{What Is It Like to Be a Bat?} is not a position piece on the nature of qualia but a declaration of agnosticism toward it: we cannot say anything objective about what we feel until we determine whether or not our feelings have objective content. \\
 	
-	% Property dualism
-	% Neutral monism
-	% Temporary mysterianism (agnostic but optimistic)
-	% Permanent mysterianism (cognitive closure)
+	Nevertheless, Nagel is often considered a standard-bearer for \textit{property dualism}, which holds that there are two distinct kinds of properties: \textit{physical} and \textit{mental}. Unlike Cartesian dualism, this position holds that there is only one kind of substance, and, in contemporary Western philosophy, it is almost always considered physical rather than mental, an objective entity rather than a subjective one. But Nagel is particularly a standard-bearer for a variety of property dualism known as \textit{neutral monism}, which offers a middle path: that everything is composed of a neutral stuff that is neither physical nor mental. An early form of this view was put forth by the pragmatic philosopher William James (1842-1910) in his essay \textit{Does Consciousness Exist?}: \\
+	
+	\begin{displayquote}
+		My thesis is that if we start with the supposition that there is only one primal stuff or material in the world, a stuff of which everything is composed, and if we call that stuff 'pure experience,' the knowing can easily be explained as a particular sort of relation towards one another into which portions of pure experience may enter. The relation itself is a part of pure experience; one of its 'terms' becomes the subject or bearer of the knowledge, the knower, the other becomes the object known. \\
+	\end{displayquote}
+
+	So there is a particular relation $\rightarrow$, one among many, and it is called \textit{knowing}. And it relates one term $A$ to another term $B$. And we say that $A$, the knower, \textit{knows} $B$, the known: $A \rightarrow B$. And all of these---the $\rightarrow$, the $A$, the $B$, and the composed whole---are of a neutral, experiential substance. And, indeed, so it is for everything that we may perceive or conceive. The onus is placed then on the rational interpreter to determine whether a relational structure (or \textit{pattern}) of neutral elements constitutes a physical or mental property. Thus, we are pattern-scanning machines and arbiters of what is \textit{thought} and what is \textit{thing}. \\
+	
+	% Physicalists take one more step and say that the neutral elements are physical. But then there are those pesky qualia to consider. Can they be reduced to physical states? Reductive and non-reductive physicalism (or materialism).
+	
+	% Okay, we follow non-reductive physicalism to accommodate a mental conception of qualia. Will we ever understand mental states in the way that we understand physical states?
+		% Problems versus mysteries
+		% Temporary mysterianism (maybe, but it will require a paradigm shift in science)
+		% Permanent mysterianism (no, we are cognitively closed)
+		% Colin McGinn - there are four approaches to explaining something (reduce it, make it fundamental, claim it is magical, eliminate it from reality)
+	
+	% Eliminative materialism - the antithesis of property dualism
+	% Dennett: Wittgenstein, anti-theist, verificationist, critical of folk psychology and the intuitive understanding of one's own consciousness
 	
 	% Quining Qualia (1988) and Consciousness Explained (1991) - Daniel Dennett
 		% Qualia are... ineffable, intrinsic, immediate, and private
@@ -149,20 +164,23 @@ Of course, adults still have a P-consciousness---we can lose ourselves in the mo
 		% Most philosophers of mind are atheists, but Dennett is an anti-theist. You can see it in his argument a bit. He seem to relish the idea of obliterating the last thing that made mankind special: the Cartesian mind. He also dislikes intuitive ideas, like folk psychology.
 		% Multiple realizability
 	
-	% For Nagel, the axiom is that "subjective consciousnness is real" because we constantly observe it. For Dennett, the axiom is "only objectively verifiable things are real" because science presupposes objectivity.
-	% Dennett is a functionalist. Functionalism requires only access consciousness. He doesn't deny that we experience a phenomenal consciousness or a "subjective character of experience," but he thinks that those private, personal experiences, in and of themselves, have no place in reality. There is neurological activity that causes us to experience those qualia, but the experiences themselves have no quiddity, no place in the ontology of the actual world.
-	
-	% Facing Up to the Problem of Consciousness (1995) - David Chalmers
-		% Qualia are not functionally analyzable (inefficacious, purposeless)
-		% Panpsychism
-		% Quantum Mechanical Dualism
+	% Which one takes precedence: what we observe or what we can verify?
+		% For Nagel, the axiom is that "subjective consciousnness is real" because we constantly observe it. For Dennett, the axiom is "only objectively verifiable things are real" because science presupposes objectivity.
+		% Dennett is a functionalist. Functionalism requires only access consciousness. He doesn't deny that we experience a phenomenal consciousness or a "subjective character of experience," but he thinks that those private, personal experiences, in and of themselves, have no place in reality. There is neurological activity that causes us to experience those qualia, but the experiences themselves have no quiddity, no place in the ontology of the actual world.
 	
 	% Mary's room - Frank Jackson's epiphenomenalist argument (1982)
+		% USE THIS TO CONTRAST NAGEL AND DENNETT
 		% Defines qualia
 		% Ontological vs. epistemic readings
 		% Epiphenomenalism - mental states are caused by physical states, but have no causal effects on the physical world.
 		% Jackson later becomes a physicalist
 		% Cover weak reductionist, strong reductionist, and eliminative materialist positions on the problem
+		
+	% Facing Up to the Problem of Consciousness (1995) - David Chalmers
+		% Qualia are not functionally analyzable (inefficacious, purposeless)
+		% Panpsychism
+		% Quantum Mechanical Dualism
+		% The hard problem of conciousness is a subproblem of the mind-body problem, which also takes thoughts into account.
 	
 	% Integrated Information Theory (2014)
 		% Inspired by Chalmers' panpsychism, assumes that consciousness (phi) is actually a fundamental physical property of feedback systems.
@@ -173,37 +191,46 @@ Of course, adults still have a P-consciousness---we can lose ourselves in the mo
 	
 	% Functionalism, multiple realizability (qualia are defined by the function they serve, they are realizable by means of multiple implementations, not just one). Animals can feel the same qualia, even though their neural architecture differs. Artificial minds can experience qualia.
 	
-	% Why is all this important for CS?
-		% Hofstadter
-		% Formal systems
-		% Hardware and software
-		% Cognitive biases
-	
 	\vspace{3mm}
 \end{tcolorbox}
 \vspace{2\baselineskip}
 
 Regardless of whether or not they exist, qualia are beyond our scope. \\
 
+% Why is all this qualia stuff important for CS?
+	% There are multiple universes we could consider: physical (objective, subjective (perceptual, conceptual)). In CS, we work in a conceptual universe.
+	% But in any universe, we consider things: everything (inf), something (1), or nothing (0).
+	% Hofstadter
+	% Formal systems
+	% Hardware and software
+	% Cognitive biases. Computers do not have them but programmers do, and computers only do what programmers tell them to do.
+	% Feedback systems in IIT have nonzero levels of consciousness. Consciousness is not a desirable feature of tools, so it may be worth designing feed-forward systems instead to ensure that we don't accidently create conscious programs.
+
 % We are not concerned with subjective phenomena (experience). We are only interested in sensory data that is organized into information and integrated as knowledge (cognition).
-% That is, we are not interested in qualitative notions. Computer science is a mathematical discipline; thus, we are only interested in quantitative notions.
+% That is, we are not interested in qualitative notions. Computer science is an objective discipline. Assuming that the processor operates as instructed, it is actually a deterministic discipline (outside of randomized algorithms). Thus, we are only interested in quantitative notions. 
 % Asking whether or not qualia exist is kind of like asking whether or not reality or consciousness is continuous (i.e. \textit{infinitely detailed}). If it is instead discrete, we could model it with a Turing machine. Unless there is something \textit{fundamentally different} about qualia, like they are somehow not understandable by humans, they will eventually be explained.
 
-% However, they bring up a few interesting concepts:
+% However, they bring up a few important philosophical concepts:
 	% Subject (agency) and Object
 	% Identity and Individuation
 	% Map-territory relation
 	% Essence and existence
-
-% Phenomenonlogy, intersubjectivity
-
+	
+% There are also important concepts for the objective realm in particular:
+	% Causality
+	% Space and time
+	
+% Objective, perceptual, and conceptual universes
+% Everything, something, nothing (infinity, 1, 0)
 % Closed-world, open-world, DoD
 % We must consider open-worlds before we discuss closed-worlds.
 % Natural and constructed systems.
 
-% It is important to discuss cognitive development because it gives an insight into our cognitive biases and our innate tendency toward irrationality.
+% What is a ceramic mug to my perception? What is it to my conception? How would I categorize it (depends on context)?
 
-\subsubsection{Primitive Concepts}
+% Phenomenology, intersubjectivity
+
+% It is important to discuss cognitive development because it gives an insight into our cognitive biases and our innate tendency toward irrationality.
 
 % Causality is metaphysically prior to space and time.
 
@@ -297,11 +324,15 @@ In light of recent advancements in fields like neuroscience and artificial intel
 % Bundle theory, bare particularism.
 % has-a relation
 
+% The word data has heretofore been used in this text to refer to a multitude. In recent years, however, the word has also been used as if it described a magnitude.
+% Everything digital is necessarily a multitude of bits. However, these multitudes can be interpreted as discrete magnitudes.
+% ** Old paragraphs on magnitude/multitude/data down in signals. **
+
 A common approach to this challenge is creating a system of \textit{categories} that partition reality at the highest level. For example, one could suggest that there is a fundamental difference between a \textit{quantity} and a \textit{quality}. If these are considered distinct categories, we can classify \textit{measurable} or \textit{countable} stuff like \textit{length}, \textit{mass}, \textit{number}, and \textit{monetary value} as quantitative and \textit{experiential} stuff like \textit{softness}, \textit{roundness}, \textit{flavor}, and \textit{beauty} as qualitative. \\
 
 The quantity-quality distinction is a generally accepted one. However, the dichotomy is not so absolute. For example, softness is listed above as a quality. We might expect, then, that hardness is a quality. For example, rocks are hard and puppy ears are soft. But hardness is also a quantitative measurement of resistance to plastic deformation. Thus, the word \textit{hardness} can refer to both quantitative and qualitative phenomena. The categorical difference between these hardnesses, which exists independent of language, is identified through the context in which the word is used. A hardness can be measured with numbers, but it can also simply be \textit{experienced} via touch. \\
 
-% All quantities are also qualities. It would be hard to argue that all qualities are also quantities in any meaningful way. For example, using millihelens as a quantitative unit of beauty. It doesn't really work.
+% All quantities are also qualities. It would be hard to argue that all qualities are also quantities in any meaningful way. For example, using millihelens as a quantitative unit of beauty. It doesn't really work.optimal synonym
 
 \subsubsection{Classes}
 
@@ -433,7 +464,7 @@ Sounds like a good ol' fashioned \textit{Sedan}, my dude." \\
 
 In this scenario, Interlocutor $\mathcal{A}$ introduces the problem: there is \textit{information} to \textit{communicate}, and it defines a \textit{class} $X$. And a \textit{class}, we understand, is simultaneously a collection of individual \textit{objects} and an \textit{abstract object} itself, a formal definition of the collection to which all members comply. $\mathcal{A}$ grasps for $X$, throwing out descriptions to lure it closer, but it evades. $\mathcal{A}$ then takes the class $Y_0$, \textit{Machine}, as a starting point and states that it is a \textit{superclass} of $X$. \\
 
-Interlocutor $\mathcal{B}$ responds with \textit{specialization}, adding assumed details to the definition of $Y_0$. Thus, $Y_1$ is proposed: the class \textit{Sedan}. Luckily, the assumptions are not totally off-base; $Y_1$ turns out to be a \textit{subclass} of $X$. $\mathcal{A}$ confirms this and so returns with a \textit{generalization} that conjures $Y_2$, the class \textit{Vehicle}. $\mathcal{B}$ \textit{specializes} again, offering up as $Y_3$ a subclass of \textit{Vehicle} called \textit{Car}. Finally, $\mathcal{A}$ accepts this class as the target $X$ and ends the search. And with this mutual knowledge of \textit{Car} established, $\mathcal{A}$ then refers to an \textit{instance} of \textit{Car}, a particular car $b$ that belongs to $\mathcal{B}$. And with both interlocutors now cognizant of exactly what is being discussed, $\mathcal{A}$ swiftly informs $\mathcal{B}$ that his ride is totaled.
+Interlocutor $\mathcal{B}$ responds with \textit{specification}, adding assumed details to the definition of $Y_0$. Thus, $Y_1$ is proposed: the class \textit{Sedan}. Luckily, the assumptions are not totally off-base; $Y_1$ turns out to be a \textit{subclass} of $X$. $\mathcal{A}$ confirms this and so returns with a \textit{generalization} that conjures $Y_2$, the class \textit{Vehicle}. $\mathcal{B}$ further \textit{specifies}, offering up as $Y_3$ a subclass of \textit{Vehicle} called \textit{Car}. Finally, $\mathcal{A}$ accepts this class as the target $X$ and ends the search. And with this mutual knowledge of \textit{Car} established, $\mathcal{A}$ then refers to an \textit{instance} of \textit{Car}, a particular car $b$ that belongs to $\mathcal{B}$. And with both interlocutors now cognizant of exactly what is being discussed, $\mathcal{A}$ swiftly informs $\mathcal{B}$ that his ride is totaled.
 
 % Taxonomy diagram
 \begin{center}
@@ -496,7 +527,7 @@ Interlocutor $\mathcal{B}$ responds with \textit{specialization}, adding assumed
 		    \node at (10.5,15) {\Large \textsc{Generalization}};
 		    
 		    \draw [thick, rounded corners, fill=white] (54.5,-13) -- ++(0,-4) -- ++(-50,0) -- ++(0,-2) -- ++(-9,4) -- ++(9,4) -- ++(0,-2) -- cycle;
-		    \node at (37.5,-15) {\Large \textsc{Specialization}};
+		    \node at (37.5,-15) {\Large \textsc{Specification}};
 		    
 		    % RIGHT curve
 		    \draw [thick] plot [smooth]
@@ -533,29 +564,27 @@ Interlocutor $\mathcal{B}$ responds with \textit{specialization}, adding assumed
 	}
 \end{center}
 
-% Diagram -> Generalization/Specialization -> Top and Bottom/Type Theory -> Generalization is theory building, specialization is theory using -> information is both fundamental and very general -> because it is so general, we need to pull from a lot of fields to properly characterize it.
+% Diagram -> Generalization/Specification -> Top and Bottom/Type Theory -> Generalization is theory building, specification is theory using -> information is both fundamental and very general -> because it is so general, we need to pull from a lot of fields to properly characterize it.
 
 In the above diagram, we see the $Y$ classes and their relations to each other. The arrows between them are \textit{subsumption} relations. They point from a \textit{parent} class $P$ to a \textit{child} class $C$, and we say that $P$ \textit{subsumes} $C$ (i.e. it encompasses the entirety of $C$). In set theory notation, $P\subset C$. Alternatively, we can reverse the arrows and call them instead \textit{is-a} relations, which point from $C$ to $P$. Every $c\in C$ is a member of the more general class $P$, and thus every $c$ \textbf{is a} $P$ of some \textit{type}. \\
 
-Of course, any given type $T$ can have many \textit{subtypes}, and those subtypes can have their own subtypes. A subtype of $T$ builds on the information that defines $T$, adding new information that specializes the underlying parent class. And with enough specialization, these subtypes may become quite unlike each other at a glance, sharing little else than a distant relation to $T$. This branching nature of subsumption is depicted above in gray. \\
+Of course, any given type $T$ can have many \textit{subtypes}, and those subtypes can have their own subtypes. A subtype of $T$ builds on the information that defines $T$, adding new information that further specifies the underlying parent class. And with enough divergent specification, these subtypes may become quite unlike each other at a glance, sharing little else than a distant relation to $T$. This branching nature of subsumption is depicted above in gray. \\
 
-Like branches that furcate from an old oak tree and fork into smaller branches toward the leaves, types spread in a \textit{recursive} manner, each one potentially a parent of arbitrarily many children and an ancestor of arbitrarily long lineages. As a \textit{type system} like this grows deeper and denser, more information is required to represent it. Similarly, any class in the system \textit{gains information} as it is specialized and \textit{loses information} as it is generalized. Thus, a class of type $T$ is \textit{also} of any supertype of $T$ because each possible supertype represents a subset of $T$'s information. For example, the class \textit{Car} is of type \textit{Car}, but it is also of the more general types \textit{Vehicle} and \textit{Machine}. \\
+Like branches that furcate from an old oak tree and fork into smaller branches toward the leaves, types spread in a \textit{recursive} manner, each one potentially a parent of arbitrarily many children and an ancestor of arbitrarily long lineages. As a \textit{type system} like this grows deeper and denser, more information is required to represent it. Similarly, any class in the system \textit{gains information} as it is specified and \textit{loses information} as it is generalized. Thus, a class of type $T$ is \textit{also} of any supertype of $T$ because each possible supertype represents a subset of $T$'s information. For example, the class \textit{Car} is of type \textit{Car}, but it is also of the more general types \textit{Vehicle} and \textit{Machine}. \\
 
-Naturally, one wonders about what might happen at the extremes of generalization and specialization. Three relevant question-answer pairs are given below: \\
+Naturally, one wonders about what might happen at the extremes of generalization and specification. Three relevant question-answer pairs are given below: \\
 
 \begin{itemize}
 	\item \textit{Is there a type so general that it describes everything?} \\\\	
 	Indeed, there is: it is the \textit{top type} $\top$, and it describes a special class known as a \textit{domain of discourse} or \textit{universe}. The names speak for themselves---the supertype of \textit{everything} describes the class of \textit{all things} under discussion, the \textit{universe} of relevant topics, the \textit{domain} of our discourse. $\top$ serves as a useful label in situations when type is unimportant or indeterminate.
 	\item \textit{Is there a type so specific that it describes \dots\ nothing?} \\\\
 	Yes. It is the \textit{bottom type} $\bot$, and it describes the \textit{empty class}, the class with zero members. It can be considered the type of an \textit{overspecified} class. That is, the class has been defined such that no object in the \textit{domain of discourse} complies. $\bot$ describes things that are \textit{out of scope} or \textit{nonexistent}. Thus, it is often used as the return type of functions that \textit{diverge} (i.e. do not terminate properly) or as the type of \textit{nothing} (e.g. the $5^{th}$ element in a $4$-element list is nothing).
-	\item \textit{Are instances just classes that are specialized until they have one element?} \\\\
-	Technically, no. Specialization is a class-to-class process: a class is specialized to a subclass. \textit{Instantiation}, the construction of a concrete \textit{instance} from an abstract description, is instead a class-to-object process. For example, in the above diagram, the class $Y_3$ is \textit{instantiated} in order to produce the object $b$ (or, by reversing the direction of the arrow, we may say that $b$ is an \textbf{instance of} $Y_3$). \\\\
-	Because a type describes a class, it is also incorrect to say that $b$ defines its own subtype of \textit{Car}. Rather, $b$ is a \textit{token} of type \textit{Car}, a physical object that \textit{realizes} one of the many possible designs that fall under the class \textit{Car}. However, $Y_3$ could be specialized such that $b$ is the sole element of the resultant class ${b}$. A class with one member is called a \textit{singleton class}, and it has a \textit{unit type}, a type with one valid value. The type of ${b}$ would be a subtype of \textit{Car} that describes only $b$, but neither ${b}$ nor its type are the same thing as the \textit{instance} $b$. \\
+	\item \textit{Are instances just classes that are specified until they have one element?} \\\\
+	Technically, no. Specification is a class-to-class process: a class is specified, and a subclass is the result. \textit{Instantiation}, the construction of a concrete \textit{instance} from an abstract description, is instead a class-to-object process. For example, in the above diagram, the class $Y_3$ is \textit{instantiated} in order to produce the object $b$ (or, by reversing the direction of the arrow, we may say that $b$ is an \textbf{instance of} $Y_3$). \\\\
+	Because a type describes a class, it is also incorrect to say that $b$ defines its own subtype of \textit{Car}. Rather, $b$ is a \textit{token} of type \textit{Car}, a physical object that \textit{realizes} one of the many possible designs that fall under the class \textit{Car}. However, $Y_3$ could be specified such that $b$ is the sole element of the resultant class ${b}$. A class with one member is called a \textit{singleton class}, and it has a \textit{unit type}, a type with one valid value. The type of ${b}$ would be a subtype of \textit{Car} that describes only $b$, but neither ${b}$ nor its type are the same thing as the \textit{instance} $b$. \\
 \end{itemize}
 
 % Generalization is powerful because it allows you to know things about systems you haven't seen before. It gives intuitive understanding.
-
-% Generalization moves toward continuity, specification moves toward discrete.
 
 % We will discuss upper ontologies next. This will inform later discussions on domain ontologies for physics and computer science.
 
@@ -567,8 +596,9 @@ Naturally, one wonders about what might happen at the extremes of generalization
 
 % What good is (natural) philosophy in an era of such sophisticated science?
 
-% What is metaphysics? What is ontology? What is an ontology?
-% What does metaphysics and ontology have to do with OOP?
+% What is... metaphysics (study of structure), epistemology (study of knowledge), logic (study of truth), axiology (ethics and aesthetics, study of value) and phenomenology (study of experience)? Make a fun diagram maybe?
+% What is ontology? What is an ontology?
+% What do metaphysics and ontology have to do with computers or programming? Or with OOP specifically?
 
 Blah
 
@@ -584,6 +614,8 @@ Blah
 % From polytheism to henotheism to monotheism (multiple gods means you need more justification). Dyeus. Aten. Really started in Late Antiquity though.
 % World egg (Orphic egg), primordial substance, hyle, matter
 % Son of God, rulers and kings.
+% Axis mundii. It is natural to associate the sky with heaven because it is bright (which humans think is good), endless, beautiful, and mysterious. Thus, a local people will often consider the holiest place of an area to be the highest one (usually a mountain). This is the center of the world, and the connection point between Heaven and Earth.
+% Similarly, familiar places that are close to the center are considered better than the dark, foreign lands that are unknown and scary.
 
 % One could argue that philosophy has been done ever since we could think. But philosophy in Ancient Greece was different. Why? Geography. Democracy.
 % Yes, other cultures had "philosophies" at this time, but the word in this case is referring to a \textit{worldview}. We are discussing philosophy in the sense of \textit{analysis}.
@@ -621,6 +653,7 @@ Blah
 
 % Plato hates Democritus. Wants to burn all of his books. Plato's philosophy is an objection to atomism. Believes that there must be something divine about nature due to its beauty.
 % Plato is rationalist, Democritus is mechanist and materialist (they agree on epistemology though)
+% Plato is a substance dualist. The human soul is an element of the Platonic realm.
 % Essence precedes existence. There is inherent meaning in reality.
 
 Plato (c. 428/427 -- c. 348/347 BCE) was the first to expound a metaphysics of objects with his \textit{theory of Forms}, which proposed a solution to the \textit{problem of universals}. This problem is subtle, but important: how can one general property appear in many individual objects? For example, when we say that a floor and a bowl are \textit{smooth}, are we referring to some singular paradigm of \textit{smoothness} that is independent of each? For Plato, \textit{universals} or \textit{Forms}, such as smoothness, are indeed distinct from the \textit{particulars} that \textit{partake} of them, such as floors and bowls and other smooth objects. He posits that the \textit{essence} of an object, its \textit{sine qua non}, is the result of its partaking of these Forms. \\
@@ -656,6 +689,7 @@ That said, while Plato's metaphysics gives good insight into OOP and other abstr
 % Plato indentified The One with \textit{The Good}. Through philosophy, one uses the Nous to find the truth of the Good. The Good is the Form of Forms. It is the ultimate object of knowledge that allows one to realize all other Forms. It allows us to comprehend justice. The Good is why there is "divine order" to reality. It is the reason why things are intelligible and are not just chaos. The Good is also the reason philosophy and science are possible.
 
 % The Good is the Form of goodness. A thing's goodness is its purpose (or telos). Teleology.
+% The Good is the point of philosophy. There is reason to believe that there is way to exist and think that is good. We can find it with philosophy.
 % Aristotle's eudaimonia ("good spirit," human flourishing or prosperity).
 % Pirsig's Metaphysics of Quality
 % Stoicism
@@ -683,7 +717,7 @@ Blah \\
 % Rejects atomism, says reality is continuous (corpuscles)
 % Rejects an immaterial fundamental unit, believes substance is real
 % Four formal causes
-% Actuality and potentiality
+% Potentiality and actuality (properties of the formal realm and the physical realm, respectively).
 % Objects are characterized spatially, events temporally.
 % Mathematical objects and operators
 % Plato is rationalist, Aristotle is empiricist
@@ -938,6 +972,24 @@ Euclid's proofs can also be described as \textit{constructive}. \\
 % Mathematical theory of communication, Shannon-Weaver model
 % What does it mean to be a good communicator?
 
+% Blue box on what it means to have an information-theoretic view of the world. Give multiple examples that do not involve anything digital.
+% If you are in possession of information that incriminates you, you want to prevent its communication. You can do this by destroying it (rendering it unintelligible to anyone), encoding it (rendering it unintelligible to people without the decoding algorithm (or code breakers)), encrypting it (putting it in a safe or hiding it), etc.
+% If you have space or time constraints, you want to use language that is dense with meaning. You can do this with compression in space (removing all of the vowels, using acronyms and Emojis, using shorthand) or compression in time (writing in cursive, no decorations, ). Often, compression techniques naturally save both time and space (not only do smaller files take up less space, they also download and upload faster).
+
+%--------------------------------------------------------------------------------
+%    SECTION: COMMUNICATION
+%--------------------------------------------------------------------------------
+
+\toclineskip
+\section{Communication}
+
+% Semiotics
+% Signal processing (analog and digital)
+% Language
+% Coding theory
+
+Blah
+
 %----------------------------------------
 
 \subsection{Signals and Systems}
@@ -1165,11 +1217,11 @@ A formal language is constructed from an \textit{alphabet} $\Sigma$, which is a 
 % The base-60 system of Babylonian numerals is also notable. Its base is thought to have been chosen for its many factors, as this simplifies the process of division. Under this interpretation, this system is \textit{constructed} rather than natural. Instead of mirroring something concrete like physical extremities, this system chooses an abstract base in order to make a procedural optimization. The reasoning for base-2 encoding in computing is similar. It sacrifices human familiarity for performance and reliability. \\
 
 %--------------------------------------------------------------------------------
-%    SECTION: REASONING AND LOGIC
+%    SECTION: LOGIC
 %--------------------------------------------------------------------------------
 
 \toclineskip
-\section{Reasoning and Logic}
+\section{Logic}
 
 \vspace{4mm}
 \begin{displayquote}
@@ -1187,6 +1239,12 @@ A formal language is constructed from an \textit{alphabet} $\Sigma$, which is a 
 % Three reliable ways of acquiring knowledge: deduction, induction, and communication.
 % Hume's problem of induction
 % Deductive: truisms via consequence, Inductive: facts via evidence
+
+% Gottlob Frege
+% Alfred Tarski
+% Noam Chomsky
+% Barbara Partee
+% Model-theoretic semantics
 
 %----------------------------------------
 
@@ -1435,7 +1493,6 @@ The Seer has premises for his conclusion, but the rules of inference involved in
 	where "$P$" is simply the metalanguage sentence $P$ rendered in the object language. That is, the \textit{syntactic representation} is assigned a \textit{truth value} of true if and only if the semantic meaning it represents is considered true (according to whatever theory of truth you employ). By this rule, we say that "$2+2=4$" is true if and only if \textit{the sum of the number $2$ with the number $2$ is equal to the number $4$}. Minimalist redundancy theories modify Tarski's theory by interpreting "$P$" as an implicit assertion of the truth of $P$. The sentence "$P$," which asserts that $P$ is true, is then false if and only if its semantic meaning $P$ is false. \\
 	
 	\parbreak
-	\vspace{\baselineskip}
 	
 	The debate on the nature of truth rages on \textit{in perpetuum}. However, for our purposes, we must be practical. There is truth in logic and mathematics and computer science as well, but, in practice, it has little to do with the debates on \textit{absolute truth} described above. Their truth is \textit{relative}. That is, it relies on the assumption that our premises are true. Cognizant of this, we move forward with our thinking, searching for truths within these arbitrary boundaries. \\
 	\vspace{3mm}
