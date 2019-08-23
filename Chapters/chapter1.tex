@@ -10,6 +10,7 @@
 \vspace{4mm}
 \begin{displayquote}
 	\textit{We're presently in the midst of a third intellectual revolution. The first came with Newton: the planets obey physical laws. The second came with Darwin: biology obeys genetic laws. In today’s third revolution, we're coming to realize that even minds and societies emerge from interacting laws that can be regarded as computations. \textbf{Everything is a computation.}}
+	\vspace{2mm}
 	\begin{flushright}
 		---Rudy Rucker
 	\end{flushright}
@@ -18,70 +19,163 @@
 
 \textit{Computation} is an essential part of being human. Just as we act on our perceptions, feel our emotions, and daydream in our imaginations, we also compute with our \textit{reasoning} in order to find answers to the questions we have about life. \\
 
-One can describe computation in a variety of ways. Some are poetic, others are more formal, and many we will discuss at length. In doing so, we will generally flow from poetry to formality, starting with broad statements and colorful examples and progressing toward a formal understanding. For now, we will say that computation is a process that resolves \textit{uncertainty}. \\
+One can describe computation in a variety of ways. Some are poetic, others are more formal, and many we will discuss at length. In doing so, we will generally flow from poetry to formality, starting with broad statements and colorful examples and progressing toward a formal understanding. For now, we will say that computation is a process which resolves \textit{uncertainty}. \\
 
-In his \textit{Theogony}, the Ancient Greek poet Hesiod (fl. 750 BCE) depicts a fascinating uncertainty known as Chaos: a vast nothingness that preceded the creation of the Universe. From this void emerged the primordial deities, personifications of nature who gave life to the Titans and, by extension, to the Olympian gods. Curiously, the modern definition of \textit{chaos} has nearly inverted. Now, one might say that a situation is \textit{chaotic} if there is \textit{too much} going on. Despite their great conceptual difference, these meanings share a common property: they both evoke \textit{confusion}. \\
+In his \textit{Theogony}, the Ancient Greek poet Hesiod (fl. 750 BCE) depicts a fascinating uncertainty called Chaos: a vast nothingness that preceded the creation of the Universe. From this void emerged the primordial deities, personifications of nature who gave life to the Titans and, by extension, to the Olympian gods. Curiously, the modern definition of \textit{chaos} has nearly inverted. Now, one might say that a situation is \textit{chaotic} if there is \textit{too much} going on. Despite their great conceptual difference, these meanings share a common property: they both evoke \textit{confusion}. \\
 
 This place in which we find ourselves may indeed be post-Chaos, but confusion remains a familiar state for us. In fact, it is our natural state. We come into life confused about everything---crying, open-eyed in reaction to how much is going on around us. Slowly, we figure a few things out. Later, we consider many things \textit{certain}. As time ticks on and we carve our separate paths in the world, the wise ones among us come to realize the true depth of their confusion. \\
 
-Although we are initially confused, we naturally pursue an understanding of the chaos that surrounds us. We perceive the goings-on of our environment and draw \textit{information} from them, piecing together a \textit{knowledge} that orients us and gives meaning to the disorder of our existence. This is the crux of computation. It is the structured manipulation of \textit{data} into \textit{information} for the purpose of acquiring \textit{knowledge}. It shines a light into the darkness we call home. \\
+Although we are initially confused, we naturally pursue an understanding of the chaos that surrounds us. We perceive the goings-on of our environment and organize them into patterns that orient us and give meaning to the disorder of our existence. This is the crux of computation. It is the structured manipulation of \textit{data} into \textit{information} for the purpose of acquiring \textit{knowledge}. It shines a light into the darkness we call home. \\
 
 These terms---data, information, and knowledge---are broad enough to apply to a variety of systems. In fact, they appear in nearly every academic field and certainly within those that strive for objectivity. One can have data on, information about, and knowledge of anything that can be observed or experienced. As such, it is difficult to confine these terms to short and tidy definitions that are both rigorous and free of controversy. We will have to settle then for a long, pragmatic discussion. \\
 
-In this chapter, we will explore what computation is and why it matters. In some sense, computation is a kind of game in which \textit{pieces} are moved and transformed within a \textit{game space} according to a predetermined set of \textit{rules}. However, unlike most games, computation has no set goal. Nature shuffles its hazy pieces about, following arbitrary rules for reasons we cannot ascertain. Man, on the other hand, explicitly defines its pieces and rules, modeling them after Nature's strange mechanics. We invent \textit{win conditions} and play toward them, hoping that our computations will result in general solutions that will elucidate the knowledge we seek. \\
-
-\begin{description}
-	\item[Section 1:] \textit{Information}
-	\item[Section 2:] \textit{Communication}
-	\item[Section 3:] \textit{Logic} \\
-\end{description}
-
-Here, we learn how this game is played and how it is woven into the fabric of our reality. In the chapter following this one, we model the game of computation mathematically and find the theoretical limits of what it can tell us. Beyond that, we learn how to be an excellent player, covering \textit{techniques} for efficient problem solving and \textit{tools} for designing beautiful, maintainable systems.
-
-%--------------------------------------------------------------------------------
-%    SECTION: INFORMATION
-%--------------------------------------------------------------------------------
-
-\toclineskip
-\section{Information}
-
-\vspace{4mm}
-\begin{displayquote}
-	\textit{For Wiener, entropy was a measure of disorder; for Shannon, of uncertainty. Fundamentally, as they were realizing, these were the same.}
-	\begin{flushright}
-		---James Gleick
-	\end{flushright}
-\end{displayquote}
-\vspace{4mm}
-
-The most general concepts are among the hardest to grasp, and \textit{information} is about as general as you can get. Potentially \textit{everything} can be described in terms of information---the physical world, all of literature and written language, and perhaps even our conscious experience. Thus, our path to a proper understanding of information and how it relates to reality will be an arduous one, requiring an open mind and an ample store of time set aside for contemplation. But it will also be an elegant one, weaving its way through philosophy and physics and arriving at an \textit{information theory} that we can use to explain the behavior of engineered systems, human language, and the intersection of the two: mechanical computation. \\
-
-You already have an idea of what information is, and it is likely that your intuition is broadly correct: information is a thing that tells you something. As we dive into more and more abstract topics, do not hesitate to, in this way, fall back on your existing vocabulary for support. A word used technically is more formal and precise than the same word used casually, but the gist of it all is often the same. \\
+Still, we must start somewhere. For example, you already have an idea of what information is, and it is likely that your intuition is broadly correct: information is a thing that tells you something. As we dive into more and more abstract topics, do not hesitate to, in this way, fall back on your existing vocabulary for support. A word used technically is more precise than the same word used casually, but the gist of it all is often the same. Or there is at least some sense in which they mirror each other. \\
 
 Recall the usual context in which technical language is born. A phenomenon is observed by a community, and it becomes the subject of casual discourse. It may even be a widespread concept that is discussed by society at large, in some way or another. The phenomenon is accordingly given an \textit{informal definition} and a name (or, perhaps, many names). Interested theoreticians then study the structure of the phenomenon and \textit{formalize} it. They give it a \textit{formal definition} and bestow it a more permanent name, either one used previously or something new that is, in the namers' opinion, more apt. In the latter case, the new term is disseminated throughout the community and perhaps to the wider public, where it may either replace or coexist with previous informal terms. \\
 
 Regardless, the namers must reach outside of the formalisms they have constructed and find a word from an informal language that captures the essence of their abstract thought. This is the beauty of good jargon: such a word will, to an amateur, shed a shallow but wide light into the vast space of an idea, but it will also illuminate the whole shebang in the eyes of an expert, evoking in its concise informality all that he or she has previously learned on the subject. \\
 
-In the spirit of this principle, four words are given below, defined softly, that will act now as beacons in the dark of our ignorance and later as summaries of our hard-earned understanding: \\
+In the spirit of this principle, our three words are defined softly below to act now as beacons in the dark of our ignorance and later as shining summaries of our hard-earned understanding: \\
 
 \begin{displayquote}
-		\textbf{Data} (sing. \textbf{datum}) are pieces of information that are meaningless when considered separately. They are observable lacks of uniformity in reality, each of which may be represented by a symbol that conveys its particular difference from the norm. \\~\\
-		\textbf{Information} is an ordered arrangement of data that is considered meaningful. The data are arranged such that the information as a whole complies with the grammar of a language that can, in theory, be understood. \\~\\
-		\textbf{Knowledge} is an understanding of information that emerges given proper interpretation and sufficient thought. It is usually associated with Truth and may be considered a body of true beliefs. \\~\\
-		\textbf{Wisdom} is the capacity to think and act in a way that is right. It involves the use of knowledge, a prudent choice of means and ends, and a healthy doubt of one's own understanding. It is born of an acknowledgment of how little one truly knows and how little control one truly has. \\
+	\textbf{Data} (sing. \textbf{datum}) are pieces of information that are meaningless when considered separately. They are observable lacks of uniformity in reality, each of which may be represented by a symbol that conveys its particular difference from the norm. \\~\\
+	\textbf{Information} is an ordered arrangement of data that is considered meaningful. The data are arranged such that the information as a whole complies with the grammar of a language that can, in theory, be understood. \\~\\
+	\textbf{Knowledge} is an understanding of information that emerges given proper interpretation and sufficient thought. It is usually associated with Truth and may be considered a body of true beliefs. \\
 \end{displayquote}
 
-With these fundamental terms in mind, let us take a page from Hesiod and begin our tale with an uncertain chaos. Let us regard reality as a baby might: confusing but ultimately intelligible through \textit{categorization}. \\
+The journey toward an honest comprehension of these terms will be an arduous one, requiring an open mind and an ample store of time set aside for contemplation. And in walking the path, you may find that it meanders or veers off suddenly, that what you desire remains frustratingly out of reach or nowhere to be seen. But as the text winds its way through the domains of psychology, cognitive science, philosophy, physics, information science, linguistics, logic, and mathematics, remember to lift your eyes up from the page and to mull over the ground you have covered so far. The essence of computation is found at the crossroads of these disciplines, and a fuller appreciation awaits at each passing overlook. \\
 
-\subsection{Cognition}
+There is a fourth word---\textit{wisdom}---but we leave it undefined for now. Nevertheless, its importance cannot be overstated. \\
 
-Dark turns into light. A boundless zephyr of blurs. You see. You hear. You \textit{feel}. The knife-edge of experience materializes, and you step out onto it. It cuts you, and there is no thought---only sensation. Air kissing skin and turbulent color. Sonic frenzy and the feeling of self-weight. Reality emerges raw, and nothing is gleaned---you are lost in it all. A sailboat in a storm, a satellite adrift in space, all of it. Indifferent, the phantasmagoria rages on. \\
+% The wisdom can be found in the characters.
+% Game metaphor, good players
 
-This is roughly the experience of a newborn infant. For children of only a month or so, life is a sensory mayhem of little sense. They are not conscious, at least not in the way that we typically think of consciousness. They are, however, aware of their surroundings and sensitive to \textit{phenomena} (i.e. \textit{appearances} in reality, \textit{observables}). To newborns, the world is not a system of distinct parts but an all-encompassing soup of stimuli. Their sensory organs input data that they do not understand, and they then output \textit{reflexes} that have been embedded in their biological firmware due to millions of years of natural selection. \\
+%----------------------------------------
+
+In this chapter, we will explore what computation is and why it matters. Computation is a kind of game in which \textit{pieces} are moved and transformed within a \textit{game space} according to a predetermined set of \textit{rules}. However, unlike most games, computation has no set goal. Nature shuffles its hazy pieces about, following arbitrary rules for reasons we cannot ascertain. Man, on the other hand, explicitly defines its pieces and rules, modeling them after Nature's strange mechanics. We declare the win conditions of our problems and play toward them, hoping that our computations will elucidate the knowledge we seek. \\
+
+\begin{description}
+	\item[Section 1:] \textit{Cognition and Consciousness}
+	\item[Section 2:] \textit{Natural Philosophy and Physics}
+	\item[Section 3:] \textit{Information and Communication}
+	\item[Section 4:] \textit{Logic and Mathematics} \\
+\end{description}
+
+Here, we learn how this game is played and how it is woven into the fabric of our reality. In the chapter following this one, we model the game of computation mathematically and find the theoretical limits of what it can tell us. Beyond that, we learn how to be an excellent player, covering \textit{techniques} for efficient problem solving and \textit{tools} for designing beautiful, maintainable systems. \\
+
+%----------------------------------------
+
+With that said, let us take a page from Hesiod and begin our tale with an uncertain chaos. Let us regard reality as a baby might: confusing but ultimately intelligible through \textit{categorization}. \\
+
+%--------------------------------------------------------------------------------
+%    SECTION: COGNITION
+%--------------------------------------------------------------------------------
+
+\toclineskip
+\section{Cognition and Consciousness}
+
+\vspace{4mm}
+\begin{displayquote}
+	\textit{If you wish to make an apple pie from scratch, you must first invent the universe.}
+	\vspace{2mm}
+	\begin{flushright}
+		---Carl Sagan
+	\end{flushright}
+\end{displayquote}
+\vspace{4mm}
+
+Dark turns into light. A boundless zephyr of blurs. You see. You hear. You \textit{feel}. The knife-edge of experience materializes, and you step out onto it. It cuts you, and there is no thought---only sensation. Air kissing skin and turbulent color. Sonic frenzy and the feeling of self-weight. Reality emerges raw and beams through all you are. You are lost in it all: a sailboat in a storm, a satellite adrift in space, and the rest. Indifferent, the phantasmagoria rages on. \\
+
+% Thing
+% Individual, Attribute, Class, Relation
+
+% Everything
+% Universe
+% Domain of discourse
+% Context/POV
+
+% Physical
+% Perceptual
+% Conceptual
+
+% Dichotomy (partition, differentiation, cut): pt()
+% Attributes (properties)
+	% Quality vs. Quantity
+	% Magnitude vs. Multitude
+% Something
+% Negation
+% Nothing
+
+% Collection (unification, integration): ref(...) or {...}
+% Classes (sets)
+% Extension
+% Intension
+% Well-foundedness
+
+% Transitivity (Parthood vs Membership)
+
+% Reference
+	% Referential universe is isomorphic to referent universe
+		% Extrinsic iso: both universes, part of nothing else
+		% Intrinsic iso: both atoms, partless
+% Perception
+	% Meronomy, parthood
+	% Attention
+% Conception
+	% Taxonomy, subset, is-a
+% Naming (inverse: recognizing, understanding)
+	% Copula (is-a)
+% Communication
+
+% Dimension
+	% Nominal (trivial)
+	% Order (hierarchy)
+		% Referential order
+		% Conceptual order
+	% Metric
+% Atom
+% Space and time
+% Modality
+% Trivial dimensions
+
+% Causality
+
+% Identity: spatial, temporal, referential, isomorphic
+% Individuation (self/other) (functionally equal to dichotomy)
+% Analogical reasoning => isomorphism
+
+% Map-territory relation
+
+% Closed world
+% Open world
+
+% Contiguity
+% Continuity
+
+% Sentence
+% Noun, adjective, verb, adverb
+% Gerund
+% Binary tree form: noun phrase + verb phrase
+	% Dynamically-constructed concept
+% Ternary form: concept, copula, definition
+% Verb tense
+% Verb transitivity affects dimensionality
+
+% Mereology vs. Set Theory
+% Function composition vs. set intersection
+% Functional vs. OOP?
+
+% Bootstrapping
+% Analog magnitude representation (cardinality)
+% Parallel individuation (up to 3)
+% Serial ordering
+% => Children induce the successor function
+
+This is roughly the experience of a newborn infant. For children of a month or so, life is a sensory mayhem of little sense. They are not conscious, at least not in the way that we typically think of consciousness. They are, however, aware of their surroundings and sensitive to \textit{phenomena} (i.e. the \textit{appearances} of reality, \textit{observables}). To newborns, the world is not a system of distinct parts but an all-encompassing soup of stimuli. Their sensory organs input data that they do not understand, and they then output \textit{reflexes} honed through millions of years of natural selection. \\
 
 This is not to say that babies are mindless. Rather, their minds are just unlike those of typical adults, which both \textit{filter} and \textit{store} information. For example, while babies and adults have similar hearing ability, babies nevertheless hear things that adults do not. This is because adults subconsciously ignore certain sounds; they may \textit{sense} the auditory data, but they do not \textit{perceive} them. This filtering process is called \textit{sensory gating}, and it inhibits any stimulus that is deemed irrelevant. Any information that is not filtered is then eligible for storage in \textit{memory}. \\
 
-Thus, if the adult mind is like the conical beam of a flashlight, seeing far but neglecting much, the baby mind is like the radiant orb of a lantern, seeing everything nearby but illuminating nothing deeper. These configurations are well-suited to the goals of each: the adult needs \textit{attention} to understand complex situations whereas the baby needs \textit{unrestricted perception} to acquire as much information as possible. Unburdened by categorical thought and sensory gating, babies live in the present and see the \textit{suchness} of reality. However, their experience is not quite the \textit{kensh\=o} of Zen---it is more like Aldous Huxley's Mind at Large or William Blake's famous metaphor, from which Huxley took the title of his first essay on psychonautics: \\
+Thus, if the adult mind is like the conical beam of a flashlight, seeing far but neglecting much, the baby mind is like the radiant orb of a lantern, seeing everything nearby but illuminating nothing deeper. These configurations are well-suited to the goals of each: the adult needs \textit{attention} to understand complex situations whereas the baby needs \textit{unrestricted perception} to acquire as much information as possible. Unburdened by categorical thought and sensory gating, babies live in the present and see the \textit{suchness} of reality. However, their experience is not quite the \textit{kensh\=o} of Zen---it is more like Aldous Huxley's Mind at Large or William Blake's metaphor, from which Huxley took the title of his first essay on psychonautics: \\
 
 \begin{displayquote}
 	If the doors of perception were cleansed every thing would appear to man as it is: Infinite. For man has closed himself up, till he sees all things thro' narrow chinks of his cavern. \\
@@ -123,7 +217,7 @@ Of course, adults still have a P-consciousness---we can lose ourselves in the mo
 	\begin{displayquote}
 		The fact that an organism has conscious experience at all means, basically, that there is something it is like to be that organism. There may be further implications about the form of the experience; there may even (though I doubt it) be implications about the behavior of the organism. But fundamentally an organism has conscious mental states if and only if there is something that it is like to \textit{be} that organism---something it is like \textit{for} the organism. We may call this the subjective character of experience. \\
 	\end{displayquote}
-
+	
 	This "subjective character of experience" presents a major challenge to the belief that neuroscience will eventually reduce consciousness to a theory. The \textit{philosophy of mind} is then, perhaps, brazenly Postmodernist---inherently subjective and relativistic, with answers that will remain unknown to mankind in spite of its scientific progress. Nagel posits, for example, that we cannot conceive of the subjective experience of a bat because it is totally alien to our own experience. And further, he argues that it does no good to ground such an experience in greater and greater \textit{objectivity} (i.e. independence from human bias), that such first-person character is stripped away in the third-person framework of science: \\
 	
 	\begin{displayquote}
@@ -143,47 +237,47 @@ Of course, adults still have a P-consciousness---we can lose ourselves in the mo
 	\begin{displayquote}
 		My thesis is that if we start with the supposition that there is only one primal stuff or material in the world, a stuff of which everything is composed, and if we call that stuff 'pure experience,' the knowing can easily be explained as a particular sort of relation towards one another into which portions of pure experience may enter. The relation itself is a part of pure experience; one of its 'terms' becomes the subject or bearer of the knowledge, the knower, the other becomes the object known. \\
 	\end{displayquote}
-
+	
 	So there is a particular relation $\rightarrow$, one among many, and it is called \textit{knowing}. And it relates one term $A$ to another term $B$. And we say that $A$, the knower, \textit{knows} $B$, the known: $A \rightarrow B$. And all of these---the $\rightarrow$, the $A$, the $B$, and the composed whole---are of a neutral, experiential substance. And, indeed, so it is for everything that we may perceive or conceive. The onus is placed then on the rational interpreter to determine whether a relational structure (or \textit{pattern}) of neutral elements constitutes a physical or mental property. Thus, we are pattern-scanning machines and arbiters of what is \textit{thought} and what is \textit{thing}. \\
 	
 	% Physicalists take one more step and say that the neutral elements are physical. But then there are those pesky qualia to consider. Can they be reduced to physical states? Reductive and non-reductive physicalism (or materialism).
 	
 	% Okay, we follow non-reductive physicalism to accommodate a mental conception of qualia. Will we ever understand mental states in the way that we understand physical states?
-		% Problems versus mysteries
-		% Temporary mysterianism (maybe, but it will require a paradigm shift in science)
-		% Permanent mysterianism (no, we are cognitively closed)
-		% Colin McGinn - there are four approaches to explaining something (reduce it, make it fundamental, claim it is magical, eliminate it from reality)
+	% Problems versus mysteries
+	% Temporary mysterianism (maybe, but it will require a paradigm shift in science)
+	% Permanent mysterianism (no, we are cognitively closed)
+	% Colin McGinn - there are four approaches to explaining something (reduce it, make it fundamental, claim it is magical, eliminate it from reality)
 	
 	% Eliminative materialism - the antithesis of property dualism
 	% Dennett: Wittgenstein, anti-theist, verificationist, critical of folk psychology and the intuitive understanding of one's own consciousness
 	
 	% Quining Qualia (1988) and Consciousness Explained (1991) - Daniel Dennett
-		% Qualia are... ineffable, intrinsic, immediate, and private
-		% This description is unscientific, so qualia do not exist in this sense
-		% Objecting to the intuitive understanding of consciousness
-		% Most philosophers of mind are atheists, but Dennett is an anti-theist. You can see it in his argument a bit. He seem to relish the idea of obliterating the last thing that made mankind special: the Cartesian mind. He also dislikes intuitive ideas, like folk psychology.
-		% Multiple realizability
+	% Qualia are... ineffable, intrinsic, immediate, and private
+	% This description is unscientific, so qualia do not exist in this sense
+	% Objecting to the intuitive understanding of consciousness
+	% Most philosophers of mind are atheists, but Dennett is an anti-theist. You can see it in his argument a bit. He seem to relish the idea of obliterating the last thing that made mankind special: the Cartesian mind. He also dislikes intuitive ideas, like folk psychology.
+	% Multiple realizability
 	
 	% Which one takes precedence: what we observe or what we can verify?
-		% For Nagel, the axiom is that "subjective consciousnness is real" because we constantly observe it. For Dennett, the axiom is "only objectively verifiable things are real" because science presupposes objectivity.
-		% Dennett is a functionalist. Functionalism requires only access consciousness. He doesn't deny that we experience a phenomenal consciousness or a "subjective character of experience," but he thinks that those private, personal experiences, in and of themselves, have no place in reality. There is neurological activity that causes us to experience those qualia, but the experiences themselves have no quiddity, no place in the ontology of the actual world.
+	% For Nagel, the axiom is that "subjective consciousnness is real" because we constantly observe it. For Dennett, the axiom is "only objectively verifiable things are real" because science presupposes objectivity.
+	% Dennett is a functionalist. Functionalism requires only access consciousness. He doesn't deny that we experience a phenomenal consciousness or a "subjective character of experience," but he thinks that those private, personal experiences, in and of themselves, have no place in reality. There is neurological activity that causes us to experience those qualia, but the experiences themselves have no quiddity, no place in the ontology of the actual world.
 	
 	% Mary's room - Frank Jackson's epiphenomenalist argument (1982)
-		% USE THIS TO CONTRAST NAGEL AND DENNETT
-		% Defines qualia
-		% Ontological vs. epistemic readings
-		% Epiphenomenalism - mental states are caused by physical states, but have no causal effects on the physical world.
-		% Jackson later becomes a physicalist
-		% Cover weak reductionist, strong reductionist, and eliminative materialist positions on the problem
-		
+	% USE THIS TO CONTRAST NAGEL AND DENNETT
+	% Defines qualia
+	% Ontological vs. epistemic readings
+	% Epiphenomenalism - mental states are caused by physical states, but have no causal effects on the physical world.
+	% Jackson later becomes a physicalist
+	% Cover weak reductionist, strong reductionist, and eliminative materialist positions on the problem
+	
 	% Facing Up to the Problem of Consciousness (1995) - David Chalmers
-		% Qualia are not functionally analyzable (inefficacious, purposeless)
-		% Panpsychism
-		% Quantum Mechanical Dualism
-		% The hard problem of conciousness is a subproblem of the mind-body problem, which also takes thoughts into account.
+	% Qualia are not functionally analyzable (inefficacious, purposeless)
+	% Panpsychism
+	% Quantum Mechanical Dualism
+	% The hard problem of conciousness is a subproblem of the mind-body problem, which also takes thoughts into account.
 	
 	% Integrated Information Theory (2014)
-		% Inspired by Chalmers' panpsychism, assumes that consciousness (phi) is actually a fundamental physical property of feedback systems.
+	% Inspired by Chalmers' panpsychism, assumes that consciousness (phi) is actually a fundamental physical property of feedback systems.
 	
 	%----------------------------------------
 	
@@ -198,41 +292,22 @@ Of course, adults still have a P-consciousness---we can lose ourselves in the mo
 Regardless of whether or not they exist, qualia are beyond our scope. \\
 
 % Why is all this qualia stuff important for CS?
-	% There are multiple universes we could consider: physical (objective, subjective (perceptual, conceptual)). In CS, we work in a conceptual universe.
-	% But in any universe, we consider things: everything (inf), something (1), or nothing (0).
-	% Hofstadter
-	% Formal systems
-	% Hardware and software
-	% Cognitive biases. Computers do not have them but programmers do, and computers only do what programmers tell them to do.
-	% Feedback systems in IIT have nonzero levels of consciousness. Consciousness is not a desirable feature of tools, so it may be worth designing feed-forward systems instead to ensure that we don't accidently create conscious programs.
+% There are multiple universes we could consider: physical (objective, subjective (perceptual, conceptual)). In CS, we work in a conceptual universe.
+% Hofstadter, strange loop
+% Formal systems
+% Hardware and software
+% Cognitive biases. Computers do not have them but programmers do, and computers only do what programmers tell them to do.
+% Feedback systems in IIT have nonzero levels of consciousness. Consciousness is not a desirable feature of tools, so it may be worth designing feed-forward systems instead to ensure that we don't accidently create conscious programs.
 
 % We are not concerned with subjective phenomena (experience). We are only interested in sensory data that is organized into information and integrated as knowledge (cognition).
-% That is, we are not interested in qualitative notions. Computer science is an objective discipline. Assuming that the processor operates as instructed, it is actually a deterministic discipline (outside of randomized algorithms). Thus, we are only interested in quantitative notions. 
-% Asking whether or not qualia exist is kind of like asking whether or not reality or consciousness is continuous (i.e. \textit{infinitely detailed}). If it is instead discrete, we could model it with a Turing machine. Unless there is something \textit{fundamentally different} about qualia, like they are somehow not understandable by humans, they will eventually be explained.
+% That is, we are not interested in qualitative notions. Computer science is an objective discipline. Assuming that the processor operates as instructed, it is actually a deterministic discipline (outside of randomized algorithms). Thus, we are only interested in quantitative notions.
 
-% However, they bring up a few important philosophical concepts:
-	% Subject (agency) and Object
-	% Identity and Individuation
-	% Map-territory relation
-	% Essence and existence
-	
-% There are also important concepts for the objective realm in particular:
-	% Causality
-	% Space and time
-	
-% Objective, perceptual, and conceptual universes
-% Everything, something, nothing (infinity, 1, 0)
-% Closed-world, open-world, DoD
-% We must consider open-worlds before we discuss closed-worlds.
-% Natural and constructed systems.
+%--------------------------------------------------------------------------------
+%    SECTION: NATURAL PHILOSOPHY AND PHYSICS
+%--------------------------------------------------------------------------------
 
-% What is a ceramic mug to my perception? What is it to my conception? How would I categorize it (depends on context)?
-
-% Phenomenology, intersubjectivity
-
-% It is important to discuss cognitive development because it gives an insight into our cognitive biases and our innate tendency toward irrationality.
-
-% Causality is metaphysically prior to space and time.
+\toclineskip
+\section{Natural Philosophy and Physics}
 
 \textbf{Space and time} are two features of our reality. As they appear to us, the former is an expanse in three dimensions, and the latter can be thought of as an arrow that extends steadily in one dimension, from past to future. They are inextricably woven into the fabric of our experience, and yet their true nature eludes us. \\
 
@@ -704,7 +779,8 @@ That said, while Plato's metaphysics gives good insight into OOP and other abstr
 % The Christian Trinity is similar:
 % The Godhead is the Good (the divine substance).
 % The Father is the Nous, the Son is the Logos (Word), the Holy Spirit is the Pneuma (Breath).
-% The metaphor is: there is a Divine Creator (or Mind), and he created everything with the Word (a speech composed by a rational mind) which he executes by means of Breath or Soul (the mental faculties of a living being). Just like a Programmer creates a Program that he executes by means of Computation.
+% The metaphor is: there is a Divine Creator (or Mind), and he created everything with the Word (a speech composed by a rational mind) which he executes by means of Breath or Soul (the hot air of life). Just like a Programmer creates a Program that he executes by means of Computation.
+% Speech scroll
 
 \subsubsection{Aristotle's Hylomorphism}
 
@@ -859,7 +935,10 @@ Euclid's proofs can also be described as \textit{constructive}. \\
 % Why is it important to talk about this period that is often termed the "Dark Ages"? Well, one reason is that all of the glorious classical knowledge was "lost" for a while outside of Constantinople. Western Europeans had to \textit{discover} the lost knowledge of their ancestors, and they thought very highly of these texts. As we nowadays might opine in favor of "the glory that was Greece, the grandeur that was Rome" (Poe's words, not mine), these peoples revered this knowledge. The trope is common in science-fiction---a lost, ancient civilization, beautiful culture and technology in ruins, far more advanced than what is presently known---but it does appear in history as well, given the right context. Other civilizations (namely the Islamic ones) discovered the knowledge through trade and also valued it, and they built on it in incredibly innovative ways (algebra, combinatorics).
 % Rome comes and goes, classical knowledge is lost to the West for hundreds of years, but is preserved in Byzantium/Constantinople (Nova Roma)
 % Christianity dominates the Western world and academic work is done primarily in order to support Christian theology. Naturalism dies out.
-% Some scientific work is done in the West during the Middle Ages, but it is isolated and there is little progress.
+% Constantine I - lots of Christian theological stuff happens in Constantinople.
+% Some scientific work is done in the West during the Middle Ages, but it is isolated and there is little progress. Less than 1% of the world is literate.
+% Justinian I and the Plague of Justinian
+% Charlemagne the Great - the revival of learning
 % Islamic Arabs seek out and acquire the knowledge of other civilizations, Classical Greek knowledge is acquired from Constantinople, Translation Movement, the Islamic Golden Age occurs, ends due to the destruction of Baghdad by Mongols
 % Europe slowly recovers Ancient Greek knowledge, and academic work is done to harmonize Aristotelian thought with Christianity
 % The Black Death happens and wipes out half of Europe, scientific work halts
@@ -977,11 +1056,21 @@ Euclid's proofs can also be described as \textit{constructive}. \\
 % If you have space or time constraints, you want to use language that is dense with meaning. You can do this with compression in space (removing all of the vowels, using acronyms and Emojis, using shorthand) or compression in time (writing in cursive, no decorations, ). Often, compression techniques naturally save both time and space (not only do smaller files take up less space, they also download and upload faster).
 
 %--------------------------------------------------------------------------------
-%    SECTION: COMMUNICATION
+%    SECTION: INFORMATION AND COMMUNICATION
 %--------------------------------------------------------------------------------
 
 \toclineskip
-\section{Communication}
+\section{Information and Communication}
+
+\vspace{4mm}
+\begin{displayquote}
+	\textit{For Wiener, entropy was a measure of disorder; for Shannon, of uncertainty. Fundamentally, as they were realizing, these were the same.}
+	\vspace{2mm}
+	\begin{flushright}
+		---James Gleick
+	\end{flushright}
+\end{displayquote}
+\vspace{4mm}
 
 % Semiotics
 % Signal processing (analog and digital)
@@ -1217,26 +1306,28 @@ A formal language is constructed from an \textit{alphabet} $\Sigma$, which is a 
 % The base-60 system of Babylonian numerals is also notable. Its base is thought to have been chosen for its many factors, as this simplifies the process of division. Under this interpretation, this system is \textit{constructed} rather than natural. Instead of mirroring something concrete like physical extremities, this system chooses an abstract base in order to make a procedural optimization. The reasoning for base-2 encoding in computing is similar. It sacrifices human familiarity for performance and reliability. \\
 
 %--------------------------------------------------------------------------------
-%    SECTION: LOGIC
+%    SECTION: LOGIC AND MATHEMATICS
 %--------------------------------------------------------------------------------
 
 \toclineskip
-\section{Logic}
+\section{Logic and Mathematics}
 
 \vspace{4mm}
 \begin{displayquote}
-	\textit{Upon this first, and in one sense this sole, rule of reason, that in order to learn you must desire to learn, and in so desiring not be satisfied with what you already incline to think, there follows one corollary which itself deserves to be inscribed upon every wall of the city of philosophy: \\
+	\textit{Upon this first, and in one sense this sole, rule of reason, that in order to learn you must desire to learn, and in so desiring not be satisfied with what you already incline to think, there follows one corollary which itself deserves to be inscribed upon every wall of the city of philosophy:
+	\vspace{1mm}
 	\begin{center} Do not block the way of inquiry. \end{center}}
+	\vspace{2mm}
 	\begin{flushright}
 		---Charles Sanders Peirce
 	\end{flushright}
 \end{displayquote}
-\vspace{4mm}
+\vspace{3mm}
 
 % "Of course, the objects of a deductive system are normally thought of as formulas, the arrows are thought of as proofs or deductions, and operations on arrows are thought of as rules of inference."
 
 % Laws of thought
-% Three reliable ways of acquiring knowledge: deduction, induction, and communication.
+% Three reliable ways of acquiring information: deduction, induction, and communication.
 % Hume's problem of induction
 % Deductive: truisms via consequence, Inductive: facts via evidence
 
@@ -1563,7 +1654,7 @@ The difference between a calculator and a computer is that a computer can be pro
 
 Surprisingly enough, \textit{special-purpose computers} have also been around for a long time. Early examples include the \textit{Antikythera mechanism} (an Ancient Greek analog computer), Al-Jazari's 1206 water-powered \textit{astronomical clock}, the 1774 \hrefcolor[blue]{https://www.youtube.com/watch?v=bY\_wfKVjuJM}{\underline{Writer Automaton}} (a mechanical doll that could be programmed to write messages), the 1801 \textit{Jacquard loom}, and \textit{slide rules}. Some later mechanical computers were quite powerful, such as \textit{differential analyzers} (special-purpose computers for solving differential equations) and fire control computers. Charles Babbage designed the \textit{Analytical Engine}, a general-purpose computer, in 1837, and Ada Lovelace wrote a program for it, but it was never built. General-purpose computing would not reemerge until the 1940s. \\
 
-The line between calculator and computer began to blur with the introduction of \textit{programmable calculators} in the 1960s. Many modern high-end calculators are programmable in Turing-complete languages such as TI-BASIC or even C or C++, which officially makes them computers. Once we start implementing \textit{sequential logic} with components like SR latches or D flip-flops, we are storing state, and state is a requirement for computing. Circuits that use sequential logic can be considered automata and, given enough complexity, computers. \\
+The line between calculator and computer began to blur with the introduction of \textit{programmable calculators} in the 1960s. Many modern high-end calculators are programmable in Turing-complete languages such as TI-BASIC or even C or C++, which officially makes them computers. Once we start implementing \textit{sequential logic} with components like SR latches or D flip-flops, we are storing state, and state is a requirement for computing. Circuits that use sequential logic can be considered automata and, given enough complexity, computers. \\\\
 
 \begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
 	\vspace{3mm}
@@ -1575,9 +1666,30 @@ The line between calculator and computer began to blur with the introduction of 
 \end{tcolorbox}
 \vspace{2\baselineskip}
 
+Blah \\
+
 % Hey, let's build machines to do this instead.
 % Wait, what exactly are we building? Let's model the problem.
 % Computation as a mechanical process vs a function.
 % Abstract away the mechanics, and a function becomes a conversation (input and output).
 % Computing is more than just math, semantically.
 % Structure of language, types of sentences (declarative/imperative)
+
+\parbreak
+
+What is the strange loop? What is wisdom?
+
+% \textbf{Wisdom} is the capacity to think and act in a way that is right. It involves the use of knowledge, a prudent choice of means and ends, and a healthy doubt of one's own understanding. It is born of an acknowledgment of how little one truly knows and how little control one truly has. \\
+
+% The wise exhibit:
+% Realism
+% Gratitude
+% Understanding of folly
+% Humor
+% Politeness
+% Self-acceptance
+% Forgiveness
+% Resilience
+% Control over envy
+% Little regret
+% Calmness
