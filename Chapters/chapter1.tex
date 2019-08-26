@@ -43,27 +43,17 @@ In the spirit of this principle, our three words are defined softly below to act
 	\textbf{Knowledge} is an understanding of information that emerges given proper interpretation and sufficient thought. It is usually associated with Truth and may be considered a body of true beliefs. \\
 \end{displayquote}
 
-The journey toward an honest comprehension of these terms will be an arduous one, requiring an open mind and an ample store of time set aside for contemplation. And in walking the path, you may find that it meanders or veers off suddenly, that what you desire remains frustratingly out of reach or nowhere to be seen. But as the text winds its way through the domains of psychology, cognitive science, philosophy, physics, information science, linguistics, logic, and mathematics, remember to lift your eyes up from the page and to mull over the ground you have covered so far. The essence of computation is found at the crossroads of these disciplines, and a fuller appreciation awaits at each passing overlook. \\
+The journey to a deep familiarity with these terms will be an arduous one, requiring an open mind and an ample store of time set aside for contemplation. And in walking the path, you may find that it meanders or veers off suddenly, that what you desire remains frustratingly out of reach or nowhere to be seen. But as the text winds its way in and out of the domains of psychology, cognitive science, philosophy, physics, information science, linguistics, logic, and mathematics, remember to lift your eyes up from the page and to mull over the detours as a whole. The essence of computation lies at their crossroads, and a fuller appreciation can be found at each passing overlook. \\
 
-There is a fourth word---\textit{wisdom}---but we leave it undefined for now. Nevertheless, its importance cannot be overstated. \\
+There is a fourth word---\textit{wisdom}---but we leave it undefined for now. Wisdom is strictly outside of the scope of computation, and yet its importance cannot be overstated. It is beyond computation but beyond it in the same way that grandmasters are beyond \textit{chess}. One could gather up all of the chess pieces and boards in the world, but that heap of ivory, stone, and wood would not equal chess. Likewise, one could consider all of the games of chess that are being played right now, currently progressing or left half-finished, and all of the \textit{historical} games of chess that have been played to completion or abandonment, from the emergence of modern chess and on or including as well those games of earlier rulesets. The choice of starting year would not matter: chess cannot be captured in a collection. \\
 
-% The wisdom can be found in the characters.
-% Game metaphor, good players
+One could instead opt to \textit{formalize} the game by distilling it to a combinatorial structure composed of \textit{game states} connected by potential \textit{plies} (i.e. turns or single-player moves). But such a structure would be mostly of interest to mathematicians, not chess enthusiasts. For those who understand (and perhaps play) chess at a high level, it is not this structure as a whole that is so engaging. Rather, they revel in the hidden sequences of moves that swiftly transform one game state to another in which the opponent is left crippled, with little hope of recovery. Chess author Irving Chernev describes these \textit{combinations} with near-religious zeal: \\
 
-%----------------------------------------
+\begin{displayquote}
+	A combination is a blend of ideas---pins, forks, discovered checks, double attacks---which endow the pieces with magical power. It is a series of staggering blows before the knockout. It is the climactic scene in the play appearing on the board. It is the touch of enchantment that gives life to inanimate pieces. It is all this and more---a combination is the heart of chess. \\
+\end{displayquote}
 
-In this chapter, we will explore what computation is and why it matters. Computation is a kind of game in which \textit{pieces} are moved and transformed within a \textit{game space} according to a predetermined set of \textit{rules}. However, unlike most games, computation has no set goal. Nature shuffles its hazy pieces about, following arbitrary rules for reasons we cannot ascertain. Man, on the other hand, explicitly defines its pieces and rules, modeling them after Nature's strange mechanics. We declare the win conditions of our problems and play toward them, hoping that our computations will elucidate the knowledge we seek. \\
-
-\begin{description}
-	\item[Section 1:] \textit{Cognition and Consciousness}
-	\item[Section 2:] \textit{Natural Philosophy and Physics}
-	\item[Section 3:] \textit{Information and Communication}
-	\item[Section 4:] \textit{Logic and Mathematics} \\
-\end{description}
-
-Here, we learn how this game is played and how it is woven into the fabric of our reality. In the chapter following this one, we model the game of computation mathematically and find the theoretical limits of what it can tell us. Beyond that, we learn how to be an excellent player, covering \textit{techniques} for efficient problem solving and \textit{tools} for designing beautiful, maintainable systems. \\
-
-%----------------------------------------
+% Good combinations are like good computations. Efficient, elegant, powerful.
 
 With that said, let us take a page from Hesiod and begin our tale with an uncertain chaos. Let us regard reality as a baby might: confusing but ultimately intelligible through \textit{categorization}. \\
 
@@ -86,62 +76,93 @@ With that said, let us take a page from Hesiod and begin our tale with an uncert
 
 Dark turns into light. A boundless zephyr of blurs. You see. You hear. You \textit{feel}. The knife-edge of experience materializes, and you step out onto it. It cuts you, and there is no thought---only sensation. Air kissing skin and turbulent color. Sonic frenzy and the feeling of self-weight. Reality emerges raw and beams through all you are. You are lost in it all: a sailboat in a storm, a satellite adrift in space, and the rest. Indifferent, the phantasmagoria rages on. \\
 
+This is roughly the experience of a newborn infant. For children of a month or so, life is a sensory mayhem of little sense. They are not conscious, at least not in the way that we typically think of consciousness. They are, however, aware of their surroundings and sensitive to \textit{phenomena} (i.e. the \textit{appearances} of reality, \textit{observables}). To newborns, the world is not a system of distinct parts but an all-encompassing soup of stimuli. Their sensory organs input data that they do not understand, and they then output \textit{reflexes} honed through millions of years of natural selection. \\
+
+This is not to say that babies are mindless. Rather, their minds are just unlike those of typical adults, which both \textit{filter} and \textit{store} information. For example, while babies and adults have similar hearing ability, babies nevertheless hear things that adults do not. This is because adults subconsciously ignore certain sounds; they may \textit{sense} the auditory data, but they do not \textit{perceive} them. This filtering process is called \textit{sensory gating}, and it inhibits any stimulus that is deemed irrelevant. Any information that is not filtered is then eligible for storage in \textit{memory}. \\
+
+Thus, if the adult mind is like the conical beam of a flashlight, seeing far but neglecting much, the baby mind is like the radiant orb of a lantern, seeing all that is immediate but illuminating nothing deeper. These configurations are well-suited to the goals of each: the adult needs \textit{attention} to understand complex situations whereas the baby needs \textit{unrestricted perception} to acquire as much information as possible. Unburdened by categorical thought and sensory gating, babies live in the present and see the suchness of reality. However, their experience is not quite the \textit{kensh\=o} of Zen---it is more like Aldous Huxley's Mind at Large or William Blake's oft-quoted metaphor, from which Huxley took the title of his first essay on psychonautics: \\
+
+\begin{displayquote}
+	If the doors of perception were cleansed every thing would appear to man as it is: Infinite. For man has closed himself up, till he sees all things thro' narrow chinks of his cavern. \\
+\end{displayquote}
+
+So it is through a great deal of concurrent filtering and learning that we come to build a cavern around ourselves. But we do not muffle our perception pointlessly---we trade it for genuine \textit{thought}. \\
+
 % Thing
-% Individual, Attribute, Class, Relation
+% Individual, Attribute, Class, Relation, Function
+% Relationship
+% Structure
+% Ontology
 
 % Everything
 % Universe
 % Domain of discourse
 % Context/POV
 
-% Physical
-% Perceptual
-% Conceptual
+% Physical (system)
+% Perceptual (theory)
+% Conceptual (model)
 
-% Dichotomy (partition, differentiation, cut): pt()
+% Dichotomy (partition, division, individuation, differentiation, cut): pt()
+% Self/other
+% Boundary
+% Separating hyperplane
+% Parthood
+% Reflexivity
+% Transitivity
+% Antisymmetry
 % Attributes (properties)
-	% Quality vs. Quantity
-	% Magnitude vs. Multitude
+% Quality vs. Quantity
+% Magnitude vs. Multitude
 % Something
+
 % Negation
 % Nothing
+% Duality
 
 % Collection (unification, integration): ref(...) or {...}
 % Classes (sets)
-% Extension
-% Intension
-% Well-foundedness
+% Extension (natural kinds)
+% Intension (types)
+% Well-foundedness, primitives
+
+% Encoding (concept to percept)
+% Compression (reduce dimensionality, percept to concept)
 
 % Transitivity (Parthood vs Membership)
 
 % Reference
-	% Referential universe is isomorphic to referent universe
-		% Extrinsic iso: both universes, part of nothing else
-		% Intrinsic iso: both atoms, partless
+% Referential universe is isomorphic to referent universe
+% Extrinsic iso: both universes, part of nothing else
+% Intrinsic iso: both atoms, partless
 % Perception
-	% Meronomy, parthood
-	% Attention
+% Meronomy, parthood
+% Attention
+% External perceptions
+% Internal perceptions
 % Conception
-	% Taxonomy, subset, is-a
+% Taxonomy, subset, is-a
 % Naming (inverse: recognizing, understanding)
-	% Copula (is-a)
+% Copula (is-a)
 % Communication
+% Type-token relation (instantiation)
 
 % Dimension
-	% Nominal (trivial)
-	% Order (hierarchy)
-		% Referential order
-		% Conceptual order
-	% Metric
+% Nominal (unordered, set-like)
+% Order (hierarchy)
+% Referential order
+% Conceptual order
+% Ontological priority
+% Causality
+% Metric
 % Atom
+% Trivial dimensions
 % Space and time
 % Modality
-% Trivial dimensions
-
-% Causality
+% Dimension represented with neural interconnectedness?
+% Curse of Dimensionality
 
 % Identity: spatial, temporal, referential, isomorphic
-% Individuation (self/other) (functionally equal to dichotomy)
 % Analogical reasoning => isomorphism
 
 % Map-territory relation
@@ -149,14 +170,20 @@ Dark turns into light. A boundless zephyr of blurs. You see. You hear. You \text
 % Closed world
 % Open world
 
-% Contiguity
-% Continuity
+% Contiguous/discontiguous
+% Continuous/discrete
 
 % Sentence
-% Noun, adjective, verb, adverb
+% Noun, adjective
+% Proper noun
+% Count noun
+% Mass noun
+% Verb, adverb
+% Transitive
+% Intransitive
 % Gerund
 % Binary tree form: noun phrase + verb phrase
-	% Dynamically-constructed concept
+% Dynamically-constructed concept
 % Ternary form: concept, copula, definition
 % Verb tense
 % Verb transitivity affects dimensionality
@@ -168,26 +195,20 @@ Dark turns into light. A boundless zephyr of blurs. You see. You hear. You \text
 % Bootstrapping
 % Analog magnitude representation (cardinality)
 % Parallel individuation (up to 3)
-% Serial ordering
+% Serial ordering (ordinality)
 % => Children induce the successor function
 
-This is roughly the experience of a newborn infant. For children of a month or so, life is a sensory mayhem of little sense. They are not conscious, at least not in the way that we typically think of consciousness. They are, however, aware of their surroundings and sensitive to \textit{phenomena} (i.e. the \textit{appearances} of reality, \textit{observables}). To newborns, the world is not a system of distinct parts but an all-encompassing soup of stimuli. Their sensory organs input data that they do not understand, and they then output \textit{reflexes} honed through millions of years of natural selection. \\
+% Gestalt psychology, principles of grouping
 
-This is not to say that babies are mindless. Rather, their minds are just unlike those of typical adults, which both \textit{filter} and \textit{store} information. For example, while babies and adults have similar hearing ability, babies nevertheless hear things that adults do not. This is because adults subconsciously ignore certain sounds; they may \textit{sense} the auditory data, but they do not \textit{perceive} them. This filtering process is called \textit{sensory gating}, and it inhibits any stimulus that is deemed irrelevant. Any information that is not filtered is then eligible for storage in \textit{memory}. \\
+% Higher-order concepts
+% Metacognition
+% Turtles all the way down, concepts all the way up
 
-Thus, if the adult mind is like the conical beam of a flashlight, seeing far but neglecting much, the baby mind is like the radiant orb of a lantern, seeing everything nearby but illuminating nothing deeper. These configurations are well-suited to the goals of each: the adult needs \textit{attention} to understand complex situations whereas the baby needs \textit{unrestricted perception} to acquire as much information as possible. Unburdened by categorical thought and sensory gating, babies live in the present and see the \textit{suchness} of reality. However, their experience is not quite the \textit{kensh\=o} of Zen---it is more like Aldous Huxley's Mind at Large or William Blake's metaphor, from which Huxley took the title of his first essay on psychonautics: \\
+%----------------------------------------
 
-\begin{displayquote}
-	If the doors of perception were cleansed every thing would appear to man as it is: Infinite. For man has closed himself up, till he sees all things thro' narrow chinks of his cavern. \\
-\end{displayquote}
+% There is a distinction that is sometimes made in cognitive science between a \textit{(phenomenal) P-consciousness} and an \textit{(access) A-consciousness}, the former being the sole consciousness of the baby mind, concerned only with bits of immediate, subjective experience known as \textit{qualia} (e.g. what it is like to \textit{feel} a delicate raspberry as it touches your tongue, what it is like to \textit{taste} it as you mash it between your molars, the rush of brief and unique \textit{delight} found in enjoying that \textit{particular} berry, etc.) and the latter being the dominant consciousness of the adult mind, concerned with \textit{cognitive information} (e.g. thoughts about sensory data, abstract ideas, memories of the past, plans for the future, and all things involved in \textit{mental computation}). \\
 
-So it is through a great deal of concurrent filtering and learning that we come to build a cavern around ourselves. But we do not muffle our perception pointlessly---we trade it for genuine \textit{thought}. \\
-
-\subsubsection{Percepts and Concepts}
-
-There is a distinction that is sometimes made in cognitive science between a \textit{(phenomenal) P-consciousness} and an \textit{(access) A-consciousness}, the former being the sole consciousness of the baby mind, concerned only with bits of immediate, subjective experience known as \textit{qualia} (e.g. what it is like to \textit{feel} a delicate raspberry as it touches your tongue, what it is like to \textit{taste} it as you mash it between your molars, the rush of brief and unique \textit{delight} found in enjoying that \textit{particular} berry, etc.) and the latter being the dominant consciousness of the adult mind, concerned with \textit{cognitive information} (e.g. thoughts about sensory data, abstract ideas, memories of the past, plans for the future, and all things involved in \textit{mental computation}). \\
-
-Of course, adults still have a P-consciousness---we can lose ourselves in the moment if we are willing. But ours is a boarded-up P-consciousness, largely unaware of the immense volume of all that is happening at all times. Perhaps it is only the bodhisattvas or the mystics of yore who truly come to know their infant minds again and see the P and A as they are: two \textit{modes} of a unified whole. Or perhaps, more pessimistically (and as Huxley suggests), the P in its unadulterated totality is really a kind of schizophrenic insanity, and it is only by the grace of our specialized neural hardware that we erect defenses against its sensory onslaught. Alas, the suchness of such a consciousness eludes those of us with at least one foot planted solidly on the earth. \\\\
+% Of course, adults still have a P-consciousness---we can lose ourselves in the moment if we are willing. But ours is a boarded-up P-consciousness, largely unaware of the immense volume of all that is happening at all times. Perhaps it is only the bodhisattvas or the mystics of yore who truly come to know their infant minds again and see the P and A as they are: two \textit{modes} of a unified whole. Or perhaps, more pessimistically (and as Huxley suggests), the P in its unadulterated totality is really a kind of schizophrenic insanity, and it is only by the grace of our specialized neural hardware that we erect defenses against its sensory onslaught. Alas, the suchness of such a consciousness eludes those of us with at least one foot planted solidly on the earth. \\\\
 
 \begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
 	\vspace{3mm}
@@ -433,21 +454,6 @@ The \textbf{type-token distinction} \\
 
 % A natural kind is a collection of tokens that have something in common.
 % Extensional and intentional definitions of class.
-
-\begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
-	\vspace{3mm}
-	\begin{center}
-		\textbf{The Universal and Particular Notions of Chess}
-	\end{center}
-	% Chess example, physical boards and pieces, game states, the abstract idea of chess. "When was chess invented?". An instance of a chess game vs. all actual chess games vs. all possible chess games vs. the class of chess.
-	
-	% Has the abstract idea of chess existed for eternity? Or was it invented? If there is no sentient life, are there spheres?
-	% Are mathematical objects mind-dependent? Could a different kind of sentient mind recieve the same sensory data and interpret it with an alien sort of ontology?
-	
-	As an illustrative example, consider all of the games of chess that are being played right now, currently progressing or left half-finished and awaiting the next move. Consider also all of the \textit{historical} games of chess that have been played to completion or total abandonment since the invention of chess.
-	\vspace{3mm}
-\end{tcolorbox}
-\vspace{2\baselineskip}
 
 \subsubsection{Relations}
 
