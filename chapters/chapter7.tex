@@ -9,7 +9,13 @@
 
 "Stupid Computer Shit"
 
+% Good computer habits are about: controlling what information you receive on a daily basis, performing everyday tasks in the most efficient way possible, being intentional, ...
+
 % Application vs. program. Basically the same. Applications are programs that run on an operating system and help the user complete tasks. Some system programs are not applications.
+
+% The importance of doing things the hard way. Struggling at first so that you may reach higher heights than those who choose the more accessible tools. The importance of restricting yourself to a few simple tools.
+
+% What is data loss and how can it be prevented?
 
 %--------------------------------------------------------------------------------
 %    SECTION
@@ -37,6 +43,8 @@
 % Bare machine - a computer executing instructions without the aid of an operating system
 
 % Real programmers use Linux. Unless they work for Microsoft or Apple. But Linux is demonstrably a better OS for people who are serious about computing.
+% TUIs (textual/terminal-based user interfaces) are better than GUIs (graphical user interfaces). Text is pure content (words). Graphics are appearances (signs). The number of possible signs is much greater than the number of words in any practical language. For practical computing, we want things to be as simple as possible. Graphics should only be used when necessary (browsers, pictures, videos). Symbols can be used in very simple cases (a music player: play, pause, previous track, next track). But computing is more complicated than that and requires a language. Text is the better fit.
+% Corollary to the above: \texttt{vim} is better than \texttt{emacs}.
 % Tile-based WMs are better than drag-and-drop WMs. Drag-and-drop allows too much freedom. How often do you need a window that isn't fullscreen, 1/2, or 1/3? Apple is responsible for the "desktop metaphor" and the drag-and-drop trend.
 
 %----------------------------------------
@@ -55,9 +63,26 @@
 % /usr/bin: binaries that come with the OS or binaries that are installed by the OS's package manager
 % /usr/local/bin: binaries that are installed locally (by hand, by the user on the machine itself). This is where you should store the scripts that you write.
 
+% Naming conventions for files and directories:
+% 1. Case-sensitive
+% 2. Upper and lowercase letters, numbers, dot, dash, and underscore allowed (special characters are also technically allowed but must be escaped). \0 (NULL) and / are absolutely forbbiden 
+% 3. File extensions are optional
+% 4. Files that start with a dot are hidden.
+% 5. Names must be unique inside their directory
+% 6. 255-char limit
+% Conclusion: the names of files/directories should only use lowercase letters, digits, and either underscore or dash (user preference). Other options are just not practical.
+% Exceptions are allowed for some files (Java classes start with capitals).
+% I prefer kebab case. Just don't start the name with a dash because that implies that the name refers to an option.
+% my-thing is a file. my-thing/ is a directory.
+
 %----------------------------------------
 
 \subsubsection{Common Commands and Tasks}
+
+% Common tasks:
+% What are downloading and uploading?
+% What is cut/copy/paste?
+% What is logging in?
 
 % Superuser vs user
 
@@ -68,6 +93,18 @@
 % Download a file: 
 % wget "<address>"
 % wget -P <location> "address"
+
+% Kill a process:
+% ps aux | grep <process-name>
+	% a = show processes for all users
+	% u = display the process's user/owner
+	% x = also show processes not attached to a terminal
+% kill <pid>
+
+% File permissions: read (r), write (w), execute (x)
+% 10 chars, positions 0-9
+% Position 0: file (-), link (l), directory (d), etc.
+% Three triads: user (1-3), group (4-6), and outsider permissions (7-9)
 
 \begin{itemize}
 	\item chmod +x
@@ -83,6 +120,8 @@
 \end{itemize}
 
 \subsubsection{Making a Personalized Linux Installation}
+
+% Ncurses
 
 \begin{itemize}
 	\item Install Arch
@@ -115,12 +154,30 @@
 % Window manager (i3)
 % Desktop environment
 % Torrent client (qbittorent)
+% Notes (convert markdown files into pdf: pandoc <*.md> -s -o <*.pdf>)
 % Image viewer (imv)
+% Document viewer (zathura)
 % Image manipulation app (gimp)
 % Music player app
 % Video player app (vlc)
 % Games launcher
 % What is streaming? What is a streaming client?
+
+% Home is where the user lives. His belongings are usually categorized according to media type. Documents are for text, Downloads are for packages and zips and tarballs, Music is for music, Images is for images, Videos is for videos.
+
+% What is text? (EOF character)
+
+% Important coreutils programs:
+% ls (plus la and lsd)
+% ln (create a link)
+% cd
+% find
+
+% pandoc - a universal document converter
+
+% Vim:
+% If you never learned how to touch-type, vim will teach you.
+% :h E<number> (error help)
 
 \subsection{Version Control}
 
