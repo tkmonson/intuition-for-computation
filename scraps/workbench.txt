@@ -1,0 +1,6 @@
+**** Start: Computer science is not about computers. Or, at least, it is not *necessarily* about computers.
+
+Notes...
+
+**** End: Computer science is actually about computation. Ok, then what is computation? A process or event. Pops up in many fields of study (logic, mathematics, linguistics, engineering) and was eventually studied itself (making computer science a very interdisciplinary subject). Performed for the purpose of resolving uncertainty.
+

@@ -12,6 +12,7 @@
 % What is computing? What does it mean to compute?
 
 % Good computer habits are about: controlling what information you receive on a daily basis, performing everyday tasks in the most efficient way possible, being intentional, ...
+% I'm going to be honest: most people's computer habits are terrible. I'm going to go out on a limb, dear reader, and say that \textit{your} computer habits are terrible.
 
 % Application vs. program. Basically the same. Applications are programs that run on an operating system and help the user complete tasks. Some system programs are not applications.
 
@@ -26,6 +27,8 @@
 \toclineskip
 \section{Operating Systems}
 
+% Teleprinter, teletype, TTY
+
 % Multics -> Unix -> BSD -> GNU -> Linux
 
 % Here is what an operating system is. Here is the distribution of modern operating systems. These operating systems are called Unix-like because they are built on top of or heavily influenced by the operating system Unix. Variants of Unix include: BSD, GNU/Linux, macOS, etc. Non Unix-likes include: VAX/VMS, OpenVMS, DOS, OS/2, Microsoft Windows (which is a family of OSs)
@@ -39,17 +42,29 @@
 % Blue box on privacy
 % Software law
 % Free Software Foundation
-% FOSS/FLOSS
+% FOSS/FLOSS and Open Source
+% Binary blobs (proprietary device drivers)
 % Shoshana Zuboff (The Age of Surveillance Capitalism)
 
-% Bare machine - a computer executing instructions without the aid of an operating system
+% Computer networks
+% The Internet
+% Web 1.0, Web 2.0, and Web 3.0 (the Semantic Web)
 
-% Real programmers use Linux. Unless they work for Microsoft or Apple. But Linux is demonstrably a better OS for people who are serious about computing.
+% Bare machine - a computer executing instructions without the aid of an operating system
+% Environment variables ($ indicates that the (all-caps) name following it is a variable; env variables are exported from cmd)
+% What is a shell? Why are there so many of them?
+
+% Unix philosophy
+
+% Real programmers use Linux. Unless they work for Microsoft or Apple. But Linux is a demonstrably better OS for people who are serious about computing.
 % TUIs (textual/terminal-based user interfaces) / CLIs (command-line interfaces) are better than GUIs (graphical user interfaces). Text is pure content (words). Graphics are appearances (signs). The number of possible signs is much greater than the number of words in any practical language. For practical computing, we want things to be as simple as possible. Graphics should only be used when necessary (browsers, pictures, videos). Symbols can be used in very simple cases (a music player: play, pause, previous track, next track). But computing is more complicated than that and requires a language. Text is the better fit.
 % TUIs also prevent repetitive strain injuries and promote home-row typing, which improves the mind-muscle control of your ring and pinkie fingers.
 % Corollary to the above: \texttt{vim} is better than \texttt{emacs}.
 % Tile-based WMs are better than drag-and-drop (a.k.a. stacking or floating) WMs. Drag-and-drop allows too much freedom. How often do you need a window that isn't fullscreen, 1/2, or 1/3? Apple is responsible for the "desktop metaphor" and the drag-and-drop trend.
 % Using Linux via the command-line makes me feel like I am *operating* a computer. It is the right way to compute.
+
+% What is a distribution of Linux? A collection of software based on the Linux kernel that forms an OS.
+% Typically includes: Linux kernel, package manager, utility software (such as the GNU utilities), window system, window manager, desktop environment.
 
 %----------------------------------------
 
@@ -69,23 +84,29 @@
 
 % Naming conventions for files and directories:
 % 1. Case-sensitive
-% 2. Upper and lowercase letters, numbers, dot, dash, and underscore allowed (special characters are also technically allowed but must be escaped). \0 (NULL) and / are absolutely forbbiden 
+% 2. Upper and lowercase letters, numbers, dot, dash, and underscore allowed (special characters are also technically allowed but must be escaped). \0 (NULL) and / are absolutely forbbiden. 
 % 3. File extensions are optional
 % 4. Files that start with a dot are hidden.
 % 5. Names must be unique inside their directory
 % 6. 255-char limit
-% Conclusion: the names of files/directories should only use lowercase letters, digits, and either underscore or dash (user preference). Other options are just not practical.
+% Conclusion: the names of files/directories should only use lowercase letters, digits, and either underscore or hyphen (user preference). Other options are just not practical.
 % Exceptions are allowed for some files (Java classes start with capitals).
-% I prefer kebab case. Just don't start the name with a dash because that implies that the name refers to an option.
+% Spaces are not a good option for file names because spaces separate command arguments. You can use them if you are fond of the aesthetic, but you will have to enquote your files or escape the spaces in their names.
+% I prefer kebab case. Just don't start the name with a hyphen because that implies that the name refers to an option.
 % my-thing is a file. my-thing/ is a directory.
 
 % Colors can be handled in one of two ways:
 % 1. set your background to a single color (or perhaps a stylized background that utilizes a very simple palette of colors) and then download a complementary theme for your terminal
 % 2. find a really cool wallpaper with lots of colors and then use pywal to generate a theme for your terminal (which can be hit or miss) 
 
+% Fonts
+    % TTF vs. OTF
+
 %----------------------------------------
 
 \subsubsection{Common Commands and Tasks}
+
+% How do commands work? Arguments, options, parameters, subcommands...
 
 % When to write an alias vs. function vs. script?
 
@@ -166,16 +187,18 @@
 
 % Pick a good one for each task and stick with it. Learn about the program and get good at it. When you get really comfortable with it, you can consider exploring other programs.
 
+% Shell (bash)
 % Terminal emulator (st)
 % File manager (ranger)
 % Desktop environment (none)
 % Window manager (i3)
-% Process manager (htop (htop-vim-git))
+% Process manager (htop (htop-vim-git), gotop)
 % Power management (acpid)
 % Screen locking (to get: i3lock or slock)
 % Application launcher (dmenu)
 % Text editor (vim) (IDEs are not necessary)
-
+% Typesetting system (texlive: includes tex and pdftex programs, latex and context macro packages, and the xetex (a.k.a xelatex) and luatex engines; edit with vimtex)
+% Browser (firefox)
 % Torrent client (qbittorent)
 % Notes (convert markdown files into pdf: pandoc <*.md> -s -o <*.pdf>)
 % Image viewer (imv (feh for setting wallpaper))
@@ -208,7 +231,8 @@
 % :h E<number> (error help)
 % Plug-in manager = vim-plug
 % vimtex for latex
-% Tabs in vim: :tabe, :tabc
+% Tabs, not spaces! Modify .vimrc to make the tab key insert 4 spaces instead.
+% Document tabs in vim: :tabe, :tabc
 
 \subsection{Version Control}
 
@@ -216,7 +240,9 @@ Blah
 
 \subsubsection{Git}
 
-% How do you write a good git commit message? It should give context to your changes.
+% How do you write a good git commit message?
+% It should give context to your changes.
+% It should be in the imperative mood.
 
 How do you download stuff from GitHub? There are a few methods that might be available, depending on the software.
 \begin{itemize}
