@@ -4,6 +4,20 @@
 
 ##
 
+**Thales**
+
+**Anaximander**
+
+**Anaximenes**
+
+**Pythagoras**
+
+**Heraclitus**
+
+**Parmenides**
+
+**Democritus**
+
 **Socrates** | 470-399 BCE | Ancient Greece
 
 * Rational inquiry/Dialectic/Socratic Method
@@ -29,6 +43,7 @@
     4. Final
 * Natural kinds
 * Formal deductive logic (*Prior Analytics*, syllogisms)
+* Rhetoric: logos, pathos, ethos
 
 **Euclid** | fl. 300 BCE | Ancient Greece
 
@@ -45,6 +60,8 @@
 **John Locke** | 1632-1704 | England
 
 * Tabula rasa
+
+**Baruch de Spinoza** | 1632-1677 | Netherlands
 
 **Issac Newton** | 1642-1726/27 | England
 
@@ -110,6 +127,8 @@
 * Fond of Heraclitus: nature is a process, being and non-being are abstractions.
 * Thesis, antithesis, synthesis triad (Fichte)
 
+**Augustus De Morgan** | 1806-1871 | England
+
 **George Boole** | 1815-1864 | England
 
 **Charles Sanders Peirce** | 1839-1914 | United States
@@ -119,6 +138,8 @@
 **Georg Cantor** | 1845-1918 | Germany
 
 **Gottlob Frege** | 1848-1925 | Germany
+
+* Argued for analysis of language in terms of sense and reference
 
 **David Hilbert** | 1862-1943 | Germany
 
@@ -135,6 +156,10 @@
 **Alonzo Church** | 1903-1995 | United States
 
 **Kurt Godel** | 1906-1978 | Austria, United States
+
+**Willard Van Orman Quine** | 1908-2000 | United States
+
+* Rejection of the analytic-synthetic distinction
 
 **Claude Shannon** | 1916-2001 | United States
 
