@@ -3,7 +3,7 @@
 
 *Note: this project is an active work-in-progress. While the final product will be typeset in the intuition-for-computation.pdf file, the .tex files (intuition-for-computation.tex and those filed under chapters/) currently contain the bulk of my work.*
 
-This is an open-source work of non-fiction about computer science and software engineering. It also delves deep into some concepts in philosophy, mathematics, linguistics, and cognitive science.
+This is an open-source work of non-fiction about computer science and software engineering. It also delves deep into some concepts in philosophy, mathematics, linguistics, and cognitive science. It is a passion project, written mostly for myself, to keep a hard record of my knowledge and to keep track of how topics fit together in my conceptual web.
 
 *Motivation*
 
@@ -17,3 +17,4 @@ It would detail computation in all of its forms: as the manual process of writin
 
 ## Contact
 
+tkmonson@protonmail.com
