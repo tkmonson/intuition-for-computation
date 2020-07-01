@@ -1,0 +1,5 @@
+PWD /home/tmonson/code/intuition-for-computation/2-body-matter/volume1
+INPUT /usr/share/texmf-dist/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
+INPUT v1-philosophy-of-computation.tex
+OUTPUT v1-philosophy-of-computation.log

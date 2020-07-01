@@ -60,7 +60,7 @@ Boole's goals in *Laws of Thought*:
 1. To ground Aristotle's logic in mathematics rather than in philosophy.
 2. To broaden Aristotle's logic in order to represent a wider domain of propositions and incorporate inferential transformations from mathematics.
 
-# 4. Boole's reconstruction of Aristotle's logic
+## 4. Boole's reconstruction of Aristotle's logic
 
 Boole tries to show how the four connectors can be reduced to one. For Boole, "Every square is a polygon" or, as Aristotle would put it, "Polygon belongs-to-every square" is really an *equation* and is better written as "Every-square [is-one-and-the-same-as] a-polygon" or "All-squares [is-one-and-the-same-as] some-polygons." Thus, Boole argues that quantifiers should be considered parts of the subject and predicate, not of the connector. His form is then S-is-P or S=P.
 

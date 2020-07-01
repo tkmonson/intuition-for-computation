@@ -1,0 +1,181 @@
+%\usepackage[linedheaders,
+%            parts,
+%            pdfspacing,
+%            style=arsclassica]{classicthesis}
+
+% Only if I switch to XeTeX or LuaTeX
+%\usepackage{fontspec}
+
+% Source code printer
+\usepackage{listings}
+
+\usepackage[tracking=true]{microtype}
+
+% Math fonts
+\usepackage{stix2}
+
+% Language support
+\usepackage[greek,english]{babel}
+
+% Ancient Greek philological symbols
+\usepackage{teubner} 
+
+\usepackage{graphicx}
+
+% Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{lipsum}
+
+\usepackage{alltt}
+
+% Required for creating figures with multiple parts (subfigures)
+\usepackage{subfig}
+
+% More descriptive referencing
+\usepackage{varioref}
+
+% Fix table position
+\usepackage{float}
+
+% Fixed-width centered columns
+\usepackage{array}
+
+% Custom colors
+\usepackage[dvipsnames]{xcolor}
+
+% Allows for notes under table
+\usepackage{threeparttable}
+
+% Proper caption spacing
+\usepackage{caption}
+
+% Algorithm formatting
+\usepackage{algorithm2e}
+
+% Pretty boxes
+\usepackage[many]{tcolorbox}
+
+% Pretty drawings
+\usepackage{tikz}
+\usetikzlibrary{knots}
+
+% Columns that fill the page
+\usepackage{tabularx}
+
+\usepackage{varwidth}
+
+% Quotations
+\usepackage{csquotes}
+
+% Title page control
+\usepackage{anyfontsize}
+
+% Variable paper size and page margins
+\usepackage{geometry}
+
+% Decorative font
+\usepackage{adforn}
+
+% Underbracket
+\usepackage{mathtools}
+
+% Plotting
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+
+% Knot diagrams
+\usepackage{spath3}
+
+% Something that helps KOMA-Script
+\usepackage{scrhack}
+
+%--- LIBRARIES --------------------------
+
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{calc}
+\usetikzlibrary{matrix}
+\tcbuselibrary{skins} % Load tcolorbox libraries
+
+%--- COLOR COMMANDS ---------------------
+
+% For cover -- non-diagonal bits
+\definecolor{light-gray}{gray}{0.8}
+
+% For cover -- diagonal bits
+\definecolor{dark-gray}{gray}{0.4}
+
+% The standard "textbook blue" color
+\definecolor{textbook-blue}{HTML}{F0F8FF}
+
+% A slightly darker blue, used when textbook-blue just isn't popping enough
+\definecolor{textbook-blue-dark}{HTML}{D7ECFF}
+
+% Highlight math in textbook-blue-dark
+\newcommand{\hl}[1]{\colorbox{textbook-blue-dark}{$\displaystyle#1$}}
+
+%--- SYMBOL COMMANDS --------------------
+
+% Zeros and Ones on cover, light and dark versions
+\newcommand*\zro{\huge \color{light-gray} 0}
+\newcommand*\one{\huge \color{light-gray} 1}
+\newcommand*\zdk{\huge \color{dark-gray} 0}
+\newcommand*\odk{\huge \color{dark-gray} 1}
+
+% Glyphs preceding chapters in table of contents
+\newcommand*\tocpartglyph{{\Large\adforn{14}\hspace{1.5mm}}}
+
+% Stylistic paragraph break, to prompt the reader to take a reflective pause
+\newcommand*\parbreak{
+	{\begin{center}
+			{\Large \adforn{21}\quad\adforn{12}\quad\adforn{49} \vspace{0.618\baselineskip}}
+	\end{center}}
+}
+
+% In-line fractions, formatted with a forward slash
+\newcommand*\rfrac[2]{{}^{#1}\!/_{#2}}
+
+% An ellipsis with large spaces between the dots for very long pauses
+\newcommand\mydots{\makebox[4em][c]{\Large $\cdot$\hfil$\cdot$\hfil$\cdot$}}
+
+%--- SPACING COMMANDS -------------------
+
+% Line skip in the table of contents
+\newcommand{\toclineskip}{\addtocontents{toc}{\vspace{\normalbaselineskip}}}
+
+% Vertical space in a tabular environment
+\newcommand*\vtabularspace[1]{\multicolumn{#1}{l}{} \\[-7pt]}
+
+% Nesting in the description environment
+\renewenvironment{description}[1][0pt]
+{\list{}{\labelwidth=0pt \leftmargin=#1\let\makelabel\descriptionlabel}}
+{\endlist}
+
+% A centered tabularx X column
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+% Row spacing in tables
+\renewcommand{\arraystretch}{1.5}
+
+%--- OTHER COMMANDS ---------------------
+
+% Boxes around algorithms
+\RestyleAlgo{boxruled}
+
+% Try to actually address these warnings eventually
+\hbadness = 99999 % Suppress underfull \hbox warnings
+\hfuzz = 29pt % Suppress overfull \hbox warnings up to given length
+
+% KOMA-Script page numbering rules
+\renewcommand*{\titlepagestyle}{empty}
+\renewcommand*{\partpagestyle}{empty}
+
+% Force line wrapping in \lstlisting environments
+\lstset{basicstyle=\ttfamily, breaklines=true}
+
+%--- TITLE AND AUTHOR -------------------
+
+\title{\normalfont\spacedallcaps{Intuition For Computation}}
+
+\subtitle{A Guide for Programmers and Curious Minds}
+
+\author{\spacedlowsmallcaps{Tommy Monson}}
+

@@ -1,0 +1,98 @@
+\chapter{System Design}
+
+% This content may actually make it into the main body of the text.
+
+\section{Server Technologies}
+
+\begin{description}
+    \item[Domain Name System (DNS) Server] Translates a domain name to an IP address of a server containing the information on the requested website. Could use round-robin, load balancing, or geography to choose a server associated with a certain domain name. An OS or browser can cache DNS results until the result's \textit{time to live} (TTL) expires.
+	
+    If a local DNS server does not know the IP address of some domain name, it can ask a nearby, larger DNS server if it knows. The biggest DNS servers are called \textit{root servers}, and they are distributed across the world's continents. They return lists of servers that would recognize your requested domain name. These are \textit{authoritative name servers} for the appropriate \textit{top-level domain} (.com, .org, .edu, .ca, .uk, etc.).
+		
+    There are many kinds of results that can be returned by a DNS server:
+    \begin{description}[7mm]
+        \item[NS record] Name server. Specifies the names of the DNS servers that can translate a given domain.
+        \item[MX record] Mail exchange. Specifies the mail servers that will accept a message.
+        \item[A record] Address. Points a name to an IP address.
+        \item[CNAME] Canonical. Points a name to another name (google.com to www.google.com) or to an A record.
+    \end{description}
+	
+    \item[Load Balancer] Decides which servers to send requests to based on some criteria (random, round-robin, load, session, Layer 4, Layer 7). Can be implemented in software or hardware. Can generate cookies to send to the user. The user can then send those cookies back to return to the server they were using. Multiple load balancers are needed for horizontal scaled systems.
+		
+    \item[Reverse Proxy] A web server that acts as an intermediary between clients and backend servers. Forwards requests to the backend and returns their responses. This hides the backend server IPs from the client and allows for a centralized source of information. However, it is a single point of failure, so load balancers are a better choice for horizontally scaled systems.
+		
+    \item[Application Layer] It may be useful to have a layer of application servers separate from your web servers. This allows you to scale the layers independently. A web server serves content to clients using the HTTP. An application server hosts the logic of the application, which could generate an HTTP file to send to a web server. Web servers are often used as reverse proxies for application servers.
+\end{description}
+
+\section{Persistent Storage Technologies}
+\begin{description}
+    \item[Caches] Caching involves putting data that is referenced often on a separate, small memory component. For example, when you stay on the same domain, your OS can cache an IP address so it doesn't have to look up the same IP address every time.
+    \begin{description}[7mm]
+	\item[File-based caching] The data that you want is saved in a local file. For example, you could cache an HTML file instead of dynamically creating a website with data from a database. Not recommended for scalable solutions
+	\item[In-memory caching] Copy the most popular pieces of data from an application's database and put it in RAM for faster access times. If you choose to cache a database query as a key and the result as a value, it is hard to determine when to delete this pair when the data becomes stale. Alternatively, you could cache objects. When an object is instantiated, make the necessary database requests to initialize values, and store the object in memory. If a piece of data changes, delete all objects that use that piece of data from cache. This allows for \textit{asynchronous processing} (the application only touches the database when creating objects). Popular systems include Memcached and Redis.
+	\item[Cache Update Strategies] \hspace{1cm}
+	\begin{description}[7mm]
+	    \item[Cache-aside] The cache does not interact with storage directly. The application looks for data in the cache. Upon a cache miss, it finds its data in storage, adds it to the cache, and returns the data. Only requested data is cached. Data in the cache can become stale if it is updated in storage but not in cache.
+	    \item[Write-through] The application uses the cache as its primary data store, and the cache reads and writes to the database. Application adds data to cache, cache writes to data store and returns value to the application. Writes are synchronous and slow, but data is consistent. Reads of cached data are fast. However, most data written to the cache will not be read.
+	    \item[Write-back] The application adds data to the cache, and the data is asynchronously written to the database. Data loss could occur if the cache fails before new data is written to the database.
+	\end{description}
+    \end{description}
+	
+    \item[RAID] \textit{Redundant Array of Independent Disks} is a technique that uses many physical disk drives to improve the redundancy or performance of a system.
+    \begin{description}[7mm]
+	\item[RAID0] Writes a portion of a file on one drive and the other portion on another drive concurrently. This doubles write speed but has no redundancy.
+	\item[RAID1] Writes the whole file on both drives. No write speed improvements, but improves redundancy.
+	\item[RAID10] A combination of RAID0 and RAID1. If you have 4 drives, a file is striped between 2 drives and the same striped data is written concurrently to the other 2 drives.
+	\item[RAID5] Given N drives, you stripe data across N-1 drives and stores a full copy of the file on 1 drive.
+	\item[RAID6] Given N drives, you stripe data across N-2 drives and stores a full copy of the file on 2 drives.
+    \end{description}
+
+    \item[Relational Database Management System (RDBMS)] A \textit{relational database} is a collection of items organized in tables. A \textit{database transaction} is a change in a database. All transactions are ACID: Atomic (all or nothing), Consistent (moves the database from one valid state to another), Isolated (concurrent transactions produce the same results as serial transactions), and Durable (changes do not revert). Various techniques for scaling databases are described below.
+    \begin{description}[7mm]
+	\item[Replication] \hspace{1cm}
+	\begin{description}[7mm]
+	    \item[Master-slave replication] A master serves reads and writes, replicating writes to the slaves, which can only serve reads. If a master goes offline, the system is read-only until a slave is promoted.
+	    \item[Master-master replication] There are multiple masters that can serve both reads and writes and coordinate with each other on writes. A master can fail and the system can still be fully-functional. However, writes need to be load balanced. Master-master systems are usually either eventually consistent (not ACID) or have  high-latency, synchronized writes.
+	    \item[Replication Disadvantages] If a master dies before it can replicate a write, data loss occurs. Lots of write replication to slaves means that slaves cannot serve reads as effectively. More slaves means more replication lag on writes.
+	\end{description}
+	\item[Federation] Splits up databases by function instead of using a monolithic database. Reads and writes go to the appropriate database, resulting in less replication lag. Smaller databases can fit a greater percentage of results in memory, which allows for more cache hits. Parallel writing is possible between databases. Not effective for large tables.
+	\item[Sharding] Data is distributed across different databases (shards) such that each database can only manage a subset of the data (like submitting tests to piles labeled A-M and N-Z). Less traffic, less replication, more cache hits, parallel writes between shards. If one shard goes down, the others can continue to work (however, replication is still necessary to prevent data loss). Load balancing between shards is important. Sharing data between shards could be complicated.
+	\item[Denormalization] Improves read performance at the expense of write performance. Redundant copies of data are written in multiple tables to avoid expensive joins.
+	\item[SQL Tuning] Benchmark your database system and optimize it by restructuring tables and using appropriate variables.
+		
+    \end{description}
+	
+    \item[NoSQL] A NoSQL database stores and retrieves data in ways other than tabular relations. Its transactions are BASE: Basically Available (the system guarantees availability), Soft state (the state of the system may change over time, even without input), and eventually consistent (will become consistent over a period of time, if no further input is received). NoSQL prioritizes availability over consistency. Some configurations are described below.
+    \begin{description}[7mm]
+	\item[Key-value store] Stores data using keys and values. O(1) reads and writes. Used for simple data model or for rapidly changing data, such as a cache. Complex operations are done in the application layer.
+	\item[Document store] All information about an object is stored in a document (XML, JSON, binary, etc.). A document store database provides APIs or a query language to query the documents themselves.
+	\item[Wide column store] The basic unit of data is a \textit{column} (name/value pair). Columns can be grouped in column families. Super column families can further group column families. Useful for very large data sets.
+	\item[Graph database] Each node is a record and each edge is a relationship between records. Good for many-to-many relationships. Not widely used and relatively new.
+    \end{description}
+\end{description}
+
+\section{Network Techniques}
+
+\begin{description}
+    \item[Horizontal Scaling] Distributes your data over many servers. Alleviates the load on a single server, but now requests have to be distributed across these servers. Introduces complexity: load balancers are required, and servers should now be stateless.
+	
+    \item[Asynchronism] Asynchronous tasks are done to prevent the user from waiting for their results. One example is anticipating user requests and pre-computing their results. Another example is having a worker handle a complicated user job in the background and allowing the user to interact with the application in the meantime. The worker will then signal when the job is complete. A job could also "appear" complete to the user, but require a few additional seconds to actually complete.
+	
+    \item[Firewalling] A network security system typically used to create a controlled barrier between a trusted internal network and an untrusted external network like the Internet. For example, if you want your server to listen for HTTP and HTTPS requests, you could restrict incoming traffic to only ports 80 and 443. This prevents clients from having, for example, full read and write access to your databases.
+	
+    \item[Consistency Patterns] When many servers hold copies of the same data, we must find an acceptable method of updating them.
+    \begin{description}[7mm]
+	\item[Weak consistency] After a write, reads may or may not see it. A best effort approach is taken. Works when the application \textit{must} continue running and data can be lost during outages (VoIP, video chat, multiplayer games). Good for any sort of "live" service.
+	\item[Eventual consistency] After a write, read will eventually see it. Works when the application \textit{must} continue running, but data cannot be lost, even during outages (email, blogs, Reddit). Good when writes are important, but reading stale data for a short period of time is acceptable.
+	\item[Strong consistency] After a write, reads will see it. Works when everyone needs to see the most up-to-date information at all times, even if it slows the whole system down (file systems, databases). Good when stale data is unacceptable.
+    \end{description}
+
+    \item[Shared Session State] If users can access a website from many different servers, how do you keep track of their session data? If a user logs in on one server, how can the network know they are logged in when they move to another server? Store all session data on a single server. Use RAID for redundancy.
+	
+    \item[Microservices] An application can be structured as a collection of microservices that have their own well-defined independent functions. These microservices can be combined in a modular fashion to create the full application. Each microservice could have its own network architecture. This allows for modular scaling of an application. Software like Apache Zookeeper is used to keep track of microservices and how they interact.
+	
+    \item[Content Delivery Network (CDN)] A CDN is a globally distributed network of proxy servers that serves content to users from nearby nodes. A \textit{push CDN} only updates some piece of data when the developer pushes data to it. It's faster, but requires more storage on the CDN. A \textit{pull CDN} get content from the developer's server whenever a client requests it. It's slower, but requires less space on the CDN.
+\end{description}
+
+\newpage
+

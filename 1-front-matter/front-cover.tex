@@ -1,0 +1,108 @@
+%\thispagestyle{empty}
+
+% A4 paper is 210mm × 297mm
+\newgeometry{top=2cm,bottom=2cm,left=3cm,right=3cm}
+
+% Use 2:3 proportions everywhere for A E S T H E T I C S .
+
+\begin{tcolorbox}[enhanced, colback=white, width=150mm, height=257mm, sharp corners, boxrule=3pt]
+    \begin{center}
+	\vspace*{1.8cm}
+	% Title and Subtitle
+        {\fontsize{32}{38}\fontfamily{iwona}\selectfont
+            \textls{INTUITION FOR} \\[-1mm]
+            \textls{COMPUTATION} \\[5mm]
+         \fontsize{11}{13}\selectfont
+            \textbf{A Guide for Programmers and Curious Minds} \\[10.125mm]
+        }
+		
+	% Binary + Pyramids
+	\begin{tikzpicture}[
+	    space/.style={
+                minimum height=1.5em,
+                matrix of nodes,
+                row sep=6.75mm,
+                column sep=4.5mm,
+                style={font=\ttfamily}
+            },
+	    nodes in empty cells
+        ]
+				
+	    \matrix (m) [space,style={font=\ttfamily}] {
+	        \odk&\zro&\one&\one&\zro&\zro&\one&\zro&\zro&\zro \\
+	        \one&\odk&\zro&\one&\one&\zro&\one&\zro&\one&\one \\
+	        \zro&\zro&\zdk&\one&\zro&\zro&\zro&\one&\one&\one \\
+	        \one&\one&\zro&\odk&\zro&\one&\one&\zro&\one&\zro \\
+	        \one&\zro&\one&\one&\odk&\zro&\one&\zro&\zro&\one \\
+	        \zro&\zro&\zro&\one&\zro&\zdk&\one&\one&\zro&\zro \\
+	        \zro&\zro&\one&\zro&\zro&\zro&\odk&\zro&\zro&\zro \\
+	        \zro&\one&\zro&\zro&\zro&\one&\one&\zdk&\one&\one \\
+	        \one&\one&\one&\one&\one&\zro&\one&\zro&\zdk&\one \\
+	        \one&\zro&\zro&\zro&\zro&\one&\zro&\zro&\zro&\odk \\
+	    };
+	
+	    \matrix (d) at (0,-8.1cm) [space,style={font=\ttfamily}] {
+	        \zdk&\zdk&\odk&\zdk&\zdk&\odk&\zdk&\odk&\odk&\zdk \\
+	    };
+	
+	    \begin{scope}[scale=0.2]
+		
+	        % Pyramids
+	        \coordinate (A) at ($(m-6-4.center)$);
+	        \coordinate (B) at ($(m-8-2.center)$);
+	        \coordinate (C) at ($(m-9-6.center)$);
+	        \coordinate (D) at ($(m-8-4.center)$);
+
+	        \draw [ultra thick] (D) -- (A);
+	        \draw [ultra thick] (D) -- (B);
+	        \draw [ultra thick] (D) -- (C);
+			
+	        \draw [ultra thick,fill=textbook-blue] (D) circle (2);
+			
+	        \draw [ultra thick, fill=light-gray, fill opacity=0.6]
+		    (A) -- (B) -- (C) -- cycle;
+			
+	        \draw [ultra thick,fill=textbook-blue] (A) circle (2.5);
+	        \draw [ultra thick,fill=textbook-blue] (B) circle (2.5);
+	        \draw [ultra thick,fill=textbook-blue] (C) circle (2.5);
+			
+	        %----------------------------------------
+			
+	        \coordinate (A) at ($(m-5-7.center)$);
+	        \coordinate (B) at ($(m-3-9.center)$);
+	        \coordinate (C) at ($(m-2-5.center)$);
+	        \coordinate (D) at ($(m-3-7.center)$);
+			
+	        \draw [ultra thick, fill=light-gray, fill opacity=0.6]
+		    (A) -- (B) -- (C) -- cycle;
+			
+	        \draw [ultra thick] (D) -- (A);
+	        \draw [ultra thick] (D) -- (B);
+	        \draw [ultra thick] (D) -- (C);
+
+	        \draw [ultra thick,fill=textbook-blue] (D) circle (2.5);
+			
+	        \draw [ultra thick,fill=textbook-blue] (A) circle (2);
+	        \draw [ultra thick,fill=textbook-blue] (B) circle (2);
+	        \draw [ultra thick,fill=textbook-blue] (C) circle (2);
+			
+	        %----------------------------------------
+			
+	        % Dividing Line
+	        \coordinate (L) at ($(m-10-1.center) + (0,-4.5cm)$);
+	        \coordinate (R) at ($(m-10-10.center) + (0,-4.5cm)$);
+			
+	        \draw [ultra thick,dark-gray] (L) -- (R);
+
+	        % Author
+                \node [rotate=30] (A) at (-8.5cm,-53cm) {\fontsize{26}{26}\selectfont \adforn{60}};
+                \node (B) at (-1.6cm,-52.65cm) {\fontsize{20}{20}\fontfamily{iwona}\selectfont T};
+                \node (C) at (3.4cm,-53.165cm) {\fontsize{12}{12}\fontfamily{iwona}\selectfont \bfseries \textls{OMMY}};
+                \node (D) at (10.3cm,-52.65cm) {\fontsize{20}{20}\fontfamily{iwona}\selectfont M};
+                \node (E) at (16.7cm,-53.165cm) {\fontsize{12}{12}\fontfamily{iwona}\selectfont \bfseries \textls{ONSON}};
+	    \end{scope}
+		
+        \end{tikzpicture}
+    \end{center}
+\end{tcolorbox}
+

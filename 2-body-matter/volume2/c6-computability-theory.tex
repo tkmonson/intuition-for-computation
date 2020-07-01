@@ -1,0 +1,469 @@
+\chapter{Computability Theory}
+
+\vspace{4mm}
+\begin{displayquote}
+    \textit{Thirty years ago, we used to ask: Can a computer simulate all processes of logic? The answer was yes, but the question was surely wrong. We should have asked: Can logic simulate all sequences of cause and effect? And the answer would have been no.}
+    \begin{flushright}
+    ---Gregory Bateson
+    \end{flushright}
+\end{displayquote}
+\vspace{4mm}
+
+Computation is mathematical in nature. Underneath its shiny UI and immersive applications, a computer is simply a machine that can be programmed to calculate numbers (and do it \textit{very} quickly in the case of modern computers). With that said, let me pose the central question of computability theory: could a machine (or computer) theoretically solve any given math problem, if given the correct input (or code)? We will consider this question more formally in this section, but it turns out that the answer is no. There exist problems that a computer will never be able to solve with computation, even given infinite resources. \\
+
+In this section, we will discuss what makes a problem \textit{solvable} and thus within the scope of computational analysis. We will also briefly discuss \textit{unsolvable} problems and how they can be organized into a hierarchy of \textit{unsolvability}. That said, before we discuss either solvable or unsolvable problems, we need to formalize our definition of the term \textit{problem} with regard to the field of computer science. \\
+
+\section{The Scope of Problem Solving}
+
+Since computation is mathematical, it follows that the natural use of computers is to solve \textit{mathematical problems}. A mathematical problem is a problem that is amenable to being represented with mathematics. Are there problems that are not mathematical? That is, are there problems that either \textit{cannot} be formalized with mathematics or \textit{should not} be formalized with mathematics because the result would produce no valuable insight? Of course. You might say that certain "human" problems are not mathematical in nature. For example, can an ethical problem be solved \textit{mathematically}? Furthermore, what does it mean for a problem to have a mathematical solution? It turns out that the answer lies in the difference between \textit{reasoning} and \textit{logic}. \\
+
+\subsection{Informal Logic}
+
+\subsection{Formal Logic}
+
+Logic is a long-standing, far-reaching field, and its definition has changed over the ages, but it can be broadly described as the study of \textit{argument}. 
+
+The practice and analysis of logic can be done in many different ways. For example, the early study of logic was mostly done in the context of \textit{natural language} arguments made during oration.
+
+Modern logic, however, is \textit{formal}. That is, it observes the abstract \textit{forms} of arguments instead of the arguments themselves. \\
+
+Formal logic is the study of \textit{inference} with regard to \textit{formul{\ae}}. Formul{\ae}, Latin for "small forms" or "small rules," are finite sequences of symbols from an alphabet. They are purely \textit{syntactic objects}, much like strings of text. Inference is the act of processing a formula $A$ and deducing that a formula $B$ is a \textit{logical consequence} of $A$. This means that, given a set of \textit{rules of inference}, the string $A$ can be transformed into the string $B$ by means of a finite series of applications of said rules. \\
+
+and they are studied in within \textit{formal systems}. These systems of abstract thoughts are used to infer the existence of formul{\ae} by means of logical deduction starting from a given set of axioms. A formal system has:
+
+\begin{enumerate}
+    \item A finite \textit{alphabet} of \textit{symbols}, from which a formula may be constructed
+    \item A formal \textit{grammar}, to which a formula must conform if it is to be considered \textit{well-formed} in the system
+    \item A set of initial formul{\ae}, known as \textit{axioms}, from which inferences can be made
+    \item A set of inference rules, known as a \textit{logical calculus}, which prescribe how inferences are to be made
+\end{enumerate}
+
+Formul{\ae}, which are finite sequences of symbols from a system's alphabet, are purely \textit{syntactic} objects, but, given an \textit{interpretation}, they can be endowed with \textit{semantic} meaning. For example, an interpretation of first-order logic requires the following assignments of semantic meaning:
+
+\begin{enumerate}
+    \item Variables are assigned \textit{objects} (things that can be modeled) from a \textit{domain of discourse} (a well-defined set of objects)
+    \item Predicates are assigned \textit{properties} of objects
+    \item Formul{\ae}, which contain variables and predicates, are assigned a \textit{truth value} of true or false
+\end{enumerate}
+
+A well-formed formula with such an interpretation is called a \textit{sentence}, and the meaning expressed by a sentence is called a \textit{statement} or \textit{proposition}. A sentence expressing a true statement (according to the axioms and inference rules of the formal system) is called a \textit{theorem}, and a set of theorems is called a \textit{theory}. For example, ZFC set theory is a first-order \textit{theory} of sets. It has a collection of theorems written in first-order logic that form an \textit{axiomatic set}, and these theorems are used to prove other theorems that also belong to the theory using a set of inference rules. \\
+
+\subsection{Decision Problems and Function Problems}
+
+First-order logic is also called \textit{predicate calculus}. It is a system for calculating \textit{predicates}, which are Boolean-valued functions. In mathematics, a predicate maps \textit{propositions} written in first-order logic to Boolean values (i.e. $P:X\rightarrow \{\textsc{true},\textsc{false}\}$). In linguistics, a proposition can be written in the form of a \textit{yes-no question} without sacrificing any semantic meaning. For example, evaluating the proposition "The sky is blue." as true or false is the same thing as answering the question "Is the sky blue?" with either yes or no. \\
+
+More generally, a predicate is a function that receives an input and makes a binary decision about it. In computability theory, the analogous concept is called a \textit{decision problem}, a problem that can be posed as a yes-no question. Decision problems are fundamental to mathematical practice. A proof of a mathematical statement is a decision problem. Additionally, formal verification of a proof involves solving a series of decision problems regarding whether or not each statement in the proof can be reduced to its axioms. The proof is valid if and only if all of its statements are. Decision problems are problems that can be solved by \textit{making a decision} (mapping the question to a yes-no answer).  \\
+
+It is natural to expect that computers, which are tools for doing math, should be able to solve decision problems. That said, computers can handle more than just Boolean-valued functions. They can represent functions of \textit{arbitrary} return type (e.g. integers, words, objects, etc.). This allows them to solve the broader class of \textit{function problems}, problems where a single output is expected for every valid input. Function problems are problems that can be solved by \textit{calculating a function} (mapping the problem input to a solution output). \\
+
+One important example of a decision problem is whether or not a given function problem is solvable. Let $F$ be a \textit{function problem}, and let $D$ be the \textit{decision problem} of whether or not $F$ is solvable for each of its inputs. Let $f:X\rightarrow Y$ be a \textit{function} that solves $F$, where $X$ is the set of all problem inputs and $Y$ is the set of all problem outputs. Let $G(f)$ denote the set of all ordered pairs $(x,f(x))$ such that $x\in X$. $G(f)$ is known as the \textit{graph} of the function $f$. Let $d:X\rightarrow \{\textsc{true},\textsc{false}\}$ be a decision that solves $D$. For each $x\in X$, $d(x)$ is $\textsc{true}$ if and only if there exists an ordered pair $(x,f(x))$ in $G(f)$. Otherwise, $d(x)$ is $\textsc{false}$. \\
+
+Here's a more concrete example. Let $x$ be any natural number (including 0). $F$ asks "What is $\rfrac{2}{x}$ for all $x$?." $D$ asks "Does $\rfrac{2}{x}$ exist for all $x$?." In both cases, $f(x)=\rfrac{2}{x}$, but $F$ is interested in the \textit{value} of each of the outputs while $D$ is interested in the \textit{existence} of each of the outputs. There is one input for which $f$ has no defined output and that is $x=0$. In this case, the answer to $D$ is negative, and $F$ is technically unsolvable. That said, we can just move the goalposts a little bit to make $F$ solvable by allowing $f$ to be a partial function: $f:\mathbb{N}\nrightarrow \mathbb{N}$. Partial functions do not necessarily map every member of their domain to a value. Thus, they can be \textit{undefined} for some input values. As long as "undefined" is considered a valid answer to $F$, $F$ can be considered solvable for its whole domain. \\
+
+In computability theory, we are interested in determining whether or not an output exists for each of a problem's inputs. If an output exists, we can be sure it has \textit{a} value, but the particular value is inconsequential. While computers do solve function problems, it is enough to consider only the corresponding decision problem when proving whether a function problem is \textit{solvable} or not. \\
+
+\subsection{"Effective Calculability"}
+
+Before the study of computer science, mathematicians sometimes informally described functions as \textit{effectively calculable}. This meant that a correct output could be calculated for any input from the domain of the function, using an \textit{effective method}. A method, in general, is just a "procedure" that does "something." A method is \textit{effective} if it consists of a finite number of instructions and solves a particular problem. \\
+
+A particular method can be effective for some problems and ineffective for others. For example, typing is a method. If I want to put characters into a text document, typing is an effective method. If I want to plant a flower, typing is not an effective method. However, if I want to plant a flower, building a flower-planting robot and programming it, via typing, to plant a flower \textit{is} an effective method because it actually accomplishes the objective. An effective method that is used to calculate the values of a function is called an \textit{algorithm}. \\
+
+Much work was done in the 1930s to formalize "effective calculability." The results established \textit{Turing computability} as the correct formalization. This model gives the following fundamental definition: any function whose outputs can be calculated by an algorithm is a \textit{computable function}. Computable functions are precisely those functions that can be computed by a Turing machine. In the mathematical sense, they could also be called \textit{solvable}. A computable or solvable \textit{decision} is predictably called \textit{decidable}. If the functions model mathematical proofs, they could also be called \textit{provable}. Despite a few minor differences, all of these terms get at the same idea. \\
+
+We will now discuss the history preceding and the circumstances of this foundational work in formalizing "effective calculability" as computability. Much of this work was done between the 1930s and the 1950s, but it built heavily on set-theoretical concepts discovered by German mathematician Georg Cantor in the late $19^\textit{th}$ century. After a crash course in Cantorian set theory, we will examine computable functions from a variety of angles. Computability is interdisciplinary. The concept \textit{permeates} our reality, and as such its eventual formalization was made possibly by the collective efforts of mathematicians, logicians, linguists, and computer scientists. Today, research on computability is widespread in the study of anything scientific. \\
+
+After a rigorous study of what is computable, we will conclude this section with a brief exploration of what is not computable. This is a topic that is important to theoretical computer science. By assuming that certain aspects of an abstract machine are \textit{hypercomputational}, we can envision the kind of problems that could be solved if computation were ever to transcend Turing machines. \\
+
+\section{The Ballad of Georg Cantor}
+
+Georg Cantor (1845-1918) was a German mathematician whose work established \textit{set theory}, a fundamental theory in mathematics. Much of his work was built on generalizations of the set of natural numbers, namely the \textit{ordinal numbers} and the \textit{cardinal numbers}. These sets include both finite and \textit{infinite} quantities, a concept that was considered very controversial in the late 19th century. Despite an extreme amount of backlash, Cantor stood by his set theory and formalized what has been called "the first truly original idea in mathematics since those of the Greeks." \\
+
+\subsection{The First Article on Set Theory}
+
+Cantor began his work in number theory, until his mentor, Leopold Kronecker, suggested that he answer an open question in real analysis: "If a given function can be represented by a trigonometric series, is that representation unique?." A trigonometric series is a series of the form
+\begin{align*}
+    \frac{A_0}{2}+\sum_{n=1}^{\infty}(A_n\cos nx + B_n\sin nx).
+\end{align*}
+One common example of a trigonometric series is a Fourier series, which has coefficients $A_n$ and $B_n$ of the form
+\begin{align*}
+    A_n&=\frac{1}{\pi}\int_{0}^{2\pi}f(x)\cos nx\,dx, \\[1mm]
+    B_n&=\frac{1}{\pi}\int_{0}^{2\pi}f(x)\sin nx\,dx,
+\end{align*}
+where $f$ is an integrable function. That said, Cantor's work concerned the general definition of a trigonometric series. He proved that any countable, closed set of natural numbers could encode a trigonometric series that uniquely represents a function. The qualifiers \textit{countable} and \textit{closed} are significant. A countable set is a set whose elements can be counted or enumerated. A closed set is a set that contains its limit points. For a trigonometric series, this means the set of all $n$ must contain a countable number of elements, two of which must be $1$ and $\infty$. $1$ is no problem, but what does it mean for a set to contain $\infty$? And, for example, how can the natural numbers between and including $1$ and $\infty$ be "countable"? \\
+
+The concept of infinity had been around for a long time by the 1870s, but it had, until this point, been considered a philosophical topic. Aristotle identified a dichotomy between the "potential infinite" and the "actual infinite" in which the former can always have elements added to it while the latter is instead considered "complete." This mindset persisted for around two-thousand years with the majority of scholars believing that "actual infinity" was outside of the purview of mathematics. It was used in mathematical practice, but only in a non-rigorous, conceptual way, as seen in the characterization of limits "tending toward infinity." Actual infinity was considered an "ideal entity," not something that could be studied like finite numbers. \\
+
+Here, however, Cantor had found a rigorous mathematical object containing infinity as an actual numerical quantity. If a set could represent a countable number of terms in a trigonometric series and was closed on $[1,\infty]$, it could look like $\{1,2,3,\dots,\infty\}$. It was this discovery that caused Cantor to think about the differences between a set like this, and a set like the real numbers, which, in addition to these values, could contain many more. He published his first article on set theory in 1874, stating two theorems that ushered in a new epoch of mathematical thought. \\
+
+Cantor's first theorem from his 1874 article states that the set of real algebraic numbers can be put into one-to-one correspondence with the set of positive integers. An \textit{algebraic number} is any complex number that is a root of a non-zero polynomial with rational coefficients. That is, it is any $x\in\mathbb{C}$ that satisfies the following equation:
+\begin{align*}
+    a_nx^n+a_{n-1}x^{n-1}+\cdots+a_2x^2+a_1x+a_0=0,
+\end{align*}
+where $a_0,\dots,a_n\in\mathbb{Q}$, at least one of which must be non-zero. A \textit{real algebraic number} or \textit{algebraic real} is then, logically, any algebraic number with an imaginary part of $0$. Complementary to the algebraic numbers are the \textit{transcendental numbers}, the real or complex numbers that are \textit{not} roots of any such polynomials, such as $\pi$ or $e$. \\
+
+Cantor is stating here then that there exists a \textit{one-to-one correspondence} or \textit{bijection} between these algebraic reals and the positive integers (also known as the \textit{natural} or \textit{counting} numbers). An intuitive example of a bijection occurs when you touch the fingertips of your left hand to those of your right hand. Each left fingertip is paired with exactly one right fingertip, and vice versa. No fingertip is left unpaired. With this theorem, Cantor proves that the algebraic reals and the naturals are like the left and right hand. When paired one-to-one, no number from either set is left unpaired. \\
+
+This discovery is almost unbelievable, and it is totally foreign to anything in finite mathematics. To put this into perspective, consider the fact that the algebraic reals contain the rational numbers. One would think that there would be far more rational numbers than positive integers, but when discussing infinite sets, it turns out that that is not the case. The rationals $\mathbb{Q}$, algebraic reals $\mathbb{A}_\mathbb{R}$, integers $\mathbb{Z}$, and naturals $\mathbb{N}$ are all examples of \textit{countably infinite} sets. That is, all of their elements can be put into a \textit{list}. While it may be difficult to see this quality in the rational numbers, it is made easier when you consider that the rational numbers are also called the \textit{measuring} numbers. While there are an infinite number of positive fractional measurements you could make while woodworking or cooking, these measurements can also be listed:
+\begin{align*}
+    \Bigg\{\underbracket[0.25mm][2mm]{\frac{0}{1}}_0,\;\underbracket[0.25mm][2mm]{\frac{1}{1}}_1,\;\underbracket[0.25mm][2mm]{\frac{1}{2},\;\frac{2}{1}}_2,\;\underbracket[0.25mm][2mm]{\frac{1}{3},\;\frac{2}{3},\;\frac{3}{1},\;\frac{3}{2}}_3,\;\underbracket[0.25mm][2mm]{\frac{1}{4},\;\frac{3}{4},\;\frac{4}{1},\;\frac{4}{3}}_4,\;\underbracket[0.25mm][2mm]{\frac{1}{5},\;\frac{2}{5},\;\frac{3}{5},\;\frac{4}{5},\;\frac{5}{1},\;\frac{5}{2},\;\frac{5}{3},\;\frac{5}{4}}_5,\;\underbracket[0.25mm][4.4mm]{\cdots}_n\Bigg\}
+\end{align*}
+Note that each bracket has a number $n$ associated with it. Starting with $n=1$, the numbers in each bracket begin with $\rfrac{1}{n}$ and the numerator is incremented until you reach $\rfrac{n}{n}$. Then, you continue with $\rfrac{n}{1}$, incrementing the denominator until you reach $\rfrac{n}{n}$ again. Fractions whose values are already in the list are skipped. Negative rational numbers can be added by simply placing a number's complement immediately after itself in the list. Thus, $\mathbb{Q}$ is enumerable and countably infinite. \\
+
+In his second theorem from his 1874 article, Cantor states that, given any sequence of real numbers $x_1,\,x_2,\,x_3,\,\dots$ in a closed interval $[a,b]$, there exists a number in $[a,b]$ that is not contained in the given sequence. Essentially, this means that, unlike the sets we just discussed, the set of real numbers $\mathbb{R}$ is \textit{not} enumerable or countably infinite. It cannot be expressed as a list or sequence because there will always be a real number missing. There exists no proper way to "count" the reals. With these two theorems, Cantor discovered that differences can exist between infinite sets. There are \textit{distinct} infinities. He comments on this in the same article: \\
+
+\begin{displayquote}
+    \textit{I have found the clear difference between a so-called continuum and a collection like the totality of real algebraic numbers.}
+    \vspace{4mm}
+\end{displayquote}
+
+The truth of this "so-called continuum" of the real numbers would continue to evade Cantor for the rest of his life. In the years following his first article of set theory, he made a number of foundational discoveries related to this territory he termed the \textit{transfinite}. He began looking for a bijection between the unit line segment $[0,1]\in\mathbb{R}$ and the unit square (i.e. a square with sides of length $1$). In 1877, in a letter to his friend Richard Dedekind (of \textit{Dedekind cuts} fame), Cantor instead wrote a proof for the existence of a bijection between the unit line and all of the points in an $n$-dimensional space. Not only could the real numbers between $0$ and $1$ map \textit{one-to-one} with those in a $1\times1$ grid, they could map to all of the points in the plane, all of the points in 3-dimensional space, and all of the points in \textit{any} arbitrary dimension. Such was the nature of uncountably infinite sets. Cantor wrote to Dedekind below his proof: "I see it, but I don't believe it!" \\
+
+\subsection{Ordinals and Cardinals}
+
+To aid his exploration into the continuous nature of the real numbers, he formulated the \textit{transfinite arithmetic}, the arithmetic of infinite numbers whose size is somewhere between finite and uncountably infinite. He generalized the natural numbers, introducing two countably infinite sets, those of the \textit{ordinal} and \textit{cardinal} numbers. \\
+
+Ordinal numbers describe order in a collection. More specifically, they describe the \textit{ordinality} of a number in an ordered set (e.g. $1^\textit{st}$, $2^\textit{nd}$, $3^\textit{rd}$, $\dots$). They include both finite natural numbers such as $1,\,2,\,3,\,\dots$ and transfinite numbers such as
+\begin{align*}
+    \omega,\,\omega+1,\,\omega+2,\,\dots,\,2\omega,\,3\omega,\,4\omega,\,\dots,\,\omega^2,\,\omega^3,\,\omega^4,\,\dots,\,\omega^\omega,\,\omega^{\omega^\omega},\,\omega^{\omega^{\omega^\omega}},\,\dots
+\end{align*}
+where $\omega$ is the "first infinite ordinal." Note that this sequence of transfinite quantities never ends. Cantor commented on this property, stating that the set of all ordinals $\Omega$ cannot have a greatest member. Because $\Omega$ is well-ordered, there must exist some number $\delta$ that would be greater than all of the numbers in $\Omega$. But $\delta$ would belong to $\Omega$ because $\Omega$ contains all ordinal numbers. This implies that $\delta>\delta$, which is a contradiction. Cantor, a devout Lutheran, called this illusive $\Omega$ the Absolute Infinite, a number or set that is bigger than any conceivable quantity, finite or transfinite. This kind of thinking later led to the discovery of a number of \textit{mathematical paradoxes} or \textit{contradictions} in set theory, many of which still exist today. \\
+
+Cardinal numbers describe the size or \textit{cardinality} of a set (i.e. a set could contain $1$ element, $2$ elements, $3$ elements, $\dots$). Like the ordinals, the cardinals include both finite natural numbers and transfinite numbers, the smallest of which is $\aleph_0$ (aleph-null). $\aleph_0$ is the cardinality of any countably infinite set, such as the natural numbers. In contrast to this, Cantor describes uncountably infinite sets, such as the real numbers, as having cardinality $\aleph_1$ (aleph-one). There are other greater aleph numbers that are studied for their own sake such as $\aleph_\omega$, the first uncountable cardinal number \textit{not} equal to $\aleph_1$. That said, $\aleph_0$ and $\aleph_1$ are sufficient for our purposes. Like the set of all ordinal numbers, the set of all cardinal numbers cannot be completed in any meaningful way and thus it can be described as a set of Absolute Infinite cardinality. \\
+
+\subsection{The Continuum Hypothesis}
+
+For much of his career, Cantor tried to prove the \textit{continuum hypothesis}, which states that there is no set whose cardinality is strictly between that of the integers and the real numbers. This would imply that there is no cardinal number between $\aleph_0$ and $\aleph_1$. If this hypothesis were true, the cardinality of $\mathbb{R}$ ($\aleph_1$) would be equal to the \textit{cardinality of the continuum} $\mathfrak{c}$ (a "continuum" being a set whose numbers "blend" into each other seamlessly). \\
+
+To prove that $\mathfrak{c}=\aleph_1$, Cantor sought to relate $\mathfrak{c}$ to $\aleph_0$, and in doing so, he formulated a concept that is very relevant to combinatorics. He defined the \textit{power set operator} $\mathcal{P}$, which maps any set $S$ to its \textit{power set} $\mathcal{P}(S)$, the set of all subsets of $S$. For example, for a set $S=\{1,2,3\}$, $\mathcal{P}(S)$ contains the following sets:
+\begin{align*}
+    \{\}\qquad\{1\}\qquad\{2\}\qquad\{3\}\qquad\{1,2\}\qquad\{1,3\}\qquad\{2,3\}\qquad\{1,2,3\}
+\end{align*}
+Notice that $S$ has cardinality $3$ and that $\mathcal{P}(S)$ has cardinality $2^3=8$. For any set $S$ with cardinality $x$, $\mathcal{P}(S)$ has cardinality $2^x$, and it turns out that this holds for transfinite cardinals as well. Thus, $\mathcal{P}(\mathbb{Z})=2^{\aleph_0}$. This expression is denoted with the character $\beth_1$ (beth-one) according to the following rule: $\beth_{\alpha+1}=2^{\aleph_\alpha}$. By \textit{Cantor's theorem}, $\beth_1 > \aleph_0$, so we can define $\mathfrak{c}=2^{\aleph_0}=\beth_1$ and state that $\mathfrak{c} > \aleph_0$. The continuum has a greater cardinality than a discrete set like the integers. The question then becomes: Could $\mathfrak{c}$ be anything less than $\aleph_1$, the cardinality of the real numbers? Or is the set of real numbers the smallest example of a continuum? \\
+
+With the work of Kurt G\"odel in 1940 and of Paul Cohen in 1963, it was established that the continuum hypothesis cannot be proven or disproven. It is \textit{independent} of the axioms of Cantor's set theory. It is also independent of the axioms of the current foundation of mathematics, the \textit{Zermelo-Fraenkel set theory with the axiom of choice} (ZFC set theory). That said, since set theory works regardless of whether or not the continuum hypothesis is true, most mathematicians operate assuming that it \textit{is} true because the set of real numbers does appear to exhibit the behavior we would expect from a "continuum." Thus, independent of any particular set theory, we may assume that, for any transfinite cardinal $\lambda$, there is no cardinal $\kappa$ such that $\lambda<\kappa<2^\lambda$. \\\\
+
+\begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
+    \vspace{3mm}
+    \begin{center}
+        \textbf{Backlash Against Cantor's Set Theory}
+    \end{center}
+    Typically, when a proof is submitted, it is either quickly accepted by the mathematical community or quickly shown to be flawed. In the case of Georg Cantor's set theory, controversy loomed for many decades and objections came from many different angles. Most of the grievances came from the \textit{constructivists}, a group that was partially founded by Cantor's mentor, Leopold Kronecker. \\
+
+    Constructivism is a \textit{philosophy of mathematics} that asserts that it is necessary to find or \textit{construct} a mathematical object in order to prove that it exists. Unlike \textit{classical mathematics}, \textit{constructive mathematics} does not adhere to the \textit{law of the excluded middle}, which states that a well-formed proposition must be either true or false. According to this philosophy, a \textit{proof by contradiction} (a proof of an object's existence founded in disproving the object's non-existence) is invalid. Constructivists took issue with the characterization of \textit{actual infinities} (e.g. the uncountably infinite set $\mathbb{R}$) as legitimate mathematical objects worthy of study. Their mathematical philosophy only permitted the existence of \textit{potential infinities} (e.g. the countably infinite set $\mathbb{N}$). Kronecker did not consider Cantor's original 1874 proof of a difference in cardinality between $\mathbb{N}$ and $\mathbb{R}$ as constructive. He remained staunchly opposed to Cantorian set theory and its hierarchy of the infinite, stating that \\
+        
+    \begin{center}
+        \begin{displayquote}
+            \centering
+            \textit{God created the natural numbers; all else is the work of man.}
+            \vspace{4mm}
+        \end{displayquote}
+    \end{center}
+
+    There were other mathematical objections to Cantor's findings, such as those directed toward the uncountability of the transcendental numbers. By 1874, only a handful of transcendentals had been discovered. The constant $e$ was proven to be transcendental the year prior, and $\pi$ would not be proven to be transcendental until 1882. In stating that the algebraic reals were countable and the reals were not, Cantor implied that \textit{almost all} real numbers were transcendental. That is, if you remove a countable subset ($\mathbb{A}_\mathbb{R}$) from an uncountable set ($\mathbb{R}$), you are left with an uncountable subset ($\mathbb{A}_\mathbb{R}^c$, the \textit{complement} of the algebraic reals, also known as the transcendental reals). Many could not accept that something previously thought to be incredibly rare had instead an uncountably infinite number of examples. Other mathematicians, including Kronecker, refused even to accept Cantor's work as mathematical in nature, believing it to be, at best, philosophical. \\
+        
+    In addition to objections from mathematicians, Cantor's set theory received a number of complaints from Christian theologians. Some saw the formalization of an uncountable infinity as a challenge to the uniqueness of the absolute infinity of God. Some associated the transfinite hierarchy with pantheism. Cantor felt strongly that his set theory could exist harmoniously within a Christian framework. Even his notational choices ($\aleph$, $\omega$, and $\Omega$) can be considered an homage to the title of "Alpha and Omega." He associated the Absolute Infinite with God, and felt that transfinite quantities, while infinite, were no challenge to the supremacy of the Lord, averring that \\
+        
+    \begin{displayquote}
+        $\dots$\textit{the transfinite species are just as much at the disposal of the intentions of the Creator and His absolute boundless will as are the finite numbers.}
+    \end{displayquote}
+    \vspace{4mm}
+
+    Furthermore, Cantor wrote to numerous prominent theologians, including the Pope, in an attempt to clear up this confusion between the abstract notion of infinity and the actuality of infinity, as he saw it, in God and in Nature: \\
+
+    \begin{displayquote}
+        \textit{The actual infinite was distinguished by three relations: first, as it is realized in the supreme perfection, in the completely independent, extraworldly existence, in Deo, where I call it absolute infinite or simply absolute; second to the extent that it is represented in the dependent, creatural world; third as it can be conceived in abstracto in thought as a mathematical magnitude, number or ordertype. In the latter two relations, where it obviously reveals itself as limited and capable for further proliferation and hence familiar to the finite, I call it Transfinitum and strongly contrast it with the absolute.}
+        \vspace{4mm}
+    \end{displayquote}
+
+    The onslaught of criticism began to wear Cantor down. Frustrated with the disapproval from his mentor and high-ranking members of his faith and with his inability to solve the continuum hypothesis, he fell into a chronic depression that persisted until his death. He ceased mathematical study for years at a time, writing and lecturing instead on Shakespeare. Nevertheless, some mathematicians, such as David Hilbert, supported his set theory. \\
+
+    Hilbert championed the \textit{transfinitist} philosophy, which claims that infinite sets are legitimate mathematical objects. He believed that Cantor's set theory was the key to axiomatizing all of mathematics, a goal that he would pursue for much of his life. He gave lectures on transfinite arithmetic after Cantor's death, employing an intuitive thought experiment known as \textit{Hilbert's Grand Hotel}. Ultimately, set theory was generally accepted, thanks in large part to Hilbert, who believed in Cantor's work even in the face of a considerable opposition to its fundamental principles. \\
+        
+    \parbreak
+
+    \begin{displayquote}
+        \centering
+        \textit{No one will drive us from the paradise which Cantor created for us.}
+        \vspace{4mm}
+        \begin{flushright}
+            ---David Hilbert
+        \end{flushright}
+    \end{displayquote}
+    \vspace{1mm}
+        
+\end{tcolorbox}
+\vspace{2\baselineskip}
+
+\subsection{Cantor's Later Years and Legacy}
+
+In the early 20th century, mathematicians and philosophers had found a variety of paradoxes within Cantor's set theory. The most famous example was \textit{Russell's paradox}, which was discovered by Bertrand Russell in 1901. It posits that, given a set $S$ that is "the set of all sets that are \textit{not} members of themselves," it is unclear whether $S$ contains itself. If it does, it contains a set that \textit{is} a member of itself. If it does not, it does not contain all sets. An alternative, colloquial form of this is the \textit{barber's paradox}: Given a barber who shaves all those, and only those, who do not shave themselves, does the barber shave himself? There is no answer to this question. It cannot be answered within its own axiomatic system. \\
+
+When he was not hospitalized for disease or depression, Cantor lectured on these paradoxes of his set theory until his retirement in 1913. He lived in poverty, suffering from malnourishment during World War I before succumbing to a heart attack in a sanatorium in 1918. \\
+
+Georg Cantor's work was revolutionary and had far reaching consequences in every field that made use of mathematics. It drew a line in the sand between \textit{discrete} and \textit{continuous} phenomena. It was Cantor's investigation into and formalization of the infinite that laid the groundwork for ZFC set theory, the current "common language" of mathematics. More than that, however, he shifted the collective perception of the \textit{purpose} of mathematics. \\
+
+Before this point, mathematics was typically done to understand the natural world. Cantor believed not only that mathematics could describe what he saw around him, but that it could also solve problems that were purely logical, those that existed in the mind. Mathematics was a universe in the abstract, worthy of exploring in the same way that the natural one was. For Cantor, mathematics allowed one to see beyond the limitations of the human senses into worlds of arbitrary dimension, unshackled by physical laws. This philosophy has encouraged the continued development of abstract theories, many of which are later found to have concrete implications for the nature of our reality. Cantor stood firm in opposition to the "oppression and authoritarian close-mindedness" he faced from Kronecker et al. and called for objectivity and truth among his peers, bringing humanity, kicking and screaming, into the modern era of mathematical thought. \\
+
+\begin{center}
+    \begin{displayquote}
+        \centering
+        \textit{The essence of mathematics is in its freedom.}
+        \begin{flushright}
+            ---Georg Cantor
+        \end{flushright}
+    \end{displayquote}
+\end{center}
+\vspace{4mm}
+
+\subsection{The Diagonal Argument for Computable Functions}
+
+While the story of Georg Cantor and his set theory is interesting in its own right, its relevance to Turing computability and to computer science in general may not be readily apparent. For this reason, I would like to discuss the implications of one final topic related to Cantor, his 1891 \textit{constructive} proof of transfinite cardinality known as the \textit{diagonal argument}. The theorem and its short, elegant proof are recreated below.
+
+\begin{center}
+    \begin{tcolorbox}[
+        breakable,
+        enhanced,
+        colback=white,
+        width=12cm,
+        sharp corners,
+        frame hidden
+    ]
+        \textit{Theorem:} Given the set $T$ of all infinite sequences of binary digits, if $s_0,\,s_1,\,s_2,\,\dots,\,s_n,\,\dots$ is any enumeration of elements from $T$, there exists an element $s\in T$ which does not correspond to any $s_n$ in the enumeration. \\
+        
+        \textit{Proof:} We start with an enumeration of elements from $T$: \\
+        \begin{align*}
+            s_0=(1,\, 0,\, 1,\, 1,\, 0,\, 0,\, 1,\, 0,\, 0,\, 0,\, \cdots) \\
+            s_1=(1,\, 1,\, 0,\, 1,\, 1,\, 0,\, 1,\, 0,\, 1,\, 1,\, \cdots) \\
+            s_2=(0,\, 0,\, 0,\, 1,\, 0,\, 0,\, 0,\, 1,\, 1,\, 1,\, \cdots) \\
+            s_3=(1,\, 1,\, 0,\, 1,\, 0,\, 1,\, 1,\, 0,\, 1,\, 0,\, \cdots) \\
+            s_4=(1,\, 0,\, 1,\, 1,\, 1,\, 0,\, 1,\, 0,\, 0,\, 1,\, \cdots) \\
+            s_5=(0,\, 0,\, 0,\, 1,\, 0,\, 0,\, 1,\, 1,\, 0,\, 0,\, \cdots) \\
+            s_6=(0,\, 0,\, 1,\, 0,\, 0,\, 0,\, 1,\, 0,\, 0,\, 0,\, \cdots) \\
+            s_7=(0,\, 1,\, 0,\, 0,\, 0,\, 1,\, 1,\, 0,\, 1,\, 1,\, \cdots) \\
+            s_8=(1,\, 1,\, 1,\, 1,\, 1,\, 0,\, 1,\, 0,\, 0,\, 1,\, \cdots) \\
+            s_9=(1,\, 0,\, 0,\, 0,\, 0,\, 1,\, 0,\, 0,\, 0,\, 1,\, \cdots)
+        \end{align*}
+        \begin{center}
+            $\vdots$ \\
+            \vspace{4mm}
+        \end{center}
+
+        We then construct a sequence of binary digits $s^\star$ by making the $n^\textit{th}$ digit of $s^\star$ equal to the negation of the $n^\textit{th}$ digit of the $n^\textit{th}$ sequence given above. Put more simply, we highlight the digits along a diagonal, and flip their values to make $s^\star$:
+        
+        \begin{align*}
+            s_0=(\hl{1},\, 0,\, 1,\, 1,\, 0,\, 0,\, 1,\, 0,\, 0,\, 0,\, \cdots) \\
+            s_1=(1,\, \hl{1},\, 0,\, 1,\, 1,\, 0,\, 1,\, 0,\, 1,\, 1,\, \cdots) \\
+            s_2=(0,\, 0,\, \hl{0},\, 1,\, 0,\, 0,\, 0,\, 1,\, 1,\, 1,\, \cdots) \\
+            s_3=(1,\, 1,\, 0,\, \hl{1},\, 0,\, 1,\, 1,\, 0,\, 1,\, 0,\, \cdots) \\
+            s_4=(1,\, 0,\, 1,\, 1,\, \hl{1},\, 0,\, 1,\, 0,\, 0,\, 1,\, \cdots) \\
+            s_5=(0,\, 0,\, 0,\, 1,\, 0,\, \hl{0},\, 1,\, 1,\, 0,\, 0,\, \cdots) \\
+            s_6=(0,\, 0,\, 1,\, 0,\, 0,\, 0,\, \hl{1},\, 0,\, 0,\, 0,\, \cdots) \\
+            s_7=(0,\, 1,\, 0,\, 0,\, 0,\, 1,\, 1,\, \hl{0},\, 1,\, 1,\, \cdots) \\
+            s_8=(1,\, 1,\, 1,\, 1,\, 1,\, 0,\, 1,\, 0,\, \hl{0},\, 1,\, \cdots) \\
+            s_9=(1,\, 0,\, 0,\, 0,\, 0,\, 1,\, 0,\, 0,\, 0,\, \hl{1},\, \cdots)
+        \end{align*}
+        \begin{center}
+            $\vdots$ \\
+            \vspace{2mm}
+            \rule{5.75cm}{0.75pt} \\
+            \vspace{3mm}
+            $s^\star=(\hl{0,\, 0,\, 1,\, 0,\, 0,\, 1,\, 0,\, 1,\, 1,\, 0,\, \cdots})$ \\
+            \vspace{4mm}
+        \end{center}
+
+        $s^\star$ must differ from each $s_n$ because their $n^\textit{th}$ digits differ. Thus, $s^\star$ does not belong to the given enumeration of $T$. Given any enumeration of $T$, you can always construct an infinite binary sequence that does not appear in it. $\quad\square$
+    \end{tcolorbox}
+\end{center}
+
+With this information, we can go a step further and say that $T$ is \textit{uncountably infinite}. Note that this result requires that the sequences be countably infinite. This argument has become a common technique in proofs to prove the uncountability of a set whose members are countably infinite. Turing used a diagonal argument to formalize the notion of computability and to prove that the \textit{Entscheidungsproblem}, one of the most important mathematical problems of the 20th century, is undecidable. Next, we will use the diagonal argument to formalize the set of computable functions. \\
+
+\subsection{Uncountably Many Languages}
+
+Consider the alphabet $\{0,1\}$. With this alphabet, one can construct the set of all binary strings $S$ using the regular expression $\{0,1\}^*$ (i.e. $\{\varepsilon,\,0,\,1,\,00,\,01,\,10,\,11,\,000,\,001,\,\cdots\}$). Strings like these are often called \textit{words} in computability theory, but they could potentially represent very long pieces of text that you might not think of as "words." It may be helpful to think of them instead as syntactically valid building blocks of a particular language. Two other things to note:
+\begin{enumerate}
+    \item These binary strings are finite in length, by definition of the Kleene star $^*$. They are the set of finite words that can be constructed using the alphabet $\{0,1\}$.
+    \item While this example uses a binary alphabet, the set $S$ could be constructed similarly over a ternary alphabet or an $n$-ary alphabet where $n\in \mathbb{N}$. Formally, the set of all words over an alphabet $\Sigma$ is denoted $\Sigma^*$. Likewise, the symbols of $\Sigma$ need not be numbers. An alphabet can contain any symbols, as long as they are distinct and there are a finite number of them. \\
+\end{enumerate}
+
+We can then consider the power set of $S$,
+$$\mathcal{P}(S)=\{\{\varepsilon\},\,\{0\},\,\{1\},\,\{10\},\,\{0,\,1\},\,\{0,\,10\},\,\{1,\,10\},\,\{0,\,1,\,10\},\,\,\cdots\}$$
+to be the set of all \textit{languages} that can be created using these binary words. A language $L$ is simply a subset of the set of all possible words over a finite alphabet. Stated formally, $L\subseteq\Sigma^*$. As we discussed previously in the section on automata, languages can conform to a grammar, but for now we will consider them simply as countable sets of words. Words that belong to a given language are called \textit{well-formed words} and those that do not are called \textit{ill-formed words}, but only in relation to that language. \\
+
+Because $S$ is a countably infinite set and because the power set of a countably infinite set is uncountably infinite (by \textit{Cantor's theorem}), we know that $\mathcal{P}(S)$ is an uncountably infinite set. Each member of $\mathcal{P}(S)$ is a countable set of words, also known as a language. Thus, there exists an \textit{uncountable number} of languages of binary words (and of languages in general). The diagonal argument supports this. \\
+
+Let each sequence $s_n$ from the above proof represent a language. The "columns of the matrix" each correspond to a binary word from $S$. Thus, the digits in each sequence represent whether or not a particular word is well-formed ($1$) or ill-formed ($0$) with regard to the language the sequence represents. For example, the language $\{0,1,01,10,11\}$ would have a $1$ in its sequence for the columns corresponding to words $0,1,01,10,11$ and a $0$ everywhere else. We can enumerate the languages as in the proof and flip the values along the diagonal of the enumeration to construct a new language. Thus, the set of all languages of binary words is not enumerable. Rather, there are uncountably many languages. \\
+
+\subsection{Countably Many Turing Machines}
+
+Now, let's require that the sequences be \textit{finite}. Because a Turing machine has a finite number of states and transitions, it can be represented with a finite binary string. Similarly, every natural number can be represented with a finite binary string. Thus, there is a one-to-one correspondence between the set of all Turing machines and the set of all natural numbers. So while there are uncountably many languages, there are only countably many Turing machines to recognize those languages. \\
+
+We know that Turing machines recognize exactly the recursively enumerable languages $R$, so we know there are also countably many of these. Taking the complement of $R$ implies that there are also uncountably many \textit{non-recursively enumerable languages} that a Turing machine cannot recognize. In fact, \textit{almost all} languages cannot be recognized by a Turing machine. \\
+
+Before we define the recursively enumerable languages, we should first define a strict subset of them known as the \textit{recursive languages}. A recursive language can be represented by a \textit{recursive set} of natural numbers. A subset $L$ of the natural numbers is called \textit{recursive} if there exists a total function $f$ such that
+\begin{align*}
+    f(w)=
+    \begin{cases}
+        1 & \text{if } w\in L \\
+        0 & \text{otherwise}
+    \end{cases}
+\end{align*}
+Such a function represents the following decision problem: "Let $L$ be a language represented by a set. Given a word $w$, is $w$ a well-formed word in $L$?" In the case of a recursive $L$, this decision problem is called \textit{decidable}. \\
+
+Similarly, a recursively enumerable language can be represented by a \textit{recursively enumerable set} of natural numbers. A subset $L$ of the natural numbers is called \textit{recursively enumerable} if there exists a partial function $f$ such that
+\begin{align*}
+    f(w)=
+    \begin{cases}
+        1 & \text{if } w\in L \\
+        \text{undefined} & \text{otherwise}
+    \end{cases}
+\end{align*}
+The decision problem can be phrased in the same way, but, in the case of a recursively enumerable $L$, it is called \textit{partially decidable} or \textit{semidecidable}. That is, we can decide a word \textit{is} in the language, but we cannot formally decide that it is \textit{not}. In mathematical terms, statements like this can be \textit{proven}, but not \textit{disproven}. If that sounds incredibly unintuitive, that's because it is. This concept will come up later in a discussion of Kurt G\"odel's contribution to computability. \\\\
+
+\begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
+    \vspace{3mm}
+    \begin{center}
+        \textbf{Decidability and Semidecidability for Humans and Computers}
+    \end{center}
+
+    Recall that recursive languages are also recursively enumerable. That is, their recursive nature is \textit{countable}. This is because recursive languages can construct only \textit{finite} sentences that have an end. On the other hand, a recursively enumerable language can have sentences that expand forever, always ready to accept another clause before its period. \\
+        
+    The following sentence is recursive (and, thus, also recursively enumerable): 
+    \begin{align*}
+        \textnormal{Alice} 
+        \underbracket{\textnormal{said that Betty}
+        \underbracket{\textnormal{said that Charlie}
+        \underbracket{\textnormal{said that David}
+        \underbracket{\textnormal{got a kitten.}}}}}
+    \end{align*}
+    \vspace{1mm}
+        
+    This sentence is composed of a countable, finite number of building blocks called \textit{clauses} that each contain a \textit{subject} and a \textit{predicate}. In this case, the subjects are the names and their respective predicates are marked by brackets. \\
+        
+    All but one of these clauses are \textit{nested} in the predicate of a previous clause. If a sentence can be defined in terms of smaller sentences, it is said to be defined recursively. This sentence qualifies: it contains a full sentence starting with Betty, which contains a full sentence starting with Charlie, which contains a full sentence starting with David. It can also be called recursively enumerable, because the clauses can be counted. \\
+        
+    This next "sentence," on the other hand, is recursively enumerable, but it is \textit{not} recursive:
+    \begin{align*}
+        \textnormal{Alice} 
+        \underbracket{\textnormal{said that Betty}
+            \underbracket{\textnormal{said that Charlie}
+                \underbracket{\textnormal{said that David}
+                    \underbracket{\textnormal{said that}\dots\vphantom{\textnormal{g}}}}}}
+    \end{align*}
+    \vspace{1mm}
+        
+    In this case, you can count the potentially infinite number of recursions that occur. However, this "sentence" cannot be called recursive because, due to the absence of a period, it actually contains no full sentences. \\
+        
+    How can we understand this concept in the context of computation? We can think about sentences as programs. When someone says a sentence to you, you process information as the sentence is being said. When the sentence finally ends, you have all of the information necessary to understand the thought this person is trying to convey to you. As a result, you gain insight from this person. Similarly, when a programmer executes a program, the computer processes information as it moves forward through the instructions. When the program terminates, the computer has all of the information it needs to compute an answer. It is then able to return a value, which is the kind of insight that is produced by an algorithm. \\
+        
+    What if, instead, someone said a sentence to you that never ended? You could listen intently, trying to keep track of everything they've said, but the punchline will never come. You will never understand what they are trying to tell you. Similarly, if a program's instructions never end, a computer will never be able to produce any meaningful answer. This is called an \textit{infinite recursion}, which is a kind of infinite loop. \\
+        
+    This conclusion assumes that the computer we are talking about is a real computer in the real world, where time and space are finite. The reason that a Turing machine is a helpful abstraction is that it has an infinite amount of time and space at its disposal. Theoretically, it could run a program composed of a set of infinitely looping instructions to its "completion." Note the choice of the phrase "a set of infinitely looping instructions" instead of "an infinite set of instructions." The latter is called a \textit{stream}, and it is not Turing-recognizable. $\omega$-automata, however, can recognize it. \\
+        
+    Many well-known functions can be defined recursively, such as the factorial function $f(n)=n!$. What is an example of a function that is recursively enumerable, but not recursive? To answer this, I would like to recommend \underline{this video}, in which a mechanical calculator is instructed to divide a number by zero. The calculator knows the method for division, but this method is only effective in the cases where the denominator is not zero. In the case where the denominator is zero, it attempts to carry out the calculation, faithfully incrementing its count of how many times the denominator fits into the numerator. Of course, zero fits into any number an infinite amount of times, so the calculator will continue to calculate until, as the videographer suggests, it potentially catches fire. The program will never terminate, and a result will never be returned, so we can say that division over any set including zero is only semidecidable.
+
+    % https://www.youtube.com/watch?v=7Kd3R\_RlXgc
+
+    \vspace{3mm}
+\end{tcolorbox}
+\vspace{2\baselineskip}
+
+The problems that Turing machines can solve are either decidable or semidecidable. What, then, is \textit{undecidable}? What kinds of problems do non-recursively enumerable languages describe? Consider the same decision problem from before: "Let $L$ be a language represented by a set. Given a word $w$, is $w$ a well-formed word in $L$?" If $L$ is non-recursively enumerable, a Turing machine cannot ever decide this problem because it cannot recognize $L$. Thus, such decision problems are \textit{undecidable} for all inputs, and any related function problems have no answer. \\
+
+\subsection{Computable Functions and Computable Numbers}
+
+Because all recursive languages are recursively enumerable, a Turing machine can recognize a language from either class. $f$ in both cases is known as a \textit{computable function}, a function whose output can be correctly \textit{computed} by an algorithm performed by a Turing machine. This means that a Turing machine can be considered a \textit{formalization} of the countable set of computable functions:
+
+\begin{center}
+    \begin{tcolorbox}[breakable,enhanced,colback=white,width=12cm,sharp corners,frame hidden]
+        A partial function $f:\mathbb{N}^k\nrightarrow\mathbb{N}$ is \textit{computable} if and only if $\exists$ a Turing-recognizable computer program with the following properties: \\
+        \begin{enumerate}
+            \item If $f(\mathbf{x})$ is defined, the program will eventually halt on the input $\mathbf{x}$ with $f(\mathbf{x})$ stored in the tape memory.
+            \item If $f(\mathbf{x})$ is undefined, the program never halts on the input $\mathbf{x}$.
+        \end{enumerate}
+    \end{tcolorbox}
+\end{center}
+
+While algorithms are typically written using natural numbers or integers, this is not a requirement. The finite-length $k$-tuple $\mathbf{x}$ can belong to any $A^k$ where $A$ is a countable set. Likewise, the codomain of $f$ can be any countable set. This generalization allows us to investigate \textit{computable numbers}, the numbers that an algorithm can produce. \\
+
+Consider a partial function $g:\mathbb{Q}^k\nrightarrow\mathbb{Q}$. Like $\mathbb{N}$, $\mathbb{Q}$ has cardinality $\aleph_0$. Thus, if a program, as defined above, exists, $g$ is computable. If we add a countably infinite set of numbers to $\mathbb{Q}$, we can construct $\mathbb{A}_\mathbb{R}$, the algebraic reals. Because $\mathbb{A}_\mathbb{R}$ also has cardinality $\aleph_0$, a function $g:\mathbb{A}_\mathbb{R}^k\nrightarrow\mathbb{A}_\mathbb{R}$ is also potentially computable. This coheres with our informal notion of computability, as well: The algebraic reals are those real numbers that are the roots of a non-zero polynomial, and an algorithm can compute them by solving their corresponding polynomial equation. \\
+
+From here, we can add a countably infinite set of transcendental reals to our set of algebraic reals to form the set of \textit{computable numbers}. These are the real numbers that can be computed with an arbitrary level of precision by a finite, terminating algorithm. This implies that a countable number of transcendental reals can be computed. It may be surprising to hear, for example, that the transcendental constant $\pi$ is computable, but its algorithm is simple. Given a circle, $\pi$ is the ratio of the circle's circumference to its diameter. These quantities can be stored with an arbitrary level of precision in a TM's countably infinite memory, and instructions can be written to divide one by the other. In general, computable transcendentals can be found by enumerating $S:=\mathbb{A}_\mathbb{R}$ and using the diagonal argument to construct a computable real $s\notin S$. Add $s$ to $S$, apply the argument again, and repeat to add a countably infinite number of computable transcendentals to $S$.\\
+
+The set of computable numbers is countably infinite, which means that almost all real numbers are uncomputable. The question naturally arises: Does a number really exist (or have any \textit{worth}) if it is impossible to compute its value? A constructivist would argue that it does not. There are efforts to use the computable numbers instead of the real numbers for all of mathematics, and the resulting theory is called computable analysis. Regardless, one could argue that theoretical computer science is an exploration of the mathematics that can be done within this set. \\
+
+\section{Hilbert's Program and G\"odel's Refutation of It}
+
+In 1900, David Hilbert gave an address to the International Congress of Mathematicians in Paris. In his speech, he described twenty-three problems that he felt would be some of the most important of the century. While these problems are diverse in subject matter, they are all \textit{deep} questions. In each of their answers (or lack of answers) lies some fundamental truth about the structure of mathematics itself. They are known as \textit{Hilbert's problems}, and many of them remained unsolved and of great interest today. \\
+
+\subsection{Hilbert's Second Problem}
+
+This presentation of problems was, in essence, the inception of \textit{Hilbert's program}, a worldwide goal to solve what was known at the time as the \textit{foundational crisis of mathematics}. With the general acceptance of Cantor's set theory came the discovery of many paradoxes and inconsistencies that called into question the \textit{consistency} of mathematics. It had been assumed until this point that mathematics was something that could be trusted, that a statement could be proven true from previous mathematical truths. The creation of Zermelo-Fraenkel set theory in the late 1920s resolved some of these paradoxes, such as Russell's paradox, but not all inconsistencies were resolved. Mathematics was still curiously "broken" in certain ways. \\
+
+\begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
+    \vspace{3mm}        
+    \begin{center}
+        \textbf{Metamathematics}
+    \end{center}
+
+    TEXT
+        
+    \vspace{3mm}
+\end{tcolorbox}
+\vspace{2\baselineskip}
+
+As a proponent of the philosophy of mathematics known as \textit{formalism}, Hilbert believed that mathematics was not a description of some abstract part of reality, but was rather akin to a game where pieces could be moved according to a set of rules. He believed that a mathematical "game" was played with "pieces" from an arbitrary set of \textit{a priori} truths. These pieces are called \textit{axioms}, and they are manipulated according to an arbitrary set of \textit{inference rules} to construct \textit{conclusions}. These conclusions can then be used as \textit{premises} for the inference of further conclusions. Thus, formalism avers that mathematics is purely \textit{syntactic}. It is nothing more than the manipulation of strings of symbols by logical rules, and any sort of \textit{semantic meaning} derived from these strings is merely the product of an \textit{interpretation}. \\
+
+In the early 20th century, Hilbert made it his life's goal to construct a set of axioms, from which all existing and future mathematical theories could be derived in a consistent manner. His peers agreed that the search for such an axiomatization was direly needed. By this point, no one had been able to prove the consistency of the standard \textit{Peano arithmetic}, which includes basic axioms such as $x+y=y+x$ and $x\times0=0$. Proving a consistent set of axioms of arithmetic was the second of Hilbert's famous twenty-three problems, preceded only by the problem of deciding Cantor's continuum hypothesis. \\
+
+Stated more generally, Hilbert intended to construct a \textit{formal system} that was \textit{complete}, \textit{consistent},
+
+In order for Hilbert's program to succeed, there would have to exist a formal system with the following properties:
+\begin{itemize}
+    \item Completeness, the ability to prove all true mathematical statements
+    \item Consistency, the absence of contradictions
+    \item Conservation, the ability to prove results involving countable quantities without the use of uncountable ones
+    \item Decidability, the existence of an algorithm that could decide the truth or falsity of any mathematical statement
+\end{itemize}
+
+As a professor at the prestigious University of G\"ottingen, Hilbert gave many lectures on his program, both inside and outside of Germany. At one such lecture given in Bologna in 1928, Kurt G\"odel was in attendance. The concepts of mathematical logic discussed at this lecture would inspire G\"odel throughout his career, but in only three years he would deal a fatal blow to Hilbert's program. \\
+
+\subsection{G\"odel's Completeness Theorem}
+
+In 1929, G\"odel published his \textit{completeness theorem} of mathematical logic as his doctoral thesis. This was a mathematical proof that elucidated something fundamental about the first-order logic mathematics is based on. Although it is a bit difficult to understand at first, the result is ultimately quite simple, and it supports what mathematicians have implicitly understood about abstract, general proofs since about 300 \textsc{BCE}, when Euclid introduced the \textit{axiomatic method}. \\
+
+All of G\"odel's theorems that we will discuss in this section are statements about theories, which are represented as mathematical objects so that they can be studied mathematically. A theory is similar to a formal system, but it does not necessarily have inference rules. However, it \textit{is} a set of axioms written in a language, which has an alphabet and a grammar. A theory can be coupled with a set of inference rules and often these rules are understood from context (e.g. by examining the logical structure of the language that the axioms are written in). Mathematical theories, for example, typically employ a first-order logical calculus because first-order logic is the standard formalization of mathematics. However, theories need not be mathematical. Political theories are still theories. They are composed of theorems expressed with the alphabet and grammar of a natural language. They have sets of fundamental beliefs from which other beliefs are derived, and they may be coupled with some form of deductive reasoning, though this reasoning may not necessarily be first-order logical. That said, we will focus on first-order logical theories written in the syntax of mathematics. \\
+
+A theory coupled with a deductive logical calculus is called a \textit{deductive system}. A formula that is found to be true, independent of interpretation, by means of this system (i.e. via a series of inferences that starts at the axioms) is called \textit{logically valid}. The axioms of a theory are assumed to be true, so a logically valid formula deduced within a \textit{truth-preserving} system must also be true, but only within the theory. All truth is relative, and, as such, the truth value of any given formula is necessarily dependent on the choice of axioms and the inference rules that are allowed. There is more than one way to reason about a given theory, and, as such, a theory can be coupled with different logical calculi to form different deductive systems. Examples of first-order logical deductive systems include \textit{natural deduction}, the \textit{Hilbert-Ackermann system}, and \textit{sequent calculus}. \\
+
+A theory is syntactic in nature. It is a set of strings written in a language $\mathcal{L}$, and these strings are called $\mathcal{L}$-formul{\ae}. Any logical calculus that is applied to a theory $\mathcal{T}$ will simply map these strings to other strings according to some set of rules. Theories have no inherent meaning. On the other hand, a \textit{model} is semantic in nature. A model $\mathcal{M}$ is an ordered pair $(\mathcal{T},I)$ where $\mathcal{T}$ is a theory (a set of $\mathcal{L}$-formul{\ae}) and $I$ is an \textit{interpretation function} with domain the set of all \textit{constant}, \textit{function}, and \textit{relation} symbols of $\mathcal{L}$ such that
+
+\begin{enumerate}
+    \item If $c$ is a \textit{constant symbol}, then $I(c)$ is a \textit{constant} (a statement) in $\mathcal{T}$
+    \item If $F$ is a \textit{function symbol}, then $I(F)$ is a \textit{function} on the domain $\mathcal{T}$
+    \item If $R$ is a \textit{relation symbol}, then $I(R)$ is a \textit{relation} on the domain $\mathcal{T}$
+\end{enumerate}
+
+\subsection{G\"odel's Incompleteness Theorems}
+
+\section{The Entscheidungsproblem and the Church-Turing Thesis}
+
+\subsection{$\mu$-recursive Functions}
+
+\subsection{The Untyped $\lambda$-calculus}
+
+\subsection{The Halting Problem}
+
+\begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
+    \vspace{3mm}        
+    \begin{center}
+        \textbf{Computability is Recursion}
+    \end{center}
+        
+        TEXT
+        
+    \vspace{3mm}
+\end{tcolorbox}
+\vspace{2\baselineskip}
+
+\section{Turing Degrees}
+
