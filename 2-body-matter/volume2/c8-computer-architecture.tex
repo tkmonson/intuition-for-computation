@@ -1,0 +1,31 @@
+\chapter{Computer Architecture}
+
+\section{Mechanical Computation}
+
+Before we discuss and classify automata in depth, we should first consider what is \textbf{not} an automaton. What is an example of something that might perform some kind of calculation, but is not a computer? What about a microwave? Is a microwave a computer? No, it is not. A computer can be programmed in some meaningful, robust way. A microwave contains a microprocessor, which uses \textit{combinational logic} and basic binary inputs to set timers and operate the oven. It cannot be programmed in any meaningful way. What about a calculator? Is a calculator a computer? If we are being formal, the answer is no, but it depends on what kind of "calculator" we are talking about. \\
+
+Calculators, such as \textit{counting boards} and the \textit{abacus}, have been around since pre-history. Calculators with four-function capabilities have been around since the invention of Wilhelm Schickard's mechanical calculator in 1642. In the late 19th century, the \textit{arithmometer} and comptometers, two kinds of digital, mechanical calculator, were being used in offices. The Dalton Adding Machine introduced buttons to the calculator in 1902, and pocket mechanical calculators became widespread in 1948 with the \textit{Curta}. None of these are computers. \\
+
+The difference between a calculator and a computer is that a computer can be programmed and a calculator cannot. What does it mean to be programmable? That is perhaps the central question of automata theory, and we will discuss in this section several levels of "programmability." However, for now, we can certainly say that a simple, four-function electronic calculator is not a computer. It simply uses combinational circuits like full-adders, full-subtractors, multipliers, and dividers to implement its functions, and there is no potential for modifications or user-defined functions. \\
+
+Surprisingly enough, \textit{special-purpose computers} have also been around for a long time. Early examples include the \textit{Antikythera mechanism} (an Ancient Greek analog computer), Al-Jazari's 1206 water-powered \textit{astronomical clock}, the 1774 \underline{Writer Automaton} (a mechanical doll that could be programmed to write messages), the 1801 \textit{Jacquard loom}, and \textit{slide rules}. Some later mechanical computers were quite powerful, such as \textit{differential analyzers} (special-purpose computers for solving differential equations) and fire control computers. Charles Babbage designed the \textit{Analytical Engine}, a general-purpose computer, in 1837, and Ada Lovelace wrote a program for it, but it was never built. General-purpose computing would not reemerge until the 1940s. \\
+
+% https://www.youtube.com/watch?v=bY\_wfKVjuJM
+
+The line between calculator and computer began to blur with the introduction of \textit{programmable calculators} in the 1960s. Many modern high-end calculators are programmable in Turing-complete languages such as TI-BASIC or even C or C++, which officially makes them computers. Once we start implementing \textit{sequential logic} with components like SR latches or D flip-flops, we are storing state, and state is a requirement for computing. Circuits that use sequential logic can be considered automata and, given enough complexity, computers. \\\\
+
+\begin{tcolorbox}[
+    breakable,
+    enhanced,
+    colback=textbook-blue,
+    sharp corners
+    ]
+        \vspace{3mm}
+        \begin{center}
+            \textbf{Modern Computing is American}
+        \end{center}
+        TEXT
+        \vspace{3mm}
+\end{tcolorbox}
+\vspace{2\baselineskip}
+

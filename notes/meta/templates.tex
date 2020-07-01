@@ -1,0 +1,181 @@
+%--------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------
+%    TEMPLATES
+%--------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------
+
+% Below are standardized templates for some of the programming objects that are used in the typesetting of this document. There are two sections, Comment Templates and Content Templates. The former standardizes the style of this .tex document, and the latter standardizes the typesetting style of the .pdf document.
+
+%--------------------------------------------------------------------------------
+%    COMMENT TEMPLATES
+%--------------------------------------------------------------------------------
+
+% Note: these are templates for comments, which do not affect the final visual presentation of the .pdf document. They are standardized here in order to make the .tex document as orderly and readable as possible.
+
+%--- CHAPTER HEADER ------------------------
+
+% Below is the standard chapter header, written before a \part command (which generates what is known as a "part" in LaTeX, which is considered a "chapter" in the context of the book's content):
+
+%--------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------
+%    CHAPTER
+%--------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------
+
+% Each "line" consists of a % symbol followed by 80 - symbols (and, of course, a newline character, referred to hence as \n).
+% The format is:
+    % 2 lines;
+    % a % symbol, 4 spaces, and a LABEL in all caps (plus a \n);
+    % 2 lines.
+
+%--- SECTION HEADER ---------------------
+
+% Below is the standard section header, written before a \section command:
+
+%--------------------------------------------------------------------------------
+%    SECTION
+%--------------------------------------------------------------------------------
+
+% Each "line" consists of a % symbol followed by 80 - symbols (plus a \n).
+% The format is:
+    % 1 line;
+    % a % symbol, 4 spaces, and a LABEL in all caps (plus a \n);
+    % 1 line.
+
+%--- SUBSECTION HEADER ------------------
+
+% Below is the standard subsection header, written before a \subsection command:
+
+%----------------------------------------
+
+% It is a single "half-line", consisting of a % symbol followed by 40 - symbols (plus a \n).
+
+% This header is meant to be used without a LABEL when separating a subsection from what comes before it. However, it can be used as a general separator of text as well. In this use case, if a LABEL would really benefit readability (as it would in, say, the categorizing of notes), then one can be included like so:
+
+%--- LABEL ------------------------------
+
+% The format is (in a single line):
+    % a % symbol,
+    % 3 - symbols,
+    % a space,
+    % a LABEL in all caps (whose length is x characters),
+    % a space,
+    % (40 - 3 - 1 - x - 1) - symbols (i.e. (35 - x) dash symbols),
+    % a \n character.
+
+% "How am I supposed to remember this gosh durn algebra?" You don't have to. To write a subsection header with a label...
+
+% Step 1: Copy-paste two standard subsection headers, one below the other.
+
+%----------------------------------------
+%----------------------------------------
+
+% Step 2: Give one of them a label, starting after the first 3 dashes and remembering to bookend it with spaces.
+
+%--- COOLEST LABEL EVER -------------------------------------
+%----------------------------------------
+
+% Step 3: Trim the newly labeled header to match the length of the unlabeled, standard header.
+
+%--- COOLEST LABEL EVER -----------------
+%----------------------------------------
+
+% Step 4: Delete the extraneous subsection header.
+
+%--- COOLEST LABEL EVER -----------------
+
+% With this method, no matter the length of the LABEL, the header will still be as long as the standard subsection header, and the LABEL will be horizontally aligned with the labels in the section and part headers.
+% Do not write a label that is greater than 34 characters in length because you need at least one - symbol in order to properly conclude the header. Also, if you are using labels that long, you are labeling poorly anyway.
+
+% Note: there are no comment headers for subsubsections, nor for paragraphs, nor for subparagraphs.
+
+%--------------------------------------------------------------------------------
+%    CONTENT TEMPLATES
+%--------------------------------------------------------------------------------
+
+% TODO: Standardize vertical spacing.
+
+%--- 3-COLUMN TABLE ---------------------
+
+%\begin{table}[H]
+%	\caption{TITLE}
+%	\label{tab:LABEL}
+%	\begin{tabularx}{\textwidth}{|c|c|X|}
+%		\vtabularspace{3}
+%		\hline
+%		COLUMN-1 & COLUMN-2 & \multicolumn{1}{c|}{COLUMN-3} \\
+%		\hline
+%		TEXT-1 & TEXT-2 & TEXT-3 \\
+%		\hline
+%		\vtabularspace{3} % If many tables are used, only use this on the last one
+%	\end{tabularx}
+%\end{table}
+
+%--- 3-COLUMN TABLE WITH NOTES ----------
+
+%\begin{table}[H] 
+%	\begin{threeparttable}
+%		\caption{TITLE}
+%		\label{tab:LABEL}
+%		\begin{tabularx}{\textwidth}{|c|c|X|}
+%			\vtabularspace{3}
+%			\hline
+%			\multicolumn{3}{|c|}{\textbf{TITLE} \\
+%			\hline
+%			\textbf{TEXT-1} & \textbf{TEXT-2} & \textbf{TEXT-3} \\
+%			\hline
+%		\end{tabularx}
+%		\vspace*{1mm}
+%		\begin{tablenotes}\footnotesize
+%			\item[*] NOTE
+%		\end{tablenotes}
+%		\vspace*{5mm}
+%	\end{threeparttable}
+%\end{table}
+
+%--- WORST-CASE TABULAR -----------------
+
+%\begin{table}[H]
+%	\begin{tabularx}{\textwidth}{|Y|Y|Y|}
+%		\vtabularspace{3}
+%		\hline
+%		\multicolumn{3}{|c|}{\textbf{TITLE} \\
+%		\hline
+%		\textbf{TEXT-1} & \textbf{TEXT-2} & \textbf{TEXT-3} \\
+%		\hline
+%		\vtabularspace{3} % If many tabulars are used, only use this on the last one
+%	\end{tabularx}
+%\end{table}
+
+%--- TEXT BOX ---------------------------
+
+%\begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
+%	\vspace{3mm}
+%	\begin{center}
+%		\textbf{TITLE}
+%	\end{center}
+%	TEXT
+%	\vspace{3mm}
+%\end{tcolorbox}
+%\vspace{2\baselineskip}
+
+%--- QUOTATION --------------------------
+
+%\vspace{4mm}
+%\begin{displayquote}
+%	\textit{QUOTE}
+%	\vspace{2mm}
+%		\begin{flushright}
+%			---AUTHOR
+%		\end{flushright}
+%\end{displayquote}
+%\vspace{4mm}
+
+%--- ALGORITHM --------------------------
+
+% To be standardized...
+
+%--- DIAGRAMS AND FSMS ------------------
+
+% Made using the tikzpicture environment
+
