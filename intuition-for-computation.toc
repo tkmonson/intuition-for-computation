@@ -200,7 +200,7 @@
 \contentsline {chapter}{\numberline {C}Writing Well}{{\fontencoding {T1}\selectfont VI}}%
 \contentsline {chapter}{\numberline {D}How \textit {The Internet} Changed Humanity}{{\fontencoding {T1}\selectfont VII}}%
 \contentsline {chapter}{\numberline {E}Thoughts on Education}{{\fontencoding {T1}\selectfont VIII}}%
-\contentsline {chapter}{\numberline {F}Passion}{{\fontencoding {T1}\selectfont IX}}%
+\contentsline {chapter}{\numberline {F}Purpose}{{\fontencoding {T1}\selectfont IX}}%
 \contentsline {chapter}{\numberline {G}Bibliography}{{\fontencoding {T1}\selectfont X}}%
 \contentsline {chapter}{\numberline {H}Glossary}{{\fontencoding {T1}\selectfont XI}}%
 \contentsline {chapter}{\numberline {I}Future Work}{{\fontencoding {T1}\selectfont XII}}%
