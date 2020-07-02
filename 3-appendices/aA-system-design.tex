@@ -25,8 +25,10 @@
 \end{description}
 
 \section{Persistent Storage Technologies}
+
 \begin{description}
     \item[Caches] Caching involves putting data that is referenced often on a separate, small memory component. For example, when you stay on the same domain, your OS can cache an IP address so it doesn't have to look up the same IP address every time.
+
     \begin{description}[7mm]
 	\item[File-based caching] The data that you want is saved in a local file. For example, you could cache an HTML file instead of dynamically creating a website with data from a database. Not recommended for scalable solutions
 	\item[In-memory caching] Copy the most popular pieces of data from an application's database and put it in RAM for faster access times. If you choose to cache a database query as a key and the result as a value, it is hard to determine when to delete this pair when the data becomes stale. Alternatively, you could cache objects. When an object is instantiated, make the necessary database requests to initialize values, and store the object in memory. If a piece of data changes, delete all objects that use that piece of data from cache. This allows for \textit{asynchronous processing} (the application only touches the database when creating objects). Popular systems include Memcached and Redis.
@@ -39,6 +41,7 @@
     \end{description}
 	
     \item[RAID] \textit{Redundant Array of Independent Disks} is a technique that uses many physical disk drives to improve the redundancy or performance of a system.
+
     \begin{description}[7mm]
 	\item[RAID0] Writes a portion of a file on one drive and the other portion on another drive concurrently. This doubles write speed but has no redundancy.
 	\item[RAID1] Writes the whole file on both drives. No write speed improvements, but improves redundancy.
@@ -93,6 +96,4 @@
 	
     \item[Content Delivery Network (CDN)] A CDN is a globally distributed network of proxy servers that serves content to users from nearby nodes. A \textit{push CDN} only updates some piece of data when the developer pushes data to it. It's faster, but requires more storage on the CDN. A \textit{pull CDN} get content from the developer's server whenever a client requests it. It's slower, but requires less space on the CDN.
 \end{description}
-
-\newpage
 

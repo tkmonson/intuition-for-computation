@@ -68,42 +68,43 @@ Analog data are special because they exist in continuous space and thus theoreti
 Imagine that you throw a ball in the air and somehow exactly measure its height above the ground at every instant before it lands. If you were to organize these height data with respect to time, you would construct an analog signal that perfectly describes the height of the ball at any point during the throw. In practice, however, no measuring instrument has the required speed or precision necessary to do this. Additionally, you would need an infinite amount of memory to store continuous-time data that is collected at every instant. \\\\
 
 \begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
-        \vspace{3mm}
-        \begin{center}
-                \textbf{The Rationale for Binary Numbers}
-        \end{center}
-        Binary encoding of data is not a requirement for computation. Rather, it is a concession that is made toward digital electronics. Computers have been designed for other bases, and, in some cases, a non-binary encoding is actually preferable. As long as the data can be encoded with a finite number of symbols, it can be handled by a \textit{digital} computer (i.e. a computer that manipulates digits). A digital computer receives and operates on a \textit{discrete} signal of data, a value or set of values that updates at regular time intervals (e.g. every second, every minute, etc.). \\
-        
-        One could argue that \textit{analog} computers process data that are encoded with an infinite number of symbols. However, this would require a loose definition of "symbol" because analog data cannot be perfectly represented by digits. Rather, analog data is represented in a real, physical medium, like position, pressure, or voltage. An analog computer receives and operates on this \textit{continuous} signal of data that updates instantaneously with real-world time.  \\
-        
-        Consider the \underline{Mark 1A Fire Control Computer}, a device, more appropriately termed a "calculator" by modern definitions, that was installed on United States battleships in World War II. This machine used mechanical parts, such as gears, cams, followers, differentials, and integrators, to perform the arithmetic and calculus necessary to hit an enemy ship with a projectile, even if both ships were moving in different directions. It also used smooth components that gradually translated rotational motion into linear motion along a continuum. \\
+    \vspace{3mm}
+    \begin{center}
+        \textbf{The Rationale for Binary Numbers}
+    \end{center}
 
-% https://www.youtube.com/watch?v=s1i-dnAH9Y4
+    Binary encoding of data is not a requirement for computation. Rather, it is a concession that is made toward digital electronics. Computers have been designed for other bases, and, in some cases, a non-binary encoding is actually preferable. As long as the data can be encoded with a finite number of symbols, it can be handled by a \textit{digital} computer (i.e. a computer that manipulates digits). A digital computer receives and operates on a \textit{discrete} signal of data, a value or set of values that updates at regular time intervals (e.g. every second, every minute, etc.). \\
+        
+    One could argue that \textit{analog} computers process data that are encoded with an infinite number of symbols. However, this would require a loose definition of "symbol" because analog data cannot be perfectly represented by digits. Rather, analog data is represented in a real, physical medium, like position, pressure, or voltage. An analog computer receives and operates on this \textit{continuous} signal of data that updates instantaneously with real-world time.  \\
+        
+    Consider the \underline{Mark 1A Fire Control Computer}, a device, more appropriately termed a "calculator" by modern definitions, that was installed on United States battleships in World War II. This machine used mechanical parts, such as gears, cams, followers, differentials, and integrators, to perform the arithmetic and calculus necessary to hit an enemy ship with a projectile, even if both ships were moving in different directions. It also used smooth components that gradually translated rotational motion into linear motion along a continuum. \\
 
-        Despite being labeled with decimal (base-10) integers, this tool actually received \textit{continuous}, \textit{analog} quantities, such as physical position, as input. If each of its mechanical positions were considered a different "symbol," this system would theoretically be able to represent uniquely every real number to a infinite degree of precision and, thus, compute continuous functions without error. Such analog computation is performed also in slide rules, as well as in early electronic computers, which used voltage to represent numbers instead of position. \\
+    % https://www.youtube.com/watch?v=s1i-dnAH9Y4
+
+    Despite being labeled with decimal (base-10) integers, this tool actually received \textit{continuous}, \textit{analog} quantities, such as physical position, as input. If each of its mechanical positions were considered a different "symbol," this system would theoretically be able to represent uniquely every real number to a infinite degree of precision and, thus, compute continuous functions without error. Such analog computation is performed also in slide rules, as well as in early electronic computers, which used voltage to represent numbers instead of position. \\
+
+    \begin{center}
+        \begin{tikzpicture}
+            % Ruler
+            \draw [thick] (0,0) rectangle (10,1);
+            \draw (0,0.5) -- ++(7.2741,0);
+            \fill (7.2741,0.5) -- ++(-0.16,0.1) -- ++(0,-0.2);
+            \foreach \i in {0,...,10} {
+                    \draw (\i,1.6) node {$\i$};
+            }
+            
+            % Slider
+            \draw [thick] (7.2741,-0.2) rectangle (8.2741,1.2);
+            \draw (7.7741,-0.2) -- (7.7741,1.2);
+            \fill (7.7741,0) -- ++(-0.1,-0.2) -- ++(0.2,0);
+            \fill (7.7741,1) -- ++(-0.1,0.2) -- ++(0.2,0);
+            \draw (7.7741,-0.7) node {$7.7741$};
+        \end{tikzpicture}
+    \end{center}        
         
-        \begin{center}
-                \begin{tikzpicture}
-                % Ruler
-                \draw [thick] (0,0) rectangle (10,1);
-                \draw (0,0.5) -- ++(7.2741,0);
-                \fill (7.2741,0.5) -- ++(-0.16,0.1) -- ++(0,-0.2);
-                \foreach \i in {0,...,10} {
-                        \draw (\i,1.6) node {$\i$};
-                }
-                
-                % Slider
-                \draw [thick] (7.2741,-0.2) rectangle (8.2741,1.2);
-                \draw (7.7741,-0.2) -- (7.7741,1.2);
-                \fill (7.7741,0) -- ++(-0.1,-0.2) -- ++(0.2,0);
-                \fill (7.7741,1) -- ++(-0.1,0.2) -- ++(0.2,0);
-                \draw (7.7741,-0.7) node {$7.7741$};
-                \end{tikzpicture}
-        \end{center}        
+    Any digital encoding of numbers is possible in computing, and the choice does not affect what a computer theoretically can or cannot do. Rather, it has practical consequences. Decimal encoding was implemented in a number of early electronic and electro-mechanical computers, such as the Harvard Mark I and the ENIAC. 
         
-        Any digital encoding of numbers is possible in computing, and the choice does not affect what a computer theoretically can or cannot do. Rather, it has practical consequences. Decimal encoding was implemented in a number of early electronic and electro-mechanical computers, such as the Harvard Mark I and the ENIAC. 
-        
-        \vspace{3mm}
+    \vspace{3mm}
 \end{tcolorbox}
 \vspace{2\baselineskip}
 
@@ -120,19 +121,19 @@ Data can be represented by various \textit{media}, both symbolic and physical. I
 The ratio of a capacitor's charge to its capacitance determines its voltage (i.e. $V=\frac{q}{C}$). This voltage is then mapped to a logic level, which corresponds to a range of voltage values. These logic levels represent digits. In modern computer memory, data are represented as binary digits or \textit{bits} (i.e. the digits 0 and 1), each of which represents a binary number. In this case, there are two logic levels, \textit{low} and \textit{high}. \\
 
 \begin{table}[H]
-        \centering
-        \caption{Voltage Ranges for CMOS Logic Levels (V)}
-        \label{tab:logiclevels}
-        \begin{tabular}{|c|c|c|}
-                \vtabularspace{3}
-                \hline
-                Signals & Low (0) & High (1) \\
-                \hline
-                Input & 0.00--1.50 & 3.50--5.00 \\
-                Output & 0.00--0.05 & 4.95--5.00 \\
-                \hline
-                \vtabularspace{3}
-        \end{tabular}
+    \centering
+    \caption{Voltage Ranges for CMOS Logic Levels (V)}
+    \label{tab:logiclevels}
+    \begin{tabular}{|c|c|c|}
+        \vtabularspace{3}
+        \hline
+        Signals & Low (0) & High (1) \\
+        \hline
+        Input & 0.00--1.50 & 3.50--5.00 \\
+        Output & 0.00--0.05 & 4.95--5.00 \\
+        \hline
+        \vtabularspace{3}
+    \end{tabular}
 \end{table} 
 
 However, quantitative data need not be expressed with symbolic digits. They can instead be defined in terms of an \textit{analogous} physical quantity. For example, the unit of measurement known as the \textit{millimeter of mercury} (mmHg) defines pressure in terms of the height of a column of mercury in a manometer. It is used to quantify blood pressure, and it does so by considering height an \textit{analog} or \textit{model} of pressure measuring that instead. Using this method, data about one phenomenon can be encoded as data of a different phenomenon, provided that the quantities involved are somehow related to each other. In this case, a height of 1 mm is related to a pressure of 133.322 Pa above atmospheric pressure. \\

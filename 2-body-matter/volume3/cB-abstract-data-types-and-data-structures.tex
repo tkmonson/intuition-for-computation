@@ -169,9 +169,11 @@ A stack is similar to a linked list, but its operations are stricter. It can onl
         \textbf{Stacks Implemented at the Hardware Level}
     \end{center}
     \vspace{1mm}
+
     Stacks are also used in the architecture of computer memory. Classically, the bottom of the stack will be placed at a high address in memory and a stack pointer will be assigned its location. When data is pushed onto this stack, the stack will grow downward to lower addresses in memory, and the stack pointer will keep track of the top of the stack (lower addresses). When data is popped, the stack pointer will move accordingly toward the bottom (higher addresses). \\
     
     Local function variables are stored on the stack. If a call to another function is made, that function's local variables will be stored on the stack in a \textit{frame}. From top to bottom (low to high address), the frame of a callee function typically stores local variables, the return address to the code being executed by the caller function, and then parameters of the callee function. The \textit{frame pointer} marks the location of the return address in the frame. This implements the concept of \textit{scope} in computing. \\
+
 \end{tcolorbox}
 \vspace{7mm}
 
@@ -389,37 +391,29 @@ Inserting and deleting nodes can be complicated with red-black trees because all
 A new node, $N$, replaces a leaf and is \textit{always} initially colored red. It is also given two black, null leaves as children. Because we are inserting a red node, Property 5 is not at risk of being violated, but Property 4 is. We must rebalance the tree in cases where the insertion of $N$ causes a red node to have a red child. In these cases, $N$'s parent, $P$, must be red. We can also assume that $N$'s grandparent, $G$, is black, because its child, $P$, is red. However, $G$'s other child ($N$'s uncle), $U$, could be red or black. \\
 
 \begin{description}[1cm]
-    \item[\underline{Case 1}:] $N$ is the root of the tree. \\
-    
+    \item[\underline{Case 1}:] $N$ is the root of the tree. \\ 
     Just change $N$'s color to black to comply with Property 2. \\
     
-    \item[\underline{Case 2}:] $P$ is black. \\
-    
+    \item[\underline{Case 2}:] $P$ is black. \\ 
     Property 4 cannot be violated, so no rebalancing is required. \\
     
-    \item[\underline{Case 3}:] $P$ is red and $U$ is red. \\
-    
+    \item[\underline{Case 3}:] $P$ is red and $U$ is red. \\ 
     Property 4 is violated because $P$ is red and its child, $N$, is also red. This can be fixed by flipping $G$ to red and flipping $P$ and $U$ to black. However, $G$ may now violate Property 2 (if it is the root) or Property 4 (if its parent is red). For this reason, the rebalancing function (which was called on $N$) should be called recursively on $G$ whenever a Case 3 situation occurs. \\
     
-    \item[\underline{Case 4}:] $P$ is red and $U$ is black. \\
-    
+    \item[\underline{Case 4}:] $P$ is red and $U$ is black. \\ 
     Property 4 is violated because $P$ is red and its child, $N$, is also red. In this case, it is significant whether or not $N$ and $P$ are left or right children of their respective parents. This leads to four subcases that are all handled with tree rotations, similar to AVL insertion. \\
     
     \begin{description}[1cm]
         \item[\underline{Case 4.A}:] $N$ and $P$ are left children. \\
-        
         Perform a right rotation on $G$ and flip the colors of $P$ and $G$. \\
         
         \item[\underline{Case 4.B}:] $N$ is a right child, and $P$ is a left child. \\
-        
         Perform a left rotation on $P$ to create a Case 4.A subtree rooted at $G$. Perform the Case 4.A steps. \\
         
         \item[\underline{Case 4.C}:] $N$ and $P$ are right children. \\
-        
         Perform a left rotation on $G$ and flip the colors of $P$ and $G$. \\
         
         \item[\underline{Case 4.D}:] $N$ is a left child, and $P$ is a right child. \\
-        
         Perform a right rotation on $P$ to create a Case 4.C subtree rooted at $G$. Perform the Case 4.C steps. \\
     \end{description}
 \end{description}
