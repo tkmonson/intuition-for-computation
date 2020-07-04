@@ -183,11 +183,7 @@ Note that the actual complexity of the concrete cuckoo clock would be a bit more
 
 \section{Formalization of an Abstract Machine}
 
-\begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
-    \vspace{3mm}
-    \begin{center}
-        \textbf{A Brief Introduction to Formal Grammars}
-    \end{center}
+\begin{bluebox}{A Brief Introduction to Formal Grammars}
 
     A formal grammar is a finite set of \textit{production rules} that specifies what a particular language is supposed to look like. It formalizes the structure of "grammatical units" in a language. This is done in order to enforce a specific alphabet, a consistent lexicon, and a predictable sentence structure, all of which contribute to how useful and distinct any given language is. \\
         
@@ -220,10 +216,8 @@ Note that the actual complexity of the concrete cuckoo clock would be a bit more
     \end{itemize}
         
     Notice that the first example expresses an actual thought whereas the second example, while still syntactically a sentence, is nonsensical. Because it allows meaningless sentences, the grammar described above belongs to the class of \textit{context-free grammars}.
-        
-    \vspace{3mm}
-\end{tcolorbox}
-\vspace{2\baselineskip}
+
+\end{bluebox}
 
 \section{Classes of Automata and the Languages They Can Understand}
 
@@ -241,11 +235,7 @@ A finite-state machine is a model of computation that can be in exactly one \tex
 
 FSMs can read and understand \textit{regular languages}, which are languages that can be expressed using a \textit{regular expression} or \textit{regex}. A regex consists of constants (which denote sets of strings) and operators (which denote operations on those sets). If an FSM receives an input (such as a regex) at a given state, and its state-transition function maps that state and input to another state, we say that the FSM \textit{matches} that input. That is, it considers that input valid and will perform an action accordingly. \\\\
 
-\begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
-    \vspace{3mm}
-    \begin{center}
-        \textbf{A Quick Summary of Regular Expressions}
-    \end{center}
+\begin{bluebox}{A Quick Summary of Regular Expressions}
 
     Given a finite, non-empty input alphabet $\Sigma$, there are three constants defined as regexes:
         
@@ -275,9 +265,7 @@ FSMs can read and understand \textit{regular languages}, which are languages tha
         \item $[\;\hat{}\quad]$, which matches a single character which is not in the brackets.
     \end{itemize}
 
-    \vspace{3mm}
-\end{tcolorbox}
-\vspace{2\baselineskip}
+\end{bluebox}
 
 Not only is it correct to say that a finite-state machine can understand any regular expression, but also it is true that FSMs and regexes are equivalent. That is, a regex can be written in the form of an FSM and vice versa. Indeed, a regular language "program" can be expressed as a regex, a DFA, or an NFA. For example, the regex [A-Z][a-z]$^*$[0-9] describes any string that starts with a single uppercase letter, is followed by zero or more lowercase letters, and ends with a single digit. This expression can also be represented by the following DFA. Note that state $3$ is circled twice to indicate that it is a final state. The automaton will continue to run until it receives a sequence of input that allows it to transition to its final state.\\
 
@@ -361,11 +349,7 @@ As long as you have unlimited space to work in, the freedom to read and write sy
 
 % https://www.toothycat.net/~hologram/Turing/index.html
 
-\begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
-    \vspace{3mm}
-    \begin{center}
-        \textbf{Turing Machines and Consciousness}
-    \end{center}
+\begin{bluebox}{Turing Machines and Consciousness}
 
     In 1950, Turing developed the \textit{Turing test}, a test of a machine's ability to exhibit behavior indistinguishable from that of a human. It involves an interrogator who is tasked with having two separate text conversations and determining which of the two participants is actually a machine. If the interrogator cannot distinguish a difference, the machine has passed the test. Despite its importance to the philosophy of computer science, the test is not a good indicator of whether or not a computer can think. The test says more about how gullible the interrogator is than how conscious the computer is. At the end of the day, the computer is still following its programming. \\
         
@@ -390,9 +374,7 @@ As long as you have unlimited space to work in, the freedom to read and write sy
         \end{flushright}
     \end{displayquote}
 
-    \vspace{3mm}
-\end{tcolorbox}
-\vspace{2\baselineskip}
+\end{bluebox}
 
 A single-tape Turing machine is formally defined as a septuple $(Q,\Gamma,b,\Sigma,\delta,q_0,F)$, where
 
@@ -452,11 +434,7 @@ It is no coincidence that real-world computers today use array-based memory. Arr
 
 A subset of register machines known as \textit{random-access machines} allow for \textsc{jump} instructions (e.g. jump to register \#5623) in addition to standard sequential traversal of memory (e.g. move right, move right, move right, etc). This allows computers to accomplish a task with fewer instructions, but the expressive powers of random-access machines and Turing machines are equivalent because both are capable of \textit{eventually} solving the task. Modern computers can be described as random-access machines because they use \textit{random-access memory} (RAM). In RAM, the time to access information is independent of physical location. From a performance perspective, this means that we do not have to consider \textit{where} we store things in memory. It's all uniformly fast. This allows for the construction of \textit{node-based} data structures, which we will discuss in a later section. \\\\
 
-\begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]    
-    \vspace{3mm}
-    \begin{center}
-        \textbf{Exploring Exotic Automata}
-    \end{center}
+\begin{bluebox}{Exploring Exotic Automata}
 
     It is worth thinking about automata whose memory is modeled by non-list data structures. For example, a pushdown automaton uses a stack to model its memory and because of this, it is not Turing-complete. What if it used a queue instead? In this case, it would be Turing-complete because it could dequeue items to traverse the memory and then enqueue them to avoid data loss. One could envision this as a Turing machine whose infinite tape ends are glued together to form an infinite loop. The machine can only move in one direction, but it can still access every cell because its tape is circular. \\
         
@@ -480,9 +458,7 @@ A subset of register machines known as \textit{random-access machines} allow for
         \item A transition \textbf{function} $\delta$. If it were instead a relation (i.e. inputs are mapped to more than one output), the automaton would be nondeterministic. It is suspected that nondeterministic Turing machines would be able to solve NP-complete problems, which is a computational feat that has not yet been accomplished in a tractable way by a deterministic Turing machine.
     \end{itemize}
 
-    \vspace{3mm}        
-\end{tcolorbox}
-\vspace{2\baselineskip}
+\end{bluebox}
 
 While more exotic memory structures are theoretically possible, real-world computers use \textit{arrays} of memory. Since Turing machines can solve any computable problem and data structures are used by computers to solve problems, it follows that data structures can be simulated by Turing machines. Because register machines use array-based memory and are Turing-equivalent, it also follows that \textbf{all data structures can be implemented using arrays}. This is a very useful insight, and it will be discussed further in Section 3. \\
 

@@ -163,19 +163,13 @@ A \textit{stack} is a collection of elements with two operations: \textit{push} 
 
 A stack is similar to a linked list, but its operations are stricter. It can only insert and delete elements at the head of the list (top of the stack), and searching for or accessing an element located somewhere other than the head requires removing elements from head to tail until the desired element is the head. A stack can be implemented using an array or a linked list, so whether or not it is contiguous depends on the implementation details. \\\\
 
-\begin{tcolorbox}[enhanced, colback=textbook-blue, sharp corners]
-    \vspace{2mm}
-    \begin{center}
-        \textbf{Stacks Implemented at the Hardware Level}
-    \end{center}
-    \vspace{1mm}
+\begin{bluebox}{Stacks Implemented at the Hardware Level}
 
     Stacks are also used in the architecture of computer memory. Classically, the bottom of the stack will be placed at a high address in memory and a stack pointer will be assigned its location. When data is pushed onto this stack, the stack will grow downward to lower addresses in memory, and the stack pointer will keep track of the top of the stack (lower addresses). When data is popped, the stack pointer will move accordingly toward the bottom (higher addresses). \\
     
-    Local function variables are stored on the stack. If a call to another function is made, that function's local variables will be stored on the stack in a \textit{frame}. From top to bottom (low to high address), the frame of a callee function typically stores local variables, the return address to the code being executed by the caller function, and then parameters of the callee function. The \textit{frame pointer} marks the location of the return address in the frame. This implements the concept of \textit{scope} in computing. \\
+    Local function variables are stored on the stack. If a call to another function is made, that function's local variables will be stored on the stack in a \textit{frame}. From top to bottom (low to high address), the frame of a callee function typically stores local variables, the return address to the code being executed by the caller function, and then parameters of the callee function. The \textit{frame pointer} marks the location of the return address in the frame. This implements the concept of \textit{scope} in computing.
 
-\end{tcolorbox}
-\vspace{7mm}
+\end{bluebox}
 
 \begin{table}[H]
     \caption{Stack Time Complexity}

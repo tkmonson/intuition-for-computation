@@ -142,11 +142,7 @@ Notice that $S$ has cardinality $3$ and that $\mathcal{P}(S)$ has cardinality $2
 
 With the work of Kurt G\"odel in 1940 and of Paul Cohen in 1963, it was established that the continuum hypothesis cannot be proven or disproven. It is \textit{independent} of the axioms of Cantor's set theory. It is also independent of the axioms of the current foundation of mathematics, the \textit{Zermelo-Fraenkel set theory with the axiom of choice} (ZFC set theory). That said, since set theory works regardless of whether or not the continuum hypothesis is true, most mathematicians operate assuming that it \textit{is} true because the set of real numbers does appear to exhibit the behavior we would expect from a "continuum." Thus, independent of any particular set theory, we may assume that, for any transfinite cardinal $\lambda$, there is no cardinal $\kappa$ such that $\lambda<\kappa<2^\lambda$. \\\\
 
-\begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
-    \vspace{3mm}
-    \begin{center}
-        \textbf{Backlash Against Cantor's Set Theory}
-    \end{center}
+\begin{bluebox}{Backlash Against Cantor's Set Theory}
 
     Typically, when a proof is submitted, it is either quickly accepted by the mathematical community or quickly shown to be flawed. In the case of Georg Cantor's set theory, controversy loomed for many decades and objections came from many different angles. Most of the grievances came from the \textit{constructivists}, a group that was partially founded by Cantor's mentor, Leopold Kronecker. \\
 
@@ -190,10 +186,9 @@ With the work of Kurt G\"odel in 1940 and of Paul Cohen in 1963, it was establis
             ---David Hilbert
         \end{flushright}
     \end{displayquote}
-    \vspace{1mm}
-        
-\end{tcolorbox}
-\vspace{2\baselineskip}
+
+\end{bluebox}
+ 
 
 \subsection{Cantor's Later Years and Legacy}
 
@@ -320,11 +315,7 @@ Similarly, a recursively enumerable language can be represented by a \textit{rec
 \end{align*}
 The decision problem can be phrased in the same way, but, in the case of a recursively enumerable $L$, it is called \textit{partially decidable} or \textit{semidecidable}. That is, we can decide a word \textit{is} in the language, but we cannot formally decide that it is \textit{not}. In mathematical terms, statements like this can be \textit{proven}, but not \textit{disproven}. If that sounds incredibly unintuitive, that's because it is. This concept will come up later in a discussion of Kurt G\"odel's contribution to computability. \\\\
 
-\begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
-    \vspace{3mm}
-    \begin{center}
-        \textbf{Decidability and Semidecidability for Humans and Computers}
-    \end{center}
+\begin{bluebox}{Decidability and Semidecidability for Humans and Computers}
 
     Recall that recursive languages are also recursively enumerable. That is, their recursive nature is \textit{countable}. This is because recursive languages can construct only \textit{finite} sentences that have an end. On the other hand, a recursively enumerable language can have sentences that expand forever, always ready to accept another clause before its period. \\
         
@@ -364,9 +355,7 @@ The decision problem can be phrased in the same way, but, in the case of a recur
 
     % https://www.youtube.com/watch?v=7Kd3R\_RlXgc
 
-    \vspace{3mm}
-\end{tcolorbox}
-\vspace{2\baselineskip}
+\end{bluebox}
 
 The problems that Turing machines can solve are either decidable or semidecidable. What, then, is \textit{undecidable}? What kinds of problems do non-recursively enumerable languages describe? Consider the same decision problem from before: "Let $L$ be a language represented by a set. Given a word $w$, is $w$ a well-formed word in $L$?" If $L$ is non-recursively enumerable, a Turing machine cannot ever decide this problem because it cannot recognize $L$. Thus, such decision problems are \textit{undecidable} for all inputs, and any related function problems have no answer. \\
 
@@ -400,17 +389,11 @@ In 1900, David Hilbert gave an address to the International Congress of Mathemat
 
 This presentation of problems was, in essence, the inception of \textit{Hilbert's program}, a worldwide goal to solve what was known at the time as the \textit{foundational crisis of mathematics}. With the general acceptance of Cantor's set theory came the discovery of many paradoxes and inconsistencies that called into question the \textit{consistency} of mathematics. It had been assumed until this point that mathematics was something that could be trusted, that a statement could be proven true from previous mathematical truths. The creation of Zermelo-Fraenkel set theory in the late 1920s resolved some of these paradoxes, such as Russell's paradox, but not all inconsistencies were resolved. Mathematics was still curiously "broken" in certain ways. \\
 
-\begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
-    \vspace{3mm}        
-    \begin{center}
-        \textbf{Metamathematics}
-    \end{center}
+\begin{bluebox}{Metamathematics}
 
     TEXT
-        
-    \vspace{3mm}
-\end{tcolorbox}
-\vspace{2\baselineskip}
+
+\end{bluebox}
 
 As a proponent of the philosophy of mathematics known as \textit{formalism}, Hilbert believed that mathematics was not a description of some abstract part of reality, but was rather akin to a game where pieces could be moved according to a set of rules. He believed that a mathematical "game" was played with "pieces" from an arbitrary set of \textit{a priori} truths. These pieces are called \textit{axioms}, and they are manipulated according to an arbitrary set of \textit{inference rules} to construct \textit{conclusions}. These conclusions can then be used as \textit{premises} for the inference of further conclusions. Thus, formalism avers that mathematics is purely \textit{syntactic}. It is nothing more than the manipulation of strings of symbols by logical rules, and any sort of \textit{semantic meaning} derived from these strings is merely the product of an \textit{interpretation}. \\
 
@@ -454,17 +437,11 @@ A theory is syntactic in nature. It is a set of strings written in a language $\
 
 \subsection{The Halting Problem}
 
-\begin{tcolorbox}[breakable, enhanced, colback=textbook-blue, sharp corners]
-    \vspace{3mm}        
-    \begin{center}
-        \textbf{Computability is Recursion}
-    \end{center}
+\begin{bluebox}{Computability is Recursion}
         
         TEXT
-        
-    \vspace{3mm}
-\end{tcolorbox}
-\vspace{2\baselineskip}
+
+\end{bluebox}
 
 \section{Turing Degrees}
 

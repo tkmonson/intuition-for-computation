@@ -227,11 +227,7 @@ The space complexity of this implementation is particularly bad. If you needed t
     \end{tabularx}
 \end{table}
 
-\begin{tcolorbox}[enhanced, colback=textbook-blue, sharp corners]
-    \vspace{2mm}
-    \begin{center}
-        \textbf{DFS and BFS are Intertwined}
-    \end{center}
+\begin{bluebox}{DFS and BFS are Intertwined}
     
     DFS and BFS are two sides of the same coin. DFS is more natural to write recursively, and BFS is more natural to write iteratively. DFS uses a stack, and BFS uses a queue. Both searches are $O(|V|+|E|)$, so they will theoretically finish traversing the same tree in the same amount of time. However, in general, DFS will search for nodes that are far away from the source before BFS will. And, in general, BFS will search for nodes that are near the source before DFS. If you have an idea of "how distant" your desired item likely is from your source, it might be worth choosing one over the other to improve your search performance. \\
     
@@ -241,8 +237,7 @@ The space complexity of this implementation is particularly bad. If you needed t
     
     It is interesting to think of DFS and BFS as two different kinds of personalities. DFS is like a person who is overly confident and always pressing forward, even if they are going in the wrong direction. They only take a step back if they are forced to. BFS is like a person who is overly cautious and always investigating every option before moving forward. They only move on if there is nothing else to learn around them. Both approaches are useful, but they are useful in different scenarios. \\
 
-\end{tcolorbox}
-\vspace{5mm}
+\end{bluebox}
 
 \subsection{Bidirectional Search}
 
