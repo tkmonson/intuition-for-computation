@@ -1,9 +1,10 @@
 \chapter{Abstract Data Types and the Data Structures that Implement Them}
 
-In this section, we evaluate data structures from a theoretical standpoint, describing their essential properties and why one may be preferable to another for some task. \textit{There is no single, best way of storing data.} The optimal layout varies depending on the nature of the task. The rules and requirements that define these data structures can be implemented in code, and many programming languages have their own implementations of these structures. \\
+In this section, we evaluate data structures from a theoretical standpoint, describing their essential properties and why one may be preferable to another for some task. \textit{There is no single, best way of storing data.} The optimal layout varies depending on the nature of the task. The rules and requirements that define these data structures can be implemented in code, and many programming languages have their own implementations of these structures.
 
-Some operations are common among many different data structures. The time complexity of any of these operations will depend on the choice of data structure. We will discuss how these operations are performed concretely for each data structure listed below, but first we will give an abstract description of these operations. \\
+Some operations are common among many different data structures. The time complexity of any of these operations will depend on the choice of data structure. We will discuss how these operations are performed concretely for each data structure listed below, but first we will give an abstract description of these operations.
 
+\vspace{4mm}
 \begin{description}
     \item[Access] To \textit{access} an item in a data structure is to \textbf{provide} an index to denotes the desired element's location relative to the other elements (1st, 2nd, ..., Nth) and to \textbf{use} that element to acquire the element's data. The action is only applicable to data structures that have order.
     \item[Search] To \textit{search} for an element in a data structure is to \textbf{provide} some sort of information about the element (like its value) and to \textbf{use} that information to acquire the element's data.
@@ -32,11 +33,11 @@ Note also that, in many cases, a name can be used to refer to both an abstract d
         \hline
         Map & A collection of key-value pairs such that the keys are unique. \\
         \hline
-        Graph & A set of elements (called nodes) and a set of pairs of those nodes (called edges). The pairs are unordered for an undirected graph or ordered for a directed graph.\\
+        Graph & A set of elements (called nodes) and a set of pairs of those nodes (called edges). The pairs are unordered for an undirected graph or ordered for a directed graph. \\
         \hline
         Tree & A directed, acyclic graph in which all nodes have an in-degree of 1 (except the root node, which has an in-degree of 0). \\
         \hline
-        Stack & A LIFO-ordered collection of elements that are not necessarily unique.\\
+        Stack & A LIFO-ordered collection of elements that are not necessarily unique. \\
         \hline
         Queue & A FIFO-ordered collection of elements that are not necessarily unique. \\
         \hline
@@ -50,7 +51,7 @@ Note also that, in many cases, a name can be used to refer to both an abstract d
     \end{tabularx}
 \end{table}
 
-Each data structure described below could implement one or more of these abstract data types. However, each name used below refers to a data structure of one of these types, not to the type itself, unless specified otherwise. \\
+Each data structure described below could implement one or more of these abstract data types. However, each name used below refers to a data structure of one of these types, not to the type itself, unless specified otherwise.
 
 \section{Lists}
 
@@ -58,9 +59,9 @@ A \textit{list} is an abstract data type that represents an ordered collection o
 
 \subsection{Arrays}
 
-An \textit{array} is a collection of elements that are stored contiguously in memory. Each element in the array is assigned an index which describes its relative position in the array.\\
+An \textit{array} is a collection of elements that are stored contiguously in memory. Each element in the array is assigned an index which describes its relative position in the array.
 
-The elements should take up the same amount of space in memory. This is required to allow indexing to function correctly. To find an element, you must find the beginning of that element's data in memory and then fetch a number of bits that corresponds to the element's size. To find the element with index $i$, you would start at the memory address where the array begins, skip forward $i\times$\texttt{elementSize} bits, and then fetch \texttt{elementSize} bits. In addition to elements taking up the same amount of space, they should also have the same type. This allows the bits to be interpreted in an unambiguous way.\\
+The elements should take up the same amount of space in memory. This is required to allow indexing to function correctly. To find an element, you must find the beginning of that element's data in memory and then fetch a number of bits that corresponds to the element's size. To find the element with index $i$, you would start at the memory address where the array begins, skip forward $i\times$\texttt{elementSize} bits, and then fetch \texttt{elementSize} bits. In addition to elements taking up the same amount of space, they should also have the same type. This allows the bits to be interpreted in an unambiguous way.
 
 Arrays can be \textit{static} or \textit{dynamic}. A static array takes up a fixed amount of size in memory while a dynamic array can be resized. The difficulty with increasing the size of an array is that an array must remain contiguous, but the memory just ahead of the end of the array could contain important data that cannot be erased. For this reason, dynamic arrays are often implemented as static arrays that are destroyed and recreated with a larger size elsewhere in memory when they exceed their previous size.
 
@@ -68,7 +69,7 @@ Arrays can be \textit{static} or \textit{dynamic}. A static array takes up a fix
     \caption{Dynamic Array Time Complexity}
     \label{tab:array}
     \begin{tabularx}{\textwidth}{|c|c|X|}
-        \vtabularspace{3}
+        \vtabularspace{2}
         \hline
         Operation & Time & \multicolumn{1}{c|}{Reasoning} \\
         \hline
@@ -78,7 +79,7 @@ Arrays can be \textit{static} or \textit{dynamic}. A static array takes up a fix
         \hline
         Insert (beginning) & $O(n)$ & Have to shift all elements one to the right \\
         Insert (middle) & $O(n)$ & Same as above in the worst case \\
-        Insert (end) & $O(1)$ amortized & If there is allocated space at the end, it takes constant time. If not, you may have to copy all elements to a new, bigger array.\\
+        Insert (end) & $O(1)$ amortized & If there is allocated space at the end, it takes constant time. If not, you may have to copy all elements to a new, bigger array. \\
         \hline
         \hline
         Delete (beginning) & $O(n)$ & Have to shift all elements one to the left \\
@@ -87,13 +88,12 @@ Arrays can be \textit{static} or \textit{dynamic}. A static array takes up a fix
         \hline
     \end{tabularx}
     \begin{tabularx}{\textwidth}{|Y|Y|Y|}
-        \vtabularspace{3}
+        \vtabularspace{1}
         \hline
         \multicolumn{3}{|c|}{\textbf{Worst-Case Summary}} \\
         \hline
         \textbf{Access = $O(1)$} & \textbf{Search = $O(n)$} & \textbf{Insert/Delete = $O(n)$} \\
         \hline
-        \vtabularspace{3}
     \end{tabularx}
 \end{table}
 
@@ -101,13 +101,13 @@ A static array has the same search properties, but it cannot insert or delete it
 
 \subsection{Linked Lists}
 
-A \textit{linked list} is a collection of \textit{nodes} that are not stored contiguously in memory. A node contains some data and a pointer to the next node in the sequence. To \textit{point} a node A to another node B means to assign A's pointer the value of B's location in memory. The first node is called the \textit{head} of the linked list and the last node is called the \textit{tail}. The tail has no next node, so its pointer points to null.\\
+A \textit{linked list} is a collection of \textit{nodes} that are not stored contiguously in memory. A node contains some data and a pointer to the next node in the sequence. To \textit{point} a node A to another node B means to assign A's pointer the value of B's location in memory. The first node is called the \textit{head} of the linked list and the last node is called the \textit{tail}. The tail has no next node, so its pointer points to null.
 
-The data contained in the nodes of a linked list do not need to have the same type or size. Because the nodes are stored non-contiguously and are accessed via pointers, there is no need for nodes to be of the same size. \\
+The data contained in the nodes of a linked list do not need to have the same type or size. Because the nodes are stored non-contiguously and are accessed via pointers, there is no need for nodes to be of the same size.
 
-Linked lists allow for insertion and deletion of elements without restructuring the entire data structure. This means that linked lists are dynamic. To insert an element X between elements P and N, traverse the list to find P, save P's pointer to N as temp, point P to X, and point X to temp. Deleting is a similar process: traverse the list to find P and point it to N. \\
+Linked lists allow for insertion and deletion of elements without restructuring the entire data structure. This means that linked lists are dynamic. To insert an element X between elements P and N, traverse the list to find P, save P's pointer to N as temp, point P to X, and point X to temp. Deleting is a similar process: traverse the list to find P and point it to N.
 
-Because you have to traverse the list to insert or delete, it is common practice to keep track of where the tail is located in memory. This allows for constant time insertion of elements at the end of the list. For constant time deletion of the tail, you would also have to cache the penultimate node, Pen, in order to point it to null and make it the new tail. However, keeping track of Pen is $O(n)$ for a singly linked list because there is no way of directly finding the new Pen after deleting the tail once.\\
+Because you have to traverse the list to insert or delete, it is common practice to keep track of where the tail is located in memory. This allows for constant time insertion of elements at the end of the list. For constant time deletion of the tail, you would also have to cache the penultimate node, Pen, in order to point it to null and make it the new tail. However, keeping track of Pen is $O(n)$ for a singly linked list because there is no way of directly finding the new Pen after deleting the tail once.
 
 A linked list can be singly or doubly linked. A doubly linked list has nodes with pointers to both the previous and next nodes in the sequence. This allows for traversal of the list in both directions. It also allows for constant time deletion of the tail, as long as the tail is cached.
 
@@ -116,7 +116,7 @@ A linked list can be singly or doubly linked. A doubly linked list has nodes wit
     \label{tab:linkedlist}
 
     \begin{tabularx}{\textwidth}{|c|c|X|}
-        \vtabularspace{3}
+        \vtabularspace{2}
         \hline
         Operation & Time & \multicolumn{1}{c|}{Reasoning} \\
         \hline
@@ -126,7 +126,7 @@ A linked list can be singly or doubly linked. A doubly linked list has nodes wit
         \hline
         Insert (beginning) & $O(1)$ & Point the new node to the head \\
         Insert (middle) & $O(i)$ & Search for the previous node at index i-1, then reassign pointers \\
-        Insert (end) & \multicolumn{1}{p{3cm}|}{$O(1)$ with caching, $O(n)$ otherwise} & If you know where the tail is stored, you can just point it to the new node. If not, you must first traverse the entire list to find the tail, which is an $O(n)$ operation.\\
+        Insert (end) & \multicolumn{1}{p{3cm}|}{$O(1)$ with caching, $O(n)$ otherwise} & If you know where the tail is stored, you can just point it to the new node. If not, you must first traverse the entire list to find the tail, which is an $O(n)$ operation. \\
         \hline
         \hline
         Delete (beginning) & $O(1)$ & Point head to null \\
@@ -136,7 +136,7 @@ A linked list can be singly or doubly linked. A doubly linked list has nodes wit
     \end{tabularx}
 
     \begin{tabularx}{\textwidth}{|Y|Y|Y|}
-        \vtabularspace{3}
+        \vtabularspace{2}
         \hline
         \multicolumn{3}{|c|}{\textbf{Worst-Case Summary (singly linked, no caching)}} \\
         \hline
@@ -145,13 +145,13 @@ A linked list can be singly or doubly linked. A doubly linked list has nodes wit
     \end{tabularx}
 
     \begin{tabularx}{\textwidth}{|Y|Y|Y|}
-        \vtabularspace{3}
+        \vtabularspace{2}
         \hline
         \multicolumn{3}{|c|}{\textbf{Worst-Case Summary (doubly linked, cached tail)}} \\
         \hline
         \textbf{Access = $O(n)$} & \textbf{Search = $O(n)$} & \textbf{Insert/Delete = $O(1)$} \\
         \hline
-        \vtabularspace{3}
+        \vtabularspace{2}
     \end{tabularx}
 \end{table}
 
@@ -159,13 +159,13 @@ A linked list can be singly or doubly linked. A doubly linked list has nodes wit
 
 \section{Stacks}
 
-A \textit{stack} is a collection of elements with two operations: \textit{push} and \textit{pop}. To push an element onto a stack is to add it to the stack. To pop an element from the stack is to remove its most recently added element and return it. \textit{Peek} is an operation that is sometimes implemented for convenience. It allows access to the most recently added element without removing it from the stack. The most recently added element is located at the \textit{top} of the stack, and the least recently added element is located at the \textit{bottom} of the stack. \\
+A \textit{stack} is a collection of elements with two operations: \textit{push} and \textit{pop}. To push an element onto a stack is to add it to the stack. To pop an element from the stack is to remove its most recently added element and return it. \textit{Peek} is an operation that is sometimes implemented for convenience. It allows access to the most recently added element without removing it from the stack. The most recently added element is located at the \textit{top} of the stack, and the least recently added element is located at the \textit{bottom} of the stack.
 
-A stack is similar to a linked list, but its operations are stricter. It can only insert and delete elements at the head of the list (top of the stack), and searching for or accessing an element located somewhere other than the head requires removing elements from head to tail until the desired element is the head. A stack can be implemented using an array or a linked list, so whether or not it is contiguous depends on the implementation details. \\\\
+A stack is similar to a linked list, but its operations are stricter. It can only insert and delete elements at the head of the list (top of the stack), and searching for or accessing an element located somewhere other than the head requires removing elements from head to tail until the desired element is the head. A stack can be implemented using an array or a linked list, so whether or not it is contiguous depends on the implementation details.
 
 \begin{bluebox}{Stacks Implemented at the Hardware Level}
 
-    Stacks are also used in the architecture of computer memory. Classically, the bottom of the stack will be placed at a high address in memory and a stack pointer will be assigned its location. When data is pushed onto this stack, the stack will grow downward to lower addresses in memory, and the stack pointer will keep track of the top of the stack (lower addresses). When data is popped, the stack pointer will move accordingly toward the bottom (higher addresses). \\
+    Stacks are also used in the architecture of computer memory. Classically, the bottom of the stack will be placed at a high address in memory and a stack pointer will be assigned its location. When data is pushed onto this stack, the stack will grow downward to lower addresses in memory, and the stack pointer will keep track of the top of the stack (lower addresses). When data is popped, the stack pointer will move accordingly toward the bottom (higher addresses).
     
     Local function variables are stored on the stack. If a call to another function is made, that function's local variables will be stored on the stack in a \textit{frame}. From top to bottom (low to high address), the frame of a callee function typically stores local variables, the return address to the code being executed by the caller function, and then parameters of the callee function. The \textit{frame pointer} marks the location of the return address in the frame. This implements the concept of \textit{scope} in computing.
 
@@ -175,7 +175,7 @@ A stack is similar to a linked list, but its operations are stricter. It can onl
     \caption{Stack Time Complexity}
     \label{tab:stack}
     \begin{tabularx}{\textwidth}{|c|c|X|}
-        \vtabularspace{3}
+        \vtabularspace{2}
         \hline
         Operation & Time & \multicolumn{1}{c|}{Reasoning} \\
         \hline
@@ -187,13 +187,12 @@ A stack is similar to a linked list, but its operations are stricter. It can onl
         Pop & $O(1)$ & Remove and return the head and make the next element the new head \\
         Peek & $O(1)$ & Return the head \\
         \hline
-        \vtabularspace{3}
     \end{tabularx}
 \end{table}
 
 \section{Queues}
 
-A queue is a collection of elements with  two operations: \textit{enqueue} and \textit{dequeue}. To enqueue an element is to add it to the queue. To dequeue an element is to remove its least recently added element and return it. As with the stack, \textit{peek} is often implemented for convenience, and it returns the least recently added element. The least recently added element is located at the \textit{front} of the queue, and the most recently added element is located at the \textit{back} of the queue. \\
+A queue is a collection of elements with  two operations: \textit{enqueue} and \textit{dequeue}. To enqueue an element is to add it to the queue. To dequeue an element is to remove its least recently added element and return it. As with the stack, \textit{peek} is often implemented for convenience, and it returns the least recently added element. The least recently added element is located at the \textit{front} of the queue, and the most recently added element is located at the \textit{back} of the queue.
 
 While a queue can be implemented using an array, it is more commonly implemented using either a singly or doubly linked list or using a dynamic array variant called an "array deque." If implemented using a singly linked list, it must insert elements at the tail and remove them at the head. A queue may or may not be contiguous, depending on the implementation.
 
@@ -201,7 +200,7 @@ While a queue can be implemented using an array, it is more commonly implemented
     \caption{Queue Time Complexity}
     \label{tab:queue}
     \begin{tabularx}{\textwidth}{|c|c|X|}
-        \vtabularspace{3}
+        \vtabularspace{2}
         \hline
         Operation & Time & \multicolumn{1}{c|}{Reasoning} \\
         \hline
@@ -213,7 +212,6 @@ While a queue can be implemented using an array, it is more commonly implemented
         Dequeue & $O(1)$ & Remove and return the head and make the next element the new head \\
         Peek & $O(1)$ & Return the head \\
         \hline
-        \vtabularspace{3}
     \end{tabularx}
 \end{table}
 
@@ -223,11 +221,11 @@ While a queue can be implemented using an array, it is more commonly implemented
 
 \section{Graphs}
 
-A graph is a set of vertices (nodes) and edges between those vertices. Graphs are either undirected or directed, which means their edges are unidirectional or bidirectional, respectively. It is usually implemented using either an \textit{adjacency list} or an \textit{adjacency matrix}. \\
+A graph is a set of vertices (nodes) and edges between those vertices. Graphs are either undirected or directed, which means their edges are unidirectional or bidirectional, respectively. It is usually implemented using either an \textit{adjacency list} or an \textit{adjacency matrix}.
 
-With an adjacency list, the vertices are stored as objects, and each vertex stores a list of its adjacent vertices. The edges could also be stored as objects, in which case, each vertex would store a list of its incident edges, and each edge would store a list of its incident vertices. This implementation could, for example, sufficiently represent a \textit{hypergraph}, which is a generalization of a graph in which an edge can join any number of vertices. \\
+With an adjacency list, the vertices are stored as objects, and each vertex stores a list of its adjacent vertices. The edges could also be stored as objects, in which case, each vertex would store a list of its incident edges, and each edge would store a list of its incident vertices. This implementation could, for example, sufficiently represent a \textit{hypergraph}, which is a generalization of a graph in which an edge can join any number of vertices.
 
-With an adjacency matrix, the rows would represent the source vertices and the columns would represent the destination vertices. The matrix simply stores how many edges are incident to both the source vertex and destination vertex. The data pertaining to the vertices and edges is stored outside of the matrix. The adjacency matrix for an undirected graph must be symmetrical, whereas this is not the case for directed graphs. \\
+With an adjacency matrix, the rows would represent the source vertices and the columns would represent the destination vertices. The matrix simply stores how many edges are incident to both the source vertex and destination vertex. The data pertaining to the vertices and edges is stored outside of the matrix. The adjacency matrix for an undirected graph must be symmetrical, whereas this is not the case for directed graphs.
 
 Adjacency lists are better at representing \textit{sparse} graphs (graphs with few edges) while adjacency matrices are better at representing \textit{dense} graphs (graphs with close to the maximum number of edges).
 
@@ -235,7 +233,7 @@ Adjacency lists are better at representing \textit{sparse} graphs (graphs with f
     \caption{Adjacency List Time Complexity}
     \label{tab:adjlist}
     \begin{tabularx}{\textwidth}{|c|c|X|}
-        \vtabularspace{3}
+        \vtabularspace{2}
         \hline
         Operation & Time & \multicolumn{1}{c|}{Reasoning} \\
         \hline
@@ -256,7 +254,7 @@ Adjacency lists are better at representing \textit{sparse} graphs (graphs with f
     \caption{Adjacency Matrix Time Complexity}
     \label{tab:adjmatrix}
     \begin{tabularx}{\textwidth}{|c|c|X|}
-        \vtabularspace{3}
+        \vtabularspace{2}
         \hline
         Operation & Time & \multicolumn{1}{c|}{Reasoning} \\
         \hline
@@ -270,7 +268,6 @@ Adjacency lists are better at representing \textit{sparse} graphs (graphs with f
         \multicolumn{3}{c}{Space complexity: $O(|V|^2)$} \\
         \hline
         \hline
-        \vtabularspace{3}
     \end{tabularx}
 \end{table}
 
@@ -299,7 +296,6 @@ A \textit{tree} is a collection of nodes that contain data and pointers to child
         \begin{tablenotes}\footnotesize
             \item[*] These terms are not standardized, but they are often defined this way.
         \end{tablenotes}
-        \vspace*{5mm}
     \end{threeparttable}
 \end{table}
 
@@ -307,15 +303,15 @@ We will now discuss a variety of tree-based abstract data types and data structu
 
 \subsection{Binary Search Trees}
 
-A \textit{binary search tree} (BST) refers to an ordered binary tree that satisfies the \textit{binary search property}, which states that each parent node must be greater than or equal to the nodes in its left subtree and less than the nodes in its right subtree. This is a sorted order that is imposed on the tree to give it $O(log\;n)$ search, insert, and delete operations, as long as the tree is also balanced. \\
+A \textit{binary search tree} (BST) refers to an ordered binary tree that satisfies the \textit{binary search property}, which states that each parent node must be greater than or equal to the nodes in its left subtree and less than the nodes in its right subtree. This is a sorted order that is imposed on the tree to give it $O(log\;n)$ search, insert, and delete operations, as long as the tree is also balanced.
 
-Inserting a node, $N$, into a binary search tree involves searching for it in the tree until you arrive at a leaf and then making $N$ a child of that leaf. Deleting a node, $N$, is more complicated. If $N$ has no children, simply remove it. If it has one child, replace it with that child. If it has two children, copy the data of $C$, which can be either $N$'s in-order predecessor or in-order successor, to $N$. If $C$ is a leaf, remove it. Otherwise, $C$ has one child. Replace $C$ with that child. \\
+Inserting a node, $N$, into a binary search tree involves searching for it in the tree until you arrive at a leaf and then making $N$ a child of that leaf. Deleting a node, $N$, is more complicated. If $N$ has no children, simply remove it. If it has one child, replace it with that child. If it has two children, copy the data of $C$, which can be either $N$'s in-order predecessor or in-order successor, to $N$. If $C$ is a leaf, remove it. Otherwise, $C$ has one child. Replace $C$ with that child.
 
 \begin{table}[H]
     \caption{Binary Search Tree Time Complexity}
     \label{tab:bst}
     \begin{tabularx}{\textwidth}{|c|c|X|}
-        \vtabularspace{3}
+        \vtabularspace{2}
         \hline
         Operation & Time & \multicolumn{1}{c|}{Reasoning} \\
         \hline
@@ -323,21 +319,22 @@ Inserting a node, $N$, into a binary search tree involves searching for it in th
         Insert & $O(log\;n)$ & Perform a binary search for the closest node and insert the given node as its leaf \\
         Delete & $O(log\;n)$ & Perform a binary search to find the given node, delete it, and rearrange the tree \\
         \hline
-        \vtabularspace{3}
     \end{tabularx}
 \end{table}
 
-As nodes are inserted into and deleted from a binary search tree, the tree may become unbalanced. For this reason, \textit{self-balancing BSTs}, such as \textit{AVL trees} and \textit{red-black trees}, are often the preferred BST implementations because a BST's search, insert, and delete operations are only $O(log\;n)$ if the tree remains balanced. \\
+As nodes are inserted into and deleted from a binary search tree, the tree may become unbalanced. For this reason, \textit{self-balancing BSTs}, such as \textit{AVL trees} and \textit{red-black trees}, are often the preferred BST implementations because a BST's search, insert, and delete operations are only $O(log\;n)$ if the tree remains balanced.
 
 \subsubsection{AVL Trees}
 
-In an AVL tree, each node, $N$, stores the heights of its left and right subtrees, $L$ and $R$. The difference between these heights ($L$.\texttt{height} - $R$.\texttt{height}) is called $N$'s \textit{balance}. If its balance is less than -1 or greater than 1, $N$ is unbalanced and must be fixed using \textit{tree rotation}. In practice, if a node becomes unbalanced after an insertion, its balance will be either 2 (L is taller) or -2 (R is taller). An AVL tree is only balanced when all of its nodes are balanced. \\
+In an AVL tree, each node, $N$, stores the heights of its left and right subtrees, $L$ and $R$. The difference between these heights ($L$.\texttt{height} - $R$.\texttt{height}) is called $N$'s \textit{balance}. If its balance is less than -1 or greater than 1, $N$ is unbalanced and must be fixed using \textit{tree rotation}. In practice, if a node becomes unbalanced after an insertion, its balance will be either 2 (L is taller) or -2 (R is taller). An AVL tree is only balanced when all of its nodes are balanced.
 
-There are two types of rotations, left and right, and they are inverse operations of each other. A rotation is a way to move a parent ($A$) down the tree while moving its child ($B$) up and preserving the order of the tree. Regardless of the direction, this results in $B$ abandoning its child $C$ to adopt $A$ as its child and $A$ adopting $C$ as its child. During a right rotation, $B$ starts as $A$'s left child, $C$ starts as $B$'s right child, $A$ becomes $B$'s right child, and $C$ becomes $A$'s left child. During a left rotation, $B$ starts as $A$'s right child, $C$ starts as $B$'s left child, $A$ becomes $B$'s left child, and $C$ becomes $A$'s right child. The rotation operation takes the parent node, $A$, as input. \\
+There are two types of rotations, left and right, and they are inverse operations of each other. A rotation is a way to move a parent ($A$) down the tree while moving its child ($B$) up and preserving the order of the tree. Regardless of the direction, this results in $B$ abandoning its child $C$ to adopt $A$ as its child and $A$ adopting $C$ as its child. During a right rotation, $B$ starts as $A$'s left child, $C$ starts as $B$'s right child, $A$ becomes $B$'s right child, and $C$ becomes $A$'s left child. During a left rotation, $B$ starts as $A$'s right child, $C$ starts as $B$'s left child, $A$ becomes $B$'s left child, and $C$ becomes $A$'s right child. The rotation operation takes the parent node, $A$, as input.
 
-If node $N$ is unbalanced, rotations must be performed to balance its subtrees. The pseudocode for this algorithm is given below. \\
+If node $N$ is unbalanced, rotations must be performed to balance its subtrees. The pseudocode for this algorithm is given below.
 
+\vspace{4mm}
 \begin{algorithm}[H]
+    \caption{Balancing a node in an AVL Tree}
     \KwData{A tree rooted at $N$}
     \Begin{
         \If{N is not balanced}{
@@ -357,18 +354,18 @@ If node $N$ is unbalanced, rotations must be performed to balance its subtrees. 
             }
         }
     }
-    \caption{Balancing a node in an AVL Tree}
 \end{algorithm}
 \vspace{5mm}
 
-When a node is added to the AVL tree with a BST insert operation, this algorithm is applied to all of its ancestors as the recursive call stack moves up the tree. This ensures that the tree is balanced. Deletion is handled similarly. A BST delete operation is performed on a node, and then the balancing algorithm is applied to all of its ancestors recursively. \\
+When a node is added to the AVL tree with a BST insert operation, this algorithm is applied to all of its ancestors as the recursive call stack moves up the tree. This ensures that the tree is balanced. Deletion is handled similarly. A BST delete operation is performed on a node, and then the balancing algorithm is applied to all of its ancestors recursively.
 
 \subsubsection{Red-black Trees}
 
-A red-black tree is another kind of self-balancing binary search tree in which each node stores an extra bit that colors the node red or black. A red-black tree maintains its balance such that search, insert, and delete operations remain $O(log\;n)$, but its balances requirements are looser. Whereas an AVL tree can only have a max difference in height of 1 between subtrees, a red-black tree can have subtrees whose heights differ by up to a factor of two. \\
+A red-black tree is another kind of self-balancing binary search tree in which each node stores an extra bit that colors the node red or black. A red-black tree maintains its balance such that search, insert, and delete operations remain $O(log\;n)$, but its balances requirements are looser. Whereas an AVL tree can only have a max difference in height of 1 between subtrees, a red-black tree can have subtrees whose heights differ by up to a factor of two.
 
 In addition to the standard properties of a binary search tree, a red-black tree has five properties that enforce its balance:
 
+\vspace{4mm}
 \begin{enumerate}
    \item Each node is either red or black.
    \item The root is black.
@@ -376,44 +373,48 @@ In addition to the standard properties of a binary search tree, a red-black tree
    \item Every red node must have two black children.
    \item Every path from a given node to a descendant leaf must have the same number of black nodes.
 \end{enumerate}
+\vspace{4mm}
 
-Consider two paths from a node to its leaves, one with the minimum possible number of red nodes and one with the maximum possible number of red nodes. Each path must have the same number of black nodes, $b$. The minimum number of red nodes is zero, so the first path has $b$ nodes. Because red nodes must have black children and because each path must have $b$ black nodes, the second path has a maximum number of $b$ red parents and $2b$ nodes total. Thus, two paths from a given node to its leaves differ in height by at most a factor of 2, which preserves the efficiency of the BST's operations. \\
+Consider two paths from a node to its leaves, one with the minimum possible number of red nodes and one with the maximum possible number of red nodes. Each path must have the same number of black nodes, $b$. The minimum number of red nodes is zero, so the first path has $b$ nodes. Because red nodes must have black children and because each path must have $b$ black nodes, the second path has a maximum number of $b$ red parents and $2b$ nodes total. Thus, two paths from a given node to its leaves differ in height by at most a factor of 2, which preserves the efficiency of the BST's operations.
 
 Inserting and deleting nodes can be complicated with red-black trees because all five red-black properties must be preserved. The operations required to preserve them depend on the colors of nodes related to the node being inserted or deleted.
 
 \paragraph{Red-black Insertion} \hspace*{1mm} \vspace*{2mm} \\
-A new node, $N$, replaces a leaf and is \textit{always} initially colored red. It is also given two black, null leaves as children. Because we are inserting a red node, Property 5 is not at risk of being violated, but Property 4 is. We must rebalance the tree in cases where the insertion of $N$ causes a red node to have a red child. In these cases, $N$'s parent, $P$, must be red. We can also assume that $N$'s grandparent, $G$, is black, because its child, $P$, is red. However, $G$'s other child ($N$'s uncle), $U$, could be red or black. \\
+A new node, $N$, replaces a leaf and is \textit{always} initially colored red. It is also given two black, null leaves as children. Because we are inserting a red node, Property 5 is not at risk of being violated, but Property 4 is. We must rebalance the tree in cases where the insertion of $N$ causes a red node to have a red child. In these cases, $N$'s parent, $P$, must be red. We can also assume that $N$'s grandparent, $G$, is black, because its child, $P$, is red. However, $G$'s other child ($N$'s uncle), $U$, could be red or black.
 
+\vspace{4mm}
 \begin{description}[1cm]
     \item[\underline{Case 1}:] $N$ is the root of the tree. \\ 
-    Just change $N$'s color to black to comply with Property 2. \\
+    Just change $N$'s color to black to comply with Property 2.
     
     \item[\underline{Case 2}:] $P$ is black. \\ 
-    Property 4 cannot be violated, so no rebalancing is required. \\
+    Property 4 cannot be violated, so no rebalancing is required.
     
     \item[\underline{Case 3}:] $P$ is red and $U$ is red. \\ 
-    Property 4 is violated because $P$ is red and its child, $N$, is also red. This can be fixed by flipping $G$ to red and flipping $P$ and $U$ to black. However, $G$ may now violate Property 2 (if it is the root) or Property 4 (if its parent is red). For this reason, the rebalancing function (which was called on $N$) should be called recursively on $G$ whenever a Case 3 situation occurs. \\
+    Property 4 is violated because $P$ is red and its child, $N$, is also red. This can be fixed by flipping $G$ to red and flipping $P$ and $U$ to black. However, $G$ may now violate Property 2 (if it is the root) or Property 4 (if its parent is red). For this reason, the rebalancing function (which was called on $N$) should be called recursively on $G$ whenever a Case 3 situation occurs.
     
     \item[\underline{Case 4}:] $P$ is red and $U$ is black. \\ 
-    Property 4 is violated because $P$ is red and its child, $N$, is also red. In this case, it is significant whether or not $N$ and $P$ are left or right children of their respective parents. This leads to four subcases that are all handled with tree rotations, similar to AVL insertion. \\
+    Property 4 is violated because $P$ is red and its child, $N$, is also red. In this case, it is significant whether or not $N$ and $P$ are left or right children of their respective parents. This leads to four subcases that are all handled with tree rotations, similar to AVL insertion.
     
     \begin{description}[1cm]
         \item[\underline{Case 4.A}:] $N$ and $P$ are left children. \\
-        Perform a right rotation on $G$ and flip the colors of $P$ and $G$. \\
+        Perform a right rotation on $G$ and flip the colors of $P$ and $G$.
         
         \item[\underline{Case 4.B}:] $N$ is a right child, and $P$ is a left child. \\
-        Perform a left rotation on $P$ to create a Case 4.A subtree rooted at $G$. Perform the Case 4.A steps. \\
+        Perform a left rotation on $P$ to create a Case 4.A subtree rooted at $G$. Perform the Case 4.A steps.
         
         \item[\underline{Case 4.C}:] $N$ and $P$ are right children. \\
-        Perform a left rotation on $G$ and flip the colors of $P$ and $G$. \\
+        Perform a left rotation on $G$ and flip the colors of $P$ and $G$.
         
         \item[\underline{Case 4.D}:] $N$ is a left child, and $P$ is a right child. \\
-        Perform a right rotation on $P$ to create a Case 4.C subtree rooted at $G$. Perform the Case 4.C steps. \\
+        Perform a right rotation on $P$ to create a Case 4.C subtree rooted at $G$. Perform the Case 4.C steps.
     \end{description}
 \end{description}
+\vspace{4mm}
 
-The logic of red-black balancing after insertion can be summarized by the following algorithms: \\\\
+The logic of red-black balancing after insertion can be summarized by the following algorithms:
 
+\vspace{4mm}
 \begin{algorithm}[H]
     \SetKwFunction{RBInsertBalance}{void rbInsertBalance}
     \SetKwProg{Fn}{}{:}{}
@@ -516,13 +517,13 @@ The process for balancing after deleting is similar, but it is more complicated 
 
 \subsection{Binary Heaps}
 
-A \textit{binary heap} is a complete ordered binary tree that satisfies the \textit{heap property}, which states that each parent node is either greater than or equal to its children (in the case of a \textit{max-heap}) or less than or equal to its children (in the case of a \textit{min-heap}). \\
+A \textit{binary heap} is a complete ordered binary tree that satisfies the \textit{heap property}, which states that each parent node is either greater than or equal to its children (in the case of a \textit{max-heap}) or less than or equal to its children (in the case of a \textit{min-heap}).
 
 Binary heaps are often implemented using static or dynamic arrays. The root of the heap is stored at index $0$. Each of the other nodes is stored at an index $i > 0$ such that the locations of its parent, left child, and right child can be calculated according to the following expressions.
 
 \begin{table}[H]
     \centering
-    \caption{Relative Indices for a Heap Represented by An Array}
+    \caption{Relative Indices for a Heap Represented by an Array}
     \label{tab:heap-indicies}
     \begin{tabular}{c|c}
         \vtabularspace{2}
@@ -532,7 +533,6 @@ Binary heaps are often implemented using static or dynamic arrays. The root of t
         Parent & $(i-1)/2$ \\
         Left Child & $(2\times i)+1$ \\
         Right Child & $(2\times i)+2$ \\
-        \vtabularspace{2}
     \end{tabular}
 \end{table}
 
@@ -542,7 +542,7 @@ Assuming an array implementation, we can insert a new node in the heap by adding
     \caption{Binary Heap Time Complexity}
     \label{tab:heap}
     \begin{tabularx}{\textwidth}{|c|c|X|}
-        \vtabularspace{3}
+        \vtabularspace{2}
         \hline
         Operation & Time & \multicolumn{1}{c|}{Reasoning} \\
         \hline
@@ -550,21 +550,20 @@ Assuming an array implementation, we can insert a new node in the heap by adding
         Find Min/Max & $O(1)$ & The min/max (depends on heap order) is always stored at index 0 \\
         Delete Min/Max & $O(log\;n)$ & Replace root with last node and "bubble down" \\
         \hline
-        \vtabularspace{3}
     \end{tabularx}
 \end{table}
 
 \subsection{Tries}
 
-A \textit{trie} is an ordered tree that is typically not binary. It is similar to a map, but the keys (which are usually strings) are not necessarily associated with every node. Instead, a node may store a prefix of a key (such as the first character of a key) and have an incident edge that points to a key or to another prefix that adds a single character to the original prefix. The root node stores an empty string.\\
+A \textit{trie} is an ordered tree that is typically not binary. It is similar to a map, but the keys (which are usually strings) are not necessarily associated with every node. Instead, a node may store a prefix of a key (such as the first character of a key) and have an incident edge that points to a key or to another prefix that adds a single character to the original prefix. The root node stores an empty string.
 
-This allows for the compact storage and convenient search of strings that share prefixes. This would be useful for storing a dictionary of English words and recommending valid words given a prefix. For this reason, it is often used for autocompleting words and storing new, custom words. \\
+This allows for the compact storage and convenient search of strings that share prefixes. This would be useful for storing a dictionary of English words and recommending valid words given a prefix. For this reason, it is often used for autocompleting words and storing new, custom words.
 
 \begin{table}[H]
     \caption{Trie Time Complexity}
     \label{tab:trie}
     \begin{tabularx}{\textwidth}{|c|c|X|}
-        \vtabularspace{3}
+        \vtabularspace{2}
         \hline
         Operation & Time & \multicolumn{1}{c|}{Reasoning} \\
         \hline
@@ -572,7 +571,6 @@ This allows for the compact storage and convenient search of strings that share 
         Insert & $O(n)$ & Add new prefix nodes to the trie character-by-character until there is an $n$-length path leading from the root to the given word \\
         Delete & $O(n)$ & Traverse the trie toward the given string and delete the first node you encounter with an out-degree of 1.\\
         \hline
-        \vtabularspace{3}
     \end{tabularx}
 \end{table}
 
@@ -584,14 +582,17 @@ A \textit{map}, also known as an \textit{associative array}, is a collection of 
 
 A hash table uses a hash function to map keys to \textit{buckets} in an array. It does this by hashing a key and reducing that hash to an index in the array, using a modulo operator (\texttt{index = hash \% array\_size}). It must also handle \textit{collisions}, which occur when two or more keys map to the same bucket. The two common ways of handling this are \textit{separate chaining} and \textit{open addressing}.
 
-\paragraph{Separate Chaining} \hspace*{1mm} \\
+\subsubsection{Separate Chaining}
+
 In separate chaining, buckets hold pointers to linked lists, which hold the key-value pairs in nodes. A bucket without a collision will point to a single node, whereas a bucket with a collision will point to a chain of nodes. The buckets could also instead hold the heads of the linked lists, which would decrease the number of pointer traversals by 1, but would also increase the size of the buckets, including the empty ones, if the values take up more space than a pointer.
 
-\paragraph{Open Addressing} \hspace*{1mm} \\
+\subsubsection{Open Addressing}
+
 In open addressing, all key-value pairs are stored in the bucket array. When a new pair has to be inserted, the bucket corresponding to its hashed key (\textit{preferred bucket}) is checked for occupancy. If there is a collision, more buckets are checked in a \textit{probe sequence}. The most common probe sequence is \textit{linear probing}, which means you check buckets separated by a fixed interval, which is usually 1 (bucket x, bucket x+1, bucket x+2, ...). When an unoccupied bucket is found, the pair is stored there. When a key is used to access a value, the key is compared to the key stored in the preferred bucket. If it matches, the value in that bucket is returned. Otherwise, the process is repeated with other buckets according to the probe sequence and will return either when the keys match (item found) or when the bucket is empty (item not found).
 
-\paragraph{Dynamic Resizing} \hspace*{1mm} \\
-A hash table that is quite full is slower than one that is quite empty, regardless of the style of collision resolution. If table that uses separate chaining is quite full, it is more likely that future items will have to be chained to existing items, which leads to longer search times. If a table that uses open addressing is quite full, a future item whose preferred bucket is filled will spend longer looking for an empty bucket, and it will take longer to search for it as well. \\
+\subsubsection{Dynamic Resizing}
+
+A hash table that is quite full is slower than one that is quite empty, regardless of the style of collision resolution. If table that uses separate chaining is quite full, it is more likely that future items will have to be chained to existing items, which leads to longer search times. If a table that uses open addressing is quite full, a future item whose preferred bucket is filled will spend longer looking for an empty bucket, and it will take longer to search for it as well.
 
 The load factor of a hash table is the ratio of the number of keys stored in the table to the number of buckets in the table. When the load factor exceeds some limit (0.75 is commonly used), the hash table will be \textit{rehashed}, which involves creating a new hash table and remapping all of the elements to it. There are other techniques that allow for incremental resizing instead of this all-at-once method, which can be useful for highly available systems.
 
@@ -600,7 +601,7 @@ The load factor of a hash table is the ratio of the number of keys stored in the
         \caption{Hash Map Time Complexity}
         \label{tab:hashmap}
         \begin{tabularx}{\textwidth}{|c|c|X|}
-            \vtabularspace{3}
+            \vtabularspace{2}
             \hline
             Operation & Time & \multicolumn{1}{c|}{Reasoning} \\
             \hline
@@ -612,7 +613,7 @@ The load factor of a hash table is the ratio of the number of keys stored in the
         \end{tabularx}
         \vspace*{1mm}
         \begin{tablenotes}\footnotesize
-            \item[*] This time complexity assumes a good hash function with minimal collisions. A very bad hash function with result in an $O(n)$ time complexity.
+            \item[*] This time complexity assumes a good hash function with minimal collisions. A very bad hash function will result in an $O(n)$ time complexity.
         \end{tablenotes}
         \vspace*{5mm}
     \end{threeparttable}
@@ -620,7 +621,7 @@ The load factor of a hash table is the ratio of the number of keys stored in the
 
 \subsection{Tree Maps}
 
-A perfect hash function results in an $O(1)$ search time. A particularly bad hash function could cause a hash table with separate chaining to put all key-value pairs into the same bucket, which would result in an $O(n)$ search time. A tree implementation lands in between these scenario with an $O(log\;n)$ search time. It can be visualized as a hash table with one bucket which contains the root of a tree instead of the head of a linked list. \\
+A perfect hash function results in an $O(1)$ search time. A particularly bad hash function could cause a hash table with separate chaining to put all key-value pairs into the same bucket, which would result in an $O(n)$ search time. A tree implementation lands in between these scenario with an $O(log\;n)$ search time. It can be visualized as a hash table with one bucket which contains the root of a tree instead of the head of a linked list.
 
 Maps like this are often implemented using self-balancing binary search trees like AVL trees or red-black trees. While they are less time-efficient than maps that have good hash functions, they are sorted by key, and thus allow for fast enumeration of items in key order. However, their search algorithms become complicated with the presence of collisions.
 
@@ -628,7 +629,7 @@ Maps like this are often implemented using self-balancing binary search trees li
     \caption{Tree Map Time Complexity}
     \label{tab:treemap}
     \begin{tabularx}{\textwidth}{|c|c|X|}
-        \vtabularspace{3}
+        \vtabularspace{2}
         \hline
         Operation & Time & \multicolumn{1}{c|}{Reasoning} \\
         \hline
@@ -637,15 +638,14 @@ Maps like this are often implemented using self-balancing binary search trees li
         Insert & $O(log\;n)$ & Traverse the search tree and insert the value\\
         Delete & $O(log\;n)$ & Traverse the search tree and delete the value, reorganizing the tree if necessary \\
         \hline
-        \vtabularspace{3}
     \end{tabularx}
 \end{table}
 
 \subsection{Sets}
 
-A set is an unordered collection of unique elements. It is typically implemented in a similar way to a map. A hash table is used for unsorted sets to achieve $O(1)$ search/insert/delete. A self-balancing binary search tree is used for sorted sets to achieve $O(log n)$ search/insert/delete and fast enumeration in sorted order. \\
+A set is an unordered collection of unique elements. It is typically implemented in a similar way to a map. A hash table is used for unsorted sets to achieve $O(1)$ search/insert/delete. A self-balancing binary search tree is used for sorted sets to achieve $O(log n)$ search/insert/delete and fast enumeration in sorted order.
 
-A set can also be implemented using a map. In this case, the keys are the elements and the values are flags, such as $1$ or \texttt{true}. \\
+A set can also be implemented using a map. In this case, the keys are the elements and the values are flags, such as $1$ or \texttt{true}.
 
 \subsection{Multisets (or Bags)}
 

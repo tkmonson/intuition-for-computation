@@ -10,12 +10,15 @@
     If a local DNS server does not know the IP address of some domain name, it can ask a nearby, larger DNS server if it knows. The biggest DNS servers are called \textit{root servers}, and they are distributed across the world's continents. They return lists of servers that would recognize your requested domain name. These are \textit{authoritative name servers} for the appropriate \textit{top-level domain} (.com, .org, .edu, .ca, .uk, etc.).
 		
     There are many kinds of results that can be returned by a DNS server:
+
+    \vspace{4mm}
     \begin{description}[7mm]
         \item[NS record] Name server. Specifies the names of the DNS servers that can translate a given domain.
         \item[MX record] Mail exchange. Specifies the mail servers that will accept a message.
         \item[A record] Address. Points a name to an IP address.
         \item[CNAME] Canonical. Points a name to another name (google.com to www.google.com) or to an A record.
     \end{description}
+    \vspace{4mm}
 	
     \item[Load Balancer] Decides which servers to send requests to based on some criteria (random, round-robin, load, session, Layer 4, Layer 7). Can be implemented in software or hardware. Can generate cookies to send to the user. The user can then send those cookies back to return to the server they were using. Multiple load balancers are needed for horizontal scaled systems.
 		

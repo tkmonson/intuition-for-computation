@@ -3,199 +3,199 @@
 \contentsline {chapter}{\nonumberline Acknowledgements}{{\fontencoding {T1}\selectfont x}}%
 \contentsline {chapter}{\nonumberline Introduction}{{\fontencoding {T1}\selectfont xi}}%
 \contentsline {part}{\numberline {{\fontencoding {T1}\selectfont I}}Philosophy of Computation}{1}%
-\contentsline {chapter}{\numberline {1}Cognitive Ontology}{5}%
-\contentsline {section}{\numberline {1.1}Upper Ontology}{6}%
-\contentsline {subsection}{\numberline {1.1.1}The Hard Problem of Consciousness}{6}%
-\contentsline {subsection}{\numberline {1.1.2}The Categories of the Mind}{9}%
-\contentsline {chapter}{\numberline {2}Metaphysics, Natural Philosophy, and Physics}{14}%
-\contentsline {section}{\numberline {2.1}Classical Metaphysics}{14}%
-\contentsline {subsection}{\numberline {2.1.1}Mythology and Cosmogomy}{14}%
-\contentsline {subsection}{\numberline {2.1.2}Pre-Socratic Thought: \textit {Henosis} and \textit {Arche}}{14}%
-\contentsline {subsection}{\numberline {2.1.3}Democritus' Atomism}{14}%
-\contentsline {subsection}{\numberline {2.1.4}Plato's Theory of Forms}{14}%
-\contentsline {subsection}{\numberline {2.1.5}Aristotle's Hylomorphism}{16}%
-\contentsline {section}{\numberline {2.2}Theories and Models}{16}%
-\contentsline {subsection}{\numberline {2.2.1}Euclid's \textit {Elements}}{16}%
-\contentsline {section}{\numberline {2.3}Ancient Knowledge, Lost and Found}{18}%
-\contentsline {section}{\numberline {2.4}Particles and Forces}{18}%
-\contentsline {section}{\numberline {2.5}Waves and Fields}{18}%
-\contentsline {section}{\numberline {2.6}Old Quantum Theory and Relativity}{18}%
-\contentsline {section}{\numberline {2.7}Quantum States and Operators}{18}%
-\contentsline {section}{\numberline {2.8}Information Theory}{18}%
-\contentsline {chapter}{\numberline {3}Information and Communication}{19}%
-\contentsline {section}{\numberline {3.1}Signals and Systems}{19}%
-\contentsline {section}{\numberline {3.2}Semiotics, Language, and Code}{22}%
-\contentsline {subsection}{\numberline {3.2.1}Writing Systems}{23}%
-\contentsline {subsection}{\numberline {3.2.2}Numeral Systems}{23}%
-\contentsline {chapter}{\numberline {4}Logic and Mathematics}{24}%
-\contentsline {section}{\numberline {4.1}The Syntax and Semantics of Argument}{24}%
-\contentsline {section}{\numberline {4.2}The Structure of Proof}{26}%
-\contentsline {section}{\numberline {4.3}Intuitive Reasoning: The Oracle, the Seer, and the Sage}{27}%
-\contentsline {paragraph}{\nonumberline The Oracle}{28}%
-\contentsline {paragraph}{\nonumberline The Seer}{28}%
-\contentsline {paragraph}{\nonumberline The Sage}{28}%
-\contentsline {section}{\numberline {4.4}Logical Reasoning: The Mathematician, the Scientist, and the Detective}{30}%
-\contentsline {paragraph}{\nonumberline Abductive Reasoning}{31}%
-\contentsline {part}{\numberline {{\fontencoding {T1}\selectfont II}}Theory of Computation}{32}%
-\contentsline {chapter}{\numberline {5}Automata Theory}{34}%
-\contentsline {section}{\numberline {5.1}From Knots to Nodes}{34}%
-\contentsline {section}{\numberline {5.2}Concrete and Abstract Machines}{35}%
-\contentsline {paragraph}{\nonumberline (0,0,0) -> (1,0,0)}{35}%
-\contentsline {paragraph}{\nonumberline (1,0,0) -> (1,1,1)}{36}%
-\contentsline {paragraph}{\nonumberline (1,1,1) -> (0,0,0)}{36}%
-\contentsline {section}{\numberline {5.3}Formalization of an Abstract Machine}{37}%
-\contentsline {section}{\numberline {5.4}Classes of Automata and the Languages They Can Understand}{38}%
-\contentsline {subsection}{\numberline {5.4.1}Finite-state Machines}{39}%
-\contentsline {subsection}{\numberline {5.4.2}Pushdown Automata}{41}%
-\contentsline {subsection}{\numberline {5.4.3}Linear Bounded Automata}{41}%
-\contentsline {subsection}{\numberline {5.4.4}Turing Machines}{42}%
-\contentsline {section}{\numberline {5.5}The Importance of Turing Machines to Modern Computing}{46}%
-\contentsline {chapter}{\numberline {6}Computability Theory}{50}%
-\contentsline {section}{\numberline {6.1}The Scope of Problem Solving}{50}%
-\contentsline {subsection}{\numberline {6.1.1}Informal Logic}{50}%
-\contentsline {subsection}{\numberline {6.1.2}Formal Logic}{50}%
-\contentsline {subsection}{\numberline {6.1.3}Decision Problems and Function Problems}{51}%
-\contentsline {subsection}{\numberline {6.1.4}"Effective Calculability"}{52}%
-\contentsline {section}{\numberline {6.2}The Ballad of Georg Cantor}{53}%
-\contentsline {subsection}{\numberline {6.2.1}The First Article on Set Theory}{53}%
-\contentsline {subsection}{\numberline {6.2.2}Ordinals and Cardinals}{56}%
-\contentsline {subsection}{\numberline {6.2.3}The Continuum Hypothesis}{56}%
-\contentsline {subsection}{\numberline {6.2.4}Cantor's Later Years and Legacy}{59}%
-\contentsline {subsection}{\numberline {6.2.5}The Diagonal Argument for Computable Functions}{60}%
-\contentsline {subsection}{\numberline {6.2.6}Uncountably Many Languages}{61}%
-\contentsline {subsection}{\numberline {6.2.7}Countably Many Turing Machines}{62}%
-\contentsline {subsection}{\numberline {6.2.8}Computable Functions and Computable Numbers}{64}%
-\contentsline {section}{\numberline {6.3}Hilbert's Program and G\"odel's Refutation of It}{65}%
-\contentsline {subsection}{\numberline {6.3.1}Hilbert's Second Problem}{65}%
-\contentsline {subsection}{\numberline {6.3.2}G\"odel's Completeness Theorem}{67}%
-\contentsline {subsection}{\numberline {6.3.3}G\"odel's Incompleteness Theorems}{68}%
-\contentsline {section}{\numberline {6.4}The Entscheidungsproblem and the Church-Turing Thesis}{68}%
-\contentsline {subsection}{\numberline {6.4.1}$\mu $-recursive Functions}{68}%
-\contentsline {subsection}{\numberline {6.4.2}The Untyped $\lambda $-calculus}{68}%
-\contentsline {subsection}{\numberline {6.4.3}The Halting Problem}{68}%
-\contentsline {section}{\numberline {6.5}Turing Degrees}{68}%
-\contentsline {chapter}{\numberline {7}Computational Complexity Theory}{69}%
-\contentsline {section}{\numberline {7.1}Big O Notation}{69}%
-\contentsline {section}{\numberline {7.2}Complexity Classes}{69}%
-\contentsline {chapter}{\numberline {8}Computer Architecture}{70}%
-\contentsline {section}{\numberline {8.1}Mechanical Computation}{70}%
-\contentsline {part}{\numberline {{\fontencoding {T1}\selectfont III}}Types, Structures, and Algorithms}{72}%
-\contentsline {chapter}{\numberline {9}Type Theory}{73}%
-\contentsline {section}{\numberline {9.1}The Curry-Howard-Lambek Isomorphism}{73}%
-\contentsline {chapter}{\numberline {10}Algebra and Category Theory}{74}%
-\contentsline {chapter}{\numberline {11}Abstract Data Types and the Data Structures that Implement Them}{75}%
-\contentsline {section}{\numberline {11.1}Lists}{76}%
-\contentsline {subsection}{\numberline {11.1.1}Arrays}{77}%
-\contentsline {subsection}{\numberline {11.1.2}Linked Lists}{77}%
-\contentsline {subsection}{\numberline {11.1.3}Skip Lists}{79}%
-\contentsline {section}{\numberline {11.2}Stacks}{79}%
-\contentsline {section}{\numberline {11.3}Queues}{80}%
-\contentsline {section}{\numberline {11.4}Deques}{81}%
-\contentsline {section}{\numberline {11.5}Priority Queues}{81}%
-\contentsline {section}{\numberline {11.6}Graphs}{81}%
-\contentsline {section}{\numberline {11.7}Trees}{82}%
-\contentsline {subsection}{\numberline {11.7.1}Binary Search Trees}{83}%
-\contentsline {subsubsection}{\nonumberline AVL Trees}{84}%
-\contentsline {subsubsection}{\nonumberline Red-black Trees}{85}%
-\contentsline {paragraph}{\nonumberline Red-black Insertion}{85}%
-\contentsline {subsection}{\numberline {11.7.2}Binary Heaps}{88}%
-\contentsline {subsection}{\numberline {11.7.3}Tries}{89}%
-\contentsline {section}{\numberline {11.8}Maps}{90}%
-\contentsline {subsection}{\numberline {11.8.1}Hash Maps}{90}%
-\contentsline {paragraph}{\nonumberline Separate Chaining}{90}%
-\contentsline {paragraph}{\nonumberline Open Addressing}{90}%
-\contentsline {paragraph}{\nonumberline Dynamic Resizing}{91}%
-\contentsline {subsection}{\numberline {11.8.2}Tree Maps}{91}%
-\contentsline {subsection}{\numberline {11.8.3}Sets}{92}%
-\contentsline {subsection}{\numberline {11.8.4}Multisets (or Bags)}{92}%
-\contentsline {chapter}{\numberline {12}Algorithms}{93}%
-\contentsline {section}{\numberline {12.1}Searching}{93}%
-\contentsline {subsection}{\numberline {12.1.1}Depth-first Search}{93}%
-\contentsline {subsection}{\numberline {12.1.2}Breadth-first Search}{96}%
-\contentsline {subsection}{\numberline {12.1.3}Bidirectional Search}{98}%
-\contentsline {subsection}{\numberline {12.1.4}Dijkstra's Algorithm}{100}%
-\contentsline {subsection}{\numberline {12.1.5}Binary Search}{100}%
-\contentsline {subsection}{\numberline {12.1.6}Rabin-Karp Algorithm}{100}%
-\contentsline {section}{\numberline {12.2}Sorting}{100}%
-\contentsline {subsection}{\numberline {12.2.1}Selection Sort}{100}%
-\contentsline {subsection}{\numberline {12.2.2}Insertion Sort}{100}%
-\contentsline {subsection}{\numberline {12.2.3}Merge Sort}{100}%
-\contentsline {subsection}{\numberline {12.2.4}Quick Sort}{100}%
-\contentsline {subsection}{\numberline {12.2.5}Radix Sort}{100}%
-\contentsline {subsection}{\numberline {12.2.6}Topological Sort}{100}%
-\contentsline {section}{\numberline {12.3}Miscellaneous}{100}%
-\contentsline {subsection}{\numberline {12.3.1}Cache Replacement Algorithms}{100}%
-\contentsline {subsection}{\numberline {12.3.2}Permutations}{100}%
-\contentsline {subsection}{\numberline {12.3.3}Combinations}{100}%
-\contentsline {subsection}{\numberline {12.3.4}Bitwise Algorithms}{100}%
-\contentsline {part}{\numberline {{\fontencoding {T1}\selectfont IV}}Computer Programming and Operation}{101}%
-\contentsline {chapter}{\numberline {13}Programming Language Theory}{102}%
-\contentsline {section}{\numberline {13.1}Elements of Programming Languages}{102}%
-\contentsline {subsection}{\numberline {13.1.1}Syntax}{102}%
-\contentsline {subsection}{\numberline {13.1.2}Type Systems}{102}%
-\contentsline {subsection}{\numberline {13.1.3}Control Structures}{102}%
-\contentsline {subsection}{\numberline {13.1.4}Libraries}{102}%
-\contentsline {subsection}{\numberline {13.1.5}Exceptions}{102}%
-\contentsline {subsection}{\numberline {13.1.6}Comments}{102}%
-\contentsline {section}{\numberline {13.2}Program Execution}{102}%
-\contentsline {section}{\numberline {13.3}History of Programming Languages}{102}%
-\contentsline {section}{\numberline {13.4}Programming Paradigms}{102}%
-\contentsline {subsection}{\numberline {13.4.1}Imperative versus Declarative}{102}%
-\contentsline {subsubsection}{\nonumberline Functional Programming}{102}%
-\contentsline {subsubsection}{\nonumberline Logic Programming}{102}%
-\contentsline {subsection}{\numberline {13.4.2}Procedural versus Object-Oriented}{102}%
-\contentsline {section}{\numberline {13.5}Programming Techniques}{102}%
-\contentsline {subsection}{\numberline {13.5.1}Higher-Order Programming}{102}%
-\contentsline {subsubsection}{\nonumberline Lambda Expressions}{102}%
-\contentsline {subsection}{\numberline {13.5.2}Currying}{102}%
-\contentsline {subsection}{\numberline {13.5.3}Metaprogramming}{102}%
-\contentsline {chapter}{\numberline {14}Specification and Implementation}{103}%
-\contentsline {section}{\numberline {14.1}Java}{103}%
-\contentsline {subsection}{\numberline {14.1.1}Java Standard Library}{103}%
-\contentsline {subsubsection}{\nonumberline java.lang}{103}%
-\contentsline {subsubsection}{\nonumberline java.util}{103}%
-\contentsline {subsubsection}{\nonumberline java.io}{103}%
-\contentsline {subsubsection}{\nonumberline java.net}{103}%
-\contentsline {subsection}{\numberline {14.1.2}Java Techniques}{103}%
-\contentsline {subsubsection}{\nonumberline Static Initialization Blocks}{103}%
-\contentsline {subsubsection}{\nonumberline Lambda Expressions}{103}%
-\contentsline {section}{\numberline {14.2}Haskell}{103}%
-\contentsline {section}{\numberline {14.3}Frameworks}{103}%
-\contentsline {chapter}{\numberline {15}Operating Systems}{104}%
-\contentsline {chapter}{\numberline {16}Practical Computing}{105}%
-\contentsline {section}{\numberline {16.1}Linux}{105}%
-\contentsline {subsection}{\numberline {16.1.1}File Systems}{105}%
-\contentsline {subsection}{\numberline {16.1.2}Common Commands and Tasks}{105}%
-\contentsline {subsection}{\numberline {16.1.3}Userspace}{105}%
-\contentsline {section}{\numberline {16.2}Everyday Tools}{105}%
-\contentsline {subsection}{\numberline {16.2.1}Essential Programs}{105}%
-\contentsline {subsection}{\numberline {16.2.2}Version Control}{105}%
-\contentsline {subsubsection}{\nonumberline Git}{105}%
-\contentsline {subsection}{\numberline {16.2.3}Unit Testing}{105}%
-\contentsline {subsubsection}{\nonumberline JUnit}{105}%
-\contentsline {subsection}{\numberline {16.2.4}Build Automation}{105}%
-\contentsline {subsubsection}{\nonumberline Make}{105}%
-\contentsline {subsubsection}{\nonumberline Maven}{105}%
-\contentsline {subsection}{\numberline {16.2.5}Virtualization and Containerization}{105}%
-\contentsline {subsubsection}{\nonumberline Docker}{105}%
-\contentsline {section}{\numberline {16.3}Languages and Language-likes}{105}%
-\contentsline {subsection}{\numberline {16.3.1}Markup and Style}{105}%
-\contentsline {subsubsection}{\nonumberline TeX}{105}%
-\contentsline {subsubsection}{\nonumberline HMTL}{105}%
-\contentsline {subsubsection}{\nonumberline CSS}{105}%
-\contentsline {subsection}{\numberline {16.3.2}Data Formats}{105}%
-\contentsline {subsubsection}{\nonumberline XML}{105}%
-\contentsline {subsubsection}{\nonumberline JSON}{105}%
-\contentsline {subsection}{\numberline {16.3.3}Data Query and Manipulation}{105}%
-\contentsline {subsubsection}{\nonumberline SQL}{105}%
-\contentsline {part}{\numberline {{\fontencoding {T1}\selectfont V}}Software Craftsmanship}{106}%
-\contentsline {chapter}{\numberline {17}Software Engineering Processes}{108}%
-\contentsline {chapter}{\numberline {18}Design Patterns}{109}%
+\contentsline {chapter}{\numberline {1}Cognitive Ontology}{4}%
+\contentsline {section}{\numberline {1.1}Upper Ontology}{5}%
+\contentsline {subsection}{\numberline {1.1.1}The Hard Problem of Consciousness}{5}%
+\contentsline {subsection}{\numberline {1.1.2}The Categories of the Mind}{8}%
+\contentsline {chapter}{\numberline {2}Metaphysics, Natural Philosophy, and Physics}{12}%
+\contentsline {section}{\numberline {2.1}Classical Metaphysics}{12}%
+\contentsline {subsection}{\numberline {2.1.1}Mythology and Cosmogomy}{12}%
+\contentsline {subsection}{\numberline {2.1.2}Pre-Socratic Thought: \textit {Henosis} and \textit {Arche}}{12}%
+\contentsline {subsection}{\numberline {2.1.3}Democritus' Atomism}{12}%
+\contentsline {subsection}{\numberline {2.1.4}Plato's Theory of Forms}{12}%
+\contentsline {subsection}{\numberline {2.1.5}Aristotle's Hylomorphism}{14}%
+\contentsline {section}{\numberline {2.2}Theories and Models}{14}%
+\contentsline {subsection}{\numberline {2.2.1}Euclid's \textit {Elements}}{14}%
+\contentsline {section}{\numberline {2.3}Ancient Knowledge, Lost and Found}{16}%
+\contentsline {section}{\numberline {2.4}Particles and Forces}{16}%
+\contentsline {section}{\numberline {2.5}Waves and Fields}{16}%
+\contentsline {section}{\numberline {2.6}Old Quantum Theory and Relativity}{16}%
+\contentsline {section}{\numberline {2.7}Quantum States and Operators}{16}%
+\contentsline {section}{\numberline {2.8}Information Theory}{16}%
+\contentsline {chapter}{\numberline {3}Information and Communication}{17}%
+\contentsline {section}{\numberline {3.1}Signals and Systems}{17}%
+\contentsline {section}{\numberline {3.2}Semiotics, Language, and Code}{20}%
+\contentsline {subsection}{\numberline {3.2.1}Writing Systems}{21}%
+\contentsline {subsection}{\numberline {3.2.2}Numeral Systems}{21}%
+\contentsline {chapter}{\numberline {4}Logic and Mathematics}{22}%
+\contentsline {section}{\numberline {4.1}The Syntax and Semantics of Argument}{22}%
+\contentsline {section}{\numberline {4.2}The Structure of Proof}{24}%
+\contentsline {section}{\numberline {4.3}Intuitive Reasoning: The Oracle, the Seer, and the Sage}{25}%
+\contentsline {paragraph}{\nonumberline The Oracle}{25}%
+\contentsline {paragraph}{\nonumberline The Seer}{26}%
+\contentsline {paragraph}{\nonumberline The Sage}{26}%
+\contentsline {section}{\numberline {4.4}Logical Reasoning: The Mathematician, the Scientist, and the Detective}{28}%
+\contentsline {paragraph}{\nonumberline Abductive Reasoning}{29}%
+\contentsline {part}{\numberline {{\fontencoding {T1}\selectfont II}}Theory of Computation}{30}%
+\contentsline {chapter}{\numberline {5}Automata Theory}{32}%
+\contentsline {section}{\numberline {5.1}From Knots to Nodes}{32}%
+\contentsline {section}{\numberline {5.2}Concrete and Abstract Machines}{33}%
+\contentsline {paragraph}{\nonumberline (0,0,0) -> (1,0,0)}{33}%
+\contentsline {paragraph}{\nonumberline (1,0,0) -> (1,1,1)}{34}%
+\contentsline {paragraph}{\nonumberline (1,1,1) -> (0,0,0)}{34}%
+\contentsline {section}{\numberline {5.3}Formalization of an Abstract Machine}{35}%
+\contentsline {section}{\numberline {5.4}Classes of Automata and the Languages They Can Understand}{36}%
+\contentsline {subsection}{\numberline {5.4.1}Finite-state Machines}{37}%
+\contentsline {subsection}{\numberline {5.4.2}Pushdown Automata}{39}%
+\contentsline {subsection}{\numberline {5.4.3}Linear Bounded Automata}{39}%
+\contentsline {subsection}{\numberline {5.4.4}Turing Machines}{40}%
+\contentsline {section}{\numberline {5.5}The Importance of Turing Machines to Modern Computing}{43}%
+\contentsline {chapter}{\numberline {6}Computability Theory}{48}%
+\contentsline {section}{\numberline {6.1}The Scope of Problem Solving}{48}%
+\contentsline {subsection}{\numberline {6.1.1}Informal Logic}{48}%
+\contentsline {subsection}{\numberline {6.1.2}Formal Logic}{48}%
+\contentsline {subsection}{\numberline {6.1.3}Decision Problems and Function Problems}{49}%
+\contentsline {subsection}{\numberline {6.1.4}"Effective Calculability"}{50}%
+\contentsline {section}{\numberline {6.2}The Ballad of Georg Cantor}{51}%
+\contentsline {subsection}{\numberline {6.2.1}The First Article on Set Theory}{51}%
+\contentsline {subsection}{\numberline {6.2.2}Ordinals and Cardinals}{53}%
+\contentsline {subsection}{\numberline {6.2.3}The Continuum Hypothesis}{54}%
+\contentsline {subsection}{\numberline {6.2.4}Cantor's Later Years and Legacy}{56}%
+\contentsline {subsection}{\numberline {6.2.5}The Diagonal Argument for Computable Functions}{57}%
+\contentsline {subsection}{\numberline {6.2.6}Uncountably Many Languages}{58}%
+\contentsline {subsection}{\numberline {6.2.7}Countably Many Turing Machines}{59}%
+\contentsline {subsection}{\numberline {6.2.8}Computable Functions and Computable Numbers}{61}%
+\contentsline {section}{\numberline {6.3}Hilbert's Program and G\"odel's Refutation of It}{62}%
+\contentsline {subsection}{\numberline {6.3.1}Hilbert's Second Problem}{63}%
+\contentsline {subsection}{\numberline {6.3.2}G\"odel's Completeness Theorem}{64}%
+\contentsline {subsection}{\numberline {6.3.3}G\"odel's Incompleteness Theorems}{65}%
+\contentsline {section}{\numberline {6.4}The Entscheidungsproblem and the Church-Turing Thesis}{65}%
+\contentsline {subsection}{\numberline {6.4.1}$\mu $-recursive Functions}{65}%
+\contentsline {subsection}{\numberline {6.4.2}The Untyped $\lambda $-calculus}{65}%
+\contentsline {subsection}{\numberline {6.4.3}The Halting Problem}{65}%
+\contentsline {section}{\numberline {6.5}Turing Degrees}{65}%
+\contentsline {chapter}{\numberline {7}Computational Complexity Theory}{66}%
+\contentsline {section}{\numberline {7.1}Big O Notation}{66}%
+\contentsline {section}{\numberline {7.2}Complexity Classes}{66}%
+\contentsline {chapter}{\numberline {8}Computer Architecture}{67}%
+\contentsline {section}{\numberline {8.1}Mechanical Computation}{67}%
+\contentsline {part}{\numberline {{\fontencoding {T1}\selectfont III}}Types, Structures, and Algorithms}{69}%
+\contentsline {chapter}{\numberline {9}Type Theory}{70}%
+\contentsline {section}{\numberline {9.1}The Curry-Howard-Lambek Isomorphism}{70}%
+\contentsline {chapter}{\numberline {10}Algebra and Category Theory}{71}%
+\contentsline {chapter}{\numberline {11}Abstract Data Types and the Data Structures that Implement Them}{72}%
+\contentsline {section}{\numberline {11.1}Lists}{73}%
+\contentsline {subsection}{\numberline {11.1.1}Arrays}{73}%
+\contentsline {subsection}{\numberline {11.1.2}Linked Lists}{74}%
+\contentsline {subsection}{\numberline {11.1.3}Skip Lists}{76}%
+\contentsline {section}{\numberline {11.2}Stacks}{76}%
+\contentsline {section}{\numberline {11.3}Queues}{77}%
+\contentsline {section}{\numberline {11.4}Deques}{78}%
+\contentsline {section}{\numberline {11.5}Priority Queues}{78}%
+\contentsline {section}{\numberline {11.6}Graphs}{78}%
+\contentsline {section}{\numberline {11.7}Trees}{79}%
+\contentsline {subsection}{\numberline {11.7.1}Binary Search Trees}{80}%
+\contentsline {subsubsection}{\nonumberline AVL Trees}{81}%
+\contentsline {subsubsection}{\nonumberline Red-black Trees}{82}%
+\contentsline {paragraph}{\nonumberline Red-black Insertion}{82}%
+\contentsline {subsection}{\numberline {11.7.2}Binary Heaps}{84}%
+\contentsline {subsection}{\numberline {11.7.3}Tries}{85}%
+\contentsline {section}{\numberline {11.8}Maps}{86}%
+\contentsline {subsection}{\numberline {11.8.1}Hash Maps}{86}%
+\contentsline {subsubsection}{\nonumberline Separate Chaining}{86}%
+\contentsline {subsubsection}{\nonumberline Open Addressing}{86}%
+\contentsline {subsubsection}{\nonumberline Dynamic Resizing}{87}%
+\contentsline {subsection}{\numberline {11.8.2}Tree Maps}{87}%
+\contentsline {subsection}{\numberline {11.8.3}Sets}{88}%
+\contentsline {subsection}{\numberline {11.8.4}Multisets (or Bags)}{88}%
+\contentsline {chapter}{\numberline {12}Algorithms}{89}%
+\contentsline {section}{\numberline {12.1}Searching}{89}%
+\contentsline {subsection}{\numberline {12.1.1}Depth-first Search}{89}%
+\contentsline {subsection}{\numberline {12.1.2}Breadth-first Search}{92}%
+\contentsline {subsection}{\numberline {12.1.3}Bidirectional Search}{94}%
+\contentsline {subsection}{\numberline {12.1.4}Dijkstra's Algorithm}{96}%
+\contentsline {subsection}{\numberline {12.1.5}Binary Search}{96}%
+\contentsline {subsection}{\numberline {12.1.6}Rabin-Karp Algorithm}{96}%
+\contentsline {section}{\numberline {12.2}Sorting}{96}%
+\contentsline {subsection}{\numberline {12.2.1}Selection Sort}{96}%
+\contentsline {subsection}{\numberline {12.2.2}Insertion Sort}{96}%
+\contentsline {subsection}{\numberline {12.2.3}Merge Sort}{96}%
+\contentsline {subsection}{\numberline {12.2.4}Quick Sort}{96}%
+\contentsline {subsection}{\numberline {12.2.5}Radix Sort}{96}%
+\contentsline {subsection}{\numberline {12.2.6}Topological Sort}{96}%
+\contentsline {section}{\numberline {12.3}Miscellaneous}{96}%
+\contentsline {subsection}{\numberline {12.3.1}Cache Replacement Algorithms}{96}%
+\contentsline {subsection}{\numberline {12.3.2}Permutations}{96}%
+\contentsline {subsection}{\numberline {12.3.3}Combinations}{96}%
+\contentsline {subsection}{\numberline {12.3.4}Bitwise Algorithms}{96}%
+\contentsline {part}{\numberline {{\fontencoding {T1}\selectfont IV}}Computer Programming and Operation}{97}%
+\contentsline {chapter}{\numberline {13}Programming Language Theory}{98}%
+\contentsline {section}{\numberline {13.1}Elements of Programming Languages}{98}%
+\contentsline {subsection}{\numberline {13.1.1}Syntax}{98}%
+\contentsline {subsection}{\numberline {13.1.2}Type Systems}{98}%
+\contentsline {subsection}{\numberline {13.1.3}Control Structures}{98}%
+\contentsline {subsection}{\numberline {13.1.4}Libraries}{98}%
+\contentsline {subsection}{\numberline {13.1.5}Exceptions}{98}%
+\contentsline {subsection}{\numberline {13.1.6}Comments}{98}%
+\contentsline {section}{\numberline {13.2}Program Execution}{98}%
+\contentsline {section}{\numberline {13.3}History of Programming Languages}{98}%
+\contentsline {section}{\numberline {13.4}Programming Paradigms}{98}%
+\contentsline {subsection}{\numberline {13.4.1}Imperative versus Declarative}{98}%
+\contentsline {subsubsection}{\nonumberline Functional Programming}{98}%
+\contentsline {subsubsection}{\nonumberline Logic Programming}{98}%
+\contentsline {subsection}{\numberline {13.4.2}Procedural versus Object-Oriented}{98}%
+\contentsline {section}{\numberline {13.5}Programming Techniques}{98}%
+\contentsline {subsection}{\numberline {13.5.1}Higher-Order Programming}{98}%
+\contentsline {subsubsection}{\nonumberline Lambda Expressions}{98}%
+\contentsline {subsection}{\numberline {13.5.2}Currying}{98}%
+\contentsline {subsection}{\numberline {13.5.3}Metaprogramming}{98}%
+\contentsline {chapter}{\numberline {14}Specification and Implementation}{99}%
+\contentsline {section}{\numberline {14.1}Java}{99}%
+\contentsline {subsection}{\numberline {14.1.1}Java Standard Library}{99}%
+\contentsline {subsubsection}{\nonumberline java.lang}{99}%
+\contentsline {subsubsection}{\nonumberline java.util}{99}%
+\contentsline {subsubsection}{\nonumberline java.io}{99}%
+\contentsline {subsubsection}{\nonumberline java.net}{99}%
+\contentsline {subsection}{\numberline {14.1.2}Java Techniques}{99}%
+\contentsline {subsubsection}{\nonumberline Static Initialization Blocks}{99}%
+\contentsline {subsubsection}{\nonumberline Lambda Expressions}{99}%
+\contentsline {section}{\numberline {14.2}Haskell}{99}%
+\contentsline {section}{\numberline {14.3}Frameworks}{99}%
+\contentsline {chapter}{\numberline {15}Operating Systems}{100}%
+\contentsline {chapter}{\numberline {16}Practical Computing}{101}%
+\contentsline {section}{\numberline {16.1}Linux}{101}%
+\contentsline {subsection}{\numberline {16.1.1}File Systems}{101}%
+\contentsline {subsection}{\numberline {16.1.2}Common Commands and Tasks}{101}%
+\contentsline {subsection}{\numberline {16.1.3}Userspace}{101}%
+\contentsline {section}{\numberline {16.2}Everyday Tools}{101}%
+\contentsline {subsection}{\numberline {16.2.1}Essential Programs}{101}%
+\contentsline {subsection}{\numberline {16.2.2}Version Control}{101}%
+\contentsline {subsubsection}{\nonumberline Git}{101}%
+\contentsline {subsection}{\numberline {16.2.3}Unit Testing}{101}%
+\contentsline {subsubsection}{\nonumberline JUnit}{101}%
+\contentsline {subsection}{\numberline {16.2.4}Build Automation}{101}%
+\contentsline {subsubsection}{\nonumberline Make}{101}%
+\contentsline {subsubsection}{\nonumberline Maven}{102}%
+\contentsline {subsection}{\numberline {16.2.5}Virtualization and Containerization}{102}%
+\contentsline {subsubsection}{\nonumberline Docker}{102}%
+\contentsline {section}{\numberline {16.3}Languages and Language-likes}{102}%
+\contentsline {subsection}{\numberline {16.3.1}Markup and Style}{102}%
+\contentsline {subsubsection}{\nonumberline TeX}{102}%
+\contentsline {subsubsection}{\nonumberline HMTL}{102}%
+\contentsline {subsubsection}{\nonumberline CSS}{102}%
+\contentsline {subsection}{\numberline {16.3.2}Data Formats}{102}%
+\contentsline {subsubsection}{\nonumberline XML}{102}%
+\contentsline {subsubsection}{\nonumberline JSON}{102}%
+\contentsline {subsection}{\numberline {16.3.3}Data Query and Manipulation}{102}%
+\contentsline {subsubsection}{\nonumberline SQL}{102}%
+\contentsline {part}{\numberline {{\fontencoding {T1}\selectfont V}}Software Craftsmanship}{103}%
+\contentsline {chapter}{\numberline {17}Software Engineering Processes}{105}%
+\contentsline {chapter}{\numberline {18}Design Patterns}{106}%
 \contentsline {part}{\numberline {{\fontencoding {T1}\selectfont VI}}Appendices}{}%
 \contentsline {chapter}{\numberline {A}System Design}{{\fontencoding {T1}\selectfont I}}%
 \contentsline {section}{\numberline {A.1}Server Technologies}{{\fontencoding {T1}\selectfont I}}%
-\contentsline {section}{\numberline {A.2}Persistent Storage Technologies}{{\fontencoding {T1}\selectfont I}}%
-\contentsline {section}{\numberline {A.3}Network Techniques}{{\fontencoding {T1}\selectfont III}}%
+\contentsline {section}{\numberline {A.2}Persistent Storage Technologies}{{\fontencoding {T1}\selectfont II}}%
+\contentsline {section}{\numberline {A.3}Network Techniques}{{\fontencoding {T1}\selectfont IV}}%
 \contentsline {chapter}{\numberline {B}Lessons Learned}{{\fontencoding {T1}\selectfont V}}%
 \contentsline {chapter}{\numberline {C}Writing Well}{{\fontencoding {T1}\selectfont VI}}%
 \contentsline {chapter}{\numberline {D}How \textit {The Internet} Changed Humanity}{{\fontencoding {T1}\selectfont VII}}%
