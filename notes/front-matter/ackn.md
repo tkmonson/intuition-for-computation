@@ -27,6 +27,7 @@ Marcus Aurelius
 David Foster Wallace
 Paul Erdos
 John von Neumann
+Satoru Iwata
 
 --- ECCENTRIC --------------------------
 
